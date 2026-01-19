@@ -15,7 +15,7 @@ Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4D
 
 You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
 
-In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas) for a high level of security.
+In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses for a high level of security.
 
 :::tip Entrada de blog relacionada
 

@@ -427,7 +427,7 @@ End if
 
 ---
 
-## Row Style Array {#row-style-array)
+## 行スタイル配列 {#row-style-array}
 
 `配列型リストボックス`
 

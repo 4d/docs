@@ -55,7 +55,7 @@ Configuring the Web Administration Server is mandatory in particular to define t
 
 You can configure the Web Administration Server using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
 
-> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da *Interface de Linha de Comando*](#webadmin-headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
+> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da *Interface de Linha de Comando*](#headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
 
 ### Caixa de diálogos de configurações
 

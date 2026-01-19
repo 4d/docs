@@ -76,7 +76,7 @@ Note que com essa opção, independentemente da avaliação interna de seguranç
 
 :::note Caso particular
 
-Se o método também tem a propriedade [**Compartilhada por componentes e banco de dados host**](../Project/code-overview.md#shared-by-components-and-host-database), configurando a opção **Indiferente** irá automaticamente marcar o método como thread-unsafe. Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**.
+Se o método também tem a propriedade [**Compartilhada por componentes e banco de dados host**](../Project/project-method-properties.md#shared-by-components-and-host-database), configurando a opção **Indiferente** irá automaticamente marcar o método como thread-unsafe. Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**.
 
 :::
 

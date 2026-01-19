@@ -11,14 +11,14 @@ title: データエクスプローラー
 
 データエクスプローラーの設定や認証は [`WebAdmin`](webAdmin.md) Webサーバーコンポーネントに依存しています。
 
-- **設定**: データエクスプローラーの設定は、[`WebAdmin` Webサーバーの設定](webAdmin.md#webadmin-設定) を再利用します。
-- **認証**: データエクスプローラーへのアクセスは、[認証されたセッションユーザー](webAdmin.md#認証とセッション) が、"WebAdmin" 権限を持っている場合に許可されます。 **データエクスプローラー** のメニュー項目 (後述参照) からデータエクスプローラーにアクセスした場合、認証は自動的におこなわれます。
+- **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#settings),
+- **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication) and has the "WebAdmin" privilege. **データエクスプローラー** のメニュー項目 (後述参照) からデータエクスプローラーにアクセスした場合、認証は自動的におこなわれます。
 
 > データエクスプローラーへのアクセスは、[`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) 関数を使って無効化できます。
 
 ## データエクスプローラーを開く
 
-データエクスプローラーがクリックされると、必要に応じて [`WebAdmin` Webサーバー](webAdmin.md#starting-the-webadmin-web-server) が自動的に開始されます。
+[The Web Administration Server](webAdmin.md#starting-the-web-administration-server) is started automatically if necessary when the Data Explorer is clicked on.
 
 データエクスプローラーWebページに接続するには:
 

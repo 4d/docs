@@ -12,7 +12,7 @@ title: はじめに
 
 :::note
 
-Go to the [Library table](../Notes/updates.md#library-table) to know the SpreadJS version integrated in your 4D release.
+Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know the SpreadJS version integrated in your 4D release.
 
 :::
 

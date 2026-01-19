@@ -589,7 +589,7 @@ End if
 
 ---
 
-## Row Style Array {#row-style-array)
+## Row Style Array {#row-style-array}
 
 `配列型リストボックス`
 

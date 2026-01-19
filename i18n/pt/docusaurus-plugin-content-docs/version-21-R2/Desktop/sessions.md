@@ -57,7 +57,7 @@ You can also assign privileges to a remote user session to control access when t
 
 O objeto `session` do usuário remoto está disponível em:
 
-- Métodos de projeto que têm o atributo [Execute on Server](../Project/code-overview.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
+- Métodos de projeto que têm o atributo [Execute on Server](../Project/project-method-properties.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
 - Triggers,
 - ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword),
 - Database methods such as [`On Server Open Connection`](../commands/on-server-open-connection-database-method) and [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
@@ -110,7 +110,8 @@ When creating an OTP token in client/server environment, you need to execute the
 
 :::tip Related blog post
 
-[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/embed-qodly-pages-in-a-4d-web-area-without-extra-cost)
+[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)<br/>
+[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 

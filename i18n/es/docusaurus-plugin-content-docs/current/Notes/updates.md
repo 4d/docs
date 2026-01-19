@@ -23,7 +23,7 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 - Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows:
   - nuevo comando [`FORM theme`](../commands/form-theme.md)
   - nuevo [media query css `form-theme`](../FormEditor/createStylesheet.md#media-queries),
-  - new [**Use Fluent UI on Windows**](../settings/interface.md#use-fluent-ui-on-windows) option in the Settings dialog box.
+  - nueva opción [**Utilizar Fluent UI en Windows**](../settings/interface.md#use-fluent-ui-on-windows) en el cuadro de diálogo de Propiedades del proyecto.
 
 #### Cambios de comportamiento
 

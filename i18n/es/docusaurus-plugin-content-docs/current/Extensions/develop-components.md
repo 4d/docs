@@ -110,7 +110,7 @@ Cuando lo selecciona, se añade una pestaña dedicada (o resaltada si ya se ha a
 Las funcionalidades estándar del IDE 4D están disponibles para el componente. Puede ejecutar las siguientes acciones:
 
 - añadir, duplicar, borrar, editar/guardar [métodos y clases](../Project/code-overview.md)
-- previsualizar código, mostrar/editar [documentación](../Project/documentation.md), mostrar/editar [propiedades de método](../Project/code-overview.md#project-method-properties),
+- preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md),
 - ejecutar métodos,
 - restaurar desde la papelera o vaciar la papelera.
 

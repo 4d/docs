@@ -31,6 +31,6 @@ Vous pouvez sélectionner une [méthode projet](methods.md) ou [classe](classes.
 
 :::note
 
-Le code d'un composant interprété peut être [édité directement à partir du projet hôte](../Extensions/develop-components.md#editing-components-from-the-host) si le contexte est pris en charge.
+Le code d'un composant interprété peut être [modifié directement à partir du projet hôte](../Extensions/develop-components.md#creating-and-editing-components-from-the-host) si le contexte est pris en charge.
 
 :::

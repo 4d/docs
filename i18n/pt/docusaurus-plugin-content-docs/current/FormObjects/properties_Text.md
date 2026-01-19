@@ -490,7 +490,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 ---
 
-## Row Style Array {#row-style-array)
+## Row Style Array {#row-style-array}
 
 `List boxes de tipo array`
 

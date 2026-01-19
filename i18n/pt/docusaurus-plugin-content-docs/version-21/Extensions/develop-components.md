@@ -110,7 +110,7 @@ When you select it, a dedicated tab is added (or highlighted if already added) i
 Standard 4D IDE features are available for the component. You can execute the following actions:
 
 - add, duplicate, delete, edit/save [methods and classes](../Project/code-overview.md)
-- preview code, show/edit [documentation](../Project/documentation.md), display/edit [method properties](../Project/code-overview.md#project-method-properties),
+- preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md),
 - run methods,
 - restore from trash or empty trash.
 

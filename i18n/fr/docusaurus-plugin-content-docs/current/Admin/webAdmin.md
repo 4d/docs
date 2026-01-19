@@ -55,7 +55,7 @@ La configuration du serveur d'administration Web est obligatoire, en particulier
 
 Vous pouvez configurer le serveur d'administration Web à l'aide de la [boîte de dialogue des Propriétés d'administration Web](#settings-dialog-box) (voir ci-dessous).
 
-> Si vous utilisez une application 4D sans interface, vous pouvez utiliser les [arguments de l'*Interface de ligne de commande*](#webadmin-headless-configuration) pour définir les paramètres de base. La définition de paramètres avancés se fait via le fichier de paramètres.
+> Si vous utilisez une application 4D sans interface, vous pouvez utiliser les [arguments de l'*Interface de ligne de commande*](#headless-configuration) pour définir les paramètres de base. La définition de paramètres avancés se fait via le fichier de paramètres.
 
 ### Boîte de dialogue des Propriétés
 

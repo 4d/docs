@@ -435,7 +435,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
 
 La última línea devolverá en *$myInvoices* una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
 
-## Restringir la selección de entidades
+## Restricting entity selections {#restricting-entity-selections}
 
 En ORDA, puede crear filtros para restringir el acceso a entidades de cualquiera de sus clases de datos. Una vez implementado, se aplica automáticamente un filtro siempre que se accede a las entidades de la dataclass, ya sea mediante **funciones de clase ORDA** como [`all()`](../API/DataClassClass.md#all) o [`query()`](../API/EntitySelectionClass.md#query), o por la [**API REST**](../category/api-dataclass) (que implica el [Explorador de datos](../Admin/dataExplorer.md) y [remote datastores](remoteDatastores.md)).
 

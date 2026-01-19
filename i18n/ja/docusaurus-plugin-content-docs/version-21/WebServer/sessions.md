@@ -93,7 +93,7 @@ Webセッションが閉じられた後に [`Session`](commands/session.md) コ�
 
 :::info
 
-[**ログアウト**](qodly-studio.md#ログアウト) 機能を使用して、Qodly フォームからのセッションを閉じることができます。
+You can close a session from a Qodly form using the [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) feature.
 
 :::
 

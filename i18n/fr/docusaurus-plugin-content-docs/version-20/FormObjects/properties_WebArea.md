@@ -87,12 +87,12 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
 
 > Sur Windows, si Microsoft Edge WebView2 n'est pas installé, 4D utilise le moteur intégré en tant que moteur de rendu système. Pour savoir s'il est installé sur votre système, recherchez "Microsoft Edge WebView2 Runtime" dans votre panneau d'applications.
 
-*   **coché** - `valeur JSON : embedded` : Dans ce cas, 4D utilise Chromium Embedded Framework (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, [new versions of the engines are regularly provided through 4D](../Notes/updates.md#library-table).
+*   **coché** - `valeur JSON : embedded` : Dans ce cas, 4D utilise Chromium Embedded Framework (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, [new versions of the engines are regularly provided through 4D](../Notes/updates.md#library-table-4d-20-lts).
 
 Le moteur CEF a les limitations suivantes :
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): l'utilisation de cette commande nécessite qu'au moins une page soit déjà chargée dans la zone (par le biais d'un appel à la commande [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) ou d'une affectation à la variable URL associée à la zone).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](https://doc.4d.com/4dv20/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv20/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
+- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv20/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv20/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
 
 #### Grammaire JSON
 

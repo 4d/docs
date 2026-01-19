@@ -427,7 +427,7 @@ Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tabl
 
 ---
 
-## Tableau de styles {#row-style-array)
+## Tableau de styles {#row-style-array}
 
 `List box de type tableau`
 

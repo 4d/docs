@@ -11,14 +11,14 @@ O Data Explorer oferece uma interface web para visualizar, pesquisar e editar da
 
 O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para a configuração e preferências de autentificação.
 
-- **configuração**: a configuração de Data Explorer reutiliza as configurações [`WebAdmin` de servidor web](webAdmin.md#webadmin-settings),
-- **authentication**: acesso ao Data Explorer é oferecido quando  [a sessão de usuário for autenticada](webAdmin.md#authentication-and-session) e tem o privilégio "WebAdmin". Quando o Data Explorer for acessado através do item de menu \*\* Data Explorer\*\* (ver abaixo), uma autenticação automática é oferecida.
+- **configuração**: a configuração de Data Explorer reutiliza as configurações [`WebAdmin` de servidor web](webAdmin.md#settings),
+- **authentication**: acesso ao Data Explorer é oferecido quando  [a sessão de usuário for autenticada](webAdmin.md#authentication) e tem o privilégio "WebAdmin". Quando o Data Explorer for acessado através do item de menu \*\* Data Explorer\*\* (ver abaixo), uma autenticação automática é oferecida.
 
 > O acesso ao Data Explorer pode ser desativado usando a função [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection).
 
 ## Abrindo o Data Explorer
 
-[O servidor web `WebAdmin`](webAdmin.md#starting-the-webadmin-web-server) é iniciado automaticamente, se necessário, quando o Data Explorer é clicado.
+[The Web Administration Server](webAdmin.md#starting-the-web-administration-server) is started automatically if necessary when the Data Explorer is clicked on.
 
 Para ligar à página Web do Explorador de dados:
 

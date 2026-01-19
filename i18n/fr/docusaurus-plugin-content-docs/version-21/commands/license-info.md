@@ -24,8 +24,7 @@ Si la commande est exécutée sur une application 4D qui n'utilise pas de licenc
 
 Cette commande recharge les fichiers de licence à partir du disque et met à jour les droits associés s'ils ont été modifiés.
 
-:::
-The returned object contains the following properties:
+:::L'objet retourné contient les propriétés suivantes :
 
 ```json
 {

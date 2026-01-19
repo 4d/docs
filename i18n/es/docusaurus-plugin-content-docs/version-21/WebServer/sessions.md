@@ -94,7 +94,7 @@ Cuando se cierra una sesión web, si después se llama al comando [`Session`](co
 
 :::info
 
-Puede cerrar una sesión desde un formulario Qodly utilizando la función [**logout**](qodly-studio.md#logout).
+Puede cerrar una sesión desde un formulario Qodly utilizando la función [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout).
 
 :::
 

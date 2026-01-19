@@ -57,7 +57,7 @@ También puede asignar privilegios a una sesión de usuario remoto para controla
 
 El objeto `session` del usuario remoto está disponible en:
 
-- métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
+- métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/project-method-properties.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
 - las [funciones ORDA del modelo de datos](../ORDA/ordaClasses.md) (excepto las declaradas con la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions)),
 - métodos base como [`On Server Open Connection`](../commands/on-server-open-connection-database-method) y [`On Server Close Connection`](../commands/on-server-close-connection-database-method).

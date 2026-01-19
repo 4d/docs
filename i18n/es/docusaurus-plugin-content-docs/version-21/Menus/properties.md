@@ -159,7 +159,7 @@ Las marcas de verificación se utilizan generalmente para los elementos del men�
 
 ### Estilos de fuentes
 
-4D le permite personalizar los menús aplicando diferentes estilos de letra a los comandos del menú. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, [`SET MENU ITEM STYLE`](../commands/set-menu-item-style).
+4D le permite personalizar los menús aplicando diferentes estilos de letra a los comandos del menú. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor or using the [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) language command.
 
 Como regla general, aplique los estilos de fuente con moderación a sus menús; demasiados estilos distraerán al usuario y darán un aspecto desordenado a su aplicación.
 

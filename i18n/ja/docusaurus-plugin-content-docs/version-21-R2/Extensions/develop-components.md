@@ -110,7 +110,7 @@ title: コンポーネントの開発
 標準の4D IDE 機能がコンポーネントに対して利用可能です。 以下のアクションを実行することができます:
 
 - [メソッドおよびクラス](../Project/code-overview.md)の追加、複製、削除、編集/保存
-- コードのプレビュー、[ドキュメンテーション](../Project/documentation.md) の表示/編集、[メソッドプロパティ](../Project/code-overview.md#project-method-properties) の表示/編集
+- preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md),
 - メソッドの実行
 - ゴミ箱からの復元、あるいはゴミ箱を空にする。
 

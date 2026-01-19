@@ -144,7 +144,7 @@ Esta página contiene los controles para imprimir etiquetas en función de los r
 - **Método**: permite activar un método específico que se ejecutará al momento de la impresión. Por ejemplo, puede ejecutar un método que publique la fecha y la hora en que se imprimió cada etiqueta. Esta funcionalidad también es útil cuando se imprimen etiquetas usando un formulario tabla dedicado, en cuyo caso se pueden llenar variables a partir de un método.
   Para ser elegible para el procesamiento de etiquetas, un método proyecto debe cumplir con las siguientes condiciones:
   - debe ser "permitido" para la base de datos (los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y el comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md), de lo contrario no se mostrará en el menú **Aplicación**.
-  - debe tener la opción [Compartido por componentes y base de datos local](../Project/code-overview.md#shared-by-components-and-host-database).
+  - debe tener la opción [Compartido por componentes y base de datos local](../Project/project-method-properties.md#shared-by-components-and-host-database).
     Ver también [este ejemplo](#printing-labels-using-forms-and-methods-example) a continuación.
 
 :::note
@@ -172,7 +172,7 @@ Puede utilizar formularios de tabla dedicados y métodos proyecto para imprimir 
  var myVar+=1
 ```
 
-3. Defina el método proyecto como ["Compartido por los componentes y la base de datos local"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. Defina el método proyecto como ["Compartido por los componentes y la base de datos local"](../Project/project-method-properties.md#shared-by-components-and-host-database).
 
 4. Antes de mostrar el editor de etiquetas, asegúrese de que el método proyecto está autorizado ejecutando este código:
 

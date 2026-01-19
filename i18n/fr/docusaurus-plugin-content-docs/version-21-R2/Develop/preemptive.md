@@ -76,7 +76,7 @@ A noter qu'avec cette option, quel que soit le résultat de l'évaluation de sa 
 
 :::note Cas particulier
 
-Si la méthode a aussi la propriété [**Partagée entre composants et projet hôte**](../Project/code-overview.md#shared-by-components-and-host-database), l'option **Indifférent** marquera automatiquement la méthode comme thread-unsafe. Si vous souhaitez qu'une méthode de composant partagé soit thread-safe, vous devez explicitement lui attribuer l'option **Peut être exécutée dans un process préemptif**.
+Si la méthode a aussi la propriété [**Partagée entre composants et projet hôte**](../Project/project-method-properties.md#shared-by-components-and-host-database), l'option **Indifférent** marquera automatiquement la méthode comme thread-unsafe. Si vous souhaitez qu'une méthode de composant partagé soit thread-safe, vous devez explicitement lui attribuer l'option **Peut être exécutée dans un process préemptif**.
 
 :::
 

@@ -55,7 +55,7 @@ Configuring the Web Administration Server is mandatory in particular to define t
 
 You can configure the Web Administration Server using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
 
-> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da *Interface de Linha de Comando*](#webadmin-headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
+> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da *Interface de Linha de Comando*](#headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
 
 ### Caixa de diálogos de configurações
 
@@ -136,8 +136,6 @@ Essa opção permite o acesso do usuário a [Qodly Studio](developer.4d.com/qodl
 This option is automatically checked if you used the [One-click configuration dialog box](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration).
 
 :::
-
-:::note
 
 ## Headless Configuration
 

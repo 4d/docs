@@ -159,7 +159,7 @@ Les coches sont généralement utilisées pour des menus à action permanente et
 
 ### Styles des polices
 
-4D vous permet de personnaliser les menus en appliquant différents styles de caractères aux commandes de menus. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, [`SET MENU ITEM STYLE`](../commands/set-menu-item-style).
+4D vous permet de personnaliser les menus en appliquant différents styles de caractères aux commandes de menus. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor or using the [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) language command.
 
 En règle générale, les styles de police doivent être appliqués à vos menus avec parcimonie, afin d’éviter de conférer une apparence confuse à votre application.
 

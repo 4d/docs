@@ -21,7 +21,7 @@ Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
 :::
 
-## Predictable vs unpredictable errors
+## Predictable vs unpredictable errors {#predictable-vs-unpredictable-errors}
 
 Many 4D class functions, such as [`entity.save()`](../API/EntityClass.md#save) or [`transporter.send()`](../API/SMTPTransporterClass.md#send), return a object containing *status* information. This object is used to store **predictable** errors in the runtime context, e.g. invalid password, locked entity, etc., that do not require to stop program execution. This category of errors, also named **silent errors** errors, can be handled by regular code. When such errors occur in an error handling context, i.e. a [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or an [error-handling method](#installing-an-error-handling-method), they do not interrupt the execution and do not trigger the error handling (e.g. the `Catch` part of the [`Try/Catch`](#trycatchend-try) is not executed). They are not listed in the [`Last errors`](../commands/last-errors.md) collection. The error is only returned in the `status` and `statusText` properties of the returned object. It can be processed according to your business logic.
 
@@ -191,7 +191,7 @@ function test()
 
 ```
 
-3. Você deseja lidar com erros [previsíveis e não previsíveis](#error-or-status):
+3. You want to handle both [predictable and non-predictable]{#predictable-vs-unpredictable-errors} errors:
 
 ```4d
 var $e:=ds.Employee.new()

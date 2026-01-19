@@ -55,7 +55,7 @@ La configuration du serveur d'administration Web est obligatoire, en particulier
 
 Vous pouvez configurer le serveur d'administration Web à l'aide de la [boîte de dialogue des Propriétés d'administration Web](#settings-dialog-box) (voir ci-dessous).
 
-> Si vous utilisez une application 4D sans interface, vous pouvez utiliser les [arguments de l'*Interface de ligne de commande*](#webadmin-headless-configuration) pour définir les paramètres de base. La définition de paramètres avancés se fait via le fichier de paramètres.
+> Si vous utilisez une application 4D sans interface, vous pouvez utiliser les [arguments de l'*Interface de ligne de commande*](#headless-configuration) pour définir les paramètres de base. La définition de paramètres avancés se fait via le fichier de paramètres.
 
 ### Boîte de dialogue des Propriétés
 
@@ -135,8 +135,6 @@ Cette option permet l'accès utilisateur à [Qodly Studio](developer.4d.com/qodl
 Cette option est automatiquement cochée si vous avez utilisé la [Boîte de dialogue de configuration en un clic](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration).
 
 :::
-
-:::note
 
 ## Configuration sans interface
 

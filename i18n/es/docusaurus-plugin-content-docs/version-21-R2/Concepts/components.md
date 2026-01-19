@@ -31,6 +31,6 @@ Puede seleccionar un [método proyecto](methods.md) o [clase](classes.md) y hace
 
 :::note
 
-El código de componente interpretado puede [editarse directamente desde el proyecto anfitrión](../Extensions/develop-components.md#editing-components-from-the-host) si el contexto es compatible.
+El código de un componente interpretado puede [editarse directamente desde el proyecto local](../Extensions/develop-components.md#creating-and-editing-components-from-the-host) si el contexto es compatible.
 
 :::

@@ -57,7 +57,7 @@ You can also assign privileges to a remote user session to control access when t
 
 O objeto `session` do usuário remoto está disponível em:
 
-- Métodos de projeto que têm o atributo [Execute on Server](../Project/code-overview.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
+- Métodos de projeto que têm o atributo [Execute on Server](../Project/project-method-properties.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
 - Triggers,
 - ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword),
 - Database methods such as [`On Server Open Connection`](../commands/on-server-open-connection-database-method) and [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
