@@ -45,7 +45,7 @@ The [WP Get style sheets](../commands-legacy/wp-get-style-sheets) command lets y
 Because style sheets are stored as objects, they can easily be imported into other 4D Write Pro documents or maintained when exported in multiple formats. 
 
 - **Import** - You can get all of the style sheet objects from a designated 4D Write Pro document and use them in a new document with the [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets) command. 
-- **Export** - The [WP EXPORT DOCUMENT](./commands/wp-export-document) or [WP EXPORT VARIABLE](./commands/wp-export-variable.md) commands export your documents with their style sheets. 
+- **Export** - The [WP EXPORT DOCUMENT](./commands/wp-export-document) or [WP EXPORT VARIABLE](./commands/wp-export-variable) commands export your documents with their style sheets. 
 
 
 ## Style sheet attributes
