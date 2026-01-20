@@ -477,7 +477,7 @@ If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priori
 
 ## Info.plist
 
-コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#コンポーネントのロード)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#monitoring-project-dependencies).
 
 :::note
 
@@ -485,7 +485,7 @@ If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priori
 
 :::
 
-コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#コンポーネントの読み込み) によって使用されます。
+コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 However, they are used by the [Dependency manager](../Project/components.md#monitoring-project-dependencies) on all platforms.
 
 定義可能なキーは以下の通りです:
 

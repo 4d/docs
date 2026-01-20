@@ -474,7 +474,7 @@ Si les deux fichiers `logo.svg` et `logo.png` sont trouvés, le `logo.svg` est p
 
 ## Info.plist
 
-Les composants peuvent avoir un fichier `Info.plist` dans leur [dossier racine](../Project/architecture.md) pour fournir des informations supplémentaires lisibles par le système (macOS uniquement) et le [Gestionnaire de dépendances](../Project/components.md#loading-components).
+Les composants peuvent avoir un fichier `Info.plist` dans leur [dossier racine](../Project/architecture.md) pour fournir des informations supplémentaires lisibles par le système (macOS uniquement) et le [Gestionnaire de dépendances](../Project/components.md#monitoring-project-dependencies).
 
 :::note
 
@@ -482,7 +482,7 @@ Ce fichier n'est pas obligatoire mais il est nécessaire pour construire des com
 
 :::
 
-Les clés prises en charge dans les fichiers `Info.plist` des composants sont principalement des [clés bundle d'Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) qui sont ignorées sous Windows. Cependant, elles sont utilisés par le [Gestionnaire de dépendances](../Project/components.md#loading-components) sur toutes les plates-formes.
+Les clés prises en charge dans les fichiers `Info.plist` des composants sont principalement des [clés bundle d'Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) qui sont ignorées sous Windows. Cependant, elles sont utilisés par le [Gestionnaire de dépendances](../Project/components.md#monitoring-project-dependencies) sur toutes les plates-formes.
 
 Les clés suivantes peuvent être définies :
 

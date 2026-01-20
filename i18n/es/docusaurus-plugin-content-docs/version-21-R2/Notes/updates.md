@@ -9,25 +9,25 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 
 #### Lo más destacado
 
-- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
-- [4D Write Pro standard actions](../WritePro/user-legacy/standard-actions.md) that apply [lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) now automatically adjust paragraph margins to keep markers positioned inside it.
-- Built-in support of `order by` in query strings for AI vector searches using [`query()`](../API/DataClassClass.md#query-by-vector-similarity) functions and the [REST API](../REST/$orderby.md).
+- El [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) ha sido mejorado para ofrecer mayor precisión en la detección de errores (ver [esta entrada del blog](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) para más información).
+- Las [acciones estándar de 4D Write Pro](../WritePro/user-legacy/standard-actions.md) que aplican [listas](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) ahora ajustan automáticamente los márgenes de los párrafos para mantener los marcadores posicionados al interior de este margen.
+- Soporte integrado de `order by` en las cadenas de consulta para búsquedas vectoriales IA utilizando las funciones [`query()`](../API/DataClassClass.md#query-by-vector-similarity) y la [API REST](../REST/$orderby.md).
 - Ahora puede crear y abrir Páginas Qodly desde el [Explorador](../Develop/explorer.md).
 - Puede [personalizar los iconos de sus componentes](../Extensions/develop-components.md#custom-icon).
-- 4D AIKit component: new [File API](../aikit/Classes/OpenAIFilesAPI.md) class to implement **file upload** features.
+- Componente 4D AIKit: nueva clase [File API](../aikit/Classes/OpenAIFilesAPI.md) para implementar las funcionalidades de **carga de archivos**.
 - [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in contents**](../Project/search-replace.md#replace-in-contents) features can now support editable components.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21_R2): lista de todos los bugs que se han corregido en 4D 21 R2.
 
 #### Vista previa para desarrolladores
 
-- Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows:
+- Soporte de [**renderización de interfaz Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) en Windows:
   - nuevo comando [`FORM theme`](../commands/form-theme.md)
   - nuevo [media query css `form-theme`](../FormEditor/createStylesheet.md#media-queries),
   - nueva opción [**Utilizar Fluent UI en Windows**](../settings/interface.md#use-fluent-ui-on-windows) en el cuadro de diálogo de Propiedades del proyecto.
 
 #### Cambios de comportamiento
 
-- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) command can return different information whether it is called from a form or not.
+- En Windows, si la [renderización **fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) está activada, el comando [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) puede devolver información diferente si se llama desde un formulario o no.
 
 ## Tabla de la librería
 

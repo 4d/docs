@@ -408,7 +408,7 @@ Los elementos deben ser instalados:
 Para activar esta funcionalidad, añada las llaves `DatabaseToEmbedInClientWinFolder` y/o `DatabaseToEmbedInClientMacFolder` en el archivo de configuración *buildApp*. Cuando una de estas llaves está presente, el proceso de generación de la aplicación cliente genera una aplicación monopuesto: la estructura compilada, en lugar del archivo *EnginedServer.4Dlink*, se coloca en la carpeta "Database".
 
 - If a default data folder exists in the single-user application, a license is embedded.
-- If no default data folder exists in the single-user application, it will be executed without data file and without license.
+- Si no existe una carpeta de datos por defecto en la aplicación monopuesto, ésta se ejecutará sin archivo de datos y sin licencia.
 
 El escenario básico es:
 
@@ -533,7 +533,7 @@ Se requiere una conexión a Internet en la máquina del usuario en el primer lan
 
 - El comando [`License info`](../commands/license-info.md) permite conocer el tipo de licencia de la aplicación (colección *.attributes*) y su fecha de caducidad (objeto *.expirationDate*).
 - La llave xml BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) permite gestionar las versiones de evaluación.
-- The [`CHANGE LICENSES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
+- El comando [`CHANGE LICENSES`](../commands-legacy/change-licenses.md) no hace nada cuando se llama desde una versión de evaluación.
 
 :::
 

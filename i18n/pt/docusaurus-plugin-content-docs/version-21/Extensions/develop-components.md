@@ -444,7 +444,7 @@ A execução do código de inicialização ou fechamento é feita por meio do m�
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#monitoring-project-dependencies).
 
 :::note
 
@@ -452,7 +452,7 @@ Esse arquivo não é obrigatório, mas é necessário para criar componentes [no
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. No entanto, eles são usados pelo [Gerenciador de dependências](../Project/components.md#loading-components) em todas as plataformas.
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. No entanto, eles são usados pelo [Gerenciador de dependências](../Project/components.md#monitoring-project-dependencies) em todas as plataformas.
 
 The following keys can be defined:
 

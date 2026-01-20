@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application info.Summary-->The **Application info** command returns an object providing detailed information about the active application's activity and network configuration.<!-- END REF-->
 
-El comando puede ejecutarse en aplicaciones que funcionen tanto en entornos autónomos como cliente/servidor. The information returned depends on where **Application info** is executed. Por ejemplo, si se ejecuta desde un 4D remoto, la información sólo se aplica a la estación de trabajo remota. If the command is called in a method that is executed on the server, the information returned applies to the the server.
+El comando puede ejecutarse en aplicaciones que funcionen tanto en entornos autónomos como cliente/servidor. The information returned depends on where **Application info** is executed. Por ejemplo, si se ejecuta desde un 4D remoto, la información sólo se aplica a la estación de trabajo remota. Si el comando se llama en un método que se ejecuta en el servidor, la información devuelta se aplica al servidor.
 
 El objeto devuelto contiene las siguientes propiedades:
 

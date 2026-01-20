@@ -240,7 +240,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | On Unload            |                                                                                                                                                      |                                                                                                                                                     |
 
 
-#### Additional Properties {additional-properties}
+#### Propriedades adicionais {#additional-properties}
 
 Os eventos formulário nos list box ou colunas de list box podem retornar as seguintes propriedades adicionais:
 

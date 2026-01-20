@@ -187,7 +187,7 @@ You can perform various actions using the options menu:
 
 - **Remove from list**: removes selected item(s) from the results window. More specifically, this lets you keep only items targeted by a replacement operation in the contents or used for drag and drop between applications.
 - **Remove all items from list except selection**: clears everything from the results window except for the selected item(s).
-- [**Replace in content**](#replace-in-contents): replaces a character string within the selected item(s).
+- [**Replace in content**](#replace-in-content): replaces a character string within the selected item(s).
 - **Select >**: selects one type of item (project methods, object names, and so on) from among all the items found in the Results window. The hierarchical sub-menu also provides commands to select (All) or deselect (None) all the items at once.
 - **Collapse all/Expand all**: expands or collapses all the hierarchical items in the list of results.
 - **Export Results**: exports information about the search criteria and elements listed in the Results window. This text file can then be imported into a spreadsheet such as Excel, for example. For each item, the following information is exported as tab-separated values in a text file:

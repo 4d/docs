@@ -340,7 +340,7 @@ Un fichier `dependency-lock.json` est créé dans le dossier [`userPreferences`]
 
 Ce fichier enregistre des informations telles que le statut des dépendances, les chemins d'accès, les Url, les erreurs de chargement, ainsi que d'autres informations. Il peut être utile pour la gestion du chargement de composants ou le dépannage.
 
-## Suivi des dépendances du projet
+## Monitoring Project Dependencies {#monitoring-project-dependencies}
 
 Dans un projet ouvert, vous pouvez ajouter, supprimer, mettre à jour et obtenir des informations sur les dépendances et leur statut courant de chargement dans la fenêtre **Dépendances**.
 

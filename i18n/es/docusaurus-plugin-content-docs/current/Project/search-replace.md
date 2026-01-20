@@ -187,7 +187,7 @@ Puede realizar varias acciones utilizando el menú opciones:
 
 - **Eliminar de la lista**: elimina los elementos seleccionados de la ventana de resultados. Más concretamente, esto le permite mantener en el contenido solo los elementos a los que se dirige una operación de sustitución o que se utilizan para arrastrar y soltar entre aplicaciones.
 - **Eliminar todos los elementos de la lista excepto la selección**: borra todo de la ventana de resultados excepto los elementos seleccionados.
-- [**Reemplazar en el contenido**](#replace-in-contents): reemplaza una cadena de caracteres en los elementos seleccionados.
+- [**Reemplazar en el contenido**](#replace-in-content): reemplaza una cadena de caracteres en los elementos seleccionados.
 - **Seleccionar >**: selecciona un tipo de elemento (métodos proyecto, nombres de objetos, etc.) de entre todos los que se encuentran en la ventana Resultados. El submenú jerárquico también ofrece comandos para seleccionar (Todos) o deseleccionar (Ninguno) todos los elementos a la vez.
 - **Contraer todo/Expandir todo**: expande o contrae todos los elementos jerárquicos de la lista de resultados.
 - **Exportar resultados**: exporta información sobre los criterios de búsqueda y los elementos que aparecen en la ventana Resultados. Este archivo de texto puede importarse a una hoja de cálculo como Excel, por ejemplo. Para cada elemento, la siguiente información se exporta como valores separados por tabuladores en un archivo de texto:

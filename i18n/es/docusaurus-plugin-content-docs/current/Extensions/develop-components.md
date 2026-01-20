@@ -474,7 +474,7 @@ Si se encuentran los archivos `logo.svg` y `logo.png`, el `logo.svg` tiene prior
 
 ## Info.plist
 
-Los componentes pueden tener un archivo `Info.plist` en su [carpeta raíz](../Project/architecture.md) para ofrecer información extra legible por el sistema (sólo macOS) y el [Gestor de dependencias](../Project/components.md#loading-components).
+Los componentes pueden tener un archivo `Info.plist` en su [carpeta raíz](../Project/architecture.md) para ofrecer información extra legible por el sistema (sólo macOS) y el [Gestor de dependencias](../Project/components.md#monitoring-project-dependencies).
 
 :::note
 
@@ -482,7 +482,7 @@ Este archivo no es obligatorio pero es necesario para construir componentes [not
 
 :::
 
-Las llaves soportadas en los archivos `Info.plist` de los componentes son en su mayoría [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) que se ignoran en Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
+Las llaves soportadas en los archivos `Info.plist` de los componentes son en su mayoría [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) que se ignoran en Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#monitoring-project-dependencies) en todas las plataformas.
 
 Se pueden definir las siguientes teclas:
 
