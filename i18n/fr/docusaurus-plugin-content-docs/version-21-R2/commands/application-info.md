@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application info.Params-->
 
-| Paramètres | Type   |                             | Description                                       |
-| ---------- | ------ | --------------------------- | ------------------------------------------------- |
-| Résultat   | Object | &#8592; | Information about the active application activity |
+| Paramètres | Type   |                             | Description                                         |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- |
+| Résultat   | Object | &#8592; | Informations sur l'activité de l'application active |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 | Release | Modifications                                            |
 | ------- | -------------------------------------------------------- |
-| 21 R2   | Support of "useFluentUI" and "canUseFluentUI" properties |
+| 21 R2   | Support des propriétés "useFluentUI" et "canUseFluentUI" |
 
 </details>
 

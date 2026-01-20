@@ -350,7 +350,7 @@ executable\&#060;ApplicationName&#062;Server\Server Database`.
 Para activar esta funcionalidad, añada las llaves `DatabaseToEmbedInClientWinFolder` y/o `DatabaseToEmbedInClientMacFolder` en el archivo de configuración *buildApp*. Cuando una de estas llaves está presente, el proceso de generación de la aplicación cliente genera una aplicación monopuesto: la estructura compilada, en lugar del archivo *EnginedServer.4Dlink*, se coloca en la carpeta "Database".
 
 * If a default data folder exists in the single-user application, a license is embedded.
-* If no default data folder exists in the single-user application, it will be executed without data file and without license.
+* Si no existe una carpeta de datos por defecto en la aplicación monopuesto, ésta se ejecutará sin archivo de datos y sin licencia.
 
 El escenario básico es:
 
