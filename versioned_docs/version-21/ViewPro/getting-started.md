@@ -13,7 +13,7 @@ A spreadsheet is an application containing a grid of cells into which you can en
 
 :::note
 
-Go to the [Library table](../Notes/updates.md#library-table) to know the SpreadJS version integrated in your 4D release.
+Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know the SpreadJS version integrated in your 4D release.
 
 :::
 

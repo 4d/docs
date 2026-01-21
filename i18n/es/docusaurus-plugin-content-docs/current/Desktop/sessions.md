@@ -11,7 +11,7 @@ Sin embargo, a diferencia del código ejecutado en las sesiones de usuario web, 
 
 No obstante, puede [**compartir** una sesión de escritorio con una sesión web](#sharing-a-desktop-session-for-web-accesses) para que un usuario de escritorio pueda acceder a su aplicación 4D a través de una interfaz web, utilizando por ejemplo páginas Qodly y áreas web.
 
-## Session types {#session-types}
+## Tipos de sesiones {#session-types}
 
 Las sesiones de escritorio incluyen:
 
@@ -29,13 +29,13 @@ El siguiente diagrama muestra los diferentes tipos de sesión y cómo interactú
 
 ![](../assets/en/Desktop/sessions.png)
 
-## Remote user sessions {#remote-user-sessions}
+## Sesiones de usuarios remotos {#remote-user-sessions}
 
 En el servidor, en los "procesos de usuario" (es decir, procesos relacionados con usuarios remotos), el comando [`Session`](../commands/session.md) devuelve un objeto `session` que describe la sesión de usuario actual. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
 :::note
 
-On a remote 4D, the [`Session`](../commands/session) command always returns null.
+En un 4D remoto, el comando [`Session`](../commands/session) siempre devuelve null.
 
 :::
 
@@ -57,18 +57,18 @@ También puede asignar privilegios a una sesión de usuario remoto para controla
 
 El objeto `session` del usuario remoto está disponible en:
 
-- métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
+- métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/project-method-properties.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
 - las [funciones ORDA del modelo de datos](../ORDA/ordaClasses.md) (excepto las declaradas con la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions)),
 - métodos base como [`On Server Open Connection`](../commands/on-server-open-connection-database-method) y [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
 
-## Stored procedure sessions {#stored-procedure-sessions}
+## Sesiones de procedimientos almacenados {#stored-procedure-sessions}
 
 En el servidor, todos los [procedimientos almacenados](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html) comparten la misma sesión de usuario virtual.
 
 ### Utilización
 
-You can share data between all processes of a stored procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+Puede compartir datos entre todos los procesos de una sesión de procedimiento almacenados utilizando el objeto compartido [`session.storage`](../API/SessionClass.md#storage).
 
 ### Disponibilidad
 
@@ -78,7 +78,7 @@ El objeto `session` de los procedimientos almacenados está disponible desde:
 - las [funciones ORDA del modelo de datos](../ORDA/ordaClasses.md) llamadas desde un procedimiento almacenado,
 - los métodos base como [`On Server Startup`](../commands/on-server-startup-database-method) y [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
 
-## Standalone sessions {#standalone-sessions}
+## Sesiones autónomas {#standalone-sessions}
 
 Una sesión independiente es la sesión de un solo usuario que se ejecuta cuando trabaja localmente con 4D.
 
@@ -90,7 +90,7 @@ La sesión autónoma se puede utilizar para desarrollar y probar su aplicación 
 
 El objeto `session` de una aplicación autónoma está disponible desde todos los métodos y código ejecutado en la aplicación 4D.
 
-## Sharing a desktop session for web accesses {#sharing-a-desktop-session-for-web-accesses}
+## Compartir una sesión de escritorio para los accesos web {#sharing-a-desktop-session-for-web-accesses}
 
 Las sesiones de escritorio pueden utilizarse para gestionar los accesos web a la aplicación por parte del mismo usuario y, de este modo, gestionar sus [privilegios](../ORDA/privileges.md). Esta posibilidad es especialmente útil para aplicaciones Cliente/Servidor en las que se utilizan [páginas Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) para la interfaz, que se ejecutan en máquinas remotas. Con esta configuración, sus aplicaciones disponen de modernas interfaces web basadas en CSS, pero siguen beneficiándose de la potencia y la sencillez del desarrollo cliente/servidor integrado. En tales aplicaciones, las páginas Qodly se ejecutan dentro de las [áreas Web](../FormObjects/webArea_overview.md) 4D estándar.
 
@@ -110,7 +110,7 @@ Cuando se crea un token OTP en un entorno cliente/servidor, es necesario ejecuta
 
 :::tip Entrada de blog relacionada
 
-[Integre páginas Qodly en un área web 4D sin costo adicional](https://blog.4d.com/embed-qodly-pages-in-a-4d-web-area-without-extra-cost)
+[Integre páginas Qodly en un área web 4D sin costo adicional](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)
 
 :::
 

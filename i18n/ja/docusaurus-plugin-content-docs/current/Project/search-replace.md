@@ -54,7 +54,7 @@ The areas of the "Find in design" vary dynamically depending on the selections m
 
 2. Build your search using the different menus and entry areas of the dialog box and if necessary enter the character string to be searched for. These items are described in the following sections.
 
-3. Set the [search options](#search-options) (if necessary).
+3. Set the [searching options](#searching-options) (if necessary).
 
 4. Click **OK** or press the **Enter** key.
    When the search is finished, the [Results window](#results-window) appears, listing the elements found.
@@ -106,7 +106,7 @@ The search mode menu (i.e. "which", "that is" or "whose name") specifies how to 
   - **begins with / ends with**: Searches for the string at the beginning or end of the word (text search) or at the beginning or end of the comment line (comment search). In "Text ends with" mode, searching for "var" will find "myvar".
 - Search options for Language element: The menu offers standard options (matches, contains, begins with, ends with). Note that you can use the search wildcard (@) with the matches option (returns all objects of the type specified).
 
-### Search in components
+### コンポーネント内を検索
 
 When your current project references [editable components](../Extensions/develop-components.md#editing-components), you can designate one or all your components as a target for the search. By default, a search is executed in the host only. To modify the target for a search, deploy the **in the project** menu:
 
@@ -187,7 +187,7 @@ You can perform various actions using the options menu:
 
 - **Remove from list**: removes selected item(s) from the results window. More specifically, this lets you keep only items targeted by a replacement operation in the contents or used for drag and drop between applications.
 - **Remove all items from list except selection**: clears everything from the results window except for the selected item(s).
-- [**Replace in content**](#replace-in-contents): replaces a character string within the selected item(s).
+- [**Replace in content**](#replace-in-content): replaces a character string within the selected item(s).
 - **Select >**: selects one type of item (project methods, object names, and so on) from among all the items found in the Results window. The hierarchical sub-menu also provides commands to select (All) or deselect (None) all the items at once.
 - **Collapse all/Expand all**: expands or collapses all the hierarchical items in the list of results.
 - **Export Results**: exports information about the search criteria and elements listed in the Results window. This text file can then be imported into a spreadsheet such as Excel, for example. For each item, the following information is exported as tab-separated values in a text file:
@@ -198,7 +198,7 @@ You can perform various actions using the options menu:
   - Contents (if accurate): provides the contents that actually matches the criteria; for example, the code line that contains the requested string.
   - Line number (for code) or page number (for form objects)
 
-## Replace in content
+## コンテンツを置換
 
 The Replace in content function allows you to replace one character string with another within the listed objects in the Results window. It is available in the [options menu](#options-menu) of the window.
 

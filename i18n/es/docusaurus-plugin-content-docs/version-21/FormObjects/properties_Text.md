@@ -491,7 +491,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 ---
 
-## Array de estilos {#row-style-array)
+## Row Style Array {#row-style-array}
 
 `List boxes de tipo array`
 

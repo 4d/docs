@@ -58,7 +58,7 @@ Para obter mais informações sobre as sessões dos usuários da web, consulte a
 
 The `Session` object of remote user sessions is available from:
 
-- Métodos de projeto que têm o atributo [Execute on Server](../Project/code-overview.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
+- Métodos de projeto que têm o atributo [Execute on Server](../Project/project-method-properties.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
 - Triggers,
 - ORDA [funções do modelo de dados](../ORDA/ordaClasses.md) (exceto aquelas declaradas com a palavra-chave [`local`](../ORDA/ordaClasses.md#local-functions),
 - 'Conexão aberta com o servidor' e 'Conexão com o servidor' métodos de banco de dados.

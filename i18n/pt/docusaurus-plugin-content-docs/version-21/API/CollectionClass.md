@@ -2247,10 +2247,16 @@ Se quiser ordenar a coleção de strings de acordo com seu tamanho:
 Se quiser ordenar a coleção por código de caractere ou alfabeticamente:
 
 ```4d
-var $fruits; $c2 : Collection
- $fruits:=New collection("Orange";"Apple";"Grape";"pear";"Banana";"fig";"Blackberry";"Passion fruit")
- $c2:=$fruits.orderByMethod("WordLength")
-  //$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]
+var $strings1; $strings2 : Collection
+$strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
+
+//using the character code:
+$strings2:=$strings1.orderByMethod(Formula(sortCollection);sk char codes)
+// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+
+//using the language:
+$strings2:=$strings1.orderByMethod(Formula(sortCollection);sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 O método ***sortCollection***:

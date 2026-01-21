@@ -349,7 +349,7 @@ title: Commandes par nom
 [`Generate digest`](../commands-legacy/generate-digest.md)<br/>
 [`GENERATE ENCRYPTION KEYPAIR`](../commands-legacy/generate-encryption-keypair.md)<br/>
 [`Generate password hash`](../commands-legacy/generate-password-hash.md)<br/>
-[`Generate UUID`](generate-uuid.md) **modified 4D 20 R10**<br/>
+[`Generate UUID`](generate-uuid.md) **modifié 4D 20 R10**<br/>
 [`Get 4D file`](../commands-legacy/get-4d-file.md)<br/>
 [`Get 4D folder`](../commands-legacy/get-4d-folder.md)<br/>
 [`Get adjusted blobs cache priority`](../commands-legacy/get-adjusted-blobs-cache-priority.md)<br/>
@@ -726,7 +726,7 @@ title: Commandes par nom
 [`OBJECT GET COORDINATES`](../commands-legacy/object-get-coordinates.md)<br/>
 [`OBJECT Get corner radius`](../commands-legacy/object-get-corner-radius.md)<br/>
 [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md)<br/>
-[`OBJECT Get data source formula`](object-get-data-source-formula.md) **new 4D 20 R10**<br/>
+[`OBJECT Get data source formula`](object-get-data-source-formula.md) **nouveau 4D 20 R10**<br/>
 [`OBJECT GET DRAG AND DROP OPTIONS`](../commands-legacy/object-get-drag-and-drop-options.md)<br/>
 [`OBJECT Get enabled`](../commands-legacy/object-get-enabled.md)<br/>
 [`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md)<br/>
@@ -775,7 +775,7 @@ title: Commandes par nom
 [`OBJECT SET COORDINATES`](../commands-legacy/object-set-coordinates.md)<br/>
 [`OBJECT SET CORNER RADIUS`](../commands-legacy/object-set-corner-radius.md)<br/>
 [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md)<br/>
-[`OBJECT SET DATA SOURCE FORMULA`](object-set-data-source-formula.md) **new 4D 20 R10**<br/>
+[`OBJECT SET DATA SOURCE FORMULA`](object-set-data-source-formula.md) **nouveau 4D 20 R10**<br/>
 [`OBJECT SET DRAG AND DROP OPTIONS`](../commands-legacy/object-set-drag-and-drop-options.md)<br/>
 [`OBJECT SET ENABLED`](../commands-legacy/object-set-enabled.md)<br/>
 [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)<br/>

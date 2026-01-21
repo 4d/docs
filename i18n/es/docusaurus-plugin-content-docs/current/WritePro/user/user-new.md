@@ -1,6 +1,7 @@
 ---
 id: user-new
 title: user WP
+draft: true
 ---
 
 para importar
@@ -17,10 +18,10 @@ para importar
 Pueden crearse utilizando:
 
 - la barra de herramientas o la barra lateral de la [interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.en.html#5865253)
-- the `listStyleType` or `listStyleImage` [standard actions](./standard-actions.md) ,
-- or [programmatically](../commands-legacy/4d-write-pro-attributes.md#lists) using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+- las [acciones estándar](./standard-actions.md) `listStyleType` o `listStyleImage`,
+- o [por programación](../commands-legacy/4d-write-pro-attributes.md#lists) utilizando [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
 
-When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. The value of the inserted margin corresponds to the offset of the default tab (`wk tab default`).
+When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. El valor del margen insertado corresponde al desplazamiento de la pestaña por defecto (`wk tab default`).
 
 ![](../../assets/en/WritePro/margin-bullets.png)
 
@@ -28,7 +29,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 :::info Entrada de blog relacionada
 
-4D Write Pro - Añadir un margen automáticamente cuando se establecen viñetas utilizando acciones estándar
+[4D Write Pro – Adding a margin automatically when bullets are set using standard actions](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
 
 :::
 

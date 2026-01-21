@@ -76,7 +76,7 @@ title: プリエンプティブプロセス
 
 :::note 特殊なケース
 
-メソッドの [**コンポーネントとホストプロジェクト間で共有**](../Project/code-overview.md#コンポーネントとホストプロジェクト間で共有) プロパティがチェックされている場合、**特に設定しない** オプションを選択するとメソッドは自動的にスレッドアンセーフであるとタグ付けされます。 共有コンポーネントメソッドをスレッドセーフにしたい場合には、**プリエンプティブプロセスで実行可能** オプションを明示的に選択する必要があります。
+If the method has also the [**Shared by components and host database**](../Project/project-method-properties.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. 共有コンポーネントメソッドをスレッドセーフにしたい場合には、**プリエンプティブプロセスで実行可能** オプションを明示的に選択する必要があります。
 
 :::
 

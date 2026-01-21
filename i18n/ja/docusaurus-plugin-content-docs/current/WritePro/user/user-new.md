@@ -1,6 +1,7 @@
 ---
 id: user-new
 title: user WP
+draft: true
 ---
 
 to import
@@ -28,7 +29,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 :::info 関連したblog 記事
 
-4D Write Pro – Adding a margin automatically when bullets are set using standard actions
+[4D Write Pro – Adding a margin automatically when bullets are set using standard actions](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
 
 :::
 

@@ -20,13 +20,13 @@ The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.We
 
 :::info
 
-Keep in mind that a `4D.WebForm` object  is a **proxy object**, and not a direct reference to the web form object itself. Como consecuencia, por ejemplo, el objeto `4D.WebForm` no expone todas las propiedades de la página en el depurador.
+Tenga en cuenta que un objeto `4D.WebForm` es un **objeto proxy**, y no una referencia directa al propio objeto formulario web. Como consecuencia, por ejemplo, el objeto `4D.WebForm` no expone todas las propiedades de la página en el depurador.
 
 :::
 
 Cada propiedad del objeto devuelto es un objeto de la clase [4D.WebFormItem](../API/WebFormItemClass.md).
 
-The command returns `null` if it is called in a request that does not originate from Qodly Studio.
+El comando devuelve `null` si es llamado en una petición que no se origina desde Qodly Studio.
 
 ## Ver también
 

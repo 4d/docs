@@ -246,19 +246,19 @@ Dans Qodly Studio pour 4D, le mode de connexion peut être réglé en utilisant 
 
 ## Modes de restriction
 
-La propriété `restrictedByDefault` configure la manière dont chaque [ressource](#resources) est accessible lorsqu'[aucune permission spécifique n'est définie pour elle](#permission) :
+La propriété `restrictedByDefault` configure la manière dont chaque [ressource](#resources) est accessible lorsqu'[aucune permission spécifique n'est définie pour elle](#permissions) :
 
 - **Mode sans restriction** (`restrictedByDefault`: **false**) : les ressources sans permissions définies sont accessibles à toutes les requêtes. Ce mode convient aux environnements de développement où l'accès peut être progressivement restreint.
 - **Mode restreint** (`restrictedByDefault` : **true**) : Les ressources qui n'ont pas de permissions définies sont bloquées par défaut. Ce mode est recommandé pour les environnements de production où l'accès doit être explicitement accordé.
 
 :::note Compatibilité
 
-- Lors de la **création d'un projet**, la propriété `restrictedByDefault` est mise à **false** dans le fichier *roles.json* (voir ci-dessous). Gardez à l'esprit que cette configuration est conçue pour un démarrage rapide et un développement fluide. Dans un environnement de production, [il est recommandé de définir les propriétés `restrictedByDefault` et `forceLogin` à **true**](#configuring-restrictedbydefault-and-forcelogin-properties).
+- Lors de la **création d'un projet**, la propriété `restrictedByDefault` est mise à **false** dans le fichier *roles.json* (voir ci-dessous). Gardez à l'esprit que cette configuration est conçue pour un démarrage rapide et un développement fluide. Dans un environnement de production, [il est recommandé de définir les propriétés `restrictedByDefault` et `forceLogin` à **true**](#recommended-configuration).
 - Dans les **projets convertis à partir de versions précédentes** ; lors de l'activation de l'accès à Qodly Studio en utilisant le [Dialogue de configuration en un clic](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), la propriété `restrictedByDefault` est ajoutée avec la valeur **true** dans le fichier *roles.json*.
 
 :::
 
-### Configuration recommandée
+### Recommended Configuration {#recommended-configuration}
 
 En fonction de votre environnement, les paramètres recommandés sont les suivants :
 

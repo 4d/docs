@@ -24,9 +24,9 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.FORM theme.Summary-->The **FORM theme** command returns the Windows theme actually rendered for the current form: "Classic" or "FluentUI"<!-- END REF-->.
+<!--REF #_command_.FORM theme.Summary-->El comando **FORM theme** devuelve el tema Windows realmente renderizado para el formulario actual: "Classic" or "FluentUI".<!-- END REF-->
 
-The Windows form rendering theme can be defined at [application level](../settings/interface.md#use-fluent-ui-on-windows) and/or at [form level](../FormEditor/properties_FormProperties.md#form-theme-on-windows) (where it can be inherited or explicitely defined), and also depends on the [availability of specific Microsoft libraries](../FormEditor/forms.md#requirements) on the current machine at runtime. This command allows you to know which form theme is currently running.
+The Windows form rendering theme can be defined at [application level](../settings/interface.md#use-fluent-ui-on-windows) and/or at [form level](../FormEditor/properties_FormProperties.md#form-theme-on-windows) (where it can be inherited or explicitely defined), and also depends on the [availability of specific Microsoft libraries](../FormEditor/forms.md#requirements) on the current machine at runtime. Este comando le permite saber qué tema de formulario se está ejecutando actualmente.
 
 If there is no current form, or if the command is executed on macOS, **FORM theme** returns an empty string.
 
@@ -36,9 +36,9 @@ If there is no current form, or if the command is executed on macOS, **FORM them
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1832                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1832 |
+| Hilo seguro       | no   |
 
 

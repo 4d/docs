@@ -54,7 +54,7 @@ Les zones de la "Recherche dans le développement" varient dynamiquement en fonc
 
 2. Construisez votre recherche en utilisant les différents menus et zones de saisie de la boîte de dialogue et, si nécessaire, saisissez la chaîne de caractères à rechercher. Ces éléments sont décrits dans les sections suivantes.
 
-3. Définissez les [options de recherche](#search-options) (si nécessaire).
+3. Set the [searching options](#searching-options) (if necessary).
 
 4. Cliquez sur **OK** ou appuyez sur la touche **Entrée**.
    Lorsque la recherche est terminée, la [fenêtre de résultat](#results-window) s'affiche, répertoriant les éléments trouvés.

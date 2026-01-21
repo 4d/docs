@@ -79,7 +79,7 @@ Note that with this option, whatever the internal thread safety evaluation, the 
 
 :::note Particular case
 
-If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
+If the method has also the [**Shared by components and host database**](../Project/project-method-properties.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
 
 :::
 

@@ -144,7 +144,7 @@ Cette page contient des commandes permettant d'imprimer des étiquettes en fonct
 - **Méthode** : ce paramètre vous permet de déclencher une méthode particulière lors de l’impression de votre planche d’étiquettes. Par exemple, vous pouvez exécuter une méthode qui enregistre la date et l'heure auxquelles chaque étiquette a été imprimée. Cette fonction est également utile lorsque vous imprimez des étiquettes à l'aide d'un formulaire table dédié, auquel cas vous pouvez remplir des variables à partir d'une méthode.
   Pour être éligible au traitement des étiquettes, une méthode projet doit respecter les conditions suivantes :
   - elle doit être "autorisée" pour la base de données (les méthodes autorisées dépendent des [paramètres du projet](../settings/security.md#options) et de la commande [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)), sinon elle ne sera pas affichée dans le menu **Appliquer**.
-  - elle doit avoir l'option [Partagée entre composants et base hôte](../Project/code-overview.md#shared-by-components-and-host-database) .
+  - elle doit avoir l'option [Partagée entre composants et base hôte](../Project/project-method-properties.md#shared-by-components-and-host-database) .
     Voir aussi [cet exemple](#printing-labels-using-forms-and-methods-example) ci-dessous.
 
 :::note
@@ -172,7 +172,7 @@ Vous pouvez utiliser des formulaires table dédiés et des méthodes projet pour
  var myVar+=1
 ```
 
-3. Appliquez l'option ["Partagée entre composants et projet hôte"](../Project/code-overview.md#shared-by-components-and-host-database) à la méthode projet.
+3. Appliquez l'option ["Partagée entre composants et projet hôte"](../Project/project-method-properties.md#shared-by-components-and-host-database) à la méthode projet.
 
 4. Avant d'afficher l'éditeur d'étiquettes, assurez-vous que la méthode projet est autorisée en exécutant ce code :
 

@@ -340,7 +340,7 @@ Um arquivo `dependency-lock.json` foi criado na pasta [`userPreferences`](archit
 
 Este arquivo registra informações como o estado das dependências, caminhos, urls, erros de carregamento, bem como outras informações. Pode ser útil para o gerenciamento de carregamentos de componentes ou solução de problemas.
 
-## Monitoramento das dependências do projeto
+## Monitoring Project Dependencies {#monitoring-project-dependencies}
 
 Em um projeto aberto, você pode adicionar, remover, atualizar e obter informações sobre dependências e seu status de carregamento atual no painel **Dependências**.
 

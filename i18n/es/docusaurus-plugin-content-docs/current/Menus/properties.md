@@ -177,4 +177,4 @@ Para definir el icono en el editor de menús, haga clic en el área "Icono del e
 
 Para eliminar el icono del elemento, elija la opción **Sin icono** del área "Icono línea".
 
-To define item icons using the 4D language, call the [`SET MENU ITEM ICON`](../commands/set-menu-item-icon) command.
+Para definir iconos de los elementos utilizando el lenguaje 4D, llame al comando [`SET MENU ITEM ICON`](../commands/set-menu-item-icon).

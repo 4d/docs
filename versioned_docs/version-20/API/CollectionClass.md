@@ -2380,11 +2380,11 @@ var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
 //using the character code:
-$strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
+$strings2:=$strings1.orderByMethod(Formula(sortCollection);sk char codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //using the language:
-$strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
+$strings2:=$strings1.orderByMethod(Formula(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 

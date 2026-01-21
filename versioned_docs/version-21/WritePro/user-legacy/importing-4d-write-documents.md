@@ -22,8 +22,8 @@ For more information, see *Managing formulas*.
 
 4D Write Pro objects offer two ways to import 4D Write documents:
 
-* For 4D Write files stored on disk, you use the [WP Import document](../commands/wp-import-document) command,
-* For 4D Write areas stored in BLOB fields, you use the [WP New](../commands/wp-new) command.
+* For 4D Write files stored on disk, you use the [WP Import document](./commands/wp-import-document) command,
+* For 4D Write areas stored in BLOB fields, you use the [WP New](./commands/wp-new) command.
 
 For more information, please refer to the description of these commands.
 
@@ -31,7 +31,7 @@ For more information, please refer to the description of these commands.
 
 To facilitate your migration from the 4D Write plug-in to 4D Write Pro, we want to support as many 4D Write features as possible in 4D Write Pro objects.
 
-This paragraph lists the 4D Write plug-in properties that are currently recovered in a 4D Write Pro area after an import using the [WP Import document](../commands/wp-import-document) or [WP New](../commands/wp-new) commands. 
+This paragraph lists the 4D Write plug-in properties that are currently recovered in a 4D Write Pro area after an import using the [WP Import document](./commands/wp-import-document) or [WP New](./commands/wp-new) commands. 
 
 Note however that a few differences can be seen, which are not considered as bugs. This is due, for example, to the default font used in 4D Write Pro for bullets, or small conversions in the Underline type. 
 
@@ -84,7 +84,7 @@ Note however that a few differences can be seen, which are not considered as bug
 | URL color            | Not available                                                    |
 | URL visited color    | Not available                                                    |
 
-**Note:** The system separator (as returned by [GET SYSTEM FORMAT](../../commands/get-system-format)) is used as decimal separator for decimal tabs. You can change this parameter using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command. 
+**Note:** The system separator (as returned by [GET SYSTEM FORMAT](../../commands/get-system-format)) is used as decimal separator for decimal tabs. You can change this parameter using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. 
 
 ### Document pagination parameters 
 
@@ -127,7 +127,7 @@ Note however that a few differences can be seen, which are not considered as bug
 
 **Compatibility notes:** 
 
-* Picture display modes are automatically imported as of 4D Write Pro v19 R2, using [WP Import document](../commands/wp-import-document). You can restore the previous behavior (all images are scaled to fit) using the *importDisplayMode* attribute.
+* Picture display modes are automatically imported as of 4D Write Pro v19 R2, using [WP Import document](./commands/wp-import-document). You can restore the previous behavior (all images are scaled to fit) using the *importDisplayMode* attribute.
 * On Windows, images having the Mac OS PICT format are imported but cannot be rendered in 4D Write Pro. If you import a document containing images of this type, you need to convert them to another format. Support of PICT format has been removed since 4D v18 and can no longer be used.
 
 | **4D Write plug-in**               | **4D Write Pro**                                     |
@@ -213,7 +213,7 @@ Note however that a few differences can be seen, which are not considered as bug
 | HTML expression      | Not available\*\* |
 | RTF expression       | Not available     |
 
-\*Use the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command with the wk break paragraphs in formulas attribute to transform CR returned by formulas into paragraph breaks in the imported document (line breaks by default). (See *Managing formulas*) 
+\*Use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the wk break paragraphs in formulas attribute to transform CR returned by formulas into paragraph breaks in the imported document (line breaks by default). (See *Managing formulas*) 
 
 \*\*can be imported as text between **##htmlBegin##** and **##htmlEnd##** tags if you use the wk import html expressions as text constant.
 

@@ -54,7 +54,7 @@ Las áreas de "Buscar en el diseño" varían dinámicamente en función de las s
 
 2. Construya su búsqueda utilizando los diferentes menús y áreas de entrada del diálogo y, si es necesario, introduzca la cadena de caracteres a buscar. Estos elementos se describen en las secciones siguientes.
 
-3. Define las [opciones de búsqueda](#search-options) (si es necesario).
+3. Set the [searching options](#searching-options) (if necessary).
 
 4. Haga clic en **OK** o presione la tecla **Entrada**.
    Cuando la búsqueda ha terminado, aparece la [ventana de resultados](#results-window) indicando los elementos encontrados.
@@ -223,7 +223,7 @@ Las operaciones de sustitución funcionan del siguiente modo:
 - Después de que un reemplazo se haga en una lista de elementos, aparecerá en cursiva. En la parte inferior de la ventana aparece un recuento de las sustituciones realizadas en tiempo real.
 - Los elementos nunca son renombrados por la función **Reemplazar en contenido**, excepto los objetos formulario. Por lo tanto, es posible que ciertos elementos de la lista no se vean afectados por la operación de reemplazo. Esto puede ocurrir cuando sólo el nombre del artículo corresponde a los criterios de búsqueda iniciales. En este caso, los elementos de la lista no aparecen necesariamente todos en cursiva y el recuento final de sustituciones puede ser inferior al número de ocurrencias encontradas por la búsqueda inicial.
 
-## Renaming project methods and variables {#renaming-project-methods-and-variables}
+## Renombrar métodos del proyecto y variables {#renaming-project-methods-and-variables}
 
 4D ofrece una función dedicada de renombrado con distribución en todo el proyecto para los métodos proyecto y variables en todo el proyecto.
 
@@ -237,47 +237,47 @@ Cuando selecciona este comando, aparece un cuadro de diálogo donde introduce el
 
 El nuevo nombre debe cumplir las [reglas de nomenclatura](../Concepts/identifiers.md); de lo contrario, aparecerá una advertencia al validar el cuadro de diálogo. Por ejemplo, no se puede renombrar un método con un nombre de comando como "Alert".
 
-Depending on the type of object you are renaming (project method or variable), the renaming dialog box may also contain a distribution option:
+Dependiendo del tipo de objeto que esté renombrando (método proyecto o variable), el cuadro de diálogo de renombrado puede contener también una opción de distribución:
 
-- Project method: The **Update callers in whole database** option renames the method in all the project code that references it. También puede desmarcar esta opción para, por ejemplo, renombrar el método solo en el propio Explorador.
-- Process variable: The **Rename variable in whole database** option renames the variable in all the project code that references it. If you uncheck this option, the variable is only renamed in the current method.
-- Local variable: No distribution option for this object; the variable is only renamed in the current method or class.
+- Método proyecto: la opción **Actualizar llamantes en toda la base de datos** renombra el método en todo el código del proyecto que lo referencia. También puede desmarcar esta opción para, por ejemplo, renombrar el método solo en el propio Explorador.
+- Variable process: la opción **Renombrar la variable en toda la base de datos** renombra la variable en todo el código del proyecto que la referencia. Si desmarca esta opción, la variable sólo se renombra en el método actual.
+- Variable local: no hay opción de distribución para este objeto; la variable sólo se renombra en el método o clase actual.
 
 ## Búsqueda de elementos no utilizados
 
-Two specific search commands allow you to detect variables and methods that are not used in the code of your host project. You can then remove them to free up memory. These commands are found in the **Edit** menu of the Design environment.
+Dos comandos de búsqueda específicos permiten detectar variables y métodos que no se utilizan en el código de su proyecto. A continuación, puede eliminarlos para liberar memoria. Estos comandos se encuentran en el menú **Edición** del entorno de diseño.
 
 ### Encontrar métodos y variables globales no utilizados
 
-This command looks for project methods as well as "global" variables (process and interprocess variables) that are declared but not used. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
+Este comando busca los métodos del proyecto, así como variables "globales" (variables proceso e interproceso) declaradas pero no utilizadas. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
 
 Se considera que un método proyecto no se utiliza cuando:
 
 - no está en la Papelera,
-- it is not called anywhere in the 4D code,
+- no se llama en ninguna en el código 4D,
 - no es llamado por un comando de menú,
-- it is not called as a string constant in the 4D code (4D detects a method name in a string even when it is followed by parameters in parentheses).
+- no se llama como una constante cadena en el código 4D (4D detecta un nombre de método en una cadena incluso cuando va seguido de parámetros entre paréntesis).
 
-A process or interprocess variable is considered to be unused when:
+Se considera que una variable proceso o interproceso no se utiliza cuando:
 
-- it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
-- it is not used anywhere else in the 4D code,
+- está [declarada](../Concepts/variables.md#declaring-variables) en el código 4D,
+- no se utiliza en ninguna otra parte del código 4D,
 - no se utiliza en ningún objeto de formulario.
 
-Note that certain uses cannot be detected by the function - i.e. an element considered unused may in fact be used. Este es el caso del siguiente código:
+Tenga en cuenta que algunos usos no pueden ser detectados por la función, es decir, un elemento que se considera no utilizado puede serlo en realidad. Este es el caso del siguiente código:
 
 ```4d
 var v : Text :="method"
 EXECUTE FORMULA("my"+v+String(42))
 ```
 
-Este código construye un nombre de método. The *mymethod42* project method is considered unused when in fact it is called. Therefore, it is advisable to check that the elements declared as unused are in fact unnecessary before you remove them.
+Este código construye un nombre de método. El método proyecto *mymethod42* se considera no utilizado cuando en realidad se llama. Por lo tanto, es aconsejable comprobar que los elementos declarados como no utilizados son en realidad innecesarios antes de eliminarlos.
 
 ### Buscar variables locales no utilizadas
 
-This command looks for local variables that are declared but not used. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
+Este comando busca variables locales declaradas pero no utilizadas. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
 
 Se considera que una variable local no se utiliza cuando:
 
-- it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
+- está [declarada](../Concepts/variables.md#declaring-variables) en el código 4D,
 - no se utiliza en ningún otro lugar dentro del mismo método.

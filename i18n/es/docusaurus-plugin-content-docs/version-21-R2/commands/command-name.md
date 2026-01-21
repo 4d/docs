@@ -30,21 +30,21 @@ displayed_sidebar: docs
 
 The **Command name** command <!--REF #_command_.Command name.Summary-->returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->El número de cada comando se indica tanto en el explorador como en el área Propiedades de esta documentación.
 
-**Compatibility note:** A command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information, refer to the *Using tokens in formulas* section). Tenga en cuenta también que la opción \*[Usar parámetros del sistema regional\* de las Preferencias](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) le permite seguir usando el idioma francés en una versión francesa de 4D.
+**Nota de compatibilidad:** el nombre de un comando puede variar de una versión 4D a la siguiente (comandos renombrados), este comando se utilizaba en versiones anteriores para designar un comando directamente mediante su número, especialmente en porciones de código no tokenizadas. Esta necesidad ha disminuido con el tiempo a medida que 4D sigue evolucionando porque, para las sentencias no tokenizadas (fórmulas), 4D ahora ofrece una sintaxis con tokens. Esta sintaxis le permite evitar posibles problemas debidos a las variaciones en los nombres de los comandos y otros elementos, como las tablas, sin dejar de poder escribir estos nombres de forma legible (para más información, consulte la sección *Utilización de tokens en las fórmulas*). Tenga en cuenta también que la opción \*[Usar parámetros del sistema regional\* de las Preferencias](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) le permite seguir usando el idioma francés en una versión francesa de 4D.
 
 Hay dos parámetros opcionales:
 
 - *info*: propiedades del comando. El valor devuelto es un *campo de bits*, donde los siguientes bits son significativos:
   - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Solo se pueden usar comandos hilo seguro en [procesos preventivos](../Develop/preemptive.md).
-  - Segundo bit (bit 1): se define en 1 si el comando es **obsoleto**, y en 0 si no lo es. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Los comandos obsoletos en su código generan advertencias en el [Live Checker y el compilador](../code-editor/write-class-method.md#warnings-and-errors).
+  - Segundo bit (bit 1): se define en 1 si el comando es **obsoleto**, y en 0 si no lo es. Un comando obsoleto seguirá funcionando normalmente mientras sea compatible, pero debe sustituirse siempre que sea posible y no debe utilizarse en código nuevo. Los comandos obsoletos en su código generan advertencias en el [Live Checker y el compilador](../code-editor/write-class-method.md#warnings-and-errors).
 
 *theme*: nombre del tema del lenguaje 4D para el comando.
 
-The **Command name** command sets the *OK* variable to 1 if *command* corresponds to an existing command number, and to 0 otherwise. Note, however, that some existing commands have been disabled, in which case **Command name** returns an empty string (see last example).
+El comando **Command name** define la variable *OK* en 1 si *command* corresponde a un número de comando existente, y a 0 en caso contrario. Tenga en cuenta, sin embargo, que algunos comandos existentes han sido desactivados, en cuyo caso **Command name** devuelve una cadena vacía (ver el último ejemplo).
 
 ## Ejemplo 1
 
-The following code allows you to load all valid 4D commands in an array:
+El siguiente código permite cargar todos los comandos 4D válidos en un array:
 
 ```4d
  var $Lon_id : Integer
@@ -56,12 +56,12 @@ The following code allows you to load all valid 4D commands in an array:
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id)
     If(OK=1) //command number exists
-       If(Length($Txt_command)>0) //command is not disabled
+       If(Length($Txt_command)>0) //el comando no está desactivado
           APPEND TO ARRAY($tTxt_commands;$Txt_command)
           APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
        End if
     End if
- Until(OK=0) //end of existing commands
+ Until(OK=0) //fin de los comandos existentes
 ```
 
 ## Ejemplo 2
@@ -86,7 +86,7 @@ En la versión inglesa de 4D, la lista desplegable leerá: Sum, Average, Min y M
 
 ## Ejemplo 3
 
-You want to create a method that returns **True** if the command, whose number is passed as parameter, is thread-safe, and **False** otherwise.
+Quiere crear un método que devuelva **True** si el comando, cuyo número se pasa como parámetro, es hilo seguro, y **False** en caso contrario.
 
 ```4d
   //Is_Thread_Safe project method
@@ -120,11 +120,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //the second bit is set to 1
-            //then the command is deprecated
+    If($info ?? 1) //el segundo bit está a 1
+            //entonces el comando es obsoleto
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //end of existing commands
+Until(OK=0) //fin de los comandos existentes
 
 ```
 

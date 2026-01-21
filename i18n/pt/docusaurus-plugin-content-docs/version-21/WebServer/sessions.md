@@ -94,7 +94,7 @@ Quando uma sessão Web é fechada, se o comando [`Session`](commands/session.md)
 
 :::info
 
-Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout**](qodly-studio.md#logout).
+Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout).
 
 :::
 

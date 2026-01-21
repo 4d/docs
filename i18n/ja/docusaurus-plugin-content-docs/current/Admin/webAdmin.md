@@ -55,7 +55,7 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 
 Web 管理サーバーの設定は、[Web管理設定ダイアログボックス](#settings-dialog-box) (後述参照) でおこないます。
 
-> ヘッドレス4Dアプリケーションを使用している場合は、[*コマンドライン・インターフェース* の引数](#webadmin-headless-configuration) を使用して基本的な設定を定義できます。 高度なパラメーターを定義するには、設定ファイルをカスタマイズする必要があります。
+> ヘッドレス4Dアプリケーションを使用している場合は、[*コマンドライン・インターフェース* の引数](#headless-configuration) を使用して基本的な設定を定義できます。 高度なパラメーターを定義するには、設定ファイルをカスタマイズする必要があります。
 
 ### 設定ダイアログボックス
 
@@ -135,8 +135,6 @@ Web 管理サーバーへの URL経由アクセスのロックを解除するに
 このオプションは、[ワンクリック設定ダイアログボックス](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration)を使用した場合には自動的にチェックされています。
 
 :::
-
-:::note
 
 ## ヘッドレス設定
 

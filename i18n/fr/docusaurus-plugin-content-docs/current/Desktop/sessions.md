@@ -57,7 +57,7 @@ Vous pouvez également attribuer des privilèges à une session d'utilisateur di
 
 L'objet `session` de l'utilisateur distant est disponible depuis :
 
-- Les méthodes projet qui ont l'attribut [Exécuter sur serveur](../Project/code-overview.md#execute-on-server) (elles sont exécutées dans le process jumeau du process client),
+- Les méthodes projet qui ont l'attribut [Exécuter sur serveur](../Project/project-method-properties.md#execute-on-server) (elles sont exécutées dans le process jumeau du process client),
 - Les Triggers,
 - Les [fonctions ORDA du modèle de données](../ORDA/ordaClasses.md) (sauf celles déclarées avec le mot-clé [`local`](../ORDA/ordaClasses.md#local-functions)),
 - Les méthodes base telles que [`On Server Open Connection`](../commands/on-server-open-connection-database-method) et [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
@@ -110,7 +110,7 @@ Lors de la création d'un token OTP en environnement client/serveur, vous devez 
 
 :::tip Article(s) de blog sur le sujet
 
-[Intégrez des pages Qodly dans une zone web 4D sans coût supplémentaire](https://blog.4d.com/embed-qodly-pages-in-a-4d-web-area-without-extra-cost)
+[Intégrez des pages Qodly dans une zone web 4D sans coût supplémentaire](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)
 
 :::
 

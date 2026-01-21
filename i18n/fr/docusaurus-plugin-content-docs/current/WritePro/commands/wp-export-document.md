@@ -48,7 +48,7 @@ Vous pouvez omettre le paramètre *format*, auquel cas vous devez spécifier l'e
 - Pour consulter la liste des différences ou des incompatibilités connues lors de l'utilisation du format .docx, voir [Importation et exportation au format .docx](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
 - Pour plus d'informations sur l'exportation au format SVG, voir [Exportation au format SVG](https://doc.4d.com/4Dv20/4D/20/Exporting-to-SVG-format.200-6229468.en.html).
 
-### option parameter
+### Paramètre option
 
 Pass an [object](# "Data structured as a native 4D object") in *option* containing the values to define the properties of the exported document. Les propriétés suivantes sont disponibles :
 

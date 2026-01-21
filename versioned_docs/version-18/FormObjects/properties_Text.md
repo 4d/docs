@@ -415,7 +415,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 ---
 
-## Row Style Array {#row-style-array)
+## Row Style Array {#row-style-array}
 
 `Array type list boxes`
 

@@ -435,7 +435,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
 
 La dernière ligne renverra dans *$myInvoices* une entity selection de toutes les factures qui ont au moins une ligne liée à une pièce dans l'entity selection myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection et qu'aucune entité n'est retournée, le résultat est une entity selection vide, et non nulle.
 
-## Entity selections restreintes
+## Restricting entity selections {#restricting-entity-selections}
 
 Dans ORDA, vous pouvez créer des filtres pour restreindre l'accès aux entités de n'importe quelle dataclass. Une fois implémenté, un filtre est automatiquement appliqué chaque fois qu'on accède aux entités de la dataclass soit par les fonctions de classe **ORDA** telles que [`all()`](../API/DataClassClass.md#all) ou [`query()`](../API/EntitySelectionClass.md#query), soit par l'[**API REST**](../category/api-dataclass) (ce qui inclut l'[Explorateur de données](../Admin/dataExplorer.md) et les [datastores distants](remoteDatastores.md)).
 

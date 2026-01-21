@@ -10,7 +10,7 @@ Las sesiones web permiten:
 - manejar múltiples peticiones simultáneamente desde el mismo cliente web a través de un número ilimitado de procesos apropiativos (las sesiones web son **escalables**),
 - gestionar la sesión a través de un objeto `Session` y la [Session API](API/SessionClass.md),
 - almacenar y compartir datos entre procesos de un cliente web utilizando el [.storage](../API/SessionClass.md#storage) de la sesión,
-- associate [privileges](../ORDA/privileges.md) to the user running the session.
+- asociar [privilegios](../ORDA/privileges.md) al usuario que ejecuta la sesión.
 
 :::tip Entrada de blog relacionada
 
@@ -20,7 +20,7 @@ Las sesiones web permiten:
 
 :::note
 
-Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md).
+Las aplicaciones Destkop (cliente/servidor y monousuario) también ofrecen a los desarrolladores 4D [sesiones específicas](../Desktop/sessions.md).
 
 :::
 
@@ -29,9 +29,9 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 Las sesiones web se utilizan para:
 
 - [Aplicaciones web](gettingStarted.md) enviando peticiones http (incluyendo peticiones [SOAP Web services](../commands/theme/Web_Services_Server.md) y [/4DACTION](../WebServer/httpRequests.md#4daction)),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
+- llamadas a la [REST API](../REST/authUsers.md), que utilizan [datastores remotos](../ORDA/remoteDatastores.md) y [páginas Qodly](https://developer.4d.com/qodly/).
 
-## Activando sesiones web {#enabling-web-sessions}
+## Activación de sesiones web {#enabling-web-sessions}
 
 La funcionalidad de gestión de sesiones puede ser activada y desactivada en su servidor web 4D. Hay diferentes maneras de habilitar la gestión de la sesión:
 
@@ -69,7 +69,7 @@ El nombre de la cookie se puede obtener utilizando la propiedad [`.sessionCookie
 
 :::note
 
-Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
+La creación de una sesión web para una petición REST puede requerir que una licencia esté disponible, consulte [esta página](../REST/authUsers.md).
 
 :::
 
@@ -209,9 +209,9 @@ End if
 
 ## Token de sesión (OTP)
 
-El servidor web 4D le permite generar, compartir y utilizar tokens de sesión OTP (One-Time Passcode). Los tokens de sesión OTP se utilizan para asegurar comunicaciones con aplicaciones de terceros o sitios web. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
+El servidor web 4D le permite generar, compartir y utilizar tokens de sesión OTP (One-Time Passcode). Los tokens de sesión OTP se utilizan para asegurar comunicaciones con aplicaciones de terceros o sitios web. Para obtener información sobre OTP, por favor consulte la [página contraseña de uso único](https://en.wikipedia.org/wiki/One-time_password) en Wikipedia.
 
-In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Normalmente, una aplicación de terceros envía un correo electrónico de confirmación que contiene un enlace de retrollamada en el que el usuario tiene que hacer clic. El enlace de retrollamada incluye el token OTP, para que la sesión que activó la retrollamada se cargue junto con sus datos y privilegios. This principle allows you to share the same session on multiple devices. Gracias a esta arquitectura, la [cookie de sesión](#session-implementation) no está expuesta en la red, lo que elimina el riesgo de un ataque de hombre en el medio.
+En 4D, los tokens de sesión OTP son útiles cuando se llama a URLs externas y se vuelve a llamar en otro navegador o dispositivo (móvil/ordenador). Normalmente, una aplicación de terceros envía un correo electrónico de confirmación que contiene un enlace de retrollamada en el que el usuario tiene que hacer clic. El enlace de retrollamada incluye el token OTP, para que la sesión que activó la retrollamada se cargue junto con sus datos y privilegios. Este principio permite compartir la misma sesión en varios dispositivos. Gracias a esta arquitectura, la [cookie de sesión](#session-implementation) no está expuesta en la red, lo que elimina el riesgo de un ataque de hombre en el medio.
 
 :::tip Entradas de blog relacionadas
 
@@ -221,7 +221,7 @@ In 4D, OTP session tokens are useful when calling external URLs and being called
 
 :::note
 
-Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
+Los tokens de sesión pueden ser compartidos con [sesiones de escritorio](../Desktop/sessions.md) para implementar aplicaciones usando sesiones híbridas.
 
 :::
 
@@ -246,8 +246,8 @@ Las retrollamadas de aplicaciones de terceros que incluyen el token OTP pueden s
 Utilizar el parámetro `$4DSID` es la forma más sencilla de procesar una retrollamada desde la aplicación de terceros:
 
 - El token OTP se ofrece como parámetro directamente en la url de retrollamada utilizando la sintaxis estándar `?$4DSID=XXXX123`.
-- In 4D, you implement a dedicated [HTTP Request handler](http-request-handler.md) in your 4D application using [`IncomingMessage`](../API/IncomingMessageClass.md) and [`OutgoingMessage`](../API/OutgoingMessageClass.md) classes.
-- If the `$4DSID` token is valid, the related web user session is **automatically restored** in any web process with its storage and privileges.
+- En 4D, usted implementa un [HTTP Request handler](http-request-handler.md) dedicado en su aplicación 4D utilizando las clases [`IncomingMessage`](../API/IncomingMessageClass.md) y [`OutgoingMessage`](../API/OutgoingMessageClass.md).
+- Si el token `$4DSID` es válido, la sesión de usuario web relacionada se **restaura automáticamente** en cualquier proceso web con su almacenamiento y privilegios.
 
 :::note
 
@@ -481,7 +481,7 @@ Se crea un nuevo usuario y se almacena cierta información en la sesión, especi
 - Se admiten esquemas HTTP y HTTPS.
 - Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
 - Sólo se pueden reutilizar las sesiones de la base de datos local (las sesiones creadas en servidores web de componentes no se pueden restaurar).
-- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Los tokens se pueden **compartir** con [sesiones de escritorio](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) para accesos híbridos (escritorio y web).
 
 ### Vida útil
 

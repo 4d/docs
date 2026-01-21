@@ -1211,14 +1211,14 @@ var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
 
-The **order by** statement is supported in the query string so that entities in the resulting entity selection are sorted by similarity. Por ejemplo:
+La instrucción **orden by** es soportada en la cadena de consulta para que las entidades en la selección de entidad resultante estén ordenadas por similitud. Por ejemplo:
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
   //default order, the first entity is the most similar
 ```
 
-If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
+Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /

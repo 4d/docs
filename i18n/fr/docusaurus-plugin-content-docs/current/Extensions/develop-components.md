@@ -110,7 +110,7 @@ Lorsque vous la sélectionnez, un onglet dédié est ajouté (ou activé s'il es
 Les fonctionnalités standard de l'IDE 4D sont disponibles pour le composant. Vous pouvez exécuter les actions suivantes :
 
 - ajouter, dupliquer, supprimer, modifier/sauvegarder les [méthodes et classes](../Project/code-overview.md)
-- prévisualiser le code, afficher/modifier la [documentation](../Project/documentation.md), afficher/modifier les [propriétés des méthodes](../Project/code-overview.md#project-method-properties),
+- preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md),
 - exécuter des méthodes,
 - restaurer à partir de la corbeille ou vider la corbeille.
 
@@ -474,7 +474,7 @@ Si les deux fichiers `logo.svg` et `logo.png` sont trouvés, le `logo.svg` est p
 
 ## Info.plist
 
-Les composants peuvent avoir un fichier `Info.plist` dans leur [dossier racine](../Project/architecture.md) pour fournir des informations supplémentaires lisibles par le système (macOS uniquement) et le [Gestionnaire de dépendances](../Project/components.md#loading-components).
+Les composants peuvent avoir un fichier `Info.plist` dans leur [dossier racine](../Project/architecture.md) pour fournir des informations supplémentaires lisibles par le système (macOS uniquement) et le [Gestionnaire de dépendances](../Project/components.md#monitoring-project-dependencies).
 
 :::note
 
@@ -482,7 +482,7 @@ Ce fichier n'est pas obligatoire mais il est nécessaire pour construire des com
 
 :::
 
-Les clés prises en charge dans les fichiers `Info.plist` des composants sont principalement des [clés bundle d'Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) qui sont ignorées sous Windows. Cependant, elles sont utilisés par le [Gestionnaire de dépendances](../Project/components.md#loading-components) sur toutes les plates-formes.
+Les clés prises en charge dans les fichiers `Info.plist` des composants sont principalement des [clés bundle d'Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) qui sont ignorées sous Windows. Cependant, elles sont utilisés par le [Gestionnaire de dépendances](../Project/components.md#monitoring-project-dependencies) sur toutes les plates-formes.
 
 Les clés suivantes peuvent être définies :
 

@@ -114,7 +114,7 @@ La renderización Fluent UI ofrece controles modernos y atractivos, compatibilid
 
 :::info Disponibilidad
 
-This feature can be used **in 4D projects on Windows**. No está disponible en macOS ni en bases de datos binarias 4D en Windows.
+Esta funcionalidad puede utilizarse **en proyectos 4D en Windows**. No está disponible en macOS ni en bases de datos binarias 4D en Windows.
 
 :::
 
@@ -129,9 +129,9 @@ This feature can be used **in 4D projects on Windows**. No está disponible en m
 
 The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine. You need to make sure this SDK is installed on any Windows machine displaying your forms.
 
-[If necessary](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), you can install the Windows App SDK. For convenience, the 4D installer [provides a link](../GettingStarted/Installation.md#installation-on-disk) to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
+[If necessary](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), you can install the Windows App SDK. For convenience, the 4D installer [provides a link](../GettingStarted/Installation.md#installation-on-disk) to download the Windows App SDK installer. También puede visitar la [página de descargas de Microsoft](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Recomendamos utilizar la versión referenciada por el programa de instalación de 4D, que ofrece una compatibilidad óptima.
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
+If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. La aplicación se ejecuta con el aspecto clásico de Windows."
 
 ### Activar el renderizado Fluent UI
 
@@ -170,7 +170,7 @@ The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows
 
 Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar atención a los siguientes puntos:
 
-- The [`FORM theme`](../commands/form-theme.md) command returns the actual display theme of the current form. Valores posibles: "Classic" o "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
+- El comando [`FORM theme`](../commands/form-theme.md) devuelve el tema actual del formulario. Valores posibles: "Classic" o "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
 - The [`Application info`](../commands/application-info.md) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
 - Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application info.Params-->
 
-| Paramètres | Type   |                             | Description                                       |
-| ---------- | ------ | --------------------------- | ------------------------------------------------- |
-| Résultat   | Object | &#8592; | Information about the active application activity |
+| Paramètres | Type   |                             | Description                                         |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- |
+| Résultat   | Object | &#8592; | Informations sur l'activité de l'application active |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 | Release | Modifications                                            |
 | ------- | -------------------------------------------------------- |
-| 21 R2   | Support of "useFluentUI" and "canUseFluentUI" properties |
+| 21 R2   | Support des propriétés "useFluentUI" et "canUseFluentUI" |
 
 </details>
 
@@ -55,7 +55,7 @@ L'objet retourné contient les propriétés suivantes :
 | useQUICNetworkLayer                                                              | boolean    | True if QUIC network layer used for the application server and db4d server. Not returned in standalone environment. Possible values: true, false. Pour plus d'informations, voir [cet article de blog](https://blog.4d.com/quic-network/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | false                                                                                                                                                                                                                 |
 | volumeShadowCopyStatus                                                           | string     | Returns the status of the Volume Shadow Copy Service. Windows only. For more information, see *Using Volume Shadow Copy Service on Windows*.  Possible values: <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>vss available</td> <td>available</td> <td>The service is available.</td> </tr><tr> <td>vss error</td> <td>error</td> <td>The service experienced an error.</td> </tr><tr> <td>vss not available</td> <td>notAvailable</td> <td>The service is unavailable.</td> </tr><tr> <td>vss update required</td> <td>updateRequired</td> <td>The service needs to be updated.</td> </tr> </tbody> </table> | "available"                                                                                                                                                                                                           |
 
-(\*) On Windows, you need to get this counter previously initialized, for example by a call to the **Application info** command in the [On Startup database method](on-startup-database-method.md).
+(\*) On Windows, you need to get this counter previously initialized, for example by a call to the **Application info** command in the [On Startup database method](../commands-legacy/on-startup-database-method.md).
 
 ## Exemple
 
@@ -81,7 +81,7 @@ If the code is executed from a standalone environment, the object contains (for 
 }
 ```
 
-If the code is executed from a 4D remote client, the object contains (for example):
+Si le code est exécuté à partir d'un client distant 4D, l'objet contient (par exemple) :
 
 ```json
 {
@@ -99,7 +99,7 @@ If the code is executed from a 4D remote client, the object contains (for exampl
 }
 ```
 
-If the code is executed on 4D Server, the object contains (for example):
+Si le code est exécuté sur 4D Server, l'objet contient (par exemple) :
 
 ```json
 {

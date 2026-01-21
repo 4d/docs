@@ -76,7 +76,7 @@ Tenga en cuenta que con esta opción, sea cual sea la evaluación de su compatib
 
 :::note Caso particular
 
-Si el método también tiene la propiedad [**Compartido por componentes y base de datos local**](../Project/code-overview.md#shared-by-components-and-host-database), definiendo la opción **Indiferente** etiquetará automáticamente el método como hilo-inseguro. Si quiere que un método de componente compartido sea hilo seguro, debe configurarlo explícitamente como **Puede ejecutarse en procesos apropiativos**.
+Si el método también tiene la propiedad [**Compartido por componentes y base de datos local**](../Project/project-method-properties.md#shared-by-components-and-host-database), definiendo la opción **Indiferente** etiquetará automáticamente el método como hilo-inseguro. Si quiere que un método de componente compartido sea hilo seguro, debe configurarlo explícitamente como **Puede ejecutarse en procesos apropiativos**.
 
 :::
 

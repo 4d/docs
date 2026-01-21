@@ -70,7 +70,7 @@ Para eliminar la exposición REST de un campo:
 
 1. Visualice el inspector de campo en el editor de estructuras y seleccione el campo a modificar.
 
-2. Uncheck the **Expose as REST resource** for the field.<br/>
+2. Desmarque la opción **Exponer como recurso REST** para el campo.<br/>
    ![alt-text](../assets/en/REST/field.png)<br/>
    Repeat this for each field whose exposure needs to be modified.
 

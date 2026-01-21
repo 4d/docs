@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.FORM theme.Summary-->**FORM theme** コマンドは、カレントフォームに対して実際にレンダリングされている Windows テーマを返します: "Classic" あるいは "FluentUI"<!-- END REF-->。
+<!--REF #_command_.FORM theme.Summary-->The **FORM theme** command returns the Windows theme actually rendered for the current form: "Classic" or "FluentUI".<!-- END REF-->
 
 Windows フォームレンダリングテーマは、[アプリケーションレベル](../settings/interface.md#use-fluent-ui-on-windows) あるいは [フォームレベル](../FormEditor/properties_FormProperties.md#form-theme-on-windows) (継承するかあるいは明示的に定義することが可能) で定義することが可能で、またランタイムでのカレントマシン上における [特定のMicrosoft ライブラリーの利用可能性](../FormEditor/forms.md#要件) にも依存します。 このコマンドを使用することで、どのフォームテーマが現在実行中なのかを知ることができます。
 
@@ -36,9 +36,9 @@ Windows フォームレンダリングテーマは、[アプリケーション�
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1832                        |
-| スレッドセーフ | &cross; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1832 |
+| スレッドセーフ | ×    |
 
 

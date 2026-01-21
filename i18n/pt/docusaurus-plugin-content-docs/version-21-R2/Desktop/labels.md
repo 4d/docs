@@ -144,7 +144,7 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Método**: permite que você acione um método específico que será executado no momento da impressão. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
   To be eligible for label processing, a project method must comply with the following settings:
   - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
-  - precisa ter a opção [Compartilhada por componentes e banco de dados host](../Project/code-overview.md#shared-by-components-and-host-database).
+  - precisa ter a opção [Compartilhada por componentes e banco de dados host](../Project/project-method-properties.md#shared-by-components-and-host-database).
     Veja também [este exemplo](#printing-labels-using-forms-and-methods-example) abaixo.
 
 :::note
@@ -172,7 +172,7 @@ You can use dedicated table forms and project methods to print labels with calcu
  var myVar+=1
 ```
 
-3. Defina o método projeto como ["Compartilhado por componentes e banco de dados host"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. Defina o método projeto como ["Compartilhado por componentes e banco de dados host"](../Project/project-method-properties.md#shared-by-components-and-host-database).
 
 4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
 

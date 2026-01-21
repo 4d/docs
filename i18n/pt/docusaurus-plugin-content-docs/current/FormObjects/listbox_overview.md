@@ -232,7 +232,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | On Scroll            | <li>[horizontalScroll](#propriedades adicionais)</li><li>[verticalScroll](#propriedadesadicionais)</li>                                                                                                           |                                                                                                                                                                                                                 |
 | On Unload            |                                                                                                                                                                                                                   |                                                                                                                                                                                                                 |
 
-#### Additional Properties {additional-properties}
+#### Additional Properties {#additional-properties}
 
 Os eventos formulário nos list box ou colunas de list box podem retornar as seguintes propriedades adicionais:
 

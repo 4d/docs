@@ -31,6 +31,6 @@ slug: /commands/theme/Forms
 |[<!-- INCLUDE #_command_.FORM SET OUTPUT.Syntax -->](../../commands-legacy/form-set-output.md)<br/>|
 |[<!-- INCLUDE #_command_.FORM SET SIZE.Syntax -->](../../commands-legacy/form-set-size.md)<br/>|
 |[<!-- INCLUDE #_command_.FORM SET VERTICAL RESIZING.Syntax -->](../../commands-legacy/form-set-vertical-resizing.md)<br/>|
+|[<!-- INCLUDE #_command_.FORM theme.Syntax -->](../../commands/form-theme.md)<br/>|
 |[<!-- INCLUDE #_command_.FORM UNLOAD.Syntax -->](../../commands-legacy/form-unload.md)<br/>|
-|[<!-- INCLUDE #_command_.FORM Windows theme.Syntax -->](../../commands/form-windows-theme.md)<br/>|
 

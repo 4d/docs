@@ -112,7 +112,7 @@ When you select it, a dedicated tab is added (or highlighted if already added) i
 
 Standard 4D IDE features are available for the component. You can execute the following actions:
 - add, duplicate, delete, edit/save [methods and classes](../Project/code-overview.md)
-- preview code, show/edit [documentation](../Project/documentation.md), display/edit [method properties](../Project/code-overview.md#project-method-properties), 
+- preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md), 
 - run methods,
 - restore from trash or empty trash.
 
@@ -491,7 +491,7 @@ If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priori
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components). 
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#monitoring-project-dependencies). 
 
 :::note
 
@@ -499,7 +499,7 @@ This file is not mandatory but is required to build [notarizeable and stapleable
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#monitoring-project-dependencies) on all platforms.
 
 The following keys can be defined:
 

@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM theme.Params-->
 
-| Paramètres | Type |                             | Description                                                                                          |
-| ---------- | ---- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Résultat   | Text | &#8592; | Theme used by the current form: "Classic" or "FluentUI" (Windows) |
+| Paramètres | Type |                             | Description                                                                                                    |
+| ---------- | ---- | --------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Résultat   | Text | &#8592; | Thème utilisé par le formulaire courant : "Classic" ou "FluentUI" (Windows) |
 
 <!-- END REF-->
 
@@ -24,21 +24,21 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.FORM theme.Summary-->The **FORM theme** command returns the Windows theme actually rendered for the current form: "Classic" or "FluentUI"<!-- END REF-->.
+<!--REF #_command_.FORM theme.Summary-->La commande **FORM theme** renvoie le thème Windows réellement rendu pour le formulaire courant : "Classic" ou "FluentUI".<!-- END REF-->
 
-The Windows form rendering theme can be defined at [application level](../settings/interface.md#use-fluent-ui-on-windows) and/or at [form level](../FormEditor/properties_FormProperties.md#form-theme-on-windows) (where it can be inherited or explicitely defined), and also depends on the [availability of specific Microsoft libraries](../FormEditor/forms.md#requirements) on the current machine at runtime. This command allows you to know which form theme is currently running.
+Le thème de rendu des formulaires Windows peut être défini au [niveau de l'application](../settings/interface.md#use-fluent-ui-on-windows) et/ou au [niveau du formulaire](../FormEditor/properties_FormProperties.md#form-theme-on-windows) (où il peut être hérité ou défini explicitement), et dépend également de la [disponibilité de bibliothèques Microsoft spécifiques](../FormEditor/forms.md#requirements) sur la machine courante au moment de l'exécution. Cette commande vous permet de savoir quel thème de formulaire est en cours d'utilisation.
 
-If there is no current form, or if the command is executed on macOS, **FORM theme** returns an empty string.
+S'il n'y a pas de formulaire courant ou si la commande est exécutée sous macOS, **FORM theme** renvoie une chaîne vide.
 
 ## Voir également
 
-[Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)
+[Rendu Fluent UI](../FormEditor/forms.md#fluent-ui-rendering)
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1832                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1832 |
+| Thread safe        | non  |
 
 

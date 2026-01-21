@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsMessagesAPI
 
 # OpenAIChatCompletionsMessagesAPI
 
-The `OpenAIChatCompletionsMessagesAPI` class is designed to interact with the OpenAI API for managing messages in chat completions.
+La clase `OpenAIChatCompletionsMessagesAPI` está diseñada para interactuar con la API OpenAI para administrar mensajes en las terminaciones del chat.
 
 ## Funciones
 
@@ -19,6 +19,6 @@ The `OpenAIChatCompletionsMessagesAPI` class is designed to interact with the Op
 | *parámetros*   | `OpenAIChatCompletionsMessagesParameters` | Parámetros para filtrar y personalizar la respuesta.                  |
 | Resultado      | Variant                                   | Los mensajes recuperados asociados con la finalización del chat.      |
 
-La función `list()` recupera los mensajes asociados a un ID de finalización de chat específico. Lanza un error si `completionID` está vacío. If the *parameters* argument is not an instance of `OpenAIChatCompletionsMessagesParameters`, it will create a new instance using the provided parameters.
+La función `list()` recupera los mensajes asociados a un ID de finalización de chat específico. Lanza un error si `completionID` está vacío. Si el argumento *parameters* no es una instancia de `OpenAIChatCompletionsMessagesParameters`, creará una nueva instancia utilizando los parámetros suministrados.
 
 https://platform.openai.com/docs/api-reference/chat/getMessages

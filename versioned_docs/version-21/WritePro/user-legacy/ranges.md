@@ -14,7 +14,7 @@ A range is an object that represents a portion of a 4D Write Pro document:
 - a range of characters, paragraphs, pictures, or tables is defined through character positions within the parent document,
 - a range of cells, columns and rows is defined through cell positions and are anchored to the parent table.
 
-A range is used to designate elements to be selected or manipulate attributes on a part of the document (using [`WP GET ATTRIBUTES`](../commands/wp-get-attributes) and [`WP SET ATTRIBUTES`](../commands/wp-set-attributes)).
+A range is used to designate elements to be selected or manipulate attributes on a part of the document (using [`WP GET ATTRIBUTES`](./commands/wp-get-attributes) and [`WP SET ATTRIBUTES`](./commands/wp-set-attributes)).
 
 There are different types of ranges. You can determine the type of a range using the `wk type` attribute (read-only). Each range contains several private attributes that define it:
 

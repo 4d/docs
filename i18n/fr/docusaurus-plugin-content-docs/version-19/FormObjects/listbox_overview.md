@@ -221,7 +221,7 @@ Les propriétés prises en charge dépendent du type de list box.
 | On Scroll            | <li>[horizontalScroll](#propriétés-supplémentaires)</li><li>[verticalScroll](#propriétés-supplémentaires)</li>                                                                                                                   |                                                                                                       |
 | On Unload            |                                                                                                                                                                        |                                                                                                       |
 
-#### Propriétés supplémentaires {additional-properties}
+#### Propriétés supplémentaires {#additional-properties}
 
 Les événements formulaire sur les list box ou colonnes de list box peuvent retourner les propriétés supplémentaires suivantes :
 

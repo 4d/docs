@@ -49,7 +49,7 @@ title: クライアント/サーバー管理
   - 2つのサーバーが同じマシン上で同時に起動されているときは、IPアドレスの後にコロンとポート番号を続けます。例: `192.168.92.104:19820`。
   - デフォルトで、4D Server の公開ポートは 19813 です。 この番号は、プロジェクト設定で変更できます。
 
-> **開発モードを有効化する** オプションは、特別な読み取り/書き込みモードでリモート接続を開きます (互換性オプション)。このモードでは、リモート4D からプロジェクトフォルダーへのアクセスが確保されている必要があります。
+> The [**Activate development mode**](#development-mode) option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D.
 
 このページでサーバーを指定したら、**OK** ボタンをクリックしてサーバーに接続できます。
 
@@ -61,7 +61,7 @@ title: クライアント/サーバー管理
 
 - プロジェクトが編集され 4D Server にリロードされた場合など、必要に応じてプロジェクトの .4dzファイルは自動的に更新されます。 プロジェクトは次の場合にリロードされます:
   - 4D Server アプリケーションウィンドウが OS の最前面に来たり、同じマシン上の 4D アプリケーションが編集を保存した場合 (後述参照) に自動でリロードされます。
-  - `RELOAD PROJECT` コマンドが実行されたときにリロードされます。 プロジェクトの新しいバージョンをソース管理システムよりプルしたときなどに、このコマンドを呼び出す必要があります。
+  - when the [`RELOAD PROJECT`](../commands-legacy/reload-project.md) command is executed. プロジェクトの新しいバージョンをソース管理システムよりプルしたときなどに、このコマンドを呼び出す必要があります。
 
 ### リモートマシンのプロジェクトファイルの更新
 
@@ -71,7 +71,7 @@ title: クライアント/サーバー管理
 
 同じマシン上で 4D が 4D Server に接続すると、アプリケーションはシングルユーザーモードの 4D のようにふるまい、デザイン環境にてプロジェクトファイルの編集が可能です。 この機能により、クライアント/サーバーアプリケーションを運用時と同じコンテキストで開発することができます。
 
-> 同じマシン上で 4D Server に 4D を接続する場合には、 [開発モードを有効化](#リモートプロジェクトを開く) オプションの設定にかかわらず **開発モード** が自動的に有効化されます。
+> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [Development mode](#development-mode) status.
 
 デザイン環境にて 4D が **すべてを保存** アクションを (**ファイル** メニューを使って明示的に、または、アプリケーションモードへの移行により暗示的に) おこなうと、4D Server は同期的にプロジェクトファイルをリロードします。 4D Server によるプロジェクトファイルのリロードが完了するのを待って、4D は続行します。
 
@@ -85,3 +85,42 @@ title: クライアント/サーバー管理
 
 > プラグインやコンポーネントを 4D あるいは 4D Server アプリケーションレベルにインストールすることは、推奨されません。
 
+## Development mode
+
+The **Development mode** in 4D Server is a special project opening mode that allows read/write access for connected remote 4D applications. The project must be available in [**interpreted** mode](../Concepts/interpreted.md).
+
+This mode allows one or more developers to work simultaneously on the same project in Design environment. When a project is opened in **Development mode**:
+
+- Project files are available in read/write so that you can edit methods, forms, etc.
+- Several remote 4D can concurrently open the same interpreted project files and edit them. An automatic locking system prevents from concurrent access to the same resource.
+- Modifications are made available to all remote developers. Note however that there is no automatic push to remote developers, they need to refresh to get latest versions of files (a refresh is done each time the developer switches from design mode to application mode for example, or selects **Save all** from the **File** menu).
+
+To use this mode, select the **Activate development mode** option in the [connection dialog box](#opening-a-remote-project) from your remote 4D. You are prompted to **Select 4D project file**: you need to select the [.project file](../Project/architecture.md#applicationname4dproject-file) that 4D Server has opened. If you select a different file, an alert dialog box warns you that the development mode is not available. It means that the remote 4D must have access to the project folder over the network (the whole project folder must be shared, i.e. the root folder of the project).
+
+:::caution
+
+For performance reasons with this configuration, it is strongly recommended that the project folder be stored on a dedicated file server (e.g. a NAS) on a local network.
+
+:::
+
+:::note
+
+When both the server and the remote 4D are on the same machine, [additional rules applies](#using-4d-and-4d-server-on-the-same-machine).
+
+:::
+
+Here is an overview of the development mode architecture:
+
+![](../assets/en/Desktop/develop-mode.png)
+
+:::note 互換性
+
+This feature is designed for small-size development teams who are used to work on binary databases and want to benefit from project features while maintaining their current organisation. However, for multi-user development on 4D projects, we recommend using a standard architecture where developers work on their machine and manage their work using source control repository tools (Git, SVN, etc.). This organisation provides a great flexibility by allowing developers to work on different branches, and compare, merge, or revert modifications.
+
+:::
+
+:::tip 関連したblog 記事
+
+[Developing Concurrently on 4D Server in Project Mode](https://blog.4d.com/developing-concurrently-on-4d-server-in-project-mode/)
+
+:::

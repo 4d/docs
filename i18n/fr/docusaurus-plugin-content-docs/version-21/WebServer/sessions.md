@@ -94,7 +94,7 @@ Lorsqu'une session web est fermée, si la commande [`Session`](commands/session.
 
 :::info
 
-Vous pouvez fermer une session à partir d'une page Qodly en utilisant la fonction [**logout**](qodly-studio.md#logout).
+Vous pouvez fermer une session à partir d'une page Qodly en utilisant la fonction [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout).
 
 :::
 

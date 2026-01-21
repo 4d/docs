@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 The **Trim** command <!--REF #_command_.Trim.Summary--> removes **whitespace** from both ends of the *aString* parameter and returns a new string, without modifying the original one.<!-- END REF--> **Whitespace** incluyen espacios, tabulaciones, LF, CR, etc.
 
-To return a new string with whitespace trimmed from just one end, use [`Trim start`](./trim-start.md) or [`Trim end`](./trim-end.md).
+Para devolver una nueva cadena con los espacios en blanco recortados de un solo extremo, utilice [`Trim start`](./trim-start.md) o [`Trim end`](./trim-end.md).
 
 En el parámetro *aString*, puede pasar cualquier expresión de tipo texto. Será dejado sin tocar por el comando.
 

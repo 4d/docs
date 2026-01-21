@@ -12,14 +12,14 @@ L'Explorateur de données fournit une interface Web pour visualiser, interroger 
 L'Explorateur de données s'appuie sur le composant serveur web [`WebAdmin`](webAdmin.md) pour les paramètres
 de configuration et d'authentification.
 
-- **configuration** : la configuration de l'Explorateur de données réutilise les paramètres du serveur web [`WebAdmin`](webAdmin.md#webadmin-settings),
-- **authentification** : l'accès à l'Explorateur de données est accordé lorsque [l'utilisateur de la session est authentifié](webAdmin.md#authentication-and-session) et détient le privilège "WebAdmin". Lorsque l'on accède à l'Explorateur de données via l'élément de menu **Explorateur de données** (voir ci-dessous), une authentification automatique est fournie.
+- **configuration** : la configuration de l'Explorateur de données réutilise les paramètres du serveur web [`WebAdmin`](webAdmin.md#settings),
+- **authentification** : l'accès à l'Explorateur de données est accordé lorsque [l'utilisateur de la session est authentifié](webAdmin.md#authentication) et détient le privilège "WebAdmin". Lorsque l'on accède à l'Explorateur de données via l'élément de menu **Explorateur de données** (voir ci-dessous), une authentification automatique est fournie.
 
 > L'accès à l'Explorateur de données peut être désactivé à l'aide de la fonction [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection).
 
 ## Ouverture de l'Explorateur de données
 
-[Le serveur web `WebAdmin`](webAdmin.md#starting-the-webadmin-web-server) est démarré automatiquement si nécessaire lorsque l'on clique sur l'Explorateur de données.
+[The Web Administration Server](webAdmin.md#starting-the-web-administration-server) is started automatically if necessary when the Data Explorer is clicked on.
 
 Pour se connecter à la page web de l'Explorateur de données :
 

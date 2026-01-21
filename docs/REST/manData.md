@@ -80,8 +80,6 @@ You can call ORDA Data Model [user class functions](ClassFunctions.md) through P
 with data in the body of the request: `["Paris"]`
 
 
-> Calls to 4D project methods that are exposed as REST Service are still supported but are deprecated. 
-
 
 ## Selecting Attributes to get
 
