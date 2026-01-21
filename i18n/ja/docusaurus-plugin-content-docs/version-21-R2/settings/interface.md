@@ -64,7 +64,7 @@ title: インターフェースページ
 - by the [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) command at the working session level;
 - 各フォームレベル (最優先レベル) では、[カラースキーム](../FormEditor/propertiesForm.html#カラースキーム) プロパティを使用できます。 **注記**: 印刷時には、フォームは常に "ライト" スキームを使用します。
 
-### Use Fluent UI on Windows
+### Windows 上でFluent UI を使用
 
 When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). When it is unchecked, the Windows Classic UI rendering theme will be used by default.
 

@@ -11,23 +11,23 @@ title: リリースノート
 
 - [コードライブチェッカー](../code-editor/write-class-method.md#warnings-and-errors) はエラー検知の精度が向上するように改善されました(詳細は [こちらのblog 記事](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) を参照してください)。
 - [リスト](../WritePro/user-legacy/using-a-4d-write-pro-area.md#リスト) を適用する [4D Write Pro 標準アクション](../WritePro/user-legacy/standard-actions.md) は自動的に段落の余白を、その中に位置するマーカーを内部に配置するように自動的に調整するようになりました。
-- Built-in support of `order by` in query strings for AI vector searches using [`query()`](../API/DataClassClass.md#query-by-vector-similarity) functions and the [REST API](../REST/$orderby.md).
-- You can now create and open Qodly Pages from the [Explorer](../Develop/explorer.md).
-- You can [customize the icons of your components](../Extensions/develop-components.md#custom-icon).
-- 4D AIKit component: new [File API](../aikit/Classes/OpenAIFilesAPI.md) class to implement **file upload** features.
+- [`query()`](../API/DataClassClass.md#ベクトル類似度によるクエリ) 関数および[REST API](../REST/$orderby.md) を使用したAI ベクトル検索のクエリ文字列内で、 `order by` をサポートするようになりました。
+- [エクスプローラー](../Develop/explorer.md) からQodly ページを作成したり開いたりすることができるようになりました。
+- [コンポーネントのアイコンをカスタマイズできる](../Extensions/develop-components.md#custom-icon) ようになりました。
+- 4D AIKit component: 新しい [ファイル API](../aikit/Classes/OpenAIFilesAPI.md) クラスを使用することで **ファイルアップロード** 機能を実装できます。
 - [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in contents**](../Project/search-replace.md#replace-in-contents) features can now support editable components.
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R2): 4D 21 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/178/release-note-version-20r2/))。
 
 #### デベロッパー・プレビュー
 
-- Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows:
-  - new [`FORM theme`](../commands/form-theme.md) command,
-  - new [`form-theme` css media query](../FormEditor/createStylesheet.md#media-queries),
-  - new [**Use Fluent UI on Windows**](../settings/interface.md#use-fluent-ui-on-windows) option in the Settings dialog box.
+- Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) のサポート:
+  - 新しい [`FORM theme`](../commands/form-theme.md) コマンド
+  - 新しい [`form-theme` CSS メディアクエリ](../FormEditor/createStylesheet.md#メディアクエリ)
+  - 設定ダイアログボック内での新しい [**Windows 上でFluent UI を使用**](../settings/interface.md#windows-上でfluent-ui-を使用) オプション。
 
 #### 動作の変更
 
-- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) command can return different information whether it is called from a form or not.
+- Windows 上で、[**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されている場合、 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) コマンドは、フォームから呼ばれているかどうかに関わらず、異なる情報を返すことがあります。
 
 ## ライブラリの一覧
 
@@ -46,7 +46,7 @@ title: リリースノート
 | ngtcp2    | 1.18.0 | **21**         | QUIC に使用                                                                                                                                             |
 | OpenSSL   | 3.5.2  | **21**         |                                                                                                                                                      |
 | PDFWriter | 4.7.0  | **21**         | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
-| SpreadJS  | 18.2.0 | 21 R2          | See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) for an overview of the new features                                     |
+| SpreadJS  | 18.2.0 | 21 R2          | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
 | webKit    | WKWebView                              | 19             |                                                                                                                                                      |
 | Xerces    | 3.3.0  | **21**         | XML コマンドにおいて使用されます                                                                                                                                   |
 | Zlib      | 1.3.1  | **21**         |                                                                                                                                                      |

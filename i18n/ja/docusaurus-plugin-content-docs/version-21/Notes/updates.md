@@ -16,7 +16,7 @@ title: リリースノート
   - Web サーバーの[`start()`](../API/WebServerClass.md#start) 関数の*settings* 引数内の`handlers` プロパティを使用することで、[HTTP リクエストハンドラー](../WebServer/http-request-handler.md) を設定することができます。
   - Web サーバーオブジェクトには新しい[`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) プロパティが含まれます。
 - 新しい[データに対するORDA イベント](../ORDA/orda-events.md): validateSave、saving、afterSave、validateDrop、dropping、afterDrop
-- Support of the new [`restrictedByDefault` property](../ORDA/privileges.md#restriction-modes) in the `roles.json` file to block access by default to all resources without explicit permission.
+- `roles.json` ファイル内での、明確な許可のないアクセスをデフォルトで全てブロックする新しい[`restrictedByDefault` プロパティ](../ORDA/privileges.md#制限モード) のサポート。
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
 - [Sessions API](../API/SessionClass.md) now supports all [desktop sessions](../Desktop/sessions.md) and you can [share a desktop session with a web access](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), facilitating the development of applications using Qodly pages in Web areas.
 - [QUIC ネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) はネットワークインターフェースの変更(例えばラップトップを持って良好するような場合)を透過的に管理できるように改善されました。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。
