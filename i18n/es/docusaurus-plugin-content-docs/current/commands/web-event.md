@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-`Web Event` <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a web page component<!-- END REF -->.
+`Web Event` <!-- REF #_command_.Web Event.Summary -->devuelve un objeto con información sobre un evento desencadenado vinculado a un componente de página web<!-- END REF -->.
 
 El comando debe ser llamado en el contexto de una página web manejada por el servidor web de 4D.
 
@@ -24,14 +24,14 @@ El comando debe ser llamado en el contexto de una página web manejada por el se
 
 El objeto devuelto contiene las siguientes propiedades:
 
-| Propiedad |       | Tipo   | Descripción                                                                                                                                                                                                                                                   |
-| --------- | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| caller    |       | string | [Server-side reference](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category) of the component triggering the event                                                                                                  |
-| eventType |       | string | Type of event:<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - triggered when the `Page` loads</li> |
-| data      |       | object | Información adicional en función del componente implicado                                                                                                                                                                                                     |
-|           | index | number | <li>Componente Pestañas: índice de la pestaña (la indexación comienza en 0)</li><li>Componente de la tabla de datos: número de columna</li>                                                                                                                   |
-|           | row   | number | Componente de la tabla de datos: número de línea                                                                                                                                                                                              |
-|           | name  | string | Componente Data Table: nombre qodlysource de la columna (por ejemplo, "firstname", "address.city")                                                                                                         |
+| Propiedad |       | Tipo   | Descripción                                                                                                                                                                                                                                                     |
+| --------- | ----- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| caller    |       | string | [Referencia servidor](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category) del componente que desencadena el evento                                                                                                   |
+| eventType |       | string | Tipo de evento:<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - se activa cuando `Page` se carga</li> |
+| data      |       | object | Información adicional en función del componente implicado                                                                                                                                                                                                       |
+|           | index | number | <li>Componente Pestañas: índice de la pestaña (la indexación comienza en 0)</li><li>Componente de la tabla de datos: número de columna</li>                                                                                                                     |
+|           | row   | number | Componente de la tabla de datos: número de línea                                                                                                                                                                                                |
+|           | name  | string | Componente Data Table: nombre qodlysource de la columna (por ejemplo, "firstname", "address.city")                                                                                                           |
 
 #### Ejemplo
 
@@ -39,7 +39,7 @@ El objetivo es mostrar/ocultar un texto de ayuda cuando el usuario pasa el rató
 
 ![](../assets/en/commands/web-event1.png)
 
-This is done by attaching `onmouseenter` and `onmouseleave` events to a **Text input** component that displays the information stored in a **Text** component (displaying "This is the help text").
+Esto se hace adjuntando los eventos `onmouseenter` y `onmouseleave` a un componente **Text input** que muestra la información almacenada en un componente **Text** (mostrando "This is the help text").
 
 ![](../assets/en/commands/web-event2.png)
 
@@ -49,7 +49,7 @@ En este escenario:
   ![](../assets/en/commands/web-event3.png)
 - El componente Texto tiene `helpOn_orderNumber` como referencia del lado Servidor.
   ![](../assets/en/commands/web-event4.png)
-- The [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function `help()` is attached to both the `onmouseenter` and `onmouseleave` events and contains the following code:
+- La función [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` se adjunta a los eventos `onmouseenter` y `onmouseleave` y contiene el siguiente código:
 
 ```4d
 shared singleton Class constructor()
@@ -64,17 +64,17 @@ exposed Function help()
 	componentRef:=event.caller
 
 	Case of 
-		: (event.eventType="onmouseenter")  // event is onmouseenter 
-			myForm["helpOn_"+componentRef].show()  // show the help on "orderNumber" by showing  
-			// the text component with reference "helpOn_orderNumber" 
-		: (event.eventType="onmouseleave")  // event is onmouseleave 
-			myForm["helpOn_"+componentRef].hide()  // hide the help on orderNumber
+		: (event.eventType="onmouseenter") // el evento es onmouseenter 
+			myForm["helpOn_"+componentRef].show() // mostrar la ayuda en "orderNumber" mostrando  
+			// el componente texto con referencia "helpOn_orderNumber" 
+		: (event.eventType="onmouseleave") // el evento es onmouseleave 
+			myForm["helpOn_"+componentRef].hide() // ocultar la ayuda sobre orderNumber
 			
 	End case 
 
 ```
 
-To open the web page with the help on `orderNumber` hidden, you can associate this function to the `onload` event of the web page:
+Para abrir la página web con la ayuda de `orderNumber` oculta, puede asociar esta función al evento `onload` de la página web:
 
 ```4d
 exposed function hideOnLoad()

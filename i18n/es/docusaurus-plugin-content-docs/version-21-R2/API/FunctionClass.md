@@ -53,7 +53,7 @@ Puede pasar parámetros a sus fórmulas utilizando una sintaxis secuencial de pa
  var $f : Object
  $f:=New object
  $f.message:=Formula(ALERT("Hello "+$2+", "+$1))
- $f.message("John";"Smith") //displays "Hello Smith, John"
+ $f.message("John";"Smith") //muestra "Hello Smith, John"
 ```
 
 O utilizando la función [.call()](#call):

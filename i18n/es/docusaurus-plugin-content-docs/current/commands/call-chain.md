@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Call chain.Summary-->The **Call chain** command returns a collection of objects describing each step of the method call chain within the current process.<!-- END REF--> Ofrece la misma información que la ventana Depurador. Tiene la ventaja adicional de poder ser ejecutado desde cualquier entorno 4D, incluyendo el modo compilado.
+<!--REF #_command_.Call chain.Summary-->El comando **Call chain** devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos en el proceso actual.<!-- END REF--> Ofrece la misma información que la ventana Depurador. Tiene la ventaja adicional de poder ser ejecutado desde cualquier entorno 4D, incluyendo el modo compilado.
 
 The command facilitates debugging by enabling the identification of the method or formula called, the component that called it, and the line number where the call was made. Cada objeto de la colección devuelta contiene las siguientes propiedades:
 

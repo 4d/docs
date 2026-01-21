@@ -81,7 +81,7 @@ If the code is executed from a standalone environment, the object contains (for 
 }
 ```
 
-If the code is executed from a 4D remote client, the object contains (for example):
+Si le code est exécuté à partir d'un client distant 4D, l'objet contient (par exemple) :
 
 ```json
 {
@@ -99,7 +99,7 @@ If the code is executed from a 4D remote client, the object contains (for exampl
 }
 ```
 
-If the code is executed on 4D Server, the object contains (for example):
+Si le code est exécuté sur 4D Server, l'objet contient (par exemple) :
 
 ```json
 {

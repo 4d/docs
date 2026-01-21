@@ -129,7 +129,7 @@ Function authenticationError()
 
 #### Descripción
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web page<!-- END REF -->.
+La función `.setError()` <!-- REF #WebFormClass.setError().Summary -->envía *msg* como mensaje de error a la página web<!-- END REF -->.
 
 The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "error".
 

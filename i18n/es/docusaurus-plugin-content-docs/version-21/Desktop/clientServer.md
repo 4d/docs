@@ -105,7 +105,7 @@ For performance reasons with this configuration, it is strongly recommended that
 
 :::note
 
-When both the server and the remote 4D are on the same machine, [additional rules applies](#using-4d-and-4d-server-on-the-same-machine).
+Cuando tanto el servidor como el 4D remoto están en la misma máquina, [se aplican reglas adicionales](#using-4d-and-4d-server-on-the-same-machine).
 
 :::
 

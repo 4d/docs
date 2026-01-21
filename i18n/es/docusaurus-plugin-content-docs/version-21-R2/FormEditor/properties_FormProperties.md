@@ -7,7 +7,7 @@ title: Propiedades de los formularios
 
 ## Esquema de colores
 
-> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+> La propiedad de combinación de colores sólo se aplica en macOS y [Windows con el tema Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
 Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme.md)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:

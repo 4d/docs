@@ -101,7 +101,7 @@ Leia [**O que há de novo no 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-
 - Os comandos e constantes obsoletos agora geram warnings específicos no [live checker e no compilador](../code-editor/write-class-method.md#warnings-and-errors). Você pode saber se um comando está obsoleto usando o comando [`Command name`](../commands/command-name.md).
 - Novos comandos [WA SET CONTEXT](../commands/wa-set-context.md) e [WA Get context](../commands/wa-get-context.md) para controlar o conteúdo de [$4d](../FormObjects/webArea_overview.md#4d-object) em áreas da Web.
 - Novo [parâmetro de banco de dados `RD`](../commands-legacy/set-database-parameter.md#rdp-optimization-133) para otimizar, por exemplo, a área de transferência compartilhada ao usar o protocolo remoto desktop com 4D.
-- Os componentes interpretados agora podem ser [editados a partir do projeto host](../Extensions/develop-components.md#editing-components-from-the-host).
+- Os componentes interpretados agora podem ser [editados a partir do projeto host](../Extensions/develop-components.md#editing-components).
 - [Licencias](../Admin/licenses.md) são agora atualizadas automaticamente na inicialização.
 - Nova [4D AIKit component](../aikit/overview.md) permitindo a interação com APIs de terceiros.
 - Os seguintes comandos de callbacks de comando VP agora esperam que todas as funções personalizadas 4D completem seus cálculos: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md) e [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).

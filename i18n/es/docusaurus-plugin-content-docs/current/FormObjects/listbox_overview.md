@@ -650,7 +650,7 @@ La impresión de un list box en modo vista previa consiste en imprimir directame
 
 ### Modo avanzado
 
-En este modo, la impresión de los list box se realiza por programación, a través del comando `Print object` (se soportan los formularios proyecto y los formularios tabla). The [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command is used to control the printing of the object.
+En este modo, la impresión de los list box se realiza por programación, a través del comando `Print object` (se soportan los formularios proyecto y los formularios tabla). El comando [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) se utiliza para controlar la impresión del objeto.
 
 En este modo:
 

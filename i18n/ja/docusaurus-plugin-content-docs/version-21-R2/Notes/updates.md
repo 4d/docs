@@ -9,8 +9,8 @@ title: リリースノート
 
 #### ハイライト
 
-- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
-- [4D Write Pro standard actions](../WritePro/user-legacy/standard-actions.md) that apply [lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) now automatically adjust paragraph margins to keep markers positioned inside it.
+- [コードライブチェッカー](../code-editor/write-class-method.md#warnings-and-errors) はエラー検知の精度が向上するように改善されました(詳細は [こちらのblog 記事](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) を参照してください)。
+- [リスト](../WritePro/user-legacy/using-a-4d-write-pro-area.md#リスト) を適用する [4D Write Pro 標準アクション](../WritePro/user-legacy/standard-actions.md) は自動的に段落の余白を、その中に位置するマーカーを内部に配置するように自動的に調整するようになりました。
 - Built-in support of `order by` in query strings for AI vector searches using [`query()`](../API/DataClassClass.md#query-by-vector-similarity) functions and the [REST API](../REST/$orderby.md).
 - You can now create and open Qodly Pages from the [Explorer](../Develop/explorer.md).
 - You can [customize the icons of your components](../Extensions/develop-components.md#custom-icon).
