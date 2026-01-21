@@ -233,7 +233,7 @@ Los tokens de sesión pueden ser compartidos con [sesiones de escritorio](../Des
 
 :::note
 
-Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
+Los tokens de sesión pueden ser compartidos con [sesiones de escritorio](../Desktop/sessions.md) para implementar aplicaciones usando sesiones híbridas.
 
 :::
 
