@@ -2272,13 +2272,13 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+// 文字コードを使用して並べ替え:
 $strings2:=$strings1.orderByMethod(Formula(sortCollection);sk char codes)
-// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// 結果 : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+// 言語ルールを使用して並べ替え:
 $strings2:=$strings1.orderByMethod(Formula(sortCollection);sk strict)
-// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+// 結果 : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 ***sortCollection*** メソッドのコードは以下のとおりです:
