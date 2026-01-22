@@ -36,7 +36,7 @@ Los caracteres de control no aparecen en las etiquetas de los comandos del menú
 
 ## Parámetros
 
-Puede asociar un parámetro personalizado a cada elemento del menú. Un parámetro de elemento de menú es una cadena de caracteres cuyo contenido puede elegirse libremente. It can be set in the Menu editor, or through the [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter) command.
+Puede asociar un parámetro personalizado a cada elemento del menú. Un parámetro de elemento de menú es una cadena de caracteres cuyo contenido puede elegirse libremente. Puede definirse en el editor de menús o mediante el comando [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter).
 
 Menu item parameters are useful with programmed management of menus, in particular when using the [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu), [`Get menu item parameter`](../commands/get-menu-item-parameter) and [`Get selected menu item parameter`](../commands/get-selected-menu-item-parameter) commands.
 

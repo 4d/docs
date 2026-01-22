@@ -36,7 +36,7 @@ Un archivo de registro siempre debe estar relacionado con un archivo de datos. S
 
 ## Gestión de errores
 
-In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](../commands-legacy/on-err-call.md) command.
+En caso de error, el comando genera un código que puede ser interceptado con el comando [ON ERR CALL](../commands-legacy/on-err-call.md).
 
 ## Ver también
 

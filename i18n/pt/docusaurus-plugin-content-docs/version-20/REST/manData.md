@@ -78,8 +78,6 @@ Pode chamar as [funções da classe usuário](ClassFunctions.md) ORDA do modelo 
 com dados no corpo do pedido: `["Paris"]`
 
 
-> Pode chamar métodos de projeto 4D que são [expostos como serviços REST](%7BdataClass%7D.html#4d-configuration).
-
 
 ## Selecionar atributos a obter
 

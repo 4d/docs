@@ -19,7 +19,7 @@ In 4D client/server applications, Qodly pages inside Web areas can [share their 
 
 :::tip Entrada de blog relacionada
 
-[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
+[Mejore su interfaz de escritorio con widgets web utilizando 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 

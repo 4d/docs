@@ -78,8 +78,6 @@ Vous pouvez appeler des [fonctions de classe utilisateurs](ClassFunctions.md) OR
 avec des données contenues dans le corps de la requête : `["Paris"]`
 
 
-> Les appels aux méthodes projet 4D exposées en tant que service REST sont toujours pris en charge mais sont obsolètes.
-
 
 ## Sélectionner les attributs à obtenir
 

@@ -422,7 +422,7 @@ En cas de conflit entre deux versions différentes d’un même plug-in (l’une
 
 ## Page Licences & Certificat
 
-The Licenses & Certificate page can be used to:
+La page Licences & Certificat vous permet de :
 
 * spécifier le ou les numéro(s) de licence que vous souhaitez intégrer dans votre application exécutable monoposte
 * signer l'application à l'aide d'un certificat sous macOS.

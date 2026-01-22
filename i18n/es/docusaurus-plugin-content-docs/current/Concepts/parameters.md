@@ -47,7 +47,7 @@ Los valores de entrada y salida son [evaluados](#values-or-references) en el mom
 
 ## Declaración de parámetros
 
-Inside called methods or class functions, you declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+Al interior de los métodos o funciones de clase llamados, se declaran parámetros utilizando un **nombre de parámetro** junto con un **tipo de parámetro**, separados por dos puntos.
 
 - Para funciones de clase, los parámetros se declaran junto con el prototipo de función, por ejemplo, cuando se utilizan las palabras clave `Function` o `Class constructor`.
 - Para los métodos (métodos proyecto, métodos objeto formulario, métodos base y triggers), los parámetros se declaran utilizando la palabra clave **`#DECLARE`** al principio del código del método.
