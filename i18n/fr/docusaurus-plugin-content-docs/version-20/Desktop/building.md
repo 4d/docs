@@ -501,7 +501,7 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 ## Page Licences & Certificat
 
-The Licenses & Certificate page can be used to:
+La page Licences & Certificat vous permet de :
 
 * désigner le(s) numéro(s) de licence que vous souhaitez intégrer dans votre [application autonome](#application-page) mono-utilisateur,
 * signer l'application à l'aide d'un certificat sous macOS.

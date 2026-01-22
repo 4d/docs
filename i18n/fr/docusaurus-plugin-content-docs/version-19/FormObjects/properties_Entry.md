@@ -28,7 +28,7 @@ Permet à l'utilisateur d'accéder à un menu contextuel standard dans l'objet l
 
 Pour une [zone de saisie](input_overview.md) image, en plus des commandes d'édition standard (Couper, Copier, Coller et Effacer), le menu contient la commande **Omporter...** qui peut être utilisée pour importer une image stockée dans un fichier, ainsi que la commande **Enregistrer sous...** , qui peut être utilisée pour enregistrer l'image sur le disque. Le menu peut également être utilisé pour modifier le format d"affichage de l'image : les options **Tronquée non centrée**, **Non tronquée** et **Proportionnelle centrée** sont proposées. La modification du [format d'affichage](properties_Display#picture-format) en utilisant ce menu est temporaire ; elle n'est pas stockée avec l'enregistrement.
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox_overview.md#list-box-columns), in addition to standard editing commands, the context menu provides the following commands:
+Pour une [zone de saisie](input_overview.md) type texte [multi-style](properties_Text.md#multi-style) ou une [colonne de list box](listbox_overview.md#list-box-columns), en plus des commandes d'édition standard, le menu contextuel propose les commandes suivantes :
 
 - **Polices...**: affiche la boîte de dialogue système de police
 - **Polices récentes**: affiche les noms des polices récentes sélectionnées pendant la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.

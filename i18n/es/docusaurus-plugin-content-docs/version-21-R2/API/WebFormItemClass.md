@@ -76,7 +76,7 @@ exposed Function isHidden()
 	myComponent.hide()  // Hide the component that has "myImage" as server reference 
 ```
 
-2. In Qodly Studio: Select the image component on the canvas, and enter a server-side reference in the Properties Panel > Server Side, for example "myImage".
+2. En Qodly Studio: seleccione el componente imagen en la página e introduzca una referencia del lado del servidor en el panel Propiedades > Server Side, por ejemplo "myImage".
 3. Seleccione el componente Button y añádale un evento `onclick`.
 4. Adjunta la función `isHidden` al evento.
 

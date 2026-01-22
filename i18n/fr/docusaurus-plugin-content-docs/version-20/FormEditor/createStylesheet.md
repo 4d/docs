@@ -59,7 +59,7 @@ Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à ap
 :::note
 
 - Le type d'objet correspond à la propriété JSON [ type](FormObjects/properties_Object.md#type) des objets de formulaire.
-- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+- Pour les list box, les types spécifiques suivants sont disponibles : *column*, *header*, *footer*.
 
 :::
 
@@ -89,7 +89,7 @@ Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre acc
 
 :::note
 
-The object name corresponds to the JSON [object name](../FormObjects/properties_Object.md#object-name) property of form objects.
+Le nom de l'objet correspond à la propriété JSON [object name](../FormObjects/properties_Object.md#object-name) des objets de formulaire.
 
 :::
 
@@ -128,7 +128,7 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the [CSS Class](../FormObjects/properties_Object.md#css-class) attribute. Cet attribut contient un ou plusieurs noms de "class", séparés par un espace :
+Dans la description du formulaire 4D, vous associez un nom de classe à un objet à l'aide de l'attribut [CSS Class](../FormObjects/properties_Object.md#css-class). Cet attribut contient un ou plusieurs noms de "class", séparés par un espace :
 
 ```
 class: "okButtons important"       
@@ -210,7 +210,7 @@ text[text|=Hello]
 
 Les Media queries sont utilisées pour appliquer des schémas de couleurs à une application.
 
-A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
+Une media query est composée d'une fonctionnalité média et d'une valeur (i.e. `<media feature><value>`).
 
 Fonctionnalités média disponibles :
 
@@ -319,7 +319,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 1. Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`.
 2. Il chargera ensuite le fichier CSS pour la plate-forme courante `/SOURCES/styleSheets__mac.css` ou `/SOURCES/styleSheets_windows.css`.
-3. If a [Form property "css" attribute](../FormEditor/properties_FormProperties.md#css) is defined in the 4D form, it will then load specific CSS file(s). Vous pouvez passer :
+3. Si un [attribut "css" de propriété de formulaire](../FormEditor/properties_FormProperties.md#css) est défini dans le formulaire 4D, celui-ci chargera un ou plusieurs fichier(s) CSS spécifique(s). Vous pouvez passer :
 
  * un fichier pour les deux plates-formes :
 

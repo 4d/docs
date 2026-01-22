@@ -95,7 +95,7 @@ Este modo permite que uno o varios desarrolladores trabajen simultáneamente en 
 - Several remote 4D can concurrently open the same interpreted project files and edit them. Un sistema de bloqueo automático impide el acceso simultáneo a un mismo recurso.
 - Las modificaciones se ponen a disposición de todos los desarrolladores remotos. Note however that there is no automatic push to remote developers, they need to refresh to get latest versions of files (a refresh is done each time the developer switches from design mode to application mode for example, or selects **Save all** from the **File** menu).
 
-To use this mode, select the **Activate development mode** option in the [connection dialog box](#opening-a-remote-project) from your remote 4D. You are prompted to **Select 4D project file**: you need to select the [.project file](../Project/architecture.md#applicationname4dproject-file) that 4D Server has opened. Si selecciona un archivo diferente, un cuadro de diálogo de alerta le avisa de que el modo de desarrollo no está disponible. It means that the remote 4D must have access to the project folder over the network (the whole project folder must be shared, i.e. the root folder of the project).
+Para utilizar este modo, seleccione la opción **Activar modo de desarrollo** en el [cuadro de diálogo de conexión](#opening-a-remote-project) desde su 4D remoto. You are prompted to **Select 4D project file**: you need to select the [.project file](../Project/architecture.md#applicationname4dproject-file) that 4D Server has opened. Si selecciona un archivo diferente, un cuadro de diálogo de alerta le avisa de que el modo de desarrollo no está disponible. It means that the remote 4D must have access to the project folder over the network (the whole project folder must be shared, i.e. the root folder of the project).
 
 :::caution
 
@@ -115,7 +115,7 @@ He aquí un resumen de la arquitectura del modo de desarrollo:
 
 :::note Compatibilidad
 
-This feature is designed for small-size development teams who are used to work on binary databases and want to benefit from project features while maintaining their current organisation. However, for multi-user development on 4D projects, we recommend using a standard architecture where developers work on their machine and manage their work using source control repository tools (Git, SVN, etc.). This organisation provides a great flexibility by allowing developers to work on different branches, and compare, merge, or revert modifications.
+This feature is designed for small-size development teams who are used to work on binary databases and want to benefit from project features while maintaining their current organisation. However, for multi-user development on 4D projects, we recommend using a standard architecture where developers work on their machine and manage their work using source control repository tools (Git, SVN, etc.). Esta organización ofrece una gran flexibilidad al permitir a los desarrolladores trabajar en distintas ramas y comparar, fusionar o revertir modificaciones.
 
 :::
 

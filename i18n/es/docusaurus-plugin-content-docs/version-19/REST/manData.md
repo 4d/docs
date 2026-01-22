@@ -78,8 +78,6 @@ Puede llamar las [funciones de clase usuarios](ClassFunctions.md) ORDA del model
 con los datos en el cuerpo de la petición: `["Paris"]`
 
 
-> Las llamadas a los métodos proyecto 4D que se exponen como servicio REST aún se soportan, pero son obsoletas.
-
 
 ## Selección de atributos a obtener
 

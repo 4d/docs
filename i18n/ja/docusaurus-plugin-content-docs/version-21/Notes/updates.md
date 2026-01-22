@@ -18,7 +18,7 @@ title: リリースノート
 - 新しい[データに対するORDA イベント](../ORDA/orda-events.md): validateSave、saving、afterSave、validateDrop、dropping、afterDrop
 - `roles.json` ファイル内での、明確な許可のないアクセスをデフォルトで全てブロックする新しい[`restrictedByDefault` プロパティ](../ORDA/privileges.md#制限モード) のサポート。
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
-- [Sessions API](../API/SessionClass.md) now supports all [desktop sessions](../Desktop/sessions.md) and you can [share a desktop session with a web access](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), facilitating the development of applications using Qodly pages in Web areas.
+- [Sessions API](../API/SessionClass.md) は全ての[デスクトップセッション](../Desktop/sessions.md) をサポートするようになり、[デスクトップセッションとWeb アクセスを共有する](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) ことが可能になりました。これにより、Web エリア内にQodly ページを使用するアプリケーションの開発が容易になりました。
 - [QUIC ネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) はネットワークインターフェースの変更(例えばラップトップを持って良好するような場合)を透過的に管理できるように改善されました。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。
 - プロジェクトを閉じたり再起動したりすることなく、4D エクスプローラーから[ホストプロジェクトから直接コンポーネントを作成](../Extensions/develop-components.md#コンポーネントの作成)したり、あるいは[専用のタブからコンポーネントのコードを編集する](../Extensions/develop-components.md#全てのコンポーネントコードを編集) ことができるようになりました。
 - 4D プロダクトのアクティベーションステップが、簡略化されて[サインイン](../GettingStarted/Installation.md#sign-in) 中に自動化されました。
@@ -27,22 +27,22 @@ title: リリースノート
   - 文字列から先頭と末尾のスペースを削除する新しい "trim" 系コマンド: [`Trim`](../commands/trim.md)、[`Trim start`](../commands/trim-start.md)、および[`Trim end`](../commands/trim-end.md)。
   - [`Num`](../commands/num.md) および [`String`](../commands/string.md) コマンドは、異なる基数での変換をサポートするようにアップデートされました。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21): 4D 21 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
-- [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): what's new in Qodly Studio.
+- [**4D Qodly Pro リリースノート**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): Qodly Studio での新機能。
 
 #### 動作の変更
 
 :::caution インデックスの再構築
 
-4D 21 includes an ICU library update ([see below](#library-table-4d-21-lts)) which will force an automatic rebuild of indexes of type alpha, text, and object. データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
+4D 21 では、ICUライブラリのアップデート ([後述参照](#ライブラリの一覧-4d-21-lts)) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
 
 :::
 
-- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
-- Web server:
-  - the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore,
-  - web processes are no longer recycled when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled.
+- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 SOAP のコードがスレッドセーフであることと、それが実行されるセッションが適切な [権限](../API/SessionClass.md#setprivileges) を持っていることを確認してください。
+- Web サーバー:
+  - 廃止予定だった`4DSYNC/` および `4DCGI/` URL のサポートが削除されました。 これらのURL に対しては、特に何の処理も行われなくなります。
+  - Web プロセスは、今後 [スケーラブルセッション](../WebServer/sessions.md#enabling-web-sessions) が有効化されている場合には再利用されないようになりました。
 - Web ユーザーセッションは今後[`Process activity`](../commands/process-activity.md) コマンドで返されるようになります。
-- PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
+- 今後PHP は [廃止予定](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) となり、開発においては今後使用されるべきではありません。
 - [`HIGHLIGHT TEXT`](../commands/highlight-text) コマンドは今後サブフォームのコンテキストでサポートされるようになりました。
 - クライアント/サーバーでは、ローカルプロセスという概念が削除されました。 プロセス名に置いて"$"記号をつけることは今後何も特別な意味を持たなくなり、また[`REGISTER CLIENT`](../commands/register-client) コマンドの \* 引数は無視されます。
 - **コンポーネントは埋め込まれなくなりました**: 4D 21 以降、4D によって開発されたコンポーネント(4D NetKit、4D SVG、など。詳細は[こちらの一覧](../Extensions/overview.md#4dによって開発されたコンポーネント)を参照) は4Dアプリケーションには埋め込まれなくなりました。 プロジェクトを4D 21 以降にアップグレードする場合、以下のようなダイアログボックスが表示されます:<br/>
@@ -101,7 +101,7 @@ title: リリースノート
 - [ライブチェッカーとコンパイラー](../code-editor/write-class-method.md#warnings-and-errors).において、廃止予定のコマンドと定数は、特定の警告を生成するようになりました。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。
 - 新しいコマンド[WA SET CONTEXT](../commands/wa-set-context.md) および [WA Get context](../commands/wa-get-context.md) を使用して、Web エリア内の[$4d](../FormObjects/webArea_overview.md#4d-object) コンテンツを管理することができるようになります。
 - 新しい[`RDP optimization` データベースパラメーター](../commands-legacy/set-database-parameter.md#rdp-optimization-133) を使用して、例えば4D をリモートデスクトッププロトコルを使用している場合の共有クリップボードを最適化することができます。
-- Interpreted components can now be [edited from the host project](../Extensions/develop-components.md#editing-components).
+- インタープリタ版のコンポーネントは今後 [ホストプロジェクトから編集](../Extensions/develop-components.md#editing-components) できるようになりました。
 - [ライセンス](../Admin/licenses.md) は起動時に自動的に更新されるようになりました。
 - 新しい[4D AIKit コンポーネント](../aikit/overview.md) を使用することでサードパーティAI のAPI とやり取りをすることが可能になります。
 - 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
@@ -152,7 +152,7 @@ title: リリースノート
 - [セッションシングルトン](../Concepts/classes.md#シングルトンクラス) と、新しい [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) クラスプロパティをサポート。
 - 新しい[`onHTTPGet` 関数キーワード](../ORDA/ordaClasses.md#onhttpget-keyword) を使用して[HTTP REST GET requests](../REST/ClassFunctions.md#function-calls) 経由で呼び出し可能なシングルトンまたはORDA 関数を定義できるようになりました。
 - 新しい [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用してREST サーバーがあらゆるWeb コンテンツを返すようになりました。
-- Qodly Studio: You can now [attach the Qodly debugger to 4D Server](developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server).
+- Qodly Studio: [Qodly Studio デバッガーを 4D Server で有効化](developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server) できるようになりました。
 - 4Dクライアントアプリケーション用の新しいアプリケーションビルド XMLキー: 接続時にサーバーから送信される証明書について、認証局の&#x20;
   署名 や [ドメイン](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.ja.html) を検証するためのキーが追加されました。
 - [埋め込みライセンスなしでスタンドアロンアプリケーションをビルドすること](../Desktop/building.md#licenses) が可能になりました。
@@ -209,7 +209,7 @@ title: リリースノート
 - [制限付エンティティセレクション](../ORDA/entities.md#制限付エンティティセレクション) をサポート。
 - [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 新しいクラスプロパティ: [`.isShared`](../API/ClassClass.md#isshared), [`.isSingleton`](../API/ClassClass.md#issingleton), [`.me`](../API/ClassClass.md#me).
 - [クラスプロパティを宣言の行において初期化すること](../Concepts/classes.md#initializing-the-property-in-the-declaration-line) がサポートされるようになりました。
-- New [force login mode for REST requests](../REST/authUsers.md#force-login-mode) with a [specific support in Qodly Studio for 4D](\(developer.4d.com/qodly/4DQodlyPro/force-login\)).
+- RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート](\(developer.4d.com/qodly/4DQodlyPro/force-login\))。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
 - [`Session`](../commands/session.md) オブジェクトはリモートユーザーセッションおよびすトアドプロシージャーセッションにおいても利用可能になりました。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R5): 4D 20 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/122/release-note-version-20r5/))。
@@ -241,7 +241,7 @@ title: リリースノート
 
 - 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
 - セレクション内レコードの削除後に、別レコードが新規作成された場合でも、セレクションの一貫性が保持されるようになりました ([このブログ記事](https://blog.4d.com/ja/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/) を参照ください)。
-- In the updated [OpenSSL library](#library-table-4d-21-lts), the default SSL/TLS security level has been changed from 1 to 2. 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
+- 更新された [OpenSSL ライブラリ](#ライブラリの一覧-4d-21-lts) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
 - [4D ユーザーがbcrypt アルゴリズムを使用できる](https://blog.4d.com/bcrypt-support-for-passwords/) ようにするため、[`Open datastore`](../commands/open-datastore.md) コマンドの*connectionInfo* 引数内の"password" の値はデフォルトでは平文で送信されるようになりました。 そのため、"On REST authentication" データベースメソッドがパスワードを平文で扱えるようにすること(そのため第3引数は**False** となります)と、`Open datastore` の*connectionInfo* の"tls" オプションに**True**  を渡すことで接続を暗号化するようにすることを忘れないようにして下さい。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../commands/open-datastore.md) コマンド参照)。
 
 ### 4D 20 R3

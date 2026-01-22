@@ -69,8 +69,6 @@ Puede llamar las [funciones de clase usuarios](ClassFunctions.md) ORDA del model
 
 con los datos en el cuerpo de la petición: `["Paris"]`
 
-> Pode chamar métodos de projeto 4D que são <a href="%7BdataClass%7D.html#4d-configuration">expostos como serviços REST</a>.
-
 ## Selecionar atributos a obter
 
 Siempre se puede definir qué atributos devolver en la respuesta REST después de una solicitud inicial pasando su ruta en la solicitud (*por ejemplo*, `Company(1)/name,revenues/`)

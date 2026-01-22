@@ -4,7 +4,7 @@ slug: overview
 title: Servidor Web
 ---
 
-4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+4D en modo local y 4D Server incluyen un motor de servidor web (también conocido como servidor http) que le permite diseñar y publicar poderosas aplicaciones web que pueden aprovechar al máximo sus bases de datos 4D.
 
 :::warning Funcionalidad obsoleta
 
@@ -12,11 +12,11 @@ El uso del servidor web en un 4D remoto es **obsoleto** a partir de 4D 21. Ya no
 
 :::
 
-## Fácil de supervisar
+## Administración simplificada
 
 Puede iniciar o detener la publicación de la aplicación web en cualquier momento. Para ello, basta con seleccionar un comando del menú o ejecutar una sola línea de código.
 
-Monitoring the 4D web server is easy and can be done using the [4D Server administration window](../ServerWindow/http-server.md) or through [special URLs](webServerAdmin.md#administration-urls).
+El control del servidor web 4D es fácil y puede hacerse utilizando la [ventana de administración del servidor 4D](../ServerWindow/http-server.md) o a través de [URLs especiales](webServerAdmin.md#administration-urls).
 
 ## Listo para usar
 
@@ -47,13 +47,13 @@ El servidor web 4D incluye completas funcionalidades automáticas para gestionar
 
 ## Punto de acceso para las peticiones REST
 
-El servidor web 4D permite acceder a los datos almacenados en sus aplicaciones 4D a través de peticiones REST. REST requests provide direct access to any [ORDA](../ORDA/overview.md) operation such as adding, reading, editing, ordering, or searching data.
+El servidor web 4D permite acceder a los datos almacenados en sus aplicaciones 4D a través de peticiones REST. Las peticiones REST ofrecen acceso directo a cualquier operación [ORDA](../ORDA/overview.md) como añadir, leer, editar, ordenar o buscar datos.
 
 Las peticiones REST se detallan en la sección [Servidor REST](../REST/gettingStarted.md).
 
 ## Extensión de los parámetros
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+La configuración del servidor web de 4D se define a través de un amplio conjunto de parámetros a nivel de aplicación que también pueden personalizarse para la sesión utilizando las propiedades del objeto `webServer` o el comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md).
 
 ## Plantillas y URLs
 

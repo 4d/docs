@@ -504,12 +504,12 @@ $val:=$o.f() //42
 Lorsqu'une fonction [class constructor](#class-constructor) est utilisée (avec la fonction [`new()`](API/ClassClass.md#new)), son `This` désigne le nouvel objet en cours de construction.
 
 ```4d
-//Class: ob
+//Classe : ob
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // Créer des propriétés sur This comme
+ // souhaité par assignation
  This.a:=42 
 ```
 

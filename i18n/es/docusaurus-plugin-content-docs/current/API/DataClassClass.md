@@ -1215,7 +1215,7 @@ La instrucción **orden by** es soportada en la cadena de consulta para que las 
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
-  //default order, the first entity is the most similar
+  //orden por defecto, la primera entidad es la más parecida
 ```
 
 Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:

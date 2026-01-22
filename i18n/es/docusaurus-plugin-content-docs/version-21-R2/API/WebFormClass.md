@@ -164,7 +164,7 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 #### Descripción
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web page<!-- END REF -->.
+La función `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envía *msg* como mensaje de información a la página web<!-- END REF -->.
 
 The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "message".
 

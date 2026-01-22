@@ -70,7 +70,7 @@ title: リストボックス
 デフォルトで 4D は各列に “ColumnX” という名前を割り当てます。 この配列変数名は [列のプロパティ](listbox_overview.md#列特有のプロパティ) で変更できます (プロパティリストの [変数あるいは式](properties_Object.md#変数あるいは式) プロパティを使用します)。 列ごとの表示フォーマットを指定するには、`OBJECT SET FORMAT` コマンドも使用できます。
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 
-配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。 リストボックスのハイレベルコマンド ([`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
+配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。 リストボックスのハイレベルコマンド (`LISTBOX INSERT ROWS` や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -299,7 +299,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてヘッダーで発生したイベントは、その列のオブジェクトメソッド が受け取ります。
 
-ヘッダーに [`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
+ヘッダーに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
 
 ### ヘッダー特有のプロパティ
 
@@ -318,7 +318,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてフッターで発生したイベントは、その列のオブジェクトメソッド が受け取ります。
 
-フッターに [`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
+フッターに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
 
 ### フッター特有のプロパティ
 
@@ -403,7 +403,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
  End if
 ```
 
-> [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) コマンドは、最初に選択された行または指定された行を表示するようにリストボックスをスクロールします。
+> `OBJECT SET SCROLL POSITION` コマンドは、最初に選択された行または指定された行を表示するようにリストボックスをスクロールします。
 
 ### 選択行の見た目のカスタマイズ
 
@@ -629,13 +629,13 @@ End if
 
 ### 詳細モード
 
-このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用してオブジェクトの印刷を制御できます。
+このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 `LISTBOX GET PRINT INFORMATION` コマンドを使用してオブジェクトの印刷を制御できます。
 
 このモードでは:
 
-* オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されるオブジェクトのサイズは [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドで取得できます。
-* リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。 これらの設定には印刷される最初の行も含みます。 印刷を実行する前に [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
-* 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。 連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用して、印刷がおこなわれている間の状態をチェックできます。
+* オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されるオブジェクトのサイズは `LISTBOX GET PRINT INFORMATION` コマンドで取得できます。
+* リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。 これらの設定には印刷される最初の行も含みます。 印刷を実行する前に `OBJECT SET SCROLL POSITION` を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
+* 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。 連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 `LISTBOX GET PRINT INFORMATION` コマンドを使用して、印刷がおこなわれている間の状態をチェックできます。
 
 ## 階層リストボックス
 
@@ -651,7 +651,7 @@ End if
 
 * フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
 * フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-* [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HIERARCHY.301-4505193.ja.html) や [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-GET-HIERARCHY.301-4505194.ja.html) コマンドを使用する (*4D ランゲージリファレンス* 参照)。
+* Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-HIERARCHY.301-7487634.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-GET-HIERARCHY.301-7487597.en.html) commands, described in the *4D Language Reference* manual.
 
 #### "階層リストボックス" プロパティによる階層化
 
@@ -762,7 +762,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 > 親が折りたたまれているために行が非表示になっていると、それらは選択から除外されます。 (直接あるいはスクロールによって) 表示されている行のみを選択できます。 言い換えれば、行を選択かつ隠された状態にすることはできません。
 
-選択と同様に、 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。
+選択と同様に、`LISTBOX GET CELL POSITION` コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、`LISTBOX GET CELL POSITION` は同じ位置 (3;2) を返します。
 
 *非階層表示:* ![](../assets/en/FormObjects/hierarch9.png)
 
@@ -772,11 +772,11 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 #### ブレーク行の管理
 
-ユーザーがブレーク行を選択すると、 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は対応する配列の最初のオカレンスを返します。 以下のケースで:
+ユーザーがブレーク行を選択すると、`LISTBOX GET CELL POSITION` は対応する配列の最初のオカレンスを返します。 以下のケースで:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は (2;4) を返します。 プログラムでブレーク行を選択するには [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) コマンドを使用する必要があります。
+`LISTBOX GET CELL POSITION` は (2;4) を返します。 プログラムでブレーク行を選択するには `LISTBOX SELECT BREAK` コマンドを使用する必要があります。
 
 ブレーク行はリストボックスのグラフィカルな表示 (スタイルやカラー) を管理する内部的な配列では考慮されません。 しかし、オブジェクトのグラフィックを管理するオブジェクト (フォーム) テーマのコマンドを使用してブレーク行の表示を変更できます。 階層を構成する配列に対して、適切なコマンドを実行します。
 
@@ -802,17 +802,17 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 `On Expand` や `On Collapse` フォームイベントを使用して階層リストボックスの表示を最適化できます。
 
-階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから ([`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
+階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから (`SELECTION TO ARRAY` コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
 
-`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。 たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
+`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。 たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、`LISTBOX GET CELL POSITION` コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
 
 この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
 
 * リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません: ![](../assets/en/FormObjects/hierarch15.png)
 
-* ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には [`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドから得られる値を設定します。 そして[`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) コマンドを使用して必要なだけ行を挿入します。 ![](../assets/en/FormObjects/hierarch16.png)
+* ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には `SELECTION TO ARRAY` コマンドから得られる値を設定します。 そして`LISTBOX INSERT ROWS` コマンドを使用して必要なだけ行を挿入します。 ![](../assets/en/FormObjects/hierarch16.png)
 
-* ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドはクリックされたセルを返すので、 [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) コマンドを使用してリストボックスから必要なだけ行を削除します。
+* ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 `LISTBOX GET CELL POSITION` コマンドはクリックされたセルを返すので、 `LISTBOX DELETE ROWS` コマンドを使用してリストボックスから必要なだけ行を削除します。
 
 ## オブジェクト配列の使用
 
@@ -824,7 +824,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 ### オブジェクト配列カラムの設定
 
-オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.ja.html) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
+To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-INSERT-COLUMN.301-7487606.en.html) command, like with any array-based column. プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
