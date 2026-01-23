@@ -429,7 +429,7 @@ Al incluir, independientemente de la extensión del nombre del archivo, 4D anali
 
 Una página incluida con el comentario `<!--#4DINCLUDE -->` se carga en la caché del servidor Web del mismo modo que las páginas llamadas a través de una URL o enviadas con el comando `WEB SEND FILE`.
 
-En *path*, coloque la ruta que va al documento a incluir. Atención: en el caso de una llamada a `4DINCLUDE`, la ruta es relativa al documento analizado, es decir, al documento "padre". Utilice la barra oblicua (/) como separador de carpetas y los dos puntos (..) para subir un nivel (sintaxis HTML). When you use the `4DINCLUDE` tag with the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command, the default folder is the project folder.
+En *path*, coloque la ruta que va al documento a incluir. Atención: en el caso de una llamada a `4DINCLUDE`, la ruta es relativa al documento analizado, es decir, al documento "padre". Utilice la barra oblicua (/) como separador de carpetas y los dos puntos (..) para subir un nivel (sintaxis HTML). Cuando se utiliza la etiqueta `4DINCLUDE` con el comando [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md), la carpeta por defecto es la carpeta del proyecto.
 
 > Puede modificar la carpeta por defecto utilizada por la etiqueta `4DINCLUDE` en la página actual, utilizando la etiqueta `<!--#4DBASE -->` (ver más adelante).
 
@@ -613,7 +613,7 @@ La etiqueta `4DSCRIPT` permite ejecutar métodos 4D al procesar la plantilla. Th
 
 El método debe devolver un texto. Si la cadena comienza con el caracter de código 1, se considera HTML (el mismo principio se aplica a la etiqueta `4DHTML`).
 
-Por ejemplo, supongamos que inserta el siguiente comentario `"Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->"` en una plantilla de página Web. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string "/MYPARAM" as the parameter. The method returns some text (for example "12/31/21"); the expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
+Por ejemplo, supongamos que inserta el siguiente comentario `"Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->"` en una plantilla de página Web. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string "/MYPARAM" as the parameter. El método devuelve un texto (por ejemplo "31/12/21"); la expresión "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->`" se convierte en "Today is 31/12/21".
 
 El método `MYMETH` es el siguiente:
 

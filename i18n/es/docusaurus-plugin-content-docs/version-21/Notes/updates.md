@@ -37,7 +37,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), la ent
 
 :::
 
-- Servicios web (SOAP): cuando las [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) están activadas, los servicios web se ejecutan ahora en [**procesos apropiativos**](../Develop/preemptive.md) en modo compilado. Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
+- Servicios web (SOAP): cuando las [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) están activadas, los servicios web se ejecutan ahora en [**procesos apropiativos**](../Develop/preemptive.md) en modo compilado. Asegúrese de que su código SOAP sea hilo seguro y que la sesión en la que se ejecuta tiene los [privilegios] adecuados(../API/SessionClass.md#setprivileges).
 - Servidor web:
   - the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. Ya no se realiza ningún tratamiento específico en estas URL,
   - los procesos web ya no se reciclan cuando la opción [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) está activada.

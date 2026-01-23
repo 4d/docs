@@ -44,7 +44,7 @@ var $vectors : Collection:=$result.vectors // collection of 4D.Vector
 
 ##### Utilizar otro servicio
 
-> Before using embeddings with a specific service, please check its documentation to see if embeddings are supported, and select the appropriate embedding model.
+> Antes de utilizar las representaciones vectoriales con un servicio específico, compruebe en su documentación si admite embeddings y seleccione el modelo de representación vectorial adecuado.
 
 Por ejemplo, para Mistral, utilice [mistral-embed o codestral-embed](https://docs.mistral.ai/capabilities/embeddings/)
 

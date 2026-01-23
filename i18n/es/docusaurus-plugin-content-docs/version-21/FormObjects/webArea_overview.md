@@ -53,7 +53,7 @@ Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-m
 
 ## Objeto $4d
 
-The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. Por defecto, `$4d` permite acceder a todos los métodos proyecto 4D utilizando la notación de puntos.
+El [`motor de renderización web integrado de 4D`](properties_WebArea.md#use-embedded-web-rendering-engine) ofrece un **objeto JavaScript llamado `$4d`** en el área web. Por defecto, `$4d` permite acceder a todos los métodos proyecto 4D utilizando la notación de puntos.
 
 Por ejemplo, llamando al método `HelloWorld` en 4D:
 

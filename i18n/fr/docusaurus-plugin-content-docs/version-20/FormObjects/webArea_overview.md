@@ -19,7 +19,7 @@ Deux variables spécifiques sont automatiquement associées à chaque zone web :
 - [`URL`](properties_WebArea.md#url) -- pour contrôler l’URL affiché par la zone web
 - [`Progression`](properties_WebArea.md#progression) -- pour contrôler le pourcentage de chargement de la page affichée dans la zone web.
 
-> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> À partir de 4D 19 R5, la variable de Progression n'est plus mise à jour dans les zones Web utilisant le [moteur de rendu du système Windows](./webArea_overview.md#web-rendering-engine).
 
 ### Moteur de rendu Web
 
@@ -191,9 +191,9 @@ Vous pouvez visualiser et utiliser un inspecteur web dans les zones web de vos f
 
 Pour afficher l'inspecteur web, vous pouvez soit exécuter la commande `WA OPEN WEB INSPECTOR`, soit utiliser le menu contextuel de la zone web.
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br/> This command can be used directly with onscreen (form object) and offscreen web areas.
+- **Exécuter la commande `WA OPEN WEB INSPECTOR`**<br/> Cette commande peut être utilisée directement avec les zones web à l'écran (objet formulaire) et hors écran.
 
-- **Use the web area context menu**<br/> This feature can only be used with onscreen web areas and requires that the following conditions are met:
+- **Utiliser le menu contextuel de la zone web**<br/> Cette fonction ne peut être utilisée qu'avec les zones web à l'écran et nécessite que les conditions suivantes soient remplies :
     - le [menu contextuel](properties_Entry.md#context-menu) de la zone Web est activé
     - l'utilisation de l'inspecteur est expressément autorisée dans la zone via la déclaration suivante :
     ```4d

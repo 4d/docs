@@ -79,8 +79,8 @@ Cuando reciba un mensaje de llamada de herramienta, debe:
    - `function.arguments`: una cadena JSON que contiene los parámetros de la función que deben analizarse con `JSON Parse`
    - `id`: el identificador único para esta llamada específica a la herramienta
 
-2. **Execute the function:**
-   Parse the arguments (which is a JSON string) and call the corresponding function that you defined in your OpenAITool configuration.
+2. **Ejecutar la función:**
+   Analizar los argumentos (que es una cadena JSON) y llamar a la función correspondiente que definió en su configuración OpenAITool.
 
 3. **Responde con el resultado de la herramienta:**
    Crea un mensaje de respuesta usando el `tool_call_id` exacto de la petición original.

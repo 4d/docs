@@ -88,7 +88,7 @@ Valores disponibles:
 
 - **heredado** (por defecto): hereda del tema del proyecto
 - **Classic**: use the Windows classic interface theme
-- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+- **Fluent UI**: utilice el tema de interfaz [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) ([cuando esté disponible](../FormEditor/forms.md#requirements)).
 
 :::note
 
