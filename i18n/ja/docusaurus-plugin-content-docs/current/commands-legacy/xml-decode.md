@@ -20,8 +20,8 @@ displayed_sidebar: docs
 
 | **値** | **例**                                                                                 | 日本語システム上での変換例                                                                                                              |
 | ----- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 数値    | <Price>8,5</Price><Price>8.5</Price>                                                  | 実数: 8.5                                                                                                                    |
-| ブール   | <Double>1</Double> <Double>0</Double> または<Double>true</Double> <Double>false</Double> | ブール: True/False                                                                                                            |
+| 数値    | `<Price>8,5</Price><Price>8.5</Price>`                                                  | 実数: 8.5                                                                                                                    |
+| ブール   | `<Double>1</Double> <Double>0</Double>` または`<Double>true</Double> <Double>false</Double>` | ブール: True/False                                                                                                            |
 | BLOB  | Base64 デコード                                                                           |                                                                                                                            |
 | ピクチャ  | Base64 デコード + BLOB to picture コマンド                                                    |                                                                                                                            |
 | 日付    | 2009-10-25T01:03:20+01:00                                                             | 時間部とタイムゾーンを取り除く: !10/25/2009!                                                                                              |
