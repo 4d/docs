@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Pass the data to be serialized in *value*. It can be expressed in scalar form (string, number, date or time) or by means of a 4D object or collection. 
 
-**Note:** 4D dates will be converted either in "yyyy-mm-dd" or "YYYY-MM-DDThh:mm:sssZ" format according to the current database date setting (see the "Use date type instead of ISO date format in objects" option in the *Compatibility page*).
+**Note:** 4D dates will be converted either in "yyyy-mm-dd" or "YYYY-MM-DDThh:mm:sssZ" format according to the [current database date setting](./set-database-parameter.md#dates-inside-objects-85).
 
 In the case of an object or a collection, you can include all types of values (see the *JSON data types* paragraph), with respect to the following JSON rules:
 

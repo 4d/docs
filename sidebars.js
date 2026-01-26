@@ -751,7 +751,7 @@ module.exports =
                 "commands-legacy/json-stringify",
                 "commands-legacy/json-stringify-array",
                 "commands-legacy/json-to-selection",
-                "commands-legacy/json-validate",
+                "commands/json-validate",
                 "commands-legacy/selection-to-json"
               ]
             },

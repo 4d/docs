@@ -184,7 +184,7 @@ beta[1].golf:{line:10,offset:12}}}
 *Field and Variable Types*  
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
-[JSON Validate](json-validate.md)  
+[JSON Validate](../commands/json-validate.md)  
 
 ## プロパティ
 
