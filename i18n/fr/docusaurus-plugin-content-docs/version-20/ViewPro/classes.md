@@ -129,7 +129,7 @@ La propriété `.tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->es
 
 La propriété `.theme` <!-- REF #TableOptions.theme.Summary -->définit un thème de table. Peut également être un texte (nom d'un thème SpreadJS natif)<!-- END REF -->.
 
-See the [native SpreadJS themes](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+Voir les [thèmes natifs de SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 ### .useFooterDropDownList
@@ -156,7 +156,7 @@ La propriété `.backColor` est la <!-- REF #TableStyle.backColor.Summary -->[co
 <!-- REF #TableStyle.foreColor.Syntax -->
 **.foreColor** : Text<!-- END REF -->
 
-The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[couleur de premier plan](configuring.md#background--foreground) du tableau<!-- END REF -->.
+La propriété `.forecolor` est la <!-- REF #TableStyle.foreColor.Summary -->[couleur de premier plan](configuring.md#background--foreground) du tableau<!-- END REF -->.
 
 
 
@@ -165,7 +165,7 @@ The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[coul
 <!-- REF #TableStyle.font.Syntax -->
 **.font** : Text<!-- END REF -->
 
-La propriété `.font` est le <!-- REF #TableStyle.font.Summary -->nom de la police (voir [**Polices et texte**](configuring.md#fonts-and-text)) de la table<!-- END REF -->.
+La propriété `.font` est le <!-- REF #TableStyle.font.Summary -->nom de la police (voir [**Polices et texte**](configuring.md#fonts-and-text)) du tableau<!-- END REF -->.
 
 
 
@@ -174,7 +174,7 @@ La propriété `.font` est le <!-- REF #TableStyle.font.Summary -->nom de la pol
 <!-- REF #TableStyle.textDecoration.Syntax -->
 **.textDecoration** : Integer<!-- END REF -->
 
-La propriété `.textDecoration` est la <!-- REF #TableStyle.textDecoration.Summary -->décoration texte de la table (voir [**Polices et texte**](configuring.md#fonts-and-text))<!-- END REF -->.
+La propriété `.textDecoration` est la <!-- REF #TableStyle.textDecoration.Summary -->décoration texte du tableau (voir [**Polices et texte**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 
 ### .borderLeft
@@ -182,7 +182,7 @@ La propriété `.textDecoration` est la <!-- REF #TableStyle.textDecoration.Summ
 <!-- REF #TableStyle.borderLeft.Syntax -->
 **.borderLeft** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-La propriété `.borderLeft` est la <!-- REF #TableStyle.borderLeft.Summary -->ligne de bordure gauche de la table <!-- END REF -->.
+La propriété `.borderLeft` est la <!-- REF #TableStyle.borderLeft.Summary -->ligne de bordure gauche du tableau <!-- END REF -->.
 
 
 ### .borderRight
@@ -190,7 +190,7 @@ La propriété `.borderLeft` est la <!-- REF #TableStyle.borderLeft.Summary -->l
 <!-- REF #TableStyle.borderRight.Syntax -->
 **.borderRight** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-La propriété `.borderRight` est la <!-- REF #TableStyle.borderRight.Summary -->ligne de bordure droite de la table <!-- END REF -->.
+La propriété `.borderRight` est la <!-- REF #TableStyle.borderRight.Summary -->ligne de bordure droite du tableau <!-- END REF -->.
 
 
 ### .borderBottom
@@ -198,7 +198,7 @@ La propriété `.borderRight` est la <!-- REF #TableStyle.borderRight.Summary --
 <!-- REF #TableStyle.borderBottom.Syntax -->
 **.borderBottom** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-La propriété `.borderBottom` est la <!-- REF #TableStyle.borderBottom.Summary -->ligne de bordure inférieure de la table <!-- END REF -->.
+La propriété `.borderBottom` est la <!-- REF #TableStyle.borderBottom.Summary -->ligne de bordure inférieure du tableau <!-- END REF -->.
 
 
 ### .borderTop
@@ -206,7 +206,7 @@ La propriété `.borderBottom` est la <!-- REF #TableStyle.borderBottom.Summary 
 <!-- REF #TableStyle.borderTop.Syntax -->
 **.borderTop** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderTop` property is the <!-- REF #TableStyle.borderTop.Summary -->top border line of the table <!-- END REF -->.
+La propriété `.borderTop` est la <!-- REF #TableStyle.borderTop.Summary -->ligne de bordure supérieure du tableau <!-- END REF -->.
 
 
 ### .borderhorizontale
@@ -223,7 +223,7 @@ La propriété `.borderHorizontal` est la <!-- REF #TableStyle.borderHorizontal.
 <!-- REF #TableStyle.borderVertical.Syntax -->
 **.borderVertical** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-La propriété `.borderVertical` est la <!-- REF #TableStyle.borderVertical.Summary -->ligne de bordure verticale de la table <!-- END REF -->.
+La propriété `.borderVertical` est la <!-- REF #TableStyle.borderVertical.Summary -->ligne de bordure verticale du tableau <!-- END REF -->.
 
 
 
@@ -266,7 +266,7 @@ La propriété `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme** : Text<!-- END REF -->
 
 
-La propriété `.theme` <!-- REF #TableTheme.theme.Summary -->définit un thème de table<!-- END REF -->. If Text: name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+La propriété `.theme` <!-- REF #TableTheme.theme.Summary -->définit un thème de tableau<!-- END REF -->. Si Text : nom d'un [thème SpreadJS natif](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 
@@ -362,7 +362,7 @@ La propriété `.lastHeaderCellStyle` est le <!-- REF #TableThemeOptions.lastHea
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-La propriété `.name` est le <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
+La propriété `.name` est le <!-- REF #TableThemeOptions.name.Summary -->nom d'un [thème SpreadJS natif](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
 
 ### .secondColumnStripSize
 

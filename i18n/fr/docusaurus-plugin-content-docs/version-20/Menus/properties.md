@@ -89,7 +89,7 @@ Vous ajoutez un filet de séparation en créant une commande de menu.
 
 Dans l'éditeur de menus, au lieu de saisir le nom de la commande de menu, il suffit de cocher l’option **Ligne de séparation**. La ligne apparaît alors dans la zone de la commande courante. Lorsque cette option est cochée, les autres propriétés sont sans effet. **Note :** Sous macOS, il est possible de procéder en faisant commencer le nom de la commande par un tiret “-”. Cette commande sera alors affichée comme une ligne de séparation.
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM`] commands.
+Dans le langage 4D, vous insérez une ligne de séparation en saisissant `-` ou `(-` comme itemText pour les commandes `APPEND MENU ITEM`, `INSERT MENU ITEM` ou `SET MENU ITEM`.
 
 
 
@@ -150,13 +150,13 @@ Par défaut, 4D active automatiquement toute commande de menu ajoutée à un men
 
 ### Coche
 
-Cette option de l'éditeur de menus permet d’associer par défaut une coche système à la ligne de menu. You can then manage the display of the check mark using language commands `SET MENU ITEM MARK` and `Get menu item mark`.
+Cette option de l'éditeur de menus permet d’associer par défaut une coche système à la ligne de menu. Vous pourrez ensuite gérer (masquer ou afficher) la coche au moyen des commandes du langage (`SET MENU ITEM MARK` et `Get menu item mark`.
 
 Les coches sont généralement utilisées pour des menus à action permanente et indiquent que l’action est en cours.
 
 ### Styles des polices
 
-4D vous permet de personnaliser les menus en appliquant différents styles de caractères aux commandes de menus. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, `SET MENU ITEM STYLE`.
+4D vous permet de personnaliser les menus en appliquant différents styles de caractères aux commandes de menus. Vous pouvez personnaliser vos menus avec les styles Gras, Italique ou Souligné grâce aux options de l'éditeur de menu, `SET MENU ITEM STYLE`.
 
 En règle générale, les styles de police doivent être appliqués à vos menus avec parcimonie, afin d’éviter de conférer une apparence confuse à votre application.
 > Vous pouvez également appliquer un style en saisissant des caractères spéciaux dans le titre du menu (voir [Caractères de contrôle](properties.md#using-control-characters) ci-dessus).

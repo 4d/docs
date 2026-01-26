@@ -54,7 +54,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 :::note
 
-La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. De este modo se garantiza que los procesos dependientes, como las modificaciones o exportaciones de documentos, solo se realicen una vez que se hayan resuelto por completo todos los cálculos basados en fórmulas.
 
 ::::
 

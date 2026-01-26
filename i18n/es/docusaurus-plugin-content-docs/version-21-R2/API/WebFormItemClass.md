@@ -64,7 +64,7 @@ La función `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->oculta el com
 
 Para llamar a una función que oculta una imagen cuando el usuario hace clic en un botón:
 
-1. Create an [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function inside a shared singleton class named `isHidden` that contains the following code:
+1. Crear una función [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) al interior de una clase singleton compartida llamada `isHidden` que contiene el siguiente código:
 
 ```4d
 

@@ -35,7 +35,7 @@ Permet de modifier le numéro du port TCP/IP utilisé par le serveur Web pour le
 
 #### Autoriser l'accès aux bases de données par le biais des URL 4DSYNC
 
-_Compatibility Note_: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). Pour l'accès aux bases de données via HTTP, il est désormais recommandé d'utiliser les fonctionnalités de stockage de données à distance ORDA et les requêtes REST.
+_Note de compatibilité_: Cette option est [obsolète](../WebServer/webServerConfig.md#deprecated-settings). Pour l'accès aux bases de données via HTTP, il est désormais recommandé d'utiliser les fonctionnalités de stockage de données à distance ORDA et les requêtes REST.
 
 ### Chemins
 
@@ -125,7 +125,7 @@ Définit le système d'authentification que vous souhaitez utiliser pour le serv
 
 Authentification personnalisée (défaut) Mots de passe protocole BASIC Mots de passe protocole DIGEST
 
-Il est recommandé d'utiliser l'authentification **personnalisée**. See [**Authentication**](../WebServer/authentication.md) chapter in the _Web Development_ documentation.
+Il est recommandé d'utiliser l'authentification **personnalisée**. Voir la section [**Authentification**](../WebServer/authentication.md) dans la documentation sur le _développement Web_.
 
 ## Options (II)
 
@@ -165,12 +165,12 @@ Le menu de format du journal propose les options suivantes :
 
 - **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
 
-- **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. With the CLF format, each line of the file represents a request, such as:\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+- **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Au format CLF, chaque ligne du fichier représente une requête. telle que:\
+  host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
+  Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
   - hôte : adresse IP du client (ex. 192.100.100.10)
   - rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
-  - utilisateur : nom de l’utilisateur tel qu’il s’est authentifié, sinon - (signe moins). If the user name contains spaces, they will be replaced by \_ (an underscore).
+  - utilisateur : nom de l’utilisateur tel qu’il s’est authentifié, sinon - (signe moins). Si le nom de l'utilisateur contient des espaces, ils seront remplacés par \_ (un trait de soulignement).
   - JJ : jour, MMM : mois abrégé en 3 lettres et toujours en anglais (Jan, Feb, ...), AAAA : année, HH : heure, MM : minutes, SS : secondes
 
 > La date et heure sont locales au serveur.
@@ -197,30 +197,30 @@ Le menu de format du journal propose les options suivantes :
 
 Le tableau suivant répertorie les champs disponibles pour chaque format (par ordre alphabétique) et décrit leur contenu :
 
-| Champ          | ELF | WLF | Valeur                                                                           |
-| -------------- | --- | --- | -------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Nombre d'octets reçus par le serveur                                             |
-| BYTES_SENT     | X   | X   | Nombre d’octets envoyés par le serveur au client                                 |
-| C_DNS          | X   | X   | Adresse IP du DNS (ELF : champ identique au champ C_IP)                          |
-| C_IP           | X   | X   | Adresse IP du client (par exemple 192.100.100.10)                                |
-| CONNECTION_ID  |     | X   | Numéro unique de la connexion                                                    |
-| CS(COOKIE)     | X   | X   | Informations sur les cookies contenus dans la requête HTTP                       |
-| CS(HOST)       | X   | X   | Champ Host de la requête HTTP                                                    |
-| CS(REFERER)    | X   | X   | URL de la page pointant vers le document demandé                                 |
-| CS(USER_AGENT) | X   | X   | Informations sur le logiciel et le système d’exploitation du client              |
-| CS_SIP         | X   | X   | Adresse IP du serveur                                                            |
-| CS_URI         | X   | X   | URI sur lequel la requête est effectuée                                          |
-| CS_URI_QUERY | X   | X   | Paramètres d’interrogation de la requête                                         |
-| CS_URI_STEM  | X   | X   | Partie de la requête sans les paramètres d’interrogation                         |
-| DATE           | X   | X   | DD: jour, MMM: abréviation de 3 lettres pour le mois (Jan, Feb,...), YYYY: année |
-| METHOD         | X   | X   | Méthode HTTP utilisée pour la requête adressée au serveur                        |
-| PATH_ARGS      |     | X   | Paramètres de la CGI : chaîne située après le caractère “$”                      |
-| STATUS         | X   | X   | Réponse fournie par le serveur                                                   |
-| TIME           | X   | X   | HH: heure, MM: minutes, SS: secondes                                             |
-| TRANSFER_TIME  | X   | X   | Délai ayant été nécessaire au serveur pour générer la réponse                    |
-| USER           | X   | X   | Nom d’utilisateur s’il s’est authentifié, sinon - (signe moins).                 |
-|                |     |     | If the user name contains spaces, they are replaced by \_ (underlines)         |
-| Variable URL   |     | X   | URL demandé par le client                                                        |
+| Champ          | ELF | WLF | Valeur                                                                                                 |
+| -------------- | --- | --- | ------------------------------------------------------------------------------------------------------ |
+| BYTES_RECEIVED |     | X   | Nombre d'octets reçus par le serveur                                                                   |
+| BYTES_SENT     | X   | X   | Nombre d’octets envoyés par le serveur au client                                                       |
+| C_DNS          | X   | X   | Adresse IP du DNS (ELF : champ identique au champ C_IP)                                                |
+| C_IP           | X   | X   | Adresse IP du client (par exemple 192.100.100.10)                                                      |
+| CONNECTION_ID  |     | X   | Numéro unique de la connexion                                                                          |
+| CS(COOKIE)     | X   | X   | Informations sur les cookies contenus dans la requête HTTP                                             |
+| CS(HOST)       | X   | X   | Champ Host de la requête HTTP                                                                          |
+| CS(REFERER)    | X   | X   | URL de la page pointant vers le document demandé                                                       |
+| CS(USER_AGENT) | X   | X   | Informations sur le logiciel et le système d’exploitation du client                                    |
+| CS_SIP         | X   | X   | Adresse IP du serveur                                                                                  |
+| CS_URI         | X   | X   | URI sur lequel la requête est effectuée                                                                |
+| CS_URI_QUERY | X   | X   | Paramètres d’interrogation de la requête                                                               |
+| CS_URI_STEM  | X   | X   | Partie de la requête sans les paramètres d’interrogation                                               |
+| DATE           | X   | X   | DD: jour, MMM: abréviation de 3 lettres pour le mois (Jan, Feb,...), YYYY: année                       |
+| METHOD         | X   | X   | Méthode HTTP utilisée pour la requête adressée au serveur                                              |
+| PATH_ARGS      |     | X   | Paramètres de la CGI : chaîne située après le caractère “$”                                            |
+| STATUS         | X   | X   | Réponse fournie par le serveur                                                                         |
+| TIME           | X   | X   | HH: heure, MM: minutes, SS: secondes                                                                   |
+| TRANSFER_TIME  | X   | X   | Délai ayant été nécessaire au serveur pour générer la réponse                                          |
+| USER           | X   | X   | Nom d’utilisateur s’il s’est authentifié, sinon - (signe moins).                                       |
+|                |     |     | Si le nom d’utilisateur contient des espaces, ils sont remplacés par des \_ (traits de soulignement) |
+| Variable URL   |     | X   | URL demandé par le client                                                                              |
 
 > Les dates et heures sont données au format GMT
 
@@ -259,7 +259,7 @@ Cette zone affiche les options relatives à l’utilisation de 4D en tant que �
 
 Cette zone contient une option relative à l’utilisation de 4D en tant que “client” de Web Services, c’est-à-dire souscrivant à des services publiés sur le réseau.
 
-- **Préfixe des méthodes créées par l’assistant** : cette zone vous permet de modifier le préfixe automatiquement ajouté par 4D devant le nom des méthodes proxy générées par l’assistant Web Services. Les méthodes projet proxy font le lien entre l’application 4D et le serveur de Web Services. By default, 4D uses the prefix "proxy\_".
+- **Préfixe des méthodes créées par l’assistant** : cette zone vous permet de modifier le préfixe automatiquement ajouté par 4D devant le nom des méthodes proxy générées par l’assistant Web Services. Les méthodes projet proxy font le lien entre l’application 4D et le serveur de Web Services. Par défaut, 4D utilise le préfixe "proxy\_".
 
 ## Fonctionnalités Web
 

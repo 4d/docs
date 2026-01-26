@@ -32,7 +32,7 @@ If there is no current form, or if the command is executed on macOS, **FORM them
 
 ## Ver también
 
-[Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)
+[Renderización Fluent UI](../FormEditor/forms.md#fluent-ui-rendering)
 
 ## Propiedades
 

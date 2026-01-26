@@ -33,7 +33,7 @@ A continuación, aparece el Asistente de bienvenida:
 
 - Si ya tiene una cuenta en 4D, haga clic en el enlace **Iniciar sesión** en la parte superior derecha del diálogo del Asistente de Bienvenida e introduzca los datos de su cuenta.
   - Any already activated 4D products are automatically updated (or additional expansion packs loaded) on your machine.
-  - If no product is activated on the machine but there is a development license associated with the 4D account, a dialog box appears, prompting you to install it directly.
+  - Si no hay ningún producto activado en la máquina pero existe una licencia de desarrollo asociada a la cuenta 4D, aparecerá un cuadro de diálogo que le pedirá que la instale directamente.
 
 Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la acción que desea realizar:
 

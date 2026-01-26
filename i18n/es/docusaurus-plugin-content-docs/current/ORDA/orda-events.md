@@ -389,7 +389,7 @@ Este evento es activado por las siguientes funciones:
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-Este evento se activa **mientras** la entidad se guarda. If a [`validateSave()`](#function-event-validatesave) event function was defined, the `saving()` event function is called if no error was triggered by `validateSave()`. Por ejemplo, puede utilizar este evento para crear un documento en una cuenta de Google Drive.
+Este evento se activa **mientras** la entidad se guarda. Si se ha definido una función de evento [`validateSave()`](#function-event-validatesave), se llama a la función de evento `saving()` si no se ha producido ningún error con `validateSave()`. Por ejemplo, puede utilizar este evento para crear un documento en una cuenta de Google Drive.
 
 :::note
 

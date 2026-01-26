@@ -673,7 +673,7 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 - Configurar manualmente los elementos jerárquicos utilizando la lista de propiedades del editor de formularios (o editar el formulario JSON).
 - Generar visualmente la jerarquía utilizando el menú emergente de gestión de list box, en el editor de formularios.
-- Use the [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) and [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) commands.
+- Utilice los comandos [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) y [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md).
 
 #### Propiedades del List Box jerárquico
 
