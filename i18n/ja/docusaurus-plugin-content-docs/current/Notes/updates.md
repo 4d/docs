@@ -3,6 +3,16 @@ id: updates
 title: リリースノート
 ---
 
+## 4D 21 R3
+
+#### ハイライト
+
+- The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12.
+
+#### 動作の変更
+
+- The [`JSON Validate`](../commands/json-validate.md) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
+
 ## 4D 21 R2
 
 [**4D 21 R2 の新機能**](https://blog.4d.com/whats-new-in-4d-21-r2/): 4D 21 R2 の新機能と拡張機能をすべてリストアップしたブログ記事です。

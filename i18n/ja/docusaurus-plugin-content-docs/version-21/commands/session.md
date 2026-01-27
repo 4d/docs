@@ -58,7 +58,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 リモートユーザーセッションの `Session` オブジェクトは、次のいずれかから利用できます:
 
-- Project methods that have the [Execute on Server](../Project/project-method-properties.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
+- [サーバー上で実行](../Project/project-method-properties.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "ツイン(双子)" プロセスで実行されます)
 - トリガー
 - ORDA [データモデル関数](../ORDA/ordaClasses.md) ([`local`](../ORDA/ordaClasses.md#ローカル関数) キーワードで宣言されたものを除く)
 - `On Server Open Connection` および `On Server Shutdown Connection` データベースメソッド

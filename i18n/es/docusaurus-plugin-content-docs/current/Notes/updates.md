@@ -3,6 +3,16 @@ id: updates
 title: Notas del lanzamiento
 ---
 
+## 4D 21 R3
+
+#### Lo más destacado
+
+- The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12.
+
+#### Cambios de comportamiento
+
+- The [`JSON Validate`](../commands/json-validate.md) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
+
 ## 4D 21 R2
 
 Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 21 R2.

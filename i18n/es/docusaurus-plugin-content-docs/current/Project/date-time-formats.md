@@ -9,7 +9,7 @@ A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valore
 
 - el comando [`String`](../commands/string.md),
 - los comandos [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) y [`OBJECT Get format`](../commands-legacy/object-get-format.md),
-- el formato de fecha y hora de las propiedades del objeto de formulario, disponibles en la lista de propiedades o en las propiedades JSON [`dateFormat`](../FormObjects/properties_Display.md/#date-format) y [`timeFormat`](../FormObjects/properties_Display.md/#time-format).
+- el formato de fecha y hora de las propiedades del objeto de formulario, disponibles en la lista de propiedades o en las propiedades JSON [`dateFormat`](../FormObjects/properties_Display.md#date-format) y [`timeFormat`](../FormObjects/properties_Display.md#time-format).
 
 ## Lista de patrones
 

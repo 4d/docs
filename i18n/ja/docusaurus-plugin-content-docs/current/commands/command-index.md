@@ -521,7 +521,7 @@ title: コマンド(名前順)
 [`JSON Stringify`](../commands-legacy/json-stringify.md)<br/>
 [`JSON Stringify array`](../commands-legacy/json-stringify-array.md)<br/>
 [`JSON TO SELECTION`](../commands-legacy/json-to-selection.md)<br/>
-[`JSON Validate`](../commands-legacy/json-validate.md)<br/>
+[`JSON Validate`](json-validate.md)<br/>
 
 <a id="K"><b>K</b></a>
 

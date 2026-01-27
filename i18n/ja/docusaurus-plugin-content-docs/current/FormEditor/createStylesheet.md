@@ -206,7 +206,7 @@ text[text|=Hello]
 
 ### メディアクエリ
 
-Media queries allow you to apply styles based on specific conditions. 4D supports media queries for **color schemes** and **platform themes**.
+メディアクエリを使用すると、特定の条件に基づいてスタイルを適用することができるようになります。 4D では、**カラースキーム**と**プラットフォームテーマ**に対してメディアクエリをサポートしています。
 
 メディアクエリは、メディア特性と値によって構成されます (例: `<media feature>:<value>` )。
 
