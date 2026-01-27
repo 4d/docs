@@ -127,11 +127,11 @@ Fluent UI レンダリングは現代的かつ魅力的なコントロールを�
 
 ### 要件
 
-The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine. You need to make sure this SDK is installed on any Windows machine displaying your forms.
+Fluent UI レンダリングを使用するには、 **Windows App SDK** がマシン上にインストールされている必要があります。 フォームを表示するためには、この SDK がWindows マシンにインストールされているか確認する必要があります。
 
-[If necessary](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), you can install the Windows App SDK. For convenience, the 4D installer [provides a link](../GettingStarted/Installation.md#installation-on-disk) to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
+[必要であれば](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)、 Windows App SDK をインストールすることができます。 利便性のために、4D インストーラーは、Windows App SDK インストーラーをダウンロードするための [リンクを提供しています](../GettingStarted/Installation.md#ディスクへのインストール) 。 また、 [Microsoft ダウンロードページ](https://learn.microsoft.com/ja-jp/windows/apps/windows-app-sdk/downloads) からダウンロードすることもできます。 推奨されるのは、4D インストーラーから提供されるバージョンを使用することです。こちらのほうが、最適な互換性を得られます。
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
+Windows App SDK が適切にインストールされていない場合、4D は全てのフォームをクラシックモードで何のエラーもなく表示し、また [診断ログ](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) に以下のメッセージが記録されます: "Fluent UI が必要ですが利用不可です。 アプリケーションはClassic Windows テーマで実行されます。"
 
 ### Fluent UI レンダリングを有効化する
 
@@ -147,7 +147,7 @@ Fluent UI レンダリングモードは、アプリケーションレベルま�
 
 :::note
 
-If the current configuration is not compliant with the [Fluent UI requirements](#requirements), an error message is displayed next to the check box.
+カレントの設定が[Fluent UI の要件](#要件) に合致していない場合、チェックボックスの横にエラーメッセージが表示されます。
 
 :::
 
@@ -164,14 +164,14 @@ If the current configuration is not compliant with the [Fluent UI requirements](
 
 #### CSS
 
-The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows you to configure several styles depending on the used theme.
+[**form-theme** CSS メディアクエリ](./createStylesheet.md#メディアクエリ) を使用することで、使用されるテーマに応じて異なるスタイルを設定することができます。
 
 ### 特定の振る舞い
 
 Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
-- The [`FORM theme`](../commands/form-theme.md) command returns the actual display theme of the current form. 取り得る値: "Classic" あるいは "FluentUI"。 If there is no current form or if the command is called on macOS, and empty string is returned.
-- The [`Application info`](../commands/application-info.md) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
+- 新しい [`FORM theme`](../commands/form-theme.md) コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
+- [`Application info`](../commands/application-info.md) コマンドを使用することで、Fluent UI が使用できるかどうか(`canUseFluentUI` プロパティ) あるいは使用されているかどうか(`useFluentUI` プロパティ) を知ることができます。
 - [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
 - [ステッパー](../FormObjects/stepper.md) フォームオブジェクトは[ダブルクリックイベント](../Events/onDoubleClicked.md) サポートしません。
