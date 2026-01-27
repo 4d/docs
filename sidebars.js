@@ -1500,6 +1500,10 @@ subCategories.sort((a, b) => a.titles[locale].localeCompare(b.titles[locale]));
 const sidebar = subCategories.map((sub) => ({
   type: "category",
   label: sub.titles[locale], // Titre traduit
+    link: {
+    type: "doc",
+    id: `commands/theme/${sub.titles['en'].replace(/[()]/g, '').replace(/ /g, '_')}_theme`
+  },
   items: itemsBySubCategory[sub.id], // Items associés
 }
 )
