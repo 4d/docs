@@ -30,7 +30,7 @@ Una vez habilitado, para ejecutar realmente su aplicación en modo SDI, puede:
 
 :::info
 
-Because the development environment is executed in MDI, switching from design mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+Dado que el entorno de desarrollo se ejecuta en MDI, cambiar del modo diseño al modo de ejecución utilizando el elemento de menú **Probar aplicación en modo SDI** equivale a reiniciar la aplicación.
 
 :::
 

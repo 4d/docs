@@ -62,7 +62,7 @@ Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
  $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
 ```
 
-Using the [`Date`](../commands-legacy/date.md) command:
+Utilizando el comando [`Date`](../commands-legacy/date.md):
 
 ```4d
  var $dateIso : Text // reception of a date in ISO format

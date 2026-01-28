@@ -93,7 +93,7 @@ Se añade una línea de separación mediante la creación de un comando de menú
 En el editor de menús, en lugar de introducir el texto del comando de menú en el área del título, basta con seleccionar la opción **Línea separadora**. En lugar de texto, aparece una línea en el área de la barra de menú actual. Cuando esta opción está marcada, las otras propiedades no tienen efecto.
 **Nota:** en macOS, si utiliza el guión "-" como primer caracter de un elemento de menú, aparecerá como línea de separación.
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), or [`SET MENU ITEM`](../commands/set-menu-item) commands.
+En el lenguaje 4D, se inserta una línea separadora introduciendo `-` o `(-` como itemText para los comandos [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), o [`SET MENU ITEM`](../commands/set-menu-item).
 
 ### Atajos de teclado
 
@@ -153,7 +153,7 @@ A menos que especifique lo contrario, 4D habilita automáticamente cada elemento
 
 ### Marca de verificación
 
-Esta opción del editor de menús puede utilizarse para asociar una marca de verificación del sistema a un elemento del menú. You can then manage the display of the check mark using language commands ([`SET MENU ITEM MARK`](../commands/set-menu-item-mark) and [`Get menu item mark`](../commands/get-menu-item-mark)).
+Esta opción del editor de menús puede utilizarse para asociar una marca de verificación del sistema a un elemento del menú. A continuación, puede gestionar la visualización de la marca de verificación mediante los comandos del lenguaje ([`SET MENU ITEM MARK`](../commands/set-menu-item-mark) y [`Get menu item mark`](../commands/get-menu-item-mark)).
 
 Las marcas de verificación se utilizan generalmente para los elementos del menú de acción continua e indican que la acción está en curso.
 

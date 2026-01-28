@@ -60,7 +60,7 @@ var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Hello!"})
 ```4d
 var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this image:"})
 
-// Add an image URL with details
+// Añadir una URL de imagen con los detalles
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
 

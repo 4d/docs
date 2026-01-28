@@ -22,7 +22,7 @@ Los manejadores de peticiones HTTP personalizadas están soportados en el siguie
 - las [sesiones escalables](./sessions.md#enabling-web-sessions) o [sin sesiones](../settings/web.md#no-sessions) están activadas,
 - un servidor web ejecutado localmente por 4D o 4D Server, incluyendo aquellos [ejecutados por componentes](./webServerObject.md).
 
-### Authentication and Privileges
+### Autenticación y privilegios
 
 Since HTTP Request handler functions are called from standard web requests (they do not contain `/rest/xxx` pattern like REST requests), they are not subject to the [**Force login**](../REST/authUsers.md#force-login-mode) rules. It means that they can be executed without prior authentication, i.e. without a call to [`setPrivileges()`](../API/SessionClass.md#setprivileges) on the session, in which case they will be executed in a *guest* session.
 
@@ -30,7 +30,7 @@ However, these functions need to have appropriate **permissions**, like all requ
 
 In [*restricted mode by default*](../ORDA/privileges.md#restriction-modes), if a HTTP Request handler can open a new, unauthenticated session (which is the case for example when your application provides **deep linking** feature), you need to make sure that the *guest* privilege is allowed to execute the handler function and access all subsequent resources.
 
-If a HTTP Request handler function can be executed within an already authenticated session, you need to make sure the user session is allowed to execute the handler function and access all subsequent resources. Note that this can also happen with deep linking if you copy/paste the link into a browser where you are already authenticated for the application and the session is still active.
+Si una función HTTP Request handler puede ejecutarse dentro de una sesión ya autenticada, debe asegurarse de que la sesión de usuario está autorizada para ejecutar la función handler y acceder a todos los recursos posteriores. Note that this can also happen with deep linking if you copy/paste the link into a browser where you are already authenticated for the application and the session is still active.
 
 ## Cómo definir los gestores
 

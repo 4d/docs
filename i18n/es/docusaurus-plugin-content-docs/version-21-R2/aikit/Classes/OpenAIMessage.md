@@ -60,7 +60,7 @@ var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Hello!"})
 ```4d
 var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this image:"})
 
-// Add an image URL with details
+// Añadir una URL de imagen con los detalles
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
 
@@ -109,7 +109,7 @@ Cuando un asistente necesita utilizar las funciones externas, genera un mensaje 
 Cuando reciba un mensaje de llamada de herramienta, debe:
 
 1. **Extraer la información relativa a la función:**
-   - `function.name`: The name of the function to call (must match a function defined in your [OpenAITool](OpenAITool.md) - you can select code to execute according to this name)
+   - `function.name`: el nombre de la función a llamar (debe coincidir con una función definida en su [OpenAITool](OpenAITool.md) - puede seleccionar el código a ejecutar en función de este nombre)
    - `function.arguments`: una cadena JSON que contiene los parámetros de la función que deben analizarse con `JSON Parse`
    - `id`: el identificador único para esta llamada específica a la herramienta
 

@@ -609,7 +609,7 @@ Se pueden mostrar los siguientes mensajes:
 
 La etiqueta `4DSCRIPT` permite ejecutar métodos 4D al procesar la plantilla. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string.
 
-> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method (if it exists). Si devuelve True, 4D ejecuta el método.
+> Si se llama a la etiqueta en el contexto de un proceso Web, cuando se carga la página, 4D llama al método base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) (si existe). Si devuelve True, 4D ejecuta el método.
 
 El método debe devolver un texto. Si la cadena comienza con el caracter de código 1, se considera HTML (el mismo principio se aplica a la etiqueta `4DHTML`).
 

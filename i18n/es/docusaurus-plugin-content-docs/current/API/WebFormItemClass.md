@@ -110,7 +110,7 @@ La función `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summ
 
 #### Descripción
 
-The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->.If the component was already visible, the function does nothing.
+La función `.show()` <!-- REF #WebFormItemClass.show().Summary -->hace visible el componente<!-- END REF -->. Si el componente ya era visible, la función no hace nada.
 
 ## Ver también
 

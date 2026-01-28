@@ -945,7 +945,7 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
   - Constantes de tipo **date**: formato "YYYY-MM-DD"
   - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
   - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
-  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of [**vector similarity queries**](#query-by-vector-similarity) (*attributePath* must also contain valid 4D.Vector objects).
+  - **objeto**: sólo se admiten los objetos [4D.Vector](../API/VectorClass.md), en el contexto de [**consultas de similaridad vectorial**](#query-by-vector-similarity) (*attributePath* también debe contener objetos 4D.Vector válidos).
 - **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
 | Conjunción | Símbolo(s)                                                       |

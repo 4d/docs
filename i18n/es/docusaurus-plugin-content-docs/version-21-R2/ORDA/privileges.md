@@ -240,7 +240,7 @@ En versiones anteriores, el archivo `roles.json` no fue creado por defecto. A pa
 
 :::note Qodly Studio
 
-In Qodly Studio for 4D, the login mode can be set using the [**Force login** option](https://developer.4d.com/qodly/4DQodlyPro/force-login) in the Roles and Privileges panel.
+En Qodly Studio for 4D, el modo de conexión se puede definir utilizando la opción [**Forzar inicio de sesión**](https://developer.4d.com/qodly/4DQodlyPro/force-login) en el panel Roles y privilegios.
 
 :::
 
@@ -258,7 +258,7 @@ La propiedad `restrictedByDefault` configura cómo cada [recurso](#resources) es
 
 :::
 
-### Recommended Configuration {#recommended-configuration}
+### Configuración recomendada {#recommended-configuration}
 
 Dependiendo de su entorno, los parámetros recomendados son:
 

@@ -107,9 +107,9 @@ $result:=Num("–123e2") // –12300
 Aquí, *\[Client\]Debt* se compara con *1000$*. El comando Num aplicado a estas comparaciones devuelve 1 ó 0\. Multiplicar 1 o 0 por una cadena repite la cadena una vez o devuelve la cadena vacía. Como resultado, el campo *[Client]Risk* obtiene el valor “Good” or “Bad”:
 
 ```4d
-  // If client owes less than 1000, a good risk.
-  // If client owes more than 1000, a bad risk.
- [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
+  // Si el cliente debe menos de 1000, un buen riesgo.
+  // Si el cliente debe más de 1000, un riesgo malo.
+ [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## Ejemplo 3

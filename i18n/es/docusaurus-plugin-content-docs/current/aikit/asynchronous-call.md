@@ -7,9 +7,9 @@ title: Asynchronous Call
 
 Si no desea esperar la respuesta del OpenAPI al hacer una petición a su API, debe utilizar un código asíncrono.
 
-To make asynchronous calls, you must provide a callback `4D.Function`(`Formula`) in the [OpenAIParameters](Classes/OpenAIParameters.md) object parameter to receive the result.
+Para efectuar llamadas asíncronas, debe proporcionar una `4D.Function`(`Formula`) de retrollamda en el parámetro objeto [OpenAIParameters](Classes/OpenAIParameters.md) para recibir el resultado.
 
-The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code. Ver ejemplos más abajo.
+La función de retrollamada recibirá el mismo tipo de objeto de resultado (una de las clases hijas de [OpenAIResult](Classes/OpenAIResult.md)) que devolvería la función en un código síncrono. Ver ejemplos más abajo.
 
 ## Consideraciones sobre el proceso
 
@@ -55,6 +55,6 @@ $client.chat.completions.create($messages; { onResponse: Formula(MyChatCompletio
 ```4d
 #DECLARE($result: cs.AIKit.OpenAIChatCompletionsResult)
 
-ASSERT($result.success) // We use onResponse here, callback receive only if success
+ASSERT($result.success) // Usamos onResponse aquí, la retrollamada recibe sólo en caso de éxito
 Form.assistantMessage:=$result.choices[0].text
 ```

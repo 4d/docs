@@ -115,7 +115,7 @@ He aquí un resumen de la arquitectura del modo de desarrollo:
 
 :::note Compatibilidad
 
-This feature is designed for small-size development teams who are used to work on binary databases and want to benefit from project features while maintaining their current organisation. However, for multi-user development on 4D projects, we recommend using a standard architecture where developers work on their machine and manage their work using source control repository tools (Git, SVN, etc.). Esta organización ofrece una gran flexibilidad al permitir a los desarrolladores trabajar en distintas ramas y comparar, fusionar o revertir modificaciones.
+Esta funcionalidad está diseñada para equipos de desarrollo de tamaño pequeño acostumbrados a trabajar con bases de datos binarias y que desean beneficiarse de las funciones del proyecto manteniendo su organización actual. Sin embargo, para el desarrollo multiusuario en proyectos 4D, recomendamos utilizar una arquitectura estándar en la que los desarrolladores trabajen en su máquina y gestionen su trabajo utilizando herramientas de repositorio de control de código fuente (Git, SVN, etc.). Esta organización ofrece una gran flexibilidad al permitir a los desarrolladores trabajar en distintas ramas y comparar, fusionar o revertir modificaciones.
 
 :::
 
