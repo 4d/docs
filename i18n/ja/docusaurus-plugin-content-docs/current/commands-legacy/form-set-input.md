@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 データ読み込みコマンド[IMPORT TEXT](import-text.md)、[IMPORT SYLK](import-sylk.md) および[IMPORT DIF](import-dif.md) は、レコードの読み込みにカレント入力フォームを使用します。
 
-オプション引数 *\** は、デザインモードのフォームプロパティウィンドウおよび[Open window](open-window.md) で使用されます。*\** を指定することにより、(ダイアログボックスや入力フォームとして) 次回フォームを使用する際、フォームプロパティの設定をもとに自動的にウィンドウサイズを変更するよう4Dに指示します。詳しくは[Open window](open-window.md) の節を参照してください。
+オプション引数 *\** は、デザインモードのフォームプロパティウィンドウおよび[Open window](../commands/open-window.md) で使用されます。*\** を指定することにより、(ダイアログボックスや入力フォームとして) 次回フォームを使用する際、フォームプロパティの設定をもとに自動的にウィンドウサイズを変更するよう4Dに指示します。詳しくは[Open window](../commands/open-window.md) の節を参照してください。
 
 **注:** オプション引数 *\** を使用するしないに関係なく、**FORM SET INPUT** コマンドはテーブルの入力フォームを変更します。
 
@@ -104,7 +104,7 @@ displayed_sidebar: docs
 [IMPORT TEXT](import-text.md)  
 [MODIFY RECORD](modify-record.md)  
 [MODIFY SELECTION](modify-selection.md)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
 ## プロパティ

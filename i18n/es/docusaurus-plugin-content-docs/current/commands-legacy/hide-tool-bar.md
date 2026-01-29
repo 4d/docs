@@ -14,9 +14,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.HIDE TOOL BAR.Summary-->El comando **HIDE TOOL BAR** maneja la visualización de las barras de herramientas personalizadas creadas por el comando [Open form window](open-form-window.md) para el proceso actual.<!-- END REF-->
+<!--REF #_command_.HIDE TOOL BAR.Summary-->El comando **HIDE TOOL BAR** maneja la visualización de las barras de herramientas personalizadas creadas por el comando [Open form window](../commands/open-form-window.md) para el proceso actual.<!-- END REF-->
 
-Si una ventana barra de herramientas ha sido creado por el comando [Open form window](open-form-window.md) con la opción Toolbar form window, el comando oculta esta ventana. Si la ventana barra de herramientas ya estaba oculta o si ninguna ventana de este tipo ha sido creada, el comando no hace nada.
+Si una ventana barra de herramientas ha sido creado por el comando [Open form window](../commands/open-form-window.md) con la opción Toolbar form window, el comando oculta esta ventana. Si la ventana barra de herramientas ya estaba oculta o si ninguna ventana de este tipo ha sido creada, el comando no hace nada.
 
 ## Ejemplo 
 

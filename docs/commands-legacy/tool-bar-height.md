@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Tool bar height.Summary-->The Tool bar height command returns the height of the current visible tool bar, expressed in pixels.<!-- END REF--> Depending on the context, it can be either the 4D Design mode toolbar, or a custom toolbar created with [Open form window](open-form-window.md) (the Design mode toolbar is automatically hidden when a custom toolbar is displayed).
+<!--REF #_command_.Tool bar height.Summary-->The Tool bar height command returns the height of the current visible tool bar, expressed in pixels.<!-- END REF--> Depending on the context, it can be either the 4D Design mode toolbar, or a custom toolbar created with [Open form window](../commands/open-form-window.md) (the Design mode toolbar is automatically hidden when a custom toolbar is displayed).
 
 If no tool bar is displayed, the command returns 0.
 

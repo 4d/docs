@@ -78,7 +78,7 @@ Given the following project method:
  Until(OK=0)
 ```
 
-If you attach this project method to a custom menu item **Menu Bar Editor** window whose **Start a New Process** property is set, 4D will automatically start a new process running that method. The call [SET MENU BAR](set-menu-bar.md)(1) adds a menu bar to the new process. In the absence of any window (that you could open with [Open window](open-window.md)), the call to [ADD RECORD](add-record.md) will automatically open one.
+If you attach this project method to a custom menu item **Menu Bar Editor** window whose **Start a New Process** property is set, 4D will automatically start a new process running that method. The call [SET MENU BAR](set-menu-bar.md)(1) adds a menu bar to the new process. In the absence of any window (that you could open with [Open window](../commands/open-window.md)), the call to [ADD RECORD](add-record.md) will automatically open one.
 
 To be able to start this Add Customers process when you click on a button in a custom control panel, you can write:
 

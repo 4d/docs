@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.GOTO XY.Summary-->O comando GOTO XY se utiliza conjuntamente com o comando [MESSAGE](message.md "MESSAGE") quando mostra mensagens em uma janela aberta pelo comando [Open window](open-window.md "Open window").<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->O comando GOTO XY se utiliza conjuntamente com o comando [MESSAGE](message.md "MESSAGE") quando mostra mensagens em uma janela aberta pelo comando [Open window](../commands/open-window.md "Open window").<!-- END REF-->  
   
 GOTO XY determina a posição do cursor de inserção de caracteres (um cursor invisível) para definir a localização da seguinte mensagem na janela. 
 

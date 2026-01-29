@@ -33,7 +33,7 @@ In the *from* parameter, pass the initial coordinate system the input point is u
 
 When this command is called from the method of a subform or a subform's object, and if one of the selectors is XY Current form, then the coordinates are relative to the subform itself, not to its parent form.
 
-When converting from/to the position of a form window (for example when converting from the results of [GET WINDOW RECT](get-window-rect.md), or to values passed to [Open form window](open-form-window.md)), XY Main window must be used since it is the coordinate system used by window commands on Windows. It can also be used for this purpose on macOS, where it is equivalent to XY Screen.
+When converting from/to the position of a form window (for example when converting from the results of [GET WINDOW RECT](get-window-rect.md), or to values passed to [Open form window](../commands/open-form-window.md)), XY Main window must be used since it is the coordinate system used by window commands on Windows. It can also be used for this purpose on macOS, where it is equivalent to XY Screen.
 
 When *from* is XY Current form and the point is in the body section of a list form, the result depends on the calling context of the command:
 
