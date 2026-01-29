@@ -607,7 +607,7 @@ Se pueden mostrar los siguientes mensajes:
 
 #### Sintaxis: `<!--#4DSCRIPT/MethodName/MyParam-->`
 
-La etiqueta `4DSCRIPT` permite ejecutar métodos 4D al procesar la plantilla. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string.
+La etiqueta `4DSCRIPT` permite ejecutar métodos 4D al procesar la plantilla. La presencia de la etiqueta `<!--#4DSCRIPT/MyMethod/MyParam-->` como comentario HTML lanza la ejecución del método `MyMethod` con el parámetro `Param` como una cadena.
 
 > Si se llama a la etiqueta en el contexto de un proceso Web, cuando se carga la página, 4D llama al método base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) (si existe). Si devuelve True, 4D ejecuta el método.
 

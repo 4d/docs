@@ -106,7 +106,7 @@ RB-1762-1
 
 :::note blankIfNull
 
-- By default, a [null date](../Concepts/dt_date.md#date-literals) is displayed with zeros, e.g. 00/00/00. "blankIfNull" オプションを使用すると、null の日付は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "systemShort blankIfNull" または "LLLdd日 ee blankIfNull"。
+- デフォルトでは、 [null 日付](../Concepts/dt_date.md#日付リテラル) は 00/00/00 のように、ゼロとして表示されます。 "blankIfNull" オプションを使用すると、null の日付は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "systemShort blankIfNull" または "LLLdd日 ee blankIfNull"。
 - 日付型の [リストボックスの列](listbox_overview.md#リストボックス列]) および [リストボックスのフッター](listbox_overview.md#リストボックスフッター) は常に "blankIfNull" (null値は空白表示) の振る舞いをします (解除できません)。
 
 :::

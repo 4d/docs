@@ -73,7 +73,7 @@ exposed Function isHidden()
 	var myComponent : 4D.WebFormItem
 	
 	myComponent:=Web Form.myImage
-	myComponent.hide()  // Hide the component that has "myImage" as server reference 
+	myComponent.hide()  // Oculta el componente que tiene "myImage" como referencia servidor. 
 ```
 
 2. En Qodly Studio: seleccione el componente imagen en la página e introduzca una referencia del lado del servidor en el panel Propiedades > Server Side, por ejemplo "myImage".

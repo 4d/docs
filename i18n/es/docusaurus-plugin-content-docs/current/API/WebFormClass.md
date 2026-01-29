@@ -77,7 +77,7 @@ Esta función no hace nada si:
 
 Si [activa](#enablestate) o desactiva varios estados en la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez finalizada la función.
 
-For more information on web pages states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+Para más información sobre los estados de las páginas web, consulte la sección [Estados en la documentación de Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 ### .enableState()
 
@@ -102,7 +102,7 @@ Esta función no hace nada si:
 
 Si activa o [desactiva](#disablestate) varios estados dentro de la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez que la función termina.
 
-For more information on web page states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+Para más información sobre los estados de las páginas web, consulte la [sección Estados en la documentación de Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 #### Ejemplo
 

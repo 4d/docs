@@ -13,9 +13,9 @@ La función de retrollamada recibirá el mismo tipo de objeto de resultado (una 
 
 ## Consideraciones sobre el proceso
 
-The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), so the response will be received within the current process.
+El método asíncrono se basa en [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), por lo que la respuesta se recibirá dentro del proceso actual.
 
-> ⚠️ If your process ends at the conclusion of the current method (e.g., using New process, or playing in the method editor), the callback formula might not be called asynchronously. En estos casos, considere la posibilidad de utilizar `CALL WORKER` o `CALL FORM`.
+> ⚠️ Si su proceso termina al final del método actual (p. ej. usando New process o el editor de métodos), la fórmula de callback podría no llamarse de forma asíncrona. En estos casos, considere la posibilidad de utilizar `CALL WORKER` o `CALL FORM`.
 
 ## Ejemplos de uso
 
