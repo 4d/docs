@@ -2304,7 +2304,8 @@ module.exports =
           },
           items: [
             "Develop/processes",
-            "Develop/preemptive-processes"
+            "Develop/preemptive-processes",
+            "Develop/async"
           ]
         },
         {
