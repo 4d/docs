@@ -159,7 +159,7 @@ title: メニュープロパティ
 
 ### フォントスタイル
 
-メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) language command.
+メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 メニューエディターのオプションを使用して、または [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) ランゲージコマンドを使って、メニューのスタイルを太字・イタリック・下線でカスタマイズすることができます。
 
 一般的なルールとして、フォントスタイルの適用は慎重におこなってください。 煩雑なスタイルの使用はユーザーの注意をそらし、アプリケーションの見た目を悪くします。
 
