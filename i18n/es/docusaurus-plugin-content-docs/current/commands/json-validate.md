@@ -51,7 +51,7 @@ To validate a JSON object, 4D uses the norm described in a **JSON Schema Validat
 
 The version to use should be inserted in the schema using the *$schema* key:
 
-- version 2020-12:
+- versión 2020-12:
 
 ```json
 "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -95,7 +95,7 @@ Each error object of the *errors* collection contains the following properties:
 
 ### Error list
 
-<details>The following errors may be returned:
+<details>Se pueden producir los siguientes errores:
 
 | **Code** | **JSON Keyword**     | **Message**                                                                                                                                                   |
 | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -113,12 +113,12 @@ Each error object of the *errors* collection contains the following properties:
 | 13       | uniqueItems          | Error while validating an array. Elements are not unique. Another instance of "{s1}" is already in the array. |
 | 14       | maxProperties        | The number of properties is greater than specified in the schema.                                                                             |
 | 15       | minProperties        | The number of properties is less than specified in the schema.                                                                                |
-| 16       | requerido            | The required property "{s1}" is missing.                                                                                                      |
-| 17       | additionalProperties | No additional properties allowed by the schema. The property(ies) {s1} should be removed.                  |
+| 16       | requerido            | Falta la propiedad requerida "{s1}".                                                                                                          |
+| 17       | additionalProperties | No hay propiedades adicionales permitidas por el esquema. The property(ies) {s1} should be removed.        |
 | 18       | dependencias         | The property "{s1}" requires the property "{s2}".                                                                                             |
 | 19       | enum                 | Error while validating against 'enum' key. "{s1}" does not match any enum element in the schema.                              |
 | 20       | type                 | Incorrect type. Expected type is: {s1}                                                                                        |
-| 21       | oneOf                | The JSON matches more than one value.                                                                                                         |
+| 21       | oneOf                | El JSON coincide con más de un valor.                                                                                                         |
 | 22       | oneOf                | The JSON does not match any value.                                                                                                            |
 | 23       | not                  | The JSON is invalid against the value of 'not'.                                                                                               |
 | 24       | format               | The string does not match ("{s1}")                                                                                                         |
@@ -126,7 +126,7 @@ Each error object of the *errors* collection contains the following properties:
 | 26       | unevalutedProperties | Unevaluated properties are not allowed by the schema. The property(ies) {s1} should be removed.            |
 | 27       | unevalutedItems      | Unevaluated array items are not allowed. Item at index {s1} is not covered by any schema.                                     |
 | 28       | propertyNames        | Property name "{s1}" does not validate against the 'propertyNames' schema.                                                                    |
-| 29       | contiene             | Array does not contain any items matching the 'contains' schema.                                                                              |
+| 29       | contiene             | El array no contiene ningún elemento que coincida con el esquema 'contains'.                                                                  |
 | 30       | contiene             | Array must contain at least {s1} items matching the 'contains' schema, but only {s2} were found.                                              |
 | 31       | contiene             | Array must contain at most {s1} items matching the 'contains' schema, but {s2} were found.                                                    |
 | 32       | requerido            | The property "{s1}" requires the property "{s2}" to be present.                                                                               |

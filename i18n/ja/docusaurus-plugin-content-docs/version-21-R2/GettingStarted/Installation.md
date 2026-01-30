@@ -21,7 +21,7 @@ title: インストール
 
 :::info
 
-The Windows Setup panel includes a link allowing you to download the **Windows App SDK** installer. You may need to install this SDK to be able to [use Fluent UI in your 4D application on Windows](../FormEditor/forms.md#fluent-ui-rendering) (if not already installed in your OS, see [this blog post](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)).
+Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用の4D においてFluent UI を使用する](../FormEditor/forms.md#fluent-ui-レンダリング) ためには、このSDK をインストール必要があるかもしれません (OS にまだインストールがされていない場合には、[こちらの blog 記事](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications) を参照してください)。
 
 :::
 

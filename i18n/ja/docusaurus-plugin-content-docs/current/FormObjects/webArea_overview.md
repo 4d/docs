@@ -11,15 +11,15 @@ Webエリアは、静的および動的な HTMLページ、ファイル、ピク
 
 ## Qodly ページを表示する
 
-Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) and provide 4D desktop application users with modern, CSS-based web interface.
+Web エリアを使用して、[Qodly ページ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) を表示することもでき、これによって4D デスクトップアプリケーションユーザーにモダンで、CSS ベースなWeb インターフェースを提供することができます。
 
-You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+Web エリア内にQodly ページを埋め込み、[`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md) を呼び出すことで4D から[Qodly ソース](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) を更新することができます。
 
-In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses for a high level of security.
+4D クライアント/サーバーアプリケーションにおいては、Web エリア内のQodly ページは[リモートユーザーとセッションを共有すること](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) ができ、これによって高レベルなセキュリティを実現できます。
 
 :::tip 関連したblog 記事
 
-[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
+[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/ja/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 
@@ -32,7 +32,7 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 - [`URL`](properties_WebArea.md#url) --Web エリアが表示するURL をコントロールします。
 - [`Progression`](properties_WebArea.md#progression) -- Web エリア内に表示されているページのロード率をコントロールします。
 
-> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> 4D 19 R5 以降、Progression 変数は、[Windows のシステムレンダリングエンジン](./webArea_overview.md#Webレンダリングエンジン) を使用しているWeb エリアにおいては更新されなくなりました。
 
 ### Webレンダリングエンジン
 
@@ -129,9 +129,9 @@ $4d.today(function(result)
 
 #### 例題 2
 
-Instead of using a standalone method, we can also use a class function to handle the calculation.
+スタンドアロンのメソッドを使用する代わりに、この計算を管理するクラス関数を使用することもできます。
 
-Define a "SumCalculator" 4D user class with a `calcSum` function which receives parameters and returns their sum:
+引数を受け取り、その合計を返す `calcSum` 関数を持った "SumCalculator" 4D ユーザークラスを定義します:
 
 ```4d
 // SumCalculator ユーザークラス
@@ -243,7 +243,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 ## プロパティ一覧
 
-[Access 4D methods](properties_WebArea.md#access-4d-methods) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド)
 
 ## 4DCEFParameters.json
 
@@ -348,7 +348,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 :::tip 関連したblog 記事
 
-[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
+[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/ja/custom-parameters-for-initializing-embedded-web-area/)
 
 :::
 
