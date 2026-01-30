@@ -7,7 +7,7 @@ displayed_sidebar: docs
 
 
 | English | French |
-|---------|--------|
+|---|---|
 | 4D Client Database Folder | Dossier base 4D Client |
 | 4D Client SOAP License | Licence SOAP 4D Client |
 | 4D Client Web License | Licence Web 4D Client |
@@ -15,32 +15,32 @@ displayed_sidebar: docs
 | 4D For OCI License | Licence 4D For OCI |
 | 4D Local Mode | 4D mode local |
 | 4D ODBC Pro License | Licence 4D ODBC Pro |
-| 4D REST Test license | 4D REST Test license |
 | 4D Remote Mode | 4D mode distant |
 | 4D Remote Mode Timeout | Timeout 4D mode distant |
+| 4D REST Test license | 4D REST Test license |
+| 4D Server | 4D Server |
+| 4D Server Log Recording | Enreg requêtes 4D Server |
+| 4D Server Timeout | Timeout 4D Server |
 | 4D SOAP License | Licence 4D SOAP |
 | 4D SOAP Local License | Licence 4D SOAP locale |
 | 4D SOAP One Connection License | Licence 4D SOAP une connexion |
 | 4D SQL Server License | Licence Serveur SQL 4D |
 | 4D SQL Server Local License | Licence Serveur SQL 4D locale |
 | 4D SQL Server One Conn License | Licence Serveur SQL 4D 1 conn |
-| 4D Server | 4D Server |
-| 4D Server Log Recording | Enreg requêtes 4D Server |
-| 4D Server Timeout | Timeout 4D Server |
+| 4D user account | Compte utilisateur 4D |
+| 4D user alias | Alias utilisateur 4D |
+| 4D user alias or account | Alias ou compte utilisateur 4D |
 | 4D View License | Licence 4D View |
 | 4D Volume Desktop | 4D Volume Desktop |
 | 4D Web License | Licence 4D Web |
 | 4D Web Local License | Licence 4D Web locale |
 | 4D Web One Connection License | Licence 4D Web une connexion |
 | 4D Write License | Licence 4D Write |
-| 4D user account | Compte utilisateur 4D |
-| 4D user alias | Alias utilisateur 4D |
-| 4D user alias or account | Alias ou compte utilisateur 4D |
 | 64 bit Version | Version 64 bits |
-| ACK ASCII code | ASCII ACK |
 | Aborted | Détruit |
 | Absolute path | Chemin absolu |
 | Access Privileges | Autorisations d’accès |
+| ACK ASCII code | ASCII ACK |
 | Activate event | Activation fenêtre |
 | Activate window bit | Bit activation fenêtre |
 | Activate window mask | Masque activation fenêtre |
@@ -50,12 +50,64 @@ displayed_sidebar: docs
 | Activity network | Activité réseau |
 | Activity operations | Activité opérations |
 | Additional text | Texte supplémentaire |
-| Align Top | Aligné en haut |
+| ak accept | ak accept |
+| ak add subrecord | ak add subrecord |
+| ak automatic splitter | ak automatic splitter |
+| ak background color | ak background color |
+| ak background color dialog | ak background color dialog |
+| ak cancel | ak cancel |
+| ak clear | ak clear |
+| ak compute expressions | ak compute expressions |
+| ak copy | ak copy |
+| ak current form | ak current form |
+| ak cut | ak cut |
+| ak database settings | ak database settings |
+| ak delete record | ak delete record |
+| ak delete subrecord | ak delete subrecord |
+| ak display subrecord | ak display subrecord |
+| ak edit subrecord | ak edit subrecord |
+| ak first page | ak first page |
+| ak first record | ak first record |
+| ak font bold | ak font bold |
+| ak font color | ak font color |
+| ak font color dialog | ak font color dialog |
+| ak font italic | ak font italic |
+| ak font linethrough | ak font linethrough |
+| ak font show dialog | ak font show dialog |
+| ak font size | ak font size |
+| ak font style | ak font style |
+| ak font underline | ak font underline |
+| ak freeze expressions | ak freeze expressions |
+| ak goto page | ak goto page |
+| ak last page | ak last page |
+| ak last record | ak last record |
+| ak main form | ak main form |
+| ak msc | ak msc |
+| ak next page | ak next page |
+| ak next record | ak next record |
+| ak none | ak none |
+| ak open back url | ak open back url |
+| ak open forward url | ak open forward url |
+| ak paste | ak paste |
+| ak previous page | ak previous page |
+| ak previous record | ak previous record |
+| ak quit | ak quit |
+| ak redo | ak redo |
+| ak refresh current url | ak refresh current url |
+| ak return to design mode | ak return to design mode |
+| ak select all | ak select all |
+| ak show clipboard | ak show clipboard |
+| ak show reference | ak show reference |
+| ak spell | ak spell |
+| ak standard action title | ak standard action title |
+| ak stop loading url | ak stop loading url |
+| ak undo | ak undo |
 | Align bottom | Aligné en bas |
 | Align center | Aligné au centre |
 | Align default | Aligné par défaut |
 | Align left | Aligné à gauche |
 | Align right | Aligné à droite |
+| Align Top | Aligné en haut |
 | Allow alias files | Sélection alias |
 | Allow deletion | Suppression autorisée |
 | Alternate dialog box | Dialogue ombré |
@@ -68,43 +120,42 @@ displayed_sidebar: docs
 | At sign | Arobase |
 | At the Bottom | En bas |
 | At the Top | En haut |
-| Attribute Executed on server | Attribut exécutée sur serveur |
-| Attribute Invisible | Attribut invisible |
-| Attribute Published SOAP | Attribut publiée SOAP |
-| Attribute Published SQL | Attribut publiée SQL |
-| Attribute Published WSDL | Attribut publiée WSDL |
-| Attribute Published Web | Attribut publiée Web |
-| Attribute Shared | Attribut partagée |
 | Attribute background color | Attribut couleur fond |
 | Attribute bold style | Attribut style gras |
+| Attribute Executed on server | Attribut exécutée sur serveur |
 | Attribute folder name | Attribut nom dossier |
 | Attribute font name | Attribut nom de police |
+| Attribute Invisible | Attribut invisible |
 | Attribute italic style | Attribut style italique |
+| Attribute Published SOAP | Attribut publiée SOAP |
+| Attribute Published SQL | Attribut publiée SQL |
+| Attribute Published Web | Attribut publiée Web |
+| Attribute Published WSDL | Attribut publiée WSDL |
+| Attribute Shared | Attribut partagée |
 | Attribute strikethrough style | Attribut style barré |
 | Attribute text color | Attribut couleur texte |
 | Attribute text size | Attribut taille texte |
 | Attribute underline style | Attribut style souligné |
 | August | Août |
 | Austrian Schilling | Schilling autrichien |
-| Auto Synchro Resources Folder | Synchro auto dossier Resources |
 | Auto insertion | Insertion automatique |
 | Auto key event | Répétition touche |
 | Auto repair mode | Mode réparation auto |
+| Auto Synchro Resources Folder | Synchro auto dossier Resources |
 | Automatic | Automatique |
 | Automatic style sheet | Feuille de style automatique |
 | Automatic style sheet_additional | Feuille de style automatique_additionnel |
 | Automatic style sheet_main text | Feuille de style automatique_texte principal |
-| BEL ASCII code | ASCII BEL |
-| BS ASCII code | ASCII BS |
 | Background color | Coul arrière plan |
 | Background color none | Coul fond transparent |
 | Backspace | Retour arrière |
 | Backspace Key | Touche retour arrière |
-| Backup Process | Process de sauvegarde |
 | Backup data settings | Fichier configuration sauvegarde pour le fichier de données |
 | Backup history file | Fichier historique des sauvegardes |
 | Backup log file | Fichier log sauvegarde |
+| Backup Process | Process de sauvegarde |
 | Backup structure settings | Fichier configuration sauvegarde |
+| BEL ASCII code | ASCII BEL |
 | Belgian Franc | Franc belge |
 | Black | Noir |
 | Black and white | Noir et blanc |
@@ -124,18 +175,18 @@ displayed_sidebar: docs
 | Border Sunken | Bordure Relief inversé |
 | Border System | Bordure Système |
 | Brown | Marron |
+| BS ASCII code | ASCII BS |
 | Build application log file | Fichier log application générée |
 | Build application settings | Fichier de configuration application |
-| CAN ASCII code | ASCII CAN |
-| CR ASCII code | ASCII CR |
+| Cache flush periodicity | Périodicité écriture cache |
 | Cache Manager | Gestionnaire du cache |
 | Cache Priority high | Cache priorité haute |
 | Cache Priority low | Cache priorité basse |
 | Cache Priority normal | Cache priorité normal |
 | Cache Priority very high | Cache priorité très haute |
 | Cache Priority very low | Cache priorité très basse |
-| Cache flush periodicity | Périodicité écriture cache |
 | Cache unload minimum size | Taille minimum libération cache |
+| CAN ASCII code | ASCII CAN |
 | Caps Lock key bit | Bit touche verrouillage maj |
 | Caps Lock key mask | Masque touche verrouillage maj |
 | Carriage return | Retour chariot |
@@ -144,14 +195,27 @@ displayed_sidebar: docs
 | Character set | Jeu de caractères |
 | Choice list | Liste énumération |
 | Circular log limitation | Limitation nombre journaux |
+| ck ascending | ck ascending |
+| ck count values | ck count values |
+| ck descending | ck descending |
+| ck diacritical | ck diacritical |
+| ck disable wildchar | ck disable wildchar |
+| ck forget learning context | ck forget learning context |
+| ck ignore null or empty | ck ignore null or empty |
+| ck keep empty strings | ck keep empty strings |
+| ck keep learning context | ck keep learning context |
+| ck keep null | ck keep null |
+| ck not shared | ck not shared |
+| ck resolve pointers | ck resolve pointers |
+| ck shared | ck shared |
+| Client character set | Client jeu de caractères |
 | Client HTTPS Port ID | Client numéro de port HTTPS |
+| Client log Recording | Enreg requêtes client |
 | Client Manager Process | Process gestionnaire clients |
 | Client Max Concurrent Web Proc | Client proc Web simultanés maxi |
+| Client port ID | Client numéro de port |
 | Client Server Port ID | Numéro du port client serveur |
 | Client Web Log Recording | Client enreg requêtes Web |
-| Client character set | Client jeu de caractères |
-| Client log Recording | Enreg requêtes client |
-| Client port ID | Client numéro de port |
 | Cluster BTree Index | Index BTree cluster |
 | Code with tokens | Code avec tokens |
 | Color option | Option couleur |
@@ -165,29 +229,16 @@ displayed_sidebar: docs
 | Control key mask | Masque touche contrôle |
 | Controller form window | Form fenêtre contrôleur |
 | Copy XML Data Source | Copier source données XML |
+| CR ASCII code | ASCII CR |
 | Create process | Créer un process |
-| Created from Menu Command | Créé par commande de menu |
 | Created from execution dialog | Créé par dialogue d’exécution |
+| Created from Menu Command | Créé par commande de menu |
 | Crop | Recadrage |
 | Currency symbol | Symbole monétaire |
-| Current Resources folder | Dossier Resources courant |
 | Current backup settings file | Fichier configuration sauvegarde courant |
 | Current localization | Langue courante |
 | Current process debug log recording | Enreg historique débogage du process courant |
-| DB4D Cron | Process DB4D Cron |
-| DB4D Flush cache | Process DB4D Ecriture cache |
-| DB4D Garbage collector | Process DB4D Garbage collector |
-| DB4D Index builder | Process DB4D Index builder |
-| DB4D Listener | Process DB4D Listener |
-| DB4D Mirror | Process DB4D Miroir |
-| DB4D Worker pool user | Process DB4D Worker pool utilisateur |
-| DC1 ASCII code | ASCII DC1 |
-| DC2 ASCII code | ASCII DC2 |
-| DC3 ASCII code | ASCII DC3 |
-| DC4 ASCII code | ASCII DC4 |
-| DEL ASCII code | ASCII DEL |
-| DLE ASCII code | ASCII DLE |
-| DOCTYPE Name | Nom DOCTYPE |
+| Current Resources folder | Dossier Resources courant |
 | Dark Blue | Bleu foncé |
 | Dark Brown | Marron foncé |
 | Dark Green | Vert foncé |
@@ -200,18 +251,30 @@ displayed_sidebar: docs
 | Data folder | Dossier données |
 | Database Folder | Dossier base |
 | Database Folder Unix Syntax | Dossier base syntaxe UNIX |
-| Date RFC 1123 | Date RFC 1123 |
 | Date array | Est un tableau date |
+| Date RFC 1123 | Date RFC 1123 |
 | Date separator | Séparateur date |
 | Date type | Type date |
 | Dates inside objects | Dates dans les objets |
-| Debug Log Recording | Enreg événements debogage |
+| DB4D Cron | Process DB4D Cron |
+| DB4D Flush cache | Process DB4D Ecriture cache |
+| DB4D Garbage collector | Process DB4D Garbage collector |
+| DB4D Index builder | Process DB4D Index builder |
+| DB4D Listener | Process DB4D Listener |
+| DB4D Mirror | Process DB4D Miroir |
+| DB4D Worker pool user | Process DB4D Worker pool utilisateur |
+| DC1 ASCII code | ASCII DC1 |
+| DC2 ASCII code | ASCII DC2 |
+| DC3 ASCII code | ASCII DC3 |
+| DC4 ASCII code | ASCII DC4 |
 | Debug log file | Fichier log débogage |
+| Debug Log Recording | Enreg événements debogage |
 | December | Décembre |
 | Decimal separator | Séparateur décimal |
 | Default Index Type | Type index par défaut |
 | Default localization | Langue par défaut |
 | Degree | Degré |
+| DEL ASCII code | ASCII DEL |
 | Delayed | Endormi |
 | Delete only if empty | Supprimer si vide |
 | Delete with contents | Supprimer avec contenu |
@@ -222,9 +285,9 @@ displayed_sidebar: docs
 | Desktop | Bureau |
 | Destination option | Option destination |
 | Deutsche Mark | Mark allemand |
-| Diagnostic Log Recording | Enreg diagnostic |
 | Diagnostic log file | Fichier log diagnostic |
 | Diagnostic log level | Log niveau diagnostic |
+| Diagnostic Log Recording | Enreg diagnostic |
 | Direct2D disabled | Direct2D désactivé |
 | Direct2D get active status | Direct2D lire statut actif |
 | Direct2D hardware | Direct2D matériel |
@@ -234,11 +297,39 @@ displayed_sidebar: docs
 | Disable events others unchanged | Inactiver événements autres inchangés |
 | Disable highlight item color | Coul fond élément sélect désact |
 | Disk event | Evénement disque |
+| dk ascending | dk ascending |
+| dk auto merge | dk auto merge |
+| dk can be stopped by user | dk can be stopped by user |
+| dk count values | dk count values |
+| dk descending | dk descending |
+| dk diacritical | dk diacritical |
+| dk distinct values | dk distinct values |
+| dk force drop if stamp changed | dk force drop if stamp changed |
+| dk keep ordered | dk keep ordered |
+| dk key as string | dk key as string |
+| dk no ranges | dk no ranges |
+| dk non ordered | dk non ordered |
+| dk reload if stamp changed | dk reload if stamp changed |
+| dk silent mode | dk silent mode |
+| dk status automerge failed | dk status automerge failed |
+| dk status entity does not exist anymore | dk status entity does not exist anymore |
+| dk status locked | dk status locked |
+| dk status serious error | dk status serious error |
+| dk status serious validation error | dk status serious validation error |
+| dk status stamp has changed | dk status stamp has changed |
+| dk status success | dk status success |
+| dk status validation failed | dk status validation failed |
+| dk status wrong permission | dk status wrong permission |
+| dk stop dropping on first error | dk stop dropping on first error |
+| dk with primary key | dk with primary key |
+| dk with stamp | dk with stamp |
+| DLE ASCII code | ASCII DLE |
 | Do not compact index | Ne pas compacter les index |
 | Do not create log file | Ne pas créer d’historique |
 | Do not modify | Ne pas changer |
-| Document URI | URI document |
+| DOCTYPE Name | Nom DOCTYPE |
 | Document unchanged | Document inchangé |
+| Document URI | URI document |
 | Document with CR | Document avec CR |
 | Document with CRLF | Document avec CRLF |
 | Document with LF | Document avec LF |
@@ -248,62 +339,117 @@ displayed_sidebar: docs
 | Double quote | Guillemets |
 | Double sided option | Option recto verso |
 | Down Arrow Key | Touche bas |
+| e number | Nombre e |
+| Editor theme folder | Dossier des thèmes éditeur |
+| ek errors from components | ek erreurs des composants |
+| ek global | ek global |
+| ek local | ek local |
 | EM ASCII code | ASCII EM |
+| Enable events disable others | Activer événements inactiver autres |
+| Enable events others unchanged | Activer événements autres inchangés |
+| Encoding | Encoding |
+| End Key | Touche fin |
 | ENQ ASCII code | ASCII ENQ |
+| Enter | Entrée |
+| Enter Key | Touche entrée |
 | EOT ASCII code | ASCII EOT |
+| Error Message | Message d’erreur |
 | ESC ASCII code | ASCII ESC |
+| Escape | Échappement |
+| Escape Key | Touche échappement |
 | ETB ASCII code | ASCII ETB |
 | ETX ASCII code | ASCII ETX |
+| Euro | Euro |
+| Event Manager | Gestionnaire d’événement |
+| Excluded list | Liste exclusions |
+| Execute on Client Process | Process exécuté sur client |
+| Execute on Server Process | Process exécuté sur serveur |
+| Executing | En exécution |
 | EXIF Action | EXIF Action |
 | EXIF Adobe RGB | EXIF Adobe RGB |
 | EXIF Aperture priority AE | EXIF Aperture priority AE |
+| EXIF aperture value | EXIF aperture value |
 | EXIF Auto | EXIF Auto |
 | EXIF Auto bracket | EXIF Auto bracket |
 | EXIF Auto mode | EXIF Auto mode |
 | EXIF Average | EXIF Average |
 | EXIF B | EXIF B |
+| EXIF brightness value | EXIF brightness value |
 | EXIF Cb | EXIF Cb |
 | EXIF Center weighted average | EXIF Center weighted average |
 | EXIF Close | EXIF Close |
 | EXIF Cloudy | EXIF Cloudy |
 | EXIF Color sequential area | EXIF Color sequential area |
 | EXIF Color sequential linear | EXIF Color sequential linear |
+| EXIF color space | EXIF color space |
+| EXIF components configuration | EXIF components configuration |
+| EXIF compressed bits per pixel | EXIF compressed bits per pixel |
 | EXIF Compulsory flash firing | EXIF Compulsory flash firing |
 | EXIF Compulsory flash suppression | EXIF Compulsory flash suppression |
+| EXIF contrast | EXIF contrast |
 | EXIF Cool white fluorescent | EXIF Cool white fluorescent |
 | EXIF Cr | EXIF Cr |
 | EXIF Creative | EXIF Creative |
 | EXIF Custom | EXIF Custom |
+| EXIF custom rendered | EXIF custom rendered |
 | EXIF D50 | EXIF D50 |
 | EXIF D55 | EXIF D55 |
 | EXIF D65 | EXIF D65 |
 | EXIF D75 | EXIF D75 |
+| EXIF date time digitized | EXIF date time digitized |
+| EXIF date time original | EXIF date time original |
 | EXIF Day white fluorescent | EXIF Day white fluorescent |
 | EXIF Daylight | EXIF Daylight |
 | EXIF Daylight fluorescent | EXIF Daylight fluorescent |
 | EXIF Detected | EXIF Detected |
 | EXIF Digital camera | EXIF Digital camera |
+| EXIF digital zoom ratio | EXIF digital zoom ratio |
 | EXIF Distant | EXIF Distant |
 | EXIF EXIF version | EXIF EXIF version |
+| EXIF exposure bias value | EXIF exposure bias value |
+| EXIF exposure index | EXIF exposure index |
+| EXIF exposure mode | EXIF exposure mode |
 | EXIF Exposure portrait | EXIF Exposure portrait |
+| EXIF exposure program | EXIF exposure program |
+| EXIF exposure time | EXIF exposure time |
 | EXIF F number | EXIF F number |
+| EXIF file source | EXIF file source |
 | EXIF Film scanner | EXIF Film scanner |
 | EXIF Fine weather | EXIF Fine weather |
+| EXIF flash | EXIF flash |
+| EXIF flash energy | EXIF flash energy |
 | EXIF Flash fired | EXIF Flash fired |
+| EXIF flash function present | EXIF flash function present |
+| EXIF flash mode | EXIF flash mode |
+| EXIF flash pix version | EXIF flash pix version |
+| EXIF flash red eye reduction | EXIF flash red eye reduction |
+| EXIF flash return light | EXIF flash return light |
 | EXIF Flashlight | EXIF Flashlight |
+| EXIF focal len in 35 mm film | EXIF focal lens in 35 mm film |
+| EXIF focal length | EXIF focal length |
+| EXIF focal plane resolution unit | EXIF focal plane resolution unit |
+| EXIF focal plane X resolution | EXIF focal plane X resolution |
+| EXIF focal plane Y resolution | EXIF focal plane Y resolution |
 | EXIF G | EXIF G |
+| EXIF gain control | EXIF gain control |
+| EXIF gamma | EXIF gamma |
 | EXIF High | EXIF High |
 | EXIF High gain down | EXIF High gain down |
 | EXIF High gain up | EXIF High gain up |
+| EXIF image unique ID | EXIF image unique ID |
 | EXIF ISO speed ratings | EXIF ISO speed ratings |
 | EXIF ISOStudio tungsten | EXIF ISOStudio tungsten |
 | EXIF Landscape | EXIF Landscape |
 | EXIF Light fluorescent | EXIF Light fluorescent |
+| EXIF light source | EXIF light source |
 | EXIF Low | EXIF Low |
 | EXIF Low gain down | EXIF Low gain down |
 | EXIF Low gain up | EXIF Low gain up |
 | EXIF Macro | EXIF Macro |
+| EXIF maker note | EXIF maker note |
 | EXIF Manual | EXIF Manual |
+| EXIF max aperture value | EXIF max aperture value |
+| EXIF metering Mode | EXIF metering mode |
 | EXIF Multi segment | EXIF Multi segment |
 | EXIF Multi spot | EXIF Multi spot |
 | EXIF Night | EXIF Night |
@@ -315,19 +461,34 @@ displayed_sidebar: docs
 | EXIF One chip color area | EXIF One chip color area |
 | EXIF Other | EXIF Other |
 | EXIF Partial | EXIF Partial |
+| EXIF pixel X dimension | EXIF pixel X dimension |
+| EXIF pixel Y dimension | EXIF pixel Y dimension |
 | EXIF Program AE | EXIF Program AE |
 | EXIF R | EXIF R |
 | EXIF Reflection print scanner | EXIF Reflection print scanner |
+| EXIF related sound file | EXIF related sound file |
 | EXIF Reserved | EXIF Reserved |
+| EXIF s RGB | EXIF s RGB |
+| EXIF saturation | EXIF saturation |
+| EXIF scene capture type | EXIF scene capture type |
 | EXIF Scene landscape | EXIF Scene landscape |
 | EXIF Scene portrait | EXIF Scene portrait |
+| EXIF scene type | EXIF scene type |
+| EXIF sensing method | EXIF sensing method |
 | EXIF Shade | EXIF Shade |
+| EXIF sharpness | EXIF sharpness |
 | EXIF Shutter speed priority AE | EXIF Shutter speed priority AE |
+| EXIF shutter speed value | EXIF shutter speed value |
+| EXIF spectral sensitivity | EXIF spectral sensitivity |
 | EXIF Spot | EXIF Spot |
 | EXIF Standard | EXIF Standard |
 | EXIF Standard light A | EXIF Standard light A |
 | EXIF Standard light B | EXIF Standard light B |
 | EXIF Standard light C | EXIF Standard light C |
+| EXIF subject area | EXIF subject area |
+| EXIF subject dist range | EXIF subject dist range |
+| EXIF subject Distance | EXIF subject distance |
+| EXIF subject location | EXIF subject location |
 | EXIF Three chip color area | EXIF Three chip color area |
 | EXIF Trilinear | EXIF Trilinear |
 | EXIF Tungsten | EXIF Tungsten |
@@ -335,76 +496,10 @@ displayed_sidebar: docs
 | EXIF Uncalibrated | EXIF Uncalibrated |
 | EXIF Unknown | EXIF Unknown |
 | EXIF Unused | EXIF Unused |
-| EXIF White fluorescent | EXIF White fluorescent |
-| EXIF Y | EXIF Y |
-| EXIF aperture value | EXIF aperture value |
-| EXIF brightness value | EXIF brightness value |
-| EXIF color space | EXIF color space |
-| EXIF components configuration | EXIF components configuration |
-| EXIF compressed bits per pixel | EXIF compressed bits per pixel |
-| EXIF contrast | EXIF contrast |
-| EXIF custom rendered | EXIF custom rendered |
-| EXIF date time digitized | EXIF date time digitized |
-| EXIF date time original | EXIF date time original |
-| EXIF digital zoom ratio | EXIF digital zoom ratio |
-| EXIF exposure bias value | EXIF exposure bias value |
-| EXIF exposure index | EXIF exposure index |
-| EXIF exposure mode | EXIF exposure mode |
-| EXIF exposure program | EXIF exposure program |
-| EXIF exposure time | EXIF exposure time |
-| EXIF file source | EXIF file source |
-| EXIF flash | EXIF flash |
-| EXIF flash energy | EXIF flash energy |
-| EXIF flash function present | EXIF flash function present |
-| EXIF flash mode | EXIF flash mode |
-| EXIF flash pix version | EXIF flash pix version |
-| EXIF flash red eye reduction | EXIF flash red eye reduction |
-| EXIF flash return light | EXIF flash return light |
-| EXIF focal len in 35 mm film | EXIF focal lens in 35 mm film |
-| EXIF focal length | EXIF focal length |
-| EXIF focal plane X resolution | EXIF focal plane X resolution |
-| EXIF focal plane Y resolution | EXIF focal plane Y resolution |
-| EXIF focal plane resolution unit | EXIF focal plane resolution unit |
-| EXIF gain control | EXIF gain control |
-| EXIF gamma | EXIF gamma |
-| EXIF image unique ID | EXIF image unique ID |
-| EXIF light source | EXIF light source |
-| EXIF maker note | EXIF maker note |
-| EXIF max aperture value | EXIF max aperture value |
-| EXIF metering Mode | EXIF metering mode |
-| EXIF pixel X dimension | EXIF pixel X dimension |
-| EXIF pixel Y dimension | EXIF pixel Y dimension |
-| EXIF related sound file | EXIF related sound file |
-| EXIF s RGB | EXIF s RGB |
-| EXIF saturation | EXIF saturation |
-| EXIF scene capture type | EXIF scene capture type |
-| EXIF scene type | EXIF scene type |
-| EXIF sensing method | EXIF sensing method |
-| EXIF sharpness | EXIF sharpness |
-| EXIF shutter speed value | EXIF shutter speed value |
-| EXIF spectral sensitivity | EXIF spectral sensitivity |
-| EXIF subject Distance | EXIF subject distance |
-| EXIF subject area | EXIF subject area |
-| EXIF subject dist range | EXIF subject dist range |
-| EXIF subject location | EXIF subject location |
 | EXIF user comment | EXIF user comment |
 | EXIF white balance | EXIF white balance |
-| Editor theme folder | Dossier des thèmes éditeur |
-| Enable events disable others | Activer événements inactiver autres |
-| Enable events others unchanged | Activer événements autres inchangés |
-| Encoding | Encoding |
-| End Key | Touche fin |
-| Enter | Entrée |
-| Enter Key | Touche entrée |
-| Error Message | Message d’erreur |
-| Escape | Échappement |
-| Escape Key | Touche échappement |
-| Euro | Euro |
-| Event Manager | Gestionnaire d’événement |
-| Excluded list | Liste exclusions |
-| Execute on Client Process | Process exécuté sur client |
-| Execute on Server Process | Process exécuté sur serveur |
-| Executing | En exécution |
+| EXIF White fluorescent | EXIF White fluorescent |
+| EXIF Y | EXIF Y |
 | Extended real format | Format réel étendu |
 | External Task | Tâche externe |
 | External window | Fenêtre externe |
@@ -423,17 +518,38 @@ displayed_sidebar: docs
 | F7 Key | Touche F7 |
 | F8 Key | Touche F8 |
 | F9 Key | Touche F9 |
-| FF ASCII code | ASCII FF |
-| FS ASCII code | ASCII FS |
 | Fade to grey scale | Passage en niveaux de gris |
 | Fast compression mode | Méthode de compression rapide |
 | Favorite fonts | Polices favorites |
 | Favorites Win | Favoris Win |
 | February | Février |
+| FF ASCII code | ASCII FF |
 | Field attribute with name | Attribut champ nom |
 | Field attribute with number | Attribut champ numéro |
 | File name entry | Saisie nom de fichier |
 | Finnish Markka | Mark finlandais |
+| fk alias link | fk lien alias |
+| fk applications folder | fk dossier applications |
+| fk data folder | fk dossier données |
+| fk database folder | fk dossier base de données |
+| fk desktop folder | fk dossier bureau |
+| fk documents folder | fk dossier documents |
+| fk editor theme folder | fk dossier des thèmes éditeur |
+| fk home folder | fk dossier personnel |
+| fk ignore invisible | fk ignorer invisibles |
+| fk licenses folder | fk dossier licences |
+| fk logs folder | fk dossier fichiers historique |
+| fk mobileApps folder | fk dossier mobileApps |
+| fk overwrite | fk écraser |
+| fk platform path | fk chemin plateforme |
+| fk posix path | fk chemin posix |
+| fk recursive | fk récursif |
+| fk remote database folder | fk dossier base de données distante |
+| fk resources folder | fk dossier ressources |
+| fk symbolic link | fk lien symbolique |
+| fk system folder | fk dossier système |
+| fk user preferences folder | fk dossier préférence utilisateur |
+| fk web root folder | fk dossier racine web |
 | Flip horizontally | Miroir horizontal |
 | Flip vertically | Miroir vertical |
 | Floating window | Fenêtre flottante |
@@ -442,6 +558,7 @@ displayed_sidebar: docs
 | Folder separator | Séparateur dossier |
 | Fonts | Polices |
 | Foreground color | Coul premier plan |
+| Form all pages | Form toutes les pages |
 | Form Break0 | Rupture formulaire0 |
 | Form Break1 | Rupture formulaire1 |
 | Form Break2 | Rupture formulaire2 |
@@ -452,8 +569,11 @@ displayed_sidebar: docs
 | Form Break7 | Rupture formulaire7 |
 | Form Break8 | Rupture formulaire8 |
 | Form Break9 | Rupture formulaire9 |
+| Form current page | Form page courante |
 | Form Detail | Corps formulaire |
 | Form Footer | Pied de page formulaire |
+| Form has full screen mode Mac | Form avec mode plein écran Mac |
+| Form has no menu bar | Form sans barre de menus |
 | Form Header | Entête formulaire |
 | Form Header1 | Entête formulaire1 |
 | Form Header10 | Entête formulaire10 |
@@ -465,10 +585,6 @@ displayed_sidebar: docs
 | Form Header7 | Entête formulaire7 |
 | Form Header8 | Entête formulaire8 |
 | Form Header9 | Entête formulaire9 |
-| Form all pages | Form toutes les pages |
-| Form current page | Form page courante |
-| Form has full screen mode Mac | Form avec mode plein écran Mac |
-| Form has no menu bar | Form sans barre de menus |
 | Form inherited | Form hérité |
 | Formula in with virtual structure | Formule entrée avec structure virtuelle |
 | Formula out with tokens | Formule sortie avec tokens |
@@ -476,26 +592,20 @@ displayed_sidebar: docs
 | Four colors | Quatre couleurs |
 | French Franc | Franc français |
 | Friday | Vendredi |
+| FS ASCII code | ASCII FS |
 | Full method text | Texte méthode |
+| Generic PDF driver | Driver PDF générique |
+| Get Pathname | Lire chemin accès |
+| Get XML Data Source | Lire source données XML |
 | GPS 2D | GPS 2D |
 | GPS 3D | GPS 3D |
 | GPS Above sea level | GPS Above sea level |
-| GPS Below sea level | GPS Below sea level |
-| GPS Correction applied | GPS Correction applied |
-| GPS Correction not applied | GPS Correction not applied |
-| GPS DOP | GPS DOP |
-| GPS East | GPS East |
-| GPS Processing method | GPS Processing method |
-| GPS Satellites | GPS Satellites |
-| GPS Speed | GPS Speed |
-| GPS Speed ref | GPS Speed ref |
-| GPS Status | GPS Status |
-| GPS Track | GPS Track |
-| GPS Track ref | GPS Track ref |
-| GPS Version ID | GPS Version ID |
 | GPS altitude | GPS altitude |
 | GPS altitude ref | GPS altitude ref |
 | GPS area information | GPS area information |
+| GPS Below sea level | GPS Below sea level |
+| GPS Correction applied | GPS Correction applied |
+| GPS Correction not applied | GPS Correction not applied |
 | GPS date time | GPS date time |
 | GPS dest bearing | GPS dest bearing |
 | GPS dest bearing ref | GPS dest bearing ref |
@@ -512,6 +622,8 @@ displayed_sidebar: docs
 | GPS dest longitude min | GPS dest longitude min |
 | GPS dest longitude sec | GPS dest longitude sec |
 | GPS differential | GPS differential |
+| GPS DOP | GPS DOP |
+| GPS East | GPS East |
 | GPS img direction | GPS img direction |
 | GPS img direction ref | GPS img direction ref |
 | GPS km h | GPS km h |
@@ -529,19 +641,21 @@ displayed_sidebar: docs
 | GPS magnetic north | GPS magnetic north |
 | GPS map datum | GPS map datum |
 | GPS measure mode | GPS measure mode |
-| GPS measurement Interoperability | GPS measurement Interoperability |
 | GPS measurement in progress | GPS measurement in progress |
+| GPS measurement Interoperability | GPS measurement Interoperability |
 | GPS miles h | GPS niles h |
 | GPS north | GPS north |
+| GPS Processing method | GPS Processing method |
+| GPS Satellites | GPS Satellites |
 | GPS south | GPS south |
+| GPS Speed | GPS Speed |
+| GPS Speed ref | GPS Speed ref |
+| GPS Status | GPS Status |
+| GPS Track | GPS Track |
+| GPS Track ref | GPS Track ref |
 | GPS true north | GPS true north |
+| GPS Version ID | GPS Version ID |
 | GPS west | GPS west |
-| GS ASCII code | ASCII GS |
-| GZIP best compression mode | GZIP méthode de compression compacte |
-| GZIP fast compression mode | GZIP méthode de compression rapide |
-| Generic PDF driver | Driver PDF générique |
-| Get Pathname | Lire chemin accès |
-| Get XML Data Source | Lire source données XML |
 | Graph background color | Graphe couleur fond |
 | Graph background opacity | Graphe opacité fond |
 | Graph background shadow color | Graphe couleur ombre |
@@ -586,28 +700,40 @@ displayed_sidebar: docs
 | Greek Drachma | Drachme grecque |
 | Green | Vert |
 | Grey | Gris |
+| GS ASCII code | ASCII GS |
+| GZIP best compression mode | GZIP méthode de compression compacte |
+| GZIP fast compression mode | GZIP méthode de compression rapide |
+| Has full screen mode Mac | Avec mode plein écran Mac |
+| Has grow box | Avec case de contrôle de taille |
+| Has highlight | Avec barre de titre active |
+| Has window title | Avec titre de fenêtre |
+| Has zoom box | Avec case de zoom |
+| Help Key | Touche aide |
 | HH MM | h mn |
 | HH MM AM PM | h mn Matin Après Midi |
 | HH MM SS | h mn s |
+| Highlight menu background color | Coul fond ligne menu sélect |
+| Highlight menu text color | Coul texte ligne menu sélect |
+| Highlight text background color | Coul de fond texte sélect |
+| Highlight text color | Coul texte sélect |
+| Highlighted method text | Texte méthode surligné |
+| Home folder | Dossier personnel |
+| Home Key | Touche début |
+| Horizontal concatenation | Concaténation horizontale |
+| Horizontally Centered | Centrée horizontalement |
+| Hour min | Heures minutes |
+| Hour Min Sec | Heures minutes secondes |
 | HT ASCII code | ASCII HT |
+| html format | html format |
 | HTML Root Folder | Dossier racine HTML |
-| HTTP Client log file | Fichier log HTTP Client |
-| HTTP Compression Level | Niveau de compression HTTP |
-| HTTP Compression Threshold | Seuil de compression HTTP |
-| HTTP DELETE method | HTTP méthode DELETE |
-| HTTP GET method | HTTP méthode GET |
-| HTTP HEAD method | HTTP méthode HEAD |
-| HTTP Listener | Process HTTP Listener |
-| HTTP Log flusher | Process HTTP Ecriture historique |
-| HTTP OPTIONS method | HTTP méthode OPTIONS |
-| HTTP POST method | HTTP méthode POST |
-| HTTP PUT method | HTTP méthode PUT |
-| HTTP TRACE method | HTTP méthode TRACE |
-| HTTP Worker pool server | Process HTTP Worker pool serveur |
 | HTTP basic | HTTP basic |
 | HTTP client log | HTTP client log |
+| HTTP Client log file | Fichier log HTTP Client |
 | HTTP compression | HTTP compression |
+| HTTP Compression Level | Niveau de compression HTTP |
+| HTTP Compression Threshold | Seuil de compression HTTP |
 | HTTP debug log file | Fichier log débogage HTTP |
+| HTTP DELETE method | HTTP méthode DELETE |
 | HTTP digest | HTTP digest |
 | HTTP disable log | HTTP désactiver log |
 | HTTP display auth dial | HTTP afficher dial auth |
@@ -616,55 +742,60 @@ displayed_sidebar: docs
 | HTTP enable log with response body | HTTP activer log avec body response |
 | HTTP enable log without body | HTTP activer log sans body |
 | HTTP follow redirect | HTTP suivre redirection |
+| HTTP GET method | HTTP méthode GET |
+| HTTP HEAD method | HTTP méthode HEAD |
+| HTTP Listener | Process HTTP Listener |
 | HTTP log file | Fichier log HTTP |
+| HTTP Log flusher | Process HTTP Ecriture historique |
 | HTTP max redirect | HTTP redirections max |
+| HTTP OPTIONS method | HTTP méthode OPTIONS |
+| HTTP POST method | HTTP méthode POST |
+| HTTP PUT method | HTTP méthode PUT |
 | HTTP reset auth settings | HTTP effacer infos auth |
 | HTTP timeout | HTTP timeout |
+| HTTP TRACE method | HTTP méthode TRACE |
+| HTTP Worker pool server | Process HTTP Worker pool serveur |
 | HTTPS port ID | Numéro de port HTTPS |
-| Has full screen mode Mac | Avec mode plein écran Mac |
-| Has grow box | Avec case de contrôle de taille |
-| Has highlight | Avec barre de titre active |
-| Has window title | Avec titre de fenêtre |
-| Has zoom box | Avec case de zoom |
-| Help Key | Touche aide |
-| Highlight menu background color | Coul fond ligne menu sélect |
-| Highlight menu text color | Coul texte ligne menu sélect |
-| Highlight text background color | Coul de fond texte sélect |
-| Highlight text color | Coul texte sélect |
-| Highlighted method text | Texte méthode surligné |
-| Home Key | Touche début |
-| Home folder | Dossier personnel |
-| Horizontal concatenation | Concaténation horizontale |
-| Horizontally Centered | Centrée horizontalement |
-| Hour Min Sec | Heures minutes secondes |
-| Hour min | Heures minutes |
-| IMAP Log | IMAP Enreg historique |
+| Idle Connections Timeout | Timeout connexions inactives |
+| Ignore invisible | Ignorer invisibles |
 | IMAP all | IMAP all |
 | IMAP authentication CRAM MD5 | IMAP authentication CRAM MD5 |
-| IMAP authentication OAUTH2 | IMAP authentication OAUTH2 |
 | IMAP authentication login | IMAP authentication login |
+| IMAP authentication OAUTH2 | IMAP authentication OAUTH2 |
 | IMAP authentication plain | IMAP authentication plain |
+| IMAP Log | IMAP Enreg historique |
 | IMAP log file | Fichier log IMAP |
 | IMAP read only state | IMAP read only state |
 | IMAP read write state | IMAP read write state |
-| IPTC Byline | IPTC Byline |
-| IPTC Byline title | IPTC Byline title |
-| IPTC Date time created | IPTC date time created |
-| IPTC Digital creation date time | IPTC digital creation date time |
-| IPTC Image orientation | IPTC Image orientation |
-| IPTC Image type | IPTC Image type |
-| IPTC Keywords | IPTC Keywords |
-| IPTC Language identifier | IPTC Language identifier |
-| IPTC Object Attribute reference | IPTC Object attribute reference |
-| IPTC Object cycle | IPTC Object cycle |
-| IPTC Object name | IPTC Object name |
-| IPTC Original transmission reference | IPTC Original transmission reference |
-| IPTC Originating program | IPTC Originating program |
-| IPTC Release date time | IPTC Release date time |
-| IPTC Urgency | IPTC Urgency |
-| IPTC Writer editor | IPTC Writer editor |
+| In contents | Dans zone contenu |
+| Indexing Process | Gestionnaire d’index |
+| Indicator Asynchronous progress bar | Indicateur de progression asynchrone |
+| Indicator Barber shop | Indicateur Barber shop |
+| Indicator Progress bar | Indicateur Barre de progression |
+| Information Message | Message d’information |
+| Integer array | Est un tableau entier |
+| Intel Compatible | Compatible Intel |
+| Internal 4D localization | Langue interne 4D |
+| Internal 4D Server Process | Process 4D Server interne |
+| Internal date abbreviated | Interne date abrégé |
+| Internal date long | Interne date long |
+| Internal date short | Interne date court |
+| Internal date short special | Interne date court spécial |
+| Internal Timer Process | Process minuteur interne |
+| Into 4D Commands Log | Vers historique commandes 4D |
+| Into 4D Debug Message | Vers message débogage |
+| Into 4D Diagnostic Log | Vers historique diagnostic |
+| Into 4D Request Log | Vers historique requêtes 4D |
+| Into current selection | Vers sélection courante |
+| Into named selection | Vers sélection temporaire |
+| Into set | Vers ensemble |
+| Into system standard outputs | Vers sorties standard système |
+| Into variable | Vers variable |
+| Into Windows Log Events | Vers observateur Windows |
 | IPTC action | IPTC action |
 | IPTC aerial view | IPTC aerial view |
+| IPTC Byline | IPTC Byline |
+| IPTC Byline title | IPTC Byline title |
 | IPTC caption abstract | IPTC caption abstract |
 | IPTC category | IPTC category |
 | IPTC city | IPTC city |
@@ -677,6 +808,8 @@ displayed_sidebar: docs
 | IPTC country primary location name | IPTC country primary location name |
 | IPTC couple | IPTC couple |
 | IPTC credit | IPTC credit |
+| IPTC Date time created | IPTC date time created |
+| IPTC Digital creation date time | IPTC digital creation date time |
 | IPTC edit status | IPTC edit status |
 | IPTC expiration date time | IPTC expiration date time |
 | IPTC exterior view | IPTC exterior view |
@@ -687,10 +820,19 @@ displayed_sidebar: docs
 | IPTC half length | IPTC half length |
 | IPTC headline | IPTC headline |
 | IPTC headshot | IPTC headshot |
+| IPTC Image orientation | IPTC Image orientation |
+| IPTC Image type | IPTC Image type |
 | IPTC interior view | IPTC interior view |
+| IPTC Keywords | IPTC Keywords |
+| IPTC Language identifier | IPTC Language identifier |
 | IPTC movie scene | IPTC movie scene |
 | IPTC night scene | IPTC night scene |
+| IPTC Object Attribute reference | IPTC Object attribute reference |
+| IPTC Object cycle | IPTC Object cycle |
+| IPTC Object name | IPTC Object name |
 | IPTC off beat | IPTC off beat |
+| IPTC Original transmission reference | IPTC Original transmission reference |
+| IPTC Originating program | IPTC Originating program |
 | IPTC panoramic view | IPTC panoramic view |
 | IPTC performing | IPTC performing |
 | IPTC posing | IPTC posing |
@@ -698,6 +840,7 @@ displayed_sidebar: docs
 | IPTC program version | IPTC program version |
 | IPTC province state | IPTC province state |
 | IPTC rear view | IPTC rear view |
+| IPTC Release date time | IPTC Release date time |
 | IPTC satellite | IPTC satellite |
 | IPTC scene | IPTC scene |
 | IPTC single | IPTC single |
@@ -710,7 +853,49 @@ displayed_sidebar: docs
 | IPTC symbolic | IPTC symbolic |
 | IPTC two | IPTC two |
 | IPTC under water | IPTC under water |
+| IPTC Urgency | IPTC Urgency |
+| IPTC Writer editor | IPTC Writer editor |
+| Irish Pound | Livre irlandaise |
+| Is a document | Est un document |
+| Is a folder | Est un dossier |
+| Is Alpha Field | Est un champ alpha |
+| Is BLOB | Est un BLOB |
+| Is boolean | Est un booléen |
+| Is collection | Est une collection |
+| Is color | Est en couleurs |
+| Is current database a project | Base courante est projet |
+| Is Date | Est une date |
+| Is DOM reference | Est une référence DOM |
+| Is gray scale | Est en niveaux de gris |
+| Is host database a project | Base hôte est projet |
+| Is host database writable | Base hôte est en écriture |
+| Is Integer | Est un entier |
+| Is Integer 64 bits | Est un entier 64 bits |
+| Is LongInt | Est un entier long |
+| Is not compressed | Non compressé |
+| Is null | Est un null |
+| Is object | Est un objet |
+| Is Picture | Est une image |
+| Is Pointer | Est un pointeur |
+| Is Real | Est un numérique |
+| Is String Var | Est une variable chaîne |
+| Is Subtable | Est une sous table |
+| Is Text | Est un texte |
+| Is Time | Est une heure |
+| Is Undefined | Est une variable indéfinie |
+| Is variant | Est un variant |
+| Is XML | Est un XML |
+| ISO date | ISO date |
+| ISO date GMT | ISO date GMT |
+| ISO L1 a acute | ISO L1 a aigu |
+| ISO L1 a circumflex | ISO L1 a circonflexe |
+| ISO L1 a grave | ISO L1 a grave |
+| ISO L1 a ring | ISO L1 a rond |
+| ISO L1 a tilde | ISO L1 a tilde |
+| ISO L1 a umlaut | ISO L1 a umlaut |
+| ISO L1 ae ligature | ISO L1 ae ligature |
 | ISO L1 Ampersand | ISO L1 Et commercial |
+| ISO L1 c cedilla | ISO L1 c cédille |
 | ISO L1 Cap A acute | ISO L1 A majus aigu |
 | ISO L1 Cap A circumflex | ISO L1 A majus circonflexe |
 | ISO L1 Cap A grave | ISO L1 A majus grave |
@@ -742,27 +927,17 @@ displayed_sidebar: docs
 | ISO L1 Cap U umlaut | ISO L1 U majus umlaut |
 | ISO L1 Cap Y acute | ISO L1 Y majus aigu |
 | ISO L1 Copyright | ISO L1 Copyright |
-| ISO L1 Greater than | ISO L1 Supérieur à |
-| ISO L1 Less than | ISO L1 Inférieur à |
-| ISO L1 Quotation mark | ISO L1 Guillemets |
-| ISO L1 Registered | ISO L1 Marque déposée |
-| ISO L1 a acute | ISO L1 a aigu |
-| ISO L1 a circumflex | ISO L1 a circonflexe |
-| ISO L1 a grave | ISO L1 a grave |
-| ISO L1 a ring | ISO L1 a rond |
-| ISO L1 a tilde | ISO L1 a tilde |
-| ISO L1 a umlaut | ISO L1 a umlaut |
-| ISO L1 ae ligature | ISO L1 ae ligature |
-| ISO L1 c cedilla | ISO L1 c cédille |
 | ISO L1 e acute | ISO L1 e aigu |
 | ISO L1 e circumflex | ISO L1 e circonflexe |
 | ISO L1 e grave | ISO L1 e grave |
 | ISO L1 e umlaut | ISO L1 e umlaut |
 | ISO L1 eth Icelandic | ISO L1 eth islandais |
+| ISO L1 Greater than | ISO L1 Supérieur à |
 | ISO L1 i acute | ISO L1 i aigu |
 | ISO L1 i circumflex | ISO L1 i circonflexe |
 | ISO L1 i grave | ISO L1 i grave |
 | ISO L1 i umlaut | ISO L1 i umlaut |
+| ISO L1 Less than | ISO L1 Inférieur à |
 | ISO L1 n tilde | ISO L1 n tilde |
 | ISO L1 o acute | ISO L1 o aigu |
 | ISO L1 o circumflex | ISO L1 o circonflexe |
@@ -770,6 +945,8 @@ displayed_sidebar: docs
 | ISO L1 o slash | ISO L1 o barré |
 | ISO L1 o tilde | ISO L1 o tilde |
 | ISO L1 o umlaut | ISO L1 o umlaut |
+| ISO L1 Quotation mark | ISO L1 Guillemets |
+| ISO L1 Registered | ISO L1 Marque déposée |
 | ISO L1 sharp s German | ISO L1 s Es zett allemand |
 | ISO L1 thorn Icelandic | ISO L1 thorn islandais |
 | ISO L1 u acute | ISO L1 u aigu |
@@ -778,66 +955,7 @@ displayed_sidebar: docs
 | ISO L1 u umlaut | ISO L1 u umlaut |
 | ISO L1 y acute | ISO L1 y aigu |
 | ISO L1 y umlaut | ISO L1 y umlaut |
-| ISO date | ISO date |
-| ISO date GMT | ISO date GMT |
 | ISO time | ISO heure |
-| Idle Connections Timeout | Timeout connexions inactives |
-| Ignore invisible | Ignorer invisibles |
-| In contents | Dans zone contenu |
-| Indexing Process | Gestionnaire d’index |
-| Indicator Asynchronous progress bar | Indicateur de progression asynchrone |
-| Indicator Barber shop | Indicateur Barber shop |
-| Indicator Progress bar | Indicateur Barre de progression |
-| Information Message | Message d’information |
-| Integer array | Est un tableau entier |
-| Intel Compatible | Compatible Intel |
-| Internal 4D Server Process | Process 4D Server interne |
-| Internal 4D localization | Langue interne 4D |
-| Internal Timer Process | Process minuteur interne |
-| Internal date abbreviated | Interne date abrégé |
-| Internal date long | Interne date long |
-| Internal date short | Interne date court |
-| Internal date short special | Interne date court spécial |
-| Into 4D Commands Log | Vers historique commandes 4D |
-| Into 4D Debug Message | Vers message débogage |
-| Into 4D Diagnostic Log | Vers historique diagnostic |
-| Into 4D Request Log | Vers historique requêtes 4D |
-| Into Windows Log Events | Vers observateur Windows |
-| Into current selection | Vers sélection courante |
-| Into named selection | Vers sélection temporaire |
-| Into set | Vers ensemble |
-| Into system standard outputs | Vers sorties standard système |
-| Into variable | Vers variable |
-| Irish Pound | Livre irlandaise |
-| Is Alpha Field | Est un champ alpha |
-| Is BLOB | Est un BLOB |
-| Is DOM reference | Est une référence DOM |
-| Is Date | Est une date |
-| Is Integer | Est un entier |
-| Is Integer 64 bits | Est un entier 64 bits |
-| Is LongInt | Est un entier long |
-| Is Picture | Est une image |
-| Is Pointer | Est un pointeur |
-| Is Real | Est un numérique |
-| Is String Var | Est une variable chaîne |
-| Is Subtable | Est une sous table |
-| Is Text | Est un texte |
-| Is Time | Est une heure |
-| Is Undefined | Est une variable indéfinie |
-| Is XML | Est un XML |
-| Is a document | Est un document |
-| Is a folder | Est un dossier |
-| Is boolean | Est un booléen |
-| Is collection | Est une collection |
-| Is color | Est en couleurs |
-| Is current database a project | Base courante est projet |
-| Is gray scale | Est en niveaux de gris |
-| Is host database a project | Base hôte est projet |
-| Is host database writable | Base hôte est en écriture |
-| Is not compressed | Non compressé |
-| Is null | Est un null |
-| Is object | Est un objet |
-| Is variant | Est un variant |
 | Italian Lira | Lire italienne |
 | Italic | Italique |
 | Italic and Underline | Italique et souligné |
@@ -847,21 +965,25 @@ displayed_sidebar: docs
 | Key down event | Touche enfoncée |
 | Key up event | Touche relâchée |
 | Keywords Index | Index de mots clés |
+| kp preview automatic | kp aperçu automatique |
+| kp preview none | kp aperçu aucun |
+| kp preview PDF | kp aperçu PDF |
+| kp preview XPS | kp aperçu XPS |
+| Last Backup Date | Date dernière sauvegarde |
+| Last backup file | Fichier dernière sauvegarde |
+| Last Backup information | Information dernière sauvegarde |
+| Last Backup Status | Statut dernière sauvegarde |
+| Last journal integration log file | Fichier dernière intégration historique |
+| Last Restore Date | Date dernière restitution |
+| Last Restore Status | Statut dernière restitution |
 | LDAP all levels | LDAP tous niveaux |
 | LDAP clear password | LDAP mot de passe en clair |
 | LDAP digest MD5 password | LDAP mot de passe en digest MD5 |
 | LDAP root and next | LDAP racine et suivant |
 | LDAP root only | LDAP racine uniquement |
-| LF ASCII code | ASCII LF |
-| Last Backup Date | Date dernière sauvegarde |
-| Last Backup Status | Statut dernière sauvegarde |
-| Last Backup information | Information dernière sauvegarde |
-| Last Restore Date | Date dernière restitution |
-| Last Restore Status | Statut dernière restitution |
-| Last backup file | Fichier dernière sauvegarde |
-| Last journal integration log file | Fichier dernière intégration historique |
 | Left Arrow Key | Touche gauche |
 | Legacy printing layer option | Option ancienne couche impression |
+| LF ASCII code | ASCII LF |
 | Libldap version | Version Libldap |
 | Libsasl version | Version Libsasl |
 | Libzip version | Version Libzip |
@@ -870,12 +992,96 @@ displayed_sidebar: docs
 | Light Grey | Gris clair |
 | Light shadow color | Coul claire |
 | Line feed | Retour à la ligne |
+| lk add to selection | lk ajouter à sélection |
+| lk all | lk tout |
+| lk allow wordwrap | lk retour à la ligne |
+| lk auto row height | lk hauteur ligne auto |
+| lk automatic | lk automatique |
+| lk background color | lk couleur de fond |
+| lk background color array | lk tableau couleur de fond |
+| lk background color expression | lk expression couleur de fond |
+| lk break row | lk ligne rupture |
+| lk cell horizontal padding | lk marge cellule horizontal |
+| lk cell vertical padding | lk marge cellule vertical |
+| lk column max width | lk colonne largeur max |
+| lk column min width | lk colonne largeur min |
+| lk column resizable | lk colonne redimensionnable |
+| lk control array | lk tableau contrôle |
+| lk current item expression | lk expression item courant |
+| lk current item pos expression | lk expression pos item courant |
+| lk detail form name | lk nom formulaire détaillé |
+| lk display | lk afficher |
+| lk display footer | lk affichage pied |
+| lk display record | lk afficher enregistrement |
+| lk display type | lk type affichage |
+| lk do nothing | lk ne rien faire |
+| lk double click on row | lk double clic sur ligne |
+| lk edit record | lk modifier enregistrement |
+| lk extra rows | lk lignes vides finales |
+| lk font color | lk couleur de police |
+| lk font color array | lk tableau couleur de police |
+| lk font color expression | lk expression couleur de police |
+| lk font style expression | lk expression style de police |
+| lk footer average | lk pied moyenne |
+| lk footer count | lk pied nombre |
+| lk footer custom | lk pied personnalisé |
+| lk footer max | lk pied max |
+| lk footer min | lk pied min |
+| lk footer std deviation | lk pied écart type |
+| lk footer sum | lk pied somme |
+| lk footer sum squares | lk pied somme des carrés |
+| lk footer variance | lk pied variance |
+| lk header display | lk affichage entête |
+| lk hide | lk masquer |
+| lk hide selection highlight | lk cacher surlignage sélection |
+| lk highlight set | lk ensemble surlignage |
+| lk hor scrollbar height | lk hauteur barre déf hor |
+| lk inherited | lk hérité |
+| lk last printed row number | lk num dernière ligne impr |
+| lk level | lk niveau |
+| lk lines | lk lignes |
+| lk manual | lk manuel |
+| lk meta expression | lk expression meta |
+| lk movable rows | lk lignes déplaçables |
+| lk multi style | lk multistyle |
+| lk multiple | lk multilignes |
+| lk named selection | lk sélection temporaire |
+| lk no | lk non |
+| lk none | lk aucun |
+| lk numeric format | lk format numérique |
+| lk pixels | lk pixels |
+| lk printed height | lk hauteur imprimée |
+| lk printed rows | lk nombre lignes imprimées |
+| lk printing is over | lk impression terminée |
+| lk remove from selection | lk supprimer de sélection |
+| lk replace selection | lk remplacer sélection |
+| lk resizing mode | lk mode redimensionnement |
+| lk row height array | lk tableau hauteurs lignes |
+| lk row height unit | lk unité hauteur lignes |
+| lk row is disabled | lk ligne désactivée |
+| lk row is hidden | lk ligne masquée |
+| lk row is not selectable | lk ligne non sélectionnable |
+| lk row max height | lk hauteur ligne max |
+| lk row min height | lk hauteur ligne min |
+| lk selected items expression | lk expression items sélectionnés |
+| lk selection | lk sélection |
+| lk selection mode | lk mode de sélection |
+| lk single | lk ligne unique |
+| lk single click edit | lk saisie sur clic unique |
+| lk sortable | lk triable |
+| lk style array | lk tableau style |
+| lk three states checkbox | lk case à cocher trois états |
+| lk truncate | lk tronquer |
+| lk ver scrollbar width | lk largeur barre déf ver |
+| lk with ellipsis | lk avec ellipse |
+| lk without ellipsis | lk sans ellipse |
+| lk yes | lk oui |
 | Locked resource bit | Bit ressource verrouillée |
 | Locked resource mask | Masque ressource verrouillée |
 | Log Command list | Liste commandes enreg |
-| Log File Process | Process du fichier d’historique |
 | Log debug | Log débogue |
 | Log error | Log erreur |
+| Log File Process | Process du fichier d’historique |
 | Log info | Log info |
 | Log trace | Log trace |
 | Log warn | Log avertissement |
@@ -883,35 +1089,43 @@ displayed_sidebar: docs
 | Logs Folder | Dossier Logs |
 | LongInt array | Est un tableau entierlong |
 | Luxembourg Franc | Franc luxembourgeois |
-| MAXINT | MAXENT |
-| MAXLONG | MAXLONG |
-| MAXTEXTLENBEFOREV11 | MAXLONGTEXTEAVANTV11 |
-| MD5 digest | Digest MD5 |
-| MM SS | mn s |
-| MSC Process | Process CSM |
 | Mac C string | Mac chaîne en C |
 | Mac OS | Mac OS |
 | Mac Pascal string | Mac chaîne pascal |
 | Mac spool file format option | Option mode impression Mac |
 | Mac text with length | Mac texte avec longueur |
 | Mac text without length | Mac texte sans longueur |
-| MacOS Printer Port | Port imprimante MacOS |
-| MacOS Serial Port | Port série MacOS |
 | Macintosh byte ordering | Ordre octets Macintosh |
 | Macintosh double real format | Format réel double Macintosh |
+| MacOS Printer Port | Port imprimante MacOS |
+| MacOS Serial Port | Port série MacOS |
+| mail disposition attachment | mail disposition en pièce jointe |
+| mail disposition inline | mail disposition dans le corps |
+| mail mode ISO2022JP | mail mode ISO2022JP |
+| mail mode ISO88591 | mail mode ISO88591 |
+| mail mode UTF8 | mail mode UTF8 |
+| mail mode UTF8 in base64 | mail mode UTF8 en base64 |
 | Main 4D process | Process principal 4D |
 | Main Process | Process principal |
 | Manual | Manuel |
 | March | Mars |
 | Max Concurrent Web Processes | Process Web simultanés maxi |
 | Maximum Web requests size | Taille maximum requêtes Web |
+| MAXINT | MAXENT |
+| MAXLONG | MAXLONG |
+| MAXTEXTLENBEFOREV11 | MAXLONGTEXTEAVANTV11 |
 | May | Mai |
+| MD5 digest | Digest MD5 |
 | Merged application | Application fusionnée |
 | Method editor macro Process | Process macro éditeur de méthod |
 | Millions of colors 24 bit | Millions de couleurs 24 bits |
 | Millions of colors 32 bit | Millions de couleurs 32 bits |
 | Min Sec | Minutes secondes |
 | Min TLS version | Min version TLS |
+| mk cosine | mk cosine |
+| mk dot | mk dot |
+| mk euclidean | mk euclidean |
+| MM SS | mn s |
 | MobileApps folder | Dossier MobileApps |
 | Modal dialog | Fenêtre modale |
 | Modal dialog box | Dialogue modal |
@@ -926,34 +1140,35 @@ displayed_sidebar: docs
 | Movable form dialog box | Form dialogue modal déplaçable |
 | Movable form dialog box no title | Form dialogue modal déplaçable sans titre |
 | Move to Replaced files folder | Déplacer dans Replaced files |
+| MSC Process | Process CSM |
 | Multiline Auto | Multiligne Auto |
 | Multiline No | Multiligne Non |
 | Multiline Yes | Multiligne Oui |
-| Multiple Selection | Sélection multiple |
 | Multiple files | Fichiers multiples |
+| Multiple Selection | Sélection multiple |
 | NAK ASCII code | ASCII NAK |
-| NBSP ASCII CODE | ASCII Espace insécable |
-| NUL ASCII code | ASCII NUL |
 | Native byte ordering | Ordre octets natif |
 | Native real format | Format réel natif |
+| NBSP ASCII CODE | ASCII Espace insécable |
 | Netherlands Guilder | Florin néerlandais |
 | New file | Nouveau fichier |
 | New file dialog | Dialogue nouveau fichier |
 | New record | Est un nouvel enregistrement |
 | Next Backup Date | Date prochaine sauvegarde |
-| No Selection | Pas de sélection |
 | No current record | Aucun enregistrement courant |
 | No relation | Pas de lien |
+| No Selection | Pas de sélection |
 | No such data in pasteboard | Données absentes conteneur |
 | None | Aucun |
 | Normal | Normal |
 | November | Novembre |
+| NUL ASCII code | ASCII NUL |
 | Null event | Evénement nul |
 | Number of copies option | Option nombre copies |
 | Number of formulas in cache | Nombre de formules en cache |
-| Object First in entry order | Objet Premier ordre saisie |
 | Object array | Est un tableau objet |
 | Object current | Objet courant |
+| Object First in entry order | Objet Premier ordre saisie |
 | Object named | Objet nommé |
 | Object subform container | Objet conteneur sous formulaire |
 | Object type 3D button | Objet type bouton 3D |
@@ -1000,14 +1215,23 @@ displayed_sidebar: docs
 | Object type web area | Objet type zone web |
 | Object type write pro area | Objet type zone write pro |
 | Object with focus | Objet avec focus |
+| obk enterable | obk saisissable |
+| obk not enterable | obk non saisissable |
+| obk not enterable not focusable | obk non saisissable non focusable |
 | October | Octobre |
 | On Activate | Sur activation |
 | On After Edit | Sur après modification |
+| On after host database exit | Sur après fermeture base hôte |
+| On after host database startup | Sur après ouverture base hôte |
 | On After Keystroke | Sur après frappe clavier |
 | On After Sort | Sur après tri |
 | On Alternative Click | Sur clic alternatif |
+| On application background move | Sur passage arrière plan |
+| On application foreground move | Sur passage premier plan |
 | On Background | Sur fond |
 | On Before Data Entry | Sur avant saisie |
+| On before host database exit | Sur avant fermeture base hôte |
+| On before host database startup | Sur avant ouverture base hôte |
 | On Before Keystroke | Sur avant frappe clavier |
 | On Begin Drag Over | Sur début glisser |
 | On Begin URL Loading | Sur début chargement URL |
@@ -1042,6 +1266,9 @@ displayed_sidebar: docs
 | On Mouse Leave | Sur fin survol |
 | On Mouse Move | Sur survol |
 | On Mouse Up | Sur relâchement bouton |
+| On object locked abort | Sur objet verrouillé abandonner |
+| On object locked confirm | Sur objet verrouillé confirmer |
+| On object locked retry | Sur objet verrouillé réessayer |
 | On Open Detail | Sur ouverture corps |
 | On Open External Link | Sur ouverture lien externe |
 | On Outside Call | Sur appel extérieur |
@@ -1057,26 +1284,17 @@ displayed_sidebar: docs
 | On Saving New Record Event | Sur sauvegarde nouvel enreg |
 | On Scroll | Sur défilement |
 | On Selection Change | Sur nouvelle sélection |
+| On the Left | À gauche |
+| On the Right | À droite |
 | On Timer | Sur minuteur |
+| On Unload | Sur libération |
 | On URL Filtering | Sur filtrage URL |
 | On URL Loading Error | Sur erreur chargement URL |
 | On URL Resource Loading | Sur chargement ressource URL |
-| On Unload | Sur libération |
+| On Validate | Sur validation |
 | On VP Range Changed | Sur VP plage changée |
 | On VP Ready | Sur VP prêt |
-| On Validate | Sur validation |
 | On Window Opening Denied | Sur refus ouverture fenêtre |
-| On after host database exit | Sur après fermeture base hôte |
-| On after host database startup | Sur après ouverture base hôte |
-| On application background move | Sur passage arrière plan |
-| On application foreground move | Sur passage premier plan |
-| On before host database exit | Sur avant fermeture base hôte |
-| On before host database startup | Sur avant ouverture base hôte |
-| On object locked abort | Sur objet verrouillé abandonner |
-| On object locked confirm | Sur objet verrouillé confirmer |
-| On object locked retry | Sur objet verrouillé réessayer |
-| On the Left | À gauche |
-| On the Right | À droite |
 | OpenSSL version | Version OpenSSL |
 | Operating system event | Evénement système |
 | Option key bit | Bit touche option |
@@ -1089,29 +1307,15 @@ displayed_sidebar: docs
 | Orientation 90° right | Orientation 90° droite |
 | Orientation option | Option orientation |
 | Other 4D Process | Autre process 4D |
-| Other User Process | Autre process utilisateur |
 | Other internal process | Autre process interne |
+| Other User Process | Autre process utilisateur |
 | Own XML Data Source | Posséder source données XML |
-| PC byte ordering | Ordre octets PC |
-| PC double real format | Format réel double PC |
-| PHP Raw result | PHP résultat brut |
-| PHP interpreter IP address | PHP adresse IP interpréteur |
-| PHP interpreter port | PHP port interpréteur |
-| POP3 Log | POP3 Enreg historique |
-| POP3 authentication APOP | POP3 authentification APOP |
-| POP3 authentication CRAM MD5 | POP3 authentification CRAM MD5 |
-| POP3 authentication OAUTH2 | POP3 authentication OAUTH2 |
-| POP3 authentication login | POP3 authentification login |
-| POP3 authentication plain | POP3 authentification simple |
-| POP3 authentication user | POP3 authentication user |
-| POP3 log file | Fichier log POP3 |
-| PUBLIC ID | ID PUBLIC |
 | Package open | Ouverture progiciel |
 | Package selection | Sélection progiciel |
 | Page Down Key | Touche page suivante |
-| Page Up Key | Touche page précédente |
 | Page range option | Option intervalle de page |
 | Page setup dialog | Dialogue de format impression |
+| Page Up Key | Touche page précédente |
 | Palette form window | Form fenêtre palette |
 | Palette window | Fenêtre palette |
 | Paper option | Option papier |
@@ -1120,21 +1324,26 @@ displayed_sidebar: docs
 | Parity None | Pas de parité |
 | Parity Odd | Parité impaire |
 | Path All objects | Chemin tous les objets |
+| Path class | Chemin classe |
 | Path Database method | Chemin méthode base |
+| Path is POSIX | Chemin est POSIX |
+| Path is system | Chemin est système |
 | Path Project form | Chemin formulaire projet |
 | Path Project method | Chemin méthode projet |
 | Path Table form | Chemin formulaire table |
 | Path Trigger | Chemin trigger |
-| Path class | Chemin classe |
-| Path is POSIX | Chemin est POSIX |
-| Path is system | Chemin est  système |
 | Pause logging | Pause journaux |
 | Paused | Suspendu |
+| PC byte ordering | Ordre octets PC |
+| PC double real format | Format réel double PC |
 | Period | Point |
+| PHP interpreter IP address | PHP adresse IP interpréteur |
+| PHP interpreter port | PHP port interpréteur |
+| PHP Raw result | PHP résultat brut |
 | Pi | Pi |
-| Picture Document | Document image |
 | Picture array | Est un tableau image |
 | Picture data | Données image |
+| Picture Document | Document image |
 | Plain | Normal |
 | Plain dialog box | Dialogue simple |
 | Plain fixed size window | Fenêtre standard de taille fixe |
@@ -1145,15 +1354,23 @@ displayed_sidebar: docs
 | Pointer array | Est un tableau pointeur |
 | Pop up form window | Form fenêtre pop up |
 | Pop up window | Fenêtre pop up |
+| POP3 authentication APOP | POP3 authentification APOP |
+| POP3 authentication CRAM MD5 | POP3 authentification CRAM MD5 |
+| POP3 authentication login | POP3 authentification login |
+| POP3 authentication OAUTH2 | POP3 authentication OAUTH2 |
+| POP3 authentication plain | POP3 authentification simple |
+| POP3 authentication user | POP3 authentication user |
+| POP3 Log | POP3 Enreg historique |
+| POP3 log file | Fichier log POP3 |
 | Port ID | Numéro du port |
 | Portuguese Escudo | Escudo portugais |
 | Posix path | Chemin POSIX |
 | Power PC | Power PC |
 | Preloaded resource bit | Bit ressource préchargée |
 | Preloaded resource mask | Masque ressource préchargée |
+| Print dialog | Dialogue impression |
 | Print Frame fixed with multiple records | Impression limitée avec report |
 | Print Frame fixed with truncation | Impression limitée par le cadre |
-| Print dialog | Dialogue impression |
 | Print preview option | Option aperçu avant impression |
 | Processes and sessions | Process et sessions |
 | Processes only | Process seulement |
@@ -1162,17 +1379,17 @@ displayed_sidebar: docs
 | Protocol DTR | Protocole DTR |
 | Protocol None | Protocole Aucun |
 | Protocol XONXOFF | Protocole XONXOFF |
+| PUBLIC ID | ID PUBLIC |
 | Purgeable resource bit | Bit ressource purgeable |
 | Purgeable resource mask | Masque ressource purgeable |
 | Purple | Violet |
 | Query by formula joins | Jointures chercher par formule |
 | Query by formula on server | Chercher par formule serveur |
 | Quote | Apostrophe |
-| RDP Optimization | Optimisation RDP |
-| RS ASCII code | ASCII RS |
 | Radian | Radian |
-| Read Mode | Mode lecture |
+| RDP Optimization | Optimisation RDP |
 | Read and Write | Lecture et écriture |
+| Read Mode | Mode lecture |
 | Real array | Est un tableau numérique |
 | Recent fonts | Polices récentes |
 | Recursive parsing | Chemin récursif |
@@ -1202,80 +1419,7 @@ displayed_sidebar: docs
 | Right shift key bit | Bit touche majuscule droite |
 | Right shift key mask | Masque touche majuscule droite |
 | Round corner window | Fenêtre à coins arrondis |
-| SHA1 digest | Digest SHA1 |
-| SHA256 digest | Digest SHA256 |
-| SHA512 digest | Digest SHA512 |
-| SI ASCII code | ASCII SI |
-| SMTP Log | SMTP Enreg historique |
-| SMTP authentication CRAM MD5 | SMTP authentification CRAM MD5 |
-| SMTP authentication OAUTH2 | SMTP authentication OAUTH2 |
-| SMTP authentication login | SMTP authentification login |
-| SMTP authentication plain | SMTP authentification simple |
-| SMTP log file | Fichier log SMTP |
-| SO ASCII code | ASCII SO |
-| SOAP Client Fault | SOAP erreur client |
-| SOAP Input | SOAP entrée |
-| SOAP Method Name | SOAP nom méthode |
-| SOAP Output | SOAP sortie |
-| SOAP Process | Process SOAP |
-| SOAP Server Fault | SOAP erreur serveur |
-| SOAP Service Name | SOAP nom service |
-| SOH ASCII code | ASCII SOH |
-| SP ASCII code | ASCII SP |
-| SQL All Records | SQL tous les enregistrements |
-| SQL Asynchronous | SQL asynchrone |
-| SQL Charset | SQL jeu de caractères |
-| SQL Connection Time Out | SQL timeout connexion |
-| SQL Listener | Process SQL Listener |
-| SQL Max Data Length | SQL longueur maxi données |
-| SQL Max Rows | SQL nombre maxi lignes |
-| SQL Method Execution Process | Process exécution méthode SQL |
-| SQL Net Session manager | Gestionnaire de session SQL Net |
-| SQL On error abort | SQL abandonner si erreur |
-| SQL On error confirm | SQL confirmer si erreur |
-| SQL On error continue | SQL continuer si erreur |
-| SQL Param In | SQL paramètre entrée |
-| SQL Param In Out | SQL paramètre entrée sortie |
-| SQL Param Out | SQL paramètre sortie |
-| SQL Param Set Size | SQL paramètre fixer taille |
-| SQL Query Time Out | SQL timeout requête |
-| SQL Server Port ID | Numéro de port Serveur SQL |
-| SQL Use Access Rights | SQL utiliser les droits d’accès |
-| SQL Worker pool server | Process SQL Worker pool serveur |
-| SQL autocommit | SQL autocommit |
-| SQL data chunk size | SQL taille fragment données |
-| SQL engine case Sensitivity | Casse caractères moteur SQL |
-| SQL_INTERNAL | SQL_INTERNAL |
-| SSL cipher List | Liste de chiffrement SSL |
-| ST 4D Expressions as sources | ST Expressions 4D comme sources |
-| ST 4D Expressions as values | ST Expressions 4D comme valeurs |
-| ST End highlight | ST Fin sélection |
-| ST End text | ST Fin texte |
-| ST Expression type | ST Type expression |
-| ST Expressions display mode | ST Mode affichage expressions |
-| ST Mixed type | ST Type mixte |
-| ST Picture type | ST Type image |
-| ST Plain type | ST Type brut |
-| ST References | ST Références |
-| ST References as spaces | ST Références comme espaces |
-| ST Start highlight | ST Début sélection |
-| ST Start text | ST Début texte |
-| ST Tags as XML code | ST Balises comme code XML |
-| ST Tags as plain text | ST Balises comme texte brut |
-| ST Text displayed with 4D Expression sources | ST Texte visible avec Expressions 4D comme sources |
-| ST Text displayed with 4D Expression values | ST Texte visible avec Expressions 4D comme valeurs |
-| ST URL as labels | ST URL comme libellés |
-| ST URL as links | ST URL comme liens |
-| ST Unknown tag type | ST Type balise inconnue |
-| ST Url type | ST Type URL |
-| ST User links as labels | ST Liens utilisateur comme libellés |
-| ST User links as links | ST Liens utilisateur comme liens |
-| ST User type | ST Type utilisateur |
-| ST Values | ST Valeurs |
-| STX ASCII code | ASCII STX |
-| SUB ASCII code | ASCII SUB |
-| SYN ASCII code | ASCII SYN |
-| SYSTEM ID | ID SYSTEM |
+| RS ASCII code | ASCII RS |
 | Saturday | Samedi |
 | Scale | Redimensionnement |
 | Scale option | Option échelle |
@@ -1291,6 +1435,9 @@ displayed_sidebar: docs
 | ServerNet Listener | Process ServerNet Listener |
 | ServerNet Session manager | Gestionnaire de session ServerNet |
 | Sessions only | Sessions seulement |
+| SHA1 digest | Digest SHA1 |
+| SHA256 digest | Digest SHA256 |
+| SHA512 digest | Digest SHA512 |
 | Sheet form window | Form fenêtre feuille |
 | Sheet window | Fenêtre feuille |
 | Shift key bit | Bit touche majuscule |
@@ -1328,8 +1475,36 @@ displayed_sidebar: docs
 | Shortcut with Right Arrow | Raccourci avec Flèche droite |
 | Shortcut with Tabulation | Raccourci avec Tabulation |
 | Shortcut with Up Arrow | Raccourci avec Flèche haut |
+| SI ASCII code | ASCII SI |
 | Single Selection | Sélection unique |
 | Sixteen colors | Seize couleurs |
+| sk case insensitive | sk casse insensible |
+| sk char codes | sk codes caractère |
+| sk diacritic insensitive | sk diacritique insensible |
+| sk execute in current database | sk exécuter dans la base courante |
+| sk execute in host database | sk exécuter dans la base hôte |
+| sk ignore empty strings | sk ignorer chaîne vide |
+| sk kana insensitive | sk kana insensible |
+| sk strict | sk strict |
+| sk trim spaces | sk couper espaces |
+| sk whole word | sk mot complet |
+| sk width insensitive | sk largeur insensible |
+| SMTP authentication CRAM MD5 | SMTP authentification CRAM MD5 |
+| SMTP authentication login | SMTP authentification login |
+| SMTP authentication OAUTH2 | SMTP authentication OAUTH2 |
+| SMTP authentication plain | SMTP authentification simple |
+| SMTP Log | SMTP Enreg historique |
+| SMTP log file | Fichier log SMTP |
+| SO ASCII code | ASCII SO |
+| SOAP Client Fault | SOAP erreur client |
+| SOAP Input | SOAP entrée |
+| SOAP Method Name | SOAP nom méthode |
+| SOAP Output | SOAP sortie |
+| SOAP Process | Process SOAP |
+| SOAP Server Fault | SOAP erreur serveur |
+| SOAP Service Name | SOAP nom service |
+| SOH ASCII code | ASCII SOH |
+| SP ASCII code | ASCII SP |
 | Space | Espacement |
 | Spanish Peseta | Peseta espagnole |
 | Speed 115200 | Vitesse 115200 |
@@ -1347,10 +1522,63 @@ displayed_sidebar: docs
 | Speed 9600 | Vitesse 9600 |
 | Spellchecker | Correcteur orthographique |
 | Spooler document name option | Option nom document à imprimer |
+| SQL All Records | SQL tous les enregistrements |
+| SQL Asynchronous | SQL asynchrone |
+| SQL autocommit | SQL autocommit |
+| SQL Charset | SQL jeu de caractères |
+| SQL Connection Time Out | SQL timeout connexion |
+| SQL data chunk size | SQL taille fragment données |
+| SQL engine case Sensitivity | Casse caractères moteur SQL |
+| SQL Listener | Process SQL Listener |
+| SQL Max Data Length | SQL longueur maxi données |
+| SQL Max Rows | SQL nombre maxi lignes |
+| SQL Method Execution Process | Process exécution méthode SQL |
+| SQL Net Session manager | Gestionnaire de session SQL Net |
+| SQL On error abort | SQL abandonner si erreur |
+| SQL On error confirm | SQL confirmer si erreur |
+| SQL On error continue | SQL continuer si erreur |
+| SQL Param In | SQL paramètre entrée |
+| SQL Param In Out | SQL paramètre entrée sortie |
+| SQL Param Out | SQL paramètre sortie |
+| SQL Param Set Size | SQL paramètre fixer taille |
+| SQL Query Time Out | SQL timeout requête |
+| SQL Server Port ID | Numéro de port Serveur SQL |
+| SQL Use Access Rights | SQL utiliser les droits d’accès |
+| SQL Worker pool server | Process SQL Worker pool serveur |
+| SQL_INTERNAL | SQL_INTERNAL |
+| srl log all | srl enregistrer tout |
+| srl log no response | srl enregistrer sans réponse |
+| srl log response without body | srl enregistrer réponse sans body |
+| SSL cipher List | Liste de chiffrement SSL |
+| ST 4D Expressions as sources | ST Expressions 4D comme sources |
+| ST 4D Expressions as values | ST Expressions 4D comme valeurs |
+| ST End highlight | ST Fin sélection |
+| ST End text | ST Fin texte |
+| ST Expression type | ST Type expression |
+| ST Expressions display mode | ST Mode affichage expressions |
+| ST Mixed type | ST Type mixte |
+| ST Picture type | ST Type image |
+| ST Plain type | ST Type brut |
+| ST References | ST Références |
+| ST References as spaces | ST Références comme espaces |
+| ST Start highlight | ST Début sélection |
+| ST Start text | ST Début texte |
+| ST Tags as plain text | ST Balises comme texte brut |
+| ST Tags as XML code | ST Balises comme code XML |
+| ST Text displayed with 4D Expression sources | ST Texte visible avec Expressions 4D comme sources |
+| ST Text displayed with 4D Expression values | ST Texte visible avec Expressions 4D comme valeurs |
+| ST Unknown tag type | ST Type balise inconnue |
+| ST URL as labels | ST URL comme libellés |
+| ST URL as links | ST URL comme liens |
+| ST Url type | ST Type URL |
+| ST User links as labels | ST Liens utilisateur comme libellés |
+| ST User links as links | ST Liens utilisateur comme liens |
+| ST User type | ST Type utilisateur |
+| ST Values | ST Valeurs |
 | Standard BTree Index | Index BTree standard |
+| Start a New Process | Démarrer un process |
 | Start Menu Win_All | Menu Démarrer Win_Tous |
 | Start Menu Win_User | Menu Démarrer Win |
-| Start a New Process | Démarrer un process |
 | Startup Win_All | Démarrage Win_Tous |
 | Startup Win_User | Démarrage Win |
 | Stop bits One | Bit de stop un |
@@ -1360,13 +1588,15 @@ displayed_sidebar: docs
 | String array | Est un tableau chaîne |
 | String type with time zone | Type chaine avec fuseau horaire |
 | String type without time zone | Type chaine sans fuseau horaire |
-| Structure Settings | Propriétés structure |
 | Structure configuration | Configuration structure |
+| Structure Settings | Propriétés structure |
+| STX ASCII code | ASCII STX |
+| SUB ASCII code | ASCII SUB |
 | Sunday | Dimanche |
 | Superimposition | Superposition |
+| SYN ASCII code | ASCII SYN |
 | System | Système |
 | System Data Source | Source de données système |
-| System Win | System Win |
 | System date abbreviated | Système date abrégé |
 | System date long | Système date long |
 | System date long pattern | Motif date long |
@@ -1376,71 +1606,88 @@ displayed_sidebar: docs
 | System fonts | Polices système |
 | System heap resource bit | Bit ressource heap système |
 | System heap resource mask | Masque ressource heap système |
+| SYSTEM ID | ID SYSTEM |
 | System time AM label | Libellé AM heure système |
-| System time PM label | Libellé PM heure système |
 | System time long | Système heure long |
 | System time long abbreviated | Système heure long abrégé |
 | System time long pattern | Motif heure long |
 | System time medium pattern | Motif heure abrégé |
+| System time PM label | Libellé PM heure système |
 | System time short | Système heure court |
 | System time short pattern | Motif heure court |
+| System Win | System Win |
 | System32 Win | System32 Win |
+| Tab | Tabulation |
+| Tab Key | Touche tab |
+| Table Sequence Number | Numéro automatique table |
+| TCP authentication | TCP authentication |
 | TCP DNS | TCP DNS |
+| TCP finger | TCP finger |
 | TCP FTP Control | TCP FTP Control |
 | TCP FTP Data | TCP FTP Data |
+| TCP gopher | TCP gopher |
 | TCP HTTP WWW | TCP HTTP WWW |
 | TCP IMAP3 | TCP IMAP3 |
-| TCP KLogin | TCP KLogin |
 | TCP Kerberos | TCP Kerberos |
+| TCP KLogin | TCP KLogin |
+| TCP nickname | TCP nickname |
 | TCP NNTP | TCP NNTP |
-| TCP NTP | TCP NTP |
 | TCP NTalk | TCP NTalk |
+| TCP NTP | TCP NTP |
 | TCP PMCP | TCP PMCP |
 | TCP PMD | TCP PMD |
 | TCP POP3 | TCP POP3 |
+| TCP printer | TCP printer |
 | TCP RADACCT | TCP RADACCT |
 | TCP RADIUS | TCP RADIUS |
+| TCP remote Cmd | TCP remote Cmd |
+| TCP remote Exec | TCP remote Exec |
+| TCP remote Login | TCP remote Login |
 | TCP Router | TCP Router |
 | TCP SMTP | TCP SMTP |
 | TCP SNMP | TCP SNMP |
 | TCP SNMPTRAP | TCP SNMPTRAP |
 | TCP SUN RPC | TCP SUN RPC |
-| TCP TFTP | TCP TFTP |
 | TCP Talk | TCP Talk |
 | TCP Telnet | TCP Telnet |
+| TCP TFTP | TCP TFTP |
 | TCP UUCP | TCP UUCP |
 | TCP UUCP RLOGIN | TCP UUCP RLOGIN |
-| TCP authentication | TCP authentication |
-| TCP finger | TCP finger |
-| TCP gopher | TCP gopher |
-| TCP log recording | TCP enreg historique |
-| TCP nickname | TCP nickname |
-| TCP printer | TCP printer |
-| TCP remote Cmd | TCP remote Cmd |
-| TCP remote Exec | TCP remote Exec |
-| TCP remote Login | TCP remote Login |
 | TCP_NODELAY | TCP_NODELAY |
+| TCPUDP log recording | TCPUDP enreg historique |
+| Text array | Est un tableau texte |
+| Text data | Données texte |
+| Text Document | Document texte |
+| Texture appearance | Aspect texture |
+| Thousand separator | Séparateur de milliers |
+| Thousands of colors | Milliers de couleurs |
+| Thursday | Jeudi |
 | TIFF Adobe deflate | TIFF Adobe deflate |
 | TIFF Artist | TIFF Artist |
+| TIFF black is zero | TIFF black is zero |
 | TIFF CCIRLEW | TIFF CCIRLEW |
 | TIFF CCITT1D | TIFF CCITT1D |
 | TIFF CIELab | TIFF CIELab |
 | TIFF CM | TIFF CM |
 | TIFF CMYK | TIFF CMYK |
+| TIFF color Filter Array | TIFF color Filter Array |
 | TIFF Compression | TIFF Compression |
 | TIFF Copyright | TIFF Copyright |
-| TIFF DCS | TIFF DCS |
 | TIFF Date time | TIFF Date time |
+| TIFF DCS | TIFF DCS |
+| TIFF deflate | TIFF deflate |
 | TIFF Document name | TIFF Document name |
 | TIFF Epson ERF | TIFF Epson ERF |
+| TIFF horizontal | TIFF horizontal |
 | TIFF Host computer | TIFF Host computer |
 | TIFF ICCLab | TIFF ICCLab |
+| TIFF Image description | TIFF Image description |
+| TIFF inches | TIFF inches |
 | TIFF IT8BL | TIFF IT8BL |
 | TIFF IT8CTPAD | TIFF IT8CTPAD |
 | TIFF IT8LW | TIFF IT8LW |
 | TIFF IT8MP | TIFF IT8MP |
 | TIFF ITULab | TIFF ITULab |
-| TIFF Image description | TIFF Image description |
 | TIFF JBIG | TIFF JBIG |
 | TIFF JBIG Black and White | TIFF JBIG Black and White |
 | TIFF JBIGColor | TIFF JBIGColor |
@@ -1450,24 +1697,35 @@ displayed_sidebar: docs
 | TIFF Kodak DCR | TIFF Kodak DCR |
 | TIFF Kodak KDC | TIFF Kodak KDC |
 | TIFF Kodak262 | TIFF Kodak262 |
+| TIFF linear Raw | TIFF linear Raw |
 | TIFF LZW | TIFF LZW |
+| TIFF Make | TIFF Make |
 | TIFF MDIBinary level codec | TIFF MDIBinary level codec |
 | TIFF MDIProgressive transform codec | TIFF MDIProgressive transform codec |
 | TIFF MDIVector | TIFF MDIVector |
+| TIFF mirror horizontal | TIFF mirror horizontal |
+| TIFF mirror horizontal and rotate270cw | TIFF mirror horizontal and rotate270cw |
+| TIFF mirror horizontal and Rotate90cw | TIFF mirror horizontal and Rotate90cw |
+| TIFF mirror vertical | TIFF mirror vertical |
 | TIFF MM | TIFF MM |
-| TIFF Make | TIFF Make |
 | TIFF Model | TIFF Model |
+| TIFF next | TIFF next |
 | TIFF Nikon NEF | TIFF Nikon NEF |
+| TIFF none | TIFF none |
 | TIFF Orientation | TIFF Orientation |
+| TIFF pack bits | TIFF pack bits |
 | TIFF Pentax PEF | TIFF Pentax PEF |
 | TIFF Photometric interpretation | TIFF Photometric interpretation |
 | TIFF Pixar film | TIFF Pixar film |
 | TIFF Pixar log | TIFF Pixar log |
 | TIFF Pixar log L | TIFF Pixar log L |
 | TIFF Pixar log Luv | TIFF Pixar log Luv |
+| TIFF Resolution unit | TIFF Resolution unit |
 | TIFF RGB | TIFF RGB |
 | TIFF RGBPalette | TIFF RGBPalette |
-| TIFF Resolution unit | TIFF Resolution unit |
+| TIFF rotate180 | TIFF rotate180 |
+| TIFF rotate270CW | TIFF rotate270CW |
+| TIFF rotate90CW | TIFF rotate90CW |
 | TIFF SGILog | TIFF SGILog |
 | TIFF SGILog24 | TIFF SGILog24 |
 | TIFF Software | TIFF Software |
@@ -1475,41 +1733,13 @@ displayed_sidebar: docs
 | TIFF T4Group3Fax | TIFF T4Group3Fax |
 | TIFF T6Group4Fax | TIFF T6Group4Fax |
 | TIFF Thunderscan | TIFF Thunderscan |
+| TIFF transparency mask | TIFF transparency mask |
 | TIFF UM | TIFF UM |
+| TIFF uncompressed | TIFF uncompressed |
+| TIFF white is zero | TIFF white is zero |
 | TIFF XResolution | TIFF XResolution |
 | TIFF YCb Cr | TIFF YCb Cr |
 | TIFF YResolution | TIFF YResolution |
-| TIFF black is zero | TIFF black is zero |
-| TIFF color Filter Array | TIFF color Filter Array |
-| TIFF deflate | TIFF deflate |
-| TIFF horizontal | TIFF horizontal |
-| TIFF inches | TIFF inches |
-| TIFF linear Raw | TIFF linear Raw |
-| TIFF mirror horizontal | TIFF mirror horizontal |
-| TIFF mirror horizontal and Rotate90cw | TIFF mirror horizontal and Rotate90cw |
-| TIFF mirror horizontal and rotate270cw | TIFF mirror horizontal and rotate270cw |
-| TIFF mirror vertical | TIFF mirror vertical |
-| TIFF next | TIFF next |
-| TIFF none | TIFF none |
-| TIFF pack bits | TIFF pack bits |
-| TIFF rotate180 | TIFF rotate180 |
-| TIFF rotate270CW | TIFF rotate270CW |
-| TIFF rotate90CW | TIFF rotate90CW |
-| TIFF transparency mask | TIFF transparency mask |
-| TIFF uncompressed | TIFF uncompressed |
-| TIFF white is zero | TIFF white is zero |
-| TLSv1_2 | TLSv1_2 |
-| TLSv1_3 | TLSv1_3 |
-| Tab | Tabulation |
-| Tab Key | Touche tab |
-| Table Sequence Number | Numéro automatique table |
-| Text Document | Document texte |
-| Text array | Est un tableau texte |
-| Text data | Données texte |
-| Texture appearance | Aspect texture |
-| Thousand separator | Séparateur de milliers |
-| Thousands of colors | Milliers de couleurs |
-| Thursday | Jeudi |
 | Time array | Est un tableau heure |
 | Time separator | Séparateur heure |
 | Times in milliseconds | Heures en millisecondes |
@@ -1519,6 +1749,9 @@ displayed_sidebar: docs
 | Tips delay | Messages aide délai |
 | Tips duration | Messages aide durée |
 | Tips enabled | Messages aide activation |
+| TLSv1_2 | TLSv1_2 |
+| TLSv1_3 | TLSv1_3 |
+| tool4d | tool4d |
 | Toolbar form window | Form fenêtre barre outils |
 | Translate | Translation |
 | Transparency | Transparence |
@@ -1526,32 +1759,31 @@ displayed_sidebar: docs
 | Truncated non Centered | Tronquée non centrée |
 | Tuesday | Mardi |
 | Two fifty six colors | Deux cent cinquante six coul |
-| US ASCII code | ASCII US |
-| UTF8 C string | UTF8 chaîne en C |
-| UTF8 text with length | UTF8 texte avec longueur |
-| UTF8 text without length | UTF8 texte sans longueur |
 | Uncooperative process threshold | Seuil process peu cooperatif |
 | Underline | Souligné |
 | Up Arrow Key | Touche haut |
 | Update event | Mise à jour fenêtre |
 | Update records | Mettre à jour enregistrements |
+| US ASCII code | ASCII US |
 | Use AST interpreter | Utiliser interpreter AST |
-| Use PicRef | Utiliser réf image |
-| Use Sheet Window | Utiliser fenêtre feuille |
 | Use default folder | Utiliser dossier par défaut |
 | Use legacy Network Layer | Utiliser ancienne couche réseau |
+| Use PicRef | Utiliser réf image |
 | Use selected file | Utiliser fichier sélectionné |
+| Use Sheet Window | Utiliser fenêtre feuille |
 | Use structure definition | Utiliser définition structure |
 | User Data Source | Source de données utilisateur |
+| User param value | Valeur User param |
 | User Preferences_All | Préférences utilisateur_Tous |
 | User Preferences_User | Préférences utilisateur |
 | User Settings | Propriétés utilisateur |
-| User param value | Valeur User param |
 | User settings file | Fichier propriétés utilisateur |
 | User settings file for data | Fichier propriétés utilisateur pour données |
 | User settings for data file | Propriétés utilisateur pour le fichier de données |
 | User system localization | Langue système utilisateur |
-| VT ASCII code | ASCII VT |
+| UTF8 C string | UTF8 chaîne en C |
+| UTF8 text with length | UTF8 texte avec longueur |
+| UTF8 text without length | UTF8 texte sans longueur |
 | Verification log file | Fichier log vérification |
 | Verify All | Tout vérifier |
 | Verify Indexes | Vérifier index |
@@ -1559,30 +1791,42 @@ displayed_sidebar: docs
 | Version | Version |
 | Vertical concatenation | Concaténation verticale |
 | Vertically Centered | Centrée verticalement |
-| WA Enable Web inspector | WA autoriser inspecteur Web |
+| vss available | vss disponible |
+| vss error | vss erreur |
+| vss not available | vss non disponible |
+| vss update required | vss mise à jour requise |
+| VT ASCII code | ASCII VT |
 | WA Enable contextual menu | WA autoriser menu contextuel |
+| WA enable URL drop | WA autoriser déposer URL |
+| WA Enable Web inspector | WA autoriser inspecteur Web |
 | WA Next URLs | WA URLs suivants |
 | WA Previous URLs | WA URLs précédents |
-| WA enable URL drop | WA autoriser déposer URL |
 | Waiting for input output | En attente entrée sortie |
 | Waiting for internal flag | En attente drapeau interne |
 | Waiting for user event | En attente événement |
 | Warning Message | Message d’avertissement |
-| Web CORS enabled | Web CORS activé |
-| Web CORS settings | Web propriétés CORS |
+| wdl disable web log | wdl désactiver log |
+| wdl enable with all body parts | wdl activer avec tous body |
+| wdl enable with request body | wdl activer avec body request |
+| wdl enable with response body | wdl activer avec body response |
+| wdl enable without body | wdl activer sans body |
 | Web Character set | Web jeu de caractères |
 | Web Client IP address to listen | Web client adresse IP d’écoute |
+| Web CORS enabled | Web CORS activé |
+| Web CORS settings | Web propriétés CORS |
+| Web debug log | Web debug log |
 | Web HSTS enabled | Web HSTS activé |
 | Web HSTS max age | Web HSTS max age |
 | Web HTTP Compression Level | Web niveau de compression HTTP |
 | Web HTTP Compression Threshold | Web seuil de compression HTTP |
-| Web HTTP TRACE | Web TRACE HTTP |
 | Web HTTP enabled | Web HTTP activé |
-| Web HTTPS Port ID | Web numéro de port HTTPS |
+| Web HTTP TRACE | Web TRACE HTTP |
 | Web HTTPS enabled | Web HTTPS activé |
-| Web IP address to listen | Web adresse IP d’écoute |
+| Web HTTPS Port ID | Web numéro de port HTTPS |
 | Web Inactive process timeout | Web timeout process |
 | Web Inactive session timeout | Web timeout session |
+| Web IP address to listen | Web adresse IP d’écoute |
+| Web legacy session | Web sessions anciennes |
 | Web Log Recording | Web enreg requêtes |
 | Web Max Concurrent Processes | Web process Web simultanés maxi |
 | Web Max sessions | Web nombre de sessions max |
@@ -1593,8 +1837,14 @@ displayed_sidebar: docs
 | Web SameSite Lax | Web SameSite Lax |
 | Web SameSite None | Web SameSite Aucun |
 | Web SameSite Strict | Web SameSite Strict |
+| Web scalable session | Web session extensible |
+| Web server database | Web serveur de base de données |
+| Web server host database | Web serveur de base de données hôte |
+| Web server Process | Process du serveur Web |
+| Web server receiving request | Web serveur recevant requête |
 | Web Service Compression | Web Service compression |
 | Web Service Detailed Message | Web Service message |
+| Web Service display auth dialog | Web Service afficher dial auth |
 | Web Service Dynamic | Web Service dynamique |
 | Web Service Error Code | Web Service code erreur |
 | Web Service Fault Actor | Web Service origine erreur |
@@ -1604,57 +1854,431 @@ displayed_sidebar: docs
 | Web Service Manual | Web Service manuel |
 | Web Service Manual In | Web Service entrée manuel |
 | Web Service Manual Out | Web Service sortie manuel |
+| Web Service reset auth settings | Web Service effacer infos auth |
 | Web Service SOAP Header | Web Service header SOAP |
 | Web Service SOAP Version | Web Service version SOAP |
 | Web Service SOAP_1_1 | Web Service SOAP_1_1 |
 | Web Service SOAP_1_2 | Web Service SOAP_1_2 |
-| Web Service display auth dialog | Web Service afficher dial auth |
-| Web Service reset auth settings | Web Service effacer infos auth |
-| Web Session IP address validation enabled | Web validation adresse IP de session acctivé |
 | Web Session cookie domain | Web domaine du cookie de session |
 | Web Session cookie name | Web nom du cookie de session |
 | Web Session cookie path | Web chemin du cookie de session |
-| Web debug log | Web debug log |
-| Web legacy session | Web sessions anciennes |
-| Web scalable session | Web session extensible |
-| Web server Process | Process du serveur Web |
-| Web server database | Web serveur de base de données |
-| Web server host database | Web serveur de base de données hôte |
-| Web server receiving request | Web serveur recevant requête |
+| Web Session IP address validation enabled | Web validation adresse IP de session acctivé |
 | Wednesday | Mercredi |
 | White | Blanc |
 | Windows | Windows |
 | Windows MIDI Document | Document MIDI Windows |
 | Windows Sound Document | Document son Windows |
 | Windows Video Document | Document vidéo Windows |
+| wk 4D Write Pro layout | wk 4D Write Pro layout |
+| wk 4wp | wk 4wp |
+| wk all insensitive | wk all insensitive |
+| wk always | wk always |
+| wk anchor all | wk anchor all |
+| wk anchor embedded | wk anchor embedded |
+| wk anchor first page | wk anchor first page |
+| wk anchor horizontal align | wk anchor horizontal align |
+| wk anchor horizontal offset | wk anchor horizontal offset |
+| wk anchor layout | wk anchor layout |
+| wk anchor left page | wk anchor left page |
+| wk anchor origin | wk anchor origin |
+| wk anchor page | wk anchor page |
+| wk anchor right page | wk anchor right page |
+| wk anchor section | wk anchor section |
+| wk anchor vertical align | wk anchor vertical align |
+| wk anchor vertical offset | wk anchor vertical offset |
+| wk append | wk append |
+| wk armenian | wk armenian |
+| wk author | wk author |
+| wk auto | wk auto |
+| wk avoid | wk avoid |
+| wk avoid widows and orphans | wk avoid widows and orphans |
+| wk background clip | wk background clip |
+| wk background color | wk background color |
+| wk background display mode | wk background display mode |
+| wk background height | wk background height |
+| wk background image | wk background image |
+| wk background image url | wk background image url |
+| wk background origin | wk background origin |
+| wk background position horizontal | wk background position horizontal |
+| wk background position vertical | wk background position vertical |
+| wk background repeat | wk background repeat |
+| wk background width | wk background width |
+| wk bar | wk bar |
+| wk baseline | wk baseline |
+| wk behind text | wk behind text |
+| wk body | wk body |
+| wk border box | wk border box |
+| wk border color | wk border color |
+| wk border color bottom | wk border color bottom |
+| wk border color left | wk border color left |
+| wk border color right | wk border color right |
+| wk border color top | wk border color top |
+| wk border radius | wk border radius |
+| wk border style | wk border style |
+| wk border style bottom | wk border style bottom |
+| wk border style left | wk border style left |
+| wk border style right | wk border style right |
+| wk border style top | wk border style top |
+| wk border width | wk border width |
+| wk border width bottom | wk border width bottom |
+| wk border width left | wk border width left |
+| wk border width right | wk border width right |
+| wk border width top | wk border width top |
+| wk bottom | wk bottom |
+| wk bottom carry over row | wk bottom carry over row |
+| wk break formula | wk break formula |
+| wk break paragraphs in formulas | wk break paragraphs in formulas |
+| wk break type | wk break type |
+| wk capitalize | wk capitalize |
+| wk case insensitive | wk case insensitive |
+| wk cell count | wk cell count |
+| wk cell range | wk cell range |
+| wk center | wk center |
+| wk CID host domain name | wk CID host domain name |
+| wk circle | wk circle |
+| wk cjk ideographic | wk cjk ideographic |
+| wk club | wk club |
+| wk column break | wk column break |
+| wk column count | wk column count |
+| wk column range | wk column range |
+| wk column rule color | wk column rule color |
+| wk column rule style | wk column rule style |
+| wk column rule width | wk column rule width |
+| wk column spacing | wk column spacing |
+| wk column width | wk column width |
+| wk comma | wk comma |
+| wk company | wk company |
+| wk contain | wk contain |
+| wk container | wk container |
+| wk content box | wk content box |
+| wk continuous section break | wk continuous section break |
+| wk cover | wk cover |
+| wk current page footer | wk current page footer |
+| wk current page header | wk current page header |
+| wk current section default footer | wk current section default footer |
+| wk current section default header | wk current section default header |
+| wk current section first footer | wk current section first footer |
+| wk current section first header | wk current section first header |
+| wk current section left footer | wk current section left footer |
+| wk current section left header | wk current section left header |
+| wk current section right footer | wk current section right footer |
+| wk current section right header | wk current section right header |
+| wk custom | wk custom |
+| wk dashed | wk dashed |
+| wk datasource | wk datasource |
+| wk date creation | wk date creation |
+| wk date modified | wk date modified |
+| wk debug format | wk debug format |
+| wk decimal | wk decimal |
+| wk decimal greek | wk decimal greek |
+| wk decimal leading zero | wk decimal leading zero |
+| wk default | wk default |
+| wk default paragraph stylesheet | wk default paragraph stylesheet |
+| wk diacritic insensitive | wk diacritic insensitive |
+| wk diamond | wk diamond |
+| wk direction | wk direction |
+| wk disc | wk disc |
+| wk display formula as symbol | wk display formula as symbol |
+| wk do not recompute expressions | wk do not recompute expressions |
+| wk docx | wk docx |
+| wk dotted | wk dotted |
+| wk double | wk double |
+| wk dpi | wk dpi |
+| wk embedded pictures | wk embedded pictures |
+| wk empty datasource | wk empty datasource |
+| wk end | wk end |
+| wk end text | wk end text |
+| wk exclude from range | wk exclude from range |
+| wk expressions as source | wk expressions as source |
+| wk expressions as space | wk expressions as space |
+| wk expressions as value | wk expressions as value |
+| wk factur x | wk factur x |
+| wk false | wk false |
+| wk files | wk files |
+| wk find reverse | wk find reverse |
+| wk first column | wk first column |
+| wk first page | wk first page |
+| wk first row | wk first row |
+| wk font | wk font |
+| wk font bold | wk font bold |
+| wk font default | wk font default |
+| wk font family | wk font family |
+| wk font italic | wk font italic |
+| wk font size | wk font size |
+| wk footer box | wk footer box |
+| wk formula highlight | wk formula highlight |
+| wk formula highlight color | wk formula highlight color |
+| wk freeze expressions | wk freeze expressions |
+| wk georgian | wk georgian |
+| wk google fonts tag | wk google fonts tag |
+| wk groove | wk groove |
+| wk header | wk header |
+| wk header and footer autofit | wk header and footer autofit |
+| wk header box | wk header box |
+| wk header row count | wk header row count |
+| wk header rows | wk header rows |
+| wk hebrew | wk hebrew |
+| wk height | wk height |
+| wk hidden | wk hidden |
+| wk hide data row | wk hide data row |
+| wk hide table | wk hide table |
+| wk hiragana | wk hiragana |
+| wk hollow square | wk hollow square |
+| wk HTML pretty print | wk HTML pretty print |
+| wk html wysiwyg | wk html wysiwyg |
+| wk id | wk id |
+| wk image | wk image |
+| wk image alternate text | wk image alternate text |
+| wk image display mode | wk image display mode |
+| wk image expression | wk image expression |
+| wk image formula | wk image formula |
+| wk image url | wk image url |
+| wk import html expressions as text | wk import html expressions as text |
+| wk import log | wk import log |
+| wk in front of text | wk in front of text |
+| wk include in range | wk include in range |
+| wk inherit style from paragraph | wk inherit style from paragraph |
+| wk inline with text | wk inline with text |
+| wk inset | wk inset |
+| wk inside | wk inside |
+| wk justify | wk justify |
+| wk kana insensitive | wk kana insensitive |
+| wk katakana | wk katakana |
+| wk keep character style | wk keep character style |
+| wk keep paragraph styles | wk keep paragraph styles |
+| wk keep with next | wk keep with next |
+| wk landscape | wk landscape |
+| wk layout unit | wk layout unit |
+| wk leading | wk leading |
+| wk left | wk left |
+| wk left page | wk left page |
+| wk left to right | wk left to right |
+| wk line break | wk line break |
+| wk line height | wk line height |
+| wk link url | wk link url |
+| wk list auto | wk list auto |
+| wk list concat string format | wk list concat string format |
+| wk list font | wk list font |
+| wk list level count | wk list level count |
+| wk list level index | wk list level index |
+| wk list root style | wk list root style |
+| wk list start number | wk list start number |
+| wk list string format LTR | wk list string format LTR |
+| wk list string format RTL | wk list string format RTL |
+| wk list style image | wk list style image |
+| wk list style image height | wk list style image height |
+| wk list style image url | wk list style image url |
+| wk list style type | wk list style type |
+| wk lower greek | wk lower greek |
+| wk lower latin | wk lower latin |
+| wk lower roman | wk lower roman |
+| wk lowercase | wk lowercase |
+| wk margin | wk margin |
+| wk margin bottom | wk margin bottom |
+| wk margin left | wk margin left |
+| wk margin right | wk margin right |
+| wk margin top | wk margin top |
+| wk max picture DPI | wk max picture DPI |
+| wk middle | wk middle |
+| wk mime html | wk mime html |
+| wk min height | wk min height |
+| wk min width | wk min width |
+| wk mixed | wk mixed |
+| wk modified | wk modified |
+| wk never | wk never |
+| wk new line style sheet | wk new line style sheet |
+| wk no repeat | wk no repeat |
+| wk none | wk none |
+| wk normal | wk normal |
+| wk notes | wk notes |
+| wk offset | wk offset |
+| wk optimized for | wk optimized for |
+| wk outset | wk outset |
+| wk outside | wk outside |
+| wk override protected | wk override protected |
+| wk owner | wk owner |
+| wk padding | wk padding |
+| wk padding bottom | wk padding bottom |
+| wk padding box | wk padding box |
+| wk padding left | wk padding left |
+| wk padding right | wk padding right |
+| wk padding top | wk padding top |
+| wk page break | wk page break |
+| wk page break inside paragraph | wk page break inside paragraph |
+| wk page break inside row | wk page break inside row |
+| wk page break inside table | wk page break inside table |
+| wk page first number | wk page first number |
+| wk page first right | wk page first right |
+| wk page height | wk page height |
+| wk page index | wk page index |
+| wk page margin | wk page margin |
+| wk page margin bottom | wk page margin bottom |
+| wk page margin left | wk page margin left |
+| wk page margin right | wk page margin right |
+| wk page margin top | wk page margin top |
+| wk page orientation | wk page orientation |
+| wk page size | wk page size |
+| wk page view mode | wk page view mode |
+| wk page width | wk page width |
+| wk paper box | wk paper box |
+| wk paragraph break | wk paragraph break |
+| wk parent | wk parent |
+| wk pdf | wk pdf |
+| wk pdfa version | wk pdfa version |
+| wk pdfa2 | wk pdfa2 |
+| wk pdfa3 | wk pdfa3 |
+| wk point | wk point |
+| wk point or comma | wk point or comma |
+| wk portrait | wk portrait |
+| wk prepend | wk prepend |
+| wk print | wk print |
+| wk proportional | wk proportional |
+| wk proportional centered | wk proportional centered |
+| wk protected | wk protected |
+| wk protection enabled | wk protection enabled |
+| wk recompute expressions | wk recompute expressions |
+| wk recompute formulas | wk recompute formulas |
+| wk references | wk references |
+| wk repeat | wk repeat |
+| wk repeat x | wk repeat x |
+| wk repeat y | wk repeat y |
+| wk replace | wk replace |
+| wk replicated | wk replicated |
+| wk replicated centered | wk replicated centered |
+| wk resolution | wk resolution |
+| wk ridge | wk ridge |
+| wk right | wk right |
+| wk right page | wk right page |
+| wk right to left | wk right to left |
+| wk row count | wk row count |
+| wk row range | wk row range |
+| wk scaled to fit | wk scaled to fit |
+| wk screen | wk screen |
+| wk section break | wk section break |
+| wk section index | wk section index |
+| wk section name | wk section name |
+| wk semi transparent | wk semi transparent |
+| wk shift down | wk shift down |
+| wk shift left | wk shift left |
+| wk shift right | wk shift right |
+| wk shift up | wk shift up |
+| wk show data row | wk show data row |
+| wk show placeholder row | wk show placeholder row |
+| wk small uppercase | wk small uppercase |
+| wk solid | wk solid |
+| wk spell enable | wk spell enable |
+| wk square | wk square |
+| wk start | wk start |
+| wk start text | wk start text |
+| wk style sheet | wk style sheet |
+| wk subject | wk subject |
+| wk subscript | wk subscript |
+| wk superscript | wk superscript |
+| wk svg | wk svg |
+| wk system | wk system |
+| wk tab decimal separator | wk tab decimal separator |
+| wk tab default | wk tab default |
+| wk tab stop leadings | wk tab stop leadings |
+| wk tab stop offsets | wk tab stop offsets |
+| wk tab stop types | wk tab stop types |
+| wk table | wk table |
+| wk table align | wk table align |
+| wk table ID | wk table ID |
+| wk tabs | wk tabs |
+| wk text align | wk text align |
+| wk text box | wk text box |
+| wk text color | wk text color |
+| wk text indent | wk text indent |
+| wk text linethrough color | wk text linethrough color |
+| wk text linethrough style | wk text linethrough style |
+| wk text shadow color | wk text shadow color |
+| wk text shadow offset | wk text shadow offset |
+| wk text transform | wk text transform |
+| wk text underline color | wk text underline color |
+| wk text underline style | wk text underline style |
+| wk text wrap square | wk text wrap square |
+| wk text wrap square largest | wk text wrap square largest |
+| wk text wrap square left | wk text wrap square left |
+| wk text wrap square right | wk text wrap square right |
+| wk text wrap top bottom | wk text wrap top bottom |
+| wk title | wk title |
+| wk top | wk top |
+| wk transparent | wk transparent |
+| wk true | wk true |
+| wk truncated | wk truncated |
+| wk truncated centered | wk truncated centered |
+| wk type | wk type |
+| wk type body | wk type body |
+| wk type character | wk type character |
+| wk type container | wk type container |
+| wk type default | wk type default |
+| wk type image | wk type image |
+| wk type image anchored | wk type image anchored |
+| wk type image inline | wk type image inline |
+| wk type paragraph | wk type paragraph |
+| wk type table | wk type table |
+| wk type table cell | wk type table cell |
+| wk type table column | wk type table column |
+| wk type table row | wk type table row |
+| wk type text box | wk type text box |
+| wk unit cm | wk unit cm |
+| wk unit inch | wk unit inch |
+| wk unit mm | wk unit mm |
+| wk unit percent | wk unit percent |
+| wk unit pt | wk unit pt |
+| wk unit px | wk unit px |
+| wk upper latin | wk upper latin |
+| wk upper roman | wk upper roman |
+| wk uppercase | wk uppercase |
+| wk use keyboard language | wk use keyboard language |
+| wk value unit not percentage | wk value unit not percentage |
+| wk value unit percentage | wk value unit percentage |
+| wk values | wk values |
+| wk version | wk version |
+| wk vertical align | wk vertical align |
+| wk visible background and anchored elements | wk visible background and anchored elements |
+| wk visible empty images | wk visible empty images |
+| wk visible footers | wk visible footers |
+| wk visible headers | wk visible headers |
+| wk visible hidden characters | wk visible hidden characters |
+| wk visible horizontal ruler | wk visible horizontal ruler |
+| wk visible HTML WYSIWYG | wk visible HTML WYSIWYG |
+| wk visible page frames | wk visible page frames |
+| wk visible references | wk visible references |
+| wk visible table borders | wk visible table borders |
+| wk visible vertical ruler | wk visible vertical ruler |
+| wk web page complete | wk page web complète |
+| wk web page html 4D | wk page web html 4D |
+| wk whitespace | wk whitespace |
+| wk whole word | wk whole word |
+| wk width | wk width |
+| wk width insensitive | wk width insensitive |
+| wk word | wk word |
+| wk zoom | wk zoom |
 | Worker pool in use | Process Worker pool utilisé |
 | Worker pool spare | Process Worker pool réserve |
 | Worker process | Process worker |
 | Write Mode | Mode écriture |
-| XML BOM | XML BOM |
 | XML Base64 | XML Base64 |
-| XML CDATA | XML CDATA |
-| XML CR | XML CR |
-| XML CRLF | XML CRLF |
-| XML Convert to PNG | XML convertir en PNG |
-| XML DATA | XML DATA |
-| XML DOCTYPE | XML DOCTYPE |
-| XML DOM case sensitivity | XML DOM sensibilité à la casse |
-| XML ISO | XML ISO |
-| XML LF | XML LF |
-| XML Native codec | XML codec natif |
-| XML UTC | XML UTC |
 | XML binary encoding | XML encodage binaire |
+| XML BOM | XML BOM |
 | XML case insensitive | XML casse insensible |
 | XML case sensitive | XML casse sensible |
+| XML CDATA | XML CDATA |
 | XML comment | XML commentaire |
+| XML Convert to PNG | XML convertir en PNG |
+| XML CR | XML CR |
+| XML CRLF | XML CRLF |
+| XML DATA | XML DATA |
 | XML data URI scheme | XML data URI scheme |
 | XML date encoding | XML encodage dates |
-| XML datetime UTC | XML datetime UTC |
 | XML datetime local | XML datetime local |
 | XML datetime local absolute | XML datetime local absolu |
+| XML datetime UTC | XML datetime UTC |
 | XML default | XML valeur par défaut |
 | XML disabled | XML désactivé |
+| XML DOCTYPE | XML DOCTYPE |
+| XML DOM case sensitivity | XML DOM sensibilité à la casse |
 | XML duration | XML durée |
 | XML element | XML élément |
 | XML enabled | XML activé |
@@ -1662,9 +2286,13 @@ displayed_sidebar: docs
 | XML end Element | XML fin élément |
 | XML entity | XML entité |
 | XML external entity resolution | XML résolution des entités externes |
+| xml format | xml format |
 | XML indentation | XML indentation |
+| XML ISO | XML ISO |
+| XML LF | XML LF |
 | XML line ending | XML fin de ligne |
 | XML local | XML local |
+| XML Native codec | XML codec natif |
 | XML no indentation | XML sans indentation |
 | XML picture encoding | XML encodage images |
 | XML processing Instruction | XML instruction de traitement |
@@ -1674,6 +2302,7 @@ displayed_sidebar: docs
 | XML start Element | XML début élément |
 | XML string encoding | XML encodage chaînes |
 | XML time encoding | XML encodage heures |
+| XML UTC | XML UTC |
 | XML with escaping | XML avec échappement |
 | XML with indentation | XML avec indentation |
 | XY Current form | XY Formulaire courant |
@@ -1682,9 +2311,9 @@ displayed_sidebar: docs
 | XY Screen | XY Ecran |
 | Yellow | Jaune |
 | ZIP Compression LZMA | ZIP Compression LZMA |
-| ZIP Compression XZ | ZIP Compression XZ |
 | ZIP Compression none | ZIP Compression aucune |
 | ZIP Compression standard | ZIP Compression standard |
+| ZIP Compression XZ | ZIP Compression XZ |
 | ZIP Encryption AES128 | ZIP Chiffrement AES128 |
 | ZIP Encryption AES192 | ZIP Chiffrement AES192 |
 | ZIP Encryption AES256 | ZIP Chiffrement AES256 |
