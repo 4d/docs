@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Description 
+<h2 data-noindex>Description</h2>
 
 <!--REF #_command_.Get database parameter.Summary-->The **Get database parameter** command allows you to get the current value of a 4D database parameter.<!-- END REF--> When the parameter value is a character string, it is returned in the *stringValue* parameter.
 
@@ -1464,7 +1464,7 @@ The **Get database parameter** command can be used in preemptive processes when 
 * [Pause logging](#pause-logging-121)
 
 
-## Example 
+<h2 data-noindex>Example</h2>
 
 You want your application to restart after a first launch. The application is launched with, for example, a command line on Windows:
 
@@ -1488,14 +1488,14 @@ In the [On Startup database method](on-startup-database-method.md), you write:
  End if
 ```
 
-## See also 
+<h2 data-noindex>See also</h2>
 
 [DISTINCT VALUES](distinct-values.md)  
 [Application info](../commands/application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-## Properties
+<h2 data-noindex>Properties</h2>
 
 |  |  |
 | --- | --- |
