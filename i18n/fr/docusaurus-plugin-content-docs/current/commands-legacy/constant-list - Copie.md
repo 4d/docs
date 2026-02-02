@@ -1,11 +1,3 @@
----
-id: constant-list
-title: Constant List
-slug: /commands/constant-list
-displayed_sidebar: docs
----
-
-
 | English |
 |---|
 | 4D Client Database Folder |
