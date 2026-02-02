@@ -156,7 +156,7 @@ ORDA クラス関数の権限は、以下の形式で`applyTo` 要素に記述�
 ```json
 <データクラス名>.<関数名>
 ```
-For example, if you want to apply a permission to the following function:
+例えば、以下の関数にパーミッションを適用したい場合を考えます:
 
 ```4d
 // cs.CityEntity class
@@ -170,7 +170,7 @@ Class extends Entity
 "applyTo":"City.getPopulation"
 ```
 
-It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. たとえば、`cs.CityEntity` および `cs.CitySelection` クラスの両方に "drop" 関数を作成するのであれば、`dropEntity()`、`dropSelection()` といった具合に別々の関数名を設定する必要があります。 You can then write in the "roles.json" file:
+これはつまり、関数に対して権限を割り当てたい場合には、異なるORDA クラス(エンティティ、エンティティセレクション、データクラス)間で同じ関数名を使用することができないということです。 この場合には、異なる関数名を使用する必要があります。 たとえば、`cs.CityEntity` および `cs.CitySelection` クラスの両方に "drop" 関数を作成するのであれば、`dropEntity()`、`dropSelection()` といった具合に別々の関数名を設定する必要があります。 その後で、 "roles.json" ファイルに以下のように記述することができます:
 
 ```json
     "permissions": {

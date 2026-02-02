@@ -35,31 +35,31 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 セッションがリソースにアクセスするたびに (アクセス形式に関係なく)、4D はセッションの権限を確認し、許可されていない場合にはアクセスを拒否します。
 
-## 権限
+## パーミッション
 
-A permission is the ability to do an action on a resource. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Permissions are defined for the project in the [`roles.json`](#rolesjson-file) file. Each permission can be given to one or more [privileges](#privileges-and-roles).
+パーミッションとは、リソースに対してアクションを実行できる能力のことです。 例えば、 *ds.myTable.myFunction() を実行できる* というのは、**パーミッション** を表します。 権限は、プロジェクトに対して [`roles.json`](#rolesjson-file) ファイル内にて定義されます。 各パーミッションには一つまたは複数の [権限](#privileges-and-roles) を与えることができます。
 
-When **no specific permission** has been defined for a resource, access to the resource may be automatically **unrestricted** or **restricted** depending on the [default mode defined for the project](#restriction-modes).
+リソースに対して **特定のパーミッションが定義されていない** 場合には、リソースに対してのアクセスは、[プロジェクトで定義されているデフォルトのモード](#制限モード)によって自動的に **無制限** か **制限付き** に設定されます。
 
 ### 許諾アクション
 
 利用可能なアクションは対象となるリソースによります。
 
-| アクション       | データストア                                                                        | dataclass                                                             | 属性                                                                        | データモデル関数またはシングルトン関数                                                                                                                                                   |
-| ----------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **create**  | 任意のデータクラスにおいてエンティティを作成                                                        | 当該データクラスにおいてエンティティを作成                                                 | 当該属性に許可されたデフォルト値とは異なる値を持つエンティティを作成 (エイリアス属性の場合は無視されます) | n/a                                                                                                                                                                   |
-| **read**    | 任意のデータクラスにおいて属性を読み取り                                                          | 当該データクラスにおいて属性を読み取り                                                   | 当該属性を読み取り                                                                 | n/a                                                                                                                                                                   |
-| **update**  | 任意のデータクラスにおいて属性を更新                                                            | 当該データクラスにおいて属性を更新                                                     | 当該属性を更新 (エイリアス属性の場合は無視されます)                            | n/a                                                                                                                                                                   |
-| **drop**    | 任意のデータクラスにおいてデータを削除                                                           | 当該データクラスにおいてデータを削除                                                    | 当該属性の null でない値を削除 (エイリアス属性と計算属性を除く)                   | n/a                                                                                                                                                                   |
-| **execute** | プロジェクトの任意の関数を実行 (データストア、データクラス、エンティティセレクション、エンティティ、シングルトン) | データクラスの任意の関数を実行。 データクラス関数、エンティティ関数、エンティティセレクション関数は、データクラスの関数として扱われます。 | n/a                                                                       | 当該関数を実行                                                                                                                                                               |
-| **promote** | n/a                                                                           | n/a                                                                   | n/a                                                                       | 関数の実行に指定の権限を関連付けます。 The privilege is temporary added and removed at the end of the function execution. セキュリティ上、セッション全体ではなく、当該関数を実行するプロセスのみに権限が追加されます。 |
+| アクション       | データストア                                                                        | dataclass                                                             | 属性                                                                        | データモデル関数またはシングルトン関数                                                                             |
+| ----------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **create**  | 任意のデータクラスにおいてエンティティを作成                                                        | 当該データクラスにおいてエンティティを作成                                                 | 当該属性に許可されたデフォルト値とは異なる値を持つエンティティを作成 (エイリアス属性の場合は無視されます) | n/a                                                                                             |
+| **read**    | 任意のデータクラスにおいて属性を読み取り                                                          | 当該データクラスにおいて属性を読み取り                                                   | 当該属性を読み取り                                                                 | n/a                                                                                             |
+| **update**  | 任意のデータクラスにおいて属性を更新                                                            | 当該データクラスにおいて属性を更新                                                     | 当該属性を更新 (エイリアス属性の場合は無視されます)                            | n/a                                                                                             |
+| **drop**    | 任意のデータクラスにおいてデータを削除                                                           | 当該データクラスにおいてデータを削除                                                    | 当該属性の null でない値を削除 (エイリアス属性と計算属性を除く)                   | n/a                                                                                             |
+| **execute** | プロジェクトの任意の関数を実行 (データストア、データクラス、エンティティセレクション、エンティティ、シングルトン) | データクラスの任意の関数を実行。 データクラス関数、エンティティ関数、エンティティセレクション関数は、データクラスの関数として扱われます。 | n/a                                                                       | 当該関数を実行                                                                                         |
+| **promote** | n/a                                                                           | n/a                                                                   | n/a                                                                       | 関数の実行に指定の権限を関連付けます。 権限は一時的に追加され、関数の実行終了時に削除されます。 セキュリティ上、セッション全体ではなく、当該関数を実行するプロセスのみに権限が追加されます。 |
 
 :::note 注記
 
-- An [alias](./ordaClasses.md#alias-attributes-1) can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
-- A [computed attribute](./ordaClasses.md#computed-attributes-1) can be accessed even if there are no permissions on the attributes upon which it is built.
+- エイリアス属性の元である属性に対するアクセス権をセッションが持っていない場合でも、[エイリアス属性](./ordaClasses.md#エイリアス属性-1) へのアクセス権があれば、これを読み取ることができます。
+- 計算属性を構成する属性に対するアクセス権をセッションが持っていない場合でも、[計算属性](./ordaClasses.md#計算属性-1) へのアクセス権があれば、これを読み取ることができます。
 - シングルトンクラス (`singleton` 型) には許諾アクションを割り当てることができます。その場合、そのシングルトンクラスの公開関数すべて、および、シングルトン関数 (`singletonMethod` 型）に適用されます。
-- You can set/remove the **promote** action dynamically to a web process using the [`promote()`](../API/SessionClass.md#promote) and [`demote()`](../API/SessionClass.md#demote) functions.
+- [`promote()`](../API/SessionClass.md#promote) および [`demote()`](../API/SessionClass.md#demote) 関数を使用することで、Web プロセスに対して動的に **promote** アクションを設定/削除することができます。
 - デフォルト値: 現在の実装では、*Null* のみデフォルト値として利用可能です。
 - REST の [強制ログインモード](../REST/authUsers.md#強制ログインモード) では、[`authentify()`関数](../REST/authUsers.md#function-authentify) は、権限の設定に関係なく常にゲストユーザーによって実行可能です。
 
@@ -67,7 +67,7 @@ When **no specific permission** has been defined for a resource, access to the r
 
 権限の設定には一貫性が必要です。特に、**update** および **drop** 権限は**read** 権限も必要とします(ただし**create** はそれを必要としません)。
 
-### Inherited permissions
+### 継承されたパーミッション
 
 あるレベルにおいて定義されたパーミッションは基本的に下位レベルに継承されますが、パーミッションは複数のレベルで設定することもできます:
 
@@ -83,13 +83,13 @@ When **no specific permission** has been defined for a resource, access to the r
 
 ### ORDA クラス関数の権限の設定
 
-When configuring permissions, ORDA class functions are declared in the `applyTo` element using the following syntax:
+パーミッションを設定する際、ORDA クラス関数の権限は、以下の形式で `applyTo` 要素に記述します:
 
 ```json
 <DataclassName>.<functionName>
 ```
 
-For example, if you want to apply a permission to the following function:
+例えば、以下の関数にパーミッションを適用したい場合を考えます:
 
 ```4d
 // cs.CityEntity class
@@ -104,7 +104,7 @@ Class extends Entity
 "applyTo":"City.getPopulation"
 ```
 
-It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. For example, if you have created a "drop" function in both `cs.CityEntity` and `cs.CitySelection` classes, you need to give them different names such as `dropEntity()` and `dropSelection()`. You can then write in the "roles.json" file:
+これはつまり、関数に対して権限を割り当てたい場合には、異なるORDA クラス(エンティティ、エンティティセレクション、データクラス)間で同じ関数名を使用することができないということです。 この場合には、異なる関数名を使用する必要があります。 たとえば、`cs.CityEntity` および `cs.CitySelection` クラスの両方に "drop" 関数を作成するのであれば、`dropEntity()`、`dropSelection()` といった具合に別々の関数名を設定する必要があります。 その後で、 "roles.json" ファイルに以下のように記述することができます:
 
 ```json
 	"permissions": {
@@ -165,7 +165,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ## `roles.json` ファイル
 
-The `roles.json` file describes the whole web security settings for the project. `roles.json` ファイルの構文は次のとおりです:
+`roles.json` ファイルは、プロジェクトのWeb セキュリティ設定の全体を記述します。 `roles.json` ファイルの構文は次のとおりです:
 
 | プロパティ名              |                                                                                     |                                                                                  | 型                               | 必須 | 説明                                                                                                                 |
 | ------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------ |
@@ -185,19 +185,19 @@ The `roles.json` file describes the whole web security settings for the project.
 |                     |                                                                                     | \[].drop    | String の Collection             |    | 権限名のリスト                                                                                                            |
 |                     |                                                                                     | \[].execute | String の Collection             |    | 権限名のリスト                                                                                                            |
 |                     |                                                                                     | \[].promote | String の Collection             |    | 権限名のリスト                                                                                                            |
-| restrictedByDefault |                                                                                     |                                                                                  | Boolean                         |    | If true, access to resources without explicit permissions is denied                                                |
-| forceLogin          |                                                                                     |                                                                                  | Boolean                         |    | If true, enables ["forceLogin" mode](../REST/authUsers.md#force-login-mode)                                        |
+| restrictedByDefault |                                                                                     |                                                                                  | Boolean                         |    | True 時、明示的なパーミッションがないリソースへのアクセスは拒否されます。                                                                            |
+| forceLogin          |                                                                                     |                                                                                  | Boolean                         |    | True 時、["forceLogin" モード(強制ログインモード)](../REST/authUsers.md#強制ログインモード)が有効化されます。                   |
 
 :::caution 注記
 
 - "WebAdmin" 権限名は、アプリケーションによって予約されています。 この名前をカスタムの権限名に使用することは推奨されません。
-- `privileges` and `roles` names are case-insensitive.
+- `privileges` および `roles` の名称においては文字の大小が区別されます。
 
 :::
 
-### Default File Location and Content
+### デフォルトのファイルの場所と内容
 
-When a new project is created, a default `roles.json` file is generated at:
+新規プロジェクト作成時、デフォルトの `roles.json` ファイルは、以下の場所に生成されます:
 
 ```
 <project folder>/Project/Sources/ 
@@ -205,7 +205,7 @@ When a new project is created, a default `roles.json` file is generated at:
 
 [アーキテクチャー](../Project/architecture.md#sources) を参照ください。
 
-Default content:
+デフォルトの内容:
 
 ```json title="/Project/Sources/roles.json"
 
