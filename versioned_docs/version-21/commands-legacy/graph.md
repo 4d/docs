@@ -10,7 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | graphPicture | Picture | &#8594;  | Picture variable |
-| graphNumber &#124; graphSettings | Integer, Object | &#8594;  | Integer: Graph type number, Object: Graph settings |
+| graphNumber | Integer | &#8594;  | Graph type number |
+| graphSettings | Object | &#8594;  | Object: Graph settings |
 | xLabels | Array | &#8594;  | Labels for the x-axis |
 | yElements | Array | &#8594;  | Data to graph (up to eight allowed) |
 

@@ -5,12 +5,12 @@ slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *object* : Text ; *alignment* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *object* : Field, Variable ; *alignment* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *object* : Text ; *alignment* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *object* : Variable, Field ; *alignment* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | alignment | Integer | &#8594;  | Alignment code |
 
 <!-- END REF-->

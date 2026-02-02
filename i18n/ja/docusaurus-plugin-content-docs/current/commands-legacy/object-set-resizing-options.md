@@ -5,7 +5,7 @@ slug: /commands/object-set-resizing-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( * ; *object* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT SET RESIZING OPTIONS** ( *object* : Field, Variable ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( * ; *object* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT SET RESIZING OPTIONS** ( *object* : Variable, Field ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

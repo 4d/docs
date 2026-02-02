@@ -5,11 +5,12 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ *aTable* : Table, Operator })<br/>**READ WRITE** ({ * })<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ *aTable* : Table })<br/>**READ WRITE** ({ * })<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable &#124; * | Table, Operator | &#8594;  | Table for which to set read-write state, or * for all the tables, or Default table, if omitted |
+| aTable | Table | &#8594;  | Table for which to set read-write state, or Default table, if omitted |
+| * | Operator | &#8594;  | All the tables |
 
 <!-- END REF-->
 

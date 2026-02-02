@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records |
 | formula | Expression | &#8594;  | Expression on which to set the order for each level (can be of type Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean) |
-| > or < | Operator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| > or < | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 
 <!-- END REF-->
 

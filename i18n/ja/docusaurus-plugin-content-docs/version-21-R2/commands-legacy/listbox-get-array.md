@@ -5,7 +5,7 @@ slug: /commands/listbox-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( * ; *object* : Text ; *arrType* : Integer ) : Pointer<br/>**LISTBOX Get array** ( *object* : Field, Variable ; *arrType* : Integer ) : Pointer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( * ; *object* : Text ; *arrType* : Integer ) : Pointer<br/>**LISTBOX Get array** ( *object* : Variable ; *arrType* : Integer ) : Pointer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

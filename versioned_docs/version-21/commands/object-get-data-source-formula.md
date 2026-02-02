@@ -8,8 +8,8 @@ title: OBJECT Get data source formula
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| formula | 4D.Formula | &#8592;  | Formula associated with the form object (`Null` if no formula is associated)|
+| object | Text, Variable, Field | &#8594;  | Form object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| Function result | 4D.Formula | &#8592;  | Formula associated with the form object (`Null` if no formula is associated)|
 
 <!-- END REF-->
 

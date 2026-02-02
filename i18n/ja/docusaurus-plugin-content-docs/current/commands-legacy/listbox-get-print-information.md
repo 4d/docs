@@ -5,7 +5,7 @@ slug: /commands/listbox-get-print-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( * ; *object* : Text ; *selector* : Integer ; *info* : Integer )<br/>**LISTBOX GET PRINT INFORMATION** ( *object* : Field, Variable ; *selector* : Integer ; *info* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( * ; *object* : Text ; *selector* : Integer ; *info* : Integer )<br/>**LISTBOX GET PRINT INFORMATION** ( *object* : Variable ; *selector* : Integer ; *info* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

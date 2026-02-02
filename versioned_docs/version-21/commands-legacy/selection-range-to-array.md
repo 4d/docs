@@ -11,7 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | start | Integer | &#8594;  | Selected record number where data retrieval starts |
 | end | Integer | &#8594;  | Selected record number where data retrieval ends |
-| aField &#124; aTable | Field, Table | &#8594;  | Field to use for retrieving data or Table to use for retrieving record numbers |
+| aField | Field | &#8594;  | Field to use for retrieving data  |
+| aTable | Table | &#8594;  | Table to use for retrieving record numbers |
 | array | Array | &#8592; | Array to receive field data or record numbers |
 
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/st-get-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( * ; *object* : Text ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST GET URL** ( *object* : Field, Variable ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( * ; *object* : Text ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST GET URL** ( *object* : Variable, Field ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST GET URL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

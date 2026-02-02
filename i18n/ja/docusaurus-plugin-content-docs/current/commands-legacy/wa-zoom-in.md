@@ -5,7 +5,7 @@ slug: /commands/wa-zoom-in
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( * ; *object* : Text )<br/>**WA ZOOM IN** ( *object* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( * ; *object* : Text )<br/>**WA ZOOM IN** ( *object* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA ZOOM IN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

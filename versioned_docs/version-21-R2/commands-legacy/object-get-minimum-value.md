@@ -5,7 +5,7 @@ slug: /commands/object-get-minimum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET MINIMUM VALUE.Syntax-->**OBJECT GET MINIMUM VALUE** ( * ; *object* : Text ; *minValue* : Date, Time, Real )<br/>**OBJECT GET MINIMUM VALUE** ( *object* : Field, Variable ; *minValue* : Date, Time, Real )<!-- END REF-->
+<!--REF #_command_.OBJECT GET MINIMUM VALUE.Syntax-->**OBJECT GET MINIMUM VALUE** ( * ; *object* : Text ; *minValue* : Date, Time, Real )<br/>**OBJECT GET MINIMUM VALUE** ( *object* : Variable, Field ; *minValue* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/listbox-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *object* : Field, Variable ; *colPosition* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *object* : Variable ; *colPosition* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) of the column to be moved |
+| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) of the column to be moved |
 | colPosition | Integer | &#8594;  | New location of column |
 
 <!-- END REF-->

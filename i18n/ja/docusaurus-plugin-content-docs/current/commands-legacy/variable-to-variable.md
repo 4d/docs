@@ -5,7 +5,7 @@ slug: /commands/variable-to-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO VARIABLE.Syntax-->**VARIABLE TO VARIABLE** ( *process* : Integer ; *dstVar* : Variable ; *srcVar* : Variable {; ...(*dstVar* : Variable, *srcVar* : Variable)} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO VARIABLE.Syntax-->**VARIABLE TO VARIABLE** ( *process* : Integer ; *dstVar* : Variable ; *srcVar* : Variable {; ...(*dstVar* : Variable ; *srcVar* : Variable)} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

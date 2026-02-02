@@ -5,7 +5,7 @@ slug: /commands/object-set-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( * ; *object* : Text ; *languageCode* : Text )<br/>**OBJECT SET KEYBOARD LAYOUT** ( *object* : Field, Variable ; *languageCode* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( * ; *object* : Text ; *languageCode* : Text )<br/>**OBJECT SET KEYBOARD LAYOUT** ( *object* : Variable, Field ; *languageCode* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
 | recursive | Boolean | &#8594;  | True = expand sublevels<br/>False = do not expand sublevels |
 | selector | Integer | &#8594;  | Part of list box to expand |
 | linha &#124; nivel | Inteiro longo | &#8594;  | Number of break row to expand or <br/>Number of list box level to expand |

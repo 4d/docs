@@ -11,7 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | docRef | Time | &#8594;  | Document reference number, or Current channel (serial port or document) |
 | receiveVar | Text, Blob | &#8592; | Variable to receive data |
-| stopChar &#124; numBytes | Text, Integer | &#8594;  | Character(s) at which to stop receiving, or Number of bytes to receive |
+| stopChar | Text | &#8594;  | Character(s) at which to stop receiving|
+| numBytes | Integer | &#8594;  | Number of bytes to receive |
 
 <!-- END REF-->
 

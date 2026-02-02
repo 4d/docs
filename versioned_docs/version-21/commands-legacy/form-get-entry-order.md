@@ -10,7 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectNames | Text array | &#8592; | Object names sorted by entry order |
-| pageNumber &#124; * | Integer, Operator | &#8594;  | Number of the page for which to get the defined entry order (current page if omitted), or* to get the actual entry order of the current page |
+| pageNumber | Integer | &#8594;  | Number of the page for which to get the defined entry order (current page if omitted) |
+| * | Operator | &#8594;  | Get the actual entry order of the current page |
 
 <!-- END REF-->
 

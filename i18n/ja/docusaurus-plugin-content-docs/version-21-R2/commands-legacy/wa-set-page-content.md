@@ -5,7 +5,7 @@ slug: /commands/wa-set-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *object* : Text ; *content* : Text ; *baseURL* : Text )<br/>**WA SET PAGE CONTENT** ( *object* : Field, Variable ; *content* : Text ; *baseURL* : Text )<!-- END REF-->
+<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *object* : Text ; *content* : Text ; *baseURL* : Text )<br/>**WA SET PAGE CONTENT** ( *object* : Variable, Field ; *content* : Text ; *baseURL* : Text )<!-- END REF-->
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

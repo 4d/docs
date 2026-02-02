@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | minWidth | Integer | &#8592; | Minimum column width (in pixels) |
 | maxWidth | Integer | &#8592; | Maximum column width (in pixels) |
 | Function result | Integer | &#8592; | Column width (in pixels) |

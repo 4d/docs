@@ -9,7 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.READ ONLY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable &#124; * | Table, Operator | &#8594;  | Table for which to set read-only state, or * for all the tables, or Default table, if omitted |
+| aTable | Table | &#8594;  | Table for which to set read-only state, or Default table if omitted |
+| * | Operator | &#8594;  | All tables |
 
 <!-- END REF-->
 

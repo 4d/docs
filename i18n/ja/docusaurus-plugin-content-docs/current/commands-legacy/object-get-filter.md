@@ -5,7 +5,7 @@ slug: /commands/object-get-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( * ; *object* : Text ) : Text<br/>**OBJECT Get filter** ( *object* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( * ; *object* : Text ) : Text<br/>**OBJECT Get filter** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get filter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

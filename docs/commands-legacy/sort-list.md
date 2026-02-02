@@ -5,12 +5,12 @@ slug: /commands/sort-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* : Integer {; > or <} )<!-- END REF-->
+<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* : Integer {; >_or_< : Comparator } )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
-| > or < | Operator | &#8594;  | Sorting order: > to sort in ascending order, or < to sort in descending order |
+| >_or_< | Comparator | &#8594;  | Sorting order: > to sort in ascending order, or < to sort in descending order |
 
 <!-- END REF-->
 

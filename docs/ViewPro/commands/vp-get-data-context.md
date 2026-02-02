@@ -12,7 +12,7 @@ title: VP Get data context
 </details>
 
 <!-- REF #_method_.VP Get data context.Syntax -->
-**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
+**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #_method_.VP Get data context.Params -->
 
@@ -20,7 +20,7 @@ title: VP Get data context
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |sheet|Integer|->|Index of the sheet to get the data context from|
-|Result |Variant|<-|Data context. Object or Collection|<!-- END REF -->
+|Result |any|<-|Data context. Object or Collection|<!-- END REF -->
 
 ## Description
 

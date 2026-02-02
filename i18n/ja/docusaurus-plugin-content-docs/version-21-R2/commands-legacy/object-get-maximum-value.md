@@ -5,7 +5,7 @@ slug: /commands/object-get-maximum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET MAXIMUM VALUE.Syntax-->**OBJECT GET MAXIMUM VALUE** ( * ; *object* : Text ; *maxValue* : Date, Time, Real )<br/>**OBJECT GET MAXIMUM VALUE** ( *object* : Field, Variable ; *maxValue* : Date, Time, Real )<!-- END REF-->
+<!--REF #_command_.OBJECT GET MAXIMUM VALUE.Syntax-->**OBJECT GET MAXIMUM VALUE** ( * ; *object* : Text ; *maxValue* : Date, Time, Real )<br/>**OBJECT GET MAXIMUM VALUE** ( *object* : Variable, Field ; *maxValue* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

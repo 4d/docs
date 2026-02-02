@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | Function result | Boolean | &#8592; | True if there is a previous URL in the sequence of URLs opened;otherwise, False |
 
 <!-- END REF-->

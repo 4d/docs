@@ -5,12 +5,12 @@ slug: /commands/object-get-context-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get context menu** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get context menu** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get context menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Boolean | &#8592; | True = context menu enabled, False = context menu disabled |
 
 <!-- END REF-->

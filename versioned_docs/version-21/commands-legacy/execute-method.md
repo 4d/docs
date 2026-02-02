@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1.<!-- END REF-->..paramN*. You can pass the name of any method that can be called from the database or the component executing the command.
+<!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1...paramN*<!-- END REF-->. You can pass the name of any method that can be called from the database or the component executing the command.
 
 In *result*, you can pass a variable which will receive the result of the execution of *methodName* (value placed in $0 inside *methodName*). If the method does not return a result, pass *\** as the second parameter. If the method does not return a result and does not require any parameters to be passed, pass only the *methodName* parameter.
 

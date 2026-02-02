@@ -5,7 +5,7 @@ slug: /commands/st-get-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<br/>**ST Get text** ( *object* : Field, Variable {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<br/>**ST Get text** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

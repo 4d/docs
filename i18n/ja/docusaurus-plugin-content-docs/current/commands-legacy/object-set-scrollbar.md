@@ -5,7 +5,7 @@ slug: /commands/object-set-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( * ; *object* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT SET SCROLLBAR** ( *object* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( * ; *object* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT SET SCROLLBAR** ( *object* : Variable, Field ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/listbox-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *object* : Text ; *arrType* : Integer ; *arrPtr* : Pointer )<br/>**LISTBOX SET ARRAY** ( *object* : Field, Variable ; *arrType* : Integer ; *arrPtr* : Pointer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *object* : Text ; *arrType* : Integer ; *arrPtr* : Pointer )<br/>**LISTBOX SET ARRAY** ( *object* : Variable ; *arrType* : Integer ; *arrPtr* : Pointer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

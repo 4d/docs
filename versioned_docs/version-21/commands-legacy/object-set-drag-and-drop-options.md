@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | draggable | Boolean | &#8594;  | Draggable = True; otherwise, False |
 | automaticDrag | Boolean | &#8594;  | Automatic Drag = True; otherwise, False |
 | droppable | Boolean | &#8594;  | Droppable = True; otherwise, False |

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
 | recursive | Boolean | &#8594;  | True = collapse sublevels<br/>False = do not collapse sublevels |
 | selector | Integer | &#8594;  | Part of list box to collapse |
 | line | Integer | &#8594;  | Number of break row to collapse or <br/>Number of list box level to collapse |

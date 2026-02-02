@@ -5,7 +5,7 @@ slug: /commands/listbox-select-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW** ( * ; *object* : Text ; *rowPosition* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT ROW** ( *object* : Field, Variable ; *rowPosition* : Integer {; *action* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW** ( * ; *object* : Text ; *rowPosition* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT ROW** ( *object* : Variable ; *rowPosition* : Integer {; *action* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Form object name (if * is specified) or<br/>Field or variable (if * is omitted) |
 | variableFrame | Boolean | &#8592; | True = Variable frame printing, False = Fixed frame printing |
 | fixedSubform | Integer | &#8592; | Option for printing subforms in fixed size |
 

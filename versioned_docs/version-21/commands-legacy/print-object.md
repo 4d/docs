@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
 | posX | Integer | &#8594;  | Horizontal location of object |
 | posY | Integer | &#8594;  | Vertical location of object |
 | width | Integer | &#8594;  | Width of object (pixels) |

@@ -5,12 +5,12 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; > or <} )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; *> or <*} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Arrays to sort |
-| > or < | Operator | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
+| > or < | Comparator | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
 
 <!-- END REF-->
 

@@ -9,7 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Table name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Integer, Pointer | &#8594;  | Table number or Table pointer |
+| tableNum | Integer | &#8594;  | Table number |
+| tablePtr | Pointer | &#8594;  | Table pointer |
 | Function result | Text | &#8592; | Name of the table |
 
 <!-- END REF-->

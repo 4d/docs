@@ -5,7 +5,7 @@ slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; tableNum | name {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Field, Variable ; tableNum | name {; *highlightName* : Text} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; tableNum | name {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Variable ; tableNum | name {; *highlightName* : Text} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

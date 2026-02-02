@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Data for which to return the minimum value |
 | attributePath | Text | &#8594;  | Path of attribute for which to return the minimum value |
-| Function result | Date, Real | &#8592; | Minimum value in series |
+| Function result | any | &#8592; | Minimum value in series (Date or Real) |
 
 <!-- END REF-->
 

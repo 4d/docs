@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable. |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | selector | Integer | &#8594;  | Height value to set: lk row min height or lk row max height |
 | value | Integer | &#8594;  | Minimum or maximum row height value |
 | unit | Integer | &#8594;  | Unit of height value: 0 = pixels, 1 = lines |

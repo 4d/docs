@@ -5,7 +5,7 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *object* : Text {; *item* : Integer} )<br/>**EDIT ITEM** ( *object* : Field, Variable {; *item* : Integer} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *object* : Text {; *item* : Integer} )<br/>**EDIT ITEM** ( *object* : Table, Variable {; *item* : Integer} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

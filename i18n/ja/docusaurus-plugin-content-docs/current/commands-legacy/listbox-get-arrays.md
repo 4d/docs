@@ -5,7 +5,7 @@ slug: /commands/listbox-get-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *object* : Text ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *object* : Field, Variable ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *object* : Text ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *object* : Variable ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

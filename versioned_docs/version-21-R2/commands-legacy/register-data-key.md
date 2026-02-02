@@ -9,7 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Register data key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| curPassPhrase &#124; curDataKey | Text, Object | &#8594;  | Current passphrase (text) or current data encryption key (object) |
+| curPassPhrase | Text | &#8594;  | Current passphrase |
+| curDataKey | Object | &#8594;  | Current data encryption key |
 | Function result | Boolean | &#8592; | True if the encryption key has been successfully added to the 4D keychain, False if it was already in the 4D keychain |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *object* : Field, Variable {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *object* : Variable, Field {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | newName | Text | &#8594;  | Name of new object |
 | newVar | Pointer | &#8594;  | Pointer to variable of new object |
 | boundTo | Text | &#8594;  | Name of previous enterable object (or radio button) |

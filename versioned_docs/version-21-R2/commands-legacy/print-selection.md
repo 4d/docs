@@ -10,7 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to print the selection, or Default table, if omitted |
-| * &#124; > | Operator | &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| *  | Operator | &#8594;  | Suppress the printing dialog box |
+| > | Comparator | &#8594;  | Do not reinitialize print settings |
 
 <!-- END REF-->
 

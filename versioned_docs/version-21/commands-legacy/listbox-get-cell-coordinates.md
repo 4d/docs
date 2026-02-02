@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified = object is the name of the object (string) If omitted = object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | column | Integer | &#8594;  | Column number |
 | row | Integer | &#8594;  | Row number |
 | left | Integer | &#8592; | Left coordinate of the object |

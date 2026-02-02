@@ -5,7 +5,7 @@ slug: /commands/object-get-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( * ; *object* : Text ) : Text<br/>**OBJECT Get help tip** ( *object* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( * ; *object* : Text ) : Text<br/>**OBJECT Get help tip** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get help tip.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

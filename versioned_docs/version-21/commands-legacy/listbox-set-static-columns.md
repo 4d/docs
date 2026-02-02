@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | numColumn | Integer | &#8594;  | Number of columns to make static |
 
 <!-- END REF-->

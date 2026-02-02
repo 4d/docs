@@ -5,7 +5,7 @@ slug: /commands/object-set-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array ; *mode* : Integer )<br/>**OBJECT SET EVENTS** ( *object* : Field, Variable ; *arrEvents* : Integer array ; *mode* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array ; *mode* : Integer )<br/>**OBJECT SET EVENTS** ( *object* : Variable, Field ; *arrEvents* : Integer array ; *mode* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

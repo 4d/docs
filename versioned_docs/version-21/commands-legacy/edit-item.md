@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If set, object is an object name (string) If omitted, object is a table or variable |
-| object | any | &#8594;  | Object name (if * set) or Table or variable (if * omitted) |
+| object | Text, Table, Variable | &#8594;  | Object name (if * set) or Table or variable (if * omitted) |
 | item | Integer | &#8594;  | Item number |
 
 <!-- END REF-->

@@ -34,7 +34,7 @@ For example, `WebFormObject.myImage` refers to the image component with `myImage
 
 ### .addCSSClass()
 
-<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : string)<!-- END REF -->
+<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : Text)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 |Parameter|Type||Description|
@@ -87,7 +87,7 @@ exposed Function isHidden()
 ### .removeCSSClass()
 
 
-<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: string)<!-- END REF -->
+<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: Text)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 |Parameter|Type||Description|

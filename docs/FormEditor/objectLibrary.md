@@ -21,6 +21,13 @@ The library is displayed in a separate window:
 
 ![](../assets/en/FormEditor/library2.png)
 
+
+:::info
+
+Some objects in this library are only available if a [specific component](../Extensions/overview.md#components-developed-by-4d) is loaded in the application. For example, 4D Write Pro areas need the [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) component to be loaded. 
+
+:::
+
 The window has the following main features:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.

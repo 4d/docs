@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object | &#8594;  | Object whose class is to be returned |
-| Function result | Null, Object | &#8592; | Class of object |
+| Function result | Object | &#8592; | Class of object (null if object does not exist)|
 
 <!-- END REF-->
 

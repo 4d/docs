@@ -5,7 +5,7 @@ slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *object* : Text ; *multiline* : Integer )<br/>**OBJECT SET MULTILINE** ( *object* : Field, Variable ; *multiline* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *object* : Text ; *multiline* : Integer )<br/>**OBJECT SET MULTILINE** ( *object* : Variable, Field ; *multiline* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -4,14 +4,14 @@ title: VP SET NUM VALUE
 ---
 
 <!-- REF #_method_.VP SET NUM VALUE.Syntax -->
-**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } ) <!-- END REF -->
+**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Real { ; *formatPattern* : Text } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-|numberValue |Number|->|Number value to set|
+|numberValue |Real|->|Number value to set|
 |formatPattern |Text|->|Format of value|<!-- END REF -->
 
 ## Description

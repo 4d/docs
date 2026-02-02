@@ -9,7 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| size &#124; * | Real, Operator | &#8594;  | * to completely free cache memory, or number of bytes to free in cache |
+| size | Real | &#8594;  | Number of bytes to free in cache |
+| * | Operator | &#8594;  | Completely free cache memory |
 
 <!-- END REF-->
 

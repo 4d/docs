@@ -5,7 +5,7 @@ slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *object* : Field, Variable ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *object* : Variable ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

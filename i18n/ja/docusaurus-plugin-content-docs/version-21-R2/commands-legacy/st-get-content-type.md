@@ -5,7 +5,7 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Field, Variable {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

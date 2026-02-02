@@ -5,12 +5,12 @@ slug: /commands/wa-open-forward-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN FORWARD URL.Syntax-->**WA OPEN FORWARD URL** ( * ; *object* : Text )<br/>**WA OPEN FORWARD URL** ( *object* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.WA OPEN FORWARD URL.Syntax-->**WA OPEN FORWARD URL** ( * ; *object* : Text )<br/>**WA OPEN FORWARD URL** ( *object* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA OPEN FORWARD URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 
 <!-- END REF-->
 

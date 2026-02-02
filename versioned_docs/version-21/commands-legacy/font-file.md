@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | fontFamily | Text | &#8594;  | Name of font family |
 | fontStyle | Integer | &#8594;  | Font style: 0=normal (default), 1=bold, 2=italic |
-| Function result | Null, Object | &#8592; | Font file object |
+| Function result | Object | &#8592; | Font file object (null if font not installed) |
 
 <!-- END REF-->
 

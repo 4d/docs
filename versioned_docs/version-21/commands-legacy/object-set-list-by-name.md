@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an Object Name (String) If omitted, object is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
 | listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
 | list | Text | &#8594;  | Name of the list to use as Choice list or "" to disassociate the list |
 

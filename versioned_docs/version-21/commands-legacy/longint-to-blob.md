@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | longInt | Integer | &#8594;  | Long Integer value to write into the BLOB |
 | Blob | Blob | &#8594;  | BLOB to receive the Long Integer value |
 | byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset &#124; * | Variable, Operator | &#8596;  | Offset within the BLOB (expressed in bytes) or * to append the value |
-|||| New offset after writing if not * |
+| offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) <br/>New offset after writing if not *|
+| * | Operator | &#8594; | Append the value |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ After the call, the *offset* variable parameter is returned, incremented by the 
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
 
 ## Example 1 
 

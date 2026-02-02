@@ -5,7 +5,7 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *object* : Text {; *listType* : Integer}; *list* : Text )<br/>**OBJECT SET LIST BY NAME** ( *object* : Field, Variable {; *listType* : Integer}; *list* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *object* : Text {; *listType* : Integer}; *list* : Text )<br/>**OBJECT SET LIST BY NAME** ( *object* : Variable, Field {; *listType* : Integer}; *list* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

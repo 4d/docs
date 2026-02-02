@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
 | hierarchical | Boolean | &#8594;  | True = hierarchical list box<br/>False = non-hierarchical list box |
 | hierarchy | Pointer array | &#8594;  | Array of pointers |
 

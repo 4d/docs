@@ -5,12 +5,12 @@ slug: /commands/object-set-resizing-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( * ; *object* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT SET RESIZING OPTIONS** ( *object* : Field, Variable ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( * ; *object* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT SET RESIZING OPTIONS** ( *object* : Variable, Field ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | horizontal | Integer | &#8594;  | Horizontal resizing option |
 | vertical | Integer | &#8594;  | Vertical resizing option |
 

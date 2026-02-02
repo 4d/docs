@@ -9,7 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | Pointer, Integer | &#8594;  | Field pointer or table number |
+| fieldPtr | Pointer | &#8594;  | Field pointer |
+| tableNum | Integer | &#8594;  | Table number |
 | fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
 | list | Text | &#8592; | Associated choice list name or empty string |
 | mandatory | Boolean | &#8592; | True = Mandatory, False = Optional |

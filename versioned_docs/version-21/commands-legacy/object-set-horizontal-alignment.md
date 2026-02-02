@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an Object name (String) If omitted, object is a field or a variable |
-| object | any | &#8594;  | Object name (if * specified), or Field or variable (if * omitted) |
+| object | Text, Field, Variable | &#8594;  | Object name (if * specified), or Field or variable (if * omitted) |
 | alignment | Integer | &#8594;  | Alignment code |
 
 <!-- END REF-->

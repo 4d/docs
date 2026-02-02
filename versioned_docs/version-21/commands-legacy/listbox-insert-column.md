@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is set) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Object name (if * is set) or Variable (if * is omitted) |
 | colPosition | Integer | &#8594;  | Location of column to insert |
 | colName | Text | &#8594;  | Name of the column object |
 | colVariable | Array, Field, Variable, Pointer | &#8594;  | Column array name or field or variable |

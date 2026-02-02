@@ -5,11 +5,12 @@ slug: /commands/xml-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( *elementRef* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer, *value* : Integer)} )<br/>**XML SET OPTIONS** ( *document* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer, *value* : Integer)} )<!-- END REF-->
+<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( *elementRef* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<br/>**XML SET OPTIONS** ( *document* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML SET OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef &#124; document | Text | &#8594;  | XML root element reference or<br/>Reference of open document |
+| elementRef | Text | &#8594;  | XML root element reference |
+| document | Text | &#8594;  | Reference of open document |
 | selector | Integer | &#8594;  | Option to set |
 | value | Integer | &#8594;  | Value of option |
 

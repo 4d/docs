@@ -10,7 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | blobToEncrypt | Blob | &#8594;  | BLOB to encrypt |
-| keyObject &#124; passPhrase | Object, Text | &#8594;  | JSON object containing the encryption key or passphrase for direct encryption key generation (text) |
+| keyObject | Object | &#8594;  | JSON object containing the encryption key |
+| passPhrase | Text | &#8594;  | Passphrase for direct encryption key generation |
 | salt | Integer | &#8594;  | Additional salt for algorithm |
 | encryptedBlob | Blob | &#8592; | Encrypted BLOB |
 | Function result | Boolean | &#8592; | True if encryption has been correctly performed, False otherwise |
