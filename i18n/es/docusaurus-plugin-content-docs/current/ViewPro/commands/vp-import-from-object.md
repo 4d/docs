@@ -61,7 +61,7 @@ La función callback especificada en el atributo `formula` se activa después de
 
 ## Ejemplo
 
-You want to import a spreadsheet that was previously saved in an object field, and trigger a callback function after all 4D custom functions have responded:
+Desea importar una hoja de cálculo previamente guardada en un campo objeto, y activar una función de retrollamada después de que todas las funciones personalizadas 4D hayan respondido:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)

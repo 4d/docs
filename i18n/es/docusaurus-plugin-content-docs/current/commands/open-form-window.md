@@ -26,7 +26,7 @@ toc_max_heading_level: 3
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
 
-**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](form-get-properties.md) command.
+**Nota:** para conocer las principales propiedades de un formulario, utilice el comando [FORM GET PROPERTIES\`](form-get-properties.md).
 
 In the *formName* parameter, you can pass:
 
@@ -63,7 +63,7 @@ The `Form has full screen mode Mac` and `Form has no menu bar` constants must be
 
 By default, if the *type* parameter is not passed, a window of the [Plain form window](#plain-form-window-plain-form-window-no-title) type is opened.
 
-The optional parameter *hPos* allows you to define the horizontal position of the window. You can pass a defined position in pixels or one of the following constants:
+El parámetro opcional *hPos* permite definir la posición horizontal de la ventana. You can pass a defined position in pixels or one of the following constants:
 
 | Constante             | Tipo    | Valor  |
 | --------------------- | ------- | ------ |
@@ -81,13 +81,13 @@ The optional parameter *vPos* allows you to define the vertical position of the 
 
 These parameters are expressed relative to the top left corner of the contents area of the application window (Windows MDI mode) or to the main screen (macOS and Windows SDI mode). They take into account the presence of the tool bar and menu bar.
 
-If you pass the optional parameter *\**, the current position and size of the window are memorized when closed. When the window is reopened again, its previous position and size are respected. In this case, the *vPos* and *hPos* parameters are only used the first time the window is opened.
+If you pass the optional parameter *\**, the current position and size of the window are memorized when closed. Cuando se vuelve a abrir la ventana, se respetan su posición y tamaño anteriores. In this case, the *vPos* and *hPos* parameters are only used the first time the window is opened.
 
 ### Window types {#window-types}
 
 #### Controller form window {#controller-form-window}
 
-This type of window is similar to the `Palette form window` with the following specificity: on Windows, the floating window will be referenced by an icon in the task bar (on Windows, regular floating palettes are not displayed in the task bar). This type of window is useful when the project is running in [SDI mode on Windows](../Menus/sdi.md). In this mode, floating palettes are hidden when their parent application is moved to the background. Thus, if your database interface is based upon a single floating window (for example to display a monitor view), you need to use a `Controller form window` to reference the application in the task bar and make sure it will remain reachable even if it has been moved to the background.
+This type of window is similar to the `Palette form window` with the following specificity: on Windows, the floating window will be referenced by an icon in the task bar (on Windows, regular floating palettes are not displayed in the task bar). Este tipo de ventana es útil cuando el proyecto se ejecuta en [Modo SDI en Windows](../Menus/sdi.md). En este modo, las paletas flotantes se ocultan cuando su aplicación principal pasa a segundo plano. Thus, if your database interface is based upon a single floating window (for example to display a monitor view), you need to use a `Controller form window` to reference the application in the task bar and make sure it will remain reachable even if it has been moved to the background.
 
 Por ejemplo:
 
@@ -97,13 +97,13 @@ var $win:=Open form window("myMonitor";Controller form window;On the left;Vertic
 
 :::note
 
-Under macOS, this window type behaves like a regular [`Palette form window`](#palette-form-window).
+En macOS, este tipo de ventana se comporta como una ventana normal [`Palette form window`](#palette-form-window).
 
 :::
 
 #### Form has full screen mode Mac {#form-has-full-screen-mode-mac}
 
-The "full screen" option is available under macOS for document type windows. When this option is used, a "Full screen" button is displayed in the window. When the user clicks on this icon, the window switches to full screen and 4D automatically hides the main tool bar. To use this option, you just add the `Form has full screen mode Mac` constant to the *type* parameter. For example, this code creates a form window with a full-screen button under macOS:
+The "full screen" option is available under macOS for document type windows. When this option is used, a "Full screen" button is displayed in the window. When the user clicks on this icon, the window switches to full screen and 4D automatically hides the main tool bar. Para utilizar esta opción, basta con añadir la constante `Form has full screen mode Mac` al parámetro *type*. For example, this code creates a form window with a full-screen button under macOS:
 
 ```4d
 var $win:=Open form window([Interface];"User_Choice";Plain form window+Form has full screen mode Mac)
@@ -118,7 +118,7 @@ Under Windows, this option has no effect.
 
 #### Form has no menu bar {#form-has-no-menu-bar}
 
-This option is intended for use when the project is running in [SDI mode on Windows](../Menus/sdi.md). In this context, all windows of your application display by default the current process menu bar. If you want to open a window without menu bar, you need to add the `Form has no menu bar` constant to the *type* parameter. For example, this code creates a plain form window without menu bar in a SDI application on Windows:
+Esta opción está pensada para su uso cuando el proyecto se ejecuta en [Modo SDI en Windows](../Menus/sdi.md). In this context, all windows of your application display by default the current process menu bar. If you want to open a window without menu bar, you need to add the `Form has no menu bar` constant to the *type* parameter. Por ejemplo, este código crea una ventana de formulario simple sin barra de menú en una aplicación IDE en Windows:
 
 ```4d
 var $win:=Open form window("myPanel";Plain form window+Form has no menu bar;Horizontally centered;At the top)
@@ -128,18 +128,18 @@ var $win:=Open form window("myPanel";Plain form window+Form has no menu bar;Hori
 
 This option has no effect:
 
-- in a macOS application,
+- en una aplicación macOS,
 - in a Windows application in MDI mode.
 
 :::
 
 #### Modal form dialog box, Movable form dialog box, Movable form dialog box no title
 
-These types open **modal windows**. A modal window places the user in a state (or "mode") where they can only act within this window. As long as the modal window is displayed, the menu commands and other application windows are inaccessible. To close a modal window, the user must either validate it, cancel it, or choose one of the options it offers. Warning dialog boxes are a typical example of modal windows.
+These types open **modal windows**. Una ventana modal coloca al usuario en un estado (o "modo") en el que sólo puede actuar dentro de esta ventana. As long as the modal window is displayed, the menu commands and other application windows are inaccessible. To close a modal window, the user must either validate it, cancel it, or choose one of the options it offers. Warning dialog boxes are a typical example of modal windows.
 
 :::note
 
-A modal window always stays in the foreground. As a consequence, when a modal window calls a non-modal window, this latter window is displayed in the background, even though it was called subsequent to the modal window. You should thus avoid this type of operation. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
+A modal window always stays in the foreground. As a consequence, when a modal window calls a non-modal window, this latter window is displayed in the background, even though it was called subsequent to the modal window. Por lo tanto, debe evitar este tipo de operación. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
 
 :::
 
@@ -149,7 +149,7 @@ These window types have the following properties:
 | ------------------------------------ | --------------------- | ----------------------- | -------------------------------- |
 | Can have a title                     | No                    | Sí                      | No                               |
 | Can have a close box or equivalent   | No                    | Sí                      | Sí                               |
-| Can be resized                       | No                    | Sí                      | Sí                               |
+| Redimensionable                      | No                    | Sí                      | Sí                               |
 | Can be minimized/maximized or zoomed | No                    | Sí                      | Sí                               |
 | Suitable for scroll bars             | No                    | No                      | No                               |
 | Modal                                | Sí                    | Yes, but can be moved   | Yes, but can be moved            |
@@ -168,7 +168,7 @@ These window types have the following properties:
 | ------------------------------------ | ----------------- | -------------------------- |
 | Can have a title                     | Sí                | No                         |
 | Can have a close box or equivalent   | Sí                | Sí                         |
-| Can be resized                       | Sí                | Sí                         |
+| Redimensionable                      | Sí                | Sí                         |
 | Can be minimized/maximized or zoomed | Sí                | Sí                         |
 | Suitable for scroll bars             | Sí                | Sí                         |
 | Modal                                | No                | No                         |
@@ -183,7 +183,7 @@ This type of window features the following advanced specifics:
   - a click occurs outside the window;
   - the background window or the MDI (Multiple Document Interface) window is moved;
   - the user hits the **Escape** key.
-- This window is displayed in front of its "parent" window (it must not be used as the main window of the process). The background window is not disabled. However, it no longer receives events.
+- Esta ventana se muestra delante de su ventana "padre" (no debe utilizarse como ventana principal del proceso). The background window is not disabled. Sin embargo, ya no recibe eventos.
 - You cannot resize or move the window using the mouse; however, when performing these actions programmatically, the redraw of background items is optimized.
 - Limitaciones:
   - It is not possible to display pop-up menu objects inside this type of window.
@@ -201,7 +201,7 @@ Sheet windows are specific to macOS. These windows are displayed above the main 
   - en Windows.
 - Since a sheet window must be drawn above a form, its display is pushed back in the [`On Load` event](../Events/onLoad.md) of the first form loaded in the window ([see example 3](#example-3)).
 
-**Usage**: `DIALOG`, `ADD RECORD(...;...*)` or equivalent, under macOS (not standard under Windows).
+**Uso**: `DIALOG`, `ADD RECORD(...;...*)` o equivalente, en macOS (no estándar en Windows).
 
 #### Toolbar form window {#toolbar-form-window}
 
@@ -220,11 +220,11 @@ If your application displays both a toolbar window and standard windows that sup
 
 ### Close box
 
-Windows of the `Movable form dialog box`, `Plain form window`, and `Palette form window` types have a close box. No method is associated to the window's close box. Clicking on this close box cancels and closes the window, except if the [`On Close Box` form event](../Events/onCloseBox.md) has been activated for the form. In this case, the code associated with this event will be executed.
+Windows of the `Movable form dialog box`, `Plain form window`, and `Palette form window` types have a close box. No method is associated to the window's close box. Al hacer clic en esta caja de cierre se cancela y se cierra la ventana, excepto si el evento [`On Close Box`](../Events/onCloseBox.md) ha sido activado para el formulario. In this case, the code associated with this event will be executed.
 
 ### Size control
 
-If "Window Size" properties of the *formName* are not set to "fixed", the opened window can be resized by the user. A zoom box can be available,depending on the window type. If the **Fixed Width** and/or **Fixed Height** property is checked in the form properties, the window will not be resizable.
+If "Window Size" properties of the *formName* are not set to "fixed", the opened window can be resized by the user. A zoom box can be available,depending on the window type. Si la propiedad **Ancho fijo** y/o **Alto fijo** está marcada en las propiedades del formulario, la ventana no será redimensionable.
 
 **Note:** Some attributes (grow box, close box...) of the window created depend on the interface specifications of the operating system for the chosen *type*. It is therefore possible to obtain different results depending on the platform used.
 
@@ -238,7 +238,7 @@ var $winRef:=Open form window([Table1];"Enter")
 
 ## Ejemplo 2
 
-The following statement opens a floating palette in the upper left portion of the screen based on a project form named "Tools". This palette uses the last position it was in when the user closed it each time it is reopened:
+The following statement opens a floating palette in the upper left portion of the screen based on a project form named "Tools". Esta paleta utiliza la última posición en la que se encontraba cuando el usuario la cerró cada vez que se vuelve a abrir:
 
 ```4d
 var $winRef:=Open form window("Tools";Palette form window;On the left;At the top;*)

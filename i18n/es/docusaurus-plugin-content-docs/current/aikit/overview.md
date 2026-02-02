@@ -135,7 +135,7 @@ var $deleteResult:=$client.files.delete($fileId)
 
 :::tip Entrada de blog relacionada
 
-[Transform Static Documents into Actionable Knowledge with 4D AIKit](https://blog.4d.com/transform-static-documents-into-actionable-knowledge-with-4d-aikit).
+[Transformar documentos estáticos en conocimientos explotables con 4D AIKit](https://blog.4d.com/transform-static-documents-into-actionable-knowledge-with-4d-aikit).
 
 :::
 

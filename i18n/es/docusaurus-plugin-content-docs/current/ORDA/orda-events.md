@@ -336,7 +336,7 @@ Este evento es activado por las siguientes funciones:
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-This event is triggered **before** the entity is actually saved and lets you check data consistency so that you can stop the action if needed. Por ejemplo, puede comprobar en este evento que "fecha de salida" < "fecha de llegada".
+Este evento se activa **antes** de que la entidad se guarde realmente y le permite comprobar la coherencia de los datos para que pueda detener la acción si es necesario. Por ejemplo, puede comprobar en este evento que "fecha de salida" < "fecha de llegada".
 
 Para detener la acción, el código de la función debe devolver un [objeto error](#error-object).
 

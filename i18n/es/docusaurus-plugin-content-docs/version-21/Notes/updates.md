@@ -44,7 +44,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), la ent
 - Las sesiones usuario web ahora son devueltas por [`Process activity`](../commands/process-activity.md).
 - PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
 - El comando [`HIGHLIGHT TEXT`](../commands/highlight-text) es ahora compatible en el contexto de los subformularios.
-- En cliente/servidor, se elimina la noción de procesos locales. The "$" has no longer a specific meaning in process names and the \* parameter in [`REGISTER CLIENT`](../commands/register-client) is ignored.
+- En cliente/servidor, se elimina la noción de procesos locales. El "$" ya no tiene un significado específico en los nombres de proceso y el parámetro \* en [`REGISTER CLIENT`](../commands/register-client) se ignora.
 - **Componentes ya no integrados**: a partir de 4D 21, los componentes desarrollados por 4D (4D NetKit, 4D SVG..., ver [esta lista](../Extensions/overview.md#components-developed-by-4d)) ya no están integrados en la aplicación 4D. Cuando se actualiza un proyecto a 4D 21 o superior, se muestra un cuadro de diálogo:<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
   \- **Importar**: importar automáticamente componentes 4D como dependencias del proyecto<br/>

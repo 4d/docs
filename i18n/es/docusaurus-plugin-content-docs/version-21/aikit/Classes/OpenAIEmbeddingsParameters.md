@@ -5,7 +5,7 @@ title: OpenAIEmbeddingsParameters
 
 # OpenAIEmbeddingsParameters
 
-The `OpenAIEmbeddingsParameters` class is designed to configure and manage the parameters used for creating embeddings through the OpenAI API.
+La clase `OpenAIEmbeddingsParameters` está diseñada para configurar y gestionar los parámetros utilizados para crear las representaciones vectoriales a través de la API OpenAI.
 
 ## Hereda
 

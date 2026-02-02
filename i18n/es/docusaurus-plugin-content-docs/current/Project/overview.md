@@ -24,7 +24,7 @@ El desarrollo multiusuario se gestiona a través de herramientas estándar del r
 
 ### Modo desarrollo en 4D Server
 
-If you are a small-size development team and you do not want to use a source control tool, you can use the [**Development mode**](../Desktop/clientServer.md#development-mode) of 4D Server, allowing developers to work online on the same project with 4D in remote mode. Note that this alternative mode should be used in specific cases; using an organisation based upon source control tools (see above) is usually recommended.
+If you are a small-size development team and you do not want to use a source control tool, you can use the [**Development mode**](../Desktop/clientServer.md#development-mode) of 4D Server, allowing developers to work online on the same project with 4D in remote mode. Tenga en cuenta que este modo alternativo debe utilizarse en casos concretos; normalmente se recomienda utilizar una organización basada en herramientas de control de código fuente (ver más arriba).
 
 ## Despliegue
 

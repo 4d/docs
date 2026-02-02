@@ -7,7 +7,7 @@ title: Notas del lanzamiento
 
 #### Lo más destacado
 
-- The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12.
+- El comando [`JSON Validate`](../commands/json-validate.md) ahora es compatible con el borrador 2020-12 del esquema JSON.
 
 #### Cambios de comportamiento
 

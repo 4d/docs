@@ -93,7 +93,7 @@ Para más información sobre los estados de las páginas web, consulte la secci�
 
 #### Descripción
 
-The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web page<!-- END REF -->.
+La función `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->activa la renderización del *state* en la página web actual<!-- END REF -->.
 
 Esta función no hace nada si:
 
@@ -199,7 +199,7 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 #### Descripción
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web page<!-- END REF -->.
+La función `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envía *msg* como mensaje de advertencia a la página web<!-- END REF -->.
 
 The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "warning".
 

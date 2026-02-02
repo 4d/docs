@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 | Parámetros     | Tipo    |                             | Descripción                                                                            |
 | -------------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| left           | Integer | &#8594; | Global left coordinate of window contents area                                         |
+| left           | Integer | &#8594; | Coordenada izquierda global del área de contenido de la ventana                        |
 | top            | Integer | &#8594; | Global top coordinate of window contents area                                          |
 | right          | Integer | &#8594; | Global right coordinate of window contents area, or -1 for using form default size     |
 | bottom         | Integer | &#8594; | Global bottom coordinate of window contents area, or -1 for using form default size    |
 | type           | Integer | &#8594; | Window type                                                                            |
-| title          | Text    | &#8594; | Title of window or "" for using default form title                                     |
+| title          | Text    | &#8594; | Título de la ventana o "" para utilizar el título por defecto del formulario           |
 | controlMenuBox | Text    | &#8594; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
 | Resultado      | Integer | &#8592; | Número de referencia de la ventana                                                     |
 
@@ -24,40 +24,40 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Open window.Summary-->**Open window** opens a new window with the dimensions given by the first four parameters<!-- END REF-->:
+<!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana con las dimensiones dadas por los cuatro primeros parámetros<!-- END REF-->:
 
 - *left* is the distance in pixels from the left edge of the application window to the left internal edge of the window.
 - *top* is the distance in pixels from the top of the application window to the top internal edge of the window.
 - *right* is the distance in pixels from the left edge of the application window to the right internal edge of the window.
 - *bottom* is the distance in pixels from the top of the application window to the bottom internal edge of the window.
 
-**Compatibility note:** **Open window** integrates various options which have evolved over the versions, and is now only kept for compatibility reasons. When you write new code for managing windows, we strongly recommend using the [Open form window](../commands/open-form-window.md) command, which is better suited to current interfaces.
+**Nota de compatibilidad:** **Open window** integra varias opciones que han evolucionado con las versiones, y ahora sólo se mantiene por razones de compatibilidad. When you write new code for managing windows, we strongly recommend using the [Open form window](../commands/open-form-window.md) command, which is better suited to current interfaces.
 
 If you pass -1 in both *right* and *bottom,* you instruct 4D to automatically size the window under the following conditions:
 
-- You have designed a form and set its Sizing Options in the Design environment Form properties window
-- Before calling **Open window**, you selected the form using the [FORM SET INPUT](form-set-input.md) command, to which you passed the optional *\** parameter.
+- Ha diseñado un formulario y configurado sus opciones de tamaño en la ventana de propiedades del formulario del entorno Diseño
+- Antes de llamar a **Open window**, ha seleccionado el formulario mediante el comando [FORM SET INPUT](form-set-input.md), al que ha pasado el parámetro opcional *\**.
 
 **Important:** This automatic sizing of the window will occur only if you made a prior call to [FORM SET INPUT](form-set-input.md) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](form-set-input.md).
 
 The *type* parameter is optional. It represents the type of window you want to display. If the window type is negative, the window created is a floating window (if supported). If the type is not specified, type 1 is used by default. The following constants of the *Open Window* theme are supported:
 
-| Constante                | Comentario                                                                                                                                                                                                             |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Alternate dialog box     | Can be a floating window                                                                                                                                                                                               |
-| Has full screen mode Mac |                                                                                                                                                                                                                        |
-| Modal dialog box         | Modal                                                                                                                                                                                                                  |
-| Movable dialog box       | Modal, Can be a floating window                                                                                                                                                                                        |
-| Palette window           |                                                                                                                                                                                                                        |
-| Plain dialog box         | Modal, Can be a floating window                                                                                                                                                                                        |
-| Plain fixed size window  |                                                                                                                                                                                                                        |
-| Plain no zoom box window |                                                                                                                                                                                                                        |
-| Plain window             |                                                                                                                                                                                                                        |
-| Pop up window            |                                                                                                                                                                                                                        |
-| Resizable sheet window   |                                                                                                                                                                                                                        |
-| Round corner window      |                                                                                                                                                                                                                        |
-| Sheet window             |                                                                                                                                                                                                                        |
-| Texture appearance       | Option to be added to a window type on macOS only. Supported types: `Plain window`, `Plain no zoom box window`, `Plain fixed size window`, `Movable dialog box`, `Round corner window` |
+| Constante                | Comentario                                                                                                                                                                                                                  |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Alternate dialog box     | Can be a floating window                                                                                                                                                                                                    |
+| Has full screen mode Mac |                                                                                                                                                                                                                             |
+| Modal dialog box         | Modal                                                                                                                                                                                                                       |
+| Movable dialog box       | Modal, Can be a floating window                                                                                                                                                                                             |
+| Palette window           |                                                                                                                                                                                                                             |
+| Plain dialog box         | Modal, Can be a floating window                                                                                                                                                                                             |
+| Plain fixed size window  |                                                                                                                                                                                                                             |
+| Plain no zoom box window |                                                                                                                                                                                                                             |
+| Plain window             |                                                                                                                                                                                                                             |
+| Pop up window            |                                                                                                                                                                                                                             |
+| Resizable sheet window   |                                                                                                                                                                                                                             |
+| Round corner window      |                                                                                                                                                                                                                             |
+| Sheet window             |                                                                                                                                                                                                                             |
+| Texture appearance       | Opción que se añade a un tipo de ventana sólo en macOS. Supported types: `Plain window`, `Plain no zoom box window`, `Plain fixed size window`, `Movable dialog box`, `Round corner window` |
 
 For a description of window types, see [**Window types**](#window-types) below.
 
@@ -71,7 +71,7 @@ If you pass an empty string ("") in *title,* you instruct 4D to use the Window T
 
 **Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an [`On Close Box` event](../Events/onCloseBox.md) occurs.
 
-If more than one window is open for a process, the last window opened is the active (frontmost) window for that process. Only information within the active window can be modified. Any other windows can be viewed. When the user types, the active window will always come to the front, if it is not already there.
+If more than one window is open for a process, the last window opened is the active (frontmost) window for that process. Only information within the active window can be modified. Any other windows can be viewed. Cuando el usuario teclea, la ventana activa pasa siempre al primer plano, si no está ya ahí.
 
 Forms are displayed inside an open window. Text from the [MESSAGE](message.md) command also appears in the window.
 
@@ -89,8 +89,8 @@ Forms are displayed inside an open window. Text from the [MESSAGE](message.md) c
 
 #### Has full screen mode Mac
 
-The "full screen" option is available under macOS for document type windows. When this option is used, a "Full screen" button is displayed in the top right corner of the window. When the user clicks on this icon, the window switches to full screen and 4D automatically hides the main tool bar.
-To use this option, you just add the `Has full screen mode Mac` constant to the *type* parameter. Por ejemplo:
+The "full screen" option is available under macOS for document type windows. Cuando se utiliza esta opción, aparece un botón "Pantalla completa" en la esquina superior derecha de la ventana. When the user clicks on this icon, the window switches to full screen and 4D automatically hides the main tool bar.
+Para utilizar esta opción, basta con añadir la constante `Has full screen mode Mac` al parámetro *type*. Por ejemplo:
 
 ```4d
  $win:=Open form window([Interface];"User_Choice";Plain form window+Form has full screen mode Mac)
@@ -178,7 +178,7 @@ This type of window has the same basic characteristics as the [`Plain dialog box
   - a click occurs outside the window;
   - the background window or the MDI (Multiple Document Interface) window is moved;
   - the user hits the **Escape** key.
-- This window is displayed in front of its "parent" window (it must not be used as the main window of the process). The background window is not disabled. However, it no longer receives events.
+- Esta ventana se muestra delante de su ventana "padre" (no debe utilizarse como ventana principal del proceso). The background window is not disabled. Sin embargo, ya no recibe eventos.
 - You cannot resize or move the window using the mouse; however, when performing these actions programmatically, the redraw of background items is optimized.
 - Usage: This type of window is primarily used to generate pop-up menus related to buttons like [toolbars type buttons](../FormObjects/button_overview.md#toolbar).
 - Limitaciones:
@@ -229,13 +229,13 @@ The main characteristic of floating windows is that they remain in the foregroun
 
 ### Modal windows
 
-A modal window places the user in a state (or "mode") where they can only act within this window. As long as the modal window is displayed, the menu commands and other application windows are inaccessible. To close a modal window, the user must either validate it, cancel it, or choose one of the options it offers. Warning dialog boxes are a typical example of modal windows.
+Una ventana modal coloca al usuario en un estado (o "modo") en el que sólo puede actuar dentro de esta ventana. As long as the modal window is displayed, the menu commands and other application windows are inaccessible. To close a modal window, the user must either validate it, cancel it, or choose one of the options it offers. Warning dialog boxes are a typical example of modal windows.
 
 Windows of the types `Modal dialog box` and `Movable dialog` box are modal windows.
 
 :::note
 
-A modal window always stays in the foreground. As a consequence, when a modal window calls a non-modal window, this latter window is displayed in the background, even though it was called subsequent to the modal window. You should thus avoid this type of operation. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
+A modal window always stays in the foreground. As a consequence, when a modal window calls a non-modal window, this latter window is displayed in the background, even though it was called subsequent to the modal window. Por lo tanto, debe evitar este tipo de operación. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
 
 :::
 
@@ -274,7 +274,7 @@ After the project method is written, you can use it this way:
 
 ## Ejemplo 2
 
-The following example opens a floating window that has a Control-menu box (Windows) or Close Box (Macintosh) method. The window is opened in the upper right hand corner of the application window.
+The following example opens a floating window that has a Control-menu box (Windows) or Close Box (Macintosh) method. La ventana se abre en la esquina superior derecha de la ventana de la aplicación.
 
 ```4d
  var $myWindow : Integer
@@ -290,7 +290,7 @@ The CloseColorPalette method calls the [CANCEL](cancel.md) command:
 
 ## Ejemplo 3
 
-The following example opens a window whose size and title come from the properties of the form displayed in the window:
+El siguiente ejemplo abre una ventana cuyo tamaño y título proceden de las propiedades del formulario mostrado en la ventana:
 
 ```4d
   var $myWindow : Integer

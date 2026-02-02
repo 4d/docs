@@ -57,7 +57,7 @@ The JSON form of JavaScript Date objects follows the ISO 8601 standard, for exam
 Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Texto // recepción de una fecha en formato ISO
  var $date4D : Date 
  $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
 ```
@@ -65,7 +65,7 @@ Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
 Utilizando el comando [`Date`](../commands-legacy/date.md):
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Text // recepción de una fecha en formato ISO
  var $date4D : Date 
  $date4D:=Date($dateIso)
 ```

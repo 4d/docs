@@ -35,7 +35,7 @@ Permite modificar el número de puerto TCP/IP utilizado por el servidor web para
 
 #### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
 
-_Compatibility Note_: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). Para el acceso a la base de datos a través de HTTP, ahora se recomienda utilizar las funcionalidades del almacén de datos remoto ORDA y las peticiones REST.
+_Nota de compatibilidad_: esta opción [es obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para el acceso a la base de datos a través de HTTP, ahora se recomienda utilizar las funcionalidades del almacén de datos remoto ORDA y las peticiones REST.
 
 ### Rutas
 

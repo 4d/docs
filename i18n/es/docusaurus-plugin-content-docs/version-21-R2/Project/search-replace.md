@@ -54,7 +54,7 @@ Las áreas de "Buscar en el diseño" varían dinámicamente en función de las s
 
 2. Construya su búsqueda utilizando los diferentes menús y áreas de entrada del diálogo y, si es necesario, introduzca la cadena de caracteres a buscar. Estos elementos se describen en las secciones siguientes.
 
-3. Set the [searching options](#searching-options) (if necessary).
+3. Define las [opciones de búsqueda](#searching-options) (si es necesario).
 
 4. Haga clic en **OK** o presione la tecla **Entrada**.
    Cuando la búsqueda ha terminado, aparece la [ventana de resultados](#results-window) indicando los elementos encontrados.

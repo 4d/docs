@@ -3,7 +3,7 @@ id: webServerObject
 title: Instancias del servidor web
 ---
 
-A 4D project can start and monitor a web server for the main (host) application as well as each [hosted component](../Concepts/components.md).
+Un proyecto 4D puede iniciar y controlar un servidor web para la aplicación principal (host) así como para cada [componente alojado](../Concepts/components.md).
 
 Por ejemplo, si ha instalado dos componentes en su aplicación principal, puede iniciar y supervisar hasta tres servidores web independientes desde su aplicación:
 

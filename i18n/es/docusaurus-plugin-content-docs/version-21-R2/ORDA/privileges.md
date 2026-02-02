@@ -19,7 +19,7 @@ Si un usuario intenta ejecutar una acción y no tiene los derechos de acceso ade
 
 :::tip Entradas de blog relacionadas
 
-[**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
+[Filtre el acceso a sus datos con un sistema completo de permisos\*\*](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
 
 :::
 
@@ -29,7 +29,7 @@ Puede asignar acciones de permiso específicas a los siguientes recursos en su p
 
 - el [datastore](../ORDA/dsMapping.md#datastore)
 - las [clases de datos](../ORDA/dsMapping.md#dataclass)
-- [attributes](../ORDA/dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1))
+- los [atributos](../ORDA/dsMapping.md#attribute) (incluidos [calculados](./ordaClasses.md#computed-attributes-1) y [alias](./ordaClasses.md#alias-attributes-1))
 - funciones de las [clases del modelo de datos](../ORDA/ordaClasses.md)
 - funciones [singleton](../REST/$singleton.md)
 

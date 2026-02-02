@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 In *vJson*, pass a JSON object containing the JSON contents to be validated.
 
-**Note:** Validating a JSON string consists of checking that it follows the rules defined in a JSON schema. This is different from checking that the JSON is well-formed, which is done by the [JSON Parse](./commands/json-parse) command.
+**Note:** Validating a JSON string consists of checking that it follows the rules defined in a JSON schema. Esto es diferente de la comprobación de que el JSON está bien formado, que se realiza mediante el comando [JSON Parse](./commands/json-parse).
 
 In *vSchema*, pass the JSON schema to use for the validation. For more information on how to create a JSON schema, you may consult the [json-schema.org](http://json-schema.org/) web site.
 
@@ -41,7 +41,7 @@ To validate a JSON object, 4D uses the norm described in a **JSON Schema Validat
 
 4D supports two versions of the draft:
 
-- [version 2020-12](https://json-schema.org/draft/2020-12/json-schema-validation) (recommended). All parts of the norm are supported, except:
+- [versión 2020-12](https://json-schema.org/draft/2020-12/json-schema-validation) (recomendado). All parts of the norm are supported, except:
   - vocabulary
   - `contentEncoding`, `contentMediaType`, and `contentSchema` (validation of non-JSON content)
   - for references: `$dynamicRef`/`$dynamicAnchor` and references in `https:...`
@@ -82,7 +82,7 @@ The **JSON Validate** returns an object that provides the status of the validati
 | *success*               | Boolean           | True if *vJson* is validated, false otherwise. If false, the *errors* property is also returned |
 | *errors*                | Object collection | List of error objects if the *vJson* is not validated (see below)                            |
 
-Each error object of the *errors* collection contains the following properties:
+Cada objeto de error de la colección *errors* contiene las siguientes propiedades:
 
 | **Nombre de propiedad** | **Tipo** | **Description**                                                                                                                                                                                                                                    |
 | ----------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -100,7 +100,7 @@ Each error object of the *errors* collection contains the following properties:
 | **Code** | **JSON Keyword**     | **Message**                                                                                                                                                   |
 | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2        | multipleOf           | Error while validating against 'multipleOf' key.                                                                                              |
-| 3        | maximum              | The value provided should not be greater than specified in the schema ("{s1}").                                            |
+| 3        | maximum              | El valor proporcionado no debe ser superior al especificado en el esquema ("{s1}").                                        |
 | 4        | exclusiveMaximum     | The value provided should be less than specified in the schema ("{s1}").                                                   |
 | 5        | mínimo               | The value provided should not be less than specified in the schema ("{s1}").                                               |
 | 6        | exclusiveMinimum     | The value provided should be greater than specified in the schema ("{s1}").                                                |
@@ -128,7 +128,7 @@ Each error object of the *errors* collection contains the following properties:
 | 28       | propertyNames        | Property name "{s1}" does not validate against the 'propertyNames' schema.                                                                    |
 | 29       | contiene             | El array no contiene ningún elemento que coincida con el esquema 'contains'.                                                                  |
 | 30       | contiene             | Array must contain at least {s1} items matching the 'contains' schema, but only {s2} were found.                                              |
-| 31       | contiene             | Array must contain at most {s1} items matching the 'contains' schema, but {s2} were found.                                                    |
+| 31       | contiene             | El array debe contener como máximo {s1} elementos que coincidan con el esquema 'contains', pero se ha encontrado {s2}.                        |
 | 32       | requerido            | The property "{s1}" requires the property "{s2}" to be present.                                                                               |
 | 35       | prefixItems          | Array items at the beginning do not match the 'prefixItems' schemas.                                                                          |
 | 36       | dependentSchemas     | Validation failed against 'dependentSchemas'.                                                                                                 |

@@ -389,7 +389,7 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 Las rutas de los archivos pueden ser relativas o absolutas.
 
 - Las rutas relativas se resuelven en relación con el archivo de descripción del formulario JSON.
-- For security reasons, only [filesystem paths](../Concepts/paths.md#filesystem-pathnames) are accepted for absolute paths (*e.g.*, "/RESOURCES", "/DATA").
+- Por razones de seguridad, sólo se aceptan [rutas filesystem](../Concepts/paths.md#filesystem-pathnames) para rutas absolutas (*e.g.*, "/RESOURCES", "/DATA").
 
 :::
 

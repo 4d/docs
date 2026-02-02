@@ -35,7 +35,7 @@ El comando devuelve la versión recortada de la cadena *aString*. Si no hay espa
 
 :::note
 
-This command is based upon the [`TrimString` Ecmascript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring).
+Este comando se basa en la especificación [Ecmascript `TrimString`](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring).
 
 :::
 
