@@ -30,7 +30,7 @@ Asynchronous execution is used when:
 
 Choosing Between Synchronous and Asynchronous Execution:
 
-| Scenario                                   | Best Approach    |
+| Scenario                                   | Mejor enfoque    |
 | ------------------------------------------ | ---------------- |
 | Quick operations with minimal processing   | **Synchronous**  |
 | Tasks requiring strict execution order     | **Synchronous**  |
@@ -85,7 +85,7 @@ For callbacks to work properly in fully asynchronous mode, the operation should 
 
 In 4D, all objects are released [when no more references](../Concepts/dt_object.md#resources) to them exist in memory. This typically occurs at the end of a method execution for local variables.
 
-For asynchronous classes, an **extra reference** is always maintained by 4D in the process that instantiated the object. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
+Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
 
 If you want to "force" the release of an object at any moment, use a `.shutdown()` or `terminate()` function; it triggers the onTerminate\` event ànd thus releases the object.
 
@@ -182,7 +182,7 @@ Ejemplo:
 ```4d
 var $options:=cs.Params.new() 
 var $systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ";$options) 
-$systemworker.wait(0.5) // Waits for up to 0.5 seconds for get file info
+$systemworker.wait(0.5) // Espera hasta 0.5 segundos para obtener información del archivo
 ```
 
 ## Ver también

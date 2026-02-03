@@ -56,7 +56,7 @@ Bien que `myForm` n'affiche pas les propriétés typiques de l'objet lorsqu'il e
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 
@@ -81,7 +81,7 @@ Pour plus d'informations sur les états des pages web, veuillez vous référer �
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : Text )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 
@@ -117,7 +117,7 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 
@@ -152,7 +152,7 @@ Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQo
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
@@ -187,7 +187,7 @@ Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQo
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 

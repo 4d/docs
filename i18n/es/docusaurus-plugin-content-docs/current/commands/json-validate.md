@@ -45,7 +45,7 @@ To validate a JSON object, 4D uses the norm described in a **JSON Schema Validat
   - vocabulary
   - `contentEncoding`, `contentMediaType`, and `contentSchema` (validation of non-JSON content)
   - for references: `$dynamicRef`/`$dynamicAnchor` and references in `https:...`
-- [version 4](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) (legacy implementation, used by default). Note that the support of this norm has more limitations than version 2020-12.
+- [versión 4](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) (implementación heredada, utilizada por defecto). Note that the support of this norm has more limitations than version 2020-12.
 
 #### Specifying the version to use
 
@@ -97,43 +97,43 @@ Cada objeto de error de la colección *errors* contiene las siguientes propiedad
 
 <details>Se pueden producir los siguientes errores:
 
-| **Code** | **JSON Keyword**     | **Message**                                                                                                                                                   |
-| -------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2        | multipleOf           | Error while validating against 'multipleOf' key.                                                                                              |
-| 3        | maximum              | El valor proporcionado no debe ser superior al especificado en el esquema ("{s1}").                                        |
-| 4        | exclusiveMaximum     | The value provided should be less than specified in the schema ("{s1}").                                                   |
-| 5        | mínimo               | The value provided should not be less than specified in the schema ("{s1}").                                               |
-| 6        | exclusiveMinimum     | The value provided should be greater than specified in the schema ("{s1}").                                                |
-| 7        | maxLength            | The string is longer than specified in the schema.                                                                                            |
-| 8        | minLength            | The string is shorter than specified in the schema.                                                                                           |
-| 9        | modelo               | The string "{s1}" does not match the pattern in the schema:{s2}.                                                              |
-| 10       | additionalItems      | Error while validating an array. JSON contains more elements than specified in the schema.                                    |
-| 11       | maxItems             | The array contains more items than specified in the schema.                                                                                   |
-| 12       | minItems             | The array contains less items than specified in the schema.                                                                                   |
-| 13       | uniqueItems          | Error while validating an array. Elements are not unique. Another instance of "{s1}" is already in the array. |
-| 14       | maxProperties        | The number of properties is greater than specified in the schema.                                                                             |
-| 15       | minProperties        | The number of properties is less than specified in the schema.                                                                                |
-| 16       | requerido            | Falta la propiedad requerida "{s1}".                                                                                                          |
-| 17       | additionalProperties | No hay propiedades adicionales permitidas por el esquema. The property(ies) {s1} should be removed.        |
-| 18       | dependencias         | The property "{s1}" requires the property "{s2}".                                                                                             |
-| 19       | enum                 | Error while validating against 'enum' key. "{s1}" does not match any enum element in the schema.                              |
-| 20       | type                 | Incorrect type. Expected type is: {s1}                                                                                        |
-| 21       | oneOf                | El JSON coincide con más de un valor.                                                                                                         |
-| 22       | oneOf                | The JSON does not match any value.                                                                                                            |
-| 23       | not                  | The JSON is invalid against the value of 'not'.                                                                                               |
-| 24       | format               | The string does not match ("{s1}")                                                                                                         |
-| 25       | const                | Value "{s1}" does not match the 'const' value in the schema.                                                                                  |
-| 26       | unevalutedProperties | Unevaluated properties are not allowed by the schema. The property(ies) {s1} should be removed.            |
-| 27       | unevalutedItems      | Unevaluated array items are not allowed. Item at index {s1} is not covered by any schema.                                     |
-| 28       | propertyNames        | Property name "{s1}" does not validate against the 'propertyNames' schema.                                                                    |
-| 29       | contiene             | El array no contiene ningún elemento que coincida con el esquema 'contains'.                                                                  |
-| 30       | contiene             | Array must contain at least {s1} items matching the 'contains' schema, but only {s2} were found.                                              |
-| 31       | contiene             | El array debe contener como máximo {s1} elementos que coincidan con el esquema 'contains', pero se ha encontrado {s2}.                        |
-| 32       | requerido            | The property "{s1}" requires the property "{s2}" to be present.                                                                               |
-| 35       | prefixItems          | Array items at the beginning do not match the 'prefixItems' schemas.                                                                          |
-| 36       | dependentSchemas     | Validation failed against 'dependentSchemas'.                                                                                                 |
-| 37       | $ref                 | Reference could not be resolved.                                                                                                              |
-| 38       | $ref                 | Circular reference detected.                                                                                                                  |
+| **Code** | \*\*Palabra clave JSON | **Message**                                                                                                                                                   |
+| -------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2        | multipleOf             | Error while validating against 'multipleOf' key.                                                                                              |
+| 3        | maximum                | El valor proporcionado no debe ser superior al especificado en el esquema ("{s1}").                                        |
+| 4        | exclusiveMaximum       | The value provided should be less than specified in the schema ("{s1}").                                                   |
+| 5        | mínimo                 | The value provided should not be less than specified in the schema ("{s1}").                                               |
+| 6        | exclusiveMinimum       | The value provided should be greater than specified in the schema ("{s1}").                                                |
+| 7        | maxLength              | The string is longer than specified in the schema.                                                                                            |
+| 8        | minLength              | The string is shorter than specified in the schema.                                                                                           |
+| 9        | modelo                 | The string "{s1}" does not match the pattern in the schema:{s2}.                                                              |
+| 10       | additionalItems        | Error while validating an array. JSON contains more elements than specified in the schema.                                    |
+| 11       | maxItems               | The array contains more items than specified in the schema.                                                                                   |
+| 12       | minItems               | The array contains less items than specified in the schema.                                                                                   |
+| 13       | uniqueItems            | Error while validating an array. Elements are not unique. Another instance of "{s1}" is already in the array. |
+| 14       | maxProperties          | The number of properties is greater than specified in the schema.                                                                             |
+| 15       | minProperties          | The number of properties is less than specified in the schema.                                                                                |
+| 16       | requerido              | Falta la propiedad requerida "{s1}".                                                                                                          |
+| 17       | additionalProperties   | No hay propiedades adicionales permitidas por el esquema. The property(ies) {s1} should be removed.        |
+| 18       | dependencias           | The property "{s1}" requires the property "{s2}".                                                                                             |
+| 19       | enum                   | Error while validating against 'enum' key. "{s1}" does not match any enum element in the schema.                              |
+| 20       | type                   | Incorrect type. Expected type is: {s1}                                                                                        |
+| 21       | oneOf                  | El JSON coincide con más de un valor.                                                                                                         |
+| 22       | oneOf                  | The JSON does not match any value.                                                                                                            |
+| 23       | not                    | The JSON is invalid against the value of 'not'.                                                                                               |
+| 24       | format                 | The string does not match ("{s1}")                                                                                                         |
+| 25       | const                  | Value "{s1}" does not match the 'const' value in the schema.                                                                                  |
+| 26       | unevalutedProperties   | Unevaluated properties are not allowed by the schema. The property(ies) {s1} should be removed.            |
+| 27       | unevalutedItems        | Unevaluated array items are not allowed. Item at index {s1} is not covered by any schema.                                     |
+| 28       | propertyNames          | Property name "{s1}" does not validate against the 'propertyNames' schema.                                                                    |
+| 29       | contiene               | El array no contiene ningún elemento que coincida con el esquema 'contains'.                                                                  |
+| 30       | contiene               | Array must contain at least {s1} items matching the 'contains' schema, but only {s2} were found.                                              |
+| 31       | contiene               | El array debe contener como máximo {s1} elementos que coincidan con el esquema 'contains', pero se ha encontrado {s2}.                        |
+| 32       | requerido              | The property "{s1}" requires the property "{s2}" to be present.                                                                               |
+| 35       | prefixItems            | Array items at the beginning do not match the 'prefixItems' schemas.                                                                          |
+| 36       | dependentSchemas       | Validation failed against 'dependentSchemas'.                                                                                                 |
+| 37       | $ref                   | Reference could not be resolved.                                                                                                              |
+| 38       | $ref                   | Circular reference detected.                                                                                                                  |
 
 </details>
 

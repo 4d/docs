@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Paramètres | Type                       |                             | Description                                                                                                             |
 | ---------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur                  | &#8594; | Si spécifié, *object* est un nom d'objet (chaîne)<br/>Si omis, *object* est un champ ou une variable |
-| object     | any                        | &#8594; | Nom d'objet (si \* est spécifié) ou<br/>Champ ou variable (si \* est omis)        |
+| \*         | Opérateur                  | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
+| object     | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
 | formula    | 4D.Formula | &#8594; | Formule à assigner comme source de données                                                                              |
 
 <!-- END REF-->

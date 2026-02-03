@@ -56,7 +56,7 @@ shared singleton Class constructor()
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
 
@@ -81,7 +81,7 @@ Web ページのステートについての詳細な情報については、[Qod
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : Text )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
 
@@ -117,7 +117,7 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
 
@@ -152,7 +152,7 @@ myForm.setError("My error message")
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
@@ -187,7 +187,7 @@ myForm.setMessage("My information message")
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
 

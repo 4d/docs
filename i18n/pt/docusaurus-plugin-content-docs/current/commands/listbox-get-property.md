@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
-| Parâmetro | Tipo          |                             | Descrição                                                                                                            |
-| --------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| \*        | Operador      | &#8594; | If specified, object is an object name (string). If omitted, object is a variable |
-| object    | any           | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido)        |
-| property  | Integer       | &#8594; | Property whose value you want to get                                                                                 |
-| Resultado | Integer, Text | &#8592; | Valor atual                                                                                                          |
+| Parâmetro | Tipo           |                             | Descrição                                                                                                            |
+| --------- | -------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| \*        | Operador       | &#8594; | If specified, object is an object name (string). If omitted, object is a variable |
+| object    | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)           |
+| property  | Integer        | &#8594; | Property whose value you want to get                                                                                 |
+| Resultado | any            | &#8592; | Current value (Integer, Text)                                                                     |
 
 <!-- END REF-->
 

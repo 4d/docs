@@ -5,14 +5,14 @@ title: VP SET NUM VALUE
 
 <!-- REF #_method_.VP SET NUM VALUE.Syntax -->
 
-**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } ) <!-- END REF -->
+**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Real { ; *formatPattern* : Text } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 
 | 引数            | 型      |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
 | rangeObj      | Object | -> | レンジオブジェクト |                  |
-| numberValue   | Number | -> | 設定する数値    |                  |
+| numberValue   | Real   | -> | 設定する数値    |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
 ## 説明

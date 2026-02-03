@@ -13,7 +13,7 @@ title: VP Get data context
 
 <!-- REF #_method_.VP Get data context.Syntax -->
 
-**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
+**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #_method_.VP Get data context.Params -->
 
@@ -21,7 +21,7 @@ title: VP Get data context
 | ---------- | ------- | --------------------------- | ----------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                         |                  |
 | sheet      | Integer | ->                          | データコンテキストを取得するシートのインデックス                        |                  |
-| 戻り値        | Variant | <- | データコンテキスト. Object or Collection | <!-- END REF --> |
+| 戻り値        | any     | <- | データコンテキスト. Object or Collection | <!-- END REF --> |
 
 ## 説明
 
