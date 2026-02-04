@@ -367,7 +367,7 @@ Comments are inactive lines of code. These lines are not interpreted by the 4D l
 There are two ways to create comments:
 
 - `//` for single line comments
-- `/*...*/` for inline or multiline commnents.
+- `/...**/` for inline or multiline commnents.
 
 Both styles of comments can be used simultaneously.
 

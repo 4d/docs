@@ -49,7 +49,7 @@ Name of an existing [user class](../Concepts/classes.md#class-definition) to ass
 
 Associating a class to the form provides the following benefits:
 
-- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations: 
+- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression*...*). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations: 
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 

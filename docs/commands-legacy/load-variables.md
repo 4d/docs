@@ -5,7 +5,7 @@ slug: /commands/load-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
+<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* : Text ; *variable* : Variable {; ...*variable* : Variable} )<!-- END REF-->
 <!--REF #_command_.LOAD VARIABLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

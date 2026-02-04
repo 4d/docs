@@ -34,7 +34,7 @@ By default, the command returns values as strings. You can use the optional *typ
 | Is text       | Integer | 2     |
 | Is time       | Integer | 11    |
 
-**Warning**: Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print()**...) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
+**Warning**: Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print()*...*) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
 
 ## Example 1 
 
