@@ -5,7 +5,7 @@ slug: /commands/execute-on-server
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procedure* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procedure* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; ...*param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Execute on server.Params-->
 <div class="no-index">
 
