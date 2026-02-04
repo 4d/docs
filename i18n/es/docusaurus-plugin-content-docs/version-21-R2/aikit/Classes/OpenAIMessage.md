@@ -122,19 +122,19 @@ Cuando reciba un mensaje de llamada de herramienta, debe:
 **Ejemplo de respuesta de la herramienta:**
 
 ```4d
-// Parse the function arguments (if any)
+// Analizar los argumentos de la función (si los hay)
 var $arguments : Object := JSON Parse($toolCall.function.arguments)
 
-// Execute your code corresponding to "get_database_tables" 
+// Ejecuta el código correspondiente a "get_database_tables" 
 var $tableNames: Text := OB Keys(ds).join(", ")
 
-// Create the tool response message with the required tool_call_id
-var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
+// Creación del mensaje de respuesta de la herramienta con el tool_call_id requerido
+var $toolResponse:=cs.AIKit.OpenAIMessage. ew({ \
   role: "tool"; \
   tool_call_id: "call_12345"; \
-  content: $tableNames \
+  contenido: $tableNames \
 })
-// Add it to the conversation and continue
+// Añádala a la conversación y continuar
 ```
 
 **Importante:** el `tool_call_id` de su respuesta debe coincidir exactamente con el `id` de la llamada de la herramienta original. Esto permite que el modelo de IA asocie correctamente su respuesta con la llamada de función específica que se realizó.

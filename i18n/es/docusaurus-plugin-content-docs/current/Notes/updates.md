@@ -11,7 +11,7 @@ title: Notas del lanzamiento
 
 #### Cambios de comportamiento
 
-- The [`JSON Validate`](../commands/json-validate.md) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
+- El comando [`JSON Validate`](../commands/json-validate.md) ahora tiene en cuenta la llave *$schema* y genera un error si se declara una versión no soportada en el esquema.
 
 ## 4D 21 R2
 

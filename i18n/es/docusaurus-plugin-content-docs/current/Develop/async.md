@@ -67,7 +67,7 @@ In event-driven development, it is obvious that some code must be able to listen
 
 In the context of asynchronous execution, the following features place your code in listening mode:
 
-- [`CALL WORKER`](../commands-legacy/call-worker.md) executes the code for which it has been called, then returns to a listening status from where it can be called afterwards.
+- [`CALL WORKER`](../commands-legacy/call-worker.md) ejecuta el código para el que ha sido llamado, luego vuelve a un estado de escucha desde donde puede ser llamado posteriormente.
 - [`CALL FORM`](../commands-legacy/call-form.md) abre un formulario y lo hace escuchar los mensajes entrantes de la cola de eventos.
 - a call for a `wait()` listens for `terminate()` or `shutdown()` in a callback from any other instance.
 
@@ -87,7 +87,7 @@ In 4D, all objects are released [when no more references](../Concepts/dt_object.
 
 Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
 
-If you want to "force" the release of an object at any moment, use a `.shutdown()` or `terminate()` function; it triggers the onTerminate\` event ànd thus releases the object.
+Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\` así libera el objeto.
 
 ### Examples illustrating the common concept
 
@@ -187,5 +187,5 @@ $systemworker.wait(0.5) // Espera hasta 0.5 segundos para obtener información d
 
 ## Ver también
 
-[Blog post: Launch an external process asynchronously](https://blog.4d.com/launch-an-external-process-asynchronously/)<br/>
-[Asynchronous Call](../aikit/asynchronous-call.md)
+[Blog: Lanzar un proceso externo de forma asíncrona](https://blog.4d.com/launch-an-external-process-asynchronously/)<br/>
+[Llamada asíncrona](../aikit/asynchronous-call.md)

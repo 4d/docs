@@ -110,8 +110,8 @@ Lors de la création d'un token OTP en environnement client/serveur, vous devez 
 
 :::tip Article(s) de blog sur le sujet
 
-[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)<br/>
-[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
+[Intégrez des pages Qodly dans une zone Web 4D sans frais supplémentaires](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)<br/>
+[Améliorez votre interface Desktop avec des widgets Web en utilisant 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 

@@ -42,7 +42,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), la ent
   - the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. Ya no se realiza ningún tratamiento específico en estas URL,
   - los procesos web ya no se reciclan cuando la opción [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) está activada.
 - Las sesiones usuario web ahora son devueltas por [`Process activity`](../commands/process-activity.md).
-- PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
+- Los comandos PHP están son [obsoletos](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) y ya no deberían ser utilizados en sus desarrollos.
 - El comando [`HIGHLIGHT TEXT`](../commands/highlight-text) es ahora compatible en el contexto de los subformularios.
 - En cliente/servidor, se elimina la noción de procesos locales. El "$" ya no tiene un significado específico en los nombres de proceso y el parámetro \* en [`REGISTER CLIENT`](../commands/register-client) se ignora.
 - **Componentes ya no integrados**: a partir de 4D 21, los componentes desarrollados por 4D (4D NetKit, 4D SVG..., ver [esta lista](../Extensions/overview.md#components-developed-by-4d)) ya no están integrados en la aplicación 4D. Cuando se actualiza un proyecto a 4D 21 o superior, se muestra un cuadro de diálogo:<br/>

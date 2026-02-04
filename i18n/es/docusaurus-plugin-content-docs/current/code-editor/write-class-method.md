@@ -15,7 +15,7 @@ El Editor de Código 4D ofrece una comprobación básica de errores de sintaxis.
 
 :::note
 
-If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension.
+Si está acostumbrado a codificar con **VS Code**, también puede utilizar este editor con el lenguaje 4D después de instalar la extensión [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode).
 
 :::
 
