@@ -14,14 +14,14 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 
 | 4D Server           | Interprété, projet ([client connecté en local](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interprété, projet (sans client connecté en local) ou binaire | Compilé         |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | --------------- |
-| Serveur REST        | coopératif                                                                                                             | preemptive                                                    | preemptive      |
+| Serveur REST        | coopératif                                                                                                             | préemptif                                                     | préemptif       |
 | Serveur Web         | coopératif                                                                                                             | coopératif                                                    | *paramètre web* |
 | Server Web Services | coopératif                                                                                                             | coopératif                                                    | *paramètre web* |
 | Ancien REST         | coopératif                                                                                                             | *paramètre web*                                               | *paramètre web* |
 
 | 4D distant/monoposte | Interprété | Compilé         |
 | -------------------- | ---------- | --------------- |
-| Serveur REST         | coopératif | preemptive      |
+| Serveur REST         | coopératif | préemptif       |
 | Serveur Web          | coopératif | *paramètre web* |
 | Server Web Services  | coopératif | *paramètre web* |
 | Ancien REST          | coopératif | *paramètre web* |
