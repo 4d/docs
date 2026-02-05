@@ -44,37 +44,38 @@ A noter que pour des raisons techniques, les attributs de certains éléments ai
 
 **Eléments dont les attributs sont modifiables**   
 
-| svg                                                                                              | Restrictions :                                                                                                            |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| \- "width" et "height" ne sont pas modifiables (1)                                               |                                                                                                                           |
-| \- "viewBox" n'est modifiable que si "width" et "height" sont définis dans le document d’origine |                                                                                                                           |
-| g                                                                                                |                                                                                                                           |
-| defs                                                                                             |                                                                                                                           |
-| use                                                                                              |                                                                                                                           |
-| filter                                                                                           | Restriction : les éléments enfants fe\_xxx ne sont pas modifiables                                                        |
-| circle                                                                                           |                                                                                                                           |
-| ellipse                                                                                          |                                                                                                                           |
-| line                                                                                             |                                                                                                                           |
-| polyline                                                                                         |                                                                                                                           |
-| polygon                                                                                          |                                                                                                                           |
-| path                                                                                             |                                                                                                                           |
-| rect                                                                                             |                                                                                                                           |
-| text, tspan, textArea                                                                            | L’attribut spécifique "4d-text" vous permet de modifier le texte d’un élément "text", "tspan" ou "textArea" (cf. exemple) |
-| Image                                                                                            |                                                                                                                           |
+|Eléments | Commentaires|
+|---|---|
+| svg | Restrictions: <ul><li>"width" et "height" ne sont pas modifiables (1) </li><li>"viewBox" n'est modifiable que si "width" et "height" sont définis dans le document d’origine </li></ul>|
+g |  |
+| defs  |  |
+| use   |  |
+| filter  | Restriction : les éléments enfants fe\_xxx ne sont pas modifiables                                                        |
+| circle  |  |
+| ellipse |  |
+| line  |  |
+| polyline  |  |
+| polygon  |  |
+| path  |   |
+| rect | |
+| text, tspan, textArea | L’attribut spécifique "4d-text" vous permet de modifier le texte d’un élément "text", "tspan" ou "textArea" (cf. exemple) |
+| Image  |  |
 
 **Eléments dont les attributs ne sont pas modifiables**   
 
+|Eléments|Commentaire|
+|---|---|
 | linearGradient, radialGradient, Stop, solidColor, marker, symbol, clipPath, filter et les éléments commençant par fe, style, pattern | Cet ensemble désigne tous les éléments référençables ou contenus dans un élément référençable. Cela signifie qu’il n’est pas possible par exemple de redéfinir les attributs d’un gradient (mais il est possible de changer le gradient utilisé). De même, pour changer un marqueur de couleur noire en marqueur rouge, il faudra définir deux marqueurs dans le document SVG (un noir et un rouge) et sélectionner l’un ou l’autre. Il n’est pas possible non plus par exemple de modifier la couleur d'un rectangle s’il a pour parent un élément symbol ou marker |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 
 **Attributs non modifiables**  
 
-| id ou xml:id       |                                                          |
-| ------------------ | -------------------------------------------------------- |
+|Attribut|Commentaire|
+|---|---|
+| id ou xml:id       |      
 | lang ou xml:lang   |                                                          |
 | class ou xml:class |                                                          |
 | width, height      | Concerne les attributs de l’élément 'svg' uniquement (1) |
-
 (1) Ces attributs ne peuvent être modifiés car ils définissent et structurent l’image résultante. Les attributs *width* et *height* de l’élément *svg* servent à définir les dimensions initiales de l’image dans 4D et ces dimensions doivent rester constantes après la création de l’image (il est toutefois possible de modifier les dimensions de l’image résultante avec la commande [TRANSFORM PICTURE](transform-picture.md) de 4D).
 
 Reportez-vous également à la description de la commande [SVG GET ATTRIBUTE](svg-get-attribute.md) pour obtenir la liste des attributs 4D réservés et dédiés à l’animation.
