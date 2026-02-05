@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *semaforo* {; *tickCount*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Semaphore.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | semaforo | Text | &#8594;  | Semáforo a testar e estabelecer |
 | tickCount | Integer | &#8594;  | Máximo tempo de espera |
 | Resultado | Boolean | &#8592; | O semáforo foi criado corretamente (FALSE) ou O semáforo já tinha sido criado (TRUE) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

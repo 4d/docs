@@ -7,12 +7,14 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Syntax-->**SET WINDOW DOCUMENT ICON** ( *winRef* )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* ; *image* )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* ; *file* )<br/>**SET WINDOW DOCUMENT ICON** (  *winRef* ; *image* ; *file* )<!-- END REF-->
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | winRef | Integer | &#8594;  | Window reference number |
 | image | Picture | &#8594;  | Custom icon |
 | file | 4D.File, 4D.Folder | &#8594;  | File path or folder path |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

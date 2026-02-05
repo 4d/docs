@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Cache info.Syntax-->**Cache info** ( *bdFiltro* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | bdFiltro | Object | &#8594; | Define a lista de atributos a ser retornada (filtrada por banco de dados) |
 | Resultado | Object | &#8592; | Informação sobre cache |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

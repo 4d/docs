@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get formulas.Syntax-->**WP Get formulas** ( *targetObj* ) : Collection<!-- END REF-->
 <!--REF #_command_.WP Get formulas.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | Function result | Collection | &#8592; | Collection of formulas |
-
+</div>
 <!-- END REF-->
 
 ## Description 

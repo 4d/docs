@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Record number.Syntax-->**Record number** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return the number of the current record, or Default table, if omitted |
 | Function result | Integer | &#8592; | Current record number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *srcPathname* ; *dstPathname* )<!-- END REF-->
 <!--REF #_command_.MOVE DOCUMENT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | srcPathname | Text | &#8594;  | 既存ドキュメントへの完全なパス名 |
 | dstPathname | Text | &#8594;  | 移動先のパス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

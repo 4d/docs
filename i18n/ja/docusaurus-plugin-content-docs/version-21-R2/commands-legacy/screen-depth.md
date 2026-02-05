@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *depth* : Integer ; *color* : Integer {; *screen* : Integer} )<!-- END REF-->
 <!--REF #_command_.SCREEN DEPTH.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | depth | Integer | &#8592; | 画面の深度 (カラーの数 = 2^深度) |
 | color | Integer | &#8592; | 1 = カラー画面、0 = 白黒またはグレイスケール |
 | screen | Integer | &#8594; | 画面番号、または省略した場合には主画面(メインスクリーン) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

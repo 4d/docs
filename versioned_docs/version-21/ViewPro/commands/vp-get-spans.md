@@ -7,11 +7,14 @@ title: VP Get spans
 **VP Get spans** ( *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get spans.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
-|Result  |Object|<-|Object of cell spans in the defined range|<!-- END REF -->
+|Result  |Object|<-|Object of cell spans in the defined range|
+</div>
+<!-- END REF -->
 
 ## Description
 

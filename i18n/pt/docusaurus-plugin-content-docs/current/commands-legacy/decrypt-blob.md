@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDecifrar* : Blob  ; *enviarChavePub* : Blob  {; *recepChavePriv* : Blob } )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | aDecifrar | Blob | &#8596; | Dados a decifrar |
 |  |  |  | Dados decifrados |
 | enviarChavePub | Blob | &#8594; | Chave pública do emissor |
 | recepChavePriv | Blob | &#8594; | Chave privada do receptor |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

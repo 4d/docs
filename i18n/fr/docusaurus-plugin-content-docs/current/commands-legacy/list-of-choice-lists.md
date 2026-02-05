@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *tabNums* : Integer array ; *tabNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabNums | Integer array | &#8592; | Numéros des énumérations |
 | tabNoms | Text array | &#8592; | Noms des énumérations |
-
+</div>
 <!-- END REF-->
 
 #### Description 

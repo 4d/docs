@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *tipoMetodo* : Integer {; *laTabla*}{; *nomObjeto* : Text{; *nomObjetoForm* : Text}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tipoMetodo | Integer | &#8594; | Selector de tipo de objeto |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomObjetoForm | Text | &#8592; | Nombre del objeto de formulario |
 | * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 | resultado | Text | &#8592; | Ruta de acceso completa del objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

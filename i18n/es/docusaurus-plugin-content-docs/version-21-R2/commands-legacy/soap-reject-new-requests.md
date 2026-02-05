@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *estadoRechazar* : Boolean )<!-- END REF-->
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | estadoRechazar | Boolean | &#8594; | True si se rechazan las nuevas solicitudes, de lo contrario false |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

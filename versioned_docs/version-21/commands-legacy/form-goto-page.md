@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *pageNumber* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GOTO PAGE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pageNumber | Integer | &#8594;  | Form page to display |
 | * | Operator | &#8594;  | Change page of current subform |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Picture size.Syntax-->**Picture size** ( *imagen* : Picture ) : Integer<!-- END REF-->
 <!--REF #_command_.Picture size.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | imagen | Picture | &#8594; | Imagen para la cual devolver el tamaño en bytes |
 | Resultado | Integer | &#8592; | Tamaño en bytes de la imagen |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

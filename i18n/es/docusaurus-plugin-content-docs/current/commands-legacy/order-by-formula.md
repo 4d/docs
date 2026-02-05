@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *tabla* : Table ; *formula* : Expression {; >,<} {; ...(*formula* : Expression {; >,<})} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla para la cual ordenar la selección de registros |
 | formula | Expression | &#8594; | Fórmula de ordenación de los registros (puede ser de tipo Alfanumérico, Real, Entero,  Entero largo, Fecha, Hora o Booleano) |
 | > o < | Operador | &#8594; | Sentido de la ordenación para cada nivel: > orden cresciente, u < orden decreciente |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

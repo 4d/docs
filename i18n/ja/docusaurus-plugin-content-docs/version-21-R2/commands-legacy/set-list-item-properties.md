@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *list* : Integer, Text ; *itemRef* : 演算子, 倍長整数 ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<br/>**SET LIST ITEM PROPERTIES** ( * ; *list* : Integer, Text ; * ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | styles | Integer | &#8594; | 項目のフォントスタイル |
 | icon | Text, Integer | &#8594; | ピクチャー名または番号 (アイコンを使用しない場合は "" または 0) |
 | color | Integer | &#8594; | RGBカラー値 または -1 = 元のカラーにリセット |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

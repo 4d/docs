@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Arctan.Syntax-->**Arctan** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Arctan.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | 角度を求めるタンジェント値 |
 | 戻り値 | Real | &#8592; | ラジアン角度 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

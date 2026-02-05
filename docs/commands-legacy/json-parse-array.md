@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | jsonString | Text | &#8594;  | JSON string to parse |
 | array | Array | &#8592; | Array containing result from parsing of JSON string |
-
+</div>
 <!-- END REF-->
 
 ## Description 

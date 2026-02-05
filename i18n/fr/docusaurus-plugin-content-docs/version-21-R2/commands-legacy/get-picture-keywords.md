@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *image* : Picture ; *tabMotsclés* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | image | Picture | &#8594; | Image dont vous souhaitez lire les mots-clés associés |
 | tabMotsclés | Text array | &#8592; | Tableau contenant les mots-clés extraits |
 | * | Opérateur | &#8594; | Si passé = utiliser les valeurs distinctes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

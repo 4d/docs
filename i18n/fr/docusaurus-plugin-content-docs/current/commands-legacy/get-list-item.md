@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *liste* : Integer, Text ; positionElém ; *réfElément* : Integer ; *libelléElément* : Text {; sous_Liste ; *déployée* : Boolean} )<br/>**GET LIST ITEM** ( {* ;} *liste* : Integer, Text ; * ; *réfElément* : Integer ; *libelléElément* : Text {; sous_Liste ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | libelléElément | Text | &#8592; | Libellé de l'élément |
 | sous_Liste | Integer | &#8592; | Numéro de référence de sous-liste (s'il y en a) |
 | déployée | Boolean | &#8592; | Si une sous-liste est rattachée à l'élément : Vrai = la sous-liste est déployée Faux = la sous-liste est contractée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

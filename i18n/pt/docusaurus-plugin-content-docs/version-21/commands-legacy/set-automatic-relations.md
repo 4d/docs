@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *um* {; *muitos*} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | um | Boolean | &#8594;  | Estado de todas as relação Muitos a Um |
 | muitos | Boolean | &#8594;  | Estado de todas as relações Um a Muitos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*tabla*}{;}{*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla de la cual debe devolverse una selección de  registros , o Tabla por defecto, si se omite |
 | * | Operador | &#8594;  | Si se pasa, no se muestra la barra de desplazamiento |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

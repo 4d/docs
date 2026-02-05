@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( {* ;} *objeto* ; *inicioSel* ; *fimSel* ; *nomeAtributo* ; *valorAtrib* {; *nomeAtributo2* ; *valorAtrib2* ; ... ; *nomeAtributoN* ; *valorAtribN*} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | fimSel | Integer | &#8594;  | Fim da seleção de texto |
 | nomeAtributo | Integer | &#8594;  | Atributo a ser lido |
 | valorAtrib | Variable | &#8592; | Valor atual do atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

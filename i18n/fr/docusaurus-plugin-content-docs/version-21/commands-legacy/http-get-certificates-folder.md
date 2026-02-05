@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Get certificates folder.Syntax-->**HTTP Get certificates folder**  : Text<!-- END REF-->
 <!--REF #_command_.HTTP Get certificates folder.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Text | &#8592; | Chemin d’accès complet du dossier de certificats actif |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilité

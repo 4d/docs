@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *BLOB* {; *compresion*} )<!-- END REF-->
 <!--REF #_command_.COMPRESS BLOB.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB a comprimir |
 | compresion | Integer | &#8594;  | Si no se omite: 1, compresión máxima posible 2, velocidad de compresión máxima |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

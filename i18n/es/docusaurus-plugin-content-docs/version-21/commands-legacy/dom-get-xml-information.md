@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* ; *infoXML* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | Referencia del elemento XML raíz |
 | infoXML | Integer | &#8594;  | Tipo de información a obtener |
 | Resultado | Text | &#8592; | Valor de la información XML |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( {* ;} *objeto* ; *textoURL* ; *enderecoURL* {; *inicioSel* {; *fimSel*}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT URL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | enderecoURL | Text | &#8594;  | Endereço do URL |
 | inicioSel | Integer | &#8594;  | Inicio da seleção |
 | fimSel | Integer | &#8594;  | Fim da seleção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

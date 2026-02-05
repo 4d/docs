@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *tabela* : Table ; *titulosCampos* : Text array ; *numCampos* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET FIELD TITLES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para qual você deseja encontrar os nomes dos campos |
 | titulosCampos | Text array | &#8592; | Nomes atuais dos campos |
 | numCampos | Integer array | &#8592; | Números de Campos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

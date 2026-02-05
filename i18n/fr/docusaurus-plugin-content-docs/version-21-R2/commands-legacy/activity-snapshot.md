@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** (*tabActivités* : Tableau objet, Tableau texte {; *} )<br/>**ACTIVITY SNAPSHOT** ( *tabUUID* : Tableau objet, Tableau texte ; *tabDébut* : Text array ; *tabDurée* : Integer array ; *tabInfo* : Text array {; *tabDétails* : Object array} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabActivités &#124; tabUUID | Tableau objet, Tableau texte | &#8592; | Description complète des opérations (tableau objet) ouUUIDs des opérations (tableau texte) |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | tabInfo | Text array | &#8592; | Description |
 | tabDétails | Object array | &#8592; | Détails du contexte et Sous-opérations (le cas échéant) |
 | * | Opérateur | &#8594; | Si passé = Lire activité serveur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

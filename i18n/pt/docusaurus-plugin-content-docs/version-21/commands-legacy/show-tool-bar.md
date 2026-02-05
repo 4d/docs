@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SHOW TOOL BAR.Syntax-->**SHOW TOOL BAR**<!-- END REF-->
 <!--REF #_command_.SHOW TOOL BAR.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

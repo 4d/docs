@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *objeto* {; *anchoMin* {; *anchoMax*}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | anchoMin | Integer | &#8592; | Ancho mínimo de la columna (en píxeles) |
 | anchoMax | Integer | &#8592; | Ancho máximo de la columna (en píxeles) |
 | Resultado | Integer | &#8592; | Ancho de la columna (en píxeles) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

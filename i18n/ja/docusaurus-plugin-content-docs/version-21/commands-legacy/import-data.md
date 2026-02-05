@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT DATA.Syntax-->**IMPORT DATA** ( *fileName* {; *project* {; *}} )<!-- END REF-->
 <!--REF #_command_.IMPORT DATA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | インポートファイルのフルパス名 |
 | project | Text, Blob | &#8594;  | インポートプロジェクト |
 | &#8592; | インポートプロジェクトの新しい内容 (*引数指定時) |
 | * | 演算子 | &#8594;  | インポートダイアログを表示し プロジェクトの内容を更新 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

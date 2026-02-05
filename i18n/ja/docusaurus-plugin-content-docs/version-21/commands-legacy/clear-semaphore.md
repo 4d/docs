@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *semaphore* )<!-- END REF-->
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | semaphore | Text | &#8594;  | クリアするセマフォ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* ; *encoding* ; *version* ; *standalone* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Reference of open document |
 | encoding | Text | &#8592; | XML document character set |
 | version | Text | &#8592; | XML version |
 | standalone | Boolean | &#8592; | True = document is standalone, otherwise False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

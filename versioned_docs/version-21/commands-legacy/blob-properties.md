@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *blob* ; *compressed* {; *expandedSize* {; *currentSize*}} )<!-- END REF-->
 <!--REF #_command_.BLOB PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB for which to get information |
 | compressed | Integer | &#8592; | 0 = BLOB is not compressed, 1 = Compact compression, 2 = Fast compression, -1 = GZIP Best compression, -2 = GZIP Fast compression |
 | expandedSize | Integer | &#8592; | Size of BLOB (in bytes) when not compressed |
 | currentSize | Integer | &#8592; | Current size of BLOB (in bytes) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

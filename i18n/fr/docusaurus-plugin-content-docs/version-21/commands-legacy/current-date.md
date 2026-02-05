@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current date.Syntax-->**Current date** {( * )} : Date<!-- END REF-->
 <!--REF #_command_.Current date.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Retourne la date du jour du serveur |
 | Résultat | Date | &#8592; | Date du jour |
-
+</div>
 <!-- END REF-->
 
 ## Description 

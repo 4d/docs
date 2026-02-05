@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Length.Syntax-->**Length** ( *string* ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | string | Text | &#8594;  | 長さを調べる文字列 |
 | 戻り値 | Integer | &#8592; | 文字列の長さ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

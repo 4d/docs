@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** {( *dialType* )}<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dialType | Integer | &#8594;  | Dialog box to be displayed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

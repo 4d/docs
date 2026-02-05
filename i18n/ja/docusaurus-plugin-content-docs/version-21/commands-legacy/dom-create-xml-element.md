@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* ; *xPath* {; *attrName* ; *attrValue*} {; *attrName2* ; *attrValue2* ; ... ; *attrNameN* ; *attrValueN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | ルートXML要素参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | attrName | Text | &#8594;  | 設定する属性 |
 | attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | 新しい属性値 |
 | 戻り値 | Text | &#8592; | 作成されたXML要素の参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

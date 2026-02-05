@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resNum* : Integer ; *strNum* : Integer {; *resArchivo* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get indexed string.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | resNum | Integer | &#8594; | Número de recurso o Atributo "id" del elemento "grupo" (XLIFF) |
 | strNum | Integer | &#8594; | Número de cadena o Atributo "id" del elemento "trans-unit" (XLIFF) |
 | resArchivo | Time | &#8594; | Número de referencia del archivo de recursos Si se omite: todos los archivos XLIFF o los archivos de recursos abiertos |
 | Resultado | Text | &#8592; | Valor de la cadena indexada |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

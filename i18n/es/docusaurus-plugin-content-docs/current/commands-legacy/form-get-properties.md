@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*tabla* : Table ;} *nomForm* : Text ; *ancho* : Integer ; *alto* : Integer {; *numPags* : Integer {; *largoFijo* : Boolean {; *altFijo* : Boolean {; *titulo* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla del formulario o tabla por defecto, si se omite |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | largoFijo | Boolean | &#8592; | Verdadero = Ancho fijo, Falso = Ancho variable |
 | altFijo | Boolean | &#8592; | Verdadero = Altura fija, Falso = Altura variable |
 | titulo | Text | &#8592; | Título de la ventana del formulario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

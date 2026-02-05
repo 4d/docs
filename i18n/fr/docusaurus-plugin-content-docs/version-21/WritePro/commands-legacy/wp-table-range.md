@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table range.Syntax-->**WP Table range** ( *objCible* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Table range.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | Résultat | Object | &#8592; | Objet plage contenant uniquement les tableaux |
-
+</div>
 <!-- END REF-->
 
 ## Compatibilité 

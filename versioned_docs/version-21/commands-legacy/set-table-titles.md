@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TABLE TITLES.Syntax-->**SET TABLE TITLES** {( *tableTitles* ; *tableNumbers* {; *})}<!-- END REF-->
 <!--REF #_command_.SET TABLE TITLES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableTitles | Text array | &#8594;  | Table names as they must appear in dialog boxes |
 | tableNumbers | Integer array | &#8594;  | Actual table numbers |
 | * | Operator | &#8594;  | Use the custom names in the formula editor |
-
+</div>
 <!-- END REF-->
 
 ## Description 

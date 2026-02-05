@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get window title.Syntax-->**Get window title** {( *ventana* )} : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ventana | Integer | &#8594;  | Número de referencia de la ventana o Ventana del primer plano del proceso actual si se omite |
 | Resultado | Text | &#8592; | Título de la ventana |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

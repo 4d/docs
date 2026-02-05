@@ -7,6 +7,7 @@ title: VP Find
 **VP Find** (  *rangeObj* : Object ; *searchValue* : Text ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object ; *replaceValue* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Find.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -14,7 +15,9 @@ title: VP Find
 |searchValue |Text|->|Search value|
 |searchCondition |Object|->|Object containing search condition(s)|
 |replaceValue  |Text|->|Replacement value|
-|Result|Object|<-|Range object|<!-- END REF -->
+|Result|Object|<-|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

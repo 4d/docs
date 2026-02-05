@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Variance.Syntax-->**Variance** ( *series* ) : Real<!-- END REF-->
 <!--REF #_command_.Variance.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Dados para os quais se retorna a variância |
 | Resultado | Real | &#8592; | Variância da série |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

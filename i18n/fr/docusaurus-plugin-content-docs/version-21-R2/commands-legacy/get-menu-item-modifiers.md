@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* : Integer, Text ; *ligneMenu* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item modifiers.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | Référence de menu ouNuméro de menu |
 | ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
 | process | Integer | &#8594; | Numéro de process |
 | Résultat | Integer | &#8592; | Touche(s) de modification associée(s) à la ligne de menu |
-
+</div>
 <!-- END REF-->
 
 ## Description 

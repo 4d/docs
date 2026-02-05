@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( {* ;} *object* ; *vPosition* {; *hPosition*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数、フィールドまたはテーブル (* 省略時) |
 | vPosition | Integer | &#8592; | 表示されている最初の行数、または ピクセル単位の縦スクロール (ピクチャ) |
 | hPosition | Integer | &#8592; | 表示されている最初の列数、または<br/>ピクセル単位の横スクロール (ピクチャ) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

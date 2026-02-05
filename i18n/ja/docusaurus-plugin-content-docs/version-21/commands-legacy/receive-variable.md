@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE VARIABLE.Syntax-->**RECEIVE VARIABLE** ( *variable* )<!-- END REF-->
 <!--REF #_command_.RECEIVE VARIABLE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | variable | Variable | &#8592; | データを受信する変数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

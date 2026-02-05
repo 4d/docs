@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*aTable* : Table ;} *set* : Text ; *document* : Text )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to which the set belongs, or Default table, if omitted |
 | set | Text | &#8594;  | Name of the set to be created in memory |
 | document | Text | &#8594;  | Document holding the set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

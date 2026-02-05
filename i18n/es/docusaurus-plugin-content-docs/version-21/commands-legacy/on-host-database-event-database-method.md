@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Host Database Event database method.Syntax-->$1 -> Método base On Host Database Event<!-- END REF-->
 <!--REF #_command_.On Host Database Event database method.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $1 | Entero largo | &#8592; | Código del evento |
-
+</div>
 <!-- END REF-->
 
 ## Description 

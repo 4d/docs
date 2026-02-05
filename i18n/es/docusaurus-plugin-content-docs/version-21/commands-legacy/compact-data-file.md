@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *rutaEstructura* ; *rutaDatos* {; *carpetaArchivo* {; *opcion* {; *metodo*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaEstructura | Text | &#8594;  | Ruta de acceso al archivo de estructura |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | opcion | Integer | &#8594;  | Opciones de compactación |
 | metodo | Text | &#8594;  | Nombre del método 4D de retrollamada |
 | Resultado | Text | &#8592; | Ruta de acceso completa de la carpeta que contiene el archivo de datos original |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( * ; *objet* : Text ; *url* : Text ; *description* : Text ; *codeErreur* : Integer )<br/>**WA GET LAST URL ERROR** ( *objet* : Field, Variable ; *url* : Text ; *description* : Text ; *codeErreur* : Integer )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | url | Text | &#8592; | URL à l’origine de l’erreur |
 | description | Text | &#8592; | Description de l’erreur (macOS) |
 | codeErreur | Integer | &#8592; | Code d'erreur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

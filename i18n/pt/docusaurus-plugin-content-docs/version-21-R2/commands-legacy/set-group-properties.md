@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *refGrupo* : Integer ; *nome* : Text ; *proprietario* : Integer {; *membros* : Integer array} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refGrupo | Integer | &#8596; | *in:* Unique ID number of group, -1 for adding a group <br/>*out:* Unique ID number of added group (if any) |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | proprietario | Integer | &#8594; | Número de ID do novo proprietário do grupo |
 | membros | Integer array | &#8594; | Novos membros do grupo |
 | Resultado | Integer | &#8592; | Nº de ID do novo grupo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

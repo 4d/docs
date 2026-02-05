@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *elementRef* {; *childElemName* {; *childElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get last child XML element.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML要素参照 |
 | childElemName | Text | &#8592; | 子要素名 |
 | childElemValue | Text | &#8592; | 子要素値 |
 | 戻り値 | Text | &#8592; | XML要素参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *document* ; *nom* ; *préfixe* ; *nomsAttributs* ; *valeursAttributs* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Référence du document ouvert |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | préfixe | Text | &#8592; | Espace de nommage |
 | nomsAttributs | Text array | &#8592; | Noms des attributs |
 | valeursAttributs | Text array | &#8592; | Valeurs des attributs |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *campo* )<!-- END REF-->
 <!--REF #_command_.CREATE RELATED ONE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campo | Field | &#8594;  | Campo Muchos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

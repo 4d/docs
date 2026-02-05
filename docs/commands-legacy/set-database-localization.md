@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *languageCode* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | languageCode | Text | &#8594;  | Language selector |
 | * | Operator | &#8594;  | Scope of command |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP USE PAGE SETUP.Syntax-->**WP USE PAGE SETUP** ( *wpDoc* )<!-- END REF-->
 <!--REF #_command_.WP USE PAGE SETUP.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Proドキュメント |
-
+</div>
 <!-- END REF-->
 
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*

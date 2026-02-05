@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Max.Syntax-->**Max** ( *series* {; *attributePath*} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | 最大値を求めるデータ |
 | attributePath | Text | &#8594;  | 最大値を取得したい属性のパス |
 | 戻り値 | Number, Date | &#8592; | series中の最大値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

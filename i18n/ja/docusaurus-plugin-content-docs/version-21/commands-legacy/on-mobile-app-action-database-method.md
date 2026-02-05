@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Mobile App Action database method.Syntax-->**mobileInfo** -> On Mobile App Action データベースメソッド : Object<!-- END REF-->
 <!--REF #_command_.On Mobile App Action database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | mobileInfo | Object | &#8594;  | モバイルアプリケーションから渡された情報 |
 | 戻り値 | Object | &#8592; | アクションステータス＆データ同期 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

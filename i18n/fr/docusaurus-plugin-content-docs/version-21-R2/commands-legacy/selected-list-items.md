@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *liste* : Integer, Text {; *tabEléments* : Integer array {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tabEléments | Integer array | &#8592; | Si 2e * omis : Tableau des positions des éléments sélectionnés dans la ou les liste(s) Si 2e * passé : Tableau des références des éléments sélectionnés dans la ou les liste(s) |
 | * | Opérateur | &#8594; | Si omis : Position(s) d’élément(s) Si passé : Référence(s) d’élément(s) |
 | Résultat | Integer | &#8592; | Si 2e * omis : Position de l'élément sélectionné parmi la ou les liste(s) déployée(s)/contractée(s) Si 2e * passé : Référence de l'élément sélectionné |
-
+</div>
 <!-- END REF-->
 
 ## Description 

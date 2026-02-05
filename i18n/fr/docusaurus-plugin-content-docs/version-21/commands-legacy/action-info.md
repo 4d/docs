@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *cible*} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Nom de l'action standard ou syntaxe incluant un paramètre si celui-ci est requis |
 | cible | Integer | &#8594;  | Définit la cible de l'action où lire les informations : formulaire principal ou formulaire courant |
 | Résultat | Object | &#8592; | Objet contenant le statut de l'action sous forme de booléens : isEnabled, isVisible, isChecked, isMixed, isUnknownState |
-
+</div>
 <!-- END REF-->
 
 ## Description 

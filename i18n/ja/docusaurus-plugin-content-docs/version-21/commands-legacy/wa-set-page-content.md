@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( {* ;} *object* ; *content* ; *baseURL* )<!-- END REF-->
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | content | Text | &#8594;  | HTMLソースコード |
 | baseURL | Text | &#8594;  | 相対参照に使用するURL (macOS) |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

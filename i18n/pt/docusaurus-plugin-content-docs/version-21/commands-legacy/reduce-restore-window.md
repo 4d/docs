@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *janela* )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janela | Integer | &#8594;  | Número de referência de janela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

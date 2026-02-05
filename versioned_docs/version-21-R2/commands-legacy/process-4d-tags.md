@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *inputTemplate* : Text ; *outputResult* : Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | inputTemplate | Text | &#8594;  | Data containing tags to process |
 | outputResult | Text | &#8592; | Result from template execution |
 | param | Expression | &#8594;  | Parameter(s) passed to template being executed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

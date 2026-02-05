@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( {* ;} *objeto* ; *vPosicao* {; *hPosicao*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificar, objeto é um nome de objeto (string) se omitir, objeto é uma variável, um campo ou uma tabela. |
 | objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou variável ou campo ou tabela (se * é omitido) |
 | vPosicao | Integer | &#8592; | Número da primeira linha exibido ou deslocamento vertical em pixels (imagens) |
 | hPosicao | Integer | &#8592; | Número da primeira coluna exibido ou rolagem horizontal em pixels (imagens) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

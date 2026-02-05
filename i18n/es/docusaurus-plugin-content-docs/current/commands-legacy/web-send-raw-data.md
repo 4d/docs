@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *datos* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND RAW DATA.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | datos | Blob | &#8594; | Datos HTTP a enviar |
 | * | Operador | &#8594; | Envío en trozos (chunked) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

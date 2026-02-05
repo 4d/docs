@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Self.Syntax-->**Self**  : Pointer<!-- END REF-->
 <!--REF #_command_.Self.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Pointer | &#8592; | Pointer to form object (if any) whose method is currently being executed. Otherwise Nil (->[]) if outside of context |
-
+</div>
 <!-- END REF-->
 
 ## Nota de compatibilidade 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to use for data entry, or Default table, if omitted |
 | * | Operator |  &#8594;  | Hide scroll bars |
-
+</div>
 <!-- END REF-->
 
 ## Description 

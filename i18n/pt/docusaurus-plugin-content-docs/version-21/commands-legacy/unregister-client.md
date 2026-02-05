@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.UNREGISTER CLIENT.Syntax-->**UNREGISTER CLIENT**<!-- END REF-->
 <!--REF #_command_.UNREGISTER CLIENT.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* : Integer ; *esquerda* : Integer ; *superior* : Integer {; *direita* : Integer ; *bottom* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificar, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | superior | Integer | &#8594; | Coordenada superior do objeto em pixels |
 | direita | Integer | &#8594; | Coordenada direita do objeto em pixels |
 | bottom | Integer | &#8594; | Coordenada inferior do objeto em pixels |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

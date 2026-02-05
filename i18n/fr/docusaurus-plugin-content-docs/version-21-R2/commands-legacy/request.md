@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Request.Syntax-->**Request** ( *message* : Text {; *réponseDéfaut* : Text {; *titreBoutonOK* : Text {; *titreBoutonAnn* : Text}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | message | Text | &#8594; | Message à afficher dans la boîte de dialogue |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | titreBoutonOK | Text | &#8594; | Libellé du bouton OK |
 | titreBoutonAnn | Text | &#8594; | Libellé du bouton Annuler |
 | Résultat | Text | &#8592; | Valeur saisie par l'utilisateur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

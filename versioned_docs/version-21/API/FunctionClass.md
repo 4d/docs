@@ -121,11 +121,14 @@ Parameters are received within the method, in the order they are specified in th
 
 
 <!-- REF #FunctionClass.apply().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
 |Result|any|<-|Value from formula execution|
+</div>
 <!-- END REF -->
 
 
@@ -184,11 +187,14 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 
 <!-- REF #FunctionClass.call().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |params |any|->|Value(s) to be passed as $1...$n when formula is executed|
 |Result|any|<-|Value from formula execution|
+</div>
 <!-- END REF -->
 
 

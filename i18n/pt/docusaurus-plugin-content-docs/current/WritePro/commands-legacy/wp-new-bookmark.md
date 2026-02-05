@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP NEW BOOKMARK.Syntax-->**WP NEW BOOKMARK** ( *objFaixa* : Object ; *nomeBookm* : Text )<!-- END REF-->
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objFaixa | Object | &#8594;  | faixa 4D Write Pro |
 | nomeBookm | Text | &#8594;  | Nome da Bookmark a criar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

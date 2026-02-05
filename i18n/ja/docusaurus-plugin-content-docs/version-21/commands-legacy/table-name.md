@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table name.Syntax-->**Table name** ( *tableNum* ) : Text<br/>**Table name** ( *tablePtr* ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | tableNum &#124; tablePtr | 倍長整数, ポインター | &#8594;  | テーブル番号、またはテーブルポインタ |
 | 戻り値 | Text | &#8592; | テーブルの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

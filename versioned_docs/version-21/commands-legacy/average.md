@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Average.Syntax-->**Average** ( *series* {; *attributePath*} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Data for which to return the average |
 | attributePath | Text | &#8594;  | Path of attribute for which to return the average |
 | Function result | Real | &#8592; | Arithmetic mean (average) of series |
-
+</div>
 <!-- END REF-->
 
 ## Description 

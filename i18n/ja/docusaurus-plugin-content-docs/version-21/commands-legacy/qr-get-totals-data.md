@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *operator* ; *text* )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | breakNum | Integer | &#8594;  | ブレーク番号 |
 | operator | Integer | &#8592; | セルの演算名 |
 | text | Text | &#8592; | セルの内容 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

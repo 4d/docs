@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *puntero* ; *nomVar* ; *numTabla* ; *numCamp* )<!-- END REF-->
 <!--REF #_command_.RESOLVE POINTER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | puntero | Pointer | &#8594;  | Puntero del cual recuperar el objeto referenciado |
 | nomVar | Text | &#8592; | Nombre de la variable referenciada o cadena vacía |
 | numTabla | Integer | &#8592; | Número de la tabla o del elemento del array referenciado o 0 o -1 |
 | numCamp | Integer | &#8592; | Número del campo referenciado o 0 |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

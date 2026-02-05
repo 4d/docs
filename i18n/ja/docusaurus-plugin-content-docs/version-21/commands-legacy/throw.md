@@ -9,6 +9,8 @@ displayed_sidebar: docs
         
             *throw* {( *errorObj* )}<!-- END REF-->
 <!--REF #_command_.throw.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | errorCode | Integer | &#8594;  | エラーコードを表す倍調整数 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | throw {( errorObj )} |
 | 引数 | 型 | 説明 |
 | errorObj | Object | &#8594;  | エラー構築用のプロパティを格納するオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

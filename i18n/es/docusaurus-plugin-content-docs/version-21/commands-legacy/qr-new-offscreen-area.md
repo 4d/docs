@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR New offscreen area.Syntax-->**QR New offscreen area**  : Integer<!-- END REF-->
 <!--REF #_command_.QR New offscreen area.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Referencia del área creada |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

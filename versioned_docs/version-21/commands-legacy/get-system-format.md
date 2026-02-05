@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* ; *value* )<!-- END REF-->
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | format | Integer | &#8594;  | System format to be retrieved |
 | value | Text | &#8592; | Value of format defined in the system |
-
+</div>
 <!-- END REF-->
 
 ## Description 

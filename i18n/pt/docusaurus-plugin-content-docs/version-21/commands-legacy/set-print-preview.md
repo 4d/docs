@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *vistaprevia* )<!-- END REF-->
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | vistaprevia | Boolean | &#8594;  | Pré-visualização em tela (TRUE), ou sem vista prévia (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

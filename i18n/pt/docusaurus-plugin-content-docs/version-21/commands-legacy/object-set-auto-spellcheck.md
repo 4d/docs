@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( {* ;} *objeto* ; *correAuto* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | correAuto | Boolean | &#8594;  | True = correção automática,False= não correção automática |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

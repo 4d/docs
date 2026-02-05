@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *manyField* ; *one* ; *many* {; *} )<!-- END REF-->
 <!--REF #_command_.GET FIELD RELATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | manyField | Field | &#8594;  | Starting field of a relation |
 | one | Integer | &#8592; | Status of the Many-to-One relation |
 | many | Integer | &#8592; | Status of the One-to-Many relation |
 | * | Operator | &#8594;  | • If passed: one and many return the current status of the relation (values 2 or 3 only) • If omitted (default): one and many can return the value 1 if the relation has not been modified through programming |
-
+</div>
 <!-- END REF-->
 
 ## Description 

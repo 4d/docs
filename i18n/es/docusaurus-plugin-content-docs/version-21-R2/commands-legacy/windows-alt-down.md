@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Windows Alt down.Syntax-->**Windows Alt down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Windows Alt down.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Estado de la tecla Windows Alt Estado de la tecla Macintosh Opción |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *rutaArchivo* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATABASE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaArchivo | Text | &#8594; | Nombre o ruta de acceso completa del archivo de base de datos a abrir (.4db, .4dc, .4dbase o .4dlink) |
-
+</div>
 <!-- END REF-->
 
 ## Nota 

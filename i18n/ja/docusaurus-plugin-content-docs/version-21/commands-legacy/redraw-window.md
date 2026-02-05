@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** {( *window* )}<!-- END REF-->
 <!--REF #_command_.REDRAW WINDOW.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | ウィンドウ参照番号, または省略時 カレントプロセスの最前面ウィンドウ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

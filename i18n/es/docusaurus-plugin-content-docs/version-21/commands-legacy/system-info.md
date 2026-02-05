@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.System info.Syntax-->**System info**  : Object<!-- END REF-->
 <!--REF #_command_.System info.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Object | &#8592; | Información del sistema |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

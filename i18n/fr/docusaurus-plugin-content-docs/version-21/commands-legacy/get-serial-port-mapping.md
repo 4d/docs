@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *tabNums* ; *tabLibellés* )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabNums | Integer array | &#8592; | Tableau de numéros de ports série |
 | tabLibellés | Text array | &#8592; | Tableau de noms de ports série |
-
+</div>
 <!-- END REF-->
 
 ## Description 

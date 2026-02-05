@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *targetObj* ; *mode* {; *rangeUpdate* {; *nbCols* {; *nbRows*}}} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nbCols | Integer | &#8594;  | Number of columns to set in the table |
 | nbRows | Integer | &#8594;  | Number of rows to set in the table |
 | Function result | Object | &#8592; | Table object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

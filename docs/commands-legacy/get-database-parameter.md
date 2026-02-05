@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*aTable* : Table ;} *selector* : Integer {; *stringValue* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Get database parameter.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table from which to get the parameter, or Default table if this parameter is omitted |
 | selector | Integer | &#8594;  | Code of the database’s parameter |
 | stringValue | Text | &#8592; | String value of the parameter |
 | Function result | Real | &#8592; | Current value of the parameter |
-
+</div>
 <!-- END REF-->
 
 <h2 data-noindex>Description</h2>

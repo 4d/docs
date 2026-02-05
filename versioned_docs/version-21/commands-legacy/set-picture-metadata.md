@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *picture* ; *metaName* ; *metaContents* {; *metaName2* ; *metaContents2* ; ... ; *metaNameN* ; *metaContentsN*} )<!-- END REF-->
 <!--REF #_command_.SET PICTURE METADATA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | Picture whose metadata you want to set |
 | metaName | Text | &#8594;  | Name or path of block to set |
 | metaContents | Variable | &#8594;  | Metadata contents |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *value* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | value | Object, any | &#8594;  | Data to convert into JSON string |
 | * | Operator | &#8594;  | Pretty printing |
 | Function result | Text | &#8592; | String containing serialized JSON text |
-
+</div>
 <!-- END REF-->
 
 ## Description 

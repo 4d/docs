@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Syntax-->**WP IMPORT STYLE SHEETS** ( *targetDoc* ; *sourceDoc* )<!-- END REF-->
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetDoc | Object | &#8594;  | スタイルシートを受け取る4D Write Pro ドキュメント |
 | sourceDoc | Object | &#8594;  | スタイルシートを取り出す4D Write Pro ドキュメント |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

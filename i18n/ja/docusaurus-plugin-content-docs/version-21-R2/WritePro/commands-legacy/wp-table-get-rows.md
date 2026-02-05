@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *targetObj* : Object ) | ( *tableRef* : Object ; startRow | wk header rows {; *numRows* : Integer} )  -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | startRow &#124; wk header rows | 倍長整数, 文字 | &#8594;  | 最初の行の位置 |
 | numRows | Integer | &#8594;  | 取得したい行数 |
 | 戻り値 | Object | &#8592; | 選択された行を含む新しいテーブルレンジ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

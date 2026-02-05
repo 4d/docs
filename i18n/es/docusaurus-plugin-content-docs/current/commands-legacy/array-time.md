@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *nomArray* : Array ; *tam* : Integer {; *tam2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY TIME.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomArray | Array | &#8594; | Nombre de array |
 | tam | Integer | &#8594; | Número de elementos en el array o Número de filas si se especifica tamaño2 |
 | tam2 | Integer | &#8594; | Número de columnas en un array de dos dimensiones |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,13 @@ title: VP ADD SPAN
 **VP ADD SPAN** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SPAN.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|<!-- END REF -->
+|rangeObj| Object|->|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

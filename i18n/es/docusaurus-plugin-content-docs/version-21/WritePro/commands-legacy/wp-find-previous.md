@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find previous.Syntax-->**WP Find previous**  ( *objTarget* ; *buscarAntes* ; *buscarValor* ; *buscarCondicion* {; *remplazarValor*} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Find previous.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | buscarCondicion | Integer | &#8594;  | Regla(s) de búsqueda |
 | remplazarValor | Text | &#8594;  | Cadena de reemplazo |
 | Resultado | Object | &#8592; | Rango del valor encontrado/reemplazado |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

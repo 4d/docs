@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Transaction level.Syntax-->**Transaction level**  : Integer<!-- END REF-->
 <!--REF #_command_.Transaction level.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | 現在のトランザクションレベル (トランザクションが 開始されていない場合は0) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -8,10 +8,13 @@ title: VP DELETE COLUMNS
 **VP DELETE COLUMNS** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP DELETE COLUMNS.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|<!-- END REF -->
+|rangeObj| Object|->|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

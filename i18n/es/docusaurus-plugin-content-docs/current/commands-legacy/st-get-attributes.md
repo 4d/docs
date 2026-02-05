@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( * ; *objeto* : Text ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Integer ; *valorAtrib* : Variable {; ...(*nomAtrib* : Integer, *valorAtrib* : Variable)} )<br/>**ST GET ATTRIBUTES** ( *objeto* : Field, Variable ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Integer ; *valorAtrib* : Variable {; ...(*nomAtrib* : Integer, *valorAtrib* : Variable)} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | finSel | Integer | &#8594; | Fin de la selección de texto |
 | nomAtrib | Integer | &#8594; | Atributo a leer |
 | valorAtrib | Variable | &#8592; | Valor actual del atributo |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

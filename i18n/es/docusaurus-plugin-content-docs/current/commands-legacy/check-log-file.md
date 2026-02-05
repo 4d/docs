@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CHECK LOG FILE.Syntax-->**CHECK LOG FILE**<!-- END REF-->
 <!--REF #_command_.CHECK LOG FILE.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Modified.Syntax-->**Modified** ( *campo* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594; | Campo a provar |
 | Resultado | Boolean | &#8592; | Verdadeiro se foi assinalado um novo valor ao campo, caso contrario Falso |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

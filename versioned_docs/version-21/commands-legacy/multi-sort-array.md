@@ -8,13 +8,15 @@ displayed_sidebar: docs
 <!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* {; *sort*}{; *array2* ; *sort2* ; ... ; *arrayN* ; *sortN*} ) <br/>
 **MULTI SORT ARRAY** ( *ptrArrayName* ; *sortArrayName* )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array(s) to be sorted |
 | sort | * | &#8594;  | ">" to sort by increasing order or  "<" to sort by decreasing order If omitted  no sort |
 | ptrArrayName | Pointer array | &#8594;  | Array of array pointers |
 | sortArrayName | Integer array | &#8594;  | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

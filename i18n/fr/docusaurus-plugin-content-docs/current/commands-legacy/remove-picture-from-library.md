@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *refImage* : Entier long, Chaîne )<br/>**REMOVE PICTURE FROM LIBRARY** ( *nomImage* : Entier long, Chaîne )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refImage &#124; nomImage | Entier long, Chaîne | &#8594; | Numéro de référence ou Nom d'une image de la bibliothèque d'images |
-
+</div>
 <!-- END REF-->
 
 ## Description 

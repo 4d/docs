@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TEXT KEYWORDS.Syntax-->**GET TEXT KEYWORDS** ( *text* ; *arrKeywords* {; *} )<!-- END REF-->
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | text | Text | &#8594;  | 元のテキスト |
 | arrKeywords | Text array | &#8592; | キーワードを受け取る配列 |
 | * | 演算子 | &#8594;  | 指定した場合、ユニークキーワード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

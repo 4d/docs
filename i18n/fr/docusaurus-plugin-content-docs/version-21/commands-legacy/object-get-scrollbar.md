@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( {* ;} *objet* ; *horizontale* ; *verticale* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLLBAR.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
 | objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
 | horizontale | Boolean, Integer | &#8592; | Visibilité de la barre horizontale |
 | verticale | Boolean, Integer | &#8592; | Visibilité de la barre verticale |
-
+</div>
 <!-- END REF-->
 
 ## Description 

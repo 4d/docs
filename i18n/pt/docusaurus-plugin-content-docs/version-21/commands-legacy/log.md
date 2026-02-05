@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Log.Syntax-->**Log** ( *numero* ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numero | Real | &#8594;  | Número que você deseja obter o log |
 | Resultado | Real | &#8592; | Log de número |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

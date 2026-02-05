@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *zone* )<!-- END REF-->
 <!--REF #_command_.QR RUN.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594;  | Référence de la zone à exécuter |
-
+</div>
 <!-- END REF-->
 
 ## Description 

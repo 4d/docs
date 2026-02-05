@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *objet* {; *débutSél* {; *finSél* {; *débutBloc* {; *finBloc*}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | débutBloc | Integer | &#8592; | Début de position du premier type de la sélection |
 | finBloc | Integer | &#8592; | Fin de position du premier type de la sélection |
 | Résultat | Integer | &#8592; | Type de contenu |
-
+</div>
 <!-- END REF-->
 
 ## Description 

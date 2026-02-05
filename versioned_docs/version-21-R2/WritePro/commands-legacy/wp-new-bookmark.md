@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP NEW BOOKMARK.Syntax-->**WP NEW BOOKMARK** ( *targetObj* : Object ; *bkName* : Text )<!-- END REF-->
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
 | bkName | Text | &#8594;  | Name of bookmark to create |
-
+</div>
 <!-- END REF-->
 
 ## Description 

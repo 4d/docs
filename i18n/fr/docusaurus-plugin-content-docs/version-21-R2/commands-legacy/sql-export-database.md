@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *cheminDossier* : Text {; *nbFichiers* : Integer {; *tailleLimiteFichiers* : Integer {; *tailleLimiteChamps* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminDossier | Text | &#8594; | Chemin d'accès du dossier d'export ou "" pour afficher une boîte de dialogue de sélection de dossier |
 | nbFichiers | Integer | &#8594; | Nombre maximum de fichiers par dossier |
 | tailleLimiteFichiers | Integer | &#8594; | Valeur de limite de taille des fichiers d'exportation (en Ko) |
 | tailleLimiteChamps | Integer | &#8594; | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

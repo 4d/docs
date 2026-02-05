@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *processo* : Text, Integer ; *método* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL WORKER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | processo | Text, Integer | &#8594; | Nome ou número de processo do worker |
 | método | Object, Text | &#8594; | Nome do método de projeto a chamar |
 | param | Expression | &#8594; | Parâmetros passados ao método |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

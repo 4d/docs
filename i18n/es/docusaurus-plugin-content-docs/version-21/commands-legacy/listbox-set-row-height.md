@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( {* ;} *objeto* ; *linea* ; *altura* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594;  | Nombre objeto (si * se especifica) o Variable (si * se omite) |
 | linea | Integer | &#8594;  | Línea de list box cuya altura desea definir |
 | altura | Integer | &#8594;  | Altura de línea de list box |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

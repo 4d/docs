@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*aTable* : Table ;} *number* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to reduce the selection, or Default table, if omitted |
 | number | Integer | &#8594;  | Number of records to keep selected |
-
+</div>
 <!-- END REF-->
 
 ## Description 

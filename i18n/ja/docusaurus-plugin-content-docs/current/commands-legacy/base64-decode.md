@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BASE64 DECODE.Syntax-->**BASE64 DECODE** ( *encodedText* : Text, Blob {; *decoded* : Text, Blob}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 DECODE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | encodedText | Text, Blob | &#8596; | *in:* Encoded value to decode<br/>*out:* Decoded value (if decoded parameter omitted) |
 | decoded | Text, Blob | &#8592; | デコードされた値 |
 | * | 演算子 | &#8594; | デコードにBase64URL フォーマットを指定 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

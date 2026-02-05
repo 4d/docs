@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *object* ; *colPosition* ; *colName* ; *formula* ; *dataType* ; *headerName* ; *headerVar* {; *footerName* ; *footerVar*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | headerVar | Integer, Pointer | &#8594;  | Column header variable |
 | footerName | Text | &#8594;  | Column footer object name |
 | footerVar | Variable, Pointer | &#8594;  | Column footer variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

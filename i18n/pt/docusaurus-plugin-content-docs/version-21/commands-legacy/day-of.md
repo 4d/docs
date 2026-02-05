@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Day of.Syntax-->**Day of** ( *data* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day of.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | data | Date | &#8594;  | Data a qual para devolver o dia |
 | Resultado | Integer | &#8592; | Dia do mês da data |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

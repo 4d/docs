@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Field.Syntax-->**Field** ( *tableNum* : Integer ; *fieldNum* : Integer ) -> Pointer<br/>**Field** ( *fieldPtr* : Pointer ) -> Integer<!-- END REF-->
 <!--REF #_command_.Field.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableNum | Integer | &#8594;  | Table number |
 | fieldNum | Integer | &#8594;  | Field number |
 | fieldPtr | Pointer | &#8594; | Field pointer |
 | Function result | Pointer, Integer | &#8592; | Field pointer or Field number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

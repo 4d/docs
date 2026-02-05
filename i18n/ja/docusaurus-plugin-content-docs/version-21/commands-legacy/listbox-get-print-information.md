@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( {* ;} *object* ; *selector* ; *info* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
 | selector | Integer | &#8594;  | 取得する情報 |
 | info | Integer | &#8592; | 現在の値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

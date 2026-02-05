@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported**  ( *rangoObj* ; *estiloFuenteWP* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Is font style supported.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rangoObj | Object | &#8594;  | Rango o referencia del elemento |
 | estiloFuenteWP | Integer | &#8594;  | Constante de estilo de fuente |
 | Resultado | Boolean | &#8592; | True si alguna parte de rangoObj soporta estiloFuenteWP; False en caso contrario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

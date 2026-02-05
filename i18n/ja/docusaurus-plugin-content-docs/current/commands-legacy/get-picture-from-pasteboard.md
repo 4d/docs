@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *picture* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8592; | ペーストボードから取り出したピクチャ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

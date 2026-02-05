@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get assert enabled.Syntax-->**Get assert enabled** : Boolean<!-- END REF-->
 <!--REF #_command_.Get assert enabled.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | True = アサーションは有効<br/>False = アサーションは無効 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

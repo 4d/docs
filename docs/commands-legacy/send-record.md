@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.SEND RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table from which to send the current record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

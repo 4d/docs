@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *objRango* : Object {; *tipoElemento* : Integer} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get elements.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
 | tipoElemento | Integer | &#8594;  | Tipo de elemento deseado a recuperar |
 | Resultado | Collection | &#8592; | Colección que contiene referencias de elemento |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

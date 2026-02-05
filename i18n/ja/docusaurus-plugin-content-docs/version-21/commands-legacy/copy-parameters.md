@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *startFrom* )} : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | startFrom | Integer | &#8594;  | 開始インデックス(指定した引数含む) |
 | 戻り値 | Collection | &#8592; | 実際に渡された引数を格納した新しいコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

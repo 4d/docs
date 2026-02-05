@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *4Dtext* ; *charSet* ; *convertedBLOB* )<!-- END REF-->
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | 4Dtext | Text | &#8594;  | Text expressed in current character set of 4D |
 | charSet | Text, Integer | &#8594;  | Name or Number of character set |
 | convertedBlob | Blob | &#8592; | BLOB containing converted text |
-
+</div>
 <!-- END REF-->
 
 ## Description 

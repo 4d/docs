@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* : Text }{;}{ *defaultPath* : Text, Integer {; *options* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | message | Text | &#8594;  | Title of the window |
 | defaultPath | Text, Integer | &#8594;  | • Default pathname or • Empty string to display the default user folder (“My documents” under Windows, “Documents” under Mac OS), or • Number of memorized pathname |
 | options | Integer | &#8594;  | Selection option(s)under Mac OS |
 | Function result | Text | &#8592; | Access path to the selected folder |
-
+</div>
 <!-- END REF-->
 
 ## Description 

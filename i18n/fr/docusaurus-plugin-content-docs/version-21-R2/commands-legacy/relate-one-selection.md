@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tableN* : Table ; *table1* : Table )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableN | Table | &#8594; | Nom de la table N (d'où part le lien) |
 | table1 | Table | &#8594; | Nom de la table 1 (où arrive le lien) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

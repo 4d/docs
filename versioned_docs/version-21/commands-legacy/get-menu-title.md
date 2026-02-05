@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* {; *process*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu title.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | process | Integer | &#8594;  | Process reference number |
 | Function result | Text | &#8592; | Title of the menu |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | listName | Text | &#8594;  | デザインモードのリストエディタで 作成されたリスト名 |
 | 戻り値 | Integer | &#8592; | 新しく作成されたリストのリスト参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

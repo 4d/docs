@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *rutaObjetivo* ; *rutaAlias* )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaObjetivo | Text | &#8594;  | Nombre o ruta de acceso al objetivo del alias/atajo |
 | rutaAlias | Text | &#8594;  | Nombre o ruta de acceso completa del alias/del atajo a crear |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

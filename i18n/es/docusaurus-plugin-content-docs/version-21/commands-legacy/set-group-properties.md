@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *refGrupo* ; *nombre* ; *propietario* {; *miembros*} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refGrupo | Integer | &#8594;  | Número de referencia único del grupo activo o -1 para añadir un grupo de Diseñador o -2 para añadir un grupo de Administrador |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | propietario | Integer | &#8594;  | Número de referencia único del usuario o del propietario del nuevo grupo |
 | miembros | Integer array | &#8594;  | Nuevos miembros del grupo |
 | Resultado | Integer | &#8592; | Número de referencia único del nuevo grupo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

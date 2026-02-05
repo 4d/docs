@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *objeto* : Text ; *codeJS* : Text {; *type* : Integer} )  : any<br/>**WA Evaluate JavaScript** ( *objeto* : Field, Variable ; *codeJS* : Text {; *type* : Integer} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | codeJS | Text | &#8594; | Código JavaScript |
 | type | Integer | &#8594; | Tipo al cual convertir el resultado |
 | Resultado | Date, Time, Object, Pointer, Real, Text | &#8592; | Resultado de ejecución |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

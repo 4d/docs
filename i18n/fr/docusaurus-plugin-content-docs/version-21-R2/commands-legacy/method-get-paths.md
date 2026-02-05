@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomDossier* : Text ;} *typeMéthode* : Integer ; *tabChemins* : Text array {; *marqueur* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomDossier | Text | &#8594; | Nom de dossier de la page Démarrage |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tabChemins | Text array | &#8592; | Tableau des chemins et noms des méthodes |
 | marqueur | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
 | * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

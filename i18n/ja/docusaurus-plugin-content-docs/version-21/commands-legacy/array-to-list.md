@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* ; *list* {; *itemRefs*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | 配列要素のコピー元配列 |
 | list | Text, Integer | &#8594;  | 配列要素のコピー先リスト |
 | itemRefs | Array | &#8594;  | 項目参照番号の数値配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

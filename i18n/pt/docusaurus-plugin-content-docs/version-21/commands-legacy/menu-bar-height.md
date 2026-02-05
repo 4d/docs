@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Menu bar height.Syntax-->**Menu bar height**  : Integer<!-- END REF-->
 <!--REF #_command_.Menu bar height.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Altura (expressada em pixeles) da barra de menus (devolve zero se a barra de menus está oculta) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

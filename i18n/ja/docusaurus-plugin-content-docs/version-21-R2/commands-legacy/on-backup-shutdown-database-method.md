@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Backup Shutdown database method.Syntax-->$1 -> On Backup Shutdownデータベースメソッド<!-- END REF-->
 <!--REF #_command_.On Backup Shutdown database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $1 | 倍長整数 | &#8592; | 0 = バックアップは正しく実行された; 0以外の値 = エラー、ユーザーにより中断された、またはOn Backup Startupから返されたコード |
-
+</div>
 <!-- END REF-->
 
 ## 

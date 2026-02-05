@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *arrStyleSheets* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | arrStyleSheets | Text array | &#8592; | Names of style sheets defined in the application |
-
+</div>
 <!-- END REF-->
 
 ## Description 

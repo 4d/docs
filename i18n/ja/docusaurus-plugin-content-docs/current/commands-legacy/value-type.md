@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | expression | Expression | &#8594; | テストしたい結果を返す式 |
 | 戻り値 | Integer | &#8592; | データ型の数字 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

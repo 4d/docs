@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MESSAGES ON.Syntax-->**MESSAGES ON**<!-- END REF-->
 <!--REF #_command_.MESSAGES ON.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

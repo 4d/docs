@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Syntax-->**NOTIFY RESOURCES FOLDER MODIFICATION**<!-- END REF-->
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

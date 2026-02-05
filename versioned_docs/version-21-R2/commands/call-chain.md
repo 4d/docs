@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Call chain.Syntax-->**Call chain** : Collection<!-- END REF-->
 <!--REF #_command_.Call chain.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Collection | &#8592; | Collection of objects describing the call chain within a process |
-
+</div>
 <!-- END REF-->
 
 

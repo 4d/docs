@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( *elementRef*  ; *selector* ; *value* {; *selector2* ; *value2* ; ... ; *selectorN* ; *valueN*} )<br/>**XML SET OPTIONS** ( *document*  ; *selector* ; *value* {; *selector2* ; *value2* ; ... ; *selectorN* ; *valueN*} )<!-- END REF-->
 <!--REF #_command_.XML SET OPTIONS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef &#124; document | テキスト | &#8594;  | XMLルート要素参照、または開かれたドキュメント参照 |
 | selector | Integer | &#8594;  | 設定するオプション |
 | value | Integer | &#8594;  | オプションの値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

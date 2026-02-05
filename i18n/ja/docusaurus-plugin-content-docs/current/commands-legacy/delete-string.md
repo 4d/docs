@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* : Text ; *where* : Integer ; *numChars* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Delete string.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | source | Text | &#8594; | 文字を削除する文字列 |
 | where | Integer | &#8594; | 削除開始位置 |
 | numChars | Integer | &#8594; | 削除する文字数 |
 | 戻り値 | Text | &#8592; | 結果の文字列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

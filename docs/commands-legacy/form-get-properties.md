@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*aTable* : Table ;} *formName* : Text ; *width* : Integer ; *height* : Integer {; *numPages* : Integer {; *fixedWidth* : Boolean {; *fixedHeight* : Boolean {; *title* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table of the form or Default table, if omitted |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | fixedWidth | Boolean | &#8592; | True = Fixed width, False = Variable width |
 | fixedHeight | Boolean | &#8592; | True = Fixed height, False = Variable height |
 | title | Text | &#8592; | Title of the form’s window |
-
+</div>
 <!-- END REF-->
 
 ## Description 

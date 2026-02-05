@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Macintosh command down.Syntax-->**Macintosh command down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Macintosh command down.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | MacintoshのCommandキーのステータス (Windowsの場合は、Ctrlキー) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

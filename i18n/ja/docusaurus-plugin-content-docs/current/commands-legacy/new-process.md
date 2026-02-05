@@ -16,6 +16,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Syntax-->**New process** ( *method* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | method | Text | &#8594; | プロセスで実行させるメソッド |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | param | Expression | &#8594; | メソッドに渡す引数 |
 | * | 演算子 | &#8594; | 重複しないプロセス |
 | 戻り値 | Integer | &#8592; | 新規に作成されたプロセス番号 または既存のプロセス番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

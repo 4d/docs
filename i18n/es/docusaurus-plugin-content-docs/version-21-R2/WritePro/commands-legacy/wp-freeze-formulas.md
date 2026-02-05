@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP FREEZE FORMULAS.Syntax-->**WP FREEZE FORMULAS** ( *objTarget* : Object {; *recalcular* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP FREEZE FORMULAS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
 | recalcular | Integer | &#8594;  | Opción para controlar el recálculo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

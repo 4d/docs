@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *tableTitles* : Text array ; *tableNums* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET TABLE TITLES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableTitles | Text array | &#8592; | Current table names |
 | tableNums | Integer array | &#8592; | Table numbers |
-
+</div>
 <!-- END REF-->
 
 ## Description 

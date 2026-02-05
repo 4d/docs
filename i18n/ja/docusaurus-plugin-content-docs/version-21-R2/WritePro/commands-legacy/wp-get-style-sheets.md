@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get style sheets.Syntax-->**WP Get style sheets** ( *wpDoc* : Object ; *type* : Integer ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get style sheets.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
 | type | Integer | &#8594;  | スタイルシートのタイプ |
 | 戻り値 | Collection | &#8592; | スタイルシートオブジェクトのコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

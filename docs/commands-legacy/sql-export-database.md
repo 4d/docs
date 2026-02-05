@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderPath | Text | &#8594;  | Pathname of export folder or "" to display folder selection dialog box |
 | numFiles | Integer | &#8594;  | Maximum number of files per folder |
 | fileLimitSize | Integer | &#8594;  | Size limit value of export files (in KB) |
 | fieldLimitSize | Integer | &#8594;  | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field is embedded into the main file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *BLOB* {; *encoded*}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 ENCODE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Blob | Blob, Text | &#8594;  | Base 64フォーマットでコード化するBLOB |
 | &#8592; | Base 64フォーマットでコード化したBLOB |
 | encoded | Blob, Text | &#8592; | エンコードされた値 |
 | * | 演算子 | &#8594;  | Base64URL フォーマットでエンコードする |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

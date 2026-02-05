@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE PROCESS.Syntax-->**HIDE PROCESS** ( *process* )<!-- END REF-->
 <!--REF #_command_.HIDE PROCESS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | 隠すプロセスのプロセス番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

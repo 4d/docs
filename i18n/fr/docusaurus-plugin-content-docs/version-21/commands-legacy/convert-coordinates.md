@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* ; *coordY* ; *depuis* ; *vers* )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | coordX | Integer | &#8594;  | Coordonnée horizontale d'un point (initiale) |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | &#8592; | Coordonnée verticale d'un point (convertie) |
 | depuis | Integer | &#8594;  | Système de coordonnées d'origine |
 | vers | Integer | &#8594;  | Système de coordonnées dans lequel convertir le point |
-
+</div>
 <!-- END REF-->
 
 ## Description 

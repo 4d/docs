@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *sémaphore* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sémaphore | Text | &#8594; | Sémaphore à effacer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

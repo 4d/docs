@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Tool bar height.Syntax-->**Tool bar height**  : Integer<!-- END REF-->
 <!--REF #_command_.Tool bar height.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | ツールバーの高さ(ピクセル単位で表示) または、ツールバーが非表示の場合、 0 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

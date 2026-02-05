@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* : Object, Object {; resolvePtrs } )  : Object<br/>**OB Copy** ( *object* : Object, Object {; *option* : Integer {; *groupWith* : Collection, Object}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594; | 構造化されたオブジェクト |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | option | Integer | &#8594; | ck shared: 共有オブジェクトを返すck resolve pointers: コピーの前にポインターを解決する |
 | groupWith | Collection, Object | &#8594; | 返されるオブジェクトが所属することになる共有コレクションまたは共有オブジェクト |
 | 戻り値 | Object | &#8592; | 複製されたオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

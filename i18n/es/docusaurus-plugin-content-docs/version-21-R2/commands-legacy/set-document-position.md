@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* : Time ; *offset* : Real {; *ancla* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT POSITION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594; | Número de referencia del documento |
 | offset | Real | &#8594; | Posición del archivo (expresada en bytes) |
 | ancla | Integer | &#8594; | 1 = En relación con el inicio del archivo 2 = En relación con el final del archivo 3 = En relación con la posición actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

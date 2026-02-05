@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* ; *byteOrder* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB from which to get the Long Integer value |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
 |||| New offset after reading |
 | Function result | Integer | &#8592; | 4-byte Long Integer value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

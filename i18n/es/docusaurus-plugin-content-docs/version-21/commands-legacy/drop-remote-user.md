@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *sesionUsuario* )<!-- END REF-->
 <!--REF #_command_.DROP REMOTE USER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | sesionUsuario | Text | &#8594;  | ID de sesión del usuario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

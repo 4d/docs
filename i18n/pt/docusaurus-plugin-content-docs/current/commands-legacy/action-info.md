@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Action info.Syntax-->**Action info** ( *ação* : Text {; *alvo* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | ação | Text | &#8594; | Nome da ação padrão ou padrão incluindo parâmetro se exigido |
 | alvo | Integer | &#8594; | Define o alvo da ação para obter informação: formulário principal ou atual |
 | Resultado | Object | &#8592; | Objeto que contém status da ação como propriedade booleana: isEnabled, isVisible, isChecked, isMixed, isUnkownState |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*umaTabela*}{;}{*opConj* ;} *campoObjeto* ; *caminhoAtributo* ; *opPesq* ; *valor* {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | umaTable | Table | &#8594;  | Tabela para a qual retornar uma seleção de registros, ou tabela padrão se for omitido |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | opPesq | Text, * | &#8594;  | Operador pesquisa (comparador) |
 | valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
 | * | Operador | &#8594;  | Continua a flag de pesquisa |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

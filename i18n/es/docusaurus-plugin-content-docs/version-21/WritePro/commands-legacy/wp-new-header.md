@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New header.Syntax-->**WP New header** ( *wpSection* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP New header.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpSection | Object | &#8594;  | Sección o subsección 4D Write Pro |
 | Resultado | Object | &#8592; | Encabezado 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

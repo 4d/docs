@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get footer.Syntax-->**WP Get footer** ( *objFaixa* : Object ) | (*docWP* : Object ; *indiceSecao* : Integer {; *subtipoSecao* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get footer.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objFaixa | Object | &#8594;  | Faixa do 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | indiceSecao | Integer | &#8594;  | Índice de Seção |
 | subtipoSecao | Integer | &#8594;  | Subtipo de seção (wk first page, wk left page ou wk right page) |
 | Resultado | Object | &#8592; | Rodapé 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

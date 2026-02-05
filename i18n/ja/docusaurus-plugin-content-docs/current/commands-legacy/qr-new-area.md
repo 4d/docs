@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* : Pointer )<!-- END REF-->
 <!--REF #_command_.QR NEW AREA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | ptr | Pointer | &#8594; | 変数へのポインター |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

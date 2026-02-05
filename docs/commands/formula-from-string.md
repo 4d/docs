@@ -18,11 +18,14 @@ displayed_sidebar: docs
 
 
 <!-- REF #_command_.Formula from string.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaString|Text|&#8594; |Text formula to be returned as object|
 |context|Integer|&#8594; |`sk execute in current database` (default) or `sk execute in host database`|
 |Result|4D.Function|&#8592;|Native object encapsulating the formula|
+</div>
 <!-- END REF -->
 
 

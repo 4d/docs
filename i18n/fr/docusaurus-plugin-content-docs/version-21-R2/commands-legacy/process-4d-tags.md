@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *templateEntrée* : Text ; *résultatSortie* : Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | templateEntrée | Text | &#8594; | Données contenant des balises à traiter |
 | résultatSortie | Text | &#8592; | Résultat de l'exécution du template |
 | param | Expression | &#8594; | Paramètre(s) à passer au template en exécution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

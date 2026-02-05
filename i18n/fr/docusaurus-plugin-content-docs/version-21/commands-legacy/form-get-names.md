@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*laTable* ;} *tabNoms* {; *filtre* {; *marqueur*}}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET NAMES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Référence de table |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | marqueur | Real | &#8594;  | Marqueur de version minimale à retourner |
 | &#8592; | Nouvelle valeur |
 | * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

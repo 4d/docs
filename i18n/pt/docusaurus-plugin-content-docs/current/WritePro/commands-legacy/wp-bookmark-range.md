@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *docWP* : Object ; *NomeBK* : Text ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Bookmark range.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Documento 4D Write Pro |
 | NomeBK | Text | &#8594;  | Nome de bookmark cuja faixa quer obter |
 | Resultado | Object | &#8592; | Faixa de bookmark |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET DATA CONTEXT.Syntax-->**WP SET DATA CONTEXT** ( *wpDoc* : Object ; *contextData* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET DATA CONTEXT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Document 4D Write Pro |
 | contextData | Object | &#8594;  | Données à insérer dans le contexte |
-
+</div>
 <!-- END REF-->
 
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*

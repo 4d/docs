@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *laCadena* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | laText | Text | &#8594; | Cadena a pasar a minúsculas |
 | * | Operador | &#8594; | Si se pasa: conservar los acentos |
 | Resultado | Text | &#8592; | Cadena en minúsculas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

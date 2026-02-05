@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Syntax-->**DOM REMOVE XML ATTRIBUTE** ( *elementoRef* ; *nomeAtrib* )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | elementoRef | Text | &#8594;  | Elemento de referência XML |
 | nomeAtrib | Text | &#8594;  | Atributo a ser removido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get default user.Syntax-->**Get default user**  : Integer<!-- END REF-->
 <!--REF #_command_.Get default user.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de ID de usuário |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

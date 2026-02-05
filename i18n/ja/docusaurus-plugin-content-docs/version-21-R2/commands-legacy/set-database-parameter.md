@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE PARAMETER.Syntax-->**SET DATABASE PARAMETER** ( {*aTable* : Table ;} *selector* : Integer ; *value* : Real, Text )<!-- END REF-->
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | パラメータをセットするテーブル、または 省略時、デフォルトテーブル |
 | selector | Integer | &#8594; | 変更を行うデータベースパラメタのコード |
 | value | Real, Text | &#8594; | パラメタの値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

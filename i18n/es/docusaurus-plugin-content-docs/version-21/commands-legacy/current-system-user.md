@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current system user.Syntax-->**Current system user**  : Text<!-- END REF-->
 <!--REF #_command_.Current system user.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Nombre del dueño del equipo en la red |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

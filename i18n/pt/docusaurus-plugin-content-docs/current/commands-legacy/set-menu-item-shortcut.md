@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Text, Integer ; *modificadores* : Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | itemKey | Text, Integer | &#8594; | Letra de atalho do teclado ou código do Caractere do atalho de teclado (sintaxe antiga) |
 | modificadores | Integer | &#8594; | Modificador(es) para associar com atalho (ignorado se código de tecla for passado) |
 | processo | Integer | &#8594; | Número de referência de processo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomPasta* ;} *tipoMetodo* ; *arrRotas* {; *marcador*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomPasta | Text | &#8594;  | Nome da página da pasta de inicio |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | marcador | Real | &#8594;  | Valor mínimo de marcador |
 | &#8592; | Novo valor atual |
 | * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

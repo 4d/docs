@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *laTable* : Table ; *tabChamps* : Pointer array ; *typeIndex* : Integer ; *nomIndex* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table pour laquelle créer un index |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | typeIndex | Integer | &#8594; | Type d’index à créer : -1 = Mots-clés, 0 = par défaut, 1 = B-Tree standard, 3 = BTree cluster |
 | nomIndex | Text | &#8594; | Nom de l'index à créer |
 | * | Opérateur | &#8594; | Si passé = indexation asynchrone |
-
+</div>
 <!-- END REF-->
 
 ## Description 

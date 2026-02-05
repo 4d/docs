@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *refElément* : Text ; *xPath* : Text {; *tabRefEléments* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594; | Référence d’élément XML |
 | xPath | Text | &#8594; | Chemin XPath de l’élément à chercher |
 | tabRefEléments | Text array | &#8592; | Liste des références d’éléments trouvés (le cas échéant) |
 | Résultat | Text | &#8592; | Référence de l’élément trouvé (le cas échéant) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

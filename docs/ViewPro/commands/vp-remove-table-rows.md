@@ -15,6 +15,7 @@ title: VP REMOVE TABLE ROWS
 **VP REMOVE TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *sheet* : Integer }} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -22,7 +23,9 @@ title: VP REMOVE TABLE ROWS
 |tableName|Text|->|Table name|
 |row|Integer|->|Index in the table of the starting row to remove|
 |count|Integer|->|Number of rows to remove (must be >0) |
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+</div>
+<!-- END REF -->
 
 ## Description
 

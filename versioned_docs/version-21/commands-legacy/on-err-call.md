@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *errorMethod* {; *scope*} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | errorMethod | Text | &#8594;  | Error method to be invoked, or Empty string to stop trapping errors |
 | scope | Integer | &#8594;  | Scope for the error method |
-
+</div>
 <!-- END REF-->
 
 ## Description 

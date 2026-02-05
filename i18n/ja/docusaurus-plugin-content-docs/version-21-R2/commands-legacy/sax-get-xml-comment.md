@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML COMMENT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Time | &#8594; | 開いたドキュメントの参照 |
 | comment | Text | &#8592; | XMLコメント |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

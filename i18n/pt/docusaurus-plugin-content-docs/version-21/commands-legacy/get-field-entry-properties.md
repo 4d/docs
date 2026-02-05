@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *pontCampo* ; *lista* ; *obrigatório* ; *nãoEditável* ; *nãoModificável* )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTabela* ; *numCampo* ; *lista* ; *obrigatório* ; *nãoEditável* ; *nãoModificável* )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro de campo ou número da tabela |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | obrigatório | Boolean | &#8592; | True = Obrigatório, False = Opcional |
 | nãoEditável | Boolean | &#8592; | True=não editável, False = Editável |
 | nãoModificável | Boolean | &#8592; | True = não modificável, False = modificável |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

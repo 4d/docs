@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New header.Syntax-->**WP New header** ( *wpSection* : Object ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP New header.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpSection | Object | &#8594;  | 4D Write Pro セクションまたはサブセクションの参照 |
 | 戻り値 | Object | &#8592; | 4D Write Pro ヘッダー参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Syntax-->**LISTBOX SET STATIC COLUMNS** ( {* ;} *objeto* ; *numColumnas* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
 | objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | numColumnas | Integer | &#8594;  | Número de columnas a convertir estáticas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

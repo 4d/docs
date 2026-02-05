@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trunc.Syntax-->**Trunc** ( *numero* ; *decimais* ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numero | Real | &#8594;  | Número a ser truncado |
 | decimais | Integer | &#8594;  | Número de decimais usadas para truncar |
 | Resultado | Real | &#8592; | Número com a parte decimal truncada ao número de casas decimais especificada por Decimais |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

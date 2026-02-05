@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *semaphore* : Text {; *tickCount* : Integer} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Semaphore.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | semaphore | Text | &#8594;  | Semaphore to test and set |
 | tickCount | Integer | &#8594;  | Maximum waiting time |
 | Function result | Boolean | &#8592; | Semaphore has been successfully set (FALSE) or Semaphore was already set (TRUE) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

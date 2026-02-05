@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *endEstrutura* : Text ; *endDados* : Text {; *pastaArquivo* : Text {; *opçao* : Integer {; *metodo* : Text}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | endEstrutura | Text | &#8594; | Endereço de acesso ao arquivo de estrutura |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | opçao | Integer | &#8594; | Opções de compactação |
 | metodo | Text | &#8594; | Nome do método 4D de retrochamada |
 | Resultado | Text | &#8592; | Endereço de acesso completo à pasta que contém o arquivo de dados original |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

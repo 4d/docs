@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** {( *demora* {; *mensagem*} )}<!-- END REF-->
 <!--REF #_command_.RESTART 4D.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | demora | Integer | &#8594;  | Tempo de atraso (segundos) antes que 4D reinicie |
 | mensagem | Text | &#8594;  | Texto a mostrar nas máquinas clientes |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

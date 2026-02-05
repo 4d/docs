@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Is server running.Syntax-->**WEB Is server running** : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Is server running.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | Webサーバーが動作中であればTrue、それ以外の場合にはFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

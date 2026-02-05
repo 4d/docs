@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *default* {; *xCoord* ; *yCoord*}} )  : Text<!-- END REF-->
 <!--REF #_command_.Dynamic pop up menu.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Text | &#8594;  | Menu reference |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | xCoord | Integer | &#8594;  | X coordinate of top left corner |
 | yCoord | Integer | &#8594;  | Y coordinate of top left corner |
 | Function result | Text | &#8592; | Parameter of selected menu item |
-
+</div>
 <!-- END REF-->
 
 ## Description 

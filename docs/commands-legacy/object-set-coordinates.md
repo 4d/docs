@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer {; *right* : Integer ; *bottom* : Integer} )<br/>**OBJECT SET COORDINATES** ( *object* : Variable, Field ; *left* : Integer ; *top* : Integer {; *right* : Integer ; *bottom* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | top | Integer | &#8594;  | Top coordinate of object in pixels |
 | right | Integer | &#8594;  | Right coordinate of object in pixels |
 | bottom | Integer | &#8594;  | Bottom coordinate of object in pixels |
-
+</div>
 <!-- END REF-->
 
 ## Description 

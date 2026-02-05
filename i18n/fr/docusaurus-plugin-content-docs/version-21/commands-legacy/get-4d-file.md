@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *fichier* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D file.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | fichier | Integer | &#8594;  | Type de fichier |
 | * | Opérateur | &#8594;  | Retourne le chemin d'accès du fichier de la base hôte |
 | Résultat | Text | &#8592; | Chemin d'accès du fichier 4D désigné |
-
+</div>
 <!-- END REF-->
 
 ## Description 

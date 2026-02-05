@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* ; *arrText* ; *largo* ; *nomFonte* ; *tamFonte* {; *estiloFonte* {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO ARRAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | varText | Text | &#8594;  | Texto original a dividir |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | tamFonte | Integer | &#8594;  | Tamanho da fonte |
 | estiloFonte | Integer | &#8594;  | Estilo da fonte |
 | * | Operador | &#8594;  | Se passado = interpretar o texto como multistyle |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

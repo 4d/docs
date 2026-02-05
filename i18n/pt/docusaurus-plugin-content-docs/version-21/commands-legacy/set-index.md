@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *campo* ; *indice* {; *} )<!-- END REF-->
 <!--REF #_command_.SET INDEX.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594;  | campo para o qual criar ou apagar o índice |
 | indice | Boolean, Integer | &#8594;  | True = criar índice, False = apagar índice, ou Criar um índice do tipo: -1=palavras chaves, 0= por padrão, 1=B-Tree padrão, 3=B-Tree cluster |
 | * | Operator |  &#8594;  | Índice assincrônico se * for passado |
-
+</div>
 <!-- END REF-->
 
 ## Nota de compatibilidade 

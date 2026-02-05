@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *formatDesc* ) : Text<!-- END REF-->
 <!--REF #_command_.Last query plan.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | formatDesc | Integer | &#8594;  | Format de description (Texte ou XML) |
 | Résultat | Text | &#8592; | Description du plan de la dernière recherche exécutée |
-
+</div>
 <!-- END REF-->
 
 #### Description 

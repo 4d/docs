@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( * ; *objeto* : Text ; *colorH* : Text, Integer ; *colorV* : Text, Integer )<br/>**LISTBOX GET GRID COLORS** ( *objeto* : Field, Variable ; *colorH* : Text, Integer ; *colorV* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | colorH | Text, Integer | &#8592; | Valor de color RGB para las líneas horizontales |
 | colorV | Text, Integer | &#8592; | Valor de color RGB para las líneas verticales |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

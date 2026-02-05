@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *lista* ; refElem | * ; *editavel* {; *estilos* {; *icone* {; *cor*}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | estilos | Integer | &#8592; | Estilo de fonte do elemento |
 | icone | Text, Integer | &#8592; | Número de recurso Mac OS ‘cicn’, ou 65536 + número de recurso Mac OS ‘PICT’, ou 131072 + número de referência de imagem |
 | cor | Integer | &#8592; | Valor de cor RGB |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr* ; *list* ; *mandatory* ; *nonEnterable* ; *nonModifiable* )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* ; *fieldNum* ; *list* ; *mandatory* ; *nonEnterable* ; *nonModifiable* )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldPtr | Pointer | &#8594;  | Field pointer |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | mandatory | Boolean | &#8592; | True = Mandatory, False = Optional |
 | nonEnterable | Boolean | &#8592; | True = Non-enterable, False = Enterable |
 | nonModifiable | Boolean | &#8592; | True = Non-modifiable, False = Modifiable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

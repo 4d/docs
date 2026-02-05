@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Syntax-->**Position** ( *pesquisar* ; *cadeia* {; *inicio* {; *comprEncont*}}{; *} ) -> Resultado  <br/>
 **Position** ( *pesquisar* ; *string* ; *inicio* ; *comprimentoEncontrado* ; *opções* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Position.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pesquisar | Text | &#8594;  | Cadeia a procurar |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | comprimentoEncontrado | Integer | &#8594;  | Comprimento do texto encontrado |
 | opções | Integer | &#8594;  | Condições de pesquisa |
 | Resultado | Integer | &#8592; | Posição da primeira ocorrência |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

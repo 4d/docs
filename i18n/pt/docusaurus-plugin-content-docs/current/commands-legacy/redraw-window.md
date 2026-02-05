@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** ({ *janela* : Integer })<!-- END REF-->
 <!--REF #_command_.REDRAW WINDOW.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janela | Integer | &#8594; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

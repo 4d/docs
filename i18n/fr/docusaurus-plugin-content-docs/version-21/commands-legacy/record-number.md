@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Record number.Syntax-->**Record number** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle vous souhaitez obtenir le numéro de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &#8592; | Numéro d'enregistrement courant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

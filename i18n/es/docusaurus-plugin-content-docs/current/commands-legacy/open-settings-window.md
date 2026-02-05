@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *selector* : Text {; *acceso* : Boolean {; *tipoParam* : Integer}} )<!-- END REF-->
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | selector | Text | &#8594; | Llave que designa un tema o página o un grupo de parámetros de la caja de diálogo Preferencias |
 | acceso | Boolean | &#8594; | True=Bloquear las otras páginas de la caja de diálogo, False o si se omite=Dejar activas las otras páginas de la caja de diálogo |
 | tipoParam | Integer | &#8594; | 0 o si se omite = Parámetros de estructura, 1 = Parámetros de usuario, 2 = Configuración usuario para archivo de datos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

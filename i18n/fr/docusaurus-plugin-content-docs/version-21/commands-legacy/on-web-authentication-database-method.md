@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Web Authentication database method.Syntax-->On Web Authentication($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean<!-- END REF-->
 <!--REF #_command_.On Web Authentication database method.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | $url | Texte | &#8592; | URL |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | $user | Texte | &#8592; | Nom d’utilisateur |
 | $pw | Texte | &#8592; | Mot de passe |
 | $result | Booléen | &#8592; | Vrai = requête acceptée, Faux = requête rejetée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

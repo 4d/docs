@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xPath* : Text}; *elementValue* : Text, Variable {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594; | XML要素参照 |
 | xPath | Text | &#8594; | XML要素のXPathパス |
 | elementValue | Text, Variable | &#8594; | 要素の新しい値 |
 | * | 演算子 | &#8594; | 指定時: 値をCDATAに設定 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

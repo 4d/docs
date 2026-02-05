@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *estado* )<!-- END REF-->
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | estado | Boolean | &#8594;  | True=Ativar análises de pesquisas internas, False=Desativar o análises de pesquisas internas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *docPath* : Text ; *icon* : Picture {; *size* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | docPath | Text | &#8594; | アイコンを取得するドキュメントのパスまたは名前、 または空の文字列の場合標準のファイルを開くダイアログ |
 | icon | Picture | &#8592; | ドキュメントアイコン |
 | size | Integer | &#8594; | 返されたピクチャのサイズ(ピクセルで) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

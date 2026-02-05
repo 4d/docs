@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *objeto* ; *propiedad* ; *array* )<!-- END REF-->
 <!--REF #_command_.OB GET ARRAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objeto | Object, Campo Object | &#8594;  | Objeto estructurado |
 | propiedad | Text | &#8594;  | Nombre de la propiedad a leer |
 | array | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &#8592; | Array valor de la propiedad |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

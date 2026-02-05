@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *objCible* : Object ; *débutPlage* : Integer ; *finPlage* : Integer ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Text range.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | débutPlage | Integer | &#8594;  | Position du début de la plage dans la zone |
 | finPlage | Integer | &#8594;  | Position de la fin de la plage dans la zone |
 | Résultat | Object | &#8592; | Nouvel objet plage |
-
+</div>
 <!-- END REF-->
 
 ## Description 

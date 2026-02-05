@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** {( *tabela* )}<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela para a qual vai mover o registro previamente selecionado, ou tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

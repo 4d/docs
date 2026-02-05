@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ de la table N (d'où part le lien) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

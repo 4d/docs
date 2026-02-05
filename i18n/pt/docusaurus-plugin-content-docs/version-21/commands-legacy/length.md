@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Length.Syntax-->**Length** ( *cadeia* ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | cadeia | Text | &#8594;  | Cadeia para a qual vai retornar o comprimento |
 | Resultado | Integer | &#8592; | Comprimento da função |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

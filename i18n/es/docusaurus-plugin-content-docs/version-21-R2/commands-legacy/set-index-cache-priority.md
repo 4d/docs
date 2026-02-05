@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *campo* : Field ; *prioridad* : Integer )<!-- END REF-->
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campo | Field | &#8594; | Campo cuyo valor de prioridad de índices debe ser configurado para la sesión |
 | prioridad | Integer | &#8594; | Valor de prioridad de la caché para el(los) índice(s) de campo |
-
+</div>
 <!-- END REF-->
 
 ## Modo experto 

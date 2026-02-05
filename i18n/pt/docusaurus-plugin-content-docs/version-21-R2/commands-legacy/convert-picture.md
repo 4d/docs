@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT PICTURE.Syntax-->**CONVERT PICTURE** ( *imagem* : Picture ; *codec* : Text {; *compressao* : Real} )<!-- END REF-->
 <!--REF #_command_.CONVERT PICTURE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8596; | *in:* Picture to be converted<br/>*out:* Converted picture |
 | codec | Text | &#8594; | Codec de identificação de Imagem |
 | compressao | Real | &#8594; | Qualidade da compressão |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

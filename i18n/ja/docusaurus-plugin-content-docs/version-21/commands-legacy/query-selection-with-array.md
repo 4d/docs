@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *targetField* ; *array* )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetField | Field | &#8594;  | 値の比較に使用するフィールド |
 | array | Array | &#8594;  | 検索する値の配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

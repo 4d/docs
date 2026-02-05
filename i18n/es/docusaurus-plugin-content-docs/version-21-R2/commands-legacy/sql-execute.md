@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *instruccionSQL* : Text {; *...objAsoc* : Variable, Field} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | instruccionSQL | Text | &#8594; | Comando SQL a ejecutar |
 | objAsoc | Variable, Field | &#8592; | Recibe el resultado (si es necesario) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

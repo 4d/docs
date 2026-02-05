@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* : Text ; *nomElement* : Text ; *indice* : Integer ; *valorElement* : Variable ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594; | Referencia del elemento XML |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | indice | Integer | &#8594; | Número de índice del elemento a leer |
 | valorElement | Variable | &#8592; | Valor del elemento |
 | Resultado | Text | &#8592; | Referencia del elemento XML (16 caracteres) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

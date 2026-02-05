@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *leChamp* })<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ dont la saisie doit être refusée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

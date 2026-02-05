@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resID* : Integer ; *strID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get indexed string.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resID | Integer | &#8594;  | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
 | strID | Integer | &#8594;  | String number or 'id' attribute of the 'trans-unit' element (XLIFF) |
 | resFile | Time | &#8594;  | Resource file reference number If omitted: all the XLIFF files or open resource files |
 | Function result | Text | &#8592; | Value of the indexed string |
-
+</div>
 <!-- END REF-->
 
 ## Description 

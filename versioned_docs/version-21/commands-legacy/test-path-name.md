@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pathname | Text | &#8594;  | Pathname to directory, folder or document |
 | Function result | Integer | &#8592; | 1, pathname refers to an existing document 0, pathname refers to an existing directory or folder <0, invalid pathname, OS file manager error code |
-
+</div>
 <!-- END REF-->
 
 ## Description 

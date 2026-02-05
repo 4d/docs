@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ALL RECORDS.Syntax-->**ALL RECORDS** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.ALL RECORDS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to select all records, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -8,12 +8,15 @@ title: VP SHOW CELL
 **VP SHOW CELL** ( *rangeObj* : Object { ; *vPos* : Integer; *hPos* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |vPos  |Integer|->|Vertical view position of cell or row|
-|hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
+|hPos  |Integer|->|Horizontal view position of cell or row|
+</div>
+<!-- END REF -->
 
 
 ## Description

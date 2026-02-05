@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( {* ;} *object* ; *calculation* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)、省略時objectは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | calculation | Integer | &#8594;  | フッターエリアの計算タイプ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

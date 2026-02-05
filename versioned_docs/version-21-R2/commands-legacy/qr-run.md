@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *area* : Integer )<!-- END REF-->
 <!--REF #_command_.QR RUN.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area to execute |
-
+</div>
 <!-- END REF-->
 
 ## Description 

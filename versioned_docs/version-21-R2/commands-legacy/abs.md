@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Abs.Syntax-->**Abs** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Abs.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number for which to return the absolute value |
 | Function result | Real | &#8592; | Absolute value of number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

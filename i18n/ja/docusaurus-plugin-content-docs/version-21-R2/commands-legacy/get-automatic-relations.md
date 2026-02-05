@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *one* : Boolean ; *many* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | one | Boolean | &#8592; | すべてのn対1リレートの状態 |
 | many | Boolean | &#8592; | すべての1対nリレートの状態 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

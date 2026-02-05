@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Syntax-->**WP TABLE MERGE CELLS** ( *targetObj* ) | ( *tableRef* ; *startColumn* ; *startRow* {; *columnCount*{; *rowCount*}} )<!-- END REF-->
 <!--REF #_command_.WP TABLE MERGE CELLS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | startRow | Integer | &#8594;  | Position of first column row |
 | columnCount | Integer | &#8594;  | Number of columns to merge |
 | rowCount | Integer | &#8594;  | Number of rows to merge |
-
+</div>
 <!-- END REF-->
 
 *This command is not thread-safe, it cannot be used in preemptive code.*

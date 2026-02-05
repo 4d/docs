@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *idField* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get subrecord key.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | idField | Field | &#8594;  | 以前のサブテーブルリレーションの"サブテーブルリレーション"または"倍長整数"型のフィールド |
 | 戻り値 | Integer | &#8592; | リレーションの内部キー |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

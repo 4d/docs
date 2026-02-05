@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *sourisX* : Integer ; *sourisY* : Integer {; *process* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sourisX | Integer | &#8594; | Coordonnée horizontale |
 | sourisY | Integer | &#8594; | Coordonnée verticale |
 | process | Integer | &#8594; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
 | * | Operator | &#8594; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Active transaction.Syntax-->**Active transaction** : Boolean<!-- END REF-->
 <!--REF #_command_.Active transaction.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Devuelve False si se suspende la transacción actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

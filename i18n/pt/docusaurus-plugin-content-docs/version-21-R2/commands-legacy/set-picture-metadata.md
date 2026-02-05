@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *imagem* : Picture ; *nomeMeta* : Text ; *conteudoMeta* : Variable {; ...(*nomeMeta* : Text, *conteudoMeta* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PICTURE METADATA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8594; | Imagem cujos metadados você deseja estabelecer |
 | nomeMeta | Text | &#8594; | Nome ou caminho do bloco a ser estabelecido |
 | conteudoMeta | Variable | &#8594; | Conteúdo do metadado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Copy list.Syntax-->**Copy list** ( *lista* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | lista | Integer | &#8594; | Número de referência da lista a copiar |
 | Resultado | Integer | &#8592; | Número de referência da nova lista |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

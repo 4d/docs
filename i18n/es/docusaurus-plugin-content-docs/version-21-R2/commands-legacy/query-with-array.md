@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY WITH ARRAY.Syntax-->**QUERY WITH ARRAY** ( *campoObjetivo* : Field ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.QUERY WITH ARRAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campoObjetivo | Field | &#8594; | Campo utilizado para comparar los valores |
 | array | Array | &#8594; | Array de los valores buscados |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

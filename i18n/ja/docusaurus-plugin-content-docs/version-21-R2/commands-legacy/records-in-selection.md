@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Records in selection.Syntax-->**Records in selection** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in selection.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | カレントセレクション数を返すテーブル 省略時、デフォルトテーブル |
 | 戻り値 | Integer | &#8592; | カレントセレクションのレコード数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

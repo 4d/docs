@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* ; *document* )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set | Text | &#8594;  | Name of the set to save |
 | document | Text | &#8594;  | Name of the disk file to which to save the set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

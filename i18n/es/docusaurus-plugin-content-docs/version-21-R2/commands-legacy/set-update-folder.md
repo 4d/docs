@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *rutaCarpeta* : Text {; *erroresDiscretos* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaCarpeta | Text | &#8594; | Ruta de acceso de la carpeta (paquete bajo macOS) que contiene la aplicación actualizada |
 | erroresDiscretos | Boolean | &#8594; | False (por defecto) = mostrar mensajes de error, <br/>True = no reportarlos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

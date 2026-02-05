@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Syntax-->**USE ENTITY SELECTION** ( *entitySelection* : 4D.EntitySelection )<!-- END REF-->
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | entitySelection | 4D.EntitySelection | &#8594;  | An entity selection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela na qual reduzir a seleção ao registro atual, ou tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

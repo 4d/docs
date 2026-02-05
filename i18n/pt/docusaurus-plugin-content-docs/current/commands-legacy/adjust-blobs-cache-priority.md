@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *Tabela* ; *prioridade* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Table | Table | &#8594; | Tabela cujos "blobs" de valores de prioridade de dados vão ser ajustados |
 | prioridade | Integer | &#8594; | Valor de prioridade de Cache para Blobs na tabela |
-
+</div>
 <!-- END REF-->
 
 ## Modo especialista 

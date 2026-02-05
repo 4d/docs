@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *nivel* : Integer {; *saltoPag* : Integer} )<!-- END REF-->
 <!--REF #_command_.BREAK LEVEL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nivel | Integer | &#8594; | Número de niveles de ruptura |
 | saltoPag | Integer | &#8594; | Nivel del salto de página |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -14,11 +14,14 @@ title: VP Find table
 **VP Find table** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Find table.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj |Object|->|Cell range|
-|Result  |Text|<-|Table name|<!-- END REF -->
+|Result  |Text|<-|Table name|
+</div>
+<!-- END REF -->
 
 ## Description
 

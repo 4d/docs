@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *aString* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aText | Text | &#8594;  | String to convert to lowercase |
 | * | Operator | &#8594;  | If passed: keep accents |
 | Function result | Text | &#8592; | String in lowercase |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*laTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de laquelle une sélection d'enregistrements doit être retournée ou Table par défaut si ce paramètre est omis |
 | * | Opérateur | &#8594; | Masquer les barres de défilement |
-
+</div>
 <!-- END REF-->
 
 ## Description 

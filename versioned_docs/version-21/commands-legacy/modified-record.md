@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Modified record.Syntax-->**Modified record** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to test if current record has been modified, or Default table, if omitted |
 | Function result | Boolean | &#8592; | Record has been modified (True), or Record has not been modified (False) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

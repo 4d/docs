@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *zone* : Integer ; *numCommande* : Integer {; *valeur* : Integer, Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get command status.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594; | Référence de la zone |
 | numCommande | Integer | &#8594; | Numéro de commande |
 | valeur | Integer, Text | &#8592; | Valeur du sous-élément sélectionné |
 | Résultat | Integer | &#8592; | Statut de la commande |
-
+</div>
 <!-- END REF-->
 
 ## Description 

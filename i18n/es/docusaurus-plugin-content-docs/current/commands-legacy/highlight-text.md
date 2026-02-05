@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *objeto* : Field, Variable, any ; *inicioSel* : Integer ; *finSel* : Integer )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es un campo o una variable |
 | objeto | Field, Variable, any | &#8594; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
 | inicioSel | Integer | &#8594; | Nueva posición de inicio de selección de texto |
 | finSel | Integer | &#8594; | Nueva posición de fin de selección de texto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

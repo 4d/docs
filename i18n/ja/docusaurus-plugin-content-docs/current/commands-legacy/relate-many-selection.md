@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *aField* : Field )<!-- END REF-->
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aField | Field | &#8594; | nテーブルのフィールド (リレーションの開始元) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -8,13 +8,15 @@ displayed_sidebar: docs
 <!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* {; *orden*}{; *array2* ; *orden2* ; ... ; *arrayN* ; *ordenN*} ) <br/>
 **MULTI SORT ARRAY** ( *ptrArrayNombre* ; *ordenArrayNombre* )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array(s) a ordenar |
 | orden | * | &#8594;  | ">" efectuar una ordenación creciente o "<" efectuar una ordenación decreciente Si se omite "aa" no ordenación |
 | ptrArrayNombre | Pointer array | &#8594;  | Array de punteros de arrays |
 | ordenArrayNombre | Integer array | &#8594;  | Array de criterio de ordenación (1= ordenar por orden creciente, -1= ordenar por orden decreciente), 0= sincronización con ordenaciones anteriores |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Insert string.Syntax-->**Insert string** ( *fuente* ; *ainsertar* ; *posicion* ) : Text<!-- END REF-->
 <!--REF #_command_.Insert string.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | fuente | Text | &#8594;  | Cadena en la cual insertar otra cadena |
 | ainsertar | Text | &#8594;  | Cadena a insertar |
 | posicion | Integer | &#8594;  | Posición de la inserción |
 | Resultado | Text | &#8592; | Cadena resultante |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

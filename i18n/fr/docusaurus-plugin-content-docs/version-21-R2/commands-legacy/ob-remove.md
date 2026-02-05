@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *objet* : Object, Object ; *propriété* : Text )<!-- END REF-->
 <!--REF #_command_.OB REMOVE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objet | Object, Object | &#8594; | Objet structuré |
 | propriété | Text | &#8594; | Nom de la propriété à supprimer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

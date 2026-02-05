@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Screen width.Syntax-->**Screen width** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Screen width.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | ･･Windows: *が指定されている場合、アプリケーションウィンドウの幅、 または画面の幅 Macintosh: メイン画面の幅 |
 | 戻り値 | Integer | &#8592; | ピクセル数で表される幅 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

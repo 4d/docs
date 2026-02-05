@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *arrObjetos* {; *arrVariables* {; *arrPags*}} {; *opcionPag*} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrObjetos | Text array | &#8592; | Nombre de los objetos del formulario |
 | arrVariables | Pointer array | &#8592; | Punteros a variables o campos asociados a los objetos |
 | arrPags | Array integer | &#8592; | Número de página de cada objeto |
 | opcionPag | Integer, * | &#8594;  | 1=Página actual del formulario, 2=Todas las páginas, 4=Páginas heredadas<br/>Si se pasa * (obsoleto) = página actual con objetos heredados |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

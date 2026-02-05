@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* ; *aString* ; *start* {; pos_found ; length_found}{; *} ) -> 戻り値 <br/>
 **Match regex** ( *pattern* ; *aString* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pattern | Text | &#8594;  | 通常の式 |
@@ -22,7 +24,7 @@ displayed_sidebar: docs
 | pattern | Text | &#8594;  | 通常の式(完全に一致) |
 | aString | Text | &#8594;  | 検索が行われる文字列 |
 | 戻り値 | Boolean | &#8592; | True = 検索でオカレンスが見つかった; それ以外の場合にはFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

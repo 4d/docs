@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *liste* : Integer, Text ; *réfElément* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
 | liste | Integer, Text | &#8594; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
 | réfElément | Integer | &#8594; | Numéro de référence d'élément |
 | Résultat | Integer | &#8592; | Position de l'élément parmi la ou les liste(s) déployée(s)/contractée(s) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *campo* : Field })<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594; | Campo a rejeitar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

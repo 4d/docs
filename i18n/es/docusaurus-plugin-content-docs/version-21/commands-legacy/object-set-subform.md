@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( {* ;} *objeto* {; *aTabla*}; *subFormDet* {; *subFormList*} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | aTable | Table | &#8594;  | Tabla de formulario (si tabla de formulario) |
 | subFormDet | Text, Object | &#8594;  | Nombre del formulario detallado de subformulario |
 | subFormList | Text, Object | &#8594;  | Nombre del formulario listado de subformulario (formulario tabla) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

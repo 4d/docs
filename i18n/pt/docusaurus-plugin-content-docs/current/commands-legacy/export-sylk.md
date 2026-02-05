@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*tabela* : Table ;} *documento* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT SYLK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela da qual exportar dados, ou tabela padrão, se omitida |
 | documento | Text | &#8594; | documento SYLK a receber os dados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

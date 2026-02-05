@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Syntax-->**OBJECT SET CONTEXT MENU** ( * ; *objet* : Text ; *menuContext* : Boolean )<br/>**OBJECT SET CONTEXT MENU** ( *objet* : Field, Variable ; *menuContext* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | menuContext | Boolean | &#8594; | Vrai = activer menu contextuel, Faux = désactiver menu contextuel |
-
+</div>
 <!-- END REF-->
 
 ## Description 

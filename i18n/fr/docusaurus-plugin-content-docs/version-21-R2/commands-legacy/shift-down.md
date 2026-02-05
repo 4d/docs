@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Shift down.Syntax-->**Shift down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Shift down.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Etat de la touche Majuscule |
-
+</div>
 <!-- END REF-->
 
 ## Description 

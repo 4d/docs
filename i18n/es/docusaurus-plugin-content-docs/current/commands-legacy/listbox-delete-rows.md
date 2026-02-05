@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Syntax-->**LISTBOX DELETE ROWS** ( * ; *objeto* : Text ; *posicionL* : Integer {; *numLineas* : Integer} )<br/>**LISTBOX DELETE ROWS** ( *objeto* : Field, Variable ; *posicionL* : Integer {; *numLineas* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE ROWS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | posicionL | Integer | &#8594; | Posición de la fila a eliminar |
 | numLineas | Integer | &#8594; | Número de líneas a borrar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

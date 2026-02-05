@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( {* ;} *objeto* ; *arrFiltros* ; *arrAutorizRechazar* )<!-- END REF-->
 <!--REF #_command_.WA GET URL FILTERS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | arrFiltros | Text array | &#8592; | Array filtros |
 | arrAutorizRechazar | Boolean array | &#8592; | Array Autorizar-rechazar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

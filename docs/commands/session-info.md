@@ -9,10 +9,13 @@ displayed_sidebar: docs
 
 
 <!-- REF #_command_.Session info.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |sessionID |Integer|&#8594; |Session ID|
 |Result|Object|&#8592;|Information about the session|
+</div>
 <!-- END REF -->
 
 <details><summary>History</summary>

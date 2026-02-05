@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *folderPath* {; *numFiles* {; *fileLimitSize* {; *fieldLimitSize*}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | folderPath | Text | &#8594;  | 書き出しフォルダーのパス名、または"" でフォルダー選択ダイアログボックスを表示 |
 | numFiles | Integer | &#8594;  | フォルダーごとの最大ファイル数 |
 | fileLimitSize | Integer | &#8594;  | 書き出しファイルのサイズ制限値 (KB) |
 | fieldLimitSize | Integer | &#8594;  | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License usage.Syntax-->**License usage** : Collection<!-- END REF-->
 <!--REF #_command_.License usage.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Collection | &#8592; | 使用中のライセンスについての情報を格納したオブジェクトのコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

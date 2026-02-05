@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*objet* ;} *horizontal* ; *vertical* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM SET SIZE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objet | Text | &#8594;  | Nom d’objet indiquant les limites du formulaire |
 | horizontal | Integer | &#8594;  | Si * passé : marge horizontale (pixels)Si * omis : largeur (pixels) |
 | vertical | Integer | &#8594;  | Si * passé : marge verticale (pixels)Si * omis : hauteur (pixels) |
 | * | Opérateur | &#8594;  | • Si passé, utiliser horizontal et vertical comme marges du formulaire• Si omis, utiliser horizontal et vertical comme largeur et hauteur du formulaireCe paramètre ne peut pas être passé si objet est passé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

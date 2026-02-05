@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *htmlText* : Text {; *type* : Text} )<!-- END REF-->
 <!--REF #_command_.WEB SEND TEXT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | htmlText | Text | &#8594; | Webブラウザへ送られるHTMLテキストフィールド または変数 |
 | type | Text | &#8594; | MIME型 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

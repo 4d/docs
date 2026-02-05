@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *redimension* {; *hauteurMini* {; *hauteurMaxi*}} )<!-- END REF-->
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | redimension | Boolean | &#8594;  | Vrai : le formulaire est redimensionnable verticalement Faux : le formulaire n’est pas redimensionnable verticalement |
 | hauteurMini | Integer | &#8594;  | Hauteur minimale du formulaire (pixels) |
 | hauteurMaxi | Integer | &#8594;  | Hauteur maximale du formulaire (pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

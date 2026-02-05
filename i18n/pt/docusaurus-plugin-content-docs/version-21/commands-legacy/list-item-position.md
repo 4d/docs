@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *lista* ; *refElem* ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
 | lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
 | refElem | Integer | &#8594;  | Número de referência do elemento |
 | Resultado | Integer | &#8592; | Posição do elemento em listas expandidas/contraídas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

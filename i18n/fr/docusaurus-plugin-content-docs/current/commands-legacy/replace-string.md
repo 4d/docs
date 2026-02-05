@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* : Text ; *obsolète* : Text ; *nouveau* : Text {; *combien* : Integer}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594; | Chaîne de départ |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | combien | Integer | &#8594; | Nombre de remplacements à effectuer |
 | * | Opérateur | &#8594; | Si passé : évaluation basée sur les codes de caractères |
 | Résultat | Text | &#8592; | Chaîne résultante |
-
+</div>
 <!-- END REF-->
 
 ## Description 

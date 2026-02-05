@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *picture* : Picture ; *codecIDs* : Text array )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594; | 解析するピクチャーフィールドあるいは変数 |
 | codecIDs | Text array | &#8592; | ピクチャーのコーデックID |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

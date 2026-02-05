@@ -17,13 +17,15 @@ title: VP EXPORT DOCUMENT
 **VP EXPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text {; *paramObj* : Object} )<!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
-
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |filePath| Text|->|Pathname of the document|
-|paramObj| Object|->|Export options|<!-- END REF -->
+|paramObj| Object|->|Export options|
+</div>
+<!-- END REF -->
 
 ## Description
 

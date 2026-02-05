@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *fileName* : Text {; *inputStream* : Text, Blob {; *outputStream* : Text, Blob {; *errorStream* : Text, Blob}}}{; *pid* : Integer} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | File path and arguments of file to launch |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | outputStream | Text, Blob | &#8592; | Output stream (stdout) |
 | errorStream | Text, Blob | &#8592; | Error stream (stderr) |
 | pid | Integer | &#8592; | Unique identifier for external process |
-
+</div>
 <!-- END REF-->
 
 

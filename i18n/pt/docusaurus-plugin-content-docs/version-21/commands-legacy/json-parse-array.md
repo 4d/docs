@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *cadeiaJSON* ; *arrayObjeto* )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | cadeiaJSON | Text | &#8594;  | Cadeia JSON a analisar |
 | arrayObjeto | Array | &#8592; | Array que contém o resultado da análise da cadeia JSON |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *objectName* ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | objectName | Text | &#8594;  | オブジェクト名 |
 | 戻り値 | any | &#8592; | フォームオブジェクトのデータソースのカレント値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

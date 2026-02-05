@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.End SQL.Syntax-->**End SQL**<!-- END REF-->
 <!--REF #_command_.End SQL.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

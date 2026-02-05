@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( elemRef|documento ; *seletor* : Integer ; *valor* : Integer {; ...(*seletor* : Integer, *valor* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML GET OPTIONS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | elemRef&#124;documento | Texto | &#8594; | Elemento de referência raiz XML ou Referência de documento aberto |
 | seletor | Integer | &#8594; | Opção a conseguir |
 | valor | Integer | &#8592; | Valor atual da opção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *object* : any {; *vPosition* : Integer {; *hPosition* : Integer}}{; *} )<br/>**OBJECT SET SCROLL POSITION** ( *object* : any {; *vPosition* : Integer {; *hPosition* : Integer}}{; *} )<br/><!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a table, a field or a variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | vPosition | Integer | &#8594;  | Line number to display or Vertical scrolling in pixels (pictures) |
 | hPosition | Integer | &#8594;  | Column number to display (list box) or<br/>Horizontal scrolling in pixels (pictures) |
 | * | Operator | &#8594;  | Display of line (and column if the *hPosition* parameter is passed) in first position after scroll |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Discover data key.Syntax-->**Discover data key**  : Boolean<!-- END REF-->
 <!--REF #_command_.Discover data key.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | 現在開かれているデータファイルに対する有効な暗号化キーが見つかった場合にはTrue、そうでない場合にはFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

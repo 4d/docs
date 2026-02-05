@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( {* ;} *objeto* {; *inicioSel* {; *finSel*}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get expression.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | inicioSel | Integer | &#8594;  | Inicio de la selección |
 | finSel | Integer | &#8594;  | Fin de la selección |
 | Resultado | Text | &#8592; | Etiqueta de la expresión |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

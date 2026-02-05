@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *partie* ; *contenuPartie* ; *nomPartie* ; *typeMime* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.WEB GET BODY PART.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | partie | Integer | &#8594;  | Numéro de partie |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nomPartie | Text | &#8592; | Nom de la variable "input" |
 | typeMime | Text | &#8592; | Type mime du fichier |
 | nomFichier | Text | &#8592; | Nom du fichier posté |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font style.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) 、<br/>省略時: objectは変数またはフィールド |
 | object | any | &#8594;  | オブジェクト名 (* 指定時)、またはフィールドまたは変数 (* 省略時) |
 | 戻り値 | Integer | &#8592; | フォントスタイル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

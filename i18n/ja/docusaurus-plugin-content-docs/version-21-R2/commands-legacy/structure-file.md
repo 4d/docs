@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Structure file.Syntax-->**Structure file** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | ホストデータベースのストラクチャファイルを返す |
 | 戻り値 | Text | &#8592; | データベースストラクチャファイルのパス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

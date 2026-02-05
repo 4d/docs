@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION**   ( * ; *objeto* : any {; *posicionL* : Integer {; *posicionH* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una tabla o una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | posicionL | Integer | &#8594; | Número de línea a mostrar |
 | posicionH | Integer | &#8594; | Número de columna a mostrar (list box) o Desplazamiento horizontal en píxeles (imágenes) |
 | * | Operador | &#8594; | Mostrar la línea en primera posición después del desplazamiento |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

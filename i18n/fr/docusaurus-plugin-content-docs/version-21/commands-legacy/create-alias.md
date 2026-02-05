@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *cheminCible* ; *cheminAlias* )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminCible | Text | &#8594;  | Nom ou chemin d’accès de la cible de l’alias/du raccourci |
 | cheminAlias | Text | &#8594;  | Nom ou chemin d’accès complet de l’alias/du raccourci à créer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

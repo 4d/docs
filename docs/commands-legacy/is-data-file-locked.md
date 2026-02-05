@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is data file locked.Syntax-->**Is data file locked**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is data file locked.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | True = file/segment locked False = file/segment not locked |
-
+</div>
 <!-- END REF-->
 
 ## Description 

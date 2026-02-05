@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parametros* ) : any<!-- END REF-->
 <!--REF #_command_.WA Run offscreen area.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | parametros | Object | &#8594;  | Objeto que contiene los atributos del área web |
 | Resultado | any | &#8592; | Propiedad .result del objeto onEvent, o Null si no devuelve un valor |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

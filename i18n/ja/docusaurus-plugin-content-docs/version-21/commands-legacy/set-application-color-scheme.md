@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *colorScheme* )<!-- END REF-->
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | colorScheme | Text | &#8594;  | "light"、"dark"、または "inherited" |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trigger event.Syntax-->**Trigger event**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger event.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | 0 Outside any trigger execution cycle 1 Saving a new record 2 Saving an existing record 3 Deleting a record |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -15,12 +15,15 @@ title: VP Get data context
 **VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #_method_.VP Get data context.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |sheet|Integer|->|Index of the sheet to get the data context from|
-|Result |Variant|<-|Data context. Object or Collection|<!-- END REF -->
+|Result |Variant|<-|Data context. Object or Collection|
+</div>
+<!-- END REF -->
 
 ## Description
 

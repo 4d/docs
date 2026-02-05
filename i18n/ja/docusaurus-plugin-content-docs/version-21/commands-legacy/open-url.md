@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *path* {; *appName*}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | path | Text | &#8594;  | 開くドキュメントまたはURL |
 | appName | Text | &#8594;  | 使用するアプリケーション名 |
 | * | 演算子 | &#8594;  | 指定した場合 = URLをエンコードしない, 省略した場合 = URLをエンコードする |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

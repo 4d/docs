@@ -7,12 +7,15 @@ title: VP Get frozen panes
 **VP Get frozen panes** ( vpAreaName : Text { ; sheet : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get frozen panes.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Object containing frozen column and row information|<!-- END REF -->
+|Result  |Object|<-|Object containing frozen column and row information|
+</div>
+<!-- END REF -->
 
 ## Description
 

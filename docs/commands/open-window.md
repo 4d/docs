@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Syntax-->**Open window** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *type* : Integer {; *title* : Text {; *controlMenuBox* : Text}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | left | Integer | &#8594;  | Global left coordinate of window contents area |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | title | Text | &#8594;  | Title of window or "" for using default form title |
 | controlMenuBox | Text | &#8594;  | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
 | Function result | Integer | &#8592; | Window reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

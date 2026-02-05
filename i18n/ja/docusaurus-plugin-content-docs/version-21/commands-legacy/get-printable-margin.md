@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE MARGIN.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | left | Integer | &#8592; | 左マージン |
 | top | Integer | &#8592; | 上マージン |
 | right | Integer | &#8592; | 右マージン |
 | bottom | Integer | &#8592; | 下マージン |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

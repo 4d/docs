@@ -9,11 +9,14 @@ title: VP SET CELL STYLE
 **VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|styleObj    |Object|->|Style object|<!-- END REF -->
+|styleObj    |Object|->|Style object|
+</div>
+<!-- END REF -->
 
 ## Description
 

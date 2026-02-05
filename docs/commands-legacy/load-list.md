@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | listName | Text | &#8594;  | Name of a list created in the Design environment List Editor |
 | Function result | Integer | &#8592; | List reference number of newly created list |
-
+</div>
 <!-- END REF-->
 
 ## Description 

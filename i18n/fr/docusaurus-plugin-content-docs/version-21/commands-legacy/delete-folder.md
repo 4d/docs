@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *dossier* {; *optionSuppression*} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | dossier | Text | &#8594;  | Nom ou chemin d’accès complet du dossier à supprimer |
 | optionSuppression | Integer | &#8594;  | Option de suppression du dossier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

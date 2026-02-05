@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Macintosh command down.Syntax-->**Macintosh command down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Macintosh command down.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Etat de la touche Commande Macintosh ou Etat de la touche Ctrl Windows |
-
+</div>
 <!-- END REF-->
 
 ## Description 

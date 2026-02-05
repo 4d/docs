@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Caps lock down.Syntax-->**Caps lock down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Caps lock down.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Etat de la touche Verrouillage Majuscule |
-
+</div>
 <!-- END REF-->
 
 ## Description 

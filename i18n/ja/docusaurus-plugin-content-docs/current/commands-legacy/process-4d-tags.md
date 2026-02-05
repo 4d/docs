@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *inputData* : Text ; *outputData* : Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | inputData | Text | &#8594; | 処理する4Dタグを格納しているデータ |
 | outputData | Text | &#8592; | 処理されたデータ |
 | param | Expression | &#8594; | 実行されるテンプレートへと渡される引数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

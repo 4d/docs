@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *list* : Integer, Text ; *itemRef* : 倍長整数, 演算子 ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**GET LIST ITEM PARAMETER** ( * ; *list* : Integer, Text ; * ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | itemRef &#124; * | 倍長整数, 演算子 | &#8594; | 項目参照番号 または 0: リストに最後に追加された項目 または *: カレントのリスト項目 |
 | selector | Text | &#8594; | パラメタ定数 |
 | value | Text, Boolean, Real | &#8592; | パラメタの現在値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

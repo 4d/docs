@@ -43,10 +43,13 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Settings to generate or load a key pair|
 |Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+</div>
 <!-- END REF -->
 
 The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
@@ -159,11 +162,14 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 
 
 <!-- REF #CryptoKey.decrypt().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|----|---|
 |message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
 |options|Object|->|Decoding options|
 |Result|Object|<-|Status|
+</div>
 <!-- END REF -->
 
 The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. The algorithm used depends on the type of the key.
@@ -205,11 +211,14 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 
 
 <!-- REF #CryptoKey.encrypt().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|----|---|
 |message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
 |options|Object|->|Encoding options|
 |Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
+</div>
 <!-- END REF -->
 
 The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. The algorithm used depends on the type of the key.
@@ -243,9 +252,12 @@ The returned value is an encrypted message.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|----|---|
 |Result|Text|<-|Private key in PEM format|
+</div>
 <!-- END REF -->
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
@@ -269,9 +281,12 @@ The returned value is the private key.
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |Result|Text|<-|Public key in PEM format|
+</div>
 <!-- END REF -->
 
 The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
@@ -314,11 +329,14 @@ The returned value is the public key.
 
 
 <!-- REF #CryptoKey.sign().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |message|Text OR Blob|->|Message to sign|  
 |options|Object|->|Signing options|
 |Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+</div>
 <!-- END REF -->
 
 The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
@@ -393,12 +411,15 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 
 <!-- REF #CryptoKey.verify().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |message|Text OR Blob|->|Message that was used to produce the signature|  
 |signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
 |options|Object|->|Signing options|
 |Result|Object|<-|Status of the verification|
+</div>
 <!-- END REF -->
 
 

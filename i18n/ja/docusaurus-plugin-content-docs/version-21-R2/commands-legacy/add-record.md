@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.ADD RECORD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | データ入力に使用するテーブル, または 省略した場合デフォルトテーブル |
 | * | Operator | &#8594; | スクロールバーを隠す |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

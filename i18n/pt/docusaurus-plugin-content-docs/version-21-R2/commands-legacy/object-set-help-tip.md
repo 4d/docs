@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *objeto* : Text ; *mensagemAjuda* : Text )<br/>**OBJECT SET HELP TIP** ( *objeto* : Field, Variable ; *mensagemAjuda* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HELP TIP.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | mensagemAjuda | Text | &#8594; | Conteúdo da mensagem de Ajuda |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

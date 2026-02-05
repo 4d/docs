@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *quoi* : Integer ; *message* : Integer ; *quand* : Integer ; *sourisX* : Integer ; *sourisY* : Integer ; *modifiers* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.POST EVENT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | quoi | Integer | &#8594; | Type d'événement |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | sourisY | Integer | &#8594; | Coordonnée verticale de la souris |
 | modifiers | Integer | &#8594; | Etat des touches Modifier |
 | process | Integer | &#8594; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

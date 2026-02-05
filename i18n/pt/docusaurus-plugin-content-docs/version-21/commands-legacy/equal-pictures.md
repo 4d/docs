@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *imagem1* ; *imagem2* ; *mascara* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Equal pictures.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem1 | Picture | &#8594;  | Imagem fonte original |
 | imagem2 | Picture | &#8594;  | Imagem a comparar |
 | mascara | Picture | &#8592; | Máscara resultante |
 | resultado | Boolean | &#8592; | True se ambas imagens são idênticas; caso contrário, False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( {* ;} *objeto* ; *color* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | color | Text, Integer | &#8594;  | Valor de color RGB |
 | horizontal | Boolean | &#8594;  | Utilice el color para las líneas horizontales |
 | vertical | Boolean | &#8594;  | Utilice el color para las líneas verticales |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

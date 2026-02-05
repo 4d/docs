@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *wpArea* : Text, Object;} {*targetObj* : Object} {; *startRange* : Integer ; *endRange* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | startRange | Integer | &#8594;  | Starting offset of text range |
 | endRange | Integer | &#8594;  | Ending offset of text range |
-
+</div>
 <!-- END REF-->
 
 *This command is not thread-safe, it cannot be used in preemptive code.*

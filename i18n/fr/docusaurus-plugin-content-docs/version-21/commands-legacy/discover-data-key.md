@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Discover data key.Syntax-->**Discover data key**  : Boolean<!-- END REF-->
 <!--REF #_command_.Discover data key.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Vrai si une clé de chiffrement valide a été trouvée pour le fichier de données courant, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

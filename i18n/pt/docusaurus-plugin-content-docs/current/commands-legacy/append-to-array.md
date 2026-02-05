@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *array* : Array ; *valor* : Expression )<!-- END REF-->
 <!--REF #_command_.APPEND TO ARRAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | array | Array | &#8594; | Array ao qual o elemento será anexado |
 | valor | Expression | &#8594; | Valor a acrescentar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Syntax-->**OBJECT GET DRAG AND DROP OPTIONS** ( {* ;} *objeto* ; *arrastrable* ; *arrastrableAuto* ; *soltable* ; *soltableAuto* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | arrastrableAuto | Boolean | &#8592; | 0 = False, 1 = True |
 | soltable | Boolean | &#8592; | 0 = False, 1 = True |
 | soltableAuto | Boolean | &#8592; | 0 = False, 1 = True |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *filePath* )<!-- END REF-->
 <!--REF #_command_.OPEN DATABASE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | filePath | Text | &#8594;  | File name (.4db, .4dc, .4dbase, .4dproject, .4dz, or .4dlink) or complete access path of database to open |
-
+</div>
 <!-- END REF-->
 
 ## Note 

@@ -8,13 +8,15 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE SECTION.Syntax-->**WP DELETE SECTION** ( *section* : Object )<br/> **WP DELETE SECTION** ( *wpDoc* : Object ; *indexNumber* : Integer {; *count* : Integer} )<!-- END REF-->
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | section | Object | &#8594;  | 4D Write Pro section |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | indexNumber | Integer | &#8594;  | Index of the section to be deleted |
 | count | Integer | &#8594;  | Number of sections to be deleted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

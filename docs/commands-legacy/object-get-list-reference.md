@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( * ; *object* : Text {; *listType* : Integer} ) : Integer<br/>**OBJECT Get list reference** ( *object* : Variable, Field {; *listType* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
 | object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
 | Function result | Integer | &#8592; | List reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

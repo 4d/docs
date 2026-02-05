@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.DUPLICATE RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela da qual vai duplicar o registro atual, ou tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

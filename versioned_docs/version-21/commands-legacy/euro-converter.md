@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *value* ; *fromCurrency* ; *toCurrency* ) : Real<!-- END REF-->
 <!--REF #_command_.Euro converter.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | value | Real | &#8594;  | Value to convert |
 | fromCurrency | Text | &#8594;  | Code of the currency in which the value is expressed |
 | toCurrency | Text | &#8594;  | Code of the currency into which the value must be converted |
 | Function result | Real | &#8592; | Converted value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

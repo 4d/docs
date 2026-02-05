@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET TEXT.Syntax-->**WP SET TEXT** ( *objCible* : Object ; *nouveauTexte* ; *positionTexte* : Number {; *miseAJourPlage* : Number} )<!-- END REF-->
 <!--REF #_command_.WP SET TEXT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | nouveauText | Text | &#8594;  | Texte à insérer |
 | positionTexte | Number | &#8594;  | Position de l'insertion (remplace, avant, après) |
 | miseAJourPlage | Number | &#8594;  | Inclut ou exclut le contenu inséré dans la plage |
-
+</div>
 <!-- END REF-->
 
 ## Description 

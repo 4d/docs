@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* ; *menuItem* ; *mark* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM MARK.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Item number or -1 for last item added |
 | mark | Text | &#8594;  | New menu item mark |
 | process | Integer | &#8594;  | Process reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

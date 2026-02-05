@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *aTable* : Table ; *recordArray* : Integer array {; *selection* : Text} )<!-- END REF-->
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | カレントセレクションのテーブル |
 | recordArray | Integer array | &#8592; | レコード番号配列 |
 | selection | Text | &#8594; | 命名セレクション名、または 省略した場合カレントセレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

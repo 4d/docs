@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get view properties.Syntax-->**WP Get view properties** ( * ; *wpArea* : Text, Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get view properties.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, wpArea es un nombre de objeto de formulario (cadena). Si se omite, wpArea es un campo de objeto o variable (documento) |
 | wpArea | Text, Object | &#8594;  | Nombre del objeto del formulario (si se especifica *) o variable o campo del objeto 4D Write Pro (si se omite *) |
 | Resultado | Object | &#8592; | Propiedades de la vista actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

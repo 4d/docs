@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is data file locked.Syntax-->**Is data file locked**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is data file locked.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | True=ファイル/セグメントがロックされている   False=ファイル/セグメントはロックされていない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

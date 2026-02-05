@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( *arrActivities* {; *} )<br/>**ACTIVITY SNAPSHOT** ( *arrUUID* ; *arrStart* ; *arrDuration* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | arrActivities &#124; arrUUID | Object array, テキスト配列 | &#8592; | オペレーションの詳細な情報(オブジェクト配列)<br/>またはオペレーションの UUID(テキスト配列) |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | arrInfo | Text array | &#8592; | オペレーションを説明するラベル |
 | arrDetails | Object array | &#8592; | コンテキストと、(あれば)サブオペレーションの詳細 |
 | * | 演算子 | &#8594;  | 渡した場合、サーバーの状態を取得 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *proceso* )<!-- END REF-->
 <!--REF #_command_.BRING TO FRONT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | proceso | Integer | &#8594;  | Número del proceso a pasar al primer plano |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

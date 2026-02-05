@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Cos.Syntax-->**Cos** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Cos.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | コサインを求めるラジアン値 |
 | 戻り値 | Real | &#8592; | コサイン値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

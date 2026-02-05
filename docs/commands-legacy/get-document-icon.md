@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *docPath* : Text ; *icon* : Picture {; *size* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | docPath | Text | &#8594;  | Name or path of document to get icon, or Empty string for standard Open File dialog box |
 | icon | Picture | &#8592; | Document icon |
 | size | Integer | &#8594;  | Size of the returned picture (in pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

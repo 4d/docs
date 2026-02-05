@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* ; *ligneMenu* ; *propriété* ; *valeur* {; *process*} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer | &#8594;  | Référence de menu ou Numéro de menu |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | propriété | Text | &#8594;  | Type de propriété |
 | valeur | any | &#8592; | Valeur de la propriété |
 | process | Integer | &#8594;  | Numéro de process |
-
+</div>
 <!-- END REF-->
 
 ## Description 

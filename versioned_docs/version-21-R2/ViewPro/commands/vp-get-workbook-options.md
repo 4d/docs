@@ -10,11 +10,14 @@ title: VP Get workbook options
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
-|Result |Object|<-|Object containing the workbook options|<!-- END REF -->
+|Result |Object|<-|Object containing the workbook options|
+</div>
+<!-- END REF -->
 
 ## Description
 

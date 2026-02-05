@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP GET BOOKMARKS.Syntax-->**WP GET BOOKMARKS** ( *docWP* ; *arrayNomMarcadores* )<!-- END REF-->
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Documento 4D Write Pro |
 | arrayNomMarcadores | Array texto | &#x1F858; | Array de nombres de marcadores |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

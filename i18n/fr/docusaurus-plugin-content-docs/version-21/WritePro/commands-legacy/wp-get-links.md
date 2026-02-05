@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get links.Syntax-->**WP Get links** ( *objCible* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get links.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | Résultat | Collection | &#8592; | Collection de liens |
-
+</div>
 <!-- END REF-->
 
 ## Description 

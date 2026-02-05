@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *arrBool* {; *conjunto*} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrBool | Boolean array | &#8592; | Array para indicar si un registro está en un conjunto o no |
 | conjunto | Text | &#8594;  | Nombre del conjunto o UserSet si se omite este parámetro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

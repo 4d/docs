@@ -8,11 +8,14 @@ title: VP SET VALUES
 **VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUES.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-|valuesCol  |Collection|->|Collection of values|<!-- END REF -->
+|valuesCol  |Collection|->|Collection of values|
+</div>
+<!-- END REF -->
 
 ## Description
 

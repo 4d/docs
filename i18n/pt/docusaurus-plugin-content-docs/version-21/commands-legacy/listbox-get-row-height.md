@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get row height.Syntax-->**LISTBOX Get row height**  ( {* ;} *objeto* ; *linha* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row height.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
 | linha | Integer | &#8594;  | Linha list box cuja altura quer obter |
 | Resultado | Integer | &#8592; | Altura Linha |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

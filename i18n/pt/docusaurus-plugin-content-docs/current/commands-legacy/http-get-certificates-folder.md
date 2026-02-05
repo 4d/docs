@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Get certificates folder.Syntax-->**HTTP Get certificates folder**  : Text<!-- END REF-->
 <!--REF #_command_.HTTP Get certificates folder.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Rota completa da pasta de certificados ativa |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilidade

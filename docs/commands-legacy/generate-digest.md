@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* : Blob, Text ; *algorithm* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate digest.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | param | Blob, Text | &#8594;  | Blob or text for which to get digest key |
 | algorithm | Integer | &#8594;  | Algorithm used to return key: 0 = MD5 Digest, 1 = SHA1 Digest, 2 = 4D digest, 3 = SHA-256 digest, 4 = SHA-512 digest |
 | * | Operator | &#8594;  | Encode digest in Base64URL |
 | Function result | Text | &#8592; | Value of digest key |
-
+</div>
 <!-- END REF-->
 
 ## Description 

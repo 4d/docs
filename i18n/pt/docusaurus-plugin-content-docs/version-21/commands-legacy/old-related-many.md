@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OLD RELATED MANY.Syntax-->**OLD RELATED MANY** ( *campo* )<!-- END REF-->
 <!--REF #_command_.OLD RELATED MANY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594;  | Um Campo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

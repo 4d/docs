@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* : Object, Object ; *property* : Text {; *type* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to read |
 | type | Integer | &#8594;  | Type to which to convert the value |
 | Function result | any | &#8592; | Current value of property |
-
+</div>
 <!-- END REF-->
 
 ## Description 

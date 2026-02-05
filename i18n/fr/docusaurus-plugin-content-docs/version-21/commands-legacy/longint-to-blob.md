@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *entierLong* ; *blob* ; *ordreOctet* {; offset } )<br/>**LONGINT TO BLOB** ( *entierLong* ; *blob* ; *ordreOctet* {; *} )<!-- END REF-->
 <!--REF #_command_.LONGINT TO BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | entierLong | Integer | &#8594;  | Valeur de type Entier long à écrire dans BLOB |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | ordreOctet | Integer | &#8594;  | 0=Ordre d'octets natif, 1=Ordre d'octets Macintosh, 2=Ordre d'octets PC |
 | offset &#124; * | Variable, Opérateur |&#8596; | Offset (en octets) dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
 | || | Nouvel offset après l'écriture si * omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

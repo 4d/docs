@@ -14,6 +14,7 @@ title: VP Get table range
 **VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get table range.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -21,7 +22,9 @@ title: VP Get table range
 |tableName|Text|->|Table name|
 |onlyData|Integer|->|`vk table full range` (default) or `vk table data range`|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Range that contains the table|<!-- END REF -->
+|Result  |Object|<-|Range that contains the table|
+</div>
+<!-- END REF -->
 
 ## Description
 

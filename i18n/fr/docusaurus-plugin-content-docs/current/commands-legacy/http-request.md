@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* : Text ; *url* : Text ; *contenu* : Text, Blob, Picture, Object ; *réponse* : Text, Blob, Picture, Object {; *nomsEnTêtes* : Text array ; *valeursEnTêtes* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | méthodeHTTP | Text | &#8594; | Méthode HTTP pour la requête |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | valeursEnTêtes | Text array | &#8596; | *in:* Header values of the request<br/>*out:* Returned header values |
 | * | Opérateur | &#8594; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
 | Résultat | Integer | &#8592; | Code de statut HTTP |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilité

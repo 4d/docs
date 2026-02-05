@@ -9,10 +9,13 @@ displayed_sidebar: docs
 
 
 <!-- REF #_command_.Process info.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |processNumber|Integer|&#8594; |Process number|
 |Result|Object|&#8592;|Information about the process|
+</div>
 <!-- END REF -->
 
 <details><summary>History</summary>

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *settings* ) <br/>
 **SET CHANNEL** ( *operation* ; *document* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | port | Integer | &#8594; | シリアルポート番号 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | 引数 | 型 | 説明 |  |
 | operation | Integer | &#8594; | 行うドキュメント処理 |
 | document | Text | &#8594; | ドキュメント名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *elementRef* ; *valorElement* {; *cDATA*} )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | Referencia del elemento XML |
 | valorElement | Variable | &#8592; | Valor del elemento |
 | cDATA | Variable | &#8592; | Contenido de la sección CDATA |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

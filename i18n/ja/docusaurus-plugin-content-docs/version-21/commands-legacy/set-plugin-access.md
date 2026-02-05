@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PLUGIN ACCESS.Syntax-->**SET PLUGIN ACCESS** ( *plugIn* ; *group* )<!-- END REF-->
 <!--REF #_command_.SET PLUGIN ACCESS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | plugIn | Integer | &#8594;  | プラグイン番号 |
 | group | Text | &#8594;  | プラグインに関連するグル―プの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

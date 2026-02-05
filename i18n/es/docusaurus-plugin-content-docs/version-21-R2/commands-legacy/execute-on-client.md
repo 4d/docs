@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *nomCliente* : Text ; *nomMetodo* : Text {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.EXECUTE ON CLIENT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomCliente | Text | &#8594; | Nombre registrado de 4D Client |
 | nomMetodo | Text | &#8594; | Nombre del método a ejecutar |
 | param | any | &#8594; | Method’s parameter(s) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

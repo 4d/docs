@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY DATE.Syntax-->**ARRAY DATE** ( *nombreArray* ; *tamaño* {; *tamaño2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY DATE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nombreArray | Array | &#8594;  | Nombre del array |
 | tamaño | Integer | &#8594;  | Número de elementos en el array o Número de filas si se especifica tamaño2 |
 | tamaño2 | Integer | &#8594;  | Número de columnas en un array bidimensional |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

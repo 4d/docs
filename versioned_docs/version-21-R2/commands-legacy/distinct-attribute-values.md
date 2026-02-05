@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *objectField* : Field ; *path* : Text ; *valuesArray* : Array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectField | Field | &#8594;  | Object field from which to get the list of distinct attribute values |
 | path | Text | &#8594;  | Path of attribute whose distinct values you want to get |
 | valuesArray | Array | &#8592; | Distinct values in attribute path |
-
+</div>
 <!-- END REF-->
 
 ## Description 

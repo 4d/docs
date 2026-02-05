@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form window.Syntax-->**Current form window**  : Integer<!-- END REF-->
 <!--REF #_command_.Current form window.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Current form window reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

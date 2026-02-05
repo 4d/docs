@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | subMenu | Text | &#8592; | 選択された項目を含むメニューの参照 |
 | 戻り値 | Integer | &#8592; | 選択されたメニューコマンド 上位バイトにメニュー番号 下位バイトにメニュー項目番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

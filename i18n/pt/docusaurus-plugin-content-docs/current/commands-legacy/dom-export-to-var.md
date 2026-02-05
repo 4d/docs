@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *refElemento* : Text ; *vXMLVar* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594; | Referência do elemento Root XMLK |
 | vXMLVar | Text, Blob | &#8592; | Variável que recebe a árvore XML |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

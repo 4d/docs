@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get edited text.Syntax-->**Get edited text**  : Text<!-- END REF-->
 <!--REF #_command_.Get edited text.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Texto en proceso de introducción |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

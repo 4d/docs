@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  : Integer<!-- END REF-->
 <!--REF #_command_.Displayed line number.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de línea mostrada |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

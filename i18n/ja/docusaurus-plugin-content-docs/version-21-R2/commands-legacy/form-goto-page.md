@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *pageNumber* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GOTO PAGE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pageNumber | Integer | &#8594; | 表示するフォームページ |
 | * | 演算子 | &#8594; | カレントサブフォームのページを変更 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

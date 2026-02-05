@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT DIF.Syntax-->**IMPORT DIF** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT DIF.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table into which to import data, or Default table, if omitted |
 | document | Text | &#8594;  | DIF document from which to import data |
-
+</div>
 <!-- END REF-->
 
 ## Description 

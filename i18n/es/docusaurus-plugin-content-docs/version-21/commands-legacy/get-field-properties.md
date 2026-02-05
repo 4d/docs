@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *campPtr* ; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *tablaNum* ; *numCamp* ; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<!-- END REF-->
 
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campPtr &#124; tablaNum | Puntero, Entero largo | &#8594;  | Puntero de campo o Número de tabla |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | indexado | Boolean | &#8592; | True = Indexado, False = No indexado |
 | unico | Boolean | &#8592; | True = único, False = No único |
 | invisible | Boolean | &#8592; | True = Invisible, False = Visible |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

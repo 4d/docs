@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *PtrTabla* : Puntero, Entero largo ; *invisible* : Boolean {; *trigGuardarNuevo* : Boolean {; *trigGuardaReg* : Boolean {; *trigBorrarReg* : Boolean {; *trigCargReg* : Boolean}}}} )<br/>**GET TABLE PROPERTIES** ( *numTabla* : Puntero, Entero largo ; *invisible* : Boolean {; *trigGuardarNuevo* : Boolean {; *trigGuardaReg* : Boolean {; *trigBorrarReg* : Boolean {; *trigCargReg* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | PtrTabla&#124;numTabla | Puntero, Entero largo | &#8594; | Puntero de tabla o número de tabla |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | trigGuardaReg | Boolean | &#8592; | True = Trigger “On saving an existing record” activado; de lo contrario, False |
 | trigBorrarReg | Boolean | &#8592; | True = Trigger “On deleting a record” activado; de lo contrario, False |
 | trigCargReg | Boolean | &#8592; | *** No usado (obsoleto) *** |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

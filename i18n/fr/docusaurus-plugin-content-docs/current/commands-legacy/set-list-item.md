@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *liste* : Integer, Text ; *refElément* : Opérateur, Entier long ; *libelléElément* : Text ; *nouvelRéf* : Integer {; sous_Liste ; *déployée* : Boolean} )<br/>**SET LIST ITEM** ( * ; *liste* : Integer, Text ; * ; *libelléElément* : Text ; *nouvelRéf* : Integer {; sous_Liste ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | nouvelRéf | Integer | &#8594; | Nouveau numéro de référence d'élément |
 | sous_Liste | Integer | &#8594; | Nouvelle sous-liste rattachée à l'élément ou 0 = pas de sous-liste (détacher sous-liste courante) ou -1 = pas de changement |
 | déployée | Boolean | &#8594; | Indique si la sous-liste doit être déployée/contractée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

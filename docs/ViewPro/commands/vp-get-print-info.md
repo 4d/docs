@@ -7,12 +7,15 @@ title: VP Get print info
 **VP Get print info** ( vpAreaName : Text { ; sheet : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get print info.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Object of printing information|<!-- END REF -->
+|Result  |Object|<-|Object of printing information|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *codecArray* {; *namesArray*}{; *} )<!-- END REF-->
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | codecArray | Text array | &#8592; | IDs of available picture Codecs |
 | namesArray | Text array | &#8592; | Names of picture Codecs |
 | * | Operator | &#8594;  | Return list of reading (decoding) Codecs |
-
+</div>
 <!-- END REF-->
 
 ## Description 

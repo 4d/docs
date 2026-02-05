@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *objAlvo* {; *tipoQuebra*} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get breaks.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objAlvo | Object | &#8594;  | Range/faixa de seleção ou elemento ou documento 4D write Pro |
 | tipoQuebra | Integer | &#8594;  | Tipo de quebra a retornar |
 | Resultado | Collection | &#8592; | Coleção de ranges/faixas de seleção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.CREATE RELATED ONE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594;  | Champ N (champ d'où part le lien) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

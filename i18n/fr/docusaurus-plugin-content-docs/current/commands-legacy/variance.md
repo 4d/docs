@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Variance.Syntax-->**Variance** ( *séries* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Variance.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | séries | Field, Array | &#8594; | Valeurs dont vous voulez obtenir la variance |
 | Résultat | Real | &#8592; | Variance de séries |
-
+</div>
 <!-- END REF-->
 
 ## Description 

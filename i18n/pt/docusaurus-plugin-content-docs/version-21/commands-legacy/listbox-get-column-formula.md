@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( {* ;} *objeto* ) : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column formula.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | Resultado | Text | &#8592; | Fórmula associada à coluna |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

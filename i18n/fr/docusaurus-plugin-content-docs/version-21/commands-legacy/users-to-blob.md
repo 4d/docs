@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *utilisateurs* )<!-- END REF-->
 <!--REF #_command_.USERS TO BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | utilisateurs | Blob | &#8594;  | BLOB devant contenir les utilisateurs |
 | &#8592; | Comptes utilisateurs (crypté) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

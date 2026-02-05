@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( {* ;} *objeto* ; *inicioSel* ; *fimSel* ; *nomeAtrib* ; *valorAtributo* {; *nomeAtrib2* ; *valorAtributo2* ; ... ; *nomeAtribN* ; *valorAtributoN*} )<!-- END REF-->
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo. |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | fimSel | Integer | &#8594;  | Fim da nova seleção de texto |
 | nomeAtrib | Text | &#8594;  | Atributo a definir |
 | valorAtributo | Text, Integer | &#8594;  | Novo valor do atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

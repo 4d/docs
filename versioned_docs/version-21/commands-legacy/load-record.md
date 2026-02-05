@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** {( *aTable* )}<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to load record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

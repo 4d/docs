@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Old.Syntax-->**Old** ( *campo* ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594;  | Campo ao qual devolver o valor anterior |
 | Resultado | any | &#8592; | Valor original do campo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

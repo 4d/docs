@@ -7,12 +7,15 @@ title: VP Get stylesheets
 **VP Get stylesheets** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |sheet|Integer|->|Target scope (default = current sheet)|
-|Result  |Collection|<-|Collection of style sheet objects|<!-- END REF -->
+|Result  |Collection|<-|Collection of style sheet objects|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *zone* ; *colonne* ; *ligne* ; *encadrement* ; *ligne* {; *couleur*} )<!-- END REF-->
 <!--REF #_command_.QR GET BORDERS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594;  | Référence de la zone |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | encadrement | Integer | &#8594;  | Valeur d'encadrement |
 | ligne | Integer | &#8592; | Epaisseur de trait |
 | couleur | Integer | &#8592; | Couleur de l'encadrement |
-
+</div>
 <!-- END REF-->
 
 ## Description 

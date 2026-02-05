@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.True.Syntax-->**True**  : Boolean<!-- END REF-->
 <!--REF #_command_.True.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | True |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

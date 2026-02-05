@@ -15,13 +15,16 @@ title: VP Get table theme
 **VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text {; *sheet* : Integer } ) : cs.ViewPro.TableTheme<!-- END REF -->
 
 <!-- REF #_method_.VP Get table theme.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result|[cs.ViewPro.TableTheme](../classes.md#tabletheme)|<-|Current table theme property values|<!-- END REF -->
+|Result|[cs.ViewPro.TableTheme](../classes.md#tabletheme)|<-|Current table theme property values|
+</div>
+<!-- END REF -->
 
 
 ## Description

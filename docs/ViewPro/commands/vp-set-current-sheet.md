@@ -7,11 +7,14 @@ title: VP SET CURRENT SHEET
 **VP SET CURRENT SHEET** ( *vpAreaName* : Text ; *sheet* : Integer)<!-- END REF -->
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|->|Index of the new current sheet|<!-- END REF -->
+|sheet|Integer|->|Index of the new current sheet|
+</div>
+<!-- END REF -->
 
 ## Description
 

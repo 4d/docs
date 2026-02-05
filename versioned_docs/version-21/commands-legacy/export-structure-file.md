@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *folderPath* {; *options*} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderPath | Text | &#8594;  | Path of the destination folder for project files |
 | options | Object | &#8594;  | Export options |
 | Function result | Object | &#8592; | Validation status and messages (if any) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

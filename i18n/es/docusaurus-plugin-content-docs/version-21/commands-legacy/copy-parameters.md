@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *inicioDesde* )} : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | inicioDesde | Integer | &#8594;  | Índice de inicio(incluido) |
 | Resultado | Collection | &#8592; | Nueva colección que contiene los parámetros pasados realmente |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

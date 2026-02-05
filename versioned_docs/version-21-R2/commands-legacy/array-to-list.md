@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* : Array ; *list* : Text, Integer {; *itemRefs* : Array} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array from which to copy array elements |
 | list | Text, Integer | &#8594;  | Name or reference of list into which to copy array elements |
 | itemRefs | Array | &#8594;  | Numeric array of item reference numbers |
-
+</div>
 <!-- END REF-->
 
 ## Description 

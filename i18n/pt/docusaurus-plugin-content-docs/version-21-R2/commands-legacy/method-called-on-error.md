@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Method called on error.Syntax-->**Method called on error** ( *scope* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Method called on error.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | scope | Integer | &#8594; | Escopo/alcance do método de erro |
 | Resultado | Text | &#8592; | Nome do método de chamada por erro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

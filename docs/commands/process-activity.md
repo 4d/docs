@@ -6,12 +6,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Syntax-->**Process activity** () : Object<br/>**Process activity** ( *options* : Integer ) : Object<br/>**Process activity** ( *sessionID* : Text ) : Object<br/>**Process activity** ( *sessionID* : Text ; *options* : Integer ) : Object<!-- END REF-->
 <!--REF #_command_.Process activity.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | sessionID | Text | &#8594;  | Session ID |
 | options | Integer | &#8594;  | Return options |
 | Function result | Object | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

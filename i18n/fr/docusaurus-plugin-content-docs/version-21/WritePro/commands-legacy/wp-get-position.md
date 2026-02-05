@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get position.Syntax-->**WP Get position** ( *objCible* {; *presentation*} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get position.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | presentation | Integer | &#8594;  | Mise en page de document 4D Write Pro utilisée pour la présentation :<br/>0 (par défaut) = mise en page 4D Write Pro,<br/>1 = HTML WYSIWYG |
 | Résultat | Object | &#8592; | Informations sur la position |
-
+</div>
 <!-- END REF-->
 
 ## Description 

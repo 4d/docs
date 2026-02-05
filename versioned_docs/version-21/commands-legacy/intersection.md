@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *set1* ; *set2* ; *resultSet* )<!-- END REF-->
 <!--REF #_command_.INTERSECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set1 | Text | &#8594;  | First set |
 | set2 | Text | &#8594;  | Second set |
 | resultSet | Text | &#8594;  | Resulting set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

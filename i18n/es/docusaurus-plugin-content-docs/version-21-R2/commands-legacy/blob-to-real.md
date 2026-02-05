@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *BLOB* : Blob ; *formatoReal* : Integer {; *offset* : Variable} ) : Real<!-- END REF-->
 <!--REF #_command_.BLOB to real.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOB del cual obtener el valor de tipo Real |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596; | Offset en el BLOB (expresado en bytes) |
 |  |  |  | Nuevo offset después de la lectura |
 | Resultado | Real | &#8592; | Valor real |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

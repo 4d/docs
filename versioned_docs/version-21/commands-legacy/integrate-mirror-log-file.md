@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *pathName* ; *operationNum* {; *mode* {; *errObject*}} )<!-- END REF-->
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pathName | Text | &#8594;  | Name or pathname of the log file to be integrated |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | &#8592; | New number of last operation integrated |
 | mode | Integer | &#8594;  | 0=strict mode (default mode), 1=auto repair mode |
 | errObject | Object | &#8592; | Missed operation(s) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

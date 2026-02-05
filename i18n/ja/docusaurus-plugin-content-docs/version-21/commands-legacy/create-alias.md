@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *targetPath* ; *aliasPath* )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetPath | Text | &#8594;  | エイリアス/ショートカットターゲットのアクセスパスまたは名前 |
 | aliasPath | Text | &#8594;  | エイリアスまたはショートカットの完全なパス名または名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

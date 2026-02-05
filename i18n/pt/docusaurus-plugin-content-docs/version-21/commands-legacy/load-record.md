@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** {( *tabela* )}<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela para aqual carregar registros, ou tabela Padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

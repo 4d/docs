@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE BOOKMARK.Syntax-->**WP DELETE BOOKMARK** ( *docWP* : Object ; *nombk* : Text )<!-- END REF-->
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Documento 4D Write Pro |
 | nombk | Text | &#8594;  | Nombre del marcador a eliminar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

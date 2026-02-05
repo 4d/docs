@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *lista* ; posicionElem | * ; *refElem* ; *textoElem* {; *sublista* ; *desplegada*} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | textoElem | Text | &#8592; | Texto del elemento de la lista |
 | sublista | Integer | &#8592; | Número de referencia de la sublista (si la hay) |
 | desplegada | Boolean | &#8592; | Si una sublista está asociada: TRUE = la sublista está desplegada FALSE = la sublista está contraída |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

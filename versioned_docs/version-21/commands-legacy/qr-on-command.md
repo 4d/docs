@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *area* ; *methodName* )<!-- END REF-->
 <!--REF #_command_.QR ON COMMAND.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | methodName | Text | &#8594;  | Name of the replacement method |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *object* {; *startSel* {; *endSel* {; *startBlock* {; *endBlock*}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | startBlock | Integer | &#8592; | Start position of first type of selection |
 | endBlock | Integer | &#8592; | End position of first type of selection |
 | Function result | Integer | &#8592; | Type of content |
-
+</div>
 <!-- END REF-->
 
 ## Description 

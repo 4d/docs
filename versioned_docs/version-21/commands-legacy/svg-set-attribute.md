@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *pictureObject* ; element_ID ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | attribName | Text | &#8594;  | Attribute to be specified |
 | attribValue | Text, Integer | &#8594;  | New value of attribute |
 | * | Operator | &#8594;  | If passed = modify SVG image itself |
-
+</div>
 <!-- END REF-->
 
 ## Description 

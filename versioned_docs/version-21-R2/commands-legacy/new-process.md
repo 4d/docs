@@ -16,6 +16,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Syntax-->**New process** ( *method* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | method | Text | &#8594;  | Method to be executed within the process |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | param | Expression | &#8594;  | Parameter(s) to the method |
 | * | Operator | &#8594;  | Unique process |
 | Function result | Integer | &#8592; | Process number for newly created process or already executing process |
-
+</div>
 <!-- END REF-->
 
 ## Description 

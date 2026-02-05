@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* ; *blob* {; offset } )<br/>**VARIABLE TO BLOB** ( *variable* ; *blob* {; *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#8594;  | Variable to store in the BLOB |
 | Blob | Blob | &#8594;  | BLOB to receive the variable |
 | offset | Variable | &#8596; | Offset within the BLOB (expressed in bytes) <br/> New offset after writing if not * |
 | * | Operator | &#8594; | Append the value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

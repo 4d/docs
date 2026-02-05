@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *IDunico* : Integer )<!-- END REF-->
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | IDunico | Integer | &#8594; | ID de processo única |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

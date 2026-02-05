@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *endEstrutura* : Text ; *endDados* : Text ; *objetos* : Integer ; *opçoes* : Integer ; *metodo* : Text {; *arrayTabelas* : Integer array {; *arrayCampos* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | endEstrutura | Text | &#8594; | Endereço do arquivo de estrutura a ser verificado |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | metodo | Text | &#8594; | Nome do método 4D de retrochamada |
 | arrayTabelas | Integer array | &#8594; | Números de tabelas a serem verificadas |
 | arrayCampos | Integer array | &#8594; | Número de índices a serem verificados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

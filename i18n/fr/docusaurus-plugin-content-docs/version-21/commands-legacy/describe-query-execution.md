@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *statut* )<!-- END REF-->
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | statut | Boolean | &#8594;  | Vrai=Enregistrer la description des requêtes, Faux=Stopper l'enregistrement |
-
+</div>
 <!-- END REF-->
 
 ## Description 

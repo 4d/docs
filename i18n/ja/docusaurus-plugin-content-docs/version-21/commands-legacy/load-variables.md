@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
 <!--REF #_command_.LOAD VARIABLES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Text | &#8594;  | 4D変数を保存したドキュメント |
 | variable | Variable | &#8592; | 値を受け取る変数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

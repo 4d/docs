@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *unCampo* ; *index* {; *} )<!-- END REF-->
 <!--REF #_command_.SET INDEX.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594;  | Campo del cual crear o borrar el índice |
 | index | Boolean, Integer | &#8594;  | • True=Crear el índice, False=Borrar el índice, o • Crear un índice de tipo: -1=palabras claves, 0=por defecto, 1=B-Tree estándar, 3=B-Tree cluster |
 | * | Operator |  &#8594;  | Si se pasa * indexación asincrónica |
-
+</div>
 <!-- END REF-->
 
 ## Nota de compatibilidad 

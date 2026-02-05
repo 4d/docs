@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( {* ;} *object* ; *color* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | color | Text, Integer | &#8594;  | RGB color value |
 | horizontal | Boolean | &#8594;  | Use color for horizontal grid lines |
 | vertical | Boolean | &#8594;  | Use color for vertical grid lines |
-
+</div>
 <!-- END REF-->
 
 ## Description 

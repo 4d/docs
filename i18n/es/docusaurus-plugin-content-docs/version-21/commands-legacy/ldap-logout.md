@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP LOGOUT.Syntax-->**LDAP LOGOUT**<!-- END REF-->
 <!--REF #_command_.LDAP LOGOUT.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *laTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table à numéroter automatiquement ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &#8592; | Numéro automatique |
-
+</div>
 <!-- END REF-->
 
 ## Description 

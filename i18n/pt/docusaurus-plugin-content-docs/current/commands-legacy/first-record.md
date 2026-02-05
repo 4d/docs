@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para a qual vai mover o primeiro registro selecionado, ou a tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

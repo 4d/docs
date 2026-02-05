@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get footer.Syntax-->**WP Get footer** ( *targetObj* ) | (*wpDoc* ; *sectionIndex* {; *sectionSubType*} )  -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get footer.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro レンジ |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | sectionIndex | Integer | &#8594;  | セクションインデックス |
 | sectionSubType | Integer | &#8594;  | サブセクションのタイプ(wk first page、wk left page、あるいは wk right page) |
 | 戻り値 | Object | &#8592; | 4D Write Pro フッター |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

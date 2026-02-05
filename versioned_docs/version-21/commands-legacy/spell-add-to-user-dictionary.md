@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Syntax-->**SPELL ADD TO USER DICTIONARY** ( *words* )<!-- END REF-->
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | words | Text, Text array | &#8594;  | Word or list of words to add to user dictionary |
-
+</div>
 <!-- END REF-->
 
 ## Description 

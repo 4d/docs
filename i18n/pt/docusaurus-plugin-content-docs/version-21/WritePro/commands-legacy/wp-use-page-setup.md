@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP USE PAGE SETUP.Syntax-->**WP USE PAGE SETUP** ( *docWP* )<!-- END REF-->
 <!--REF #_command_.WP USE PAGE SETUP.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Nome do documento 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*

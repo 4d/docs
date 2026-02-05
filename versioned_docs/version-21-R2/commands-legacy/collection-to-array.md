@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* : Collection ; *array* : Array {; *propertyName* : Text}{; ...(*array* : Array ; *propertyName* : Text) } )<!-- END REF-->
 <!--REF #_command_.COLLECTION TO ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | collection | Collection | &#8594;  | Collection to copy in array(s) |
 | array | Array | &#8592; | Array to receive the elements of the collection; if propertyName passed, array to receive the values of propertyName in the collection |
 | propertyName | Text | &#8594;  | Object property name whose values to copy in array ("" for all elements) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

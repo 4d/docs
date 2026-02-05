@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *tableau* {; *tableau2* ; ... ; *tableauN*}{; > ou <} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &#8594;  | Tableau(x) à trier |
 | > ou < | Opérateur | &#8594;  | ">" pour effectuer un tri par ordre croissant ou "<" pour effectuer un tri par ordre décroissant (tri croissant si omis) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

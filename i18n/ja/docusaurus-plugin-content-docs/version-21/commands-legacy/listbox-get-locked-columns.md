@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get locked columns.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)、省略時objectは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | 戻り値 | Integer | &#8592; | 横スクロールしない列数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

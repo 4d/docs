@@ -6,6 +6,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Syntax-->**WP EXPORT DOCUMENT** ( *wpDoc* : Object ; *filePath* : Text {; *format* : Integer {; *option* : Object, Integer}} )<br/>**WP EXPORT DOCUMENT** ( *wpDoc* : Object ; *fileObj* : 4D.File {; *format* : Integer {; *option* : Object, Integer}} )<!-- END REF-->
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro variable |
@@ -13,7 +15,7 @@ displayed_sidebar: docs
 | fileObj | 4D.File | &#8594; | File object to export |
 | format | Integer | &#8594;  | Document output format (e.g., .docx, .pdf, etc.)|
 | option | Object, Integer | &#8594;  |Export options, which can vary depending on the format chosen. |
-
+</div>
 <!-- END REF-->
 
 ## Description

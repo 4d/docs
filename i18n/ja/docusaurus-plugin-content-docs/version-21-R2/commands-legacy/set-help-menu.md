@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* : Collection )<!-- END REF-->
 <!--REF #_command_.SET HELP MENU.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menuCol | Collection | &#8594; | メニュー項目のコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

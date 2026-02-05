@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( * ; *object* : Text ; *urlsArr* : Text array {; *direction* : Integer {; *titlesArr* : Text array}} )<br/>**WA GET URL HISTORY** ( *object* : Variable, Field ; *urlsArr* : Text array {; *direction* : Integer {; *titlesArr* : Text array}} )<!-- END REF-->
 <!--REF #_command_.WA GET URL HISTORY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | urlsArr | Text array | &#8592; | Array of URLs visited |
 | direction | Integer | &#8594;  | 0 or omitted=List of previous URLs, 1=List of next URLs |
 | titlesArr | Text array | &#8592; | Array of window titles |
-
+</div>
 <!-- END REF-->
 
 ## Description 

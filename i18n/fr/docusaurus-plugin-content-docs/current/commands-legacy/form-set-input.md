@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*laTable* : Table ;} *formulaire* : Text, Object {; *formUtilisateur* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table pour laquelle définir le formulaire entrée ou Table par défaut si ce paramètre est omis |
 | formulaire | Text, Object | &#8594; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
 | formUtilisateur | Text | &#8594; | Nom du formulaire utilisateur à utiliser |
 | * | Operator | &#8594; | Taille de fenêtre automatique |
-
+</div>
 <!-- END REF-->
 
 ## Description 

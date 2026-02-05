@@ -14,6 +14,7 @@ title: VP Get table column index
 **VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column index.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -21,7 +22,9 @@ title: VP Get table column index
 |tableName|Text|->|Table name|
 |columnName|Text|->|Name of the table column|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Integer|<-|Index of *columnName*|<!-- END REF -->
+|Result |Integer|<-|Index of *columnName*|
+</div>
+<!-- END REF -->
 
 
 ## Description

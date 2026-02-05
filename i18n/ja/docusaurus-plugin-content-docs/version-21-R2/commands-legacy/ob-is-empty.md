@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* : Object, Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594; | 構造化されたオブジェクト |
 | 戻り値 | Boolean | &#8592; | object が空か未定義のときには True 、それ以外のときには False |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

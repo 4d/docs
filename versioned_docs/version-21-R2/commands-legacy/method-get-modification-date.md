@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *path* : Text, Text array ; *modDate* : Date, Date array ; *modTime* : Time, Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
 | modDate | Date, Date array | &#8592; | Method modification date(s) |
 | modTime | Time, Integer array | &#8592; | Method modification time(s) |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

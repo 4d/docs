@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAcesso* ; *soapAction* ; *nomeMetodo* ; *nomeEspaço* {; *tipoComplexo* {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | urlAcesso | Text | &#8594;  | Acesso URL ao Webservice |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomeEspaço | Text | &#8594;  | nomeespaço XML |
 | tipoComplexo | Integer | &#8594;  | Configuração de tipos complexos (tipos simples se omitido) |
 | * | Operador | &#8594;  | Não fechar a conexão |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

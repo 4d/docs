@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* : Integer, Text ; *menuItem* : Integer ; *mark* : Text {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM MARK.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
 | menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
 | mark | Text | &#8594; | 新しいメニュー項目マーク |
 | process | Integer | &#8594; | プロセス参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

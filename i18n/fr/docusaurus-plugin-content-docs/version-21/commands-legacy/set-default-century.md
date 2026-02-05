@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *siècle* {; *anPivot*} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | siècle | Integer | &#8594;  | Siècle par défaut (moins un) lors de la saisie d'années sur 2 chiffres |
 | anPivot | Integer | &#8594;  | Année pivot lors de la saisie d'années sur 2 chiffres |
-
+</div>
 <!-- END REF-->
 
 ## Description 

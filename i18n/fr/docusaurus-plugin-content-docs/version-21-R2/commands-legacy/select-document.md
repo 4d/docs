@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Select document.Syntax-->**Select document** ( *répertoire* : Text, Integer ; *typesFichiers* : Text ; *titre* : Text ; *options* : Integer {; *sélectionnés* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | répertoire | Text, Integer | &#8594; | • Chemin d’accès du répertoire à afficher par défaut dans la boîte de dialogue de sélection, ou• Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS), ou• Numéro de chemin d’accès mémorisé |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | options | Integer | &#8594; | Option(s) de sélection |
 | sélectionnés | Text array | &#8592; | Tableau contenant la liste des chemins d’accès + les noms des fichiers sélectionnés |
 | Résultat | Text | &#8592; | Nom du fichier sélectionné (premier fichier de la liste en cas de sélection multiple) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

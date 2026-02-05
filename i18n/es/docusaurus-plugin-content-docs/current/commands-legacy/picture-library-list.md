@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *refsImag* : Integer array ; *nomsImag* : Text array )<!-- END REF-->
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refsImag | Integer array | &#8592; | Números de referencia de las imágenes de la librería de imágenes |
 | nomsImag | Text array | &#8592; | Nombres de las imágenes de la librería de imágenes |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

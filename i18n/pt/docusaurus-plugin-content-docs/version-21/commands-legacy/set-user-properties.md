@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *refUsuario* ; *nome* ; *inicio* ; *senha* ; *numLogin* ; *ultLogin* {; *adesao* {; *propGrupo*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refUsuario | Integer | &#8594;  | Número de ID de conta de usuário; -1 para adicionar um usuário |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | adesao | Integer array | &#8594;  | Números de IDs dos grupos aos quais pertence o usuário |
 | propGrupo | Integer | &#8594;  | Número de referência de usuário do proprietário do grupo |
 | Resultado | Integer | &#8592; | Número de ID de referência do novo usuário |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

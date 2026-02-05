@@ -8,13 +8,16 @@ title: VP ADD FORMULA NAME
 **VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |vpFormula|Text|-> |4D View Pro formula
 |name|Text|->|Name for the formula|
-|options|Object|->|Options for the named formula|<!-- END REF -->
+|options|Object|->|Options for the named formula|
+</div>
+<!-- END REF -->
 
 ## Description
 

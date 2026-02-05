@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *object* : Text {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *object* : Variable {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | column | Integer | &#8592; | Column number |
 | row | Integer | &#8592; | Row number |
 | colVar | Pointer | &#8592; | Pointer to column variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

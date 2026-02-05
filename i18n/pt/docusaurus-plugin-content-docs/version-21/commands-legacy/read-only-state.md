@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Read only state.Syntax-->**Read only state** {( *tabela* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Read only state.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela na qual vai testar o estado apenas-leitura, ou tabela padrão, se omitido |
 | Resultado | Boolean | &#8592; | Acesso à tabela é apenas-leitura (TRUE) ou Acesso a tabela é leitura-escrita (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

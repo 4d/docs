@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *tabela* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para a qual devolver o número de sequência, ou tabela padrão, se omitido |
 | Resultado | Integer | &#8592; | Número de sequência |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Char.Syntax-->**Char** ( *codigoCaractere* ) : Text<!-- END REF-->
 <!--REF #_command_.Char.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | codigoCaractere | Integer | &#8594;  | Código do caractere |
 | Resultado | Text | &#8592; | Caractere representado por códigoCaractere |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

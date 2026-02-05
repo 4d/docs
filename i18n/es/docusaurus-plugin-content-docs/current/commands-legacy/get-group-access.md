@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get group access.Syntax-->**Get group access** : Collection<!-- END REF-->
 <!--REF #_command_.Get group access.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Collection | &#8592; | Colección de nombre(s) de grupo al que pertenece el usuario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

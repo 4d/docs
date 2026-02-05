@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *laTable* ; *jsonTab* )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table 4D dans laquelle copier les éléments |
 | jsonTab | Text | &#8594;  | Tableau d'objets en JSON |
-
+</div>
 <!-- END REF-->
 
 ## Description 

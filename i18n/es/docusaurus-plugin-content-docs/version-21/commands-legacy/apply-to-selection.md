@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *tabla* ; *sentencia* )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla en la cual aplicar la fórmula o Tabla por defecto, si se omite |
 | sentencia | Expression | &#8594;  | Línea de código o método |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

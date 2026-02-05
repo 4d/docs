@@ -109,9 +109,12 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 <!-- REF #IncomingMessageClass.getBlob().Syntax -->**.getBlob**() : Blob<!-- END REF -->
 
 <!-- REF #IncomingMessageClass.getBlob().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|--- |---|------|
 |Result|Blob|<-|Body of the request as a Blob|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -130,10 +133,13 @@ If the body has not been given as a binary content, the function tries to conver
 <!-- REF #IncomingMessageClass.getHeader().Syntax -->**.getHeader**( *key* : Text ) : Text<!-- END REF -->
 
 <!-- REF #IncomingMessageClass.getHeader().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|--- |---|------|
 |key|Text|->|Header property to get|
 |Result|Text|<-|Value of the header property|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -163,9 +169,12 @@ $value := $request.getHeader("content-type")
 <!-- REF #IncomingMessageClass.getJSON().Syntax -->**.getJSON**() : Variant<!-- END REF -->
 
 <!-- REF #IncomingMessageClass.getJSON().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|--- |---|------|
 |Result|Variant|<-|JSON resolution of the body of the request|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -183,9 +192,12 @@ If the body has not been given as JSON valid content, an error is raised.
 <!-- REF #IncomingMessageClass.getPicture().Syntax -->**.getPicture**() : Picture<!-- END REF -->
 
 <!-- REF #IncomingMessageClass.getPicture().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|--- |---|------|
 |Result|Picture|<-|Body of the request as picture|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -213,9 +225,12 @@ If the body is not received as a valid picture, the function returns null.
 <!-- REF #IncomingMessageClass.getText().Syntax -->**.getText**() : Text<!-- END REF -->
 
 <!-- REF #IncomingMessageClass.getText().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|--- |---|------|
 |Result|Text|<-|Body of the request as text|
+</div>
 <!-- END REF -->
 
 #### Description

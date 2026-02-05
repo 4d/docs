@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count users.Syntax-->**Count users**  : Integer<!-- END REF-->
 <!--REF #_command_.Count users.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de usuários conectados ao servidor |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

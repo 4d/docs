@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Field name.Syntax-->**Field name** ( *pontCampo* ) : Text<br/>**Field name** ( *numTabela* ; *numCampo* ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro Campo ou número da tabela |
 | numCampo | Integer | &#8594;  | Número do campo se a o número da tabela foi passado no primeiro parâmetro |
 | Resultado | Text | &#8592; | Nome do campo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

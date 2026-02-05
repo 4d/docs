@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *lista* : Text, Integer ; *array* : Array {; *itemRefs* : Array} )<!-- END REF-->
 <!--REF #_command_.LIST TO ARRAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | lista | Text, Integer | &#8594; | Lista da qual copiar os itens de primeiro nível |
 | array | Array | &#8592; | Array para o qual copiar os itens da lista |
 | itemRefs | Array | &#8592; | Números de referência da lista de itens |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

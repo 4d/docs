@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fonts* : Text array {; *listType* : 倍長整数, 演算子 } )<br/>**FONT LIST** ( *fonts* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fonts | Text array | &#8592; | フォント名の配列 |
 | listType &#124; * | 倍長整数, 演算子 | &#8594; | 取得したいフォント型のリスト、フォント名を取得するために*を指定(OS Xのみ) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

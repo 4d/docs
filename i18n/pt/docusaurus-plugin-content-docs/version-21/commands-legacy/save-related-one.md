@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE RELATED ONE.Syntax-->**SAVE RELATED ONE** ( *campo* )<!-- END REF-->
 <!--REF #_command_.SAVE RELATED ONE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594;  | Campo Muitos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

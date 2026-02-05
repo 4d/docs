@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *rutaScript* : Text ; *accionError* : Integer {; *nomAtrib* : Text ; *valAtrib* : Text} {; ...(*nomAtrib* : Text, *valAtrib* : Text)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaScript | Text | &#8594; | Ruta de acceso completa del archivo que contiene el script SQL a ejecutar |
 | accionError | Integer | &#8594; | Acción a efectuar en caso de error durante la ejecución del script |
 | nomAtrib | Text | &#8594; | Nombre del atributo a utilizar |
 | valAtrib | Text | &#8594; | Valor del atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

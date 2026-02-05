@@ -6,13 +6,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any )<br/>**WP SET ATTRIBUTES** ( *targetObj* : Object ; *attribObj* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | attribName | Text | &#8594;  | Name of attribute to set |
 | attribValue | any | &#8594;  | New attribute value |
 | attribObj | Object | &#8594;  | Object containing attribute names and their corresponding values to set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

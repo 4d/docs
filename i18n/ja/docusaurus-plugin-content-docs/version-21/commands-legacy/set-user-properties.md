@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | userID | Integer | &#8594;  | ユーザーアカウントのユニークなID番号、<br/>または -1= デザイナーに関連した新規ユーザーの追加 -2= 管理者に関連した新規ユーザーの追加 |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | memberships | Integer array | &#8594;  | ユーザーが属するグループのID番号 |
 | groupOwner | Integer | &#8594;  | ユーザーグループオーナーの参照番号 (バイナリデータベースのみ) |
 | 戻り値 | Integer | &#8592; | 新規ユーザーのユニークなID番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

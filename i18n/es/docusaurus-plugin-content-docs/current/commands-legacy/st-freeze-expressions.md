@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}}{; *} )<br/>**ST FREEZE EXPRESSIONS** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *finSel* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | inicioSel | Integer | &#8594; | Inicio de la selección |
 | finSel | Integer | &#8594; | Fin de la selección |
 | * | Operador | &#8594; | Si se pasa = actualizar las expresiones antes de congelarlas |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

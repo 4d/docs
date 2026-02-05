@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objeto* {; resuelvePunt | {; *option* {; *agruparCon*}}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objeto | Object, Campo Object | &#8594;  | Objeto estructurado |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | option | Integer | &#8594;  | ck shared: devuelve un objeto compartido,ck resolve pointers: resuelve punteros antes de copiar |
 | agruparCon | Collection, Object | &#8594;  | Colección u objeto compartido a agrupar con el objeto resultante |
 | Resultado | Object | &#8592; | Copia de objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

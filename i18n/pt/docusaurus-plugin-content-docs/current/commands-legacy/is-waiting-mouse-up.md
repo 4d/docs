@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is waiting mouse up.Syntax-->**Is waiting mouse up**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is waiting mouse up.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | TRUE se o objeto estiver esperando por um evento mouse up. De outro modo, false. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

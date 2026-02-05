@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table range.Syntax-->**WP Table range** ( *objRango* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table range.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o referencia del elemento o documento 4D Write Pro |
 | Resultado | Object | &#8592; | Objeto rango que contiene tablas únicamente |
-
+</div>
 <!-- END REF-->
 
 ## Compatibilidad 

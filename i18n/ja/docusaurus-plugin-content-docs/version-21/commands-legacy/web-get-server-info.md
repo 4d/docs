@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *withCache* )} : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | withCache | Boolean | &#8594;  | Webキャッシュ詳細を返すためにはTrue、それ以外の場合(デフォルト)ではキャッシュ詳細は返されない |
 | 戻り値 | Object | &#8592; | 実行中のWebサーバーとSOAPサーバーの情報 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *object* ; *tablePtr* ; *detailSubform* {; *listSubform*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tablePtr | Table | &#8592; | Pointer to table of form |
 | detailSubform | Text | &#8592; | Name of detail form of subform |
 | listSubform | Text | &#8592; | Name of list form of subform (table form) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

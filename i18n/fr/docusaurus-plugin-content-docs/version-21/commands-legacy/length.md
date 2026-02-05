@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Length.Syntax-->**Length** ( *chaîne* ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chaîne | Text | &#8594;  | Chaîne dont vous voulez connaître la longueur |
 | Résultat | Integer | &#8592; | Nombre de caractères de chaîne |
-
+</div>
 <!-- END REF-->
 
 ## Description 

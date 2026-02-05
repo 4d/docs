@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET.Syntax-->**OB SET** ( *objeto* : Object, Object ; *propriedade* : Text ; *valor* : Expression {; ...(*propriedade* : Text, *valor* : Expression)} )<!-- END REF-->
 <!--REF #_command_.OB SET.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objeto | Object, Object | &#8594; | Objeto estruturado |
 | propriedade | Text | &#8594; | Nome da propriedade a configurar |
 | valor | Expression | &#8594; | Novo valor da propriedade |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

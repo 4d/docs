@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *valeurs* {; *sautPage*} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | valeurs | Field | &#8594;  | Champ ou variable numérique dont vous voulez calculer le sous-total |
 | sautPage | Integer | &#8594;  | Niveau de rupture auquel effectuer un saut de page |
 | Résultat | Real | &#8592; | Sous-total de valeurs |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *aTable* : Table {; *} )<br/>**PRINT RECORD** ( *aTable* : Table {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT RECORD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | カレントレコードを印刷するテーブル または 省略した場合はデフォルトテーブル |
 | * &#124; > | 演算子 | &#8594; | *: 印刷ダイアログを省略, または >:  印刷設定の再初期化をしない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

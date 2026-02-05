@@ -15,6 +15,7 @@ title: VP SET DATA CONTEXT
 **VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object } {; *sheet* : Integer} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object } {; *sheet* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -22,7 +23,9 @@ title: VP SET DATA CONTEXT
 |dataObj|Object|->|Data object to load in the data context|
 |dataColl|Collection|->|Data collection to load in the data context|
 |options |Object|->|Additional options|
-|sheet|Integer|->|Sheet index|<!-- END REF -->
+|sheet|Integer|->|Sheet index|
+</div>
+<!-- END REF -->
 
 ## Description
 

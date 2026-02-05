@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *altura* {; *largura*} )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | altura | Integer | &#8592; | Altura da área de impressão |
 | largura | Integer | &#8592; | Largura da área de impressão |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

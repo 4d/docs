@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Syntax-->**WP TABLE DELETE COLUMNS** ( *targetObj* : Object )<br/>**WP TABLE DELETE COLUMNS** ( *tableRef* : Object ; *colNumber* : Integer {; *numColumns* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
 | colNumber | Integer | &#8594;  | Column number |
 | numColumns | Integer | &#8594;  | Number of columns to delete (default value = 1) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

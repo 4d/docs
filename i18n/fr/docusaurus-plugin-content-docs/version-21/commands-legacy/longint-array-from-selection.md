@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *laTable* ; *tabEnrg* {; *tempo*} )<!-- END REF-->
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de la sélection courante |
 | tabEnrg | Integer array | &#8592; | Tableau de numéros d’enregistrements |
 | tempo | Text | &#8594;  | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

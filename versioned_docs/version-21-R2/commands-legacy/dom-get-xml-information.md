@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* : Text ; *xmlInfo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML root element reference |
 | xmlInfo | Integer | &#8594;  | Type of information to get |
 | Function result | Text | &#8592; | Value of the XML information |
-
+</div>
 <!-- END REF-->
 
 ## Description 

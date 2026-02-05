@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which the "blobs" priority value has to be retrieved |
 | Function result | Integer | &#8592; | Current priority value for "blobs" fields |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( tabelasN | campoN {; *discriminante* } )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabelasN &#124; campoN | Tabela, Campo | &#8594;  | Tabela para a qual estabelecer todas as relações automáticas, ou  Campo com as relações manuais para tabela Um |
 | discriminante | Field | &#8594;  | Campo discriminante da tabela 1 |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

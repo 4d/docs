@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Time.Syntax-->**Time** ( *valHora* : Text, Integer ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | valHora | Text, Integer | &#8594; | Valor a devolver en forma de hora |
 | Resultado | Time | &#8592; | Hora especificada por horaCadena |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

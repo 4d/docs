@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imageRésultat* ; *image1* ; *opérateur* ; *image2* {; *décalHoriz* ; *décalVert*} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | imageRésultat | Picture | &#8592; | Image résultant de la combinaison |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | image2 | Picture | &#8594;  | Seconde image à combiner |
 | décalHoriz | Integer | &#8594;  | Décalage horizontal pour la superposition |
 | décalVert | Integer | &#8594;  | Décalage vertical pour la superposition |
-
+</div>
 <!-- END REF-->
 
 ## Description 

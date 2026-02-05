@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( table1 )<br/>**RELATE MANY** ( champ1 )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | table1 &#124; champ1 | Table, Champ | &#8594; | Table pour laquelle établir tous les liens de 1 vers N ou champ 1 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

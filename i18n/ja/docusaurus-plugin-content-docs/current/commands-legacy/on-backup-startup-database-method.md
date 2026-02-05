@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Backup Startup database method.Syntax-->On Backup Startupデータベースメソッド : Integer<!-- END REF-->
 <!--REF #_command_.On Backup Startup database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | 0 = バックアップの開始を許可する; 0以外の値 = バックアップの開始を許可しない |
-
+</div>
 <!-- END REF-->
 
 ## 

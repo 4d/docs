@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get print preview.Syntax-->**Get print preview**  : Boolean<!-- END REF-->
 <!--REF #_command_.Get print preview.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Vrai = Impression à l’écran, Faux = Pas d’impression écran |
-
+</div>
 <!-- END REF-->
 
 ## Description 

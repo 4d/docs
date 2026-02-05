@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find window.Syntax-->**Find window** ( *left* ; *top* {; *windowPart*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find window.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | left | Integer | &#8594;  | グローバル左座標 |
 | top | Integer | &#8594;  | グローバル上座標 |
 | windowPart | Integer | &#8592; | ウィンドウパーツID番号 |
 | 戻り値 | Integer | &#8592; | ウィンドウ参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

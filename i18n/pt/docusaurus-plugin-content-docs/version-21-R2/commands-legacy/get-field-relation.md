@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *campoN* : Field ; *um* : Integer ; *muitos* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.GET FIELD RELATION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campoN | Field | &#8594; | Iniciar campo da relação |
 | um | Integer | &#8592; | Estado das relações Muitos a Um |
 | muitos | Integer | &#8592; | Estado da relação Um a Muitos |
 | * | Operador | &#8594; | Se passado: um e muitos retorna o estado atual da relação (valores 2 ou 3 apenas) * se omitido (padrão): um e muitos podem retornar o valor 1 se a relação não foi modificada através de programação |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

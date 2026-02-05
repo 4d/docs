@@ -8,12 +8,15 @@ title: VP SET SHEET NAME
 **VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )<!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |name|Text|->|New name for the sheet|
-|sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
+|sheet|Integer|->|Index of the sheet to be renamed|
+</div>
+<!-- END REF -->
 
 ## Description
 

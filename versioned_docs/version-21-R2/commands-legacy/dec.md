@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Dec.Syntax-->**Dec** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Dec.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number whose decimal portion is returned |
 | Function result | Real | &#8592; | Decimal part of number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

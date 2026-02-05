@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Request.Syntax-->**Request** ( *message* {; *defaultResponse* {; *OKButtonTitle* {; *CancelButtonTitle*}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | message | Text | &#8594;  | Message to display in the request dialog box |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | OKButtonTitle | Text | &#8594;  | OK button title |
 | CancelButtonTitle | Text | &#8594;  | Cancel button title |
 | Function result | Text | &#8592; | Value entered by user |
-
+</div>
 <!-- END REF-->
 
 ## Description 

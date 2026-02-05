@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Syntax-->**Field** ( *numTabla* ; *numCamp* ) -> Resultado <br/>
 **Field** ( *ptrCamp* ) -> numCampo<!-- END REF-->
 <!--REF #_command_.Field.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numTabla | Integer | &#8594;  | Número de tabla |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo | Descripción |
 | ptrCamp | Pointer | &#8594;  | Puntero del campo |
 | numCampo | Integer | &#8592; | Número de campo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( * ; *object* : Text ) : Text<br/>**WA Get last filtered URL** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get last filtered URL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Text | &#8592; | Last filtered URL |
-
+</div>
 <!-- END REF-->
 
 ## Description 

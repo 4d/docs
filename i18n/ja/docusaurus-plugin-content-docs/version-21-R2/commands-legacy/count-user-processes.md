@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count user processes.Syntax-->**Count user processes**  : Integer<!-- END REF-->
 <!--REF #_command_.Count user processes.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | 活動中のプロセス (内部プロセスを除く) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *list* ; *blob* {; *} )<!-- END REF-->
 <!--REF #_command_.LIST TO BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | Hierarchical list to store in the BLOB |
 | Blob | Blob | &#8594;  | BLOB to receive the Hierarchical list |
 | * | Operator | &#8594;  | * to append the value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

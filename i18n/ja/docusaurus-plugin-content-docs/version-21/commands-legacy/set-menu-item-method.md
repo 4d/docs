@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* ; *menuItem* ; *methodName* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM METHOD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | メニュー参照またはメニュー番号 |
 | menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
 | methodName | Text | &#8594;  | メソッド名 |
 | process | Integer | &#8594;  | プロセス番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

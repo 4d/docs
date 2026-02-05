@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Split string.Syntax-->**Split string** ( *stringAseparar* ; *string* {; *opções*} ) : Collection<!-- END REF-->
 <!--REF #_command_.Split string.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | stringAseparar | Text | &#8594;  | Valor string |
 | string | Text | &#8594;  | String que stringAseparar separa. Se string vazia (""), cada caractere de stringAseparar é uma substring |
 | opções | Integer | &#8594;  | Opções referentes a strings vazias e espaços |
 | Resultado | Collection | &#8592; | Coleção de substrings |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

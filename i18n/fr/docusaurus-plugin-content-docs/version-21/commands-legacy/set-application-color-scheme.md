@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *schemaCouleur* )<!-- END REF-->
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | schemaCouleur | Text | &#8594;  | "light", "dark", ou "inherited" |
-
+</div>
 <!-- END REF-->
 
 ## Description 

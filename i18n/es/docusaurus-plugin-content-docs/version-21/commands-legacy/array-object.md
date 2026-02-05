@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *nomArray* ; *tam* {; *tam2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY OBJECT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomArray | Array | &#8594;  | Nombre del array |
 | tam | Integer | &#8594;  | Número de elementos del array o número de arrays si se especifica tam2 |
 | tam2 | Integer | &#8594;  | Número de elementos del array 2D |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

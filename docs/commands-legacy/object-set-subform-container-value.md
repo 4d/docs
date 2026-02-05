@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Syntax-->**OBJECT SET SUBFORM CONTAINER VALUE** ( *value* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | value | any | &#8594;  | New value for the data source |
-
+</div>
 <!-- END REF-->
 
 ## Description 

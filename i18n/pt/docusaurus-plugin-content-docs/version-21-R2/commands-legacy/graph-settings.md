@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graf* : Picture ; *xmin* : Integer, Date, Time ; *xmax* : Integer, Date, Time ; *ymin* : Integer ; *ymax* : Integer ; *xprop* : Boolean ; *xgrid* : Boolean ; *ygrid* : Boolean ; *titulo* : Text {; *...titulo* : Text} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | graf | Picture | &#8594; | Área da gráfica ou da variável imagem |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | xgrid | Boolean | &#8594; | TRUE para grade eixo x; FALSE para não grade no eixo x (somente se xprop é TRUE) |
 | ygrid | Boolean | &#8594; | TRUE para a grade do eixo y; FALSE para as grades que não forem do eixo y |
 | titulo | Text | &#8594; | Título para a legenda do gráfico |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

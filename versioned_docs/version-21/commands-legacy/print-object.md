@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *object* {; *posX* {; *posY* {; *width* {; *height*}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | width | Integer | &#8594;  | Width of object (pixels) |
 | height | Integer | &#8594;  | Height of object (pixels) |
 | Function result | Boolean | &#8592; | True = object entirely printed; otherwise False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

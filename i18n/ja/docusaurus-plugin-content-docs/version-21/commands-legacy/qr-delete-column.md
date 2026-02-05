@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* ; *colNumber* )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
 | colNumber | Integer | &#8594;  | カラム番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

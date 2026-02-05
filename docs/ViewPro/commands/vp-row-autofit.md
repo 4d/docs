@@ -7,10 +7,13 @@ title: VP ROW AUTOFIT
 **VP ROW AUTOFIT** ( *rangeObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP ROW AUTOFIT.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|<!-- END REF -->
+|rangeObj  |Object|->|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

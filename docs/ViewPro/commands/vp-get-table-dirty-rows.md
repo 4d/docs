@@ -14,6 +14,7 @@ title: VP Get table dirty rows
 **VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -21,7 +22,9 @@ title: VP Get table dirty rows
 |tableName|Text|->|Table name|
 |reset|Boolean|->|True to clear the dirty status from the current table, False to keep it untouched. Default=True|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Collection|<-|Collection of objects with all the items modified since the last reset|<!-- END REF -->
+|Result |Collection|<-|Collection of objects with all the items modified since the last reset|
+</div>
+<!-- END REF -->
 
 
 ## Description

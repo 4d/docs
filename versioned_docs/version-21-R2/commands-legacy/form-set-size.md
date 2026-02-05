@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*object* : Text ;} *horizontal* : Integer ; *vertical* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM SET SIZE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Text | &#8594;  | Object name indicating form limits |
 | horizontal | Integer | &#8594;  | If * passed: horizontal margin (pixels)If * omitted: width (pixels) |
 | vertical | Integer | &#8594;  | If * passed: vertical margin (pixels)If * omitted: height (pixels) |
 | * | Operator | &#8594;  | • If passed, use horizontal and vertical as form margins• If omitted, use horizontal and vertical as width and height of the form<br/>This parameter cannot be passed if the object parameter is passed. |
-
+</div>
 <!-- END REF-->
 
 ## Description 

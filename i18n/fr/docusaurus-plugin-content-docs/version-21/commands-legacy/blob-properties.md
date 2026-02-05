@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *blob* ; *compressé* {; *tailleDécompressée* {; *tailleCourante*}} )<!-- END REF-->
 <!--REF #_command_.BLOB PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB sur lequel vous voulez obtenir des informations |
 | compressé | Integer | &#8592; | 0 = pas de compression, 1 = interne compact, 2 = interne rapide, -1 = GZIP compact, -2 = GZIP rapide |
 | tailleDécompressée | Integer | &#8592; | Taille du BLOB décompressé en octets |
 | tailleCourante | Integer | &#8592; | Taille courante du BLOB en octets |
-
+</div>
 <!-- END REF-->
 
 ## Description 

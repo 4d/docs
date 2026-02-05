@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* : Blob ; *byteOrdem* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOB do qual obter o valor inteiro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596; | Offset no BLOB (expressado em bytes) |
 |  |  |  | Novo offset depois da leitura |
 | Resultado da função | Integer | &#8592; | Valor inteiro (2 bytes) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( * ; *objeto* : Text ; *fila* : Integer ; *cor* : Text, Integer {; *tipoCor* : Integer} )<br/>**LISTBOX SET ROW COLOR** ( *objeto* : Field, Variable ; *fila* : Integer ; *cor* : Text, Integer {; *tipoCor* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | fila | Integer | &#8594; | Numero de fila |
 | cor | Text, Integer | &#8594; | Valor de cor RGB |
 | tipoCor | Integer | &#8594; | Cor de fonte do Listbox (por padrão) ou cor de fundo do Listbox |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

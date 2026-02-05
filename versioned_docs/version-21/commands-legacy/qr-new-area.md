@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* )<!-- END REF-->
 <!--REF #_command_.QR NEW AREA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | ptr | Pointer | &#8594;  | Pointer to a variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

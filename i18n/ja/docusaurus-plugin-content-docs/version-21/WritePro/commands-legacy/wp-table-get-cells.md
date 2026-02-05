@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get cells.Syntax-->**WP Table get cells** ( *targetObj* ) | ( *tableRef* ; *startCol* ; *startRow* {; *numCols*{; *numRows*}} )  -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table get cells.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | numCols | Integer | &#8594;  | 取得するカラムの数 |
 | numRows | Integer | &#8594;  | 取得する行の数 |
 | 戻り値 | Object | &#8592; | 指定セルを含む新規レンジ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

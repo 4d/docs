@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get text.Syntax-->**WP Get text** ( *targetObj* {; *expressions*} ) : Text<!-- END REF-->
 <!--REF #_command_.WP Get text.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | expressions | Number | &#8594;  | Instructions for expression evaluation |
 | Function result | Text | &#8592; | Text of targetObj |
-
+</div>
 <!-- END REF-->
 
 ## Description 

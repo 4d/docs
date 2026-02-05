@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Class.Syntax-->**OB Class** ( *objeto* ) : any<!-- END REF-->
 <!--REF #_command_.OB Class.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objeto | Object | &#8594;  | Objeto cuya clase se devolverá |
 | Resultado | Null, Object | &#8592; | Clase de objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( {* ;} *object* ; *enterable* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
 | object | any | &#8594;  | Object Name (if * is specified), or Table or Field or Variable (if * is omitted) |
 | enterable | Boolean, Integer | &#8594;  | Boolean: True=enterable, False=non-enterableLongint: 0=not enterable, 1=enterable, 2=not enterable not focusable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *objeto* ; *posiçaoCol* ; *nomeColuna* ; *formula* ; *tipoDados* ; *nomeCabe* ; *varTitulo* {; *nomeRodape* ; *varRodape*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | varTitulo | Integer, Pointer | &#8594;  | Variável título de coluna |
 | nomeRodape | Text | &#8594;  | Nome do rodapé  da coluna |
 | varRodape | Variable, Pointer | &#8594;  | Variável de rodapé da coluna |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

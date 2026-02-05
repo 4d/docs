@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *aField* : Field ; *array* : Array {; *countArray* : Integer array} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aField | Field | &#8594; | データとして使用する、インデックス可能なフィールド |
 | array | Array | &#8592; | フィールドデータを受け取る配列 |
 | countArray | Integer array | &#8592; | それぞれの値の数を受け取る配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

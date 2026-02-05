@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Get.Syntax-->**OB Get** ( *objet* : Object, Object ; *propriété* : Text {; *type* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objet | Object, Object | &#8594; | Objet structuré |
 | propriété | Text | &#8594; | Nom de la propriété à lire |
 | type | Integer | &#8594; | Type dans lequel convertir la valeur |
 | Résultat | any | &#8592; | Valeur courante de la propriété |
-
+</div>
 <!-- END REF-->
 
 ## Description 

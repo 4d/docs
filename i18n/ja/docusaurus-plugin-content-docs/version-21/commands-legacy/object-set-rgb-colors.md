@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( {* ;} *object* ; *foregroundColor* {; *backgroundColor* {; *altBackgrndColor*}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | foregroundColor | Text, Integer | &#8594;  | 前景色のRGBカラー |
 | backgroundColor | Text, Integer | &#8594;  | 背景色のRGBカラー |
 | altBackgrndColor | Text, Integer | &#8594;  | 奇数行の背景色RGBカラー |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get text from pasteboard.Syntax-->**Get text from pasteboard**  : Text<!-- END REF-->
 <!--REF #_command_.Get text from pasteboard.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Returns the text (if any) present in the pasteboard |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *object* : Object, Object ; *property* : Text ; *array* : Array, Variable )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to set |
 | array | Array, Variable | &#8594;  | Array to store in property |
-
+</div>
 <!-- END REF-->
 
 ## Description 

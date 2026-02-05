@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Backup Startup database method.Syntax-->**On Backup Startup database method**  -> $0<!-- END REF-->
 <!--REF #_command_.On Backup Startup database method.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | $0 | Integer | &#8592; | 0 = backup can be launched; value other than 0 = backup not authorized |
-
+</div>
 <!-- END REF-->
 
 ## 

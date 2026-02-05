@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( structurePath , dataPath ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | structurePath | Text | &#8594;  | チェックする4Dストラクチャーファイルへのパス名 |
 | dataPath | Text | &#8594;  | チェックするデータファイルへのパス名 |
 | 戻り値 | Object | &#8592; | データファイルとそれぞれのテーブルの暗号化についての情報 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

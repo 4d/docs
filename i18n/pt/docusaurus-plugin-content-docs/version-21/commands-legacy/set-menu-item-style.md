@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* ; *menuItem* ; *itemEstilo* {; *processo*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
 | menuItem | Integer | &#8594;  | Número de item de menu ou -1 para último item adicionado |
 | itemEstilo | Integer | &#8594;  | Novo estilo de item de menu |
 | processo | Integer | &#8594;  | Número de referência de processo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

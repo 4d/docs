@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Parse message.Syntax-->**HTTP Parse message** ( *data* : Text ) : Object<br/>**HTTP Parse message**( *data* : Blob ) : Object<!-- END REF-->
 <!--REF #_command_.HTTP Parse message.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | data | Text, Blob | &#8594;  | Data to be parsed |
 | Function result | Object | &#8592; | Object, each property is a part of the multipart data |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

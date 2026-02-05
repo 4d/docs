@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *tipoMetodo* {; *aTabela*}{; *nomObjeto*{; *nomObjetoForm*}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tipoMetodo | Integer | &#8594;  | Seletor de tipo objeto |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomObjetoForm | Text | &#8592; | Nome do objeto de formulário |
 | * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 | Resultado | Text | &#8592; | Rota de acesso completa do objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *object* {; *vPosition* {; *hPosition*}}{; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定された場合、オブジェクトがオブジェクト名 (文字列) 省略された場合、オブジェクトがテーブルまたは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | vPosition | Integer | &#8594;  | 表示する行番号、またはピクチャーの場合縦スクロール量 (ピクセル) |
 | hPosition | Integer | &#8594;  | リストボックスの場合表示する列番号、またはピクチャーの場合縦スクロール量 (ピクセル) |
 | * | 演算子 | &#8594;  | スクロール後の最初の位置に行を表示 (hPositionが渡された場合、列も対象) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

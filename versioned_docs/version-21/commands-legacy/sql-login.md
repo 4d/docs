@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** {( *dataEntry* ; *userName* ; *password* ; * )}<!-- END REF-->
 <!--REF #_command_.SQL LOGIN.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dataEntry | Text | &#8594;  | Publication name of 4D database or IP address of remote database or Name of the data source entry in the ODBC Manager or "" to display the selection dialog box |
 | userName | Text | &#8594;  | Name of the user registered in the data source |
 | password | Text | &#8594;  | Password of the user registered in the data source |
 | * | Operator | &#8594;  | Applied to Begin SQL/End SQL If omitted: do not apply (local database); if passed: apply |
-
+</div>
 <!-- END REF-->
 
 ## Description 

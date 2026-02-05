@@ -8,11 +8,14 @@ title: VP EXPORT TO BLOB
 **VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
-|paramObj   |Object|->|Export options|<!-- END REF -->
+|paramObj   |Object|->|Export options|
+</div>
+<!-- END REF -->
 
 ## Description
 

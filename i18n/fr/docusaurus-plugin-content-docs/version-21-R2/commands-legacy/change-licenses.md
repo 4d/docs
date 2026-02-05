@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CHANGE LICENSES.Syntax-->**CHANGE LICENSES**<!-- END REF-->
 <!--REF #_command_.CHANGE LICENSES.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

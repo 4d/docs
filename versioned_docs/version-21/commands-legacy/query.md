@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*aTable* }{;}{ *queryArgument* {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table, if omitted |
 | queryArgument | Expression | &#8594;  | Query argument |
 | * | Operator | &#8594;  | Continue query flag |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *campoObjeto* ; *rota* ; *arrayValores* )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campoObjeto | Field | &#8594;  | Campo Objeto do qual obtém a lista de valores atributo distintos |
 | rota | Text | &#8594;  | Rota do atributo cujos valores distintos deseja obter. |
 | arrayValores | Text array, Integer array, Boolean array, Date array, Time array | &#8592; | Valores distintos na rota atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

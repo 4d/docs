@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.NO DEFAULT TABLE.Syntax-->**NO DEFAULT TABLE**<!-- END REF-->
 <!--REF #_command_.NO DEFAULT TABLE.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

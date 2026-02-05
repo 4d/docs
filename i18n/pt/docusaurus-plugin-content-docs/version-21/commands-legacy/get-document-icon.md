@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *rotaDoc* ; *icone* {; *tamanho*} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaDoc | Text | &#8594;  | Nome ou rota de acesso do documento para recuperar ícone, ou string vazia para caixa de diálogo Abrir Arquivo |
 | icone | Picture | &#8592; | Variavel imagem ou campo |
 | tamanho | Integer | &#8594;  | Tamanho da imagem retornada (em pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

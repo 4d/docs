@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *paramImpression* ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | paramImpression | Blob | &#8592; | Paramètres courants d'impression |
 | Résultat | Integer | &#8592; | Code d'état : 1=Opération réussie, 0=Pas d'imprimante courante |
-
+</div>
 <!-- END REF-->
 
 ## Description 

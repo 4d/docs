@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( {* ;} *object* ; *row* {; *colorType*} )  : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時、オブジェクトをオブジェクト名(文字列)で指定。省略時、オブジェクトを変数で指定 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | row | Integer | &#8594;  | 行番号 |
 | colorType | Integer | &#8594;  | リストボックスのフォントカラー(デフォルト)またはリストボックスの背景色 |
 | 戻り値 | Text | &#8592; | カラー値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

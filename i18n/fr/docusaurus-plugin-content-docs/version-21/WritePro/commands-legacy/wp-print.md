@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP PRINT.Syntax-->**WP PRINT** ( *docWP* {; *optionsImpr*} )<!-- END REF-->
 <!--REF #_command_.WP PRINT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Document 4D Write Pro |
 | optionsImpr | Integer | &#8594;  | Options d'impression pour le document 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*

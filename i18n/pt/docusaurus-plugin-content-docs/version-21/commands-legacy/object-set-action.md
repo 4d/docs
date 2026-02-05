@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( {* ;} *objeto* ; *acao* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ACTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se * for especificado ) ou<br/>Campo ou variável (se * for omitido) |
 | acao | Text | &#8594;  | Ação para associar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

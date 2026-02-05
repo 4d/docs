@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.KILL WORKER.Syntax-->**KILL WORKER** ({ *processo* : Text, Integer })<!-- END REF-->
 <!--REF #_command_.KILL WORKER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | processo | Text, Integer | &#8594; | Número ou nome de processo a terminar (terminar processo atual se omitido) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

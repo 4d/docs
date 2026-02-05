@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT TEXT.Syntax-->**IMPORT TEXT** ( {*tabela* : Table ;} *documento* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT TEXT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para a qual se importará os dados, ou tabela Padrão, se omitido |
 | documento | Text | &#8594; | Documento texto do qual se importará os dados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

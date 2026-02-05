@@ -15,11 +15,14 @@ title: VP Get binding path
 **VP Get binding path** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
 <!-- REF #_method_.VP Get binding path.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 | rangeObj | Object | -> | Range object |
-| Result  | Text | <- | Name of the attribute bound to the cell |<!-- END REF -->
+| Result  | Text | <- | Name of the attribute bound to the cell |
+</div>
+<!-- END REF -->
 
 ## Description
 

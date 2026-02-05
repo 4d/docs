@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *objeto* ; *coluna* ; *linha* ; *esquerda* ; *superior* ; *direita* ; *inferior* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado = objeto é um nome de objeto (cadeia) |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | superior | Integer | &#8592; | Coordenada superior do objeto |
 | direita | Integer | &#8592; | Coordenada direita do objeto |
 | inferior | Integer | &#8592; | Coordenada inferior do objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*tabla* ;} *conjunto* )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla para la cual crear un conjunto vacío o Tabla por defecto si se omite |
 | conjunto | Text | &#8594;  | Nombre del nuevo conjunto vacío |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

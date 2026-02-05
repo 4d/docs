@@ -101,10 +101,14 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 <!-- REF #_command_.New signal.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |description|Text|->|Description for the signal|
-|Result|4D.Signal|<-|Native object encapsulating the signal|<!-- END REF -->
+|Result|4D.Signal|<-|Native object encapsulating the signal|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -214,9 +218,13 @@ This property is **read-only**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -241,10 +249,14 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 
 <!-- REF #SignalClass.wait().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |timeout|Real|->|Maximum waiting time for the signal in seconds|
-|Result|Boolean|<-|State of the `.signaled` property|<!-- END REF -->
+|Result|Boolean|<-|State of the `.signaled` property|
+</div>
+<!-- END REF -->
 
 #### Description
 

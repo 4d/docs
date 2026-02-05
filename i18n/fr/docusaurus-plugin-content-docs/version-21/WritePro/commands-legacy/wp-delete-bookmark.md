@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE BOOKMARK.Syntax-->**WP DELETE BOOKMARK** ( *docWP* ; *nomSignet* )<!-- END REF-->
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Document 4D Write Pro |
 | nomSignet | Text | &#8594;  | Nom du signet à supprimer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

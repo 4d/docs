@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* ; *dest* {; *width* {; *height* {; *mode* {; *depth*}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Picture | &#8594;  | 4D picture field or variable to convert as a thumbnail |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | height | Integer | &#8594;  | Thumbnail height in pixels, Default value = 48 |
 | mode | Integer | &#8594;  | Thumbnail creation mode Default value = Scaled to fit prop centered (6) |
 | depth | Integer | &#8594;  | Obsolete, do not use |
-
+</div>
 <!-- END REF-->
 
 ## Description 

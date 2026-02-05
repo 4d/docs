@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | Reference to list to be copied |
 | Function result | Integer | &#8592; | List reference number to duplicated list |
-
+</div>
 <!-- END REF-->
 
 ## Description 

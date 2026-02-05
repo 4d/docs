@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET GRID.Syntax-->**LISTBOX SET GRID** ( * ; *objet* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID** ( *objet* : Field, Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
 | objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | horizontal | Boolean | &#8594; | Vrai=montrer, Faux=cacher |
 | vertical | Boolean | &#8594; | Vrai=montrer, Faux=cacher |
-
+</div>
 <!-- END REF-->
 
 ## Description 

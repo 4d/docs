@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FROM ARRAY.Syntax-->**DELETE FROM ARRAY** ( *array* ; *where* {; *howMany*} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array from which to delete elements |
 | where | Integer | &#8594;  | Element at which to begin deletion |
 | howMany | Integer | &#8594;  | Number of elements to delete, or 1 element if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

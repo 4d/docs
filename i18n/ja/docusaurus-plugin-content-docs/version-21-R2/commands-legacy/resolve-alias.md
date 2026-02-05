@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *aliasPath* : Text ; *targetPath* : Text )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aliasPath | Text | &#8594; | エイリアス/ショートカットのアクセスパスまたは名前 |
 | targetPath | Text | &#8592; | エイリアス/ショートカットターゲットのアクセスパスまたは名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

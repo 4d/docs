@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* : Integer ; *value* : Text )<!-- END REF-->
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | format | Integer | &#8594; | 取得するシステムフォーマット |
 | value | Text | &#8592; | システムで定義されるフォーマットの値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

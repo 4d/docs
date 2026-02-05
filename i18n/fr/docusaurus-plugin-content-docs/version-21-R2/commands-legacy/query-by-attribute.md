@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*laTable* : Table}{;}{*opConj* : Operator ;} *champObjet* : Field ; *cheminAttribut* : Text ; *opRech* : Text, Operator ; *valeur* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | opRech | Text, Operator | &#8594; | Opérateur de recherche (comparateur) |
 | valeur | Text, Real, Date, Time | &#8594; | Valeur à comparer |
 | * | Operator | &#8594; | Attente d'exécution de la recherche |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -38,9 +38,13 @@ For detailed information about the session implementation, please refer to the [
 
 
 <!-- REF #_command_.Session.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|<!-- END REF -->
+|Result|4D.Session|<-|Session object|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -97,9 +101,13 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -167,10 +175,14 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|<-|Name of the privilege to verify|
-|Result|Boolean|<-|True if session has *privilege*, False otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -250,9 +262,13 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if session is a Guest one, False otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -289,11 +305,15 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|->|Privilege name|
 |privileges|Collection|->|Collection of privilege names|
-|settings|Object|->|Object with a "privileges" property (string or collection)|<!-- END REF -->
+|settings|Object|->|Object with a "privileges" property (string or collection)|
+</div>
+<!-- END REF -->
 
 #### Description
 

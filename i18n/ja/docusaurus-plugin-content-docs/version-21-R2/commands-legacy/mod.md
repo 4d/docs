@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Mod.Syntax-->**Mod** ( *number1* : Integer ; *number2* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Mod.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number1 | Integer | &#8594; | 除算される数値 |
 | number2 | Integer | &#8594; | 除算する数値 |
 | 戻り値 | Real | &#8592; | 余り |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

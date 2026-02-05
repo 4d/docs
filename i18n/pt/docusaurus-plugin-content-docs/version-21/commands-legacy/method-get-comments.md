@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET COMMENTS.Syntax-->**METHOD GET COMMENTS** ( *rota* ; *comentários* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET COMMENTS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rota | Text, Text array | &#8594;  | Texto ou array de texto que contém uma ou várias rotas de método |
 | comentários | Text, Text array | &#8592; | Comentários dos métodos designados |
 | * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

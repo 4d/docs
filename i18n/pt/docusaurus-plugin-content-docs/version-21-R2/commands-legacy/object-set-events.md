@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( * ; *objeto* : Text ; *arrEventos* : Integer array ; *modo* : Integer )<br/>**OBJECT SET EVENTS** ( *objeto* : Field, Variable ; *arrEventos* : Integer array ; *modo* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594; | Nome de objeto ou "" para designar o formulário (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
 | arrEventos | Integer array | &#8594; | Array de eventos a definir |
 | modo | Integer | &#8594; | Modo de ativação dos eventos definidos em arrEventos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

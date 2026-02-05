@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Syntax-->**LISTBOX GET OBJECTS** ( * ; *objeto* : Text ; *arrayNomObjeto* : Text array )<br/>**LISTBOX GET OBJECTS** ( *objeto* : Field, Variable ; *arrayNomObjeto* : Text array )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET OBJECTS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre del objeto (si * se especifica) o Variable (si * se omite) |
 | arrayNomObjeto | Text array | &#8592; | Nombres de los sub objetos del list box (encabezados, columnas, pies) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

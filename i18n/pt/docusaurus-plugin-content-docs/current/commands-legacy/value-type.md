@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Value type.Syntax-->**Value type** ( *expressão* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | expressão | Expression | &#8594; | Expressão cujo valor resultante será testado |
 | Resultado | Integer | &#8592; | Número do tipo de dado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

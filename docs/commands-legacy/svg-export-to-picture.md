@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* : Text ; *pictVar* : Picture {; *exportType* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | Root XML element reference |
 | pictVar | Picture | &#8594;  | Picture variable to receive XML tree (SVG picture) |
 | exportType | Integer | &#8594;  | 0 = Do not store data source, 1 = Copy data source (default), 2 = Own data source |
-
+</div>
 <!-- END REF-->
 
 ## Description 

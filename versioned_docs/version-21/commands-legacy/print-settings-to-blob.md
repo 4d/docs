@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | printSettings | Blob | &#8592; | Current print settings |
 | Function result | Integer | &#8592; | Status code: 1=Operation successful, 0=No current printer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

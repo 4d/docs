@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer ; *order* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Variable ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer ; *order* : Operator)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | colNum | Integer | &#8594;  | Column number(s) to sort |
 | order | Operator | &#8594;  | `>` to sort in ascending order or `<` to sort in descending order |
-
+</div>
 <!-- END REF-->
 
 ## Description 

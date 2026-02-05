@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( refImag | nomImag )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refImag &#124; nomImag | Inteiro longo, String | &#8594; | Número de referência ou nome da imagem da biblioteca de imagens |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

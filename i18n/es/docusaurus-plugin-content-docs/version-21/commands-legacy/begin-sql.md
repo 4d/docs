@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Begin SQL.Syntax-->**Begin SQL**<!-- END REF-->
 <!--REF #_command_.Begin SQL.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

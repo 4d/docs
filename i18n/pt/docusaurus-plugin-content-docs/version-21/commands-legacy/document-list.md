@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *nomeRota* ; *documentos* {; *opções*} )<!-- END REF-->
 <!--REF #_command_.DOCUMENT LIST.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeRota | Text | &#8594;  | Rota de acesso ao volume, diretório ou pasta |
 | documentos | Text array | &#8592; | Nomes dos documentos presentes na localização |
 | opções | Integer | &#8594;  | Opções para construir lista |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

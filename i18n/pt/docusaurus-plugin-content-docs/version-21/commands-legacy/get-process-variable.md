@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *processo* ; *srcVar* ; *dstVar* {; *srcVar2* ; *dstVar2* ; ... ; *srcVarN* ; *dstVarN*} )<!-- END REF-->
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | processo | Integer | &#8594;  | Número de processo da fonte |
 | srcVar | Variable | &#8594;  | Variável fonte |
 | dstVar | Variable | &#8592; | Variável destino |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.CREATE RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para a qual criar um novo registro, ou tabela Padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

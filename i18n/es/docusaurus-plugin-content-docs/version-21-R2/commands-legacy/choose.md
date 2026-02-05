@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Choose.Syntax-->**Choose** ( *criterio* : Boolean, Integer ; *valor* : Expression {; *...valor* : Expression} )  : any<!-- END REF-->
 <!--REF #_command_.Choose.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | criterio | Boolean, Integer | &#8594; | Valor a probar |
 | valor | Expression | &#8594; | Valores posibles |
 | Resultado | any | &#8592; | Valor de criterio |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

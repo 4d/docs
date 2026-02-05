@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}}{; *} )<br/>**ST FREEZE EXPRESSIONS** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | startSel | Integer | &#8594;  | Start of selection |
 | endSel | Integer | &#8594;  | End of selection |
 | * | Operator | &#8594;  | If passed = update expressions before freezing them |
-
+</div>
 <!-- END REF-->
 
 ## Description 

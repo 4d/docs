@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( {* ;} *object* ; *option* ; *value* {; *option2* ; *value2* ; ... ; *optionN* ; *valueN*} )<!-- END REF-->
 <!--REF #_command_.ST GET OPTIONS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
 | option | Integer | &#8594;  | Option to get |
 | value | Integer | &#8592; | Current value of option |
-
+</div>
 <!-- END REF-->
 
 ## Description 

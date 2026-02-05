@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Syntax-->**Match regex** ( *patron* ; *laCadena* ; *inicio* {; pos_encont. ; long_encont.}{; *} ) -> Resultado <br/>
 **Match regex** ( *patron* ; *laCadena* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | patron | Text | &#8594; | Regular expression (complete equality with two-parameters syntax) |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | long_encont. | Integer, Integer array | &#8592; | Longitud de la ocurrencia |
 | * | Operador | &#8594; | Si se pasa: buscar únicamente en la posición indicada |
 | Resultado | Boolean | &#8592; | True = la búsqueda ha encontrado una ocurrencia; De lo contrario, False. |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

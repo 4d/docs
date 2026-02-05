@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Square root.Syntax-->**Square root** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Square root.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nombre | Real | &#8594;  | Nombre duquel calculer la racine carrée |
 | Résultat | Real | &#8592; | Racine carrée de nombre |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,14 @@ title: VP Get value
 **VP Get value** ( *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get value.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|Result  |Object|<-|Object containing a cell value|<!-- END REF -->
+|Result  |Object|<-|Object containing a cell value|
+</div>
+<!-- END REF -->
 
 ## Description
 

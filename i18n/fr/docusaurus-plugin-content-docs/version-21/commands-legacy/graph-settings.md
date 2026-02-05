@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graphImage* ; *xmin* ; *xmax* ; *ymin* ; *ymax* ; *xprop* ; *grilleX* ; *grilleY* ; *titre* {; *titre2* ; ... ; *titreN*} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | graphImage | Picture | &#8594;  | Variable image |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | grilleX | Boolean | &#8594;  | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
 | grilleY | Boolean | &#8594;  | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
 | titre | Text | &#8594;  | Titre(s) pour les titre(s) des série(s) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

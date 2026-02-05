@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application version.Syntax-->**Application version** {( *buildNum* {; *} )} : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | buildNum | Integer | &#8592; | Build number |
 | * | Operator | &#8594;  | Long version number if passed, otherwise Short version number |
 | Function result | Text | &#8592; | Version number encoded string |
-
+</div>
 <!-- END REF-->
 
 ## Description 

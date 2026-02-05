@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY LONGINT.Syntax-->**ARRAY LONGINT** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY LONGINT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | arrayName | Array | &#8594;  | Name of the array |
 | size | Integer | &#8594;  | Number of elements in the array or Number of rows if size2 is specified |
 | size2 | Integer | &#8594;  | Number of columns in a two-dimensional array |
-
+</div>
 <!-- END REF-->
 
 ## Description 

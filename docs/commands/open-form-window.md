@@ -8,6 +8,8 @@ toc_max_heading_level: 3
 
 <!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table of the form or Default table, if omitted |
@@ -17,7 +19,7 @@ toc_max_heading_level: 3
 | vPos | Integer | &#8594;  | Vertical position of the window |
 | * | Operator | &#8594;  | Save current position and size of the window |
 | Function result | Integer | &#8592; | Window reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

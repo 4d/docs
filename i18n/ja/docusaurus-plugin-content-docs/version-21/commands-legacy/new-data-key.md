@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* ) : Object<!-- END REF-->
 <!--REF #_command_.New data key.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | passPhrase | Text | &#8594;  | AESデータ暗号化キーを生成するために使用するパスフレーズ |
 | 戻り値 | Object | &#8592; | キーを格納しているオブジェクト(encodedKeyプロパティに格納) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

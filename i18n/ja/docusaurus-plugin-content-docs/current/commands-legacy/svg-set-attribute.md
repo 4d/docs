@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *pictureObject* : Picture ; element_ID ; *attrName* : Text ; *attribValue* : Text, Integer {; ...(*attrName* : Text, *attribValue* : Text, Integer)} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | attrName | Text | &#8594; | 指定する属性 |
 | attribValue | Text, Integer | &#8594; | 属性の新しい値 |
 | * | 演算子 | &#8594; | 指定時 = SVG画像の内部DOMツリーを更新 (変数のみ) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

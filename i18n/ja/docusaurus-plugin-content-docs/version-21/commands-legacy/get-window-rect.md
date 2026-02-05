@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *left* ; *top* ; *right* ; *bottom* {; *window*} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | left | Integer | &#8592; | ウィンドウの内容領域の左座標 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | right | Integer | &#8592; | ウィンドウの内容領域の右座標 |
 | bottom | Integer | &#8592; | ウィンドウの内容領域の下座標 |
 | window | Integer | &#8594;  | ウィンドウ参照番号, または 省略時はカレントプロセスの最前面ウィンドウ, または -1のときはMDIウィンドウ (Windows) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table.Syntax-->**Table** ( *tableNum* ) : Pointer<br/>**Table** ( *tablePtr* ) : Integer<br/>**Table** ( *fieldPtr* ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | tableNum &#124; aPtr | 倍長整数, ポインター | &#8594;  | テーブル番号、または テーブルポインタ、または フィールドポインタ |
 | 戻り値 | Pointer, Integer | &#8592; | テーブル番号を渡した場合テーブルポインタ テーブルポインタを渡した場合テーブル番号 フィールドポインタを渡した場合テーブル番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

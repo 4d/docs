@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *name* : Text ; *password* : Text {; *authMethod* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.HTTP AUTHENTICATE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | name | Text | &#8594;  | User name |
 | password | Text | &#8594;  | User password |
 | authMethod | Integer | &#8594;  | Authentication method: 0 or omitted=not specified, 1=BASIC, 2=DIGEST |
 | * | Operator | &#8594;  | If passed: authentication by proxy |
-
+</div>
 <!-- END REF-->
 
 

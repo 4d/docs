@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomArchivo* {; *flujoEntrada* {; *flujoSalida* {; *flujoError*}}}{; *pid*} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomArchivo | Text | &#8594;  | Ruta de acceso y argumentos del archivo a abrir |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | flujoSalida | Text, Blob | &#8592; | Flujo de salida (stdout) |
 | flujoError | Text, Blob | &#8592; | Flujo de error(stderr) |
 | pid | Integer | &#8592; | Identificador único del proceso externo |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilidad

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form name.Syntax-->**Current form name**  : Text<!-- END REF-->
 <!--REF #_command_.Current form name.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Name of current project form or current table form in the process |
-
+</div>
 <!-- END REF-->
 
 ## Description 

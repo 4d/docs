@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *campo* ; *numero* {; > ou <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594;  | Campo indexado onde vai procurar o índice |
 | numero | Integer | &#8594;  | Nº de registros  a retornar |
 | > ou < | Operador | &#8594;  | >a partir do começo do índice, |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

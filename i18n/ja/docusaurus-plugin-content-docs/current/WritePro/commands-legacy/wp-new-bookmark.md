@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP NEW BOOKMARK.Syntax-->**WP NEW BOOKMARK** ( *targetObj* : Object ; *bkName* : Text )<!-- END REF-->
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素 |
 | bkName | Text | &#8594;  | 作成するブックマーク名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

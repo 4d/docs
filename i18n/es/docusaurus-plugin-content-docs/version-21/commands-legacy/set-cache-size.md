@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *tam* {; *libMin*} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tam | Real | &#8594;  | Tamaño de la caché de base de datos en bytes |
 | libMin | Real | &#8594;  | Número mínimo de bytes a liberar cuando la caché está llena |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

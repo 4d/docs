@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *wpDoc* ; *bkName* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Bookmark range.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | bkName | Text | &#8594;  | Name of bookmark whose range you want to get |
 | Function result | Object | &#8592; | Range of bookmark |
-
+</div>
 <!-- END REF-->
 
 ## Description 

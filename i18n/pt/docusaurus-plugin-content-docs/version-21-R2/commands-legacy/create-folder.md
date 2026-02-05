@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *rotaPasta* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaPasta | Text | &#8594; | Rota de acesso a nova pasta a criar |
 | * | Operador | &#8594; | Cria hierarquia de pastas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

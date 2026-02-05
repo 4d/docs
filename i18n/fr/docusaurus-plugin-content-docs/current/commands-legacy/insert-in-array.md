@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *tableau* : Array ; *positionDépart* : Integer {; *combien* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &#8594; | Nom du tableau dans lequel insérer des éléments |
 | positionDépart | Integer | &#8594; | Position de départ du ou des élément(s) à insérer |
 | combien | Integer | &#8594; | Nombre d'éléments à insérer ou 1 élément si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

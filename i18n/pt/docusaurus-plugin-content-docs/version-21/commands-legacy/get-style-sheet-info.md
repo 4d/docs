@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *nomeFolhaEstilo* ; *fonte* ; *tam* ; *estilos* )<!-- END REF-->
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeFolhaEstilo | Text | &#8594;  | Nome da folha de estilo |
 | fonte | Text | &#8592; | Tipo de fonte |
 | tam | Integer | &#8592; | Tamanho de fonte |
 | estilos | Integer | &#8592; | Valor do estilo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

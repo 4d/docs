@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *rotaObjetivo* ; *rotaAlias* )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaObjetivo | Text | &#8594;  | Nome da rota de acesso do alias/atalho alvo |
 | rotaAlias | Text | &#8594;  | Nome ou rota de acesso completa para o alias ou atalho |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

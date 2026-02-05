@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *userID* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE USER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userID | Integer | &#8594;  | ID number of user to delete |
-
+</div>
 <!-- END REF-->
 
 ## Description 

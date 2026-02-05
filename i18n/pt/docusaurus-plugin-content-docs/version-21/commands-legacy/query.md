@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*tabela* }{;}{ *criterioPesquisa* {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela para a qual devolver uma seleção de registros ou Tabela por padrão, se for omitido |
 | criterioPesquisa | Expression | &#8594;  | Critério de pesquisa |
 | * | Operador | &#8594;  | Continuar a execução da pesquisa |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

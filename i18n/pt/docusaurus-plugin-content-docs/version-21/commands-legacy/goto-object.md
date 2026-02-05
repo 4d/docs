@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *objeto* )<!-- END REF-->
 <!--REF #_command_.GOTO OBJECT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado = objeto é um nome de objeto (string). Se omitido = objeto é um campo ou uma variável |
 | objeto | Field, Variable | &#8594;  | Nome de objeto (se * for especificado) ou Campo ou Variável (se * for omitido) ao que se vai |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*aTable* ;} *process* ; *4Duser* ; *sessionUser* ; *processName* )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | レコードロックをテストするテーブル, または 省略時、デフォルトテーブル |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | 4Duser | Text | &#8592; | 4Dユーザ名 |
 | sessionUser | Text | &#8592; | ワークセッションを開いているユーザ |
 | processName | Text | &#8592; | プロセス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

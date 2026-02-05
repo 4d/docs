@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *level* : Integer {; *pageBreak* : Integer} )<!-- END REF-->
 <!--REF #_command_.BREAK LEVEL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | level | Integer | &#8594;  | Number of break levels |
 | pageBreak | Integer | &#8594;  | Break level for which to do a page break |
-
+</div>
 <!-- END REF-->
 
 ## Description 

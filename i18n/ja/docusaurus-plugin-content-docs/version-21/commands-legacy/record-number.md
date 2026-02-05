@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Record number.Syntax-->**Record number** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | カレントレコードの番号を返すテーブル 省略時、デフォルトテーブル |
 | 戻り値 | Integer | &#8592; | カレントレコード番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

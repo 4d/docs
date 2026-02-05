@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New.Syntax-->**WP New** ( *fuente* : Text, Blob, Object {; *opcion* : Integer} )} -> Resultado<!-- END REF-->
 <!--REF #_command_.WP New.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | fuente | Text, Blob, Object | &#8594;  | Cadena: Fuente HTML,<br/>BLOB: documento 4D Write Pro (.4wp) o Blob documento 4D Write(.4w7/.4wt)<br/>Objeto: rango o elemento o documento 4D Write Pro |
 | opcion | Integer | &#8594;  | Opción de importación para expresiones HTML |
 | Resultado | Object | &#8592; | Objeto 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

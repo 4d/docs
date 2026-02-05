@@ -7,11 +7,14 @@ title: VP Get formulas
 **VP Get formulas** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get formulas.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of formula values|<!-- END REF -->
+|Result  |Collection|<-|Collection of formula values|
+</div>
+<!-- END REF -->
 
 ## Description
 

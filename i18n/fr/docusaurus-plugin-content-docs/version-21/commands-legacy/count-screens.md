@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count screens.Syntax-->**Count screens**  : Integer<!-- END REF-->
 <!--REF #_command_.Count screens.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Nombre d'écrans |
-
+</div>
 <!-- END REF-->
 
 ## Description 

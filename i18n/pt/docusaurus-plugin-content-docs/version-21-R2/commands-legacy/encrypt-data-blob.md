@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobAcriptografar* : Blob ; objetoChave / passefrase ; *salt* : Integer ; blobCriptografado' ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | blobAcriptografar | Blob | &#8594; | BLOB que vai criptografar |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | salt | Integer | &#8594; | Sal de criptografia (para adicionar dados aleatórios) para maior segurança do algoritmo |
 | blobCriptografado' | BLOB | &#8592; | BLOB que foi criptografado |
 | Resultado | Boolean | &#8592; | TRUE se a criptografia for realizada corretamente, senão FALSE |
-
+</div>
 <!-- END REF-->
 
 ## Description 

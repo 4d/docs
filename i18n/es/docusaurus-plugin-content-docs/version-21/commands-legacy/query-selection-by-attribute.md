@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*tabla*}{;}{*opConj* ;} *campoObjeto* ; *rutaAtributo* ; *opBusq* ; *valor* {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla para la cual devolver una selección de registros o Tabla por defecto si se omite |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | opBusq | Text, Operator | &#8594;  | Operador de búsqueda (comparador) |
 | valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
 | * | Operator | &#8594;  | Espera de ejecución de la búsqueda |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

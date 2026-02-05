@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *nomArchivo* {; *proyecto* {; *}} )<!-- END REF-->
 <!--REF #_command_.EXPORT DATA.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomArchivo | Text | &#8594;  | Ruta de acceso y nombre del archivo a exportar |
 | proyecto | Text, Blob | &#8594;  | Contenido del proyecto de exportación |
 | &#8592; | Nuevo contenido del proyecto de exportación (si se  pasa el parámetro *) |
 | * | Operador | &#8594;  | Visualización de la caja de diálogo de exportación y actualización del proyecto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

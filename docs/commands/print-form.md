@@ -6,6 +6,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object} {; *areaStart* : Integer{; *areaEnd* : Integer}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Print form.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table owning the form, or Default table, if omitted |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | areaStart | Integer | &#8594;  | Print marker, or Beginning area (if areaEnd is specified) |
 | areaEnd | Integer | &#8594;  | Ending area (if areaStart specified) |
 | Function result | Integer | &#8592; | Height of printed section |
-
+</div>
 <!-- END REF-->
 
 ## Description 

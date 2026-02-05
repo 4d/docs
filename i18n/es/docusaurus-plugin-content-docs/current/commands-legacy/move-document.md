@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *rutaFuente* : Text ; *rutaDest* : Text )<!-- END REF-->
 <!--REF #_command_.MOVE DOCUMENT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaFuente | Text | &#8594; | Ruta de acceso completa al documento existente |
 | rutaDest | Text | &#8594; | Ruta de acceso de destino |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

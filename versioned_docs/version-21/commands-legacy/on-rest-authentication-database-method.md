@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On REST Authentication database method.Syntax-->$1, $2, $3, $4 -> On REST Authentication database method -> $0<!-- END REF-->
 <!--REF #_command_.On REST Authentication database method.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | $1 | Text | &#8592; | User name |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | $3 | Boolean | &#8592; | True = Digest mode, False = Basic mode |
 | $4 | Text | &#8592; | Ip address of the caller |
 | $0 | Boolean | &#8592; | True = session opening accepted, False = session opening rejected |
-
+</div>
 <!-- END REF-->
 
 ## Description 

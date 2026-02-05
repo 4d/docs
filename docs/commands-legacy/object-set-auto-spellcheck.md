@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( * ; *object* : Text ; *autoSpellcheck* : Boolean )<br/>**OBJECT SET AUTO SPELLCHECK** ( *object* : Variable, Field ; *autoSpellcheck* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string ; if omitted, object is a variable or a field |
 | object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | autoSpellcheck | Boolean | &#8594;  | True = automatic spell-checking,False= no automatic spell-checking |
-
+</div>
 <!-- END REF-->
 
 ## Description 

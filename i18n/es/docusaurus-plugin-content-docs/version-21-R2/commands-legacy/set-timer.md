@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *ticCont* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ticCont | Integer | &#8594; | Número de tics |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

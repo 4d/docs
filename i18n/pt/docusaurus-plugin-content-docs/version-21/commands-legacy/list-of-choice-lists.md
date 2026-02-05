@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *arrayNums* ; *arrayNoms* )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arrayNums | Integer array | &#8592; | Número das listas |
 | arrayNoms | Text array | &#8592; | Nomes das listas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

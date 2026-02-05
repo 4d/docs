@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is in print preview.Syntax-->**Is in print preview**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is in print preview.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | resultado | Boolean | &#8592; | True = Vista previa,False = No vista previa |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

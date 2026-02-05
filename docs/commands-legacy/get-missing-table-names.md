@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *missingTables* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | missingTables | Text array | &#8592; | Names of missing tables in the database |
-
+</div>
 <!-- END REF-->
 
 ## Description 

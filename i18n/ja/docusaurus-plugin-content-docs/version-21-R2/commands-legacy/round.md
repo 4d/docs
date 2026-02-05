@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Round.Syntax-->**Round** ( *round* : Real ; *places* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | round | Real | &#8594; | 丸める数値 |
 | places | Integer | &#8594; | 丸める小数部の位置 |
 | 戻り値 | Real | &#8592; | placesで指定された場所で 丸められた数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

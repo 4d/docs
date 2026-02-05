@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *list* ; *value* ; *scope* {; *itemsArray* {; *}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | itemsArray | Integer array | &#8592; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
 | * | Operator | &#8594;  | - If omitted: use position of items - If passed: use reference number of items |
 | Function result | Integer | &#8592; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
-
+</div>
 <!-- END REF-->
 
 ## Description 

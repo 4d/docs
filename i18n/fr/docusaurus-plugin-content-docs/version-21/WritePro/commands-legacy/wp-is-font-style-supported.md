@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported** ( *objCible* ; *stylePoliceWP* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Is font style supported.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément |
 | stylePoliceWP | Integer | &#8594;  | Constante de style de police |
 | Résultat | Boolean | &#8592; | Vrai si le style est pris en charge dans tout ou partie de objCible, Faux sinon |
-
+</div>
 <!-- END REF-->
 
 ## Description 

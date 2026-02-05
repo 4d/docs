@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( {* ;} *object* ; *dataSource* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)<br/>省略時: object は変数またはフィールド |
 | object | any | &#8594;  | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
 | dataSource | Pointer | &#8594;  | オブジェクトの新しいデータソースへのポインター |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

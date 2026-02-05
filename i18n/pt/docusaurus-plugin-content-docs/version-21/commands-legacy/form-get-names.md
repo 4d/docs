@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*tabela* ;} *arrayNome* {; *filtro* {; *marcador*}}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET NAMES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Referencia de tabela |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | marcador | Real | &#8594;  | Marcador para versão mínima a devolver |
 | &#8592; | Novo valor |
 | * | Operador | &#8594;  | Se passa = o comando é aplicado a base local quando é executado desde um componente(parâmetro ignorado fora deste contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

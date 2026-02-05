@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SET OPTION.Syntax-->**WEB SET OPTION** ( *selector* ; *value* )<!-- END REF-->
 <!--REF #_command_.WEB SET OPTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | オプションコード |
 | value | Integer, Text, Collection | &#8594;  | オプション値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

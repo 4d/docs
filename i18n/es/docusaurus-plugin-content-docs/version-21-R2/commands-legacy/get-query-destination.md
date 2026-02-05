@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinoTipo* : Integer ; *destinoObjeto* : Text ; *destinoPunt* : Pointer )<!-- END REF-->
 <!--REF #_command_.GET QUERY DESTINATION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | destinoTipo | Integer | &#8592; | 0=selección actual, 1=conjunto, 2=selección temporal, 3=variable |
 | destinoObjeto | Text | &#8592; | Nombre del conjunto o Nombre de la selección temporal o Cadena vacía |
 | destinoPunt | Pointer | &#8592; | Puntero a la variable local si destinoTipo=3 |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

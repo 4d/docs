@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TABLE TITLES.Syntax-->**SET TABLE TITLES** {( *titulosTablas* ; *numTablas* {; *})}<!-- END REF-->
 <!--REF #_command_.SET TABLE TITLES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | titulosTablas | Text array | &#8594;  | Nombres de las tablas tal como deben aparecer |
 | numTablas | Integer array | &#8594;  | Números de las tablas |
 | * | Operador | &#8594;  | Utilizar los nombres personalizados en el editor de fórmulas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

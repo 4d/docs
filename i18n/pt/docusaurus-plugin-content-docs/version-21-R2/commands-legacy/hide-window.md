@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** ({ *janela* : Integer })<!-- END REF-->
 <!--REF #_command_.HIDE WINDOW.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janela | Integer | &#8594; | Número de referência da janela ou processo atual da janela de primeiro plano, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

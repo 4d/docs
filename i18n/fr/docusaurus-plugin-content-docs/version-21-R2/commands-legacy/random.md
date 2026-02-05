@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Random.Syntax-->**Random**  : Integer<!-- END REF-->
 <!--REF #_command_.Random.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Nombre aléatoire |
-
+</div>
 <!-- END REF-->
 
 ## Description 

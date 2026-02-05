@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referencia del área |
 | Resultado | Integer | &#8592; | Espacio de soltar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

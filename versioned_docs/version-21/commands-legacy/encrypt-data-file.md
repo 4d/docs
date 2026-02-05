@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; *newPassPhrase* {; *archiveFolder* {; *curPassPhrase* {; *methodName*}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* ; *dataPath* {; *newDataKey* {; *archiveFolder* {; *curDataKey* {; *methodName*}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | structurePath | Text | &#8594;  | Pathname of structure file |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | curDataKey | Object | &#8594;  | Current encryption key |
 | methodName | Text | &#8594;  | Name of 4D callback method |
 | Function result | Text | &#8592; | Full pathname of folder where original files have been stored |
-
+</div>
 <!-- END REF-->
 
 ## Description 

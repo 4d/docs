@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* ; *dstVar* ; *expr* {; *dstVar2* ; *expr2* ; ... ; *dstVarN* ; *exprN*} )<!-- END REF-->
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | 送り先のプロセス番号 |
 | dstVar | Variable | &#8594;  | 送り先の変数 |
 | expr | Variable | &#8594;  | ソース式 (ソース変数) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *coulDefaut* {; *message*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | coulDefaut | Integer | &#8594;  | Couleur RVB présélectionnée |
 | message | Text | &#8594;  | Titre de la fenêtre de sélection |
 | Résultat | Integer | &#8592; | Couleur RVB |
-
+</div>
 <!-- END REF-->
 
 ## Description 

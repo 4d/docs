@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* ; *aColumns* {; *aOrders*} )<!-- END REF-->
 <!--REF #_command_.QR SET SORTS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
 | aColumns | Real array | &#8594;  | カラム |
 | aOrders | Real array | &#8594;  | ソート方向 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

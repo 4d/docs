@@ -16,12 +16,15 @@ title: VP IMPORT DOCUMENT
 **VP IMPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text { ; *paramObj* : Object} ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |filePath   |Text|->|Pathname of the document|
-|paramObj   |Object|->|Import options|<!-- END REF -->
+|paramObj   |Object|->|Import options|
+</div>
+<!-- END REF -->
 
 ## Description
 

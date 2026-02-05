@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE SET.Syntax-->**CREATE SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to create a set from the selection, or Default table, if omitted |
 | set | Text | &#8594;  | Name of the new set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

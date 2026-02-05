@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *BLOB* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB size.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOBフィールドまたは変数 |
 | 戻り値 | Integer | &#8592; | バイト単位のBLOBサイズ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

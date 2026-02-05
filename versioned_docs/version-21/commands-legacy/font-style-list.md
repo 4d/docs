@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *fontFamily* ; *fontStyleList* ; *fontNameList* )<!-- END REF-->
 <!--REF #_command_.FONT STYLE LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fontFamily | Text | &#8594;  | Name of font family |
 | fontStyleList | Text array | &#8592; | List of font styles supported by the font family |
 | fontNameList | Text array | &#8592; | List of complete font names supported by the font family |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Exp.Syntax-->**Exp** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Numero | Real | &#8594; | Número a evaluar |
 | Resultado | Real | &#8592; | Exponencial del número |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

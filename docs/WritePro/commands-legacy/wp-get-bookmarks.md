@@ -7,10 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP GET BOOKMARKS.Syntax-->**WP GET BOOKMARKS** ( *wpDoc* : Object ; *arrBKNames* : Array )<!-- END REF-->
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | arrBKNames | Array | &#8592; | Array of bookmark names |
+</div>
 <!-- END REF-->
 
 ## Description 

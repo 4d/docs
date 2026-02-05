@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *archivo* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | archivo | Integer | &#8594;  | Tipo de archivo |
 | * | Operador | &#8594;  | Archivo devuelto de la base local |
 | Resultado | Text | &#8592; | Ruta al archivo 4D |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

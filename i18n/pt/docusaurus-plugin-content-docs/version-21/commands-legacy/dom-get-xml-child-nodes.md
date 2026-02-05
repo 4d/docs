@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *elemRef* ; *arrTiposFilhos* ; *arrRefsNodos* )<!-- END REF-->
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | elemRef | Text | &#8594;  | Elemento XML de referência |
 | arrTiposFilhos | Integer array | &#8592; | Tipos de nodos filhos |
 | arrRefsNodos | Text array | &#8592; | Referência ou valores dos nodos filhos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

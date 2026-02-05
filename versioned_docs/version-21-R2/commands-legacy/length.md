@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Length.Syntax-->**Length** ( *string* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | string | Text | &#8594;  | String for which to return length |
 | Function result | Integer | &#8592; | Length of string |
-
+</div>
 <!-- END REF-->
 
 ## Description 

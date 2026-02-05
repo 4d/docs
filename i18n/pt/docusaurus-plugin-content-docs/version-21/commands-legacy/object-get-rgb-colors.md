@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Syntax-->**OBJECT GET RGB COLORS** ( {* ;} *objeto* ; *corPrimeiroPlano* {; *corFundo* {; *corFundoAlternativo*}} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET RGB COLORS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificar, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo. |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | corPrimeiroPlano | Text, Integer | &#8592; | Valor da cor RGB do primeiro plano |
 | corFundo | Text, Integer | &#8592; | Valor da cor do RGB para segundo plano (fundo) |
 | corFundoAlternativo | Text, Integer | &#8592; | Valor da cor RGB do fundo alternativo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

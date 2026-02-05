@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *groupNames* : Text array ; *groupNumbers* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET GROUP LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | groupNames | Text array | &#8592; | パスワードエディター表示されるグループ名 |
 | groupNumbers | Integer array | &#8592; | 対応するユニークなグループID番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

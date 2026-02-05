@@ -8,12 +8,15 @@ title: VP REMOVE NAME
 **VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName|Text|->|4D View Pro area form object name|
 |name|Text|->|Name of the named range or named formula to remove|
-|scope|Integer|->|Target scope (default=current sheet)|<!-- END REF -->
+|scope|Integer|->|Target scope (default=current sheet)|
+</div>
+<!-- END REF -->
 
 ## Description
 

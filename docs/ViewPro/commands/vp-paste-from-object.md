@@ -14,12 +14,15 @@ title: VP PASTE FROM OBJECT
 **VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj|Object|->|Cell range object|
 |dataObject|Object|->|Object containing the data to be pasted|
-|options|Integer|->|Specifies what is pasted|<!-- END REF -->
+|options|Integer|->|Specifies what is pasted|
+</div>
+<!-- END REF -->
 
 ## Description
 

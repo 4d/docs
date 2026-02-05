@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *conjunto1* : Text ; *conjunto2* : Text ; *resultado* : Text )<!-- END REF-->
 <!--REF #_command_.INTERSECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | conjunto1 | Text | &#8594; | Primer conjunto |
 | conjunto2 | Text | &#8594; | Segundo conjunto |
 | resultado | Text | &#8594; | Conjunto resultante |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

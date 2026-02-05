@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( rotaEstrutura , rotaDados ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaEstrutura | Text | &#8594; | Rota do arquivo de estrutura 4D a ser verificado |
 | rotaDados | Text | &#8594; | Rota do arquivo de dados 4D a ser verificado |
 | Resultado | Object | &#8592; | Informação sobre o estado de criptografia do arquivo de dados e de cada tabela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

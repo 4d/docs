@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *modo* )<!-- END REF-->
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | modo | Integer | &#8594;  | Modo de acesso aos objetos bloqueados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

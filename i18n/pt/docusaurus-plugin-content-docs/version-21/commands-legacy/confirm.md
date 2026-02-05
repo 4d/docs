@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *mensagem* {; *okBotaoTitulo* {; *cancelarBotaoTitulo*}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | mensagem | Text | &#8594;  | Mensagem a exibir na caixa de diálogo de confirmação |
 | okBotaoTitulo | Text | &#8594;  | Título do botão OK |
 | cancelarBotaoTitulo | Text | &#8594;  | Título do botão Cancelar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

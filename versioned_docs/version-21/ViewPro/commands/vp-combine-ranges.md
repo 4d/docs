@@ -8,12 +8,15 @@ title: VP Combine ranges
 **VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Combine ranges.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj| Object|->|Range object|
 |otherRangeObj| Object|->|Range object|
-|Result| Object|<-|Object containing a combined range|<!-- END REF -->
+|Result| Object|<-|Object containing a combined range|
+</div>
+<!-- END REF -->
 
 ## Description
 

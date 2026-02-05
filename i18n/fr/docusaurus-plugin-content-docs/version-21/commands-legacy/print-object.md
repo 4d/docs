@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *objet* {; *posX* {; *posY* {; *largeur* {; *hauteur*}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | largeur | Integer | &#8594;  | Largeur de l'objet (pixels) |
 | hauteur | Integer | &#8594;  | Hauteur de l'objet (pixels) |
 | Résultat | Boolean | &#8592; | Vrai = objet entièrement imprimé, Faux sinon |
-
+</div>
 <!-- END REF-->
 
 ## Description 

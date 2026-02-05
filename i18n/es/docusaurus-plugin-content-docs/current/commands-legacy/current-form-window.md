@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form window.Syntax-->**Current form window**  : Integer<!-- END REF-->
 <!--REF #_command_.Current form window.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de referencia de la ventana del formulario actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -110,9 +110,13 @@ Available classes are accessible from their class stores. Two class stores are a
 <!-- REF #_command_.cs.Syntax -->**cs** : Object <!-- END REF -->
 
 <!-- REF #_command_.cs.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|<-|User class store for the project or component|<!-- END REF -->
+|classStore|Object|<-|User class store for the project or component|
+</div>
+<!-- END REF -->
 
 The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
@@ -130,9 +134,13 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
 <!-- REF #_command_.4D.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|<-|4D class store|<!-- END REF -->
+|classStore|Object|<-|4D class store|
+</div>
+<!-- END REF -->
 
 The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
@@ -532,10 +540,14 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
 <!-- REF #_command_.Super.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|  
 |---|---|---|---|
 |param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|<!-- END REF -->
+|Result|Object|<-|Object's parent|
+</div>
+<!-- END REF -->
 
 The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
 
@@ -640,9 +652,13 @@ $message:=$square.description() //I have 4 sides which are all equal
 <!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
 <!-- REF #_command_.This.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|  
 |---|---|---|---|
-|Result|Object|<-|Current object|<!-- END REF -->
+|Result|Object|<-|Current object|
+</div>
+<!-- END REF -->
 
 The `This` keyword <!-- REF #_command_.This.Summary -->returns a reference to the currently processed object<!-- END REF -->.
 

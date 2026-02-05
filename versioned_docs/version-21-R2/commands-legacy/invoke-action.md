@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* : Text {; *target* : Integer} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Standard action name or pattern including parameter if required |
 | target | Integer | &#8594;  | Defines where to execute the action: current form (default) or main form |
-
+</div>
 <!-- END REF-->
 
 ## Description 

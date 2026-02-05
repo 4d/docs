@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Syntax-->**Position** ( *buscar* ; *laCadena* {; *inicio* {; *longEncont*}}{; *} ) -> Resultado <br/>
 **Position** ( *buscar* ; *laCadena* ; *inicio* ; *longEncont* ; *opciones* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Position.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | buscar | Text | &#8594;  | Cadena a buscar |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | longEncont | Integer | &#8594;  | Longitud de la cadena encontrada |
 | opciones | Integer | &#8594;  | Condición(es) de búsqueda |
 | Resultado | Integer | &#8592; | Posición de la primera ocurrencia |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

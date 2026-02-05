@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *pontCampo* : Ponteiro, String {; *} )<br/>**DELETE INDEX** ( *nomeIndice* : Ponteiro, String {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pontCampo&#124;nomeIndice | Ponteiro, String | &#8594; | Ponteiro ao campo cujos índices serão apagados ou Nome do Índice que será apagado. |
 | * | Operador | &#8594; | Se passado = operação assincrônica |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

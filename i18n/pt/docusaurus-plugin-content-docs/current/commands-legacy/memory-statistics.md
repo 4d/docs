@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *tipoInfo* : Integer ; *arrayNomes* : Text array ; *arrayValores* : Real array ; *arrayContador* : Real array )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tipoInfo | Integer | &#8594; | Seletor de informação a ser obtido |
 | arrayNomes | Text array | &#8592; | Títulos da informação |
 | arrayValores | Real array | &#8592; | Valores da informação |
 | arrayContador | Real array | &#8592; | Número de objetos respectivos (se disponível) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

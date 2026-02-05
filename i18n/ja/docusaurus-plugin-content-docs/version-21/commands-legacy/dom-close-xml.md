@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *elementRef* )<!-- END REF-->
 <!--REF #_command_.DOM CLOSE XML.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XMLルート要素参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

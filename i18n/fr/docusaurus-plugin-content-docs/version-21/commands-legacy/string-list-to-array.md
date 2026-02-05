@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resNum* ; *tabChaînes* {; *resFichier*} )<!-- END REF-->
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | resNum | Integer | &#8594;  | Numéro de ressource ou Attribut 'id' de l'élément 'group' (XLIFF) |
 | tabChaînes | Text array | &#8592; | Chaînes de la ressource STR# ou Chaînes de l'élément 'group' (XLIFF) |
 | resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources Si omis : tous les fichiers XLIFF ou les fichiers de ressources ouverts |
-
+</div>
 <!-- END REF-->
 
 ## Description 

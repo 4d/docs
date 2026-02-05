@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get auto row height.Syntax-->**LISTBOX Get auto row height** ( * ; *object* : Text ; *selector* : Integer {; *unit* : Integer} )  : Integer<br/>**LISTBOX Get auto row height** ( *object* : Variable ; *selector* : Integer {; *unit* : Integer} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get auto row height.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable. |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | selector | Integer | &#8594;  | Height value to get: lk row min height or lk row max height |
 | unit | Integer | &#8594;  | Unit of height value: 0 = pixels, 1 = lines |
 | Function result | Integer | &#8592; | Selected row height value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

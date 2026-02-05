@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *objeto* ; *url* ; *descriçao* ; *codigoErro* )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | url | Text | &#8592; | URL na origem do erro |
 | descriçao | Text | &#8592; | Description of error (macOS) |
 | codigoErro | Integer | &#8592; | Código de Erro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

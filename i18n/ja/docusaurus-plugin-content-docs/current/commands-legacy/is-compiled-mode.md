@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** ( * ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | ホストデータベースの情報を返す |
 | 戻り値 | Boolean | &#8592; | コンパイル済み (True), インタプリタ (False) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

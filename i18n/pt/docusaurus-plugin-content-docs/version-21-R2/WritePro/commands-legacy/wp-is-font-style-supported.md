@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported**  ( *faixaObj* : Object ; *wpEstiloFonte* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Is font style supported.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | faixaObj | Object | &#8594;  | Faixa do Objeto parse |
 | wpEstiloFonte | Integer | &#8594;  | Constante de Estilo de Fonte wk font negrito wk font itálico wk texto subscrito, wk texto estilo linha atravessada |
 | Resultado | Boolean | &#8592; | True se qualquer parte de faixaObj suporta wpEstiloFonte, se não False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

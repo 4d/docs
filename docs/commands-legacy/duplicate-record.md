@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DUPLICATE RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to duplicate the current record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

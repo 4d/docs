@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Milliseconds.Syntax-->**Milliseconds**  : Integer<!-- END REF-->
 <!--REF #_command_.Milliseconds.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | マシンが起動されてからの 経過ミリ秒数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

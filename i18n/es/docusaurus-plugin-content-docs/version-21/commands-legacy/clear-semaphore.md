@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *semaforo* )<!-- END REF-->
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | semaforo | Text | &#8594;  | Semáforo a borrar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

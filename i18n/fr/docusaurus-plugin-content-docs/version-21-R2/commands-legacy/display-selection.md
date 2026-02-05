@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*laTable* : Table}{; *modeSélection* : Integer}{; *saisieListe* : Boolean}{; *})<br/>**DISPLAY SELECTION** ( {*laTable* : Table}{; *modeSélection* : Integer}{; *saisieListe* : Boolean} ; * {; *} )
 <!-- END REF-->
 <!--REF #_command_.DISPLAY SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table à laquelle appartient la sélection ou Table par défaut si ce paramètre est omis |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | saisieListe | Boolean | &#8594; | Autoriser saisie en liste |
 | * | Operator | &#8594; | Utiliser le formulaire sortie en cas de sélection d'un seul enregistrement et masquer les barres de défilement dans le formulaire entrée |
 | * | Operator | &#8594; | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

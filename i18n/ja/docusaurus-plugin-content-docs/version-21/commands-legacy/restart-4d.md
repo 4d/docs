@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** {( *time* {; *message*} )}<!-- END REF-->
 <!--REF #_command_.RESTART 4D.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | time | Integer | &#8594;  | 4Dが再起動するまでの猶予時間(秒) |
 | message | Text | &#8594;  | クライアントマシンに表示するテキスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

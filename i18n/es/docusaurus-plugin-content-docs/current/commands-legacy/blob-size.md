@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *BLOB* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB size.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | Campo o variable de tipo BLOB |
 | Resultado | Integer | &#8592; | Tamaño en bytes del BLOB |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

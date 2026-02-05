@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *filteredChar* )<!-- END REF-->
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | filteredChar | Text | &#8594;  | Filtered keystroke character or Empty string to cancel the keystroke |
-
+</div>
 <!-- END REF-->
 
 ## Description 

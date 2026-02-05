@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *numsArray* : Integer array ; *namesArray* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | numsArray | Integer array | &#8592; | 選択リスト番号 |
 | namesArray | Text array | &#8592; | 選択リスト名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

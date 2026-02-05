@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*aTable* : Table ;} *setName* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table where the highlighted records will be read If omitted, table of the current form |
 | setName | Text | &#8594;  | Set where the highlighted records will be stored |
-
+</div>
 <!-- END REF-->
 
 ## Description 

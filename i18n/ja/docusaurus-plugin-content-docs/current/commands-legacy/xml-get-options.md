@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( *elementRef* : テキスト ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer, *value* : Integer)} )<br/>**XML GET OPTIONS** ( *document  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer, *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML GET OPTIONS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef &#124; document | テキスト | &#8594; | XMLルート要素参照 または開かれたドキュメントの参照 |
 | selector | Integer | &#8594; | 取得するオプション |
 | value | Integer | &#8592; | オプションの現在値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

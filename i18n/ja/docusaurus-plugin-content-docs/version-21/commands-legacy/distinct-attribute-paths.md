@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *objectField* ; *pathArray* )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | objectField | Field | &#8594;  | インデックスされたオブジェクトフィールド |
 | pathArray | Text array | &#8592; | 重複しないパスのリストを取得させる配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

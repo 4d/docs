@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *objet* : Text ) : Text<br/>**WA Get page title** ( *objet* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 | Résultat | Text | &#8592; | Titre de la page courante |
-
+</div>
 <!-- END REF-->
 
 ## Description 

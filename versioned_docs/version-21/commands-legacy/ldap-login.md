@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP LOGIN.Syntax-->**LDAP LOGIN** ( *url* ; *login* ; *password* {; *digest*} )<!-- END REF-->
 <!--REF #_command_.LDAP LOGIN.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | url | Text | &#8594;  | URL of LDAP server to connect to |
 | login | Text | &#8594;  | Login entry |
 | password | Text | &#8594;  | Password of login entry |
 | digest | Integer | &#8594;  | 0 = send password in digest MD5 (default), 1 = send password without encryption |
-
+</div>
 <!-- END REF-->
 
 ## Description 

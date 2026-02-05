@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( * ; *objeto* : Text ; *seletor* : Integer ; *info* : Integer )<br/>**LISTBOX GET PRINT INFORMATION** ( *objeto* : Field, Variable ; *seletor* : Integer ; *info* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
 | seletor | Integer | &#8594; | Informação a conseguir |
 | info | Integer | &#8592; | Valor atual |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

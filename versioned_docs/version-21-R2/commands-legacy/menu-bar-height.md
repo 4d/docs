@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Menu bar height.Syntax-->**Menu bar height**  : Integer<!-- END REF-->
 <!--REF #_command_.Menu bar height.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Height (expressed in pixels) of menu bar (returns zero if menu bar is hidden) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

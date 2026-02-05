@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE ROWS.Syntax-->**WP TABLE DELETE ROWS** ( *targetObj* : Object )<br/>**WP TABLE DELETE ROWS**( *tableRef* : Object ; *rowNumber* : Integer {; *numRows* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
 | rowNumber | Integer | &#8594;  | Row index number |
 | numRows | Integer | &#8594;  | Number of rows to delete (default value = 1) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

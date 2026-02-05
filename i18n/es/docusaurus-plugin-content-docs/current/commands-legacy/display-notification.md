@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titulo* : Text ; *texto* : Text {; *duracion* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | titulo | Text | &#8594; | Título de la notificación |
 | texto | Text | &#8594; | Texto de la notificación |
 | duracion | Integer | &#8594; | Duración de la visualización en segundos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

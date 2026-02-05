@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *leChamp* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ à évaluer |
 | Résultat | Boolean | &#8592; | Vrai = le champ est NULL, Faux = le champ n'est pas NULL |
-
+</div>
 <!-- END REF-->
 
 ## Description 

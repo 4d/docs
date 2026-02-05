@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Screen width.Syntax-->**Screen width** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Screen width.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Windows: largo da janela da aplicação ou altura da tela se especificada * Macintosh: largo da tela principal |
 | Resultado | Integer | &#8592; | Largo expressado em pixeles |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Arctan.Syntax-->**Arctan** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Arctan.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nombre | Real | &#8594; | Tangente pour laquelle vous souhaitez calculer l'angle en radians |
 | Résultat | Real | &#8592; | Angle en radians |
-
+</div>
 <!-- END REF-->
 
 ## Description 

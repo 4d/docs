@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *esquemaCor* : Text )<!-- END REF-->
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | esquemaCor | Text | &#8594; | "light/claro", "dark/escuro" ou "inherited/herdado" |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

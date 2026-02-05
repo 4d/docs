@@ -7,11 +7,14 @@ title: VP Get current sheet
 **VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|Function result|Integer|<-|Index of the current sheet|<!-- END REF -->
+|Function result|Integer|<-|Index of the current sheet|
+</div>
+<!-- END REF -->
 
 ## Description
 

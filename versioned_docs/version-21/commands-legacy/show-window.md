@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** {( *window* )}<!-- END REF-->
 <!--REF #_command_.SHOW WINDOW.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number or Current process frontmost window, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

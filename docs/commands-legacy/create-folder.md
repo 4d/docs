@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *folderPath* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderPath | Text | &#8594;  | Pathname to new folder to create |
 | * | Operator | &#8594;  | Create folder hierarchy |
-
+</div>
 <!-- END REF-->
 
 ## Description 

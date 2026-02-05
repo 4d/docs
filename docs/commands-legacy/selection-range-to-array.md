@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Syntax-->**SELECTION RANGE TO ARRAY** ( *start* : Integer ; *end* : Integer {; ...(*data* : Field, Table ; *array* : Array)} )<!-- END REF-->
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | start | Integer | &#8594;  | Selected record number where data retrieval starts |
 | end | Integer | &#8594;  | Selected record number where data retrieval ends |
 | data | Field, Table | &#8594;  | Field to use for retrieving data or Table to use for retrieving record numbers |
 | array | Array | &#8592; | Array to receive field data or record numbers |
-
+</div>
 <!-- END REF-->
 
 ## Description 

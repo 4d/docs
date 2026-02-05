@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *grafArea* : Picture ; *grafNum* : Integer, Object ; *xCategorias* : Array {; *...yValores* : Array} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | grafArea | Picture | &#8594; | Area do gráfico ou variável da imagem |
 | grafNum | Integer, Object | &#8594; | Número do tipo do gráfico |
 | xCategorias | Array | &#8594; | Rótulos para o eixo x |
 | yValores | Array | &#8594; | Dados para gráfico (até oito permitido) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

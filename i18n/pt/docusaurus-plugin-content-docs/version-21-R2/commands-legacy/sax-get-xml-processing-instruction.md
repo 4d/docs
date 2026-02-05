@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *documento* : Time ; *nome* : Text ; *valor* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Time | &#8594; | Referência do documento aberto |
 | nome | Text | &#8592; | Instruction name |
 | valor | Text | &#8592; | Instruction value |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

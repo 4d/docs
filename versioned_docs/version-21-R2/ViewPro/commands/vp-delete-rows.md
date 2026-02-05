@@ -7,10 +7,13 @@ title: VP DELETE ROWS
 **VP DELETE ROWS** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP DELETE ROWS.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|<!-- END REF -->
+|rangeObj| Object|->|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

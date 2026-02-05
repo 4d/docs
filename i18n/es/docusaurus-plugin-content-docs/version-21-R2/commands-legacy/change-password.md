@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *contraseña* : Text )<!-- END REF-->
 <!--REF #_command_.CHANGE PASSWORD.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | contraseña | Text | &#8594; | Nueva contraseña |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

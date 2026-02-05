@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *doc* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
 <!--REF #_command_.LOAD VARIABLES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | doc | Text | &#8594;  | Documento que contiene el o las variables 4D |
 | variable | Variable | &#8592; | Variables a recibir los valores |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

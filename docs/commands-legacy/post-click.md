@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *mouseX* : Integer ; *mouseY* : Integer {; *process* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | mouseX | Integer | &#8594;  | Horizontal coordinate |
 | mouseY | Integer | &#8594;  | Vertical coordinate |
 | process | Integer | &#8594;  | Destination process reference number, or Application event queue, if omitted, or 0 |
 | * | Operator |  &#8594;  | If specified, global coordinate system is used If omitted, local coordinate system is used |
-
+</div>
 <!-- END REF-->
 
 ## Description 

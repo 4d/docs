@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE ROWS.Syntax-->**WP TABLE DELETE ROWS** ( *objTarget* : Object ) | ( *refTabela* : Object ; *numLinha* : Integer {; *nbLinhas* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Range ou elemento ou documento 4D Write Pro |
 | refTabela | Object | &#8594;  | Referência de Tabela |
 | numLinha | Integer | &#8594;  | número índice Linhas |
 | nbLinhas | Integer | &#8594;  | Número linhas a apagar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

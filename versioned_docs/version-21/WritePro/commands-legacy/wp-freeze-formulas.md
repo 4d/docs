@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP FREEZE FORMULAS.Syntax-->**WP FREEZE FORMULAS** ( *targetObj* {; *recompute*} )<!-- END REF-->
 <!--REF #_command_.WP FREEZE FORMULAS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | recompute | Integer | &#8594;  | Option to control recomputing |
-
+</div>
 <!-- END REF-->
 
 ## Description 

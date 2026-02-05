@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *nomUsuarios* ; *numUsuarios* )<!-- END REF-->
 <!--REF #_command_.GET USER LIST.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomUsuarios | Text array | &#8592; | Nomes dos usuários como aparecem na janela de editor de senhas |
 | numUsuarios | Integer array | &#8592; | Números correspondentes de referências dos usuários |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

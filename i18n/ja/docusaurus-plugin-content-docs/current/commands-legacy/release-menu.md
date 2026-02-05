@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELEASE MENU.Syntax-->**RELEASE MENU** ( *menu* : Text )<!-- END REF-->
 <!--REF #_command_.RELEASE MENU.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Text | &#8594; | メニュー参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

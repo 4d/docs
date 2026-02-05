@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *buildAppSettings* )}<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | buildAppSettings | Text | &#8594;  | Full access path of the settings file to use |
-
+</div>
 <!-- END REF-->
 
 ## Description 

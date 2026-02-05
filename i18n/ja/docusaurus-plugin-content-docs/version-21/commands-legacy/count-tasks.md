@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count tasks.Syntax-->**Count tasks**  : Integer<!-- END REF-->
 <!--REF #_command_.Count tasks.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | 開いているプロセスの (カーネルプロセスを含む) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

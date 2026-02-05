@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** {( *array* ; *aField* {; *array2* ; *aField2* ; ... ; *arrayN* ; *aFieldN*}{; *} )}<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array to copy to the selection |
 | aField | Field | &#8592; | Field to receive the array data |
 | * | Operator | &#8594;  | Await execution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

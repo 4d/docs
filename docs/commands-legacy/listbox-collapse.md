@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *object* : Variable {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | selector | Integer | &#8594;  | Part of list box to collapse |
 | line | Integer | &#8594;  | Number of break row to collapse or <br/>Number of list box level to collapse |
 | column | Integer | &#8594;  | Number of break column to collapse |
-
+</div>
 <!-- END REF-->
 
 ## Description 

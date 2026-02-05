@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *redimensao* : Boolean {; *larguraMin* : Integer {; *larguraMax* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | redimensao | Boolean | &#8594; | True: o formulário pode ser redimensionado horizontalmente; False - o formulário não pode ser redimensionado horizontalmente |
 | larguraMin | Integer | &#8594; | Melhor largura de formulário permitida (píxels) |
 | larguraMax | Integer | &#8594; | Maior largura de formulário permitida (píxels) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

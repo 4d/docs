@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trigger event.Syntax-->**Trigger event**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger event.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | 0: トリガー実行サイクル外1: 新規レコード保存時2: 既存レコード保存時3: レコード削除時 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

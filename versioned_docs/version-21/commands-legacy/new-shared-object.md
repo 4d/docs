@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared object.Syntax-->**New shared object** {( *property* ; *value* {; *property2* ; *value2* ; ... ; *propertyN* ; *valueN*} )} : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | property | Text | &#8594;  | Name of property to create |
 | value | Text, Date, Boolean, Pointer, Number, Object | &#8594;  | Value of property |
 | Function result | Object | &#8592; | New shared object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current method name.Syntax-->**Current method name**  : Text<!-- END REF-->
 <!--REF #_command_.Current method name.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Calling method name |
-
+</div>
 <!-- END REF-->
 
 ## Description 

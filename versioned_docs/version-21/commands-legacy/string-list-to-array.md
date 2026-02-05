@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resID* ; *strings* {; *resFile*} )<!-- END REF-->
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resID | Integer | &#8594;  | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
 | strings | Text array | &#8592; | Strings from the STR# resource or Strings from the 'group' element (XLIFF) |
 | resFile | Time | &#8594;  | Resource file reference number If omitted: all the XLIFF files or open resources files |
-
+</div>
 <!-- END REF-->
 
 ## Description 

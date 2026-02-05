@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Syntax-->**License info** : Object<!-- END REF-->
 <!--REF #_command_.License info.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Object | &#8592; | Information about the active license |
-
+</div>
 <!-- END REF-->
 
 ## Description 

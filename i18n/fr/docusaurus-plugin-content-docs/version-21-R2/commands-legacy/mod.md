@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Mod.Syntax-->**Mod** ( *nombre1* : Integer ; *nombre2* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Mod.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nombre1 | Integer | &#8594; | Nombre à diviser (numérateur) |
 | nombre2 | Integer | &#8594; | Nombre diviseur (dénominateur) |
 | Résultat | Real | &#8592; | Reste de la division entière de nombre1 par nombre2 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

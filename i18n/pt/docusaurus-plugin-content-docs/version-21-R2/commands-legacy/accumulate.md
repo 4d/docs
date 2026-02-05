@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *dados* : Field, Variable {; *...dados* : Field, Variable} )<!-- END REF-->
 <!--REF #_command_.ACCUMULATE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | dados | Field, Variable | &#8594; | Campo ou variável de tipo numérico a acumular |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *...data* )<!-- END REF-->
 <!--REF #_command_.ACCUMULATE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | data | Field, Variable | &#8594;  | 累計する数値型のフィールドまたは変数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

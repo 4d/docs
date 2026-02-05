@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabfalt* )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabfalt | Text array | &#8592; | Nombres de las tablas faltantes en la base |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

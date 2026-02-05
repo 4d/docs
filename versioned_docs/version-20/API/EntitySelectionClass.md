@@ -55,11 +55,15 @@ Entity selections can be created from existing selections using various function
 
 
 <!-- REF #_command_.Create entity selection.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |dsTable|Table|->|Table in the 4D database whose current selection will be used to build the entity selection|
 |settings|Object|->|Build option: context	|
-|Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -98,9 +102,13 @@ $employees:=Create entity selection([Employee])
 
 
 <!-- REF #_command_.USE ENTITY SELECTION.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|entitySelection|EntitySelection|->|An entity selection|<!-- END REF -->
+|entitySelection|EntitySelection|->|An entity selection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -293,11 +301,15 @@ The resulting object is an entity selection of Employee with duplications remove
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to be added to the entity selection|
 |entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
-|Result|4D.EntitySelection|<-|Entity selection including the added *entity* or *entitySelection*|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection including the added *entity* or *entitySelection*|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -381,11 +393,15 @@ $sellist2:=$sellist2.add($sellist1)
 
 
 <!-- REF #EntitySelectionClass.and().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity |4D.Entity|->|Entity to intersect with|
 |entitySelection |4D.EntitySelection|->|Entity selection to intersect with|
-|Result|4D.EntitySelection|<-|New entity selection with the result of intersection with logical AND operator|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection with the result of intersection with logical AND operator|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -448,10 +464,14 @@ We want to have a selection of employees named "Jones" who live in New York:
 
 
 <!-- REF #EntitySelectionClass.at().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |index|Integer|->|Index of entity to return|
-|Result|4D.Entity |<-|The entity at that index|<!-- END REF -->
+|Result|4D.Entity |<-|The entity at that index|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -493,10 +513,14 @@ $emp2:=$employees.at(-3) //starting from the end, 3rd entity
 
 
 <!-- REF #EntitySelectionClass.average().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Attribute path to be used for calculation|
-|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|<!-- END REF -->
+|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -546,10 +570,14 @@ We want to obtain a list of employees whose salary is higher than the average sa
 
 
 <!-- REF #EntitySelectionClass.contains().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to evaluate|
-|Result|Boolean|<-|True if the entity belongs to the entity selection, else False|<!-- END REF -->
+|Result|Boolean|<-|True if the entity belongs to the entity selection, else False|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -594,10 +622,14 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 
 
 <!-- REF #EntitySelectionClass.count().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|Real|<-|Number of non null *attributePath* values in the entity selection|<!-- END REF -->
+|Result|Real|<-|Number of non null *attributePath* values in the entity selection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -640,10 +672,14 @@ We want to find out the total number of employees for a company without counting
 
 
 <!-- REF #EntitySelectionClass.copy().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |option |Integer|->|`ck shared`: return a shareable entity selection|
-|Result|4D.EntitySelection|<-|Copy of the entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Copy of the entity selection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -704,11 +740,15 @@ Then this entity selection is updated with products and you want to share the pr
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath|Text|->|Path of attribute whose distinct values you want to get|
 |options|Integer|->|`dk diacritical`, `dk count values`|
-|Result|Collection|<-|Collection with only distinct values|<!-- END REF -->
+|Result|Collection|<-|Collection with only distinct values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -793,10 +833,14 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attribute|Text|->|Object attribute name whose paths you want to get|
-|Result|Collection|<-|New collection with distinct paths|<!-- END REF -->
+|Result|Collection|<-|New collection with distinct paths|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -850,10 +894,14 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk stop dropping on first error`: stops method execution on first non-droppable entity|
-|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -919,12 +967,16 @@ Example with the `dk stop dropping on first error` option:
 
 
 <!-- REF #EntitySelectionClass.extract().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Attribute path whose values must be extracted to the new collection	|
 |targetPath|Text|->|Target attribute path or attribute name|
 |option|Integer|->|`ck keep null`: include null attributes in the returned collection (ignored by default)|
-|Result|Collection|<-|Collection containing extracted values|<!-- END REF -->
+|Result|Collection|<-|Collection containing extracted values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1021,9 +1073,13 @@ Given the following table and relation:
 
 
 <!-- REF #EntitySelectionClass.first().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to the first entity of the entity selection (Null if selection is empty)|<!-- END REF -->
+|Result|4D.Entity|<-|Reference to the first entity of the entity selection (Null if selection is empty)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1078,9 +1134,13 @@ There is, however, a difference between both statements when the selection is em
 
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.DataClass|<-|Dataclass object to which the entity selection belongs|<!-- END REF -->
+|Result|4D.DataClass|<-|Dataclass object to which the entity selection belongs|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1126,9 +1186,13 @@ The following generic code duplicates all entities of the entity selection:
 
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Text|<-|Context attributes linked to the entity selection, separated by a comma|<!-- END REF -->
+|result|Text|<-|Context attributes linked to the entity selection, separated by a comma|
+</div>
+<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -1180,9 +1244,13 @@ $info:=$persons.getRemoteContextAttributes()
 
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the entity selection is alterable, False otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if the entity selection is alterable, False otherwise|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1221,9 +1289,13 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the entity selection is ordered, False otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if the entity selection is ordered, False otherwise|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1275,9 +1347,13 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 
 <!-- REF #EntitySelectionClass.last().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity |<-|Reference to the last entity of the entity selection (Null if empty entity selection)|<!-- END REF -->
+|Result|4D.Entity |<-|Reference to the last entity of the entity selection (Null if empty entity selection)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1359,10 +1435,14 @@ Entity selections always have a `.length` property.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |---|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|any|<-|Highest value of attribute|<!-- END REF -->
+|Result|any|<-|Highest value of attribute|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1411,10 +1491,14 @@ We want to find the highest salary among all the female employees:
 
 
 <!-- REF #EntitySelectionClass.min().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|any|<-|Lowest value of attribute|<!-- END REF -->
+|Result|any|<-|Lowest value of attribute|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1460,12 +1544,16 @@ In this example, we want to find the lowest salary among all the female employee
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity |4D.Entity|->|Entity to substract|
 |entitySelection|4D.EntitySelection|->|Entity selection to substract|
 |keepOrder|Integer|->|`dk keep ordered` (integer) to keep the initial order in the resulting entity selection|
-|Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1542,11 +1630,15 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 
 <!-- REF #EntitySelectionClass.or().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to intersect with|
 |entitySelection|4D.EntitySelection|->|Entity selection to intersect with|
-|Result|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1603,11 +1695,15 @@ If the original entity selection and the parameter are not related to the same d
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |pathString |Text	|->|Attribute path(s) and sorting instruction(s) for the entity selection|
 |pathObjects |Collection	|->|Collection of criteria objects|
-|Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection in the specified order|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1684,13 +1780,17 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaString|Text|->|Formula string|
 |formulaObj|Object|->|Formula object|
 |sortOrder |Integer|->|`dk ascending` (default) or `dk descending`|
 |settings|Object|->|Parameter(s) for the formula|
-|Result|4D.EntitySelection|<-|New ordered entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New ordered entity selection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1809,13 +1909,17 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 
 <!-- REF #EntitySelectionClass.query().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString |Text |-> |Search criteria as string|
 |formula |Object |-> |Search criteria as formula object|
 |value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1915,9 +2019,13 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1995,10 +2103,14 @@ A list box displays the Form.students entity selection and several clients work 
 
 
 <!-- REF #EntitySelectionClass.selected().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |selectedEntities |4D.EntitySelection|->|Entity selection with entities for which to know the rank in the entity selection|
-|Result|Object|<-|Range(s) of selected entities in entity selection|<!-- END REF -->
+|Result|Object|<-|Range(s) of selected entities in entity selection|
+</div>
+<!-- END REF -->
 
 
 
@@ -2066,11 +2178,15 @@ $result2:=$invoices.selected($creditSel)
 
 
 <!-- REF #EntitySelectionClass.slice().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |startFrom |Integer	|->|Index to start the operation at (included)	|
 |end 	|Integer|->|End index (not included)|
-|Result|4D.EntitySelection|<-|New entity selection containing sliced entities (shallow copy)|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection containing sliced entities (shallow copy)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2132,10 +2248,14 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|Real|<-|Sum of entity selection values|<!-- END REF -->
+|Result|Real|<-|Sum of entity selection values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2182,6 +2302,8 @@ $sum:=$sel.sum("salary")
 
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |filterString |Text|->|String with entity attribute path(s) to extract|
@@ -2189,7 +2311,9 @@ $sum:=$sel.sum("salary")
 |options|Integer|->|`dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp|
 |begin|Integer|	->|Designates the starting index|
 |howMany|Integer|->|Number of entities to extract|
-|Result|Collection|<-|Collection of objects containing attributes and values of entity selection|<!-- END REF -->
+|Result|Collection|<-|Collection of objects containing attributes and values of entity selection|
+</div>
+<!-- END REF -->
 
 #### Description
 

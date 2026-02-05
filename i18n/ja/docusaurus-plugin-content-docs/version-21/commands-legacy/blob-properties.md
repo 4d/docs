@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *BLOB* ; *compressed* {; *expandedSize* {; *currentSize*}} )<!-- END REF-->
 <!--REF #_command_.BLOB PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | 情報を取得するBLOB |
 | compressed | Integer | &#8592; | 0 = BLOBは圧縮されていない 1 = BLOBは圧縮率優先で圧縮されている 2 = BLOBは速度優先で圧縮されている |
 | expandedSize | Integer | &#8592; | 非圧縮時のBLOBのサイズ (バイト単位) |
 | currentSize | Integer | &#8592; | BLOBの現在のサイズ (バイト単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

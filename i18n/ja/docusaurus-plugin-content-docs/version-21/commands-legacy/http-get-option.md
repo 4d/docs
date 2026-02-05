@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *option* ; *value* )<!-- END REF-->
 <!--REF #_command_.HTTP GET OPTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | option | Integer | &#8594;  | 取得するオプションのコード |
 | value | Integer | &#8592; | オプションの現在の値 |
-
+</div>
 <!-- END REF-->
 
 :::info 互換性

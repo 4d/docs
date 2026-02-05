@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *unCampo* )<!-- END REF-->
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594;  | Campo de la tabla Muchos (donde inicia la relación) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

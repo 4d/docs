@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *area* ; *selector* ; *leftTitle* ; *centerTitle* ; *rightTitle* ; *height* {; *picture* {; *pictAlignment*}} )<!-- END REF-->
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | height | Integer | &#8592; | Header or footer height |
 | picture | Picture | &#8592; | Picture to display |
 | pictAlignment | Integer | &#8592; | Alignment attribute for the picture |
-
+</div>
 <!-- END REF-->
 
 ## Description 

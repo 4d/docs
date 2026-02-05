@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *ruta* {; *line*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD OPEN PATH.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ruta | Text | &#8594;  | Ruta del método a abrir |
 | line | Number | &#8594;  | Line number |
 | * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente(parámetro ignorado fuera de este contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *tabPolices* )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabPolices | Text array | &#8594;  | Tableau de noms de polices |
-
+</div>
 <!-- END REF-->
 
 ## Description 

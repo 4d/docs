@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* : Text ; *dataPath* : Text {; *archiveFolder* : Text {; *option* : Integer {; *method* : Text}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | structurePath | Text | &#8594; | ストラクチャーファイルのパス名 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | option | Integer | &#8594; | 圧縮オプション |
 | method | Text | &#8594; | 4Dコールバックメソッド名 |
 | 戻り値 | Text | &#8592; | 元のデータファイルが置かれたフォルダーの完全パス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

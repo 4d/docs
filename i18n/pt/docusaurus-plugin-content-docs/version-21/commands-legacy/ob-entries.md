@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objeto* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Entries.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objeto | Object | &#8594;  | Objeto para retornar conteúdos |
 | Resultado | Collection | &#8592; | Coleção de objetos com propriedades key/value |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,15 @@ title: VP Get show print lines
 **VP Get show print lines** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #_method_.VP Get show print lines.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |sheet|Integer|->|Sheet index|
-|Function result|Boolean|<-|True if print lines are visible, False otherwise|<!-- END REF -->
+|Function result|Boolean|<-|True if print lines are visible, False otherwise|
+</div>
+<!-- END REF -->
 
 ## Description
 

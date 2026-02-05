@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** ( *comCache* : Boolean ) : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | comCache | Boolean | &#8594; | True para retornar a descrição web cache. Senão (pré-determinado) a descrição da cache não é retornada |
 | Resultado | Object | &#8592; | Informação no servidor Web executando e servidor SOAP |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

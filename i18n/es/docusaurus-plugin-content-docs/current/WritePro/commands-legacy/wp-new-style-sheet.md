@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New style sheet.Syntax-->**WP New style sheet** ( *wpDoc* : Object ; *tipoHojaEstilo* : Integer ; *nomHojaEstilo* : Text ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP New style sheet.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
 | tipoHojaEstilo | Integer | &#8594;  | Tipo de hoja de estilo |
 | nomHojaEstilo | Text | &#8594;  | Nombre de hoja de estilo |
 | Resultado | Object | &#8592; | Objeto hoja de estilo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

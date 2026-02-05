@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* : Text {; *opciones* : Integer}{; *mensajeError* : Text} ) : Text<!-- END REF-->
 <!--REF #_command_.Parse formula.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | formula | Text | &#8594; | Fórmula de texto sin formato |
 | opciones | Integer | &#8594; | Instrucciones para entrada/salida |
 | mensajeError | Text | &#8592; | Mensaje de error (cadena vacía si no hay error) |
 | Resultado | Text | &#8592; | Fórmula transformada (texto sin formato) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

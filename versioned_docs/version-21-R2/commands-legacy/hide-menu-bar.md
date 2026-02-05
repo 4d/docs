@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE MENU BAR.Syntax-->**HIDE MENU BAR**<!-- END REF-->
 <!--REF #_command_.HIDE MENU BAR.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

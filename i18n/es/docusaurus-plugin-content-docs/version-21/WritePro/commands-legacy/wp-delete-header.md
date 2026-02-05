@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE HEADER.Syntax-->**WP DELETE HEADER**  ( *wpSection* )<!-- END REF-->
 <!--REF #_command_.WP DELETE HEADER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpSection | Object | &#8594;  | Sección o subsección 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

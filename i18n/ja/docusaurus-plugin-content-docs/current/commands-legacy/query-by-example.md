@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | レコードのセレクションを返すテーブル, または 省略した場合、デフォルトテーブル |
 | * | 演算子 | &#8594; | 指定した場合、スクロールバーの非表示 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

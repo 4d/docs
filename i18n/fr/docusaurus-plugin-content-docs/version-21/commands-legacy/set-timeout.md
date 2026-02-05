@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *secondes* )<!-- END REF-->
 <!--REF #_command_.SET TIMEOUT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | secondes | Integer | &#8594;  | Nombre de secondes jusqu'au timeout |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.After.Syntax-->**After**  : Boolean<!-- END REF-->
 <!--REF #_command_.After.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Devolve True se o ciclo de execução é um after |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

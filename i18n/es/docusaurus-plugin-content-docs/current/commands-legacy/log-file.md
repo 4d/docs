@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Log file.Syntax-->**Log file**  : Text<!-- END REF-->
 <!--REF #_command_.Log file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Nombre completo del archivo historial de la base |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

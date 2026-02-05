@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *rutaSistema* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaSistema | Text | &#8594;  | Ruta de acceso relativa o absoluta expresada en sintaxis sistema |
 | * | Operador | &#8594;  | Opción de codificación |
 | Resultado | Text | &#8592; | Absolute pathname expressed in POSIX syntax |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

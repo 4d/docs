@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* ; *lineamenu* ; *textoElem* {; *proceso*}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Número de menú o referencia de menú |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | textoElem | Text | &#8594;  | Nuevo texto de la línea de menú |
 | proceso | Integer | &#8594;  | Número de referencia del proceso |
 | * | Operador | &#8594;  | Si se pasa: considerar metacaracteres como caracteres estándar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* ; *commentaire* )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Référence du document ouvert |
 | commentaire | Text | &#8594;  | Commentaire à ajouter |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjeto* ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomObjeto | Text | &#8594;  | Nome do objeto |
 | Resultado | any | &#8592; | Valor atual da fonte de dados do objeto formulário |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

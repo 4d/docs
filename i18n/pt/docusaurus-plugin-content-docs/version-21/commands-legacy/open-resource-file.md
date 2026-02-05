@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomArq* {; *tipoArquivo*} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | resNomArq | Text | &#8594;  | Nome curto ou longo ou arquivo de resource ou string Vazia para caixa de diálogo Abrir Arquivo |
 | tipoArquivo | Text | &#8594;  | Tipo de arquivo Mac OS (string de 4-caracteres), ou arquivo de extensao Windows  (string 1- a 3-caracteres), ou Todos arquivos, se omitido. |
 | Resultado | Time | &#8592; | Número de referência do arquivo de Resouce |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

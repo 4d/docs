@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *list* : Integer, Text {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count list items.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
 | * | Operator | &#8594;  | If omitted (default): Return visible list items (expanded) If specified: Return all list items |
 | Function result | Integer | &#8592; | Number of visible (expanded) list items (if 2nd * omitted) or Total number of list items (if 2nd * present) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

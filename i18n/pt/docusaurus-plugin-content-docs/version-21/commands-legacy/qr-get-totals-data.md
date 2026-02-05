@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* ; *numColuna* ; *numQuebra* ; *operador* ; *texto* )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referência da área |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numQuebra | Integer | &#8594;  | Número de quebra |
 | operador | Integer | &#8592; | Valor do operador para a célula |
 | texto | Text | &#8592; | Conteúdo da célula |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

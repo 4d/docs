@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* ; *byteOrden* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB del cual obtener el valor entero largo |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596; | Offset en el BLOB (expresado en bytes) |
 ||| | Nuevo offset después de la lectura |
 | Resultado | Integer | &#8592; | Valor entero largo (4 bytes) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

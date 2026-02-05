@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *objeto* : Text {; *posX* : Integer {; *posY* : Integer {; *largura* : Integer {; *alto* : Integer}}}} ) : Boolean<br/>**Print object** ( *objeto* : Field, Variable {; *posX* : Integer {; *posY* : Integer {; *largura* : Integer {; *alto* : Integer}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | largura | Integer | &#8594; | Largura do objeto (pixels) |
 | alto | Integer | &#8594; | Altura do objeto (pixels) |
 | Resultado | Boolean | &#8592; | Verdade = objeto impresso completamente; de outro modo False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** {( *tabela* )}<!-- END REF-->
 <!--REF #_command_.PUSH RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela para a qual empilhar os registros, ou tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

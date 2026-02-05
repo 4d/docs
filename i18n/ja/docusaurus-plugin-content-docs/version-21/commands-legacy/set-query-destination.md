@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* {; *destinationObject* {; *destinationPtr*}} )<!-- END REF-->
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | destinationType | Integer | &#8594;  | 0=カレントセレクション, 1=セット, 2=命名セレクション, 3=変数 |
 | destinationObject | Text, Variable | &#8594;  | セット名、命名セレクション名、変数、または空の文字列 |
 | destinationPtr | Pointer | &#8594;  | destinationType=3のとき変数へのポインター |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

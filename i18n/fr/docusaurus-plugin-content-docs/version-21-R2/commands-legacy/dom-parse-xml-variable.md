@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *dtd* : Chaîne } ) : Text<br/>**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *schéma* : Chaîne }} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML variable.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Blob, Text | &#8594; | Nom de la variable |
 | validation | Boolean | &#8594; | Vrai = Validation, Faux = Pas de validation |
 | dtd &#124; schéma | Chaîne | &#8594; | Emplacement de la DTD ou du schéma XML |
 | Résultat | Text | &#8592; | Référence de l’élément XML |
-
+</div>
 <!-- END REF-->
 
 ## Description 

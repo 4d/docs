@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( objTarget | {*refTabela* : Object ; *numLinha* : Integer} {; *numLinhasInserir* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table insert rows.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Range ou elemento ou 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numLinha | Integer | &#8594;  | Número índice da linha |
 | numLinhasInserir | Integer | &#8594;  | Número de linhas a inserir (valor predeterminado =1) |
 | Resultado | Object | &#8592; | Range/seleção de linhas da tabela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

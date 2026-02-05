@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Syntax-->**METHOD SET ATTRIBUTES** ( *caminho* ; *atributos* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | caminho | Text, Text array | &#8594;  | Caminho dos métodos |
 | atributos | Object, Object array | &#8594;  | Atributos a estabelecer para os métodos selecionados |
 | * | Operador | &#8594;  | Se passado = comando aplica ao banco de dados host quando executado a partir de um componente (parâmetro ignorado fora desse contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

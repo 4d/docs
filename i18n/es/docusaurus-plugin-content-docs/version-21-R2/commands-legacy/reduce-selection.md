@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*tabla* : Table ;} *Numero* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla de la cual reducir la selección, o Tabla por defecto, si se omite |
 | Numero | Integer | &#8594; | Número de registros a conservar seleccionados |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

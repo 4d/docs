@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *Tabela* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Table | Table | &#8594;  | Tabela para a qual os valores de prioridade escalares serão recuperados |
 | Resultado | Integer | &#8592; | Valor atual de prioridades para campos escalares |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

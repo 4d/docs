@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *refElemento* : Text )<!-- END REF-->
 <!--REF #_command_.DOM CLOSE XML.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594; | Elemento de referência raiz XML |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *object* : Text ; *displayFormat* : Text )<br/>**OBJECT SET FORMAT** ( *object* : Variable, Field ; *displayFormat* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
 | object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | displayFormat | Text | &#8594;  | New display format for the object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

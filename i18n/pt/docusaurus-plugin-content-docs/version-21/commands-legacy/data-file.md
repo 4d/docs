@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Data file.Syntax-->**Data file** {( *segmento* )} : Text<!-- END REF-->
 <!--REF #_command_.Data file.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | segmento | Integer | &#8594;  | Obsoleto, não use |
 | Resultado | Text | &#8592; | Nome longo do arquivo de dados do banco de dados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

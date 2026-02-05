@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duracion* {; *fuente*} )<!-- END REF-->
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | duracion | Real | &#8594;  | Período de tiempo (en segundos) antes de que comience el registro |
 | fuente | Integer | &#8594;  | Origen de una operación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

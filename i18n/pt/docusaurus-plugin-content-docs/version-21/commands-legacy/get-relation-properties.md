@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *pontCampo* ; *tabelaUm* ; *numCampo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<br/>**GET RELATION PROPERTIES** ( *numTabela* ; *numCampo* ; *tabelaUm* ; *campoUmo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro de campo ou número da tabela |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | discriminante | Integer | &#8592; | Número de campo discriminante ou 0 se nenhum campo |
 | autoUm | Boolean | &#8592; | True = relação Um automática, False = Relação Um manual |
 | autoMuitos | Boolean | &#8592; | True = relação Um para Muitos automática, False = Relação Um para Muitos manual |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

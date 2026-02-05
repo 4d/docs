@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table where the current record will be deleted, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

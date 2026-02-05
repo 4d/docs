@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Time.Syntax-->**Time** ( *horaString* ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | horaText | Text, Integer | &#8594; | Hora para a qual devolver o número de segundos |
 | Resultado | Time | &#8592; | Hora especificada por horaString |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

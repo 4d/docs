@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TEXT KEYWORDS.Syntax-->**GET TEXT KEYWORDS** ( *texte* : Text ; *tabMotsClés* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | texte | Text | &#8594; | Texte original |
 | tabMotsClés | Text array | &#8592; | Tableau contenant les mots-clés |
 | * | Opérateur | &#8594; | Si passé = mots uniques |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -17,10 +17,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | clientName | Text | &#8594;  | Name of the 4D client session |
-
+</div>
 <!-- END REF-->
 
 ## Description 

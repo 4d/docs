@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Syntax-->**SET MENU ITEM PROPERTY** ( *menu* : Integer, Text ; *menuItem* : Integer ; *property* : Text ; *value* : Text, Real, Boolean {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PROPERTY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | メニュー参照またはメニュー番号 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | property | Text | &#8594; | プロパティタイプ |
 | value | Text, Real, Boolean | &#8594; | プロパティ値 |
 | process | Integer | &#8594; | プロセス番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

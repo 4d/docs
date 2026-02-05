@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *tableau* : Array ; *valeur* : Expression ; > ou < {; *posDébut* : Integer {; *posFin* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &#8594; | Tableau dans lequel effectuer la recherche |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | posDébut | Integer | &#8592; | Si la valeur est trouvée, position de sa première occurrence ; sinon, position où la valeur devrait être insérée |
 | posFin | Integer | &#8592; | Si la valeur est trouvée, position de sa dernière occurrence ; sinon, identique à posDébut |
 | Résultat | Boolean | &#8592; | Vrai si au moins un élément du tableau correspond à la valeur recherchée, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

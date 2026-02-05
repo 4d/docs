@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*aTable* : Table ;} *formName* : Text ;} *formPict* : Picture {; *pageNum* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SCREENSHOT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | フォームテーブル |
 | formName | Text | &#8594; | フォーム名 |
 | formPict | Picture | &#8592; | 第一引数が省略された場合実行中のフォームのピクチャー。フォーム名がが渡された場合フォームエディター中のフォームのピクチャー |
 | pageNum | Integer | &#8594; | フォームページ番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

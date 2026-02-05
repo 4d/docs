@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* ; *lineaMenu* ; *param* )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Referencia de menú o número de menú |
 | lineaMenu | Integer | &#8594;  | Número de línea de menú o -1 para la última línea añadida al menú |
 | param | Text | &#8594;  | Cadena a asociar como parámetro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

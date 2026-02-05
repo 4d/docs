@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* : Object, Collection ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is shared.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | toCheck | Object, Collection | &#8594;  | Object or collection or to check |
 | Function result | Boolean | &#8592; | True if the object or collection is shareable, False if it is alterable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

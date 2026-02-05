@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *tipoDados* ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tipoDados | Text | &#8594;  | Tipo de dados a adicionar |
 | Resultado | Integer | &#8592; | Tamanho (em bytes) dos dados armazenados na área de transferência ou então código do erro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

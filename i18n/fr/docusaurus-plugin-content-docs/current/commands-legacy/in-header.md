@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.In header.Syntax-->**In header**  : Boolean<!-- END REF-->
 <!--REF #_command_.In header.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Vrai si le cycle d'exécution est en entête |
-
+</div>
 <!-- END REF-->
 
 ## Description 

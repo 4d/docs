@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( {*tabla*}{;}{* | >} )<!-- END REF-->
 <!--REF #_command_.PRINT RECORD.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla para la cual imprimir el registro actual o Tabla por defecto, si se omite |
 | * &#124; > | Operador | &#8594;  | * para suprimir las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

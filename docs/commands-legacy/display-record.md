@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table from which to display the current record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

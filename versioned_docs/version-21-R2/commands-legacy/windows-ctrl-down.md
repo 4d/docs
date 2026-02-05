@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Windows Ctrl down.Syntax-->**Windows Ctrl down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Windows Ctrl down.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | State of the Windows Ctrl key (Command key on Macintosh) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

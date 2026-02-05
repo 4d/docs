@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *libelléElément* ; *méthode* )<!-- END REF-->
 <!--REF #_command_.SET ABOUT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | libelléElément | Text | &#8594;  | Nouvelle ligne de menu A propos... |
 | méthode | Text | &#8594;  | Nom de la méthode à exécuter lorsque la ligne est choisie |
-
+</div>
 <!-- END REF-->
 
 ## Description 

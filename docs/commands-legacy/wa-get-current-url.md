@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( * ; *object* : Text ) : Text<br/>**WA Get current URL** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get current URL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Text | &#8592; | URL currently loaded in the Web area |
-
+</div>
 <!-- END REF-->
 
 ## Description 

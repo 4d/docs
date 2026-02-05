@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE BOOKMARK.Syntax-->**WP DELETE BOOKMARK** ( *wpDoc* ; *nomBK* )<!-- END REF-->
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | nomBK | Text | &#8594;  | Nome de bookmark a apagar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

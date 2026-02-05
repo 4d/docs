@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *methodName* : Text ; *result* : Variable {; ...*param* : Expression} )<br/>**EXECUTE METHOD** ( *methodName* : Text ; * {; ...*param* : Expression} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | methodName | Text | &#8594;  | Name of project method to be executed |
 | result | Variable | &#8592; | Variable receiving the method result |
 | * | Operator | &#8594; | Method not returning a result |
 | param | Expression | &#8594;  | Parameter(s) of the method |
-
+</div>
 <!-- END REF-->
 
 ## Description 

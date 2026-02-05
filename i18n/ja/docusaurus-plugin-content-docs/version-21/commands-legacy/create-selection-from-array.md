@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *aTable* ; *recordArray* {; *selectionName*} )<!-- END REF-->
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | セレクションを作成するテーブル |
 | recordArray | Integer, Boolean array | &#8594;  | レコード番号の配列, または ブール配列 (True = レコードをセレクションに含める False = レコードをセレクションに含めない) |
 | selectionName | Text | &#8594;  | 作成する命名セレクションの名前, または 引数を省略した場合、コマンドをカレント セレクションに適用する |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

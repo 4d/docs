@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer {; *fenêtre* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | gauche | Integer | &#8592; | Coordonnée gauche de l'intérieur de la fenêtre |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | droite | Integer | &#8592; | Coordonnée droite de l'intérieur de la fenêtre |
 | bas | Integer | &#8592; | Coordonnée inférieure de l'intérieur de la fenêtre |
 | fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si omis ou Fenêtre MDI si -1 (Windows) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

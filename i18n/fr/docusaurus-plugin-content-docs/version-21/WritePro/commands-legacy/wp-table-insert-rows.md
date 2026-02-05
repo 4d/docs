@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( objCible | {*refTableau* ; *numLigne*} {; *nbLignes*} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Table insert rows.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numLigne | Integer | &#8594;  | Numéro d'indice de ligne |
 | nbLignes | Integer | &#8594;  | Nombre de lignes à insérer (valeur par défaut = 1) |
 | Résultat | Object | &#8592; | Plage de lignes du tableau |
-
+</div>
 <!-- END REF-->
 
 ## Description 

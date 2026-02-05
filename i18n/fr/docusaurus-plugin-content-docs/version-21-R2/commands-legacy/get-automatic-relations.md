@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *aller* : Boolean ; *retour* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | aller | Boolean | &#8592; | Statut de tous les liens de N vers 1 |
 | retour | Boolean | &#8592; | Statut de tous les liens de 1 vers N |
-
+</div>
 <!-- END REF-->
 
 ## Description 

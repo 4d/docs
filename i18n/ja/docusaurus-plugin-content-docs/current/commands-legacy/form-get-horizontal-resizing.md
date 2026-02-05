@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET HORIZONTAL RESIZING.Syntax-->**FORM GET HORIZONTAL RESIZING** ( *resize* : Boolean {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM GET HORIZONTAL RESIZING.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resize | Boolean | &#8592; | True: フォームを水平方向にリサイズ可<br/>False: フォームを水平方向にリサイズ不可 |
 | minWidth | Integer | &#8592; | 最小フォーム幅 (ピクセル) |
 | maxWidth | Integer | &#8592; | 最大フォーム幅 (ピクセル) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

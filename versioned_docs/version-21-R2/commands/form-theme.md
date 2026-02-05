@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM theme.Syntax-->**FORM theme** : Text<!-- END REF-->
 <!--REF #_command_.FORM theme.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Theme used by the current form: "Classic" or "FluentUI" (Windows) |
-
+</div>
 <!-- END REF-->
 
 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer  {; *tela* : Integer {; *areaTela* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | esquerda | Integer | &#8592; | Coordenada esquerda da área da tela |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | inferior | Integer | &#8592; | Coordenada inferior da área da tela |
 | tela | Integer | &#8594; | Número da tela, ou tela principal se omitida |
 | areaTela | Integer | &#8594; | Tela inteira (padrão)ou então área de trabalho |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

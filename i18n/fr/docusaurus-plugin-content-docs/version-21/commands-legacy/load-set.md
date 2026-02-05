@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*laTable* ;} *ensemble* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table à laquelle appartient l'ensemble ou Table par défaut si ce paramètre est omis |
 | ensemble | Text | &#8594;  | Nom de l'ensemble à créer en mémoire |
 | nomFichier | Text | &#8594;  | Document disque contenant l'ensemble |
-
+</div>
 <!-- END REF-->
 
 ## Description 

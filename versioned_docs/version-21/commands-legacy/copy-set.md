@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *srcSet* ; *dstSet* )<!-- END REF-->
 <!--REF #_command_.COPY SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | srcSet | Text | &#8594;  | Source set name |
 | dstSet | Text | &#8594;  | Destination set name |
-
+</div>
 <!-- END REF-->
 
 ## Description 

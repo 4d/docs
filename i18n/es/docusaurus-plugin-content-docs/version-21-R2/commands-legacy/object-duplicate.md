@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *objeto* : Text {; *nuevoNom* : Text {; *nuevaVAr* : Pointer {; *relacionadoA* : Text {; *movH* : Integer {; *moveV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *objeto* : Field, Variable {; *nuevoNom* : Text {; *nuevaVAr* : Pointer {; *relacionadoA* : Text {; *movH* : Integer {; *moveV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | redimH | Integer | &#8594; | Valor de redimensionamiento horizontal del nuevo objeto |
 | redimV | Integer | &#8594; | Valor de redimensionamiento vertical del nuevo objeto |
 | * | Operador | &#8594; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

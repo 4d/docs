@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* ; *dstBLOB* ; *srcOffset* ; *dstOffset* ; *nombre* )<!-- END REF-->
 <!--REF #_command_.COPY BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | srcBlob | Blob | &#8594;  | BLOB source |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | srcOffset | Integer | &#8594;  | Position dans la source pour la copie |
 | dstOffset | Integer | &#8594;  | Position dans la destination pour la copie |
 | nombre | Integer | &#8594;  | Nombre d'octets à copier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

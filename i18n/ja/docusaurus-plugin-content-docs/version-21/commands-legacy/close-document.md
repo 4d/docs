@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *DocRef* )<!-- END REF-->
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Time | Time | &#8594;  | ドキュメント参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

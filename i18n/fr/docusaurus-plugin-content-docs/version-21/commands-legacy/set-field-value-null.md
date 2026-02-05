@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594;  | Champ auquel attribuer la valeur NULL |
-
+</div>
 <!-- END REF-->
 
 ## Description 

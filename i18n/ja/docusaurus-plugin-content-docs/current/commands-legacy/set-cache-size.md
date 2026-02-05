@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *size* : Real {; *minFreeSize* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | size | Real | &#8594; | データベースキャッシュのサイズ(バイト単位) |
 | minFreeSize | Real | &#8594; | キャッシュが一杯になった際に解放する最小バイト数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

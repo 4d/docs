@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *rutaAcceso* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaAcceso | Text | &#8594; | Nombre o ruta de acceso completa del archivo de datos a abrir |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

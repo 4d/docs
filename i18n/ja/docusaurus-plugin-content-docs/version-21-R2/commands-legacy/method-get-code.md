@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *path* : Text, Text配列 ; *code* : Text, Text配列 {; *option* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET CODE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | path | Text, Text配列 | &#8594; | メソッドパスを格納したテキストまたはテキスト配列 |
 | code | Text, Text配列 | &#8592; | 指定したメソッドのコード |
 | option | Integer | &#8594; | 0 または省略時 = 単純な書き出し(トークンなし)、1 = トークンを使用して書き出し |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

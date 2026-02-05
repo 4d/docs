@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.CREATE RECORD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | 新規レコードを作成するテーブル, または 省略時、デフォルトテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

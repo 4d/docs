@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *confImpr* {; *params*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to print settings.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | confImpr | Blob | &#8594;  | BLOB que contém as configurações de Impressão |
 | params | Integer | &#8594;  | 0 = restaura valores salvos para número de cópias e faixa de páginas 1 = reseta para os valores padrão |
 | Resultado | Integer | &#8592; | código de estatus 1= operação bem sucedida, 0 = não há impressora atual, -1=parâmetros incorretos, 2=impressora mudada |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

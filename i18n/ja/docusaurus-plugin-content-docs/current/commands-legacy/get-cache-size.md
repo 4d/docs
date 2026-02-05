@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get cache size.Syntax-->**Get cache size**  : Real<!-- END REF-->
 <!--REF #_command_.Get cache size.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Real | &#8592; | データベースキャッシュ(バイト単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

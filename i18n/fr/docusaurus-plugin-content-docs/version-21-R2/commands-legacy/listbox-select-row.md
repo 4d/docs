@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW** ( * ; *objet* : Text ; *positionLigne* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT ROW** ( *objet* : Field, Variable ; *positionLigne* : Integer {; *action* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROW.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
 | objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | positionLigne | Integer | &#8594; | Numéro de la ligne à sélectionner |
 | action | Integer | &#8594; | Action de sélection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

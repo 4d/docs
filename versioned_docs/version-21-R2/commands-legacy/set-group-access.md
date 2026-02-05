@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ({ *groups* : Collection })<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | groups | Collection | &#8594;  | Name of group(s) to which the 4D user account must belong during the session |
-
+</div>
 <!-- END REF-->
 
 ## Description 

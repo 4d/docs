@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New style sheet.Syntax-->**WP New style sheet** ( *docWP* : Object ; *typeFeuilleStyle* : Integer ; *nomFeuilleStyle* : Text ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP New style sheet.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Document 4D Write Pro |
 | typeFeuilleStyle | Integer | &#8594;  | Type de la feuille de style |
 | nomFeuilleStyle | Text | &#8594;  | Nom de la feuille de style |
 | Résultat | Object | &#8592; | Objet feuille de style |
-
+</div>
 <!-- END REF-->
 
 ## Description 

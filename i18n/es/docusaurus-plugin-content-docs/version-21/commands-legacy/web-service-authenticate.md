@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Syntax-->**WEB SERVICE AUTHENTICATE** ( *nombre* ; *contraseña* {; *metAutenticacion*} {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nombre | Text | &#8594;  | Nombre del usuario |
 | contraseña | Text | &#8594;  | Contraseña del usuario |
 | metAutenticacion | Integer | &#8594;  | Método de Autenticación 0 u omitido = no especificado, 1 = BASIC, 2 = DIGEST |
 | * | Operador | &#8594;  | Si se pasa: autenticación por proxy |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

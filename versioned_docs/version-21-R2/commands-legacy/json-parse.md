@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* : Text {; *type* : Integer}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | jsonString | Text | &#8594;  | JSON string to parse |
 | type | Integer | &#8594;  | Type in which to convert the values |
 | * | Operator | &#8594;  | Adds line position and offset of each property if returned value is an object |
 | Function result | any | &#8592; | Values extracted from JSON string |
-
+</div>
 <!-- END REF-->
 
 ## Description 

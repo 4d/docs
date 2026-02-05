@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *lista* : Integer ; *textoElem* : Text ; *refElem* : Integer {; *sublista* : Integer ; *desplegada* : Boolean} )<!-- END REF-->
 <!--REF #_command_.APPEND TO LIST.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | lista | Integer | &#8594; | Número de referencia de lista |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | refElem | Integer | &#8594; | Número de referencia único del nuevo elemento |
 | sublista | Integer | &#8594; | Sublista opcional para añadir al nuevo elemento |
 | desplegada | Boolean | &#8594; | Indica si las sublistas opcionales serán desplegadas o contraídas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

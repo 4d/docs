@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Records in table.Syntax-->**Records in table** ( *tabla* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla de la cual devolver el número total de registros o Tabla por defecto, si se omite |
 | Resultado | Integer | &#8592; | Número total de registros en la tabla |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

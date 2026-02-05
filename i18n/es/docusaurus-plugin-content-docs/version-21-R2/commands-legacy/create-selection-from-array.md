@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *tabla* : Table ; *regArray* : Integer, Boolean array {; *temp* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla de la cual crear la selección |
 | regArray | Integer, Boolean array | &#8594; | Array de números de registros, o Array de booleanos (True = el registro está en la selección, False = el registro no está en la selección) |
 | temp | Text | &#8594; | Nombre de la selección temporal a crear, o Aplicar el comando a la selección actual si el parámetro se omite |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

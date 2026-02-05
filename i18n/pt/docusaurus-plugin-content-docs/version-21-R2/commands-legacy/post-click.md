@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *mouseX* : Integer ; *mouseY* : Integer {; *processo* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | mouseX | Integer | &#8594; | Coordenada Horizontal |
 | mouseY | Integer | &#8594; | Coordenada Vertical |
 | processo | Integer | &#8594; | Número de referência do processo destino; ou, omitido, fila de evento de Aplicação, ou 0 |
 | * | Operator | &#8594; | Se especificado sistema de coordenadas global é usado; se omitido, sistema de coordenadas locais é usado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

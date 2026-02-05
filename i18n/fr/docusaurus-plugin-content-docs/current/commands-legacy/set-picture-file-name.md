@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *image* : Picture ; *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | image | Picture | &#8594; | Image dont vous souhaitez fixer le nom par défaut |
 | nomFichier | Text | &#8594; | Nom par défaut de l’image |
-
+</div>
 <!-- END REF-->
 
 ## Description 

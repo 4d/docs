@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** {( *texteOuFond* )}<!-- END REF-->
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | texteOuFond | Integer | &#8594;  | 0 ou omis = couleur du texte, 1 = couleur du fond du texte |
-
+</div>
 <!-- END REF-->
 
 ## Description 

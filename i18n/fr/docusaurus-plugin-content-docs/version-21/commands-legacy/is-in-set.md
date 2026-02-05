@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is in set.Syntax-->**Is in set** ( *ensemble* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is in set.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ensemble | Text | &#8594;  | Nom de l'ensemble à tester |
 | Résultat | Boolean | &#8592; | L'enregistrement courant est dans l'ensemble (Vrai) ou l'enregistrement courant n'est pas dans l'ensemble (Faux) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

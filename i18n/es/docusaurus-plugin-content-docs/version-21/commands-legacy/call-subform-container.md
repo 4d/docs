@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *evento* )<!-- END REF-->
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | evento | Integer | &#8594;  | Evento a enviar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

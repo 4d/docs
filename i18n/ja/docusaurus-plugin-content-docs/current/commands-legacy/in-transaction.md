@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.In transaction.Syntax-->**In transaction**  : Boolean<!-- END REF-->
 <!--REF #_command_.In transaction.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | カレントプロセスがトランザクション内にある場合、TRUEを返します。 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, take floating windows into account If omitted, ignore floating windows |
 | Function result | Integer | &#8592; | Window reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

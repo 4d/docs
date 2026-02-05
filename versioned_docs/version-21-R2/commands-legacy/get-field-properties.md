@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* : Pointer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* : Integer ; *fieldNum* : Integer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldPtr | Pointer | &#8594;  | Field pointer |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | indexed | Boolean | &#8592; | True = Indexed, False = Non indexed |
 | unique | Boolean | &#8592; | True = Unique, False = Non unique |
 | invisible | Boolean | &#8592; | True = Invisible, False = Visible |
-
+</div>
 <!-- END REF-->
 
 ## Description 

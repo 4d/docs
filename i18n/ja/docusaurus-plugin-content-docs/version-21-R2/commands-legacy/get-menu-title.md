@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* : Integer, Text {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu title.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
 | process | Integer | &#8594; | プロセス参照番号 |
 | 戻り値 | Text | &#8592; | メニューのタイトル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

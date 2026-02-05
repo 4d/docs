@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *objeto* {; *tipoLista*}; *lista* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
 | tipoLista | Integer | &#8594;  | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
 | lista | Text | &#8594;  | Nome da lista a ser usada como Lista de Escolha (definida no ambiente Desenho) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duration* {; *source*} )<!-- END REF-->
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | duration | Real | &#8594;  | ログが開始される時間の長さ(秒単位) |
 | source | Integer | &#8594;  | オペレーションのソース |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

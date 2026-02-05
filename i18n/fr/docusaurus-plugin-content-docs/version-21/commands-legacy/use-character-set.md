@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *filtre* {; *typeFiltre*} )<!-- END REF-->
 <!--REF #_command_.USE CHARACTER SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | filtre | Text, * | &#8594;  | Nom du jeu de caractères à utiliser ou * pour restaurer le jeu par défaut |
 | typeFiltre | Integer | &#8594;  | 0 = Filtre d'exportation, 1 = Filtre d'importation |
-
+</div>
 <!-- END REF-->
 
 ## Description 

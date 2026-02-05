@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* : Text ; *arrText* : Text array ; *width* : Integer ; *fontName* : Text ; *fontSize* : Integer {; *fontStyle* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | varText | Text | &#8594; | 分割する元のテキスト |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | fontSize | Integer | &#8594; | フォントサイズ |
 | fontStyle | Integer | &#8594; | フォントスタイル |
 | * | 演算子 | &#8594; | 指定時、テキストをマルチスタイルとして解釈する |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *aTabela* {; *...oCampo*}{; *modelo* : Object})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | Tabela a serializar |
 | oField | Field | &#8594; | Campo(s) cujo(s) conteúdos devem ser serializados |
 | modelo | Object | &#8594; | Objeto para a seleção de etiquetas e de campos |
 | Resultado | Text | &#8592; | Cadeia que contém o array JSON serializado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

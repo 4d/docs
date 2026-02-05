@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomFichier* : Text ; *image* : Picture {; *codec* : Text} )<!-- END REF-->
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomFichier | Text | &#8594; | Nom ou chemin d’accès complet du fichier à écrire, ou chaîne vide |
 | image | Picture | &#8594; | Champ ou variable image à écrire |
 | codec | Text | &#8594; | Identifiant de codec d'image |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is editing text.Syntax-->**Is editing text**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is editing text.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | テキストが入力されているならTrue、それ以外ならFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

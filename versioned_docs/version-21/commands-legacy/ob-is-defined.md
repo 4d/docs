@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *object* {; *property*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594;  | Structured object |
 | property | Text | &#8594;  | If passed = property to check, if omitted = check object |
 | Function result | Boolean | &#8592; | If property omitted: True if object is defined, otherwise False.<br/>If property passed: True if property is defined, otherwise False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

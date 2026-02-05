@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *selector* {; *access* {; *settingsType*}} )<!-- END REF-->
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | selector | Text | &#8594;  | Key designating a theme or a page or a group of parameters in the Preferences or Settings dialog box |
 | access | Boolean | &#8594;  | True=Lock the other pages of the dialog box<br/>False or omitted=Leave the other pages of the dialog box active |
 | settingsType | Integer | &#8594;  | 0 or omitted = Structure settings, 1 = User settings, 2 = User settings for data |
-
+</div>
 <!-- END REF-->
 
 ## Description 

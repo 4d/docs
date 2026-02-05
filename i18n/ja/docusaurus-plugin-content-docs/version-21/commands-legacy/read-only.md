@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** {( *aTable* )}<br/>**READ ONLY** {( * )}<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable &#124; * | テーブル, 演算子 | &#8594;  | 読み込みのみにするテーブル, または *: すべてのテーブル, または 省略時: デフォルトテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

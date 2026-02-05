@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is data file locked.Syntax-->**Is data file locked**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is data file locked.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | True = arquivo/segmento bloqueado False = arquivo/segmento não bloqueado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTable* : Table ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de laquelle vous souhaitez connaître les enregistrements verrouillés |
 | Résultat | Object | &#8592; | Description des enregistrements verrouillés (le cas échéant) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

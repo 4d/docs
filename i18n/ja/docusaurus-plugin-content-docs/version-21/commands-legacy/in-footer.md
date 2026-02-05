@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.In footer.Syntax-->**In footer**  : Boolean<!-- END REF-->
 <!--REF #_command_.In footer.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | 実行サイクルがフッター内にある場合にはTrueを返す |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

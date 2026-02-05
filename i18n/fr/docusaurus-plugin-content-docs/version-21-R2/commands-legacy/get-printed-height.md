@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get printed height.Syntax-->**Get printed height**  : Integer<!-- END REF-->
 <!--REF #_command_.Get printed height.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Position du marqueur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

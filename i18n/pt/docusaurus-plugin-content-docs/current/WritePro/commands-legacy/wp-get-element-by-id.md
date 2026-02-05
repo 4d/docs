@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get element by ID.Syntax-->**WP Get element by ID** ( *wpDoc* : Object ; *ID* : Text ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get element by ID.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
 | ID | Text | &#8594;  | Identificador do elemento a recuperar |
 | Resultado | Object | &#8592; | elemento 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

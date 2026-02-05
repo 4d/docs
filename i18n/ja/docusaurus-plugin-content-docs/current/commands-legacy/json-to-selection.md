@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTable* : Table ; *jsonArray* : Text )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | 要素の複製先の4Dテーブル |
 | jsonArray | Text | &#8594; | JSON形式の文字列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

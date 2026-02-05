@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* : Integer ; *row* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | エリア参照 |
 | row | Integer | &#8594; | 指定する行 |
 | 戻り値 | Integer | &#8592; | 0 = 表示, 1 = 非表示 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

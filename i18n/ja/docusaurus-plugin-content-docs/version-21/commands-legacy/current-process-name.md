@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current process name.Syntax-->**Current process name**  : Text<!-- END REF-->
 <!--REF #_command_.Current process name.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | カレントプロセス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

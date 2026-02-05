@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Before selection.Syntax-->**Before selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to test if record pointer is before the first selected record, or Default table, if omitted |
 | Function result | Boolean | &#8592; | Yes (TRUE) or No (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

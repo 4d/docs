@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *objetoImagen* ; *x* ; *y* ) : Text<!-- END REF-->
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, pictureObject es un nombre de objeto (cadena) Si se omite, pictureObject es un campo o variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | x | Integer | &#8594;  | X coordenada en píxeles |
 | y | Integer | &#8594;  | Y coordenada en píxeles |
 | Resultado | Text | &#8592; | ID del elemento encontrado en la ubicación X,Y |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

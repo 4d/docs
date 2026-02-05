@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Screen height.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Windows: height of application window, or height of screen if * is specified Macintosh: height of main screen |
 | Function result | Integer | &#8592; | Height expressed in pixels |
-
+</div>
 <!-- END REF-->
 
 ## Description 

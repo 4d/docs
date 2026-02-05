@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *tabela* : Table ; *titulosCampos* : Text array ; *numCampos* : Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.SET FIELD TITLES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para a qual vai estabelecer os títulos dos campos |
 | titulosCampos | Text array | &#8594; | Nomes dos campos do jeito que eles vão aparecer nas caixas de diálogo |
 | numCampos | Integer array | &#8594; | Números de campos atuais |
 | * | Operator | &#8594; | Use os nomes personalizados no editor de fórmulas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

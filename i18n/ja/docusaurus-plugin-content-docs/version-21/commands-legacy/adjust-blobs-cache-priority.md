@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | "blob"データの優先度値を調節するテーブル |
 | priority | Integer | &#8594;  | テーブル内のBLOBのキャッシュ優先度値 |
-
+</div>
 <!-- END REF-->
 
 ## 上級者向け 

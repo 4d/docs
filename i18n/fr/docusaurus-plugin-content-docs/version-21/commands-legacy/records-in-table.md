@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Records in table.Syntax-->**Records in table** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle retourner le nombre total d'enregistrements ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &#8592; | Nombre total d'enregistrements dans table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

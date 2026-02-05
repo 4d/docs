@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *proceso* )} : Text<!-- END REF-->
 <!--REF #_command_.Get menu bar reference.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | proceso | Integer | &#8594;  | Número de referencia del proceso |
 | Resultado | Text | &#8592; | Identificador de la barra de menús |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

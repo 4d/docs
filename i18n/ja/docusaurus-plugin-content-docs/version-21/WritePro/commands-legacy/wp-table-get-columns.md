@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get columns.Syntax-->**WP Table get columns** ( *targetObj* ) | ( *tableRef* ; *startCol* {; *numCols*} )  -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table get columns.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | startCol | Integer | &#8594;  | 最初のカラムの位置 |
 | numCols | Integer | &#8594;  | 取得するカラムの位置 |
 | 戻り値 | Object | &#8592; | 選択されたカラムを含む新しいテーブルレンジ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

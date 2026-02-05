@@ -88,9 +88,12 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 
 
 <!-- REF #EntityClass.clone().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|New entity referencing the record|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -142,11 +145,14 @@ If you don't want the new entity to share object-type attribute references, you 
 
 
 <!-- REF #EntityClass.diff().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
 |attributesToCompare|Collection|-> |Name of attributes to be compared |
 |Result|Collection|<-|Differences between the entities|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -343,10 +349,13 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 
 
 <!-- REF #EntityClass.drop().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk force drop if stamp changed`: Forces the drop even if the stamp has changed|
 |Result|Object|<-|Result of drop operation|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -451,9 +460,12 @@ Example with `dk force drop if stamp changed` option:
 
 
 <!-- REF #EntityClass.first().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -489,9 +501,12 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 
 <!-- REF #EntityClass.fromObject().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |filler|Object|->|Object from which to fill the entity|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -574,9 +589,12 @@ You could also use a related entity given as an object:
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.DataClass|<-|DataClass object to which the entity belongs|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -618,11 +636,13 @@ The following generic code duplicates any entity:
 
 
 <!-- REF #EntityClass.getKey().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
 |Result|any|<-|Value of the primary key of the entity (Integer or Text)|
-
+</div>
 <!-- END REF -->
 
 #### Description
@@ -657,9 +677,12 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |result|Text|<-|Context attributes linked to the entity, separated by a comma|
+</div>
 <!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
@@ -714,9 +737,12 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getSelection().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -756,9 +782,12 @@ If the entity does not belong to an entity selection, the function returns Null.
 
 
 <!-- REF #EntityClass.getStamp().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -802,10 +831,13 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 
 
 <!-- REF #EntityClass.indexOf().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
 |Result|Integer|<-|Position of the entity in an entity selection|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -849,9 +881,12 @@ The resulting value is included between 0 and the length of the entity selection
 
 
 <!-- REF #EntityClass.isNew().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -887,9 +922,12 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 
 <!-- REF #EntityClass.last().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -925,10 +963,13 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 
 <!-- REF #EntityClass.lock().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk reload if stamp changed`: Reload before locking if stamp changed|
 |Result|Object|<-|Result of lock operation|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1048,9 +1089,12 @@ Example with `dk reload if stamp changed` option:
 
 
 <!-- REF #EntityClass.next().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1089,9 +1133,12 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 
 
 <!-- REF #EntityClass.previous().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1129,9 +1176,12 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 
 
 <!-- REF #EntityClass.reload().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Object|<-|Status object|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1192,10 +1242,13 @@ The object returned by `.reload( )` contains the following properties:
 
 
 <!-- REF #EntityClass.save().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk auto merge`: Enables the automatic merge mode|
 |Result|Object|<-|Result of save operation|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1329,12 +1382,15 @@ Updating an entity with `dk auto merge` option:
 
 
 <!-- REF #EntityClass.toObject().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |filterString |Text |->|Attribute(s) to extract (comma-separated string)|
 |filterCol |Collection |->|Collection of attribute(s) to extract|
 |options|Integer|->|`dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
 |Result|Object|<-|Object built from the entity|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1617,9 +1673,12 @@ Returns:
 
 
 <!-- REF #EntityClass.touched().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1661,9 +1720,12 @@ In this example, we check to see if it is necessary to save the entity:
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Collection|<-|Names of touched attributes, or empty collection|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1734,9 +1796,12 @@ In this case:
 
 
 <!-- REF #EntityClass.unlock().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Object|<-|Status object|
+</div>
 <!-- END REF -->
 
 #### Description

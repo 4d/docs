@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *refElémentCible* ; *refElémentSource* ; *indexEnfant* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Insert XML element.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElémentCible | Text | &#8594;  | Référence de l’élément XML parent |
 | refElémentSource | Text | &#8594;  | Référence de l’élément XML à insérer |
 | indexEnfant | Integer | &#8594;  | Index de l’enfant de l’élément cible avant lequel le nouvel élément doit être inséré |
 | Résultat | Text | &#8592; | Référence du nouvel élément XML |
-
+</div>
 <!-- END REF-->
 
 ## Description 

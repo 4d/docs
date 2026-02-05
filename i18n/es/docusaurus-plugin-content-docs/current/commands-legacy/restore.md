@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *rutaArchivo* : Text {; *rutaCarpetaDest* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaArchivo | Text | &#8594; | Ruta de acceso del archivo a restituir |
 | rutaCarpetaDest | Text | &#8594; | Ruta de acceso de la carpeta de destino |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

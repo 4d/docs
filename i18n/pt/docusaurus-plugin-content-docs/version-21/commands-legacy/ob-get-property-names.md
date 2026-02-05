@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *objeto* ; *arrProp* {; *arrTipos*} )<!-- END REF-->
 <!--REF #_command_.OB GET PROPERTY NAMES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objeto | Object | &#8594;  | Objeto estruturado |
 | arrProp | Text array | &#8592; | Nomes das propriedades |
 | arrTipos | Integer array | &#8592; | Tipos de propriedades |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

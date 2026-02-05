@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Web Connection database method.Syntax-->$url, $http, $ipBrowser, $ipServer, $user, $pw -> On Web Connectionデータベースメソッド<!-- END REF-->
 <!--REF #_command_.On Web Connection database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $url | テキスト | &#8592; | URL |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | $ipServer | テキスト | &#8592; | サーバーのIPアドレス |
 | $user | テキスト | &#8592; | ユーザー名 |
 | $pw | テキスト | &#8592; | パスワード |
-
+</div>
 <!-- END REF-->
 
 ## 

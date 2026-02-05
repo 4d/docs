@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variavel* ; *tipo* ; entrada_saida {; *apelido*} )<!-- END REF-->
 <!--REF #_command_.SOAP DECLARATION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | variavel | Variable | &#8594;  | Variável que referencia um argumento de entrada ou saída SOAP |
 | tipo | Integer | &#8594;  | Tipo 4D para o qual o argumento aponta |
 | entrada_saida | Integer | &#8594;  | 1 = entrada SOAP; 2 = saída SOAP |
 | apelido | Text | &#8594;  | Nome publicado por esse argumento usando trocas SOAP |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* : Text ; *arrResult* : Object array ; *filter* : Text {; *scope* : Text {; *attributes* : Text array {; *attributesAsArray* : Boolean array}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dnRootEntry | Text | &#8594;  | Distinguished Name of root entry where search is to start |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | scope | Text | &#8594;  | Scope of the search: "base" (default), "one", or "sub" |
 | attributes | Text array | &#8594;  | Attribute(s) to fetch |
 | attributesAsArray | Boolean array | &#8594;  | True = force attributes to be returned as array; false = force attributes to be returned as a simple variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

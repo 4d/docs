@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*tipoSaida* ;} *mensagem* {; *importancia*} )<!-- END REF-->
 <!--REF #_command_.LOG EVENT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tipoSaida | Integer | &#8594;  | Message output type |
 | mensagem | Text | &#8594;  | Contents of the message |
 | importancia | Integer | &#8594;  | Message’s importance level |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

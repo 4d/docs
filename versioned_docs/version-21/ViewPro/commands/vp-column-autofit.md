@@ -7,10 +7,13 @@ title: VP COLUMN AUTOFIT
 **VP COLUMN AUTOFIT** ( *rangeObj* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP COLUMN AUTOFIT.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|<!-- END REF -->
+|rangeObj| Object|->|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

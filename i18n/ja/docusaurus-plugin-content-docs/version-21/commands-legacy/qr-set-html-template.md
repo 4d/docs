@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* ; *template* )<!-- END REF-->
 <!--REF #_command_.QR SET HTML TEMPLATE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
 | template | Text | &#8594;  | HTMLテンプレート |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

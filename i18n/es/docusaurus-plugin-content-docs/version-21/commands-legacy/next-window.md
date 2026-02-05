@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Next window.Syntax-->**Next window** ( *ventana* ) : Integer<!-- END REF-->
 <!--REF #_command_.Next window.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ventana | Integer | &#8594;  | Número de referencia de la ventana |
 | Resultado | Integer | &#8592; | Número de referencia de ventana |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

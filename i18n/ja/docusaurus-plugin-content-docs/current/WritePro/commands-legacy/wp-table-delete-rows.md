@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE ROWS.Syntax-->**WP TABLE DELETE ROWS** ( *targetObj* : Object ) | ( *tableRef* : Object ; *rowNumber* : Integer {; *numRows* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
 | tableRef | Object | &#8594;  | 表の参照 |
 | rowNumber | Integer | &#8594;  | 行インデックス番号 |
 | numRows | Integer | &#8594;  | 削除する行の数(デフォルト値=1) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

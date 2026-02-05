@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* {; *set*} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | booleanArr | Boolean array | &#8592; | Array to indicate if a record is in the set or not |
 | set | Text | &#8594;  | Name of the set or UserSet if this parameter is omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

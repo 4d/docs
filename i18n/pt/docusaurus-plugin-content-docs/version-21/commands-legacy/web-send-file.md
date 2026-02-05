@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *htmlArquivo* )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | htmlArquivo | Text | &#8594;  | Rota do arquivo HTML ou string vazia para terminar SEND HTML FILE |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

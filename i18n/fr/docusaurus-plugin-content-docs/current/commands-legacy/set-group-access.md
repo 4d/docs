@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ({ *groupes* : Collection })<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | groupes | Collection | &#8594; | Nom(s) de groupe(s) au(x)quel(s) le compte utilisateur doit appartenir durant la session |
-
+</div>
 <!-- END REF-->
 
 ## Description 

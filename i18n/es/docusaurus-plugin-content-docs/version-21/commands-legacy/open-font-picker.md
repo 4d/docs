@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN FONT PICKER.Syntax-->**OPEN FONT PICKER**<!-- END REF-->
 <!--REF #_command_.OPEN FONT PICKER.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

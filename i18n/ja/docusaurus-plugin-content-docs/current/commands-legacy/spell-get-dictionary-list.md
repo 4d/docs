@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* : Integer array ; *langFiles* : Text array ; *langNames* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | langID | Integer array | &#8592; | 言語のユニークID |
 | langFiles | Text array | &#8592; | インストールされた言語ファイルの名前 |
 | langNames | Text array | &#8592; | 言語のローカル名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

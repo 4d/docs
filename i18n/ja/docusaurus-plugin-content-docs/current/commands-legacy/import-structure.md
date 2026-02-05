@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *xmlStructure* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | xmlStructure | Text | &#8594; | 4D データベースストラクチャーのXML定義ファイル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

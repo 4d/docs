@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* ; *aColumnas* ; *aOrden* )<!-- END REF-->
 <!--REF #_command_.QR GET SORTS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referencia del área |
 | aColumnas | Real array | &#8592; | Columnas ordenadas |
 | aOrden | Real array | &#8592; | Sentido de ordenación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

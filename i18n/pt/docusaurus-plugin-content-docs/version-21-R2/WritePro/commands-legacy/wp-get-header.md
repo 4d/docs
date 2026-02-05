@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get header.Syntax-->**WP Get header** ( *objFaixa* : Object ) | (*docWP* : Object ; *indiceSecao* : Integer {; *subsecaoTipo* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get header.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objFaixa | Object | &#8594;  | Faixa 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | indiceSecao | Integer | &#8594;  | Indice seção |
 | subsecaoTipo | Integer | &#8594;  | Tipo sub-seção (wk first page, wk left page ou wk right page) |
 | Resultado | Object | &#8592; | Cabeçalho 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

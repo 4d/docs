@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application file.Syntax-->**Application file**  : Text<!-- END REF-->
 <!--REF #_command_.Application file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Long name of the 4D executable file or application |
-
+</div>
 <!-- END REF-->
 
 ## Description 

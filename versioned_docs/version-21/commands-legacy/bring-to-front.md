@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *process* )<!-- END REF-->
 <!--REF #_command_.BRING TO FRONT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Process number of the process to pass to the frontmost level |
-
+</div>
 <!-- END REF-->
 
 ## Description 

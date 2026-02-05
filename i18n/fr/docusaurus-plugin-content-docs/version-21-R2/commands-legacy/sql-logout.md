@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL LOGOUT.Syntax-->**SQL LOGOUT**<!-- END REF-->
 <!--REF #_command_.SQL LOGOUT.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

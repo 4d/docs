@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *zone* ; *numColonne* ; *nouvPosition* )<!-- END REF-->
 <!--REF #_command_.QR MOVE COLUMN.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594;  | Référence de la zone |
 | numColonne | Integer | &#8594;  | Numéro de la colonne |
 | nouvPosition | Integer | &#8594;  | Nouvelle position de la colonne |
-
+</div>
 <!-- END REF-->
 
 ## Description 

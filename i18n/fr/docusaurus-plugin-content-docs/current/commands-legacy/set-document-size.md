@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* : Time ; *taille* : Real )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT SIZE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594; | Numéro de référence de document |
 | taille | Real | &#8594; | Nouvelle taille (en octets) de document |
-
+</div>
 <!-- END REF-->
 
 ## Description 

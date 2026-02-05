@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get plugin access.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | plugIn | Integer | &#8594;  | Plug-in number |
 | Function result | Text | &#8592; | Group name associated with plug-in |
-
+</div>
 <!-- END REF-->
 
 ## Description 

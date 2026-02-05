@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *targetObj* : Object {; *breakType* : Integer} ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get breaks.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
 | breakType | Integer | &#8594;  | 返すブレークのタイプ |
 | 戻り値 | Collection | &#8592; | レンジのコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

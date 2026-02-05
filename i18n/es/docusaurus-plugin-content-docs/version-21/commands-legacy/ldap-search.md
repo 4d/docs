@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filtro* {; *alcance* {; *atributos* {; *atributosEnArray*}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | dnRootEntry | Text | &#8594;  | Distinguished Name del elemento raíz donde la búsqueda se inicia |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | atributos | Text array | &#8594;  | Atributo(s) a recuperar |
 | atributosEnArray | Boolean array | &#8594;  | True = forzar el retorno de los atributos como array; False = forzar el retorno de los atributos como una variable simple |
 | Resultado | Object | &#8592; | Atributos llave/valor |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

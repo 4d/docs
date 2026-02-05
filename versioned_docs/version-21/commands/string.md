@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<br/>**String** ( *expression* ; *base* ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Expression | &#8594;  | Expression for which to return the string form (can be Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, or Null) |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | addTime | Time | &#8594;  | Time to add on if expression is a date |
 | base | Integer | &#8594;  | Value between 2 and 36 that represents the radix if expression is a number|
 | Function result | Text | &#8592; | String form of the expression |
-
+</div>
 <!-- END REF-->
 
 

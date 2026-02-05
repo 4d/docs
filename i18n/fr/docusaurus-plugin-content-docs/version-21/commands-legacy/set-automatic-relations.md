@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *aller* {; *retour*} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | aller | Boolean | &#8594;  | Statut de tous les liens de N vers 1 |
 | retour | Boolean | &#8594;  | Statut de tous les liens de 1 vers N |
-
+</div>
 <!-- END REF-->
 
 ## Description 

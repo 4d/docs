@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On System Event database method.Syntax-->$event -> On System Event データベースメソッド<!-- END REF-->
 <!--REF #_command_.On System Event database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $event | 倍長整数 | &#8592; | イベントコード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

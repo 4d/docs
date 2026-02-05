@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *tableau* ; *liste* {; *réfEléments*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &#8594;  | Tableau duquel copier les éléments |
 | liste | Text, Integer | &#8594;  | Nom ou référence de la liste dans laquelle copier les éléments du tableau |
 | réfEléments | Array | &#8594;  | Tableau numérique des numéros de référence des éléments |
-
+</div>
 <!-- END REF-->
 
 ## Description 

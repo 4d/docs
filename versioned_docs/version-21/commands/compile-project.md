@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Syntax-->**Compile project** {( {*projectFile*}{;}{*options*} )} : Object<!-- END REF-->
 <!--REF #_command_.Compile project.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | projectFile | 4D.File | &#8594;  | .4DProject file to compile |
 | options | Object | &#8594;  | Object that specifies compilation options |
 | Function result | Object | &#8592; | Object containing information on the compilation status |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

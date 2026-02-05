@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *fileName* {; *project* {; *}} )<!-- END REF-->
 <!--REF #_command_.EXPORT DATA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | Full path name of the export file |
 | project | Text, Blob | &#8594;  | Contents of the export project |
 | &#8592; | New contents of the export project (if the * parameter has been passed) |
 | * | Operator | &#8594;  | Displays the export dialog box and updates the project |
-
+</div>
 <!-- END REF-->
 
 ## Description 

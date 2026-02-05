@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( {* ;} *objeto* ; *titulo* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
 | titulo | Text | &#8594;  | Novo título do objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

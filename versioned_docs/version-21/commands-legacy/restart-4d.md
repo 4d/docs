@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** {( *time* {; *message*} )}<!-- END REF-->
 <!--REF #_command_.RESTART 4D.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | time | Integer | &#8594;  | Time delay (seconds) before 4D restarts |
 | message | Text | &#8594;  | Text to display on client machines |
-
+</div>
 <!-- END REF-->
 
 ## Description 

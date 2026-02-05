@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *toEncode* {; *encoded*}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 ENCODE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | toEncode | Blob, Text | &#8594;  | Value to encode |
 | &#8592; | Encoded value (if encoded parameter omitted) |
 | encoded | Blob, Text | &#8592; | Encoded value |
 | * | Operator | &#8594;  | Encode in Base64URL format |
-
+</div>
 <!-- END REF-->
 
 ## Description 

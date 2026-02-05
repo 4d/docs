@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** ({ *constrAppConfigurações* : Text })<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | constrAppConfigurações | Text | &#8594; | Endereço de acesso completo do arquivo de configurações a ser usado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

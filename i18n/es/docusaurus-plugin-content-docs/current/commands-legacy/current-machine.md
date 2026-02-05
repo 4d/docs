@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current machine.Syntax-->**Current machine**  : Text<!-- END REF-->
 <!--REF #_command_.Current machine.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Nombre del equipo en la red |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

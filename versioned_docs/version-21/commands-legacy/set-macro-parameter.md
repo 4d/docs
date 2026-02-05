@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* ; *textParam* )<!-- END REF-->
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | Selection to use |
 | textParam | Text | &#8594;  | Text sent |
-
+</div>
 <!-- END REF-->
 
 ## Description 

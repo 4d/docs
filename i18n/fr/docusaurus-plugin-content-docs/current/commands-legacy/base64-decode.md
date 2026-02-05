@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BASE64 DECODE.Syntax-->**BASE64 DECODE** ( àDécoder {; *décodé* : Text, Blob}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 DECODE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | àDécoder | Text, Blob | &#8596; | *in:* Encoded value to decode<br/>*out:* Decoded value (if decoded parameter omitted) |
 | décodé | Text, Blob | &#8592; | Valeur décodée |
 | * | Opérateur | &#8594; | Décoder au format Base64URL |
-
+</div>
 <!-- END REF-->
 
 ## Description 

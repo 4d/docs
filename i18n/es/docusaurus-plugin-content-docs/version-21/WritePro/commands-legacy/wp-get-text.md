@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get text.Syntax-->**WP Get text** ( *objRango* {; *expresiones*} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get text.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
 | expresiones | Number | &#8594;  | Instrucciones para evaluar la expresión |
 | Resultado | Text | &#8592; | Texto de objRango |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

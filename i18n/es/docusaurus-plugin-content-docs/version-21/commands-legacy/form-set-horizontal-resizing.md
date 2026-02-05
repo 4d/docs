@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *redimension* {; *anchoMin* {; *anchoMax*}} )<!-- END REF-->
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | redimension | Boolean | &#8594;  | True: el formulario es redimensionable horizontalmente False: El formulario no puede redimensionarse horizontalmente |
 | anchoMin | Integer | &#8594;  | ancho mínimo del formulario (píxeles) |
 | anchoMax | Integer | &#8594;  | ancho máximo del formulario (píxeles) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

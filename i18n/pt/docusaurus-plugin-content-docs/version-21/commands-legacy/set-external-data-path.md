@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aCampo* ; *rota* )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | aCampo | Text, Blob, Picture | &#8594;  | Campo para definir o local de armazenamento |
 | rota | Text, Integer | &#8594;  | Caminho e nome do arquivo d armazenamento externo ou0=usar definição da estrutura1=usar pasta padrão |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

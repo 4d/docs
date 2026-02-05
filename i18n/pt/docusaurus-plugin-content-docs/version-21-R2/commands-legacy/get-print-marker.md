@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *numeroMarc* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Get print marker.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numeroMarc | Integer | &#8594; | Número de marcador |
 | Resultado | Integer | &#8592; | Posição do marcador |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

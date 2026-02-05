@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *tablePtr* ; *invisible* {; *trigSaveNew* {; *trigSaveRec* {; *trigDelRec* {; *trigLoadRec*}}}} )<br/>**GET TABLE PROPERTIES** ( *tableNum* ; *invisible* {; *trigSaveNew* {; *trigSaveRec* {; *trigDelRec* {; *trigLoadRec*}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tablePtr | Pointer | &#8594;  | Table pointer |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | trigSaveRec | Boolean | &#8592; | True = Trigger “On saving an existing record” activated; otherwise, False |
 | trigDelRec | Boolean | &#8592; | True = Trigger “On deleting a record” activated; otherwise, False |
 | trigLoadRec | Boolean | &#8592; | *** Do not use (obsolete) *** |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *viaAcesso* : Text ; *numOperacao* : Real {; *mode* : Integer {; *errObject* : Object}} )<!-- END REF-->
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | viaAcesso | Text | &#8594; | Nome ou via de acesso do arquivo de histórico a integrar |
 | numOperacao | Real | &#8596; | *in:* Number of last operation integrated or -2 to integrate the whole file<br/>*out:* New number of last operation integrated |
 | mode | Integer | &#8594; | 0 = modo estrito (modo padrão), 1 =  modo auto reparo |
 | errObject | Object | &#8592; | Operações com erro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

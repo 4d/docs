@@ -8,12 +8,15 @@ title: VP IMPORT FROM BLOB
 **VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.Blob { ; *paramObj* : Object} ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |vpBlob   |4D.Blob|->|Blob containing a 4D View Pro document|
-|paramObj   |Object|->|Import options|<!-- END REF -->
+|paramObj   |Object|->|Import options|
+</div>
+<!-- END REF -->
 
 <details><summary>History</summary>
 

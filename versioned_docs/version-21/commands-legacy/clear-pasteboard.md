@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR PASTEBOARD.Syntax-->**CLEAR PASTEBOARD**<!-- END REF-->
 <!--REF #_command_.CLEAR PASTEBOARD.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

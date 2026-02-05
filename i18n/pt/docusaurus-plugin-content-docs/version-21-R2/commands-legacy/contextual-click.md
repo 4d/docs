@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Contextual click.Syntax-->**Contextual click**  : Boolean<!-- END REF-->
 <!--REF #_command_.Contextual click.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Verdadeiro se detectado um clique contextual, caso contrario Falso |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

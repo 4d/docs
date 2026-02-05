@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*laTabla* ;} *arrRutas* : Text array {; *filtro* : Text}{; *marcador* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Referencia de tabla |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | filtro | Text | &#8594; | Filtros de nombres |
 | marcador | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
 | * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

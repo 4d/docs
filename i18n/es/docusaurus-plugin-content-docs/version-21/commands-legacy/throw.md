@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* {; *descripcion*} ) <br/>
 *throw* {( *errorObj* )}<!-- END REF-->
 <!--REF #_command_.throw.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | errorCode | Integer | &#8594;  | Un entero largo que representa el código de error. |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | throw {( errorObj )} |
 | Parámetro | Tipo | Descripción |
 | errorObj | Object | &#8594;  | Un objeto que contiene propiedades para construir el error |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

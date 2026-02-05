@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *fimSel* : Integer {; *inicioBloq* : Integer {; *fimBloq* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *fimSel* : Integer {; *inicioBloq* : Integer {; *fimBloq* : Integer}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | inicioBloq | Integer | &#8592; | Inicio de posição do primeiro tipo da seleção |
 | fimBloq | Integer | &#8592; | Fim de posição do primeiro tipo da seleção |
 | Resultado | Integer | &#8592; | Tipo de conteúdo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

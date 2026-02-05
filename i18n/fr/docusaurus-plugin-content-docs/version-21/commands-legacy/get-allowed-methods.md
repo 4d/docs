@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *tabMéthodes* )<!-- END REF-->
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabMéthodes | Text array | &#8592; | Tableau de noms de méthodes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

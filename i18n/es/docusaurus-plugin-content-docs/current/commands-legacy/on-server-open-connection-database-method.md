@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Open Connection database method.Syntax-->$1, $2, $3 -> Método base On Server Open Connection -> $0<!-- END REF-->
 <!--REF #_command_.On Server Open Connection database method.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $user | Entero largo | &#8592; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
 | $id | Entero largo | &#8592; | Número de conexión utilizado internamente por 4D Server para identificar una conexión |
 | $toIgnore | Entero largo | &#8592; | Obsoleto: devuelve siempre 0 (pero debe declararse) |
 | $status | Entero largo | &#8592; | 0 o se omite = conexión aceptada; otro valor = conexión rechazada |
-
+</div>
 <!-- END REF-->
 
 ## ¿Cuándo se llama el método base On Server Open Connection? 

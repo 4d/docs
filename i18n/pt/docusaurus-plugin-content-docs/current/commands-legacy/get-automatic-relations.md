@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *um* : Boolean ; *muitos* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | um | Boolean | &#8592; | Estado de todas as relações Muitos a Um |
 | muitos | Boolean | &#8592; | Estado de todas as relações Um a Muitos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

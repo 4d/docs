@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** {( *textOrBackground* )}<!-- END REF-->
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | textOrBackground | Integer | &#8594;  | 0 ou se omite = cor do texto, 1 = cor do fundo do texto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

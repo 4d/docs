@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *cadeia* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | cadeia | Text | &#8594;  | Cadeia a converter para maiúsculas |
 | * | Operador | &#8594;  | Se passado: manter os acentos |
 | Resultado | Text | &#8592; | Cadeia em letras maiúsculas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** {( *tabla* )}<!-- END REF-->
 <!--REF #_command_.UNLOAD RECORD.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla de la cual descargar el registro o Tabla por defecto, si se omite |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

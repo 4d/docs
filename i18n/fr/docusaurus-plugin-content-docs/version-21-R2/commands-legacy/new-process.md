@@ -16,6 +16,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Syntax-->**New process** ( *méthode* : Text ; *pile* : Integer {; *nom* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | méthode | Text | &#8594; | Méthode à exécuter dans le process |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | param | Expression | &#8594; | Paramètre(s) de la méthode |
 | * | Opérateur | &#8594; | Process unique |
 | Résultat | Integer | &#8592; | Numéro du process nouvellement créé ou du process déjà en cours d'exécution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

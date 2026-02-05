@@ -8,11 +8,14 @@ title: VP Get column attributes
 **VP Get column attributes** (  *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get column attributes.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of column properties|<!-- END REF -->
+|Result  |Collection|<-|Collection of column properties|
+</div>
+<!-- END REF -->
 
 ## Description
 

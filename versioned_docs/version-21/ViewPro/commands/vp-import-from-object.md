@@ -14,13 +14,14 @@ title: VP IMPORT FROM OBJECT
 **VP IMPORT FROM OBJECT** ( *vpAreaName* : Text  { ; *viewPro* : Object { ; *paramObj* : Object} } ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
+<div class="no-index">
 
 | Parameter    | Type   |  | Description |
 |-------------|--------|---|-------------|
 | vpAreaName  | Text   | -> | 4D View Pro area form object name |
 | viewPro     | Object | -> | 4D View Pro object |
 | paramObj    | Object | -> | (Optional) import options |
-
+</div>
 <!-- END REF -->
 
 ## Description

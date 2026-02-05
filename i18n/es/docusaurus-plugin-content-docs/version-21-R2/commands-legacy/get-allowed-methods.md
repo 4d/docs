@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *arrMetodos* : Text array )<!-- END REF-->
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrMetodos | Text array | &#8592; | Array de nombres de métodos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

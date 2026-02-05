@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( * ; *objet* : Text ; *débutSél* : Integer ; *finSél* : Integer ; *nomAttribut* : Integer ; *valeurAttribut* : Variable {; ...(*nomAttribut* : Integer, *valeurAttribut* : Variable)} )<br/>**ST GET ATTRIBUTES** ( *objet* : Field, Variable ; *débutSél* : Integer ; *finSél* : Integer ; *nomAttribut* : Integer ; *valeurAttribut* : Variable {; ...(*nomAttribut* : Integer, *valeurAttribut* : Variable)} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | finSél | Integer | &#8594; | Fin de la sélection de texte |
 | nomAttribut | Integer | &#8594; | Attribut à lire |
 | valeurAttribut | Variable | &#8592; | Valeur courante de l’attribut |
-
+</div>
 <!-- END REF-->
 
 ## Description 

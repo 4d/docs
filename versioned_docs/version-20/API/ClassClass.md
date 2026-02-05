@@ -57,10 +57,14 @@ This property is **read-only**.
 
 
 <!-- REF #ClassClass.new().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Object|<-|New object of the class|<!-- END REF -->
+|Result|4D.Object|<-|New object of the class|
+</div>
+<!-- END REF -->
 
 
 #### Description

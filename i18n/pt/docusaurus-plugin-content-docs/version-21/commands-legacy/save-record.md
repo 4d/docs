@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** {( *tabela* )}<!-- END REF-->
 <!--REF #_command_.SAVE RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela para a qual vai salvar o registro atual, ou tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

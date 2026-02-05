@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* {; *messageText*} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | boolExpression | Boolean | &#8594;  | ブール式 |
 | messageText | Text | &#8594;  | エラーメッセージテキスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

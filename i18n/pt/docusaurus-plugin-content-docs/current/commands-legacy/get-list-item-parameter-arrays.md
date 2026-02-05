@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* : Integer, Text ; *refElemento* : Integer, * ; *arrSeletores* : Text array {; *arrValores* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se for especificada, a lista é um nome de objeto (cadeia)<br/>Se for omitida, a lista é um número de referencia de lista |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | refElemento | Integer, * | &#8594; | Número de referencia do elemento ou<br/>0 para o último elemento agregado à lista ou<br/>* para o elemento atual da lista |
 | arrSeletores | Text array | &#8592; | Array dos nomes dos parâmetros |
 | arrValores | Text array | &#8592; | Array dos valores dos parâmetros |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

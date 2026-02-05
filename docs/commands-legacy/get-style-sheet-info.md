@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *styleSheetName* : Text ; *font* : Text ; *size* : Integer ; *styles* : Integer )<!-- END REF-->
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | styleSheetName | Text | &#8594;  | Name of style sheet |
 | font | Text | &#8592; | Character font |
 | size | Integer | &#8592; | Font size |
 | styles | Integer | &#8592; | Style value |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

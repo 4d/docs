@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Tan.Syntax-->**Tan** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Tan.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | タンジェントを求めるラジアン値 |
 | 戻り値 | Real | &#8592; | タンジェント値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *accessPath* )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | accessPath | Text | &#8594;  | 作成するデータファイルの名前または完全パス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

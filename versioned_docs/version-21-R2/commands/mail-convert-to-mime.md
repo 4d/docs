@@ -17,11 +17,14 @@ displayed_sidebar: docs
 
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mail|Object|&#8594; |Email object|
 |options|Object|&#8594; |Charset and encoding mail options|
 |Result|Text|&#8592;|Email object converted to MIME|
+</div>
 <!-- END REF -->
 
 ## Description

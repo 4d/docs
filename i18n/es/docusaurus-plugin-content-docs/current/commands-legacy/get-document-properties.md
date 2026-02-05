@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *doc* : Text ; *bloqueado* : Boolean ; *invisible* : Boolean ; creado el ; creado a las ; modificado el ; modificado a las )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | doc | Text | &#8594; | Nombre del documento |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | creado a las | Hora | &#8592; | Hora de creación |
 | modificado el | Fecha | &#8592; | Fecha de la última modificación |
 | modificado a las | Hora | &#8592; | Hora de la última modificación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *cheminAccès* {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminAccès | Text | &#8594;  | Chemin d'accès au nouveau dossier à créer |
 | * | Opérateur | &#8594;  | Créer la hiérarchie du dossier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

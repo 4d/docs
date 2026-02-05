@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( {* ;} *object* ; *color* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | color | Text, Integer | &#8594;  | RGBカラー値 |
 | horizontal | Boolean | &#8594;  | 水平グリッドラインにカラーを適用 |
 | vertical | Boolean | &#8594;  | 垂直グリッドラインにカラーを適用 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

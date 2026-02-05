@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( {* ;} *objeto* ; *textoURL* ; *direccionURL* {; *inicioSel* {; *finSel*}} )<!-- END REF-->
 <!--REF #_command_.ST GET URL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | direccionURL | Text | &#8592; | Dirección de la URL |
 | inicioSel | Integer | &#8594;  | Inicio de la selección |
 | finSel | Integer | &#8594;  | Fin de la selección |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

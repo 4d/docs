@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Tickcount.Syntax-->**Tickcount**  : Integer<!-- END REF-->
 <!--REF #_command_.Tickcount.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Nombre de ticks (60ème de seconde) écoulés depuis le démarrage de la machine |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *réfGroupe* : Integer ; *nom* : Text ; *propriétaire* : Integer {; *membres* : Integer array} )<!-- END REF-->
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | réfGroupe | Integer | &#8594; | Numéro de référence du groupe |
 | nom | Text | &#8592; | Nom du groupe |
 | propriétaire | Integer | &#8592; | Numéro de référence du propriétaire du groupe |
 | membres | Integer array | &#8592; | Membres du groupe |
-
+</div>
 <!-- END REF-->
 
 ## Description 

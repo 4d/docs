@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( *header* : Text, Text array )<br/>**WEB SET HTTP HEADER** ( *fieldArray* : Text, Text array ; *valueArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | header&#124;fieldArray | Text, Text array | &#8594;  | Field or variable containing the request HTTP header or HTTP header fields |
 | valueArray | Text array | &#8594;  | HTTP header field content |
-
+</div>
 <!-- END REF-->
 
 ## Description 

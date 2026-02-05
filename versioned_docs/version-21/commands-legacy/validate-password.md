@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Validate password.Syntax-->**Validate password** ( *userID* ; *password* {; *digest*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userID | Integer, Text | &#8594;  | Unique user ID or User name |
 | password | Text | &#8594;  | Unencrypted password |
 | digest | Boolean | &#8594;  | Digest password = True, <br/>Plain-text password (default) = False |
 | Function result | Boolean | &#8592; | True = valid password False = invalid password |
-
+</div>
 <!-- END REF-->
 
 ## Description 

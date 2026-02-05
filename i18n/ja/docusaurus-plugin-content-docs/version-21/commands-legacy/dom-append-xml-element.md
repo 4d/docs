@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *targetElementRef* ; *sourceElementRef* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML element.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetElementRef | Text | &#8594;  | XML親要素の参照 |
 | sourceElementRef | Text | &#8594;  | 追加するXML要素の参照 |
 | 戻り値 | Text | &#8592; | 新しいXML要素参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

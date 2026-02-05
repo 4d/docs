@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *groupID* : Integer ; *name* : Text ; *owner* : Integer {; *members* : Integer array} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | groupID | Integer | &#8596;  | *in:* Unique ID number of group, -1 for adding a group <br/>*out:* Unique ID number of added group (if any)|
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | owner | Integer | &#8594;  | User ID number of new group owner (Binary databases only) |
 | members | Integer array | &#8594;  | New group members |
 | Function result | Integer | &#8592; | Unique ID number of new group |
-
+</div>
 <!-- END REF-->
 
 ## Description 

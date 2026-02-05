@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *nomSource* : Text ; *nomDest* : Text {; *nouvNom* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomSource | Text | &#8594; | Chemin d’accès du fichier ou du dossier à copier |
 | nomDest | Text | &#8594; | Nom ou chemin d’accès du fichier ou du dossier copié |
 | nouvNom | Text | &#8594; | Nouveau nom du fichier ou du dossier copié |
 | * | Opérateur | &#8594; | Remplacer le document existant le cas échéant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Character code.Syntax-->**Character code** ( *unCaractère* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Character code.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | unCaractère | Text | &#8594; | Caractère dont vous voulez obtenir le code |
 | Résultat | Integer | &#8592; | Code du caractère |
-
+</div>
 <!-- END REF-->
 
 ## Description 

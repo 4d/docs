@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* ; *menuItem* ; *itemKey* ; *modifiers* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | itemKey | Text, Integer | &#8594;  | Letter of keyboard shortcut or Character code of keyboard shortcut (former syntax) |
 | modifiers | Integer | &#8594;  | Modifier(s) to associate with shortcut  (ignored if Character code is passed in itemKey) |
 | process | Integer | &#8594;  | Process reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

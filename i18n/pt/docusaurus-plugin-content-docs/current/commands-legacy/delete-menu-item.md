@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE MENU ITEM.Syntax-->**DELETE MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE MENU ITEM.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
 | menuItem | Integer | &#8594; | Número de item de menu ou -1 para o último item adicionado |
 | processo | Integer | &#8594; | Número de referência do processo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

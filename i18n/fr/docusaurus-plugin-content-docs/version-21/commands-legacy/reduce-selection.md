@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*laTable* ;} *nombre* )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle réduire la sélection ou Table par défaut si ce paramètre est omis |
 | nombre | Integer | &#8594;  | Nombre d'enregistrements à conserver |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Not.Syntax-->**Not** ( *boolean* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | boolean | Boolean | &#8594;  | 否定を求めるブール値 |
 | 戻り値 | Boolean | &#8592; | 反対のブール値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

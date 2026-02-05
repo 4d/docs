@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count menus.Syntax-->**Count menus** {( *proceso* )} : Integer<!-- END REF-->
 <!--REF #_command_.Count menus.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | proceso | Integer | &#8594;  | Número de referencia de proceso |
 | Resultado | Integer | &#8592; | Número de menús de la barra de menús actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

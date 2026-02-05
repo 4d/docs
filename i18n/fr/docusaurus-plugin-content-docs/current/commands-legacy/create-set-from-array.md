@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *laTable* : Table ; *tabEnrg* : Integer, Boolean array {; *nomEnsemble* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de l’ensemble |
 | tabEnrg | Integer, Boolean array | &#8594; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans l’ensemble, Faux = il n’est pas dans l’ensemble) |
 | nomEnsemble | Text | &#8594; | Nom de l’ensemble à créer, ou Appliquer la commande à l’ensemble Userset si ce paramètre est omis ou vide |
-
+</div>
 <!-- END REF-->
 
 ## Description 

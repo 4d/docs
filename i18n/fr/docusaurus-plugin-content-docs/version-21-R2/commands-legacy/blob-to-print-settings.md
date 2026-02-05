@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *paramImpression* : Blob {; *param* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to print settings.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | paramImpression | Blob | &#8594; | BLOB contenant les paramètres d’impression |
 | param | Integer | &#8594; | 0=Utilise les valeurs sauvegardées pour le nombre de copies et la plage d'impression, 1=Réinitialise aux valeurs par défaut |
 | Résultat | Integer | &#8592; | Code d'état : 1=Opération réussie, 0=Pas d'imprimante courante, -1=Paramètres incorrects, 2=L'imprimante a changé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

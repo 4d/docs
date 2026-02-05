@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *pathname* : Text ; *documents* : Text array {; *options* : Integer} )<!-- END REF-->
 <!--REF #_command_.DOCUMENT LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pathname | Text | &#8594;  | Pathname to volume, directory or folder |
 | documents | Text array | &#8592; | Names of the documents present at this location |
 | options | Integer | &#8594;  | Options for building list |
-
+</div>
 <!-- END REF-->
 
 ## Description 

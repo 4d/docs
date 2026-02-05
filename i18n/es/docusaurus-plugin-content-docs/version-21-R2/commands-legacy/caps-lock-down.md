@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Caps lock down.Syntax-->**Caps lock down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Caps lock down.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Estado de la tecla Bloq Mayús |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

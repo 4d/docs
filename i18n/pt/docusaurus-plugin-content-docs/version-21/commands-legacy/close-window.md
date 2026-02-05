@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** {( *janela* )}<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

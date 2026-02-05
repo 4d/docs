@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *réponse* : Text, Blob, Picture, Object {; *nomsEnTêtes* : Text array ; *valeursEnTêtes* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | url | Text | &#8594; | URL auquel envoyer la requête |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | valeursEnTêtes | Text array | &#8596; | *in:* Header values of the request<br/> *out:* Returned header values |
 | * | Opérateur | &#8594; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
 | Résultat | Integer | &#8592; | Code de statut HTTP |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilité

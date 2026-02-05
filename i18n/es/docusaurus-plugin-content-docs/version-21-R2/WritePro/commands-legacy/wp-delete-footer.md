@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE FOOTER.Syntax-->**WP DELETE FOOTER** ( *wpSection* : Object )<!-- END REF-->
 <!--REF #_command_.WP DELETE FOOTER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpSection | Object | &#8594;  | Sección o subsección 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

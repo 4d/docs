@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *refElément* : Text ; *xChemin* : Text {; *tabNomsAttributs* : Text array ; *tabValeursAttributs* : Text array} {; ...(*tabNomsAttributs* : Text array, *tabValeursAttributs* : Text array)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594; | Référence d’élément XML racine |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tabNomsAttributs | Text array | &#8594; | Tableau de noms d’attributs |
 | tabValeursAttributs | Text array | &#8594; | Tableau de valeurs d’attributs |
 | Résultat | Text | &#8592; | Référence de l'élément XML créé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -8,11 +8,14 @@ title: VP SET CUSTOM FUNCTIONS
 
 
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
-|formulaObj |Object|->|Formula object|<!-- END REF -->
+|formulaObj |Object|->|Formula object|
+</div>
+<!-- END REF -->
 
 ## Description
 

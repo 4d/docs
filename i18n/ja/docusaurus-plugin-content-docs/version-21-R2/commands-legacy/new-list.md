@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New list.Syntax-->**New list**  : Integer<!-- END REF-->
 <!--REF #_command_.New list.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | リスト参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

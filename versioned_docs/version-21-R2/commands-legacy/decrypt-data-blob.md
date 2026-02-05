@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *keyObject* : Object ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *passPhrase* : Text ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | blobToDecrypt | Blob | &#8594;  | BLOB to decrypt |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | salt | Integer | &#8594;  | Additional salt for algorithm |
 | decryptedBlob | Blob | &#8592; | decrypted BLOB |
 | Function result | Boolean | &#8592; | True if decryption has been correctly performed, False otherwise |
-
+</div>
 <!-- END REF-->
 
 ## Description 

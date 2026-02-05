@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.EXPAND BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOB a expandir |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

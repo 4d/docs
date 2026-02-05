@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *objet* : Text ; *ptrTable* : Table ; *sousFormDetail* : Text {; *sousFormListe* : Text} )<br/>**OBJECT GET SUBFORM** ( *objet* : Field, Variable ; *ptrTable* : Table ; *sousFormDetail* : Text {; *sousFormListe* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | ptrTable | Table | &#8592; | Pointeur vers la table du formulaire |
 | sousFormDetail | Text | &#8592; | Nom du formulaire détail du sous-formulaire |
 | sousFormListe | Text | &#8592; | Nom du formulaire liste du sous-formulaire (formulaire table) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

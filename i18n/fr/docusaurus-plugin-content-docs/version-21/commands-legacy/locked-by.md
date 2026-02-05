@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*laTable* ;} *process* ; *utilisateur4D* ; *utilisateurSession* ; *nomProcess* )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de l'enregistrement verrouillé ou Table par défaut si ce paramètre est omis |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | utilisateur4D | Text | &#8592; | Nom de l'utilisateur 4D |
 | utilisateurSession | Text | &#8592; | Nom de l'utilisateur ayant ouvert la session de travail |
 | nomProcess | Text | &#8592; | Nom du process |
-
+</div>
 <!-- END REF-->
 
 ## Description 

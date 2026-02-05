@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*aTable* ;} *formName* ; *width* ; *height* {; *numPages* {; *fixedWidth* {; *fixedHeight* {; *title*}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | フォームが属するテーブル、省略時はデフォルトテーブル |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | fixedWidth | Boolean | &#8592; | True = 幅固定, False = 幅可変 |
 | fixedHeight | Boolean | &#8592; | True = 高さ固定, False = 高さ可変 |
 | title | Text | &#8592; | フォームのウィンドウタイトル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

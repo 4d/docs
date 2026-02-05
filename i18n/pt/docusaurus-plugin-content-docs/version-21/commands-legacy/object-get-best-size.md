@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( {* ;} *objeto* ; *largIdeal* ; *alturaIdeal* {; *larguraMax*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | largIdeal | Integer | &#8592; | Largura ideal do objeto |
 | alturaIdeal | Integer | &#8592; | Altura ideal do objeto |
 | larguraMax | Integer | &#8594;  | Altura máxima do objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

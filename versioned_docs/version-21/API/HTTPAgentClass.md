@@ -51,10 +51,13 @@ Since HTTPAgent is a shareable object, you can add one to a singleton class so y
 
 
 <!-- REF #4D.HTTPAgent.new().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |options|Object|->|default options for the HTTPAgent|
 |Result|[4D.HTTPAgent](#httpagent-object)|<-|New HTTPAgent object|
+</div>
 <!-- END REF -->
 
 #### Description

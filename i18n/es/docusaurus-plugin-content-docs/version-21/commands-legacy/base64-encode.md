@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *aCodificar* {; *codificado*}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 ENCODE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | aCodificar | Blob, Text | &#8594;  | Valor a codificar |
 | &#8592; | Valor codificado (si el parámetro codificado se omite) |
 | codificado | Blob, Text | &#8592; | Varlor codificado |
 | * | Operador | &#8594;  | Codificado en formato Base64URL |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

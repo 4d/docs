@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Selection range.Syntax-->**WP Selection range** ( {* ;} *wpArea* : Text ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Selection range.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, wpArea é um nome de objeto de formulário (string). Se omitido, wpArea é um campo de objeto ou variável |
 | wpArea | Text | &#8594;  | Nome de objeto de formulário (se * é especificado) ou variável de objeto 4D Write Pro ou campo (se * for omitido) |
 | Resultado | Object | &#8592; | Faixa de objeto |
-
+</div>
 <!-- END REF-->
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*

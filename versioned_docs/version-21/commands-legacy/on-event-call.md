@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *eventMethod* {; *processName*} )<!-- END REF-->
 <!--REF #_command_.ON EVENT CALL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | eventMethod | Text | &#8594;  | Event method to be invoked, or Empty string to stop intercepting events |
 | processName | Text | &#8594;  | Process name |
-
+</div>
 <!-- END REF-->
 
 ## Description 

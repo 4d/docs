@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( {* ;} *object* {; *refMode*} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | refMode | Integer | &#8594;  | Mode for handling references found in the text |
 | Function result | Text | &#8592; | Text without tags |
-
+</div>
 <!-- END REF-->
 
 ## Description 

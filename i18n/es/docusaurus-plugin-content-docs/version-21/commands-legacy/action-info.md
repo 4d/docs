@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *objetivo*} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Nombre o patrón de acción estándar incluyendo el parámetro si es necesario |
 | objetivo | Integer | &#8594;  | Define el objetivo de la acción para obtener información: forma principal o forma actual |
 | Resultado | Object | &#8592; | Objeto que contiene el estado de la acción como propiedades booleanas: isEnabled, isVisible, isChecked, isMixed, isUnknownState |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

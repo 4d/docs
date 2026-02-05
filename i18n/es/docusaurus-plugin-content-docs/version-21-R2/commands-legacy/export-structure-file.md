@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *rutaCarpeta* : Text {; *opciones* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaCarpeta | Text | &#8594; | Ruta de la carpeta de destino para archivos de proyecto |
 | opciones | Object | &#8594; | Opciones de exportar |
 | Resultado | Object | &#8592; | Estado de validación y mensajes (si los hay) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

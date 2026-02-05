@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.In transaction.Syntax-->**In transaction**  : Boolean<!-- END REF-->
 <!--REF #_command_.In transaction.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | VRAI si le process courant est en transaction, FAUX sinon |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table where you want to get locked records |
 | Function result | Object | &#8592; | Description of locked records (if any) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

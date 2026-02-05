@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *entête* : Texte, Tableau texte )<br/>**WEB GET HTTP HEADER** ( *tabChamps* : Texte, Tableau texte ; *tabValeurs* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | entête &#124; tabChamps | Texte, Tableau texte | &#8592; | En-tête HTTP de la requête ou Champs de l’en-tête HTTP |
 | tabValeurs | Text array | &#8592; | Contenu des champs de l’en-tête HTTP |
-
+</div>
 <!-- END REF-->
 
 ## Description 

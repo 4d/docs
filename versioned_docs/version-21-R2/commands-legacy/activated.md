@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Activated.Syntax-->**Activated**  : Boolean<!-- END REF-->
 <!--REF #_command_.Activated.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | Returns TRUE if the execution cycle is an activation |
-
+</div>
 <!-- END REF-->
 
 ## Description 

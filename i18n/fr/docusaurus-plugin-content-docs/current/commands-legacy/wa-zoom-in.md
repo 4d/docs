@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( * ; *objet* : Text )<br/>**WA ZOOM IN** ( *objet* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA ZOOM IN.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

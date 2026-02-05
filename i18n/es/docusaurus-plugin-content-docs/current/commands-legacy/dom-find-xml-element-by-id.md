@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *elementRef* : Text ; *id* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element by ID.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594; | Referencia del elemento XML |
 | id | Text | &#8594; | Valor del atributo ID del elemento a buscar |
 | Resultado | Text | &#8592; | Referencia del elemento encontrado (si aplica) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

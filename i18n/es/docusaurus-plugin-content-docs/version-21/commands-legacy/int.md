@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Int.Syntax-->**Int** ( *Numero* ) : Real<!-- END REF-->
 <!--REF #_command_.Int.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Numero | Real | &#8594;  | Número cuya parte entera se devuelve |
 | Resultado | Real | &#8592; | Parte entera de número |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

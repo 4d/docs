@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.CREATE RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to create a new record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

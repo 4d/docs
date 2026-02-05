@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *document* )<!-- END REF-->
 <!--REF #_command_.DELETE DOCUMENT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Text | &#8594;  | ドキュメント名、または 完全なドキュメントのパス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

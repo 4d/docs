@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *objeto* )<!-- END REF-->
 <!--REF #_command_.GOTO OBJECT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica = objeto es un nombre de objeto (cadena) Si se omite = objeto es un campo o una variable |
 | objeto | Field, Variable | &#8594;  | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) a donde ir |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

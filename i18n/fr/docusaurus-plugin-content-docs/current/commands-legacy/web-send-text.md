@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *texteHTML* : Text {; *type* : Text} )<!-- END REF-->
 <!--REF #_command_.WEB SEND TEXT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | texteHTML | Text | &#8594; | Champ ou variable texte au format HTML à envoyer au navigateur |
 | type | Text | &#8594; | Type MIME |
-
+</div>
 <!-- END REF-->
 
 ## Description 

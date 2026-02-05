@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *receiveVar* : Text )<!-- END REF-->
 <!--REF #_command_.RECEIVE BUFFER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | receiveVar | Text | &#8592; | データを受信する変数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

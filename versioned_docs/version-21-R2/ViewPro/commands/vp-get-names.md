@@ -7,12 +7,15 @@ title: VP Get names
 **VP Get names** ( vpAreaName : Text { ; scope : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get names.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |scope  |Integer|->|Target scope (default= current sheet)|
-|Result  |Collection|<-|Existing names in the defined scope|<!-- END REF -->
+|Result  |Collection|<-|Existing names in the defined scope|
+</div>
+<!-- END REF -->
 
 ## Description
 

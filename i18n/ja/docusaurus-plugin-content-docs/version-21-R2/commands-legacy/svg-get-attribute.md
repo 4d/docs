@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *pictureObject* : Picture ; element_ID ; *attribName* : Text ; *attribValue* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | element_ID | Text | &#8594; | 属性値を取得する要素のID |
 | attribName | Text | &#8594; | 取得する属性 |
 | attribValue | Text, Integer | &#8592; | 現在の属性値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

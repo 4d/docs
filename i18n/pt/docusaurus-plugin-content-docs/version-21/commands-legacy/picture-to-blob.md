@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *imagem* ; *imagemBlob* ; *codec* )<!-- END REF-->
 <!--REF #_command_.PICTURE TO BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8594;  | Campo ou variável tipo Imagem |
 | imagemBlob | Blob | &#8592; | BLOB para receber a imagem convertida |
 | codec | Text | &#8594;  | Codec de identificação de Imagem |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* : Text ; *value* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | objectName | Text | &#8594; | オブジェクト名 |
 | value | any | &#8594; | フォームオブジェクトのデータソースの新しい値 |
-
+</div>
 <!-- END REF-->
 
 ## 例題 1 

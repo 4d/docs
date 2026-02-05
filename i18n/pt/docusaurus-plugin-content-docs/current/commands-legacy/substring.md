@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Substring.Syntax-->**Substring** ( *fonte* : Text ; *aPartirDe* : Integer {; *numCars* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | fonte | Text | &#8594; | Cadeia da qual se tira a substring |
 | aPartirDe | Integer | &#8594; | Posição do primeiro caractere |
 | numCars | Integer | &#8594; | Número de caracteres a pegar |
 | Resultado | Text | &#8592; | Substring de fonte |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

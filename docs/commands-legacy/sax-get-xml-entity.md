@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML ENTITY.Syntax-->**SAX GET XML ENTITY** ( *document* : Time ; *name* : Text ; *value* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ENTITY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Reference of open document |
 | name | Text | &#8592; | Entity name |
 | value | Text | &#8592; | Entity value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

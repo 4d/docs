@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
 | objet | any | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou variable (si * omis) |
 | Résultat | Text | &#8592; | Format d’affichage de l’objet |
-
+</div>
 <!-- END REF-->
 
 ## Description 

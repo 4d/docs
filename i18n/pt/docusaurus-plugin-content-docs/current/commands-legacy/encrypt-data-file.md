@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *rotaEstrutura* : Text ; *rotaDados* : Text {; novaFrasePasse/novaChave {; *arqPasta* : Text {; atualFrasePasse/atualChave {; *nomeMetodo* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaEstrutura | Text | &#8594; | Rota para o arquivo estrutura |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | atualFrasePasse/atualChave | Texto, Objeto | &#8594; | frase Passe atual (texto) ou chave de criptografia atual (objeto) |
 | nomeMetodo | Text | &#8594; | Nome de método de chamada 4D |
 | Resultado | Text | &#8592; | Rota completa de pasta onde os arquivos originais estão armazenados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

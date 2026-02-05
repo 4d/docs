@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *objeto* ; *codeJS* {; *tipo*} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | codeJS | Text | &#8594;  | Código Java Script |
 | tipo | Integer | &#8594;  | Tipo ao qual converter o resultado |
 | Resultado | Date, Time, Object, Pointer, Real, Text | &#8592; | Resultado da função |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

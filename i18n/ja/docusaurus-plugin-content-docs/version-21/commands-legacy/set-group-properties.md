@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *groupID* ; *name* ; *owner* {; *members*} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | groupID | Integer | &#8594;  | グループのユニークなID番号、または、 -1= デザイナーグループの追加 -2= 管理者グループの追加 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | owner | Integer | &#8594;  | 新規グループオーナーのユーザーID番号 (バイナリデータベースのみ) |
 | members | Integer array | &#8594;  | 新規グループのメンバー |
 | 戻り値 | Integer | &#8592; | 新規グループのユニークなID番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

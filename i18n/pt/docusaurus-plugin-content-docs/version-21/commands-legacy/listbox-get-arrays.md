@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( {* ;} *objeto* ; *arrNomsCols* ; *arrNomsTitulos* ; *arrVarCols* ; *arrVarTitulos* ; *arrColsVisiveis* ; *arrEstilos* {; *arrFooterNames* ; *arrFootersVars*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | arrEstilos | Pointer array | &#8592; | Ponteiros para arrays ou estilos, cores e variáveis de visibilidade ou Nil |
 | arrFooterNames | Text array | &#8592; | Nomes de objetos do rodapé da coluna |
 | arrFootersVars | Pointer array | &#8592; | Ponteiros para variáveis de rodapé de coluna |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *tabla* : Table {; *} )<!-- END REF-->
 <!--REF #_command_.RESUME INDEXES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla para la cual reactivar los índices |
 | * | Operador | &#8594; | Si se pasa = indexación asíncrona |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

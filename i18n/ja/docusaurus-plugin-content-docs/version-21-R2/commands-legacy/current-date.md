@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current date.Syntax-->**Current date** ( * ) : Date<!-- END REF-->
 <!--REF #_command_.Current date.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | サーバの日付を返す |
 | 戻り値 | Date | &#8592; | 現在の日付 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

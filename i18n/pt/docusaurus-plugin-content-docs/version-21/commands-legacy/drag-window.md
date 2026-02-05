@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DRAG WINDOW.Syntax-->**DRAG WINDOW**<!-- END REF-->
 <!--REF #_command_.DRAG WINDOW.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

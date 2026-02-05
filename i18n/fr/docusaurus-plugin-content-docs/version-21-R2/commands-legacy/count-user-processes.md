@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count user processes.Syntax-->**Count user processes**  : Integer<!-- END REF-->
 <!--REF #_command_.Count user processes.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Nombre de process vivants (à l'exception de process internes) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

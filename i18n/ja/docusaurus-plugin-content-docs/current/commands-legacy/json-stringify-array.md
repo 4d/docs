@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *array* : Text array, Real array, Boolean array, Pointer array, Object array {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify array.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | array | Text array, Real array, Boolean array, Pointer array, Object array | &#8594; | 内容をシリアライズしたい配列 |
 | * | 演算子 | &#8594; | 整形フォーマット |
 | 戻り値 | Text | &#8592; | シリアライズされたJSON配列を含む文字列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

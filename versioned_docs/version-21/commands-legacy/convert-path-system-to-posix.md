@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *systemPath* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | systemPath | Text | &#8594;  | Relative or absolute pathname expressed in system syntax |
 | * | Operator | &#8594;  | Encoding option |
 | Function result | Text | &#8592; | Absolute pathname expressed in POSIX syntax |
-
+</div>
 <!-- END REF-->
 
 ## Description 

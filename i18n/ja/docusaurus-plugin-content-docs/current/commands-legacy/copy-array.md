@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *source* : Array ; *destination* : Array )<!-- END REF-->
 <!--REF #_command_.COPY ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | source | Array | &#8594; | コピー元の配列 |
 | destination | Array | &#8592; | コピー先の配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

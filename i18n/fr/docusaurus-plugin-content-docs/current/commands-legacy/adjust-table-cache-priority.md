@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *laTable* : Table ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table dont vous souhaitez ajuster la priorité des données scalaires |
 | priority | Integer | &#8594; | Priorité des données scalaires de la table dans le cache |
-
+</div>
 <!-- END REF-->
 
 ## Mode expert 

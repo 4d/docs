@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* ; *tabTitresMenus* ; *tabRefsMenus* )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
 | tabTitresMenus | Text array | &#8592; | Tableau des libellés du menu |
 | tabRefsMenus | Text array | &#8592; | Tableau des références du menu |
-
+</div>
 <!-- END REF-->
 
 ## Description 

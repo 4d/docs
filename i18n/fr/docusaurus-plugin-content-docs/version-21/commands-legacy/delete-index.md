@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *ptrChp* {; *} )<br/>**DELETE INDEX** ( *nomIndex* {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChp &#124; nomIndex | Pointeur, Chaîne | &#8594;  | Pointeur vers le champ duquel supprimer les index ou Nom de l’index à supprimer |
 | * | Opérateur | &#8594;  | Si passé = opération asynchrone |
-
+</div>
 <!-- END REF-->
 
 ## Description 

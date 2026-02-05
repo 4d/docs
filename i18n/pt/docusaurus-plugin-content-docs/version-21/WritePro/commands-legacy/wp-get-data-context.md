@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get data context.Syntax-->**WP Get data context** ( *wpDoc* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get data context.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | documento 4d write pro |
 | Resultado | Object | &#8592; | objeto contexto data |
-
+</div>
 <!-- END REF-->
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*

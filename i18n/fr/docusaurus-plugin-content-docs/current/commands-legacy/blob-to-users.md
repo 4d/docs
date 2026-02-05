@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *utilisateurs* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | utilisateurs | Blob | &#8594; | BLOB (crypté) contenant des comptes utilisateurs créés et sauvegardés par l'Administrateur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

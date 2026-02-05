@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( * ; *objeto* : Text ; *selector* : Integer ; *valor* : Boolean )<br/>**WA SET PREFERENCE** ( *objeto* : Field, Variable ; *selector* : Integer ; *valor* : Boolean )<!-- END REF-->
 <!--REF #_command_.WA SET PREFERENCE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | selector | Integer | &#8594; | Preferencia a modificar |
 | valor | Boolean | &#8594; | Valor de la preferencia (True = permitido,  False = no autorizado) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

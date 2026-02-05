@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | vJson | Object | &#8594; | Objeto JSON a validar |
 | vSchema | Object | &#8594; | Esquema JSON utilizado para validar objetos JSON |
 | Resultado | Object | &#8592; | Estado de validación y errores (si los hay) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

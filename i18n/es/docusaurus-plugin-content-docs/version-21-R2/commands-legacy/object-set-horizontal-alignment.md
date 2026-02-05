@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( * ; *objeto* : Text ; *alineación* : Integer )<br/>**OBJECT SET HORIZONTAL ALIGNMENT** ( *objeto* : Field, Variable ; *alineación* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite= objeto es un campo o una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
 | alineación | Integer | &#8594; | Código de alineación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

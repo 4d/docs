@@ -7,11 +7,14 @@ title: VP Get row attributes
 **VP Get row attributes** ( rangeObj : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get row attributes.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of row properties|<!-- END REF -->
+|Result  |Collection|<-|Collection of row properties|
+</div>
+<!-- END REF -->
 
 ## Description
 

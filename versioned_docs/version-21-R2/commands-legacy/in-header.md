@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.In header.Syntax-->**In header**  : Boolean<!-- END REF-->
 <!--REF #_command_.In header.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | Returns True if the execution cycle is in header |
-
+</div>
 <!-- END REF-->
 
 ## Description 

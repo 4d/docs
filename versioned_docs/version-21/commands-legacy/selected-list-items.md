@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *list* {; *itemsArray* {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | itemsArray | Integer array | &#8592; | If 2nd * omitted: Array contains the positions of selected items in the list(s) If 2nd * passed: Array contains the selected item references |
 | * | Operator | &#8594;  | If omitted: Item position(s) If passed: Item reference(s) |
 | Function result | Integer | &#8592; | If 2nd * omitted: Position of current selected list item in expanded/collapsed list(s) If 2nd * passed: Reference of the selected item |
-
+</div>
 <!-- END REF-->
 
 ## Description 

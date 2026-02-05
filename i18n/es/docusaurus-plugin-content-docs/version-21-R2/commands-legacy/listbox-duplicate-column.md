@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *objeto* : Text ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *objeto* : Field, Variable ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | varEncab | Integer, Pointer | &#8594; | Variable del encabezado de la columna |
 | nomPie | Text | &#8594; | Nombre del objeto del pie de la columna |
 | varPie | Variable, Pointer | &#8594; | Variable del pie de la columna |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

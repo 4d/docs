@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* : Text, Integer ; *fileTypes* : Text ; *title* : Text ; *options* : Integer {; *selected* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | directory | Text, Integer | &#8594; | ドキュメント選択ダイアログボックスで ディレクトリのアクセスパスをデフォルトで表示する、または デフォルトユーザフォルダを表示する空の文字列 (Windowsでは"My documents"、 Mac OSでは"Documents")、または メモリーされたアクセスパスの番号 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | options | Integer | &#8594; | 任意の選択 |
 | selected | Text array | &#8592; | アクセスパスのリストを含む配列 + 選択されたファイルの名前 |
 | 戻り値 | Text | &#8592; | 選択されたファイルの名前(複数の選択がある場合、 リストの最初のファイル) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

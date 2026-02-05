@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( {* ;} *objeto* {; *X* ; *Y* }; *columna* ; *linea* {; *varCol*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | columna | Integer | &#8592; | Número de columna |
 | linea | Integer | &#8592; | Número de fila |
 | varCol | Pointer | &#8592; | Puntero a la variable de la columna |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

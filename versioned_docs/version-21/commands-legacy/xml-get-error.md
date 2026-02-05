@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *elementRef* ; *errorText* {; *row* {; *column*}} )<!-- END REF-->
 <!--REF #_command_.XML GET ERROR.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | errorText | Variable | &#8592; | Text of the error |
 | row | Variable | &#8592; | Row number |
 | column | Variable | &#8592; | Column number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

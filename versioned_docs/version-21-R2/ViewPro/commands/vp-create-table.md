@@ -16,13 +16,16 @@ title: VP CREATE TABLE
 **VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj|Object|->|Range object|
 |tableName|Text|->|Name for the table|
 |source|Text|->|Data context property name to display in the table|
-|options|[cs.ViewPro.TableOptions](../classes.md#tableoptions)|->|Additional options|<!-- END REF -->
+|options|[cs.ViewPro.TableOptions](../classes.md#tableoptions)|->|Additional options|
+</div>
+<!-- END REF -->
 
 ## Description
 

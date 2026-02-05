@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR New offscreen area.Syntax-->**QR New offscreen area**  : Integer<!-- END REF-->
 <!--REF #_command_.QR New offscreen area.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | 作られたエリアの参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

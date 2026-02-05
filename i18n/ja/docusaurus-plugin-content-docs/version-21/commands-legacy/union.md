@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.UNION.Syntax-->**UNION** ( *set1* ; *set2* ; *resultSet* )<!-- END REF-->
 <!--REF #_command_.UNION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | set1 | Text | &#8594;  | 最初のセット |
 | set2 | Text | &#8594;  | 2番目のセット |
 | resultSet | Text | &#8594;  | 結果のセット<br/>Resulting set |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

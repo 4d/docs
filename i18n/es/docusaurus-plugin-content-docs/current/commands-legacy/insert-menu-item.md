@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* : Integer ; *depuesDe* : Integer ; *textoElem* : Text {; *subMenu* : Text {; *proceso* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.INSERT MENU ITEM.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Integer | &#8594; | Número de menú o referencia de menú |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | subMenu | Text | &#8594; | Referencia del submenú asociado con la línea |
 | proceso | Integer | &#8594; | Número de referencia del proceso |
 | * | Operador | &#8594; | Si se pasa: considerar metacaracteres como caracteres estándar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

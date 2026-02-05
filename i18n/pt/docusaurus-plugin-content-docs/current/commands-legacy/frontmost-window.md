@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, considere janela flutuante, se omitido, ignore janela flutuante |
 | Resultado | Integer | &#8592; | Número de referência de janela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

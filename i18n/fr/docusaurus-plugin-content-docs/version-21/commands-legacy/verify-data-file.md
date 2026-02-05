@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *cheminStructure* ; *cheminDonnées* ; *objets* ; *options* ; *méthode* {; *tabTables* {; *tabChamps*}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminStructure | Text | &#8594;  | Chemin d’accès du fichier de structure de la base à vérifier |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | méthode | Text | &#8594;  | Nom de la méthode 4D de rétroappel |
 | tabTables | Integer array | &#8594;  | Numéros des tables à vérifier |
 | tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numéros des index à vérifier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

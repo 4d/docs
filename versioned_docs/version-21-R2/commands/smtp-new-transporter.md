@@ -7,11 +7,13 @@ displayed_sidebar: docs
 <!-- REF #_command_.SMTP New transporter.Syntax -->**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!--REF #_command_.SMTP New transporter.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | server | Object | &#8594;  | Mail server information |
 | Function result | 4D.SMTPTransporter | &#8592; | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

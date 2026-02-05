@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* ; *fileTypes* ; *title* ; *options* {; *selected*} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | directory | Text, Integer | &#8594;  | • Directory access path to display by default in the document selection dialog box, or• Empty string to display default user folder (“My documents” under Windows, “Documents” under Mac OS), or• Number of the memorized access path |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | options | Integer | &#8594;  | Selection option(s) |
 | selected | Text array | &#8592; | Array containing the list of access paths + names of selected files |
 | Function result | Text | &#8592; | Name of selected file (first file of the list in case of multiple selection) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

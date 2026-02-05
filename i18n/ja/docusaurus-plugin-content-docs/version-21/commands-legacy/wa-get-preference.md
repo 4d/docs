@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( {* ;} *object* ; *selector* ; *value* )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定されると、オブジェクトがオブジェクト名 (文字列) 省略されると、オブジェクトは変数 |
 | object | any | &#8594;  | オブジェクトの名前 (引数 * が指定されると) または、変数 (引数 * が省略されると) |
 | selector | Integer | &#8594;  | 取得する環境設定 |
 | value | Variable | &#8592; | 環境設定のカレント値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

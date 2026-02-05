@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( * ; *objeto* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT GET SCROLLBAR** ( *objeto* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLLBAR.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou um campo. |
 | objeto | any | &#8594; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
 | horizontal | Boolean, Integer | &#8592; | True = exibido, False = escondido |
 | vertical | Boolean, Integer | &#8592; | True = disponível, False = escondido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

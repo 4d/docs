@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *comOrigem* : Text ; *comDestino* : Text )<!-- END REF-->
 <!--REF #_command_.COPY SET.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | comOrigem | Text | &#8594; | Nome do conjunto de origem |
 | comDestino | Text | &#8594; | Nome do Conjunto de Destino |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

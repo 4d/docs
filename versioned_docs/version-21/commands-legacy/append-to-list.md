@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *list* ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
 <!--REF #_command_.APPEND TO LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | itemRef | Integer | &#8594;  | Unique reference number for the new list item |
 | sublist | Integer | &#8594;  | Optional sublist to attach to the new list item |
 | expanded | Boolean | &#8594;  | Indicates if the optional sublist will be expanded or collapsed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

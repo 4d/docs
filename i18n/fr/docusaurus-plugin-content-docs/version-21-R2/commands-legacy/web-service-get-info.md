@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *typeInfo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.WEB SERVICE Get info.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | typeInfo | Integer | &#8594; | Information à récupérer |
 | Résultat | Text | &#8592; | Information sur la dernière erreur SOAP |
-
+</div>
 <!-- END REF-->
 
 ## Description 

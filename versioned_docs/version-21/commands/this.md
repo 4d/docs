@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Syntax-->**This** : Object<!-- END REF-->
 <!--REF #_command_.This.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Object | &#8592; | Current element or object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

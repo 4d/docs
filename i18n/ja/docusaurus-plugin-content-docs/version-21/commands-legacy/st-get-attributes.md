@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( {* ;} *object* ; *startSel* ; *endSel* ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | endSel | Integer | &#8594;  | テキスト選択の終了位置 |
 | attribName | Integer | &#8594;  | 取得する属性 |
 | attribValue | Variable | &#8592; | 属性の現在の値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

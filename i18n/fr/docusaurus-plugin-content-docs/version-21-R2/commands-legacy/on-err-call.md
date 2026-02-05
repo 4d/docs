@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *méthodErreur* : Text {; *portée* : Integer} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | méthodErreur | Text | &#8594; | Méthode de gestion d'erreur à appeler ou Chaîne vide pour désinstaller la méthode |
 | portée | Integer | &#8594; | Portée de la méthode de gestion d'erreur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Milliseconds.Syntax-->**Milliseconds**  : Integer<!-- END REF-->
 <!--REF #_command_.Milliseconds.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Number of milliseconds elasped since the machine was started |
-
+</div>
 <!-- END REF-->
 
 ## Description 

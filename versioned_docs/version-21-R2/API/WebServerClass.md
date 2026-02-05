@@ -640,12 +640,13 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 
 <!-- REF #WebServerClass.start().Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Web server settings to set at startup|  
 |Result|Object|<-|Status of the web server startup|
-
+</div>
 <!-- END REF -->
 
 The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
@@ -702,9 +703,12 @@ The function returns an object describing the Web server launch status. This obj
 
 
 <!-- REF #WebServerClass.stop().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|----|---|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.

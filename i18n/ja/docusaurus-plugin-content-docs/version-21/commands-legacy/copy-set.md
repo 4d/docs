@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *srcSet* ; *dstSet* )<!-- END REF-->
 <!--REF #_command_.COPY SET.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | srcSet | Text | &#8594;  | コピー元のセット名 |
 | dstSet | Text | &#8594;  | コピー先セット名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *cheminDoc* : Text ; *icône* : Picture {; *taille* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminDoc | Text | &#8594; | Nom ou chemin d’accès du fichier duquel obtenir l’icône ou chaîne vide pour afficher la boîte de dialogue d’ouverture de fichiers |
 | icône | Picture | &#8592; | Icône du document |
 | taille | Integer | &#8594; | Taille de l’icône (en pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *typeSource* ; *tabNomsSources* ; *tabPilotes* )<!-- END REF-->
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | typeSource | Integer | &#8594;  | Type de source : utilisateur ou système |
 | tabNomsSources | Text array | &#8592; | Tableau des noms de sources de données |
 | tabPilotes | Text array | &#8592; | Tableau des pilotes des sources |
-
+</div>
 <!-- END REF-->
 
 ## Description 

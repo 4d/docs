@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PRINT OPTION.Syntax-->**GET PRINT OPTION** ( *opção* ; *valor1* {; *valor2*} )<!-- END REF-->
 <!--REF #_command_.GET PRINT OPTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | opção | Integer | &#8594;  | Número de opção ou código de opção PDF |
 | valor1 | Integer, Text | &#8592; | Valor 1 da opção |
 | valor2 | Integer, Text | &#8592; | Valor 2 da opção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

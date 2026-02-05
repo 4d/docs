@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *refElemento* : Text {; *xRota* : Text}; *valorElemento* : Text, Variable {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594; | Referência de elemento XML |
 | xRota | Text | &#8594; | Rota do xRota do elemento XML |
 | valorElemento | Text, Variable | &#8594; | Novo valor do elemento |
 | * | Operador | &#8594; | Se passado: estabelece o valor em CDATA |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

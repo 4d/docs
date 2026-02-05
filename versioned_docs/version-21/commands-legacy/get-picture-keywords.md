@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* ; *arrKeywords* {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | Picture for which to get associated keywords |
 | arrKeywords | Text array | &#8592; | Array containing extracted keywords |
 | * | Operator | &#8594;  | If passed = use distinct values |
-
+</div>
 <!-- END REF-->
 
 ## Description 

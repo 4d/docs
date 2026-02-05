@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *nomsGroupes* : Text array ; *numérosGroupes* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET GROUP LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomsGroupes | Text array | &#8592; | Noms des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe |
 | numérosGroupes | Integer array | &#8592; | Numéros de référence uniques pour chaque groupe |
-
+</div>
 <!-- END REF-->
 
 ## Description 

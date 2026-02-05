@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Syntax-->**Match regex** ( *patron* ; *laCadena* ; *inicio* {; pos_encont. ; long_encont.}{; *} ) -> Resultado <br/>
 **Match regex** ( *patron* ; *laCadena* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | patron | Text | &#8594;  | Expresión regular |
@@ -22,7 +24,7 @@ displayed_sidebar: docs
 | patron | Text | &#8594;  | Expresión regular (igualdad completa) |
 | laCadena | Text | &#8594;  | Cadena en la cual se efectúa la búsqueda |
 | Resultado | Boolean | &#8592; | True= la cadena encuentra una ocurrencia, de lo contrario False |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

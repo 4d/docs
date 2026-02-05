@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *object* : Object, Object {; *property* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594; | 構造化されたオブジェクト |
 | property | Text | &#8594; | 指定時にはプロパティをチェック、省略時にはオブジェクトをチェック |
 | 戻り値 | Boolean | &#8592; | property 省略時:object が定義済みの場合はTrue を、それ以外は False を返す<br/>property 指定時:property が定義済みの場合はTrue を、それ以外は False を返す |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

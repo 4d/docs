@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get sections.Syntax-->**WP Get sections** ( *targetObj* ) : Collection<!-- END REF-->
 <!--REF #_command_.WP Get sections.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | Function result | Collection | &#8592; | Collection of all sections found in targetObj |
-
+</div>
 <!-- END REF-->
 
 ## Description 

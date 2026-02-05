@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *picRefs* ; *picNames* )<!-- END REF-->
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picRefs | Integer array | &#8592; | ピクチャライブラリ画像の参照番号 |
 | picNames | Text array | &#8592; | ピクチャライブラリ画像の名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

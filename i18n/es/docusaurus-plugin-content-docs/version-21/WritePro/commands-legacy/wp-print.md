@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP PRINT.Syntax-->**WP PRINT** ( *wpDoc* {; *opcImpr*} )<!-- END REF-->
 <!--REF #_command_.WP PRINT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
 | opcImpr | Integer | &#8594;  | Opciones de impresión para el documento 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*

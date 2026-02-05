@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *refElément* : Text ; *tabTypesEnfants* : Integer array ; *tabRefsNoeuds* : Text array )<!-- END REF-->
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594; | Référence d’élément XML |
 | tabTypesEnfants | Integer array | &#8592; | Types des noeuds enfants |
 | tabRefsNoeuds | Text array | &#8592; | Références ou Valeurs des noeuds enfants |
-
+</div>
 <!-- END REF-->
 
 ## Description 

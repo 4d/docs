@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *que* : Integer ; *mensagem* : Integer ; *quando* : Integer ; *mouseX* : Integer ; *mouseY* : Integer ; *modificadores* : Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.POST EVENT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | que | Integer | &#8594; | Tipo de evento |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | mouseY | Integer | &#8594; | Coordenadas verticais do mouse |
 | modificadores | Integer | &#8594; | Estado de teclas modificadoras |
 | processo | Integer | &#8594; | Número de referência do processo de destino; ou fila de evento de aplicação, se omitido, ou 0. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

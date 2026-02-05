@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | filePath | Text | &#8594;  | File pathname |
 | * | Operator | &#8594;  | Validate data |
 | Function result | Boolean | &#8592; | True = filePath designates a picture file; otherwise, False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

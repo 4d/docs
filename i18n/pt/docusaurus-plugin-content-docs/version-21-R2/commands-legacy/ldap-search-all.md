@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* : Text ; *arrResultado* : Object array ; *filtro* : Text {; *escopo* : Text {; *atributos* : Text array {; *atributosComoArray* : Boolean array}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | dnRootEntry | Text | &#8594; | o Distinguished Name do diretório raiz onde a pesquisa começará |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | escopo | Text | &#8594; | Escopo da pesquisa "base" (padrão), "one", ou "sub" |
 | atributos | Text array | &#8594; | Atributos da pesquisa |
 | atributosComoArray | Boolean array | &#8594; | True = força os atributos a serem retornados como um array, false = força os atributos a serem retornados como uma variável simples |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

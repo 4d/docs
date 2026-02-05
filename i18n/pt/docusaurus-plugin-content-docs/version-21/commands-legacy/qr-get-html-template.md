@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* ) : Text<!-- END REF-->
 <!--REF #_command_.QR Get HTML template.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referência da área |
 | Resultado | Text | &#8592; | Código HTML usado como modelo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

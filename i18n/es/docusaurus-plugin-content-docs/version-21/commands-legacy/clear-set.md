@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *conjunto* )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | conjunto | Text | &#8594;  | Nombre del conjunto a borrar de la memoria |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* ; *y* )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | x | Integer | &#8594;  | posição x (horizontal) do cursor |
 | y | Integer | &#8594;  | posição y (vertical) do cursor |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si omis = ignorer les fenêtres flottantes, Si spécifié = prendre en compte les fenêtres flottantes |
 | Résultat | Integer | &#8592; | Numéro de référence de fenêtre |
-
+</div>
 <!-- END REF-->
 
 ## Description 

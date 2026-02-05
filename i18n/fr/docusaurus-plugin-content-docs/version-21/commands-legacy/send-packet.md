@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* ;} *paquet* )<!-- END REF-->
 <!--REF #_command_.SEND PACKET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594;  | Référence de document ou canal courant (port série ou document) |
 | paquet | Text, Blob | &#8594;  | Chaîne ou BLOB à envoyer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

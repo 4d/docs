@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* : Table ) : Real<!-- END REF-->
 <!--REF #_command_.Table fragmentation.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | フラグメント率を取得するテーブル |
 | 戻り値 | Real | &#8592; | フラグメンテーションの割合 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

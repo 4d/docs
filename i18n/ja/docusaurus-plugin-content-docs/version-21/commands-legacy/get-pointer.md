@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | varName | Text | &#8594;  | プロセスまたはインタプロセス変数の名前 |
 | 戻り値 | Pointer | &#8592; | プロセスまたはインタープロセス変数へのポインタ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

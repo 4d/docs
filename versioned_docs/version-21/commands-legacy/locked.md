@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Locked.Syntax-->**Locked** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to check for locked current record, or Default table, if omitted |
 | Function result | Boolean | &#8592; | Record is locked (TRUE), or Record is unlocked (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

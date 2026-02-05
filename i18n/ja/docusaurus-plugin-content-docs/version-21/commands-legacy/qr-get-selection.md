@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *area* ; *left* ; *top* {; *right* {; *bottom*}} )<!-- END REF-->
 <!--REF #_command_.QR GET SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | top | Integer | &#8592; | 上境界 |
 | right | Integer | &#8592; | 右境界 |
 | bottom | Integer | &#8592; | 下境界 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

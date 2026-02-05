@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaphore* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Test semaphore.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | semaphore | Text | &#8594;  | Name of the semaphore to test |
 | Function result | Boolean | &#8592; | True = the semaphore exists, False = the semaphore doesn’t exist |
-
+</div>
 <!-- END REF-->
 
 ## Description 

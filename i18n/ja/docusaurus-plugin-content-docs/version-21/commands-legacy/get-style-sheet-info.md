@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *styleSheetName* ; *font* ; *size* ; *styles* )<!-- END REF-->
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | styleSheetName | Text | &#8594;  | スタイルシート名 |
 | font | Text | &#8592; | フォント名 |
 | size | Integer | &#8592; | フォントサイズ |
 | styles | Integer | &#8592; | 書体 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

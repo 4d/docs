@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( encab|arrayCamp {; *arrayValores* : Text array} )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | encab&#124;arrayCamp | Texto, Array texto | &#8592; | Encabezado HTTP de la petición o Campos del encabezado HTTP |
 | arrayValores | Text array | &#8592; | Contenido de los campos del encabezado HTTP |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

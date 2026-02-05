@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *zone* : Integer ; *blob* : Blob )<!-- END REF-->
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594; | Référence de la zone |
 | Blob | Blob | &#8592; | BLOB devant recevoir l'état rapide |
-
+</div>
 <!-- END REF-->
 
 ## Description 

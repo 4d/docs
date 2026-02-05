@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *title* : Text ; *text* : Text {; *duration* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | title | Text | &#8594; | 通知タイトル |
 | text | Text | &#8594; | 通知テキスト |
 | duration | Integer | &#8594; | 表示時間 (秒) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

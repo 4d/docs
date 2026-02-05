@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current process.Syntax-->**Current process**  : Integer<!-- END REF-->
 <!--REF #_command_.Current process.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de proceso |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

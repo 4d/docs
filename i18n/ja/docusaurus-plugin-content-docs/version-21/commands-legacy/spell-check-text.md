@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* ; *errPos* ; *errLength* ; *checkPos* ; *arrSuggest* )<!-- END REF-->
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | text | Text | &#8594;  | チェックするテキスト |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | errLength | Integer | &#8592; | 未知の単語の長さ |
 | checkPos | Integer | &#8594;  | チェックを開始する位置 |
 | arrSuggest | Text array | &#8592; | 推奨候補リスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

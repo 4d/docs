@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resNum* ; *resDados* {; *resArquivo*} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | resNum | Integer | &#8594;  | Número de Resource |
 | resDados | Field, Variable | &#8594;  | Campo imagem ou variável a receber a imagem |
 | &#8592; | Conteúdos do recurso PICT |
 | resArquivo | Time | &#8594;  | Número de referência do arquivo de Resource ou arquivo de resource atual se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

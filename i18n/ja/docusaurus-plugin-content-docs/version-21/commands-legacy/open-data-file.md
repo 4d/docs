@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *accessPath* )<!-- END REF-->
 <!--REF #_command_.OPEN DATA FILE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | accessPath | Text | &#8594;  | 開くデータファイルの名前または完全アクセスパス |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *BLOB* ; *realFormat* {; *offset*} ) : Real<!-- END REF-->
 <!--REF #_command_.BLOB to real.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | 実数値を取り出すBLOB |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596; | BLOB中のオフセット (バイト単位) |
 | || | 読み込み後、新しいオフセット |
 | 戻り値 | Real | &#8592; | 実数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

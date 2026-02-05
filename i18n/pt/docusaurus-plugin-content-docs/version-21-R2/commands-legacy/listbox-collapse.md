@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *objeto* : Text {; *recursivo* : Boolean {; *seletor* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *objeto* : Field, Variable {; *recursivo* : Boolean {; *seletor* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | seletor | Integer | &#8594; | Parte do list box a contrair |
 | linha &#124; nivel | Inteiro longo | &#8594; | Número de quebra de fila a colapsar ou <br/>Número de nível de list box a contrair |
 | coluna | Integer | &#8594; | Número de quebra de coluna a contrair |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -17,6 +17,8 @@ displayed_sidebar: docs
 
 
 <!-- REF #_command_.File.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |path|Text|&#8594; |File path|
@@ -24,6 +26,7 @@ displayed_sidebar: docs
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
 |*|Operator|&#8594; |* to return file of host database|
 |Result|[4D.File](../API/FileClass.md)|&#8592;|New file object|
+</div>
 <!-- END REF -->
 
 ## Description

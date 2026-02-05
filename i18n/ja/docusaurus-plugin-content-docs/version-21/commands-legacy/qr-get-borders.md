@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *area* ; *column* ; *row* ; *border* ; *line* {; *color*} )<!-- END REF-->
 <!--REF #_command_.QR GET BORDERS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | border | Integer | &#8594;  | 罫線の値 |
 | line | Integer | &#8592; | 線の太さ |
 | color | Integer | &#8592; | 罫線のカラー |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

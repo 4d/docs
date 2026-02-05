@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Cache info.Syntax-->**Cache info** ( *dbFilter* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | dbFilter | Object | &#8594; | 返す属性の一覧を定義(データベースごとにフィルター) |
 | 戻り値 | Object | &#8592; | キャッシュについての情報 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

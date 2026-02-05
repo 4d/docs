@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* : Text ; *resIDs* : Integer array ; *resNames* : Text array {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resType | Text | &#8594; | 4文字のリソースタイプ |
 | resIDs | Integer array | &#8592; | リソースID番号 |
 | resNames | Text array | &#8592; | リソース名 |
 | resFile | Time | &#8594; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

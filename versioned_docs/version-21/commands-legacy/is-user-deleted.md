@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *userNumber* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is user deleted.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userNumber | Integer | &#8594;  | User ID number |
 | Function result | Boolean | &#8592; | TRUE = User account is deleted or does not exist FALSE = User account is active |
-
+</div>
 <!-- END REF-->
 
 ## Description 

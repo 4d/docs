@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP GET BOOKMARKS.Syntax-->**WP GET BOOKMARKS** ( *docWP* ; *tabNomsSignets* )<!-- END REF-->
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Document 4D Write Pro |
 | tabNomsSignets | Tableau texte | &#x1F858; | Tableau des noms de signets |
-
+</div>
 <!-- END REF-->
 
 ## Description 

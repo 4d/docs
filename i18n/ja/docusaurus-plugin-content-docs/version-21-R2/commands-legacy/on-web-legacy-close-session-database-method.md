@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Web Legacy Close Session database method.Syntax-->**On Web Legacy Close Session database method**<!-- END REF-->
 <!--REF #_command_.On Web Legacy Close Session database method.Params-->
+<div class="no-index">
+
 | このコマンドは引数を必要としません |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

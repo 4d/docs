@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* )<!-- END REF-->
 <!--REF #_command_.SET HELP MENU.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menuCol | Collection | &#8594;  | Colección de objetos de menú |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

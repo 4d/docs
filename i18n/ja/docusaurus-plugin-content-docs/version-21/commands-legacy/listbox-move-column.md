@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( {* ;} *object* ; *colPosition* )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) 省略時: objectは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | colPosition | Integer | &#8594;  | 列の新しい位置 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

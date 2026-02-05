@@ -6,6 +6,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Syntax-->**WP Add picture** ( *wpDoc* {; *picture*} ) : Object<br/>**WP Add picture** ( *wpDoc* {; *picturePath*} ) : Object<br/>**WP Add picture** ( *wpDoc* {; *pictureFileObj*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Add picture.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
@@ -13,7 +15,7 @@ displayed_sidebar: docs
 | picturePath | Text | &#8594;  | Picture path |
 | pictureFileObj | 4D.File | &#8594;  | 4D.File object representing a picture file |
 | Function result | Object | &#8592; | Object referencing the picture |
-
+</div>
 <!-- END REF-->
 
 ## Description 

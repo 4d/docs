@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *objeto* : Text ; *filtroEntrada* : Text )<br/>**OBJECT SET FILTER** ( *objeto* : Field, Variable ; *filtroEntrada* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FILTER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
 | filtroEntrada | Text | &#8594; | Novo filtro de entrada de dados para a área editável |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

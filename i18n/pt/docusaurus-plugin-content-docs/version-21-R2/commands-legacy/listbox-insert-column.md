@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *objeto* : Text ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *objeto* : Field, Variable ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | varTitulo | Integer, Pointer | &#8594; | Variável título da coluna |
 | nomRodapé | Text | &#8594; | Nome do rodapé da coluna |
 | nomeVar | Variable, Pointer | &#8594; | Variável do rodapé da coluna |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

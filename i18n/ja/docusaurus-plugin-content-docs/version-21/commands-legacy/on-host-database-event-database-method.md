@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Host Database Event database method.Syntax-->$1 -> On Host Database Event データベースメソッド<!-- END REF-->
 <!--REF #_command_.On Host Database Event database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $1 | 倍長整数 | &#8592; | イベントコード |
-
+</div>
 <!-- END REF-->
 
 ## 詳細 

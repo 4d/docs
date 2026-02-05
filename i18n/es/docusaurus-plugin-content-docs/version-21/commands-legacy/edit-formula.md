@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *tabla* ; *formula* )<!-- END REF-->
 <!--REF #_command_.EDIT FORMULA.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla a mostrar por defecto en el editor de fórmulas |
 | formula | Text | &#8594;  | Variable que contiene la fórmula a mostrar en el editor de fórmulas o "" para mostrar sólo el editor |
 | &#8592; | Fórmula validada por el usuario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

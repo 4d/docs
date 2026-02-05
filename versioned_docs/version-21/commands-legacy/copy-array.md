@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *source* ; *destination* )<!-- END REF-->
 <!--REF #_command_.COPY ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Array | &#8594;  | Array from which to copy |
 | destination | Array | &#8592; | Array to which to copy |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 <!-- REF #_command_.Web Event.Syntax -->**Web Event** : object<!-- END REF -->
 
 <!-- REF #_command_.Web Event.Params -->
+<div class="no-index">
+
 |Parameter|Type| |Description|
 |---------|--- |:---:|------|
 |Result|Object|&#8592;|Information on the triggered event |
-
+</div>
 <!-- END REF -->
 
 ## Description

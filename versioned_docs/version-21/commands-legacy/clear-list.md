@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *list* {; *} )<!-- END REF-->
 <!--REF #_command_.CLEAR LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
 | * | Operator |  &#8594;  | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
-
+</div>
 <!-- END REF-->
 
 ## Description 

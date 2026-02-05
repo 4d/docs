@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML DECODE.Syntax-->**XML DECODE** ( *xmlValue* : Text ; *4Dvar* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.XML DECODE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | xmlValue | Text | &#8594;  | Text type value coming from an XML structure |
 | 4Dvar | Field, Variable | &#8592; | 4D variable or field receiving the converted XML value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

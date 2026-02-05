@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *one* {; *many*} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | one | Boolean | &#8594;  | Status of all Many-to-One relations |
 | many | Boolean | &#8594;  | Status of all One-to-Many relations |
-
+</div>
 <!-- END REF-->
 
 ## Description 

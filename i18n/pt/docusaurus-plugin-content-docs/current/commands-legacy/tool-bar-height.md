@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Tool bar height.Syntax-->**Tool bar height**  : Integer<!-- END REF-->
 <!--REF #_command_.Tool bar height.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Altura (expresso em pixels) da barra de ferramentas ou 0 se a barra de ferramentas estiver escondida |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

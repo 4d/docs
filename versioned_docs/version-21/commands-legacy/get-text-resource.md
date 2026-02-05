@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resID* {; *resFile*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get text resource.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resID | Integer | &#8594;  | Resource ID number |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
 | Function result | Text | &#8592; | Contents of the TEXT resource |
-
+</div>
 <!-- END REF-->
 
 ## Description 

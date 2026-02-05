@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Max.Syntax-->**Max** ( *séries* : Field, Array {; *atributoRota* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | séries | Field, Array | &#8594; | Dados para os quais se retorna o valor máximo |
 | atributoRota | Text | &#8594; | Rota do atributo para o qual retornar o valor máximo |
 | Resultado | Date, Real | &#8592; | Valor máximo na série |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

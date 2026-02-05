@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *chaîneJSON* : Text ; *tab* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chaîneJSON | Text | &#8594; | Chaîne en JSON à analyser |
 | tab | Array | &#8592; | Tableau contenant le résultat de l’analyse de la chaîne JSON |
-
+</div>
 <!-- END REF-->
 
 ## Description 

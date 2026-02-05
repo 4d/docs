@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Syntax-->**OBJECT GET RGB COLORS** ( {* ;} *object* ; *foregroundColor* {; *backgroundColor* {; *altBackgrndColor*}} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET RGB COLORS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | foregroundColor | Text, Integer | &#8592; | RGB color value for foreground |
 | backgroundColor | Text, Integer | &#8592; | RGB color value for background |
 | altBackgrndColor | Text, Integer | &#8592; | RGB color value for alternating background |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *codigo* : Integer {; *modificadores* : Integer {; *processo* : Integer}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | codigo | Integer | &#8594; | Código do caractere ou código da tecla de função |
 | modificadores | Integer | &#8594; | Estado de teclas modificadoras |
 | processo | Integer | &#8594; | Número de referência do processo destino; ou fila do evento de aplicação, se omitido, ou 0 |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

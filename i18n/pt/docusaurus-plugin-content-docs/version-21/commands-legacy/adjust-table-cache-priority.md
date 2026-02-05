@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *Tabela* ; *prioridade* )<!-- END REF-->
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Table | Table | &#8594;  | Tabela cujo valor de prioridade de dados escalares vai ser ajustada |
 | prioridade | Integer | &#8594;  | Valor de prioridade de cache para a tabela |
-
+</div>
 <!-- END REF-->
 
 ## Modo especialista 

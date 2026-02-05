@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Log file.Syntax-->**Log file**  : Text<!-- END REF-->
 <!--REF #_command_.Log file.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | データベースログファイルのロング名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

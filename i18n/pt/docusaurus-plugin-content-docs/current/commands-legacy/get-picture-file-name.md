@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *imagem* : Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8594; | Imagem para a qual obter o nome por defeito |
 | Resultado | Text | &#8592; | Nome por defeito do arquivo imagem |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

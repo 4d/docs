@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* : Text )<!-- END REF-->
 <!--REF #_command_.SET USER ALIAS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | alias | Text | &#8594;  | Alternate user name for 4D user account or "" to reset |
-
+</div>
 <!-- END REF-->
 
 ## Description 

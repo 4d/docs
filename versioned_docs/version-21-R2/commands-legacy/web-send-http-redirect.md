@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | url | Text | &#8594;  | New URL |
 | * | Operator | &#8594;  | If specified = URL is not translated, If omitted = URL is translated |
-
+</div>
 <!-- END REF-->
 
 ## Description 

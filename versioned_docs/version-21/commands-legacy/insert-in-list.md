@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *list* ; *beforeItemRef* ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<br/>**INSERT IN LIST** ( * ; *list* ; * ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | itemRef | Integer | &#8594;  | Unique reference number for the new list item |
 | sublist | Integer | &#8594;  | Optional sublist to attach to the new list item |
 | expanded | Boolean | &#8594;  | Indicates if the sublist will be expanded or collapsed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

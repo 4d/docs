@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* ; *valor* ; > or < {; *posPrim* {; *posUlt*}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array a buscar |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | posPrim | Integer | &#8592; | Posición de su primera aparición si se encuentra el valor; de lo contrario la posición donde debe insertarse el valor |
 | posUlt | Integer | &#8592; | Posición de su última ocurrencia si se encuentra el valor; de lo contrario lo mismo que posPrim |
 | Resultado | Boolean | &#8592; | True si al menos un elemento en el array corresponde al valor, de lo contrario False |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

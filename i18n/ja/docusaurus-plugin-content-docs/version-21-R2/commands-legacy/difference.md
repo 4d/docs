@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set* : Text ; *subtractSet* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | set | Text | &#8594; | セット |
 | subtractSet | Text | &#8594; | 取り除くセット |
 | resultSet | Text | &#8594; | 結果のセット |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

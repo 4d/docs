@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *picture* ; *width* ; *height* {; *hOffset* {; *vOffset* {; *mode*}}} )<!-- END REF-->
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | 情報を取得するピクチャ |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | hOffset | Integer | &#8592; | バックグランド表示の時の水平方向のオフセット |
 | vOffset | Integer | &#8592; | バックグランド表示の時の垂直方向のオフセット |
 | mode | Integer | &#8592; | バックグランド表示の時の転送モード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

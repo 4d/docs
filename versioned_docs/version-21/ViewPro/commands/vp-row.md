@@ -7,6 +7,7 @@ title: VP Row
 **VP Row** ( *vpAreaName* : Text; *row* : Integer { ; *rowCount* : Integer { ; *sheet* : Integer } } ) : Object <!-- END REF -->
 
 <!-- REF #_method_.VP Row.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -14,7 +15,9 @@ title: VP Row
 |row|Integer|->|Row index|
 |rowCount  |Integer|->|Number of rows|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|Result |Object|<-|Range object of row(s)|
+</div>
+<!-- END REF -->
 
 ## Description
 

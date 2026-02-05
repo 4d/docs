@@ -9,9 +9,13 @@ title: VP SET ALLOWED METHODS
 
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|methodObj   |Object|->|Allowed methods in the 4D View Pro areas|<!-- END REF -->
+|methodObj   |Object|->|Allowed methods in the 4D View Pro areas|
+</div>
+<!-- END REF -->
 
 >**Compatibility**  
 

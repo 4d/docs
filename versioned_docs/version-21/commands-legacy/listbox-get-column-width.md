@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *object* {; *minWidth* {; *maxWidth*}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | minWidth | Integer | &#8592; | Minimum column width (in pixels) |
 | maxWidth | Integer | &#8592; | Maximum column width (in pixels) |
 | Function result | Integer | &#8592; | Column width (in pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

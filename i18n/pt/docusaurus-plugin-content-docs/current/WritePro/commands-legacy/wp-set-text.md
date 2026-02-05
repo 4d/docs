@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET TEXT.Syntax-->**WP SET TEXT** ( *wpRange* : Object ; *novoTexto* ; *posiçaoTexto* : Number {; *alcanceRange* : Number} )<!-- END REF-->
 <!--REF #_command_.WP SET TEXT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | wpRange | Object | &#8594;  | Objeto Range |
 | novoText | Text | &#8594;  | Texto a inserir |
 | posiçaoTexto | Number | &#8594;  | Inserir posição (substituir, antes, depois) |
 | alcanceRange | Number | &#8594;  | Inclui ou exclui o conteúdo inserido dentro da range |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

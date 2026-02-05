@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get section.Syntax-->**WP Get section** ( *targetObj* : Object ) | (*wpDoc* : Object ; *sectionIndex* : Integer ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get section.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素の参照 |
 | wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
 | sectionIndex | Integer | &#8594;  | セクションのインデックス |
 | 戻り値 | Object | &#8592; | 4D Write Pro セクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

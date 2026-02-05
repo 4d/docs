@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *object* : Object, Object ; *property* : Text )<!-- END REF-->
 <!--REF #_command_.OB SET NULL.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594; | 構造化されたオブジェクト |
 | property | Text | &#8594; | null 値を適用したいプロパティ名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

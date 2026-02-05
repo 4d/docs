@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* {; *fontStyle*} ) : any<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fontFamily | Text | &#8594;  | フォントファミリー名 |
 | fontStyle | Integer | &#8594;  | フォントスタイル: 0=通常 (デフォルト)、1=太字、2=斜体字 |
 | 戻り値 | Null, Object | &#8592; | フォントファイルオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

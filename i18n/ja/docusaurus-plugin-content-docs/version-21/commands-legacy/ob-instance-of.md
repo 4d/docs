@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* ; *class* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object | &#8594;  | クラスをテストするオブジェクト |
 | class | Object | &#8594;  | 属しているかをテストするクラス |
 | 戻り値 | Boolean | &#8592; | オブジェクトが指定されたクラスまたはその子クラスに属する場合にはTrue、それ以外の場合にはfalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

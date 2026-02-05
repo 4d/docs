@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find all.Syntax-->**WP Find all** ( *objCible* : Object ; *valeurRecherche* : Text ; *conditionRecherche* : Integer {; *remplacerValeur* : Text} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Find all.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | conditionRecherche | Integer | &#8594;  | Règle(s) de recherche |
 | remplacerValeur | Text | &#8594;  | Chaîne de remplacement |
 | Résultat | Collection | &#8592; | Collection d'objets plage |
-
+</div>
 <!-- END REF-->
 
 ## Description 

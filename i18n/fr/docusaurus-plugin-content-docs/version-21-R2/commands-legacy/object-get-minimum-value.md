@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Syntax-->**OBJECT GET MINIMUM VALUE** ( * ; *objet* : Text ; *valeurMini* : Date, Time, Real )<br/>**OBJECT GET MINIMUM VALUE** ( *objet* : Field, Variable ; *valeurMini* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | valeurMini | Date, Time, Real | &#8592; | Valeur minimale actuelle de l’objet |
-
+</div>
 <!-- END REF-->
 
 ## Description 

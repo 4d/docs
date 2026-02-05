@@ -6,11 +6,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trim.Syntax-->**Trim** ( *aString* ) : Text<!-- END REF-->
 <!--REF #_command_.Trim.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aString | Text | &#8594;  | Text to trim |
 | Function result | Text | &#8592; | Trimmed text |
-
+</div>
 <!-- END REF-->
 
 

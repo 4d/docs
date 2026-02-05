@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabelasNaoEncontradas* )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabelasNaoEncontradas | Text array | &#8592; | Nomes de tabelas não encontradas no banco de dados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

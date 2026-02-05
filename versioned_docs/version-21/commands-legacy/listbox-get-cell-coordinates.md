@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *object* ; *column* ; *row* ; *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified = object is the name of the object (string) If omitted = object is a variable |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | top | Integer | &#8592; | Top coordinate of the object |
 | right | Integer | &#8592; | Right coordinate of the object |
 | bottom | Integer | &#8592; | Bottom coordinate of the object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

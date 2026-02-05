@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de laquelle afficher l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

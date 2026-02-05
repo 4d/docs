@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texte* )<!-- END REF-->
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | texte | Text | &#8594;  | Texte à placer dans le conteneur de données |
-
+</div>
 <!-- END REF-->
 
 ## Description 

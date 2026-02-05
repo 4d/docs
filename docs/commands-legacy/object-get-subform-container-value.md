@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get subform container value.Syntax-->**OBJECT Get subform container value**  : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get subform container value.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | any | &#8592; | Current value of the subform container data source |
-
+</div>
 <!-- END REF-->
 
 ## Description 

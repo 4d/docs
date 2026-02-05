@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *instructionSQL* {; *objetLié*}{; *objetLié2* ; ... ; *objetLiéN*} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | instructionSQL | Text | &#8594;  | Commande SQL à exécuter |
 | objetLié | Variable, Field | &#8592; | Réception du résultat (si nécessaire) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

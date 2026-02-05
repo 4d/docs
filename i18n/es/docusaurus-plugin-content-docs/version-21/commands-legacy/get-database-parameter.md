@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*tabla* ;} *selector* {; *valor*} ) : Real<!-- END REF-->
 <!--REF #_command_.Get database parameter.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla del parámetro o Tabla por defecto si se omite este parámetro |
 | selector | Integer | &#8594;  | Código del parámetro de la base |
 | valor | Text | &#8592; | Valor alfa del parámetro |
 | Resultado | Real | &#8592; | Valor actual del parámetro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

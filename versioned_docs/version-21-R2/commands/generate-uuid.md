@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<br>**Generate UUID**( *version* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Generate UUID.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | version | Integer | &#8594;  | UUID version: 4 (default) or 7|
 | Function result | Text | &#8592; | New UUID as non-canonical text (32 characters) |
-
+</div>
 <!-- END REF-->
 
 

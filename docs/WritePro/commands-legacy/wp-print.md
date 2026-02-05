@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP PRINT.Syntax-->**WP PRINT** ( *wpDoc* : Object {; *printOptions* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP PRINT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | printOptions | Integer | &#8594;  | Printing options for the 4D Write Pro document |
-
+</div>
 <!-- END REF-->
 
 *This command is not thread-safe, it cannot be used in preemptive code.*

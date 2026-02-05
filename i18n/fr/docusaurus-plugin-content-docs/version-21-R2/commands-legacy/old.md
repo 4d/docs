@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Old.Syntax-->**Old** ( *leChamp* ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ dont vous voulez obtenir l'ancienne valeur |
 | Résultat | any | &#8592; | Valeur originale de champ |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabla* : Entero largo, Puntero ) : Text<br/>**Table name** ( *ptrTabla* : Entero largo, Puntero ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594; | Número de tabla o puntero de tabla |
 | Resultado | Text | &#8592; | Nombre de la tabla |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

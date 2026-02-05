@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *polices* {; *typeListe* } )<br/>**FONT LIST** ( *polices* {; *} ) <!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | polices | Text array | &#8592; | Tableau des noms des polices vectorielles disponibles |
 | typeListe &#124; * | Entier long, Opérateur | &#8594;  | Type de liste de police à retourner ou * pour retourner des noms de police sous macOS |
-
+</div>
 <!-- END REF-->
 
 ## Description 

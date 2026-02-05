@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EDIT ACCESS.Syntax-->**EDIT ACCESS**<!-- END REF-->
 <!--REF #_command_.EDIT ACCESS.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

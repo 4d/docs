@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( {* ;} *objeto* ; *moverH* ; *moverV* {; *redimH* {; *redimV* {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um  uma variável |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | redimH | Integer | &#8594;  | Valor do redimensionamento horizontal do objeto |
 | redimV | Integer | &#8594;  | Valor do redimensionamento vrtical do objeto |
 | * | Operador | &#8594;  | se especificado = coordenadas absolutas e se omitido = coordenadas relativas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

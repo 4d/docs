@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( * ; *objeto* : Text ; *valorMax* : Date, Time, Real )<br/>**OBJECT SET MAXIMUM VALUE** ( *objeto* : Field, Variable ; *valorMax* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si especifica, objeto es un nombre de objeto(cadena)<br/>Si se omite, objeto es un campo o variable |
 | objeto | any | &#8594; | Nombre del objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
 | valorMax | Date, Time, Real | &#8594; | Valor máximo para el objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

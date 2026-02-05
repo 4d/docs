@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Day of.Syntax-->**Day of** ( *date* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day of.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | date | Date | &#8594;  | 日を取り出す日付 |
 | 戻り値 | Integer | &#8592; | 日を表す数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

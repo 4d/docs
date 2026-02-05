@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *textoHTML* {; *tipo*} )<!-- END REF-->
 <!--REF #_command_.WEB SEND TEXT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | textoHTML | Text | &#8594;  | Campo o variable de tipo texto con formato HTML a enviar al navegador web |
 | tipo | Text | &#8594;  | True = Ir al modo contextual False o si se omite = Permanecer en el modo actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

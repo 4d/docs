@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *sessionID* ; *expDate* ; *expTime* )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | sessionID | Text | &#8594;  | Session UUID |
 | expDate | Date | &#8592; | Date of cookie expiration |
 | expTime | Time | &#8592; | Time of cookie expiration |
-
+</div>
 <!-- END REF-->
 
 ## Compatibility Note 

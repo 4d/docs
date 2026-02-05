@@ -71,12 +71,13 @@ They provide the following properties and functions:
 
 
 <!-- REF #_command_.WEB Server.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|----|---|
 |option|Integer|->|Web server to get (default if omitted = `Web server database`)|  
 |Result|4D.WebServer|<-|Web server object|
-
+</div>
 <!-- END REF -->
 
 The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
@@ -117,11 +118,12 @@ From your component, you want to know if the Web server of the host database is 
 
 
 <!-- REF #_command_.WEB Server list.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|----|---|
 |Result|Collection|<-|Collection of the available Web server objects|
-
+</div>
 <!-- END REF -->
 
 The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
@@ -687,12 +689,13 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 
 <!-- REF #WebServerClass.start().Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Web server settings to set at startup|  
 |Result|Object|<-|Status of the web server startup|
-
+</div>
 <!-- END REF -->
 
 The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
@@ -749,9 +752,13 @@ The function returns an object describing the Web server launch status. This obj
 
 
 <!-- REF #WebServerClass.stop().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|----|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 

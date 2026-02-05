@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** ({ *confCreacionApp* : Text })<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | confCreacionApp | Text | &#8594; | Ruta de acceso completa del proyecto a utilizar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

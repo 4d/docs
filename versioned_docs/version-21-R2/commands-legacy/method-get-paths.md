@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*folderName* : Text ;} *methodType* : Integer ; *arrPaths* : Text array {; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderName | Text | &#8594;  | Name of Home page folder |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | arrPaths | Text array | &#8592; | Array of method paths and names |
 | stamp | Real | &#8596;  | *in:* Minimum value of stamp<br/>*out:* New current value  |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get row font style.Syntax-->**LISTBOX Get row font style** ( * ; *objet* : Text ; *ligne* : Integer ) : Integer<br/>**LISTBOX Get row font style** ( *objet* : Field, Variable ; *ligne* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row font style.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | ligne | Integer | &#8594; | Numéro de ligne |
 | Résultat | Integer | &#8592; | Valeur de style |
-
+</div>
 <!-- END REF-->
 
 ## Description 

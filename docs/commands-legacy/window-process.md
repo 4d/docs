@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Window process.Syntax-->**Window process** ( *window* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Window process.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number |
 | Function result | Integer | &#8592; | Process reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

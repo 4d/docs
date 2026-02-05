@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : 倍長整数, 文字 )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : 倍長整数, 文字 )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picRef &#124; picName | 倍長整数, 文字 | &#8594; | ピクチャライブラリ画像の参照番号 または ピクチャライブラリ画像の名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

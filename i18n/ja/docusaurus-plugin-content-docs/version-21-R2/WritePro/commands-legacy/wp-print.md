@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP PRINT.Syntax-->**WP PRINT** ( *wpDoc* : Object {; *printOptions* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP PRINT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
 | printOptions | Integer | &#8594;  | 4D Write Pro ドキュメントの印刷オプション |
-
+</div>
 <!-- END REF-->
 
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*

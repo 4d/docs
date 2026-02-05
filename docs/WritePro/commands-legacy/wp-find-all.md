@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find all.Syntax-->**WP Find all** ( *targetObj* : Object ; *searchValue* : Text ; *searchCondition* : Integer {; *replaceValue* : Text} )  : Collection<!-- END REF-->
 <!--REF #_command_.WP Find all.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | searchCondition | Integer | &#8594;  | Search rule(s) |
 | replaceValue | Text | &#8594;  | Replacement string |
 | Function result | Collection | &#8592; | Collection of range objects |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Record number.Syntax-->**Record number** ( *tabla* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla de la cual devolver el número del registro actual o Tabla por defecto, si se omite |
 | Resultado | Integer | &#8592; | Número del registro actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

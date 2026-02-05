@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *aField* : Field ; *array* : Array {; ...(*aField* : Field ; *array* : Array)}{; *}})<br/>**SELECTION TO ARRAY** ( *aTable* : Table ; *array* : Array {; *aField* : Field ; *array* : Array {; ...(*aField* : Field ; *array* : Array)}}{; *})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field to use for retrieving data  |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | aField | Field | &#8594;  | Field to retrieve in array |
 | array | Array | &#8592; | Array to receive field data |
 | * | Operator | &#8594;  | Await execution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.User in group.Syntax-->**User in group** ( *user* : Text ; *group* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.User in group.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | user | Text | &#8594;  | User account name |
 | group | Text | &#8594;  | Group name |
 | Function result | Boolean | &#8592; | TRUE = user is in group FALSE = user is not in group |
-
+</div>
 <!-- END REF-->
 
 ## Description 

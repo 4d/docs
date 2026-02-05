@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Max.Syntax-->**Max** ( *series* {; *attributePath*} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Data for which to return the maximum value |
 | attributePath | Text | &#8594;  | Path of attribute for which to return the maximum value |
 | Function result | Date, Number | &#8592; | Maximum value in series |
-
+</div>
 <!-- END REF-->
 
 ## Description 

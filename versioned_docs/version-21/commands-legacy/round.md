@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Round.Syntax-->**Round** ( *round* ; *places* ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | round | Real | &#8594;  | Number to be rounded |
 | places | Integer | &#8594;  | Number of decimal places used for rounding |
 | Function result | Real | &#8592; | Number rounded to the number of decimal places specified by Places |
-
+</div>
 <!-- END REF-->
 
 ## Description 

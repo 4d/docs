@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT DATA.Syntax-->**IMPORT DATA** ( *fileName* : Text {; *project* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.IMPORT DATA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | Access path and name of the import file |
 | project | Text, Blob | &#8596;  | *in:* Contents of the import project<br/> *out:* New contents of the import project (if the * parameter has been passed)|
 | * | Operator | &#8594;  | Displays the import dialog box and updates the project |
-
+</div>
 <!-- END REF-->
 
 ## Description 

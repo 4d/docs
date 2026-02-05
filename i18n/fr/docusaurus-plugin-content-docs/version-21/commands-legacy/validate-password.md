@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Validate password.Syntax-->**Validate password** ( *utilisateur* ; *motDePasse* {; *digest*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | utilisateur | Integer, Text | &#8594;  | N° de référence unique ou Nom de l’utilisateur |
 | motDePasse | Text | &#8594;  | Mot de passe non crypté |
 | digest | Boolean | &#8594;  | Mot de passe digest = Vrai, <br/>Mot de passe en clair (défaut)= Faux |
 | Résultat | Boolean | &#8592; | Vrai = mot de passe correct, Faux = mot de passe incorrect |
-
+</div>
 <!-- END REF-->
 
 ## Description 

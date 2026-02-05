@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *cheminAccès* ; *dossiers* )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminAccès | Text | &#8594;  | Chemin d'accès de volume, répertoire ou dossier |
 | dossiers | Text array | &#8592; | Noms des dossiers situés à cet endroit |
-
+</div>
 <!-- END REF-->
 
 ## Description 

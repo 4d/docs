@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *nom* )<!-- END REF-->
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nom | Text | &#8594;  | Nom de la sélection temporaire à effacer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PLAY.Syntax-->**PLAY** ( *nomObjeto* : Text {; *canal* : Integer} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomObjeto | Text | &#8594; | Nombre de archivo de sonido o sonido sistemaCadena vacía para detener un sonido asincrónico |
 | canal | Integer | &#8594; | Si se pasa, canal de salida y ejecución asincrónico Si se omite, ejecución sincrónica |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

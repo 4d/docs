@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *manyTable* : Table ; *oneTable* : Table )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | manyTable | Table | &#8594; | nテーブル (リレーションの開始元) |
 | oneTable | Table | &#8594; | 1テーブル (リレーションの参照先) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

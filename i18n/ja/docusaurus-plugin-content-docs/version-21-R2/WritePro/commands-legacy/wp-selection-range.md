@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Selection range.Syntax-->**WP Selection range** ( {* ;} *wpArea* : Text ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Selection range.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時、wpAreaはオブジェクト名(文字列)。省略時はwpAreaはオブジェクトフィールドあるいは変数。 |
 | wpArea | Text | &#8594;  | フォームオブジェクト名(*指定時)、または4D Write Proオブジェクト変数またはフィールド(*省略時) |
 | 戻り値 | Object | &#8592; | レンジオブジェクト または ピクチャーオブジェクト |
-
+</div>
 <!-- END REF-->
 
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*

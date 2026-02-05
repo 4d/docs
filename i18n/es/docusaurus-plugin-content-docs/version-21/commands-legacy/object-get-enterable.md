@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get enterable.Syntax-->**OBJECT Get enterable** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enterable.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
 | objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
 | Resultado | Boolean | &#8592; | True = objeto(s) editable(s) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

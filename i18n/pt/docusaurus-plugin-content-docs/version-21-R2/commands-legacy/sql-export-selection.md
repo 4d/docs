@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *tabela* : Table ; *rotaPasta* : Text {; *numArquivos* : Integer {; *tamMaxArquivos* : Integer {; *tamLimCampos* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para a qual vai exportar a seleção |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numArquivos | Integer | &#8594; | Máximo número de arquivos por pasta |
 | tamMaxArquivos | Integer | &#8594; | Tamanho máximo de arquivo Export.sql (em Kb) |
 | tamLimCampos | Integer | &#8594; | Tamanho limite (em bytes) abaixo do qual os conteúdos dos campos Texto, BLOB ou Imagem são incluídos no arquivo principal |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

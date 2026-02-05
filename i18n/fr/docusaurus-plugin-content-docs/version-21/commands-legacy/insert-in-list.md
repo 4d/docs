@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *liste* ; *avantElément* ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<br/>**INSERT IN LIST** ( * ; *liste* ; * ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | réfElément | Integer | &#8594;  | Numéro de référence unique du nouvel élément |
 | sous_Liste | Integer | &#8594;  | Sous-liste optionnelle rattachée au nouvel élément |
 | déployée | Boolean | &#8594;  | Indique si la sous-liste doit être déployée ou non |
-
+</div>
 <!-- END REF-->
 
 ## Description 

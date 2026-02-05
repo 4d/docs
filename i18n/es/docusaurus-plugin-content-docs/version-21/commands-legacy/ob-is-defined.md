@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *objeto* {; *propiedad*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objeto | Object, Campo Object | &#8594;  | Objeto estructurado |
 | propiedad | Text | &#8594;  | Si se pasa = propiedad a verificar, si se omite = verificar el objeto |
 | Resultado | Boolean | &#8592; | Si propiedad se omite: True si objeto está definido, de lo contrario False.<br/>Si propiedad se pasa: True si propiedad está definida, de lo contrario False |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

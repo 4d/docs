@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE SET.Syntax-->**CREATE SET** ( {*tabla* : Table ;} *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE SET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla para la cual crear un conjunto a partir de la selección actual o Tabla por defecto si se omite |
 | conjunto | Text | &#8594; | Nombre del nuevo conjunto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *racine* : Text {; *nameSpace* : Text} {; *nSNom* : Text ; *nSValeur* : Text} {; ...(*nSNom* : Text, *nSValeur* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | racine | Text | &#8594; | Nom de l’élément racine |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nSNom | Text | &#8594; | Nom d’espace de nommage |
 | nSValeur | Text | &#8594; | Valeur d’espace de nommage |
 | Résultat | Text | &#8592; | Référence de l’élément XML racine |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objeto* : Object ; *propriedade* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.OB Get type.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objeto | Object | &#8594; | Objeto estruturado |
 | propriedade | Text | &#8594; | Nome da propriedade |
 | Resultado | Integer | &#8592; | Tipo de valor da propriedade |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

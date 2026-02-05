@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* : Time ;} *packet* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SEND PACKET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594;  | Document reference number, or Current channel (serial port or document) |
 | packet | Text, Blob | &#8594;  | String or BLOB to be sent |
-
+</div>
 <!-- END REF-->
 
 ## Description 

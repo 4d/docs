@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Syntax-->**Field** ( *numTable* ; *numChamp* ) -> ptrChamp <br/>
 **Field** ( *ptrChamp* ) -> numChamp<!-- END REF-->
 <!--REF #_command_.Field.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable | Integer | &#8594;  | Numéro de table |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | Paramètre | Type | Description |
 | ptrChamp | Pointer | &#8594;  | Pointeur de champ |
 | numChamp | Integer | &#8592; | Numéro de champ |
-
+</div>
 <!-- END REF-->
 
 ## Description 

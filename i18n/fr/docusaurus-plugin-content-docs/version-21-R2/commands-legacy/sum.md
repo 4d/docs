@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sum.Syntax-->**Sum** ( *séries* : Field, Array {; *cheminAttribut* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | séries | Field, Array | &#8594; | Valeurs dont vous souhaitez calculer la somme |
 | cheminAttribut | Text | &#8594; | Chemin d'attribut duquel calculer la somme |
 | Résultat | Real | &#8592; | Somme de séries |
-
+</div>
 <!-- END REF-->
 
 ## Description 

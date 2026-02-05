@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get links.Syntax-->**WP Get links** ( *targetObj* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get links.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Proドキュメント |
 | 戻り値 | Collection | &#8592; | リンクのコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

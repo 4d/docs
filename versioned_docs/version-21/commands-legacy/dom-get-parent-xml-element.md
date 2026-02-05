@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* {; *parentElemName* {; *parentElemValue*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get parent XML element.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | parentElemName | Text | &#8592; | Name of parent XML element |
 | parentElemValue | Text | &#8592; | Value of parent XML element |
 | Function result | Text | &#8592; | Parent XML element reference |
-
+</div>
 <!-- END REF-->
 
 ## Description 

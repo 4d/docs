@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM SET XML DECLARATION.Syntax-->**DOM SET XML DECLARATION** ( *refElemento* ; *codificaçao* {; *autonomo* {; *recuo*}} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594;  | Referência de elemento XML |
 | codificaçao | Text | &#8594;  | Conjunto de caracteres usado no documento XML |
 | autonomo | Boolean | &#8594;  | True=documento é autônomo; False (padrão) = documento não é autônomo |
 | recuo | Boolean | &#8594;  | ***Obsoleto, não usar*** |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

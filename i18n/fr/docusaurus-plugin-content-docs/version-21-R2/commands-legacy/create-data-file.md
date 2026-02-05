@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *cheminAccès* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminAccès | Text | &#8594; | Nom ou chemin d’accès complet du fichier de données à créer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

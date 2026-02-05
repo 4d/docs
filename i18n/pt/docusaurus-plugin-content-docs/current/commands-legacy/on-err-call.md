@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *metodoErro* : Text {; *escopo* : Integer} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | metodoErro | Text | &#8594; | Método de erro a ser chamado, ou string Vazia para não capturar erros |
 | escopo | Integer | &#8594; | Escopo do método de erro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

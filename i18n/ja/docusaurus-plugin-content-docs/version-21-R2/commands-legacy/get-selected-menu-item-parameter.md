@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get selected menu item parameter.Syntax-->**Get selected menu item parameter**  : Text<!-- END REF-->
 <!--REF #_command_.Get selected menu item parameter.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | メニュー項目のカスタムパラメタ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

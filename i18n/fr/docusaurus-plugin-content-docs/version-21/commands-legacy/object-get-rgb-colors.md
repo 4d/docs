@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Syntax-->**OBJECT GET RGB COLORS** ( {* ;} *objet* ; *couleurAvantPlan* {; *couleurArrièrePlan* {; *couleurArrièrePlanAlt*}} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET RGB COLORS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | couleurAvantPlan | Text, Integer | &#8592; | Valeur de la couleur RVB d'avant-plan |
 | couleurArrièrePlan | Text, Integer | &#8592; | Valeur de la couleur RVB d'arrière-plan |
 | couleurArrièrePlanAlt | Text, Integer | &#8592; | Valeur de la couleur RVB d'arrière-plan alternée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

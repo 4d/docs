@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*folderName* : Text ;} *methodType* : Integer ; *arrPaths* : Text array {; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | folderName | Text | &#8594; | ホームページのフォルダー名 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | arrPaths | Text array | &#8592; | メソッドパスおよび名前の配列 |
 | stamp | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

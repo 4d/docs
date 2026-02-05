@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New subsection.Syntax-->**WP New subsection** ( *wpSection* ; *subSectionType* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP New subsection.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpSection | Object | &#8594;  | Sección 4D Write Pro |
 | subSectionType | Integer | &#8594;  | Tipo de subsección (wk first page, wk left page, o wk right page) |
 | Resultado | Object | &#8592; | Nueva subsección |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

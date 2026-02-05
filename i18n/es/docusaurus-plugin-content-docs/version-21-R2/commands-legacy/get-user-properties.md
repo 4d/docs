@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *refUsuario* : Integer ; *nombre* : Text ; *inicio* : Text ; *contraseña* : Text ; *nbLogin* : Integer ; *ultimoLogin* : Date {; *membrecias* : Integer array {; *grupoPropietario* : Integer}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refUsuario | Integer | &#8594; | Número de referencia único de usuario |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | ultimoLogin | Date | &#8592; | Fecha de la última utilización de la base |
 | membrecias | Integer array | &#8592; | Números de referencia de los grupos a los que el usuario pertenece |
 | grupoPropietario | Integer | &#8592; | Número de referencia del grupo prioritario del usuario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

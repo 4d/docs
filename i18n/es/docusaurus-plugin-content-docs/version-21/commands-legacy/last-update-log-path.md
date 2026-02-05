@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last update log path.Syntax-->**Get last update log path** : Text<!-- END REF-->
 <!--REF #_command_.Last update log path.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Ruta de acceso del historial de actualización más reciente |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

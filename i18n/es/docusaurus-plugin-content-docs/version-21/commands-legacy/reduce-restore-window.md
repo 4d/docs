@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *ventana* )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ventana | Integer | &#8594;  | Número de referencia de la ventana |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

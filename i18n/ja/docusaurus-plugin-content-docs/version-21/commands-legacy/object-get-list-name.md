@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( {* ;} *object* {; *listType*} ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get list name.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
 | listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
 | 戻り値 | Text | &#8592; | (デザインモードで指定された) 選択リストの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

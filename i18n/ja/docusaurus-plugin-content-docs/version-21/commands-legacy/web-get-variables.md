@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *nameArray* ; *valueArray* )<!-- END REF-->
 <!--REF #_command_.WEB GET VARIABLES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | nameArray | Text array | &#8592; | Webフォームの変数の名前 |
 | valueArray | Text array | &#8592; | Webフォームの変数の値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

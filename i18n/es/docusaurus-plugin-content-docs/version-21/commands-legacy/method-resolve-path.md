@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *ruta* ; *tipoMetodo* ; *prtTabla* ; *nomObjeto* ; *nomObjForm* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ruta | Text | &#8594;  | Ruta a resolver |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomObjeto | Text | &#8592; | Nombre de formulario o de método base |
 | nomObjForm | Text | &#8592; | Nombre de objeto del formulario |
 | * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

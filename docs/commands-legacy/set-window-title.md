@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *title* : Text {; *window* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW TITLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | title | Text | &#8594;  | Window title |
 | window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

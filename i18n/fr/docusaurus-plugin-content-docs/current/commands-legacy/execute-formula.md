@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruction* : Text )<!-- END REF-->
 <!--REF #_command_.EXECUTE FORMULA.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | instruction | Text | &#8594; | Code à exécuter |
-
+</div>
 <!-- END REF-->
 
 ## Description 

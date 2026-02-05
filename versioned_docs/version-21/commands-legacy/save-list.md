@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *list* ; *listName* )<!-- END REF-->
 <!--REF #_command_.SAVE LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
 | listName | Text | &#8594;  | Name of the list as it will appear in the Design environment List Editor |
-
+</div>
 <!-- END REF-->
 
 ## Description 

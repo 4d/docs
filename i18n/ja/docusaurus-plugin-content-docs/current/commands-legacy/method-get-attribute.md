@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *path* : Text ; *attribType* : Integer {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.METHOD Get attribute.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | path | Text | &#8594; | プロジェクトメソッドのパス |
 | attribType | Integer | &#8594; | 取得する属性タイプ |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 | 戻り値 | Boolean | &#8592; | True: 属性が選択されている、False: 選択されていない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

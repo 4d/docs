@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.End selection.Syntax-->**End selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | レコードポインタがセレクションの最後のレコードよりも 後ろにあるかテストするテーブル、または 省略時、デフォルトテーブル |
 | 戻り値 | Boolean | &#8592; | Yes (TRUE) or No (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

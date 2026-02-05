@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT PICTURE.Syntax-->**CONVERT PICTURE** ( *picture* ; *codec* {; *compression*} )<!-- END REF-->
 <!--REF #_command_.CONVERT PICTURE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | 変換するピクチャ |
 | &#8592; | 変換されたピクチャ |
 | codec | Text | &#8594;  | ピクチャCodec ID |
 | compression | Real | &#8594;  | 圧縮の品質 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

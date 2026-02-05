@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Level.Syntax-->**Level**  : Integer<!-- END REF-->
 <!--REF #_command_.Level.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Nivel de ruptura o del encabezado actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

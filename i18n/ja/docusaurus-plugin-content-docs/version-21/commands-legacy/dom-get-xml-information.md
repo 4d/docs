@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* ; *xmlInfo* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XMLルート要素参照 |
 | xmlInfo | Integer | &#8594;  | 取得する情報のタイプ |
 | 戻り値 | Text | &#8592; | XML情報の値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

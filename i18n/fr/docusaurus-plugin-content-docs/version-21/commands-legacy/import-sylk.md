@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
 <!--REF #_command_.IMPORT SYLK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
 | nomFichier | Text | &#8594;  | Document SYLK à importer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

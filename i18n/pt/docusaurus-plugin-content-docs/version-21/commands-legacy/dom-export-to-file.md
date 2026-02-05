@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *refElemento* ; *viaArquivo* )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594;  | Referência do elemento Root XMLK |
 | viaArquivo | Text | &#8594;  | Acesso de rota completo do arquivo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

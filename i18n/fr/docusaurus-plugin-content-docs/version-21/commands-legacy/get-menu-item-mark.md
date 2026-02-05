@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* ; *ligneMenu* {; *process*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item mark.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
 | ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
 | process | Integer | &#8594;  | Numéro de référence de process |
 | Résultat | Text | &#8592; | Marque de ligne de menu courante |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Modified.Syntax-->**Modified** ( *aField* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field to test |
 | Function result | Boolean | &#8592; | True if the field has been assigned a new value, otherwise False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

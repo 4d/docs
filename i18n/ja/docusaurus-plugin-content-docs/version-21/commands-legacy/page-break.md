@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * )}<br/>**PAGE BREAK** {( > )}<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * &#124; > |Operator| &#8594;  | *: Print formで開始されたプリントジョブをキャンセル, または >: 1つのプリントジョブを強制 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

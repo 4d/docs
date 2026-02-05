@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *srcEns* ; *dstEns* )<!-- END REF-->
 <!--REF #_command_.COPY SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | srcEns | Text | &#8594;  | Nom de l'ensemble source |
 | dstEns | Text | &#8594;  | Nom de l'ensemble de destination |
-
+</div>
 <!-- END REF-->
 
 ## Description 

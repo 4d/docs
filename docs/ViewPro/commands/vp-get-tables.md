@@ -14,12 +14,15 @@ title: VP Get tables
 **VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get tables.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Collection|<-|Text collection with all table names|<!-- END REF -->
+|Result  |Collection|<-|Text collection with all table names|
+</div>
+<!-- END REF -->
 
 ## Description
 

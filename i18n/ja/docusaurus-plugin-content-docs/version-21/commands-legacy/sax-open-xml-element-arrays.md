@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax-->**SAX OPEN XML ELEMENT ARRAYS** ( *document* ; *tag* {; *attribNamesArray* ; *attribValuesArray*} {; *attribNamesArray2* ; *attribValuesArray2* ; ... ; *attribNamesArrayN* ; *attribValuesArrayN*} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | 開いたドキュメントの参照 |
 | tag | Text | &#8594;  | 開く要素の名前 |
 | attribNamesArray | Text array | &#8594;  | 属性名配列 |
 | attribValuesArray | Text array, Integer array, Date array, Real array, Picture array, Boolean array | &#8594;  | 属性値配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

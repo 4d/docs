@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *contrasena* : Text {; *opciones* : Object} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate password hash.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | contrasena | Text | &#8594; | La contraseña del usuario. Sólo se utilizan los primeros 72 caracteres. |
 | opciones | Object | &#8594; | Un objeto que contiene opciones. |
 | Resultado | Text | &#8592; | Devuelve la contraseña hash. |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost process.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Process number for first non-floating window |
 | Function result | Integer | &#8592; | Number of the process whose windows are in the front |
-
+</div>
 <!-- END REF-->
 
 ## Description 

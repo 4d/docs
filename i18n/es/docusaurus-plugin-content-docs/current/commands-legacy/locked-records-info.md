@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTabla* ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Tabla de la cual obtener los registros bloqueados |
 | Resultado | Object | &#8592; | Descripción de los registros bloqueados (si los hay) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

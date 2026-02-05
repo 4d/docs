@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *varRecep* )<!-- END REF-->
 <!--REF #_command_.RECEIVE BUFFER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | varRecep | Text | &#8592; | Variable para recibir datos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE VARIABLE.Syntax-->**RECEIVE VARIABLE** ( *variavel* )<!-- END REF-->
 <!--REF #_command_.RECEIVE VARIABLE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | variavel | Variable | &#8592; | Variável na qual receber |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *proceso* ; *dstVar* ; *expr* {; *dstVar2* ; *expr2* ; ... ; *dstVarN* ; *exprN*} )<!-- END REF-->
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | proceso | Integer | &#8594;  | Número de proceso de destino |
 | dstVar | Variable | &#8594;  | Variable de destino |
 | expr | Variable | &#8594;  | Expresión fuente (o variable fuente) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

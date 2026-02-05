@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( * ; *objeto* : Text ; *tamVariable* : Boolean {; *subformFijo* : Integer} )<br/>**OBJECT GET PRINT VARIABLE FRAME** ( *objeto* : Field, Variable ; *tamVariable* : Boolean {; *subformFijo* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
 | objeto | any | &#8594; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
 | tamVariable | Boolean | &#8592; | True = Impresión tamaño variable, False = impresión tamaño fijo |
 | subformFijo | Integer | &#8592; | Opción para impresión de subformularios de tamaño fijo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

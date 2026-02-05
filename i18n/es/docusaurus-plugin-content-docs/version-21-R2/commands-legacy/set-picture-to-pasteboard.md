@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Syntax-->**SET PICTURE TO PASTEBOARD** ( *imagen* : Picture )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | imagen | Picture | &#8594; | Imagen a copiar en el portapapeles |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

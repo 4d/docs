@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Object to path.Syntax-->**Object to path** ( *objetChemin* : Object ) : Text<!-- END REF-->
 <!--REF #_command_.Object to path.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objetChemin | Object | &#8594; | Objet décrivant un contenu de chemin |
 | Résultat | Text | &#8592; | Chemin de fichier ou de dossier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

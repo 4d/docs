@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get assert enabled.Syntax-->**Get assert enabled** : Boolean<!-- END REF-->
 <!--REF #_command_.Get assert enabled.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | True=asserções ativas False =  asserções desativadas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

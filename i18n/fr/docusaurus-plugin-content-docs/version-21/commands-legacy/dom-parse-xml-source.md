@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *nomFichier* {; *validation* {; *dtd* }} ) : Text<br/>**DOM Parse XML source** ( *nomFichier* {; *validation* {; *schéma* }} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML source.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomFichier | Text | &#8594;  | Chemin d’accès du document |
 | validation | Boolean | &#8594;  | Vrai = Validation, Faux = Pas de validation |
 | dtd &#124; schéma | Chaîne | &#8594;  | Emplacement de la DTD ou du schéma XML |
 | Résultat | Text | &#8592; | Référence de l’élément XML |
-
+</div>
 <!-- END REF-->
 
 ## Description 

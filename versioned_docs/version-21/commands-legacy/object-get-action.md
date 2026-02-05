@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
 | Function result | Text | &#8592; | Associated standard action name and (if any) parameter string |
-
+</div>
 <!-- END REF-->
 
 ## Description 

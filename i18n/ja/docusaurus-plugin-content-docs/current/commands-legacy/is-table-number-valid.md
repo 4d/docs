@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | tableNum | Integer | &#8594; | テーブル番号 |
 | 戻り値 | Boolean | &#8592; | True = テーブルがデータベースに存在する False = テーブルがデータベースに存在しない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

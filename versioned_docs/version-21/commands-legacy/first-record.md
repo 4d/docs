@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** {( *aTable* )}<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to move to the first selected record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

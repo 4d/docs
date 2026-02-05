@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Paragraph range.Syntax-->**WP Paragraph range** ( *targetObj* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Paragraph range.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro レンジ または 要素の参照 |
 | 戻り値 | Object | &#8592; | 段落のみを格納したレンジ |
-
+</div>
 <!-- END REF-->
 
 

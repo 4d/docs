@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *array* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify array.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Text array, Real array, Boolean array, Pointer array, Object array | &#8594;  | Array whose contents must be serialized |
 | * | Operator | &#8594;  | Pretty formatting |
 | Function result | Text | &#8592; | String containing the serialized JSON array |
-
+</div>
 <!-- END REF-->
 
 ## Description 

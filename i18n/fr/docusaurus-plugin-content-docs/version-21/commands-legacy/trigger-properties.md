@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *niveauTrigger* ; *evenementBase* ; *numTable* ; *numEnreg* )<!-- END REF-->
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | niveauTrigger | Integer | &#8594;  | Niveau d'exécution du trigger |
 | evenementBase | Integer | &#8592; | Evénement de base de données |
 | numTable | Integer | &#8592; | Numéro de la table |
 | numEnreg | Integer | &#8592; | Numéro de l'enregistrement |
-
+</div>
 <!-- END REF-->
 
 ## Description 

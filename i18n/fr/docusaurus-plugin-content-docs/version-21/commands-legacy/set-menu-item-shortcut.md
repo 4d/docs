@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* ; *ligneMenu* ; *touche* ; *modificateurs* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Numéro du menu ou Référence de menu |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | touche | Text, Integer | &#8594;  | Lettre du raccourci clavier ou code de caractère du raccourci clavier (ancienne syntaxe) |
 | modificateurs | Integer | &#8594;  | Modificateur(s) à associer au raccourci (ignoré si un code de touche est passé) |
 | process | Integer | &#8594;  | Numéro de référence du process |
-
+</div>
 <!-- END REF-->
 
 ## Description 

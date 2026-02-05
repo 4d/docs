@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *wpDoc* ; *bkName* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Bookmark range.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Proドキュメント |
 | bkName | Text | &#8594;  | レンジを取得したいブックマーク名 |
 | 戻り値 | Object | &#8592; | ブックマークのレンジ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

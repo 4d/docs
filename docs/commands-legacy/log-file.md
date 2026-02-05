@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Log file.Syntax-->**Log file** : Text<!-- END REF-->
 <!--REF #_command_.Log file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Long name of the database log file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domaine* ; *protocole* )} : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | domaine | Text | &#8592; | Nom du domaine |
 | protocole | Text | &#8592; | "Kerberos", "NTLM" ou chaîne vide |
 | Résultat | Text | &#8592; | Nom d'utilisateur de session retourné par Windows |
-
+</div>
 <!-- END REF-->
 
 ## Description 

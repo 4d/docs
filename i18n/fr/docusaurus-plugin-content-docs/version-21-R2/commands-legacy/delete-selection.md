@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de laquelle supprimer la sélection courante ou Table par défaut si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

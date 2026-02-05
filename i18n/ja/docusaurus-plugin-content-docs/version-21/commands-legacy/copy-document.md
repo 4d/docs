@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *sourceName* ; *destinationName* {; *newName*} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | sourceName | Text | &#8594;  | コピーするファイルやフォルダーのパス名 |
 | destinationName | Text | &#8594;  | ファイルやフォルダーコピーの配置先名またはパス名 |
 | newName | Text | &#8594;  | コピーされたファイルまたはフォルダの新しい名前 |
 | * | 演算子 | &#8594;  | 存在する場合、既存のドキュメントを上書きする |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

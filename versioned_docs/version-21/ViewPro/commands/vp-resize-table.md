@@ -15,11 +15,14 @@ title: VP RESIZE TABLE
 **VP RESIZE TABLE** ( *rangeObj* : Object; *tableName* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj|Object|->|New range for the table|
-|tableName|Text|->|Name of the table|<!-- END REF -->
+|tableName|Text|->|Name of the table|
+</div>
+<!-- END REF -->
 
 ## Description
 

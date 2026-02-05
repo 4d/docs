@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | xIndex | Integer | &#8594; | ドラッグアクションに含まれるx番目のファイル |
 | 戻り値 | Text | &#8592; | ペーストボードから取り出した、ファイルのパス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

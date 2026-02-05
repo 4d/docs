@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *janelas* {; *} )<!-- END REF-->
 <!--REF #_command_.WINDOW LIST.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janelas | Array | &#8592; | Array de números de referência de janelas |
 | * | Operador | &#8594;  | Se especificado, considere janela flutuante, se omitido, ignore janela flutuante |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

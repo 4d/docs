@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Close Connection database method.Syntax-->On Server Close Connection ($user : Integer ; $id : Integer ; $toIgnore : Integer)<!-- END REF-->
 <!--REF #_command_.On Server Close Connection database method.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | $user | Integer | &#8592; | Número de usuário utilizado internamente por 4D Server para identificar usuários |
 | $id | Integer | &#8592; | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
 | $toIgnore | Integer | &#8592; | Obsoleto: devolve sempre 0 mas deve ser declarado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

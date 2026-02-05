@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Before.Syntax-->**Before**  : Boolean<!-- END REF-->
 <!--REF #_command_.Before.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Devolve True se o ciclo de execução é um Before |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

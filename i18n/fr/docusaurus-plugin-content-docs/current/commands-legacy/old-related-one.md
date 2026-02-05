@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OLD RELATED ONE.Syntax-->**OLD RELATED ONE** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.OLD RELATED ONE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ N |
-
+</div>
 <!-- END REF-->
 
 ## Description 

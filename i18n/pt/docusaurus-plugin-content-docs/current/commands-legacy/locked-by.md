@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*tabela* : Table ;} *processo* : Integer ; *usuario4D* : Text ; *usuarioSessao* : Text ; *nomeProcesso* : Text )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para visualizar os registros bloqueados, ou Tabela Padrão, se omitido |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | usuario4D | Text | &#8592; | Nome do usuário 4D |
 | usuarioSessao | Text | &#8592; | Nome do usuário que abriu a sessão de trabalho |
 | nomeProcesso | Text | &#8592; | Nome do processo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( * ; *object* : Text ; *languageCode* : Text )<br/>**OBJECT SET KEYBOARD LAYOUT** ( *object* : Variable, Field ; *languageCode* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string ; if omitted, object is a variable or a field |
 | object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | languageCode | Text | &#8594;  | RFC3066 ISO639 and ISO3166 language code,"" = no change |
-
+</div>
 <!-- END REF-->
 
 ## Description 

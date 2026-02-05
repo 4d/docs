@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resTipo* ; *resNum* ; *resDatos* {; *resArchivo*} )<!-- END REF-->
 <!--REF #_command_.GET RESOURCE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | resTipo | Text | &#8594;  | Tipo de recurso (4 caracteres) |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | resDatos | Blob | &#8594;  | Campo o variable BLOB a recibir los datos |
 | &#8592; | Contenido del recurso |
 | resArchivo | Time | &#8594;  | Número de referencia del archivo de recursos o todos los archivos de recursos abiertos, si se omite |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

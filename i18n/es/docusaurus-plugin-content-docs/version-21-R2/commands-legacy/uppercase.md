@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *laCadena* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | laText | Text | &#8594; | Cadena a convertir en mayúsculas |
 | * | Operador | &#8594; | Si se pasa: conservar los acentos |
 | Resultado | Text | &#8592; | Cadena en mayúsculas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

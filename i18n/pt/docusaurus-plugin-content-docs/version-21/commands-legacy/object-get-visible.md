@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get visible.Syntax-->**OBJECT Get visible** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get visible.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
 | objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou variável ou campo (se * é omitido) |
 | Resultado | Boolean | &#8592; | True = objeto visível , ou então False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

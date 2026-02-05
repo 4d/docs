@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *pictureObject* ; *id* {; *margin*} )<!-- END REF-->
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
 | pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
 | id | Text | &#8594;  | ID attribute of element to display |
 | margin | Integer | &#8594;  | Margin of visibility (in pixels by default) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

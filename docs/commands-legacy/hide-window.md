@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.HIDE WINDOW.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number or Current process frontmost window, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Locked.Syntax-->**Locked** {( *tabla* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla en la cual verificar si el registro actual está bloqueado o Tabla por defecto, si se omite |
 | Resultado | Boolean | &#8592; | El registro está bloqueado (TRUE), o El registro no está bloqueado (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *targetObj* ; *startRange* ; *endRange* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Text range.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro ドキュメント、レンジ または 要素 |
 | startRange | Integer | &#8594;  | エリア内でのレンジの開始のオフセット |
 | endRange | Integer | &#8594;  | エリア内でのレンジの終わりのオフセット |
 | 戻り値 | Object | &#8592; | レンジオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

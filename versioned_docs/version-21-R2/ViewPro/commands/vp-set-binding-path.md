@@ -15,11 +15,14 @@ title: VP SET BINDING PATH
 **VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 | rangeObj | Object | -> | Range object |
-| dataContextAttribute  | Text | -> | Name of the attribute to bind to *rangeObj* |<!-- END REF -->
+| dataContextAttribute  | Text | -> | Name of the attribute to bind to *rangeObj* |
+</div>
+<!-- END REF -->
 
 ## Description
 

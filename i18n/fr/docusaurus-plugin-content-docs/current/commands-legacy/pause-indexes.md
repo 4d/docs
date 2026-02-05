@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *laTable* : Table )<!-- END REF-->
 <!--REF #_command_.PAUSE INDEXES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table pour laquelle suspendre les index |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aDate | Date | &#8594;  | Date for which to return the number |
 | Function result | Integer | &#8592; | Number representing the weekday on which date falls |
-
+</div>
 <!-- END REF-->
 
 ## Description 

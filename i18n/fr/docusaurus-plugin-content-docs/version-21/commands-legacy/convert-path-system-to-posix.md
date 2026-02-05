@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *cheminSystème* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminSystème | Text | &#8594;  | Chemin d’accès relatif ou absolu exprimé en syntaxe système |
 | * | Opérateur | &#8594;  | Option d’encodage |
 | Résultat | Text | &#8592; | Chemin d’accès absolu exprimé en syntaxe POSIX |
-
+</div>
 <!-- END REF-->
 
 ## Description 

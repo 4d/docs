@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* ; *errorAction* {; *attribName* ; *attribValue*} {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | scriptPath | Text | &#8594;  | Complete pathname of file containing SQL script to execute |
 | errorAction | Integer | &#8594;  | Action to carry out in case of error during script execution |
 | attribName | Text | &#8594;  | Name of attribute to use |
 | attribValue | Text | &#8594;  | Value of attribute |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *ensemble* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ensemble | Text | &#8594; | Nom de l'ensemble à effacer de la mémoire |
-
+</div>
 <!-- END REF-->
 
 ## Description 

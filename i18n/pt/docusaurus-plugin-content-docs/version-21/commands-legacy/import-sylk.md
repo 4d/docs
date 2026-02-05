@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*tabela* ;} *documento* )<!-- END REF-->
 <!--REF #_command_.IMPORT SYLK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela na qual vai importar dados, ou tabela Padrão, se omitido |
 | documento | Text | &#8594;  | documento SYLK do qual vai importar dados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*aTable* ;} *formName* ;} *formPict* {; *pageNum*} )<!-- END REF-->
 <!--REF #_command_.FORM SCREENSHOT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Form table |
 | formName | Text | &#8594;  | Name of form |
 | formPict | Picture | &#8592; | Picture of form being executed if first parameter(s) omitted, or <br/>Picture of form in Form editor if a form name is passed |
 | pageNum | Integer | &#8594;  | Form page number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

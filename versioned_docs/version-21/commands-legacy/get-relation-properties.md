@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *fieldPtr* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<br/>**GET RELATION PROPERTIES** ( *tableNum* ; *fieldNum* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldPtr | Pointer | &#8594;  | Field pointer |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | choiceField | Integer | &#8592; | Choice field number or 0 if no choice field |
 | autoOne | Boolean | &#8592; | True = Auto relate one, False = Manual relate one |
 | autoMany | Boolean | &#8592; | True = Auto one to many, False = Manual one to many |
-
+</div>
 <!-- END REF-->
 
 ## Description 

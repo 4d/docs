@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Date.Syntax-->**Date** ( *expression* ) : Date<!-- END REF-->
 <!--REF #_command_.Date.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Text, Date | &#8594;  | Chaîne contenant la date à retourner ou expression de type Date |
 | Résultat | Date | &#8592; | Expression de type Date |
-
+</div>
 <!-- END REF-->
 
 ## Description 

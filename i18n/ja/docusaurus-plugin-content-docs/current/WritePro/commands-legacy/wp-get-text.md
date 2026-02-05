@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get text.Syntax-->**WP Get text** ( *targetObj* : Object {; *expressions* : Number} ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get text.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジ または 要素 または4D Write Pro ドキュメント |
 | expressions | Number | &#8594;  | 式の評価の指定 |
 | 戻り値 | Text | &#8592; | targetObjのテキスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

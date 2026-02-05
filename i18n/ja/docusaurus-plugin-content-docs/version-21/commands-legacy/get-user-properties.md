@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | userID | Integer | &#8594;  | ユニークなユーザーID番号 |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | lastLogin | Date | &#8592; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
 | memberships | Integer array | &#8592; | ユーザーが属するグループのID番号 |
 | groupOwner | Integer | &#8592; | ユーザーのグループオーナーのID番号 (バイナリデータベースのみ) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

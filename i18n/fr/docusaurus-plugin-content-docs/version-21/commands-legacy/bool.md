@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Bool.Syntax-->**Bool** ( *expression* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Bool.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Expression | &#8594;  | Expression à retourner sous forme de booléen |
 | Résultat | Boolean | &#8592; | Expression sous forme booléenne |
-
+</div>
 <!-- END REF-->
 
 ## Description 

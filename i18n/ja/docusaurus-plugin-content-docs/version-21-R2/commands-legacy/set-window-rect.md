@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *window* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | left | Integer | &#8594; | ウィンドウ内容領域のグローバル左座標 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | bottom | Integer | &#8594; | ウィンドウ内容領域のグローバル下座標 |
 | window | Integer | &#8594; | ウィンドウ参照番号, または省略時カレントプロセスの最前面ウィンドウ |
 | * | 演算子 | &#8594; | 省略時 (デフォルト) = ウィンドウを最前面にする指定時 = ウィンドウの並びレベルを変更しない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

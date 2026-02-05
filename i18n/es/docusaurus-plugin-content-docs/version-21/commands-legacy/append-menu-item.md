@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* ; *itemText* {; *subMenu* {; *proceso* {; *}}} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Integer | &#8594;  | Número de menú o referencia de menú |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | subMenu | Text | &#8594;  | Referencia del submenú asociado al elemento |
 | proceso | Integer | &#8594;  | Número de referencia del proceso |
 | * | Operador | &#8594;  | Si se pasa: considerar metacaracteres como caracteres estándar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

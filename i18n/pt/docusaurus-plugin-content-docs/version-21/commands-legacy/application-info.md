@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application info.Syntax-->**Application info** : Object<!-- END REF-->
 <!--REF #_command_.Application info.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Object | &#8592; | Informação sobre a atividade da aplicação ativa |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

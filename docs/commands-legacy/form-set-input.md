@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*aTable* : Table ;} *form* : Text, Object {; *userForm* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to set the input form, or Default table, if omitted |
 | form | Text, Object | &#8594;  | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
 | userForm | Text | &#8594;  | Name of user form to use |
 | * | Operator |  &#8594;  | Automatic window size |
-
+</div>
 <!-- END REF-->
 
 ## Description 

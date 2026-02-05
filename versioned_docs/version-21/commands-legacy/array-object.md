@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY OBJECT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | arrayName | Array | &#8594;  | Name of array |
 | size | Integer | &#8594;  | Number of array elements or Number of arrays if size2 is specified |
 | size2 | Integer | &#8594;  | Number of 2D array elements |
-
+</div>
 <!-- END REF-->
 
 ## Description 

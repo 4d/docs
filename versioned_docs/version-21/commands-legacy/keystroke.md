@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Keystroke.Syntax-->**Keystroke**  : Text<!-- END REF-->
 <!--REF #_command_.Keystroke.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Character entered by user |
-
+</div>
 <!-- END REF-->
 
 ## Description 

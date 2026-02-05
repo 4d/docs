@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *elementRef* {; *nomElemHermano* {; *valorElemHermano*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get previous sibling XML element.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | Referencia del elemento XML |
 | nomElemHermano | Text | &#8592; | Nombre del elemento XML hermano |
 | valorElemHermano | Text | &#8592; | Valor del elemento XML hermano |
 | Resultado | Text | &#8592; | Referencia del elemento XML hermano |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

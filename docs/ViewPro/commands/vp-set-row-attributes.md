@@ -8,11 +8,14 @@ title: VP SET ROW ATTRIBUTES
 
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range of rows|
-|propertyObj |Object|->|Object containing row properties|<!-- END REF -->
+|propertyObj |Object|->|Object containing row properties|
+</div>
+<!-- END REF -->
 
 ## Description
 

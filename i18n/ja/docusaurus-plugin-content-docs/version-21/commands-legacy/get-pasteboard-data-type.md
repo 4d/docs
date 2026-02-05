@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *4Dsignatures* ; *nativeTypes* {; *formatNames*} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 4Dsignatures | Text array | &#8592; | データタイプの4D シグネチャ |
 | nativeTypes | Text array | &#8592; | ネイティブデータタイプ |
 | formatNames | Text array | &#8592; | フォーマット名|
-
+</div>
 <!-- END REF-->
 
 ## 説明 
