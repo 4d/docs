@@ -90,7 +90,7 @@ title: VP EXPORT DOCUMENT
 
 - 4D View Pro ドキュメントを Microsoft Excel 形式のファイルに書き出す場合、一部の設定が失われる可能性があります。 たとえば、4Dメソッドとフォーミュラは Excel ではサポートされません。 [SpreadJS にある一覧](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport) にて、その他の設定を確認することができます。
 - このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
-- ".xlsx" フォーマットで書き出す際には*excelOptions* オブジェクトの使用が推奨されています。 このオブジェクトを旧式の第一レベルプロパティ(*password*、*includeBindingSource*...)と混在させないように注意して下さい。 混在させた場合には問題が起きる可能性があります。
+- ".xlsx" フォーマットで書き出す際には*excelOptions* オブジェクトの使用が推奨されています。 Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource...*) to avoid potiental issues.
 
 **PDF 形式についての注意**:
 

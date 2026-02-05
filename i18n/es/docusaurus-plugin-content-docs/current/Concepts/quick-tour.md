@@ -359,7 +359,7 @@ Los comentarios son líneas de instrucciones inactivas. Estas líneas no son int
 Hay dos maneras de crear comentarios:
 
 - `//` para crear una línea de comentario
-- `/*...*/` para los bloques de comentarios en línea o multilínea.
+- `/...**/` para los bloques de comentarios en línea o multilínea.
 
 Ambos estilos de comentarios pueden utilizarse simultáneamente.
 

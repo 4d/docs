@@ -46,7 +46,7 @@ Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente
 
 Asociar una clase al formulario ofrece las siguientes ventajas:
 
-- Cuando trabajas en el [Editor de formularios](../FormEditor/formEditor.md), la clase asociada se utiliza para comprobar con precisión la sintaxis de expresiones como `Form.myProperty` en todas las áreas de la [Lista de propiedades](../FormEditor/formEditor.md#property-list) que soporta [expresiones](../Concepts/quick-tour.md#expressions) (por ejemplo, **Variable o Expresión**, **Expresión de color de fuente**...). Los errores se muestran en rojo y las advertencias se muestran en amarillo en la columna izquierda de la lista de propiedades y puede pasar el cursor para obtener explicaciones:
+- Cuando trabajas en el [Editor de formularios](../FormEditor/formEditor.md), la clase asociada se utiliza para comprobar con precisión la sintaxis de expresiones como `Form.myProperty` en todas las áreas de la [Lista de propiedades](../FormEditor/formEditor.md#property-list) que soporta [expresiones](../Concepts/quick-tour.md#expressions) (por ejemplo, **Variable o Expresión**, **Expresión de color de fuente*...*). Los errores se muestran en rojo y las advertencias se muestran en amarillo en la columna izquierda de la lista de propiedades y puede pasar el cursor para obtener explicaciones:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 

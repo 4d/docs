@@ -9,16 +9,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Params-->
 
-| Parámetros     | Tipo    |                             | Descripción                                                                            |
-| -------------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| left           | Integer | &#8594; | Coordenada izquierda global del área de contenido de la ventana                        |
-| top            | Integer | &#8594; | Global top coordinate of window contents area                                          |
-| right          | Integer | &#8594; | Global right coordinate of window contents area, or -1 for using form default size     |
-| bottom         | Integer | &#8594; | Global bottom coordinate of window contents area, or -1 for using form default size    |
-| type           | Integer | &#8594; | Window type                                                                            |
-| title          | Text    | &#8594; | Título de la ventana o "" para utilizar el título por defecto del formulario           |
-| controlMenuBox | Text    | &#8594; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
-| Resultado      | Integer | &#8592; | Número de referencia de la ventana                                                     |
+| Parámetros     | Tipo    |                             | Descripción                                                                                                             |
+| -------------- | ------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| left           | Integer | &#8594; | Coordenada izquierda global del área de contenido de la ventana                                                         |
+| top            | Integer | &#8594; | Coordenada superior global del área de contenido de la ventana                                                          |
+| right          | Integer | &#8594; | Coordenada derecha global del área de contenido de la ventana, o -1 para utilizar el tamaño por defecto del formulario  |
+| bottom         | Integer | &#8594; | Coordenada inferior global del área de contenido de la ventana, o -1 para utilizar el tamaño por defecto del formulario |
+| type           | Integer | &#8594; | Tipo de ventana                                                                                                         |
+| title          | Text    | &#8594; | Título de la ventana o "" para utilizar el título por defecto del formulario                                            |
+| controlMenuBox | Text    | &#8594; | Method to call when the Control-menu box is double-clicked or the Close box is clicked                                  |
+| Resultado      | Integer | &#8592; | Número de referencia de la ventana                                                                                      |
 
 <!-- END REF-->
 
@@ -44,12 +44,12 @@ The *type* parameter is optional. It represents the type of window you want to d
 
 | Constante                | Comentario                                                                                                                                                                                                                  |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Alternate dialog box     | Can be a floating window                                                                                                                                                                                                    |
+| Alternate dialog box     | Puede ser una ventana flotante                                                                                                                                                                                              |
 | Has full screen mode Mac |                                                                                                                                                                                                                             |
 | Modal dialog box         | Modal                                                                                                                                                                                                                       |
-| Movable dialog box       | Modal, Can be a floating window                                                                                                                                                                                             |
+| Movable dialog box       | Modal, puede ser una ventana flotante                                                                                                                                                                                       |
 | Palette window           |                                                                                                                                                                                                                             |
-| Plain dialog box         | Modal, Can be a floating window                                                                                                                                                                                             |
+| Plain dialog box         | Modal, puede ser una ventana flotante                                                                                                                                                                                       |
 | Plain fixed size window  |                                                                                                                                                                                                                             |
 | Plain no zoom box window |                                                                                                                                                                                                                             |
 | Plain window             |                                                                                                                                                                                                                             |
@@ -75,16 +75,16 @@ If more than one window is open for a process, the last window opened is the act
 
 Forms are displayed inside an open window. Text from the [MESSAGE](message.md) command also appears in the window.
 
-### Window types {#window-types}
+### Tipos de ventanas {#window-types}
 
 #### Alternate dialog box
 
-- Can have a title: No
+- Puede tener un título: no
 - Can have a close box or equivalent: No
-- Can be resized: No
-- Can be minimized/maximized or zoomed: No
-- Suitable for scroll bars: No
-- Usage: `DIALOG` or equivalent
+- Se puede redimensionar: no
+- Se puede minimizar/maximizar o ampliar: no
+- Adecuado para barras de desplazamiento: no
+- Uso: `DIALOG` o equivalente
 - Modal, unless used as floating windows.
 
 #### Has full screen mode Mac
@@ -97,75 +97,75 @@ Para utilizar esta opción, basta con añadir la constante `Has full screen mode
  DIALOG([Interface];"User_Choice")
 ```
 
-> **Note:** Under Windows, this option has no effect.
+> **Nota:** en Windows, esta opción no tiene ningún efecto.
 
 #### Modal dialog box
 
-- Can have a title: No
+- Puede tener un título: no
 - Can have a close box or equivalent: No
-- Can be resized: No
-- Can be minimized/maximized or zoomed: No
-- Suitable for scroll bars: No
-- Usage: `DIALOG` or equivalent
+- Se puede redimensionar: no
+- Se puede minimizar/maximizar o ampliar: no
+- Adecuado para barras de desplazamiento: no
+- Uso: `DIALOG` o equivalente
 - Modal
 
 #### Movable dialog box
 
-- Can have a title: Yes
+- Puede tener un título: sí
 - Can have a close box or equivalent: No
-- Can be resized: No
-- Can be minimized/maximized or zoomed: No
-- Suitable for scroll bars: No
-- Usage: `DIALOG` or equivalent
-- Modal, but can be moved and can be used as floating windows
+- Se puede redimensionar: no
+- Se puede minimizar/maximizar o ampliar: no
+- Adecuado para barras de desplazamiento: no
+- Uso: `DIALOG` o equivalente
+- Modal, pero desplazable y utilizable como ventana flotante
 
 #### Palette window
 
 This type of window allows you to generate floating windows which can be defined as resizable or not. Only the following options are supported:
 
-| Option          | Value to pass under Windows            | Value to pass under macOS              |
-| --------------- | -------------------------------------- | -------------------------------------- |
-| Not resizable   | -(Palette window+2) | -Palette window                        |
-| Redimensionable | -(Palette window+6) | -(Palette window+6) |
+| Option             | Valor a pasar en Windows               | Valor a pasar en macOS                 |
+| ------------------ | -------------------------------------- | -------------------------------------- |
+| No redimensionable | -(Palette window+2) | -Palette window                        |
+| Redimensionable    | -(Palette window+6) | -(Palette window+6) |
 
-- Can have a title: Yes, if passed
-- Can be resized: Yes, if the appropriate value is passed
+- Puede tener un título: sí, si se pasa
+- Puede cambiar de tamaño: sí, si se pasa el valor adecuado
 - Usage: Floating windows with `DIALOG` or `DISPLAY SELECTION` (no data entry).
   Note: With this type of window, the set of values (constant+option) must always be passed as a negative value. Make sure that you pass, for example, -(Palette window+6) and not (-Palette window+6).
 
 #### Plain dialog box {#plain-dialog-box}
 
-- Can have a title: No
+- Puede tener un título: no
 - Can have a close box or equivalent: No
-- Can be resized: No
-- Can be minimized/maximized or zoomed: No
-- Suitable for scroll bars: No
+- Se puede redimensionar: no
+- Se puede minimizar/maximizar o ampliar: no
+- Adecuado para barras de desplazamiento: no
 - Usage: `DIALOG` or equivalent, splashscreens
 - Modal, unless used as floating windows
 
 #### Plain fixed size window
 
-- Can have a title: Yes
+- Puede tener un título: sí
 - Can have a close box or equivalent: Yes
-- Can be resized: No on Macintosh
-- Can be minimized/maximized or zoomed: No
+- Se puede redimensionar: no en Macintosh
+- Se puede minimizar/maximizar o ampliar: no
 - Suitable for scroll bars: Yes and No
 - Usage: data entry
 
 #### Plain no zoom box window
 
-- Can have a title: Yes
+- Puede tener un título: sí
 - Can have a close box or equivalent: Yes
-- Can be resized: Yes
+- Se puede redimensionar: sí
 - Can be minimized/maximized or zoomed: No on Macintosh
 - Suitable for scroll bars: Yes
 - Usage: data entry with scrollbars, `DISPLAY SELECTION`, `MODIFY SELECTION`, etc.
 
 #### Plain window
 
-- Can have a title: Yes
+- Puede tener un título: sí
 - Can have a close box or equivalent: Yes
-- Can be resized: Yes
+- Se puede redimensionar: sí
 - Can be minimized/maximized or zoomed: Yes
 - Suitable for scroll bars: Yes
 - Usage: data entry with scrollbars, `DISPLAY SELECTION`, `MODIFY SELECTION`, etc.
@@ -198,16 +198,16 @@ Sheet windows are specific to macOS. These windows “drop down” over the titl
 
 #### Round corner window
 
-- Can have a title: Yes
+- Puede tener un título: sí
 - Can have a close box or equivalent: Yes
-- Can be resized: No on Macintosh
-- Can be minimized/maximized or zoomed: No
+- Se puede redimensionar: no en Macintosh
+- Se puede minimizar/maximizar o ampliar: no
 - Suitable for scroll bars: No on Macintosh
 - Usage: Rare (obsolete)
 
 #### Texture appearance
 
-Under macOS, it is possible to apply a texture appearance to windows. This type of look is found throughout the Macintosh interface. Under Windows, this property has no effect. To apply a texture appearance to a window created by the `Open window` command, you can just add the `Texture appearance` constant to the window type set in the *type* parameter. Por ejemplo:
+Under macOS, it is possible to apply a texture appearance to windows. This type of look is found throughout the Macintosh interface. En Windows, esta propiedad no tiene ningún efecto. To apply a texture appearance to a window created by the `Open window` command, you can just add the `Texture appearance` constant to the window type set in the *type* parameter. Por ejemplo:
 
 ```4d
 var $win:=Open window(10;80;-1;-1;Plain window+Texture appearance;"")
@@ -235,7 +235,7 @@ Windows of the types `Modal dialog box` and `Movable dialog` box are modal windo
 
 :::note
 
-A modal window always stays in the foreground. Como consecuencia, cuando una ventana modal llama a una ventana no modal, esta última se muestra en segundo plano, aunque haya sido llamada con posterioridad a la ventana modal. Por lo tanto, debe evitar este tipo de operación. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
+Una ventana modal siempre permanece en el primer plano. Como consecuencia, cuando una ventana modal llama a una ventana no modal, esta última se muestra en segundo plano, aunque haya sido llamada con posterioridad a la ventana modal. Por lo tanto, debe evitar este tipo de operación. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
 
 :::
 
@@ -244,7 +244,7 @@ A modal window always stays in the foreground. Como consecuencia, cuando una ven
 The following project method opens a window centered in the main window (Windows) or in the main screen (Macintosh). Note that it can accept two, three, or four parameters:
 
 ```4d
-  // OPEN CENTERED WINDOW project method
+  // Método proyecto OPEN CENTERED WINDOW
  #DECLARE($width : Integer; $height : Integer; $type : Integer; $title : Text)
  var $SW; $SH; $WW; $WH : Integer
  $SW:=Screen width\2

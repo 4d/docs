@@ -12,12 +12,12 @@ toc_max_heading_level: 3
 
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                 |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Tabla        | &#8594; | Table of the form or Default table, if omitted                                                                                                                                              |
+| aTable     | Tabla        | &#8594; | Tabla del formulario o Tabla por defecto, si se omite                                                                                                                                       |
 | formName   | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
 | type       | Integer      | &#8594; | Window type                                                                                                                                                                                 |
 | hPos       | Integer      | &#8594; | Horizontal position of the window                                                                                                                                                           |
-| vPos       | Integer      | &#8594; | Vertical position of the window                                                                                                                                                             |
-| \*         | Operador     | &#8594; | Save current position and size of the window                                                                                                                                                |
+| vPos       | Integer      | &#8594; | Posición vertical de la ventana                                                                                                                                                             |
+| \*         | Operador     | &#8594; | Guardar la posición y el tamaño actuales de la ventana                                                                                                                                      |
 | Resultado  | Integer      | &#8592; | Número de referencia de la ventana                                                                                                                                                          |
 
 <!-- END REF-->
@@ -34,7 +34,7 @@ In the *formName* parameter, you can pass:
 - la ruta (en sintaxis POSIX) a un archivo .json válido que contenga una descripción del formulario a utilizar. See *Form file path*;
 - un objeto que contiene la descripción del formulario a utilizar.
 
-The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](add-record.md) for example).
+*formName* no se muestra en la ventana. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](add-record.md) for example).
 
 The optional *type* parameter allows you to specify a type for the window. You must pass one of the following predefined constants (integer, placed in the *Open Form Window* theme):
 
@@ -116,7 +116,7 @@ Under Windows, this option has no effect.
 
 :::
 
-#### Form has no menu bar {#form-has-no-menu-bar}
+#### El formulario no tiene barra de menú {#form-has-no-menu-bar}
 
 Esta opción está pensada para su uso cuando el proyecto se ejecuta en [Modo SDI en Windows](../Menus/sdi.md). In this context, all windows of your application display by default the current process menu bar. If you want to open a window without menu bar, you need to add the `Form has no menu bar` constant to the *type* parameter. Por ejemplo, este código crea una ventana de formulario simple sin barra de menú en una aplicación IDE en Windows:
 
@@ -139,7 +139,7 @@ These types open **modal windows**. Una ventana modal coloca al usuario en un es
 
 :::note
 
-A modal window always stays in the foreground. Como consecuencia, cuando una ventana modal llama a una ventana no modal, esta última se muestra en segundo plano, aunque haya sido llamada con posterioridad a la ventana modal. Por lo tanto, debe evitar este tipo de operación. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
+Una ventana modal siempre permanece en el primer plano. Como consecuencia, cuando una ventana modal llama a una ventana no modal, esta última se muestra en segundo plano, aunque haya sido llamada con posterioridad a la ventana modal. Por lo tanto, debe evitar este tipo de operación. On the other hand, when a modal window calls another modal window, this latter window will be displayed in the foreground.
 
 :::
 
@@ -152,9 +152,9 @@ These window types have the following properties:
 | Redimensionable                      | No                    | Sí                      | Sí                               |
 | Can be minimized/maximized or zoomed | No                    | Sí                      | Sí                               |
 | Suitable for scroll bars             | No                    | No                      | No                               |
-| Modal                                | Sí                    | Yes, but can be moved   | Yes, but can be moved            |
+| Modal                                | Sí                    | Sí, pero puede moverse  | Sí, pero puede moverse           |
 
-**Usage**: `DIALOG`, `ADD RECORD(...;...*)` or equivalent.
+**Uso**: `DIALOG`, `ADD RECORD(...;...*)` o equivalente.
 
 #### Palette form window {#palette-form-window}
 

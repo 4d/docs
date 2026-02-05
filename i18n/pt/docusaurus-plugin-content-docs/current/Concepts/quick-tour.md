@@ -353,7 +353,7 @@ Os comentários são linhas de código inactivas. Estas linhas não são interpr
 Existem duas formas de criar comentários:
 
 - `//` para comentários de linha única
-- `/*...*/` para comentarios em linha ou multilinha.
+- `/...**/` para comentarios em linha ou multilinha.
 
 Ambos os estilos de comentários podem ser utilizados em simultâneo.
 

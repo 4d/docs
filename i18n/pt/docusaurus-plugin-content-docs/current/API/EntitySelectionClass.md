@@ -860,7 +860,7 @@ Exemplo com a opção `dk stop dropping on first error`:
 
 </details>
 
-<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *...attributePath* : Text ; *...targetPath* : Text ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( ...*attributePath* : Text ; ...*targetPath* : Text ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.extract().Params -->
 
@@ -1745,7 +1745,7 @@ Neste exemplo, o campo de objeto "marks" na classe de dados **Students** contém
 
 </details>
 
-<!-- REF #EntitySelectionClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.query().Syntax -->**.query**( *queryString* : Text { ; ...*value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.query().Params -->
 

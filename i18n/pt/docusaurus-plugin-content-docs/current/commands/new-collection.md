@@ -4,7 +4,7 @@ title: Nova coleção
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
+<!-- REF #_command_.New collection.Syntax -->**New collection** {( ...*value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New collection.Params-->
 

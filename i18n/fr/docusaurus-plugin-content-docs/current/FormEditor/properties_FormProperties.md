@@ -45,7 +45,7 @@ Nom d'une [classe utilisateurs](../Concepts/classes.md#class-definition) existan
 
 L'association d'une classe au formulaire offre les avantages suivants :
 
-- Lorsque vous travaillez dans l'[Editeur de formulaires](../FormEditor/formEditor.md), la classe associée est utilisée pour une vérification syntaxique précise des expressions telles que `Form.myProperty` dans toutes les zones de la [Liste des propriétés](../FormEditor/formEditor.md#property-list) qui supportent les [expressions](../Concepts/quick-tour.md#expressions) (par exemple **Variable ou Expression**, **Expression de la couleur de la police**...). Les erreurs sont affichées en rouge et les warnings en jaune dans la colonne de gauche de la liste des propriétés et vous pouvez les survoler pour obtenir des explications :
+- Lorsque vous travaillez dans l'[Editeur de formulaires](../FormEditor/formEditor.md), la classe associée est utilisée pour une vérification syntaxique précise des expressions telles que `Form.myProperty` dans toutes les zones de la [Liste des propriétés](../FormEditor/formEditor.md#property-list) qui supportent les [expressions](../Concepts/quick-tour.md#expressions) (par exemple **Variable ou Expression**, **Expression de la couleur de la police*...*). Les erreurs sont affichées en rouge et les warnings en jaune dans la colonne de gauche de la liste des propriétés et vous pouvez les survoler pour obtenir des explications :
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 

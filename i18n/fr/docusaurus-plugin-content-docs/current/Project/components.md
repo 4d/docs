@@ -440,7 +440,7 @@ Pour ajouter une dépendance locale, cliquez sur le bouton **+** dans la zone in
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Assurez-vous que l'onglet **Local** est sélectionné et cliquez sur le bouton **...**. Une boîte de dialogue standard d'ouverture de fichier s'affiche, vous permettant de sélectionner le composant à ajouter. Vous pouvez sélectionner un fichier [**.4DZ**](../Desktop/building.md#build-component) ou [**.4DProject**](architecture.md#applicationname4dproject-file).
+Make sure the **Local** tab is selected and click on the *...*\*\* button. Une boîte de dialogue standard d'ouverture de fichier s'affiche, vous permettant de sélectionner le composant à ajouter. Vous pouvez sélectionner un fichier [**.4DZ**](../Desktop/building.md#build-component) ou [**.4DProject**](architecture.md#applicationname4dproject-file).
 
 Si l'élément sélectionné est valide, son nom et son emplacement sont affichés dans la boîte de dialogue.
 

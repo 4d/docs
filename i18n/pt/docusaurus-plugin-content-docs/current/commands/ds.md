@@ -4,7 +4,7 @@ title: ds
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ds.Syntax-->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
+<!--REF #_command_.ds.Syntax-->**ds** ({ *localID* : Text }) : cs.DataStore <!-- END REF -->
 
 <!--REF #_command_.ds.Params-->
 

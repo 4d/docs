@@ -359,7 +359,7 @@ Les commentaires sont des lignes d’instructions inactives. Ces lignes ne sont 
 Voici deux manières de créer des commentaires :
 
 - `//` pour créer une ligne de commentaire
-- `/*...*/` pour les blocs de commentaire en ligne et multi-lignes.
+- `/...**/` pour les blocs de commentaire en ligne et multi-lignes.
 
 Les deux styles de commentaires peuvent être utilisés simultanément.
 

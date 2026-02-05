@@ -440,7 +440,7 @@ Para adicionar uma dependência local, clique no botão **+** na área de rodap�
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. Uma caixa de diálogo padrão Abrir arquivo é exibida, permitindo que você selecione o componente a ser adicionado. Você pode selecionar um arquivo [**.4DZ**](../Desktop/building.md#build-component) ou um arquivo [**.4DProject**](architecture.md#applicationname4dproject-file).
+Make sure the **Local** tab is selected and click on the *...*\*\* button. Uma caixa de diálogo padrão Abrir arquivo é exibida, permitindo que você selecione o componente a ser adicionado. Você pode selecionar um arquivo [**.4DZ**](../Desktop/building.md#build-component) ou um arquivo [**.4DProject**](architecture.md#applicationname4dproject-file).
 
 Se o item selecionado for válido, seu nome e localização serão exibidos na caixa de diálogo.
 

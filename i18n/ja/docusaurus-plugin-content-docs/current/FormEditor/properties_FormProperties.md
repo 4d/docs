@@ -45,7 +45,7 @@ title: フォームプロパティ
 
 フォームにクラスを割り当てることで、以下のような利点があります:
 
-- [フォームエディター](../FormEditor/formEditor.md) を使用する際、割り当てられたクラスは[式](../Concepts/quick-tour.md#expressions) をサポートする[プロパティリスト](../FormEditor/formEditor.md#property-list) の全てのエリア(例: **変数または式**、**フォントカラー式**...)において、`Form.myProperty` のような式に対する正確なシンタックスチェックを行うのに使用されます。  エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
+- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression*...*). エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
