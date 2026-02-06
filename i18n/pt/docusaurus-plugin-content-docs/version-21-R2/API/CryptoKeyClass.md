@@ -221,7 +221,7 @@ A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descriptografa 
 
 A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
-##### *opções*
+##### *options*
 
 | Propriedade       | Tipo | Descrição                                                                                                                                                                                                             |
 | ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

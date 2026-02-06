@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro   | Tipo   |                             | Descrição                                                          |
 | ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
-| targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                          |
+| targetObj   | Object | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                    |
 | formula     | Object | &#8594; | Objeto de fórmula OU Objeto com propriedades de fórmula e nome     |
 | mode        | Real   | &#8594; | Modo de inserção                                                   |
 | rangeUpdate | Real   | &#8594; | Inclui ou exclui o conteúdo inserido dentro do intervalo           |
@@ -50,10 +50,10 @@ No parâmetro *mode*, passe uma das seguintes constantes para indicar o modo de 
 
 - Se *targetObj* for um intervalo, você poderá usar o parâmetro opcional *rangeUpdate* para passar uma das seguintes constantes e especificar se a *fórmula* inserida está ou não incluída no intervalo resultante:
 
-| Parâmetros            | Tipo    | Valor | Comentário                                                               |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
+| Parâmetros            | Tipo    | Valor | Comentário                                                                     |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------------ |
+| wk exclude from range | Integer | 1     | Conteúdos inseridos não incluídos no intervalo atualizado                      |
+| wk include in range   | Integer | 0     | Conteúdo inserido incluído no intervalo atualizado (padrão) |
 
 Se você não passar um parâmetro *rangeUpdate*, por padrão a *fórmula* inserida será incluída no intervalo resultante.
 
