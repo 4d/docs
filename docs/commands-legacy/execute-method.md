@@ -5,7 +5,7 @@ slug: /commands/execute-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *methodName* : Text ; *result* : Variable {; ...*param* : Expression} )<br/>**EXECUTE METHOD** ( *methodName* : Text ; * {; ...*param* : Expression} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *methodName* : Text )<br/>**EXECUTE METHOD** ( *methodName* : Text ; *result* : Variable {; *...param* : Expression} )<br/>**EXECUTE METHOD** ( *methodName* : Text ; * {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD.Params-->
 <div class="no-index">
 
@@ -22,11 +22,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1...paramN*<!-- END REF-->. You can pass the name of any method that can be called from the database or the component executing the command.
 
-In *result*, you can pass a variable which will receive the result of the execution of *methodName* (value placed in $0 inside *methodName*). If the method does not return a result, pass *\** as the second parameter. If the method does not return a result and does not require any parameters to be passed, pass only the *methodName* parameter.
+In *result*, you can pass a variable which will receive the result of the execution of *methodName*. If the method does not return a result, pass *\** as the second parameter. If the method does not return a result and does not require any parameters to be passed, pass only the *methodName* parameter.
 
 The execution context is preserved in the called method, which means that the current form and any current form event remain defined. 
 
-If you call this command from a component and pass a method name belonging to the host database in *methodName* (or vice versa), the method must have been shared (“Shared by components and host database” option, in the Method properties).
+If you call this command from a component and pass a method name belonging to the host database in *methodName* (or vice versa), the method must have been shared (“Shared by components and host database” option, in the [Method properties](../Project/project-method-properties.md)).
 
 ## System variables and sets 
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Menu number or Menu reference |
+| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | afterItem | Integer | &#8594;  | Menu item number |
 | itemText | Text | &#8594;  | Text for the menu item to be inserted |
 | subMenu | Text | &#8594;  | Reference of submenu associated with item |

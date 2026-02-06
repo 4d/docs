@@ -1882,7 +1882,7 @@ Ordering with a property path:
 
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
+<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *methodName* : Text { ; *...extraParam* : expression } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.orderByMethod().Params -->
