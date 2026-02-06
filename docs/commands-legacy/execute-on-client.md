@@ -5,7 +5,7 @@ slug: /commands/execute-on-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *clientName* : Text ; *methodName* : Text {; ...*param* : any} )<!-- END REF-->
+<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *clientName* : Text ; *methodName* : Text {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.EXECUTE ON CLIENT.Params-->
 <div class="no-index">
 

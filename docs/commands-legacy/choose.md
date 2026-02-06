@@ -5,7 +5,7 @@ slug: /commands/choose
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterion* : Boolean, Integer ; *value* : Expression {; ...*value* : Expression} )  : any<!-- END REF-->
+<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterion* : Boolean, Integer ; *value* : Expression {; *...value* : Expression} )  : any<!-- END REF-->
 <!--REF #_command_.Choose.Params-->
 <div class="no-index">
 

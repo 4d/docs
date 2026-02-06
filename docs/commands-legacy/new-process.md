@@ -14,7 +14,7 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *method* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; ...*param* : Expression}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *method* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 <div class="no-index">
 
