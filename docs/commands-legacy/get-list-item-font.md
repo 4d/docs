@@ -5,7 +5,7 @@ slug: /commands/get-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ) : Text<!-- END REF-->
+<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( * ; *list* : Text ; *itemRef* : Integer, Operator ) : Text<br/>**Get list item font** ( *list* : Integer ; *itemRef* : Integer, Operator ) : Text<!-- END REF-->
 <!--REF #_command_.Get list item font.Params-->
 <div class="no-index">
 

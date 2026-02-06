@@ -5,7 +5,7 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *list* : Integer, Text {; *itemsArray* : Integer array {; *}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( * ; *list* : Text {; *itemsArray* : Integer array {; *}} ) : Integer<br/>**Selected list items** ( *list* : Integer {; *itemsArray* : Integer array {; *}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 <div class="no-index">
 

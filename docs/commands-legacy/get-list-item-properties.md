@@ -5,7 +5,7 @@ slug: /commands/get-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *enterable* : Boolean {; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *enterable* : Boolean {; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}}} )<br/>*GET LIST ITEM PROPERTIES** ( *list* : Integer ; *itemRef* : Integer, Operator ; *enterable* : Boolean {; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 <div class="no-index">
 

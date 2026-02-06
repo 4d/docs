@@ -5,7 +5,7 @@ slug: /commands/set-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**SET LIST ITEM PARAMETER** ( *list* : Integer ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PARAMETER.Params-->
 <div class="no-index">
 

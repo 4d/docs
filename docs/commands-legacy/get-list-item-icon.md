@@ -5,7 +5,7 @@ slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *icon* : Picture )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( * ; *list* : Text ; *itemRef* : Operator, Integer ; *icon* : Picture )<br/>**GET LIST ITEM ICON** ( *list* : Integer ; *itemRef* : Operator, Integer ; *icon* : Picture )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 <div class="no-index">
 

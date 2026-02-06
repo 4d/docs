@@ -5,7 +5,7 @@ slug: /commands/set-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *icon* : Picture )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *icon* : Picture )<br/>**SET LIST ITEM ICON** (*list* : Integer ; *itemRef* : Integer, Operator ; *icon* : Picture )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM ICON.Params-->
 <div class="no-index">
 
