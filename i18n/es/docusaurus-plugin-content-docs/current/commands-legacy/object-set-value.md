@@ -16,7 +16,7 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-## Ejemplo 1 
+## Descripción
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** define el *valor* de la fuente de datos actual para los objetos de formulario designados por el parámetro *nomObjeto*.<!-- END REF-->
 

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get value.Summary-->La commande **OBJECT Get value** retourne la valeur courante des sources de données des objets formulaire désignés par le paramètre nomObjet.<!-- END REF-->
 
-Dans le paramètre nomObjet, passez le nom d'un objet formulaire (chaine). Si vous utilisez un caractère générique (“@”) pour de multiples objets, seule la valeur des sources de données du premier objet de formulaire est retourné.
+Dans le paramètre *nomObjet*, passez le nom d'un objet formulaire (chaine). Si vous utilisez un caractère générique (“@”) pour de multiples objets, seule la valeur des sources de données du premier objet de formulaire est retourné.
 
 **Note**: **OBJECT Get value** n'est pas disponible dans les objets colonnes de list box..
 

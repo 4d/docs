@@ -59,7 +59,7 @@ L'exemple suivant est la méthode objet d'un bouton de recherche situé dans la 
  End case
 ```
 
-## Exemple 2 
+## Exemple 
 
 Vous souhaitez insérer des libellés sur deux lignes :
 

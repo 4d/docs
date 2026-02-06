@@ -55,7 +55,7 @@ El siguiente ejemplo es el método de objeto de un botón de búsqueda ubicado e
  End case
 ```
 
-## Ejemplo 2 
+## Ejemplo
 
 Usted quiere insertar los títulos en dos líneas:
 
