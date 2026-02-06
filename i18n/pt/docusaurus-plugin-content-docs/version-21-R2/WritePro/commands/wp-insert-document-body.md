@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro   | Tipo    |                             | Descrição                                                |
 | ----------- | ------- | --------------------------- | -------------------------------------------------------- |
-| targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document                |
+| targetObj   | Object  | &#8594; | Intervalo ou elemento ou documento 4D Write Pro          |
 | wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                   |
 | mode        | Integer | &#8594; | Modo de inserção                                         |
 | rangeUpdate | Integer | &#8594; | Modo de atualização de intervalo                         |
@@ -32,11 +32,11 @@ The inserted *wpDoc* document can be any 4D Write Pro document object created us
 
 In the *mode* parameter, pass one or a combination of the following constants from the *4D Write Pro Constants* theme to indicate the insertion mode to be used for the document in the destination *targetObj*:
 
-| Parâmetros | Tipo    | Valor | Comentário                             |
-| ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Integer | 2     | Insert contents at end of target       |
-| wk prepend | Integer | 1     | Insert contents at beginning of target |
-| wk replace | Integer | 0     | Replace target contents                |
+| Parâmetros | Tipo    | Valor | Comentário                         |
+| ---------- | ------- | ----- | ---------------------------------- |
+| wk append  | Integer | 2     | Inserir conteúdo no final do alvo  |
+| wk prepend | Integer | 1     | Inserir conteúdo no início do alvo |
+| wk replace | Integer | 0     | Replace target contents            |
 
 You can combine one of the previous constants with the following insertion options:
 
@@ -47,10 +47,10 @@ You can combine one of the previous constants with the following insertion optio
 
 In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
-| Parâmetros            | Tipo    | Valor | Comentário                                                               |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
+| Parâmetros            | Tipo    | Valor | Comentário                                                                     |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------------ |
+| wk exclude from range | Integer | 1     | Conteúdos inseridos não incluídos no intervalo atualizado                      |
+| wk include in range   | Integer | 0     | Conteúdo inserido incluído no intervalo atualizado (padrão) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 

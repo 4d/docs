@@ -9,11 +9,16 @@ title: VP Get names
 
 <!-- REF #_method_.VP Get names.Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                                                      |                  |
-| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | ->                          | Nome de objeto formulário área 4D View Pro                     |                  |
-| scope      | Integer    | ->                          | Escopo de destino (padrão = planilha atual) |                  |
-| Resultados | Collection | <- | Nomes existentes no âmbito definido                            | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo       |                             | Descrição                                                      |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- |
+| vpAreaName | Text       | ->                          | Nome de objeto formulário área 4D View Pro                     |
+| scope      | Integer    | ->                          | Escopo de destino (padrão = planilha atual) |
+| Resultados | Collection | <- | Nomes existentes no âmbito definido                            |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

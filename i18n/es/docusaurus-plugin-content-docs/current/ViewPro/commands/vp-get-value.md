@@ -9,10 +9,15 @@ title: VP Get value
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Parámetros | Tipo   |                             | Descripción                           |                  |
-| ---------- | ------ | --------------------------- | ------------------------------------- | ---------------- |
-| rangeObj   | Object | ->                          | Objeto rango                          |                  |
-| Resultado  | Object | <- | Objeto que contiene un valor de celda | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |                             | Descripción                           |
+| ---------- | ------ | --------------------------- | ------------------------------------- |
+| rangeObj   | Object | ->                          | Objeto rango                          |
+| Resultado  | Object | <- | Objeto que contiene un valor de celda |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

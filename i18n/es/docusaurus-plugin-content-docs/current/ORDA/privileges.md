@@ -253,7 +253,7 @@ La propiedad `restrictedByDefault` configura cómo cada [recurso](#resources) es
 
 :::note Compatibilidad
 
-- Al **crear un nuevo proyecto**, la propiedad `restrictedByDefault` se establece en **false** en el archivo *roles.json* (ver abajo). Tenga en cuenta que esta configuración está hecha a medida para un inicio rápido y un desarrollo fluido. In production environment, [it is recommended to set the `restrictedByDefault` and `forceLogin` properties to **true**](#recommended-configuration).
+- Al **crear un nuevo proyecto**, la propiedad `restrictedByDefault` se establece en **false** en el archivo *roles.json* (ver abajo). Tenga en cuenta que esta configuración está hecha a medida para un inicio rápido y un desarrollo fluido. En un entorno de producción, [se recomienda definir las propiedades `restrictedByDefault` y `forceLogin` en **true**](#recommended-configuration).
 - In **projects converted from previous releases**; when enabling access to Qodly Studio using the [One-click configuration dialog](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), the `restrictedByDefault` property is added with value **true** in the *roles.json* file.
 
 :::

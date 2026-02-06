@@ -9,11 +9,16 @@ title: VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                                                 |                  |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                                                |                  |
-| visible    | Boolean | -> | Líneas de impresión mostradas si True (por defecto), ocultas si es False |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                              | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |    | Descripción                                                                                 |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                                                |
+| visible    | Boolean | -> | Líneas de impresión mostradas si True (por defecto), ocultas si es False |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                              |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

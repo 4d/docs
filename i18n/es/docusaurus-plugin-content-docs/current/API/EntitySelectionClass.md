@@ -197,12 +197,15 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 
 <!-- REF #EntitySelectionClass.add().Params -->
 
+<div class="no-index">
+
 | Parámetros      | Tipo                               |                             | Descripción                                                              |
 | --------------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------ |
 | entity          | 4D.Entity          |              ->             | Entidad que debe añadirse a la entity selection                          |
 | entitySelection | 4D.EntitySelection |              ->             | Selección de entidades que se añade a la selección de entidades original |
 | Resultado       | 4D.EntitySelection | <- | Entity selection incluyendo la *entity* o *entitySelection* añadida      |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -286,12 +289,15 @@ $sellist2:=$sellist2.add($sellist1)
 
 <!-- REF #EntitySelectionClass.and().Params -->
 
+<div class="no-index">
+
 | Parámetros      | Tipo                               |                             | Descripción                                                               |
 | --------------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------- |
 | entity          | 4D.Entity          |              ->             | Entidad a intersectar                                                     |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection a intersectar                                            |
 | Resultado       | 4D.EntitySelection | <- | Entity selection resultante de la intersección con el operador lógico AND |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -351,11 +357,14 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
 
 <!-- REF #EntitySelectionClass.at().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                      |                             | Descripción                     |
 | ---------- | ------------------------- | :-------------------------: | ------------------------------- |
 | index      | Integer                   |              ->             | Índice de la entidad a devolver |
-| Resultado  | 4D.Entity | <- | La entidad en ese índice        |
+| Resultado  | 4D.Entity | <- | The entity at that index        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -396,11 +405,14 @@ $emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
 
 <!-- REF #EntitySelectionClass.average().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo |                             | Descripción                                                                                                                                                       |
 | ------------- | ---- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attributePath | Text |              ->             | Ruta del atributo a utilizar para el cálculo                                                                                                                      |
 | Resultado     | Real | <- | Media aritmética (promedio) de los valores de las entidades para el atributo (No se define para una entity selection vacía) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -449,10 +461,13 @@ Queremos obtener una lista de empleados cuyo salario es superior al salario medi
 
 <!-- REF #EntitySelectionClass.clean().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                               |                             | Descripción                                           |
 | ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------- |
 | Resultado  | 4D.EntitySelection | <- | Nueva selección de entidades sin entidades eliminadas |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -501,11 +516,14 @@ $sel2:=$sel.clean()
 
 <!-- REF #EntitySelectionClass.contains().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                      |                             | Descripción                                                               |
 | ---------- | ------------------------- | :-------------------------: | ------------------------------------------------------------------------- |
 | entity     | 4D.Entity |              ->             | Entidad a evaluar                                                         |
 | Resultado  | Boolean                   | <- | True si la entidad pertenece a la entity selection, de lo contrario False |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -550,11 +568,14 @@ Si *entity* y la entity selection no pertenecen a la misma dataclass, se produce
 
 <!-- REF #EntitySelectionClass.count().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo |                             | Descripción                                                         |
 | ------------- | ---- | :-------------------------: | ------------------------------------------------------------------- |
 | attributePath | Text |              ->             | Ruta del atributo que se utilizará para el cálculo                  |
 | Resultado     | Real | <- | Número de valores de *attributePath* no null en la entity selection |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -598,11 +619,14 @@ Queremos averiguar el número total de empleados de una empresa sin contar a los
 
 <!-- REF #EntitySelectionClass.copy().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                               |                             | Descripción                                                            |
 | ---------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------- |
 | option     | Integer                            |              ->             | `ck shared`: devuelve una entity selection compartible |
 | Resultado  | 4D.EntitySelection | <- | Copia de la entity selection                                           |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -664,12 +688,15 @@ A continuación, esta selección de entidades se actualiza con productos y se de
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo       |                             | Descripción                                             |
 | ------------- | ---------- | :-------------------------: | ------------------------------------------------------- |
 | attributePath | Text       |              ->             | Ruta del atributo cuyos valores distintos desea obtener |
 | options       | Integer    |              ->             | `dk diacritical`, `dk count values`                     |
 | Resultado     | Collection | <- | Colección con sólo valores distintos                    |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -753,11 +780,14 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo       |                             | Descripción                                              |
 | ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
 | atributo   | Text       |              ->             | Nombre del atributo del objeto cuyas rutas desea obtener |
-| Resultado  | Collection | <- | Nueva colección con rutas distintas                      |
+| Resultado  | Collection | <- | New collection with distinct paths                       |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -807,11 +837,14 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <!-- REF #EntitySelectionClass.drop().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                               |                             | Descripción                                                                                                            |
 | ---------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer                            |              ->             | `dk stop dropping on first error`: detiene la ejecución del método en la primera entidad no suprimible |
 | Resultado  | 4D.EntitySelection | <- | Entity selection vacía si se ejecuta con éxito, si no entity selection que contengan las entidades no eliminables      |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -868,6 +901,8 @@ Ejemplo con la opción `dk stop dropping on first error`:
 
 <!-- REF #EntitySelectionClass.extract().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo       |                             | Descripción                                                                                                                    |
 | ------------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------ |
 | attributePath | Text       |              ->             | Ruta del atributo cuyos valores deben ser extraídos en la nueva colección                                                      |
@@ -875,6 +910,7 @@ Ejemplo con la opción `dk stop dropping on first error`:
 | option        | Integer    |              ->             | `ck keep null`: incluye los atributos null en la colección devuelta (ignorados por defecto) |
 | Resultado     | Collection | <- | Colección que contiene los valores extraídos                                                                                   |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -969,10 +1005,13 @@ Dada la siguiente tabla y relación:
 
 <!-- REF #EntitySelectionClass.first().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                      |                             | Descripción                                                                                                 |
 | ---------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------- |
 | Resultado  | 4D.Entity | <- | Referencia a la primera entidad de la entity selection (Null si la selección está vacía) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1025,10 +1064,13 @@ Sin embargo, hay una diferencia entre ambas afirmaciones cuando la selección es
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                         |                             | Descripción                                      |
 | ---------- | ---------------------------- | :-------------------------: | ------------------------------------------------ |
 | Resultado  | 4D.DataClass | <- | DataClass a la que pertenece la entity selection |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1074,10 +1116,13 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |                             | Descripción                                                                    |
 | ---------- | ---- | --------------------------- | ------------------------------------------------------------------------------ |
 | resultado  | Text | <- | Atributos de contexto vinculados a la entity selection, separados por una coma |
 
+</div>
 <!-- END REF -->
 
 > **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
@@ -1086,7 +1131,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 La función `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->devuelve información sobre el contexto de optimización utilizado por la entity selection<!-- END REF -->.
 
-Si no hay un [contexto de optimización](../ORDA/client-server-optimization.md) para la entity selection, la función devuelve un texto vacío.
+If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
 
 #### Ejemplo
 
@@ -1130,10 +1175,13 @@ $info:=$persons.getRemoteContextAttributes()
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                       |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------------------- |
 | Resultado  | Boolean | <- | True si la entity selection es modificable, de lo contrario False |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1172,10 +1220,13 @@ Form.products.add(Form.product)
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------- |
 | Resultado  | Boolean | <- | True si la entity selection es ordenada, de lo contrario False |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1224,10 +1275,13 @@ Para más información, consulte [Selección de entidades ordenadas o no ordenad
 
 <!-- REF #EntitySelectionClass.last().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                      |                             | Descripción                                                                                                       |
 | ---------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------- |
 | Resultado  | 4D.Entity | <- | Referencia a la última entidad de la entity selection (Null si la entity selection está vacía) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1304,11 +1358,14 @@ Las entity selections siempre tienen una propiedad `.length`.
 
 <!-- REF #EntitySelectionClass.max().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo |                             | Descripción                                        |
 | ------------- | ---- | --------------------------- | -------------------------------------------------- |
 | attributePath | Text | ->                          | Ruta del atributo que se utilizará para el cálculo |
 | Resultado     | any  | <- | Valor más alto del atributo                        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1354,11 +1411,14 @@ Queremos encontrar el salario más alto entre todas las empleadas:
 
 <!-- REF #EntitySelectionClass.min().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo |                             | Descripción                                        |
 | ------------- | ---- | :-------------------------: | -------------------------------------------------- |
 | attributePath | Text |              ->             | Ruta del atributo que se utilizará para el cálculo |
 | Resultado     | any  | <- | Valor más bajo del atributo                        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1404,6 +1464,8 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 
 <!-- REF #EntitySelectionClass.minus().Params -->
 
+<div class="no-index">
+
 | Parámetros      | Tipo                               |                             | Descripción                                                                                                           |
 | --------------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------- |
 | entity          | 4D.Entity          |              ->             | Entidad a sustraer                                                                                                    |
@@ -1411,6 +1473,7 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 | keepOrder       | Integer                            |              ->             | `dk keep ordered` (integer) para mantener el orden inicial en la selección de entidades resultante |
 | Resultado       | 4D.EntitySelection | <- | Nueva entity selection o una nueva referencia en la entity selection existente                                        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1486,12 +1549,15 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 <!-- REF #EntitySelectionClass.or().Params -->
 
+<div class="no-index">
+
 | Parámetros      | Tipo                               |                             | Descripción                                                                   |
 | --------------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------------------------------- |
 | entity          | 4D.Entity          |              ->             | Entidad a intersectar                                                         |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection a intersectar                                                |
 | Resultado       | 4D.EntitySelection | <- | Nueva entity selection o una nueva referencia a la entity selection de origen |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1548,12 +1614,15 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 
+<div class="no-index">
+
 | Parámetros  | Tipo                               |                             | Descripción                                                                                       |
 | ----------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
 | pathString  | Text                               |              ->             | Ruta(s) de atributos e instrucciones de clasificación para la entity selection |
 | pathObjects | Collection                         |              ->             | Colección de objetos criterio                                                                     |
 | Resultado   | 4D.EntitySelection | <- | Nueva entity selection en el orden especificado                                                   |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1628,6 +1697,8 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo                               |                             | Descripción                                                       |
 | ------------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
 | formulaString | Text                               |              ->             | Cadena formula                                                    |
@@ -1636,6 +1707,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 | settings      | Object                             |              ->             | Parámetros de la fórmula                                          |
 | Resultado     | 4D.EntitySelection | <- | Nueva entity selection ordenada                                   |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1755,6 +1827,8 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 
 <!-- REF #EntitySelectionClass.query().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo                               |                             | Descripción                                                                                                                                              |
 | ------------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Text                               |              ->             | Criterios de búsqueda como cadena                                                                                                                        |
@@ -1763,6 +1837,7 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 | querySettings | Object                             |              ->             | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                         |
 | Resultado     | 4D.EntitySelection | <- | Nueva entity selection formada por las entidades de la entity selection que cumplen los criterios de búsqueda especificados en *queryString* o *formula* |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1855,10 +1930,13 @@ Para más información, consulte el párrafo del **parámetro querySettings** en
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
 |            |      |     | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1939,11 +2017,14 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 
 <!-- REF #EntitySelectionClass.selected().Params -->
 
+<div class="no-index">
+
 | Parámetros       | Tipo                               |                             | Descripción                                                                                        |
 | ---------------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------- |
 | selectedEntities | 4D.EntitySelection |              ->             | Selección de entidades con entidades para las cuales conocer el rango en la selección de entidades |
 | Resultado        | Object                             | <- | Rango(s) de entidades seleccionadas en la selección de entidades                |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -2005,12 +2086,15 @@ $result2:=$invoices.selected($creditSel)
 
 <!-- REF #EntitySelectionClass.slice().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                               |                             | Descripción                                                                                  |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------- |
 | startFrom  | Integer                            |              ->             | Índice para iniciar la operación (incluído)                               |
 | end        | Integer                            |              ->             | Índice final (no incluido)                                                |
 | Resultado  | 4D.EntitySelection | <- | Nueva entity selection que contiene la entidades extraídas (shallow copy) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -2068,11 +2152,14 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo |                             | Descripción                                        |
 | ------------- | ---- | :-------------------------: | -------------------------------------------------- |
 | attributePath | Text |              ->             | Ruta del atributo que se utilizará para el cálculo |
 | Resultado     | Real | <- | Suma de los valores de la entity selection         |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -2117,6 +2204,8 @@ $sum:=$sel.sum("salary")
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 
+<div class="no-index">
+
 | Parámetros   | Tipo       |                             | Descripción                                                                                                           |
 | ------------ | ---------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------- |
 | filterString | Text       |              ->             | Cadena con la(s) ruta(s) de atributos de la entidad a extraer                   |
@@ -2126,6 +2215,7 @@ $sum:=$sel.sum("salary")
 | howMany      | Integer    |              ->             | Número de entidades a extraer                                                                                         |
 | Resultado    | Collection | <- | Colección de objetos que contienen atributos y valores de la selección de entidades                                   |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

@@ -9,11 +9,16 @@ title: VP IMPORT FROM BLOB
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
 
-| Parámetros | Tipo                    |    | Descripción                                   |                  |
-| ---------- | ----------------------- | -- | --------------------------------------------- | ---------------- |
-| vpAreaName | Text                    | -> | Nombre de objeto formulario área 4D View Pro  |                  |
-| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro |                  |
-| paramObj   | Object                  | -> | Opciones de importación                       | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo                    |    | Descripción                                   |
+| ---------- | ----------------------- | -- | --------------------------------------------- |
+| vpAreaName | Text                    | -> | Nombre de objeto formulario área 4D View Pro  |
+| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro |
+| paramObj   | Object                  | -> | Opciones de importación                       |
+
+</div>
+<!-- END REF -->
 
 <details><summary>Historia</summary>
 

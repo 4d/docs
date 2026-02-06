@@ -60,10 +60,13 @@ Bien que `myForm` n'affiche pas les propriétés typiques de l'objet lorsqu'il e
 
 <!-- REF #WebFormClass.disableState().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                                       |
 | ---------- | ---- | :-: | ------------------------------------------------- |
 | state      | Text |  -> | Nom de l'état à désactiver dans le formulaire web |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -85,10 +88,13 @@ Pour plus d'informations sur les états des pages web, veuillez vous référer �
 
 <!-- REF #WebFormClass.enableState().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                                   |
 | ---------- | ---- | :-: | --------------------------------------------- |
 | state      | Text |  -> | Nom de l'état à activer sur le formulaire web |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -121,10 +127,13 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                                 |
 | ---------- | ---- | :-: | ------------------------------------------- |
 | msg        | Text |  -> | Message d'erreur à afficher dans le webform |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -156,10 +165,13 @@ Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQo
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                                      |
 | ---------- | ---- | :-: | ------------------------------------------------ |
 | msg        | Text |  -> | Message d'information à afficher dans le webform |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -191,10 +203,13 @@ Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQo
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                                        |
 | ---------- | ---- | :-: | -------------------------------------------------- |
 | msg        | Text |  -> | Message d'avertissement à afficher dans le webform |
 
+</div>
 <!-- END REF -->
 
 #### Description

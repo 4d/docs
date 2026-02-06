@@ -275,7 +275,7 @@ Esta propiedad es **lectura-escritura**.
 
 :::caution
 
-Cuando se crea un file handle, el valor `.offset` es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
+Cuando se crea un file handle, el valor `.offset` es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por eso, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
 
 ```4d
   // Abrir un fichero de texto europeo con codificación utf-16 (dos bytes por caracter)
@@ -345,9 +345,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.readLine().Params -->
 
-| Parámetros | Tipo |                             | Descripción    |
-| ---------- | ---- | --------------------------- | -------------- |
-| Resultado  | Text | <- | Línea de texto |
+| Parámetros | Tipo |                             | Descripción  |
+| ---------- | ---- | --------------------------- | ------------ |
+| Resultado  | Text | <- | Line of text |
 
 <!-- END REF -->
 
@@ -502,9 +502,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.writeLine().Params -->
 
-| Parámetros | Tipo |    | Descripción      |
-| ---------- | ---- | -- | ---------------- |
-| lineOfText | Text | -> | Texto a escribir |
+| Parámetros | Tipo |    | Descripción   |
+| ---------- | ---- | -- | ------------- |
+| lineOfText | Text | -> | Text to write |
 
 <!-- END REF -->
 
@@ -536,9 +536,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.writeText().Params -->
 
-| Parámetros  | Tipo |    | Descripción      |
-| ----------- | ---- | -- | ---------------- |
-| textToWrite | Text | -> | Texto a escribir |
+| Parámetros  | Tipo |    | Descripción   |
+| ----------- | ---- | -- | ------------- |
+| textToWrite | Text | -> | Text to write |
 
 <!-- END REF -->
 

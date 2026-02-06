@@ -17,12 +17,17 @@ title: VP Get table theme
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Paramètres | Type                                                                              |                             | Description                                                                 |                  |
-| ---------- | --------------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text                                                                              | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| tableName  | Text                                                                              | ->                          | Nom de table                                                                |                  |
-| sheet      | Integer                                                                           | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valeurs des propriétés du thème de la table actuelle                        | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type                                                                              |                             | Description                                                                 |
+| ---------- | --------------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------- |
+| vpAreaName | Text                                                                              | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |
+| tableName  | Text                                                                              | ->                          | Nom de table                                                                |
+| sheet      | Integer                                                                           | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valeurs des propriétés du thème de la table actuelle                        |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

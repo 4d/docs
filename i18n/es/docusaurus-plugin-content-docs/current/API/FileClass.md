@@ -97,10 +97,13 @@ Lanzamiento Es idéntico al comando [`File`](../commands/file.md) (atajo).
 
 <!--REF #FileClass.create().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                        |
 | ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
 | Resultado  | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -141,6 +144,8 @@ Creación de un archivo de preferencias en la carpeta principal:
 
 <!--REF #FileClass.createAlias().Params -->
 
+<div class="no-index">
+
 | Parámetros        | Tipo                      |                             | Descripción                                          |
 | ----------------- | ------------------------- | --------------------------- | ---------------------------------------------------- |
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino para el alias o el acceso directo |
@@ -148,6 +153,7 @@ Creación de un archivo de preferencias en la carpeta principal:
 | aliasType         | Integer                   | ->                          | Tipo de enlace del alias                             |
 | Resultado         | 4D.File   | <- | Referencia del archivo del alias o de atajo          |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -200,10 +206,13 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 <!-- REF #FileClass.delete().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
 |            |      |     | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -260,10 +269,13 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                              |
 | ---------- | ------ | --------------------------- | ---------------------------------------- |
 | Resultado  | Object | <- | Información del archivo de la aplicación |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -405,12 +417,15 @@ Resultado en *$info*:
 
 <!--REF #FileClass.moveTo().Params -->
 
+<div class="no-index">
+
 | Parámetros        | Tipo                      |                             | Descripción                            |
 | ----------------- | ------------------------- | --------------------------- | -------------------------------------- |
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino                     |
 | newName           | Text                      | ->                          | Nombre completo del archivo trasladado |
 | Resultado         | 4D.File   | <- | Archivo movido                         |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -453,17 +468,20 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                                             |                             | Descripción                                                 |
 | ---------- | ------------------------------------------------ | --------------------------- | ----------------------------------------------------------- |
 | mode       | Text                                             | ->                          | Modo de apertura: "read", "write", "append" |
 | options    | Object                                           | ->                          | Opciones de apertura                                        |
 | Resultado  | [4D.FileHandle](FileHandleClass) | <- | Nuevo objeto File handle                                    |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) en el archivo, en el modo especificado o con las opciones especificadas<!-- END REF -->. Puede utilizar las funciones y propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
+Rutas de acceso Puede utilizar las funciones y propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
 
 Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file handle:
 
@@ -477,7 +495,7 @@ Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file h
 
 Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el objeto [file handle](FileHandleClass) abierto):
 
-| *options*         | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
+| *opciones*        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
@@ -534,11 +552,14 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                    |                             | Descripción                       |
 | ---------- | ----------------------- | --------------------------- | --------------------------------- |
 | newName    | Text                    | ->                          | Nuevo nombre completo del archivo |
 | Resultado  | 4D.File | <- | Archivo renombrado                |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -581,10 +602,13 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <!--REF #FileClass.setAppInfo().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |    | Descripción                                                             |
 | ---------- | ------ | -- | ----------------------------------------------------------------------- |
 | info       | Object | -> | Propiedades para escribir en la información de un archivo de aplicación |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -713,10 +737,13 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |    | Descripción                   |
 | ---------- | ---- | -- | ----------------------------- |
 | content    | Blob | -> | Nuevos contenidos del archivo |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -749,6 +776,8 @@ La función `.setContent( )`<!-- REF #FileClass.setContent().Summary --> reescri
 
 <!--REF #FileClass.setText().Params -->
 
+<div class="no-index">
+
 | Parámetros  | Tipo    |    | Descripción                                |
 | ----------- | ------- | -- | ------------------------------------------ |
 | text        | Text    | -> | Texto a almacenar en el archivo            |
@@ -756,6 +785,7 @@ La función `.setContent( )`<!-- REF #FileClass.setContent().Summary --> reescri
 | charSetNum  | Integer | -> | Número del conjunto de caracteres          |
 | breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert document body.Params-->
 
+<div class="no-index">
+
 | Paramètres  | Type    |                             | Description                                                     |
 | ----------- | ------- | --------------------------- | --------------------------------------------------------------- |
 | targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro                       |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                                 |
 | Résultat    | Object  | &#8592; | Objet de plage de texte référençant le corps du document inséré |
 
+</div>
 <!-- END REF-->
 
 ## Description
@@ -26,7 +29,7 @@ Dans *targetObj*, passez :
 
 - A range, or
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
-- a 4D Write Pro document.
+- un document 4D Write Pro.
 
 The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
 

@@ -9,11 +9,16 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| 引数         | 型       |    | 説明                      |                  |
-| ---------- | ------- | -- | ----------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
-| name       | Text    | -> | シートの新しい名称               |                  |
-| sheet      | Integer | -> | 名称変更するシートのインデックス        | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                      |
+| ---------- | ------- | -- | ----------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |
+| name       | Text    | -> | シートの新しい名称               |
+| sheet      | Integer | -> | 名称変更するシートのインデックス        |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

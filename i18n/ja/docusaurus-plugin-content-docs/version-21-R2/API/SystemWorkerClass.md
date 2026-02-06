@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.commandLine` プロパティは、<!-- REF #SystemWorkerClass.commandLine.Summary -->[`new()`](#4dsystemworkernew) 関数に引数として渡したコマンドライン<!-- END REF -->を格納します。
+The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -565,7 +565,7 @@ $output:=$worker.response
 
 :::note
 
-`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 

@@ -96,10 +96,13 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
+<div class="no-index">
+
 | 引数   | 型   |    | 説明         |
 | ---- | --- | -- | ---------- |
 | body | any | -> | 送信メッセージの本文 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -132,11 +135,14 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
+<div class="no-index">
+
 | 引数    | 型    |    | 説明            |
 | ----- | ---- | -- | ------------- |
 | key   | Text | -> | 設定するヘッダープロパティ |
 | value | Text | -> | ヘッダープロパティの値   |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -161,10 +167,13 @@ When returning a 4D.OutgoingMessage object instance, 4D automatically sets some 
 
 <!-- REF #OutgoingMessageClass.setStatus().Params -->
 
+<div class="no-index">
+
 | 引数     | 型       |    | 説明        |
 | ------ | ------- | -- | --------- |
 | status | Integer | -> | 設定するステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明

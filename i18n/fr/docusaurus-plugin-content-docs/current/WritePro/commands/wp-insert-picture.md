@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
+<div class="no-index">
+
 | Paramètres     | Type                    |                             | Description                                                            |
 | -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------------------- |
 | targetObj      | Object                  | &#8594; | Plage ou élément ou document 4D Write Pro                              |
@@ -17,13 +19,14 @@ displayed_sidebar: docs
 | rangeUpdate    | Integer                 | &#8594; | Mode de mise à jour de la plage                                        |
 | Résultat       | Object                  | &#8592; | Objet référençant l'image                                              |
 
+</div>
 <!-- END REF-->
 
 ## Description
 
 La commande **WP Insert picture**<!--REF #_command_.WP Insert picture.Summary--> insère *picture* ou *pictureFileObj* dans le *targetObj* spécifié en fonction des paramètres *mode* d'insertion et *rangeUpdate*, et retourne une référence à l'élément picture.<!-- END REF--> L'image sera insérée comme un caractère dans le *targetObj*.
 
-In *targetObj*, you can pass:
+Dans *targetObj*, vous pouvez passer:
 
 - Une plage
 - Un élément (tableau / ligne / paragraphe / corps / en-tête / pied de page / image en ligne / section / sous-section)

@@ -78,10 +78,13 @@ title: DataStore
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -112,10 +115,13 @@ title: DataStore
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -146,10 +152,13 @@ title: DataStore
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明                           |
 | --- | ------ | :-------------------------: | ---------------------------- |
 | 戻り値 | Object | <- | カレントデータストアと、各テーブルの暗号化についての情報 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -218,10 +227,13 @@ title: DataStore
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |   | 説明         |
 | -- | - | - | ---------- |
 |    |   |   | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -295,10 +307,13 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 
+<div class="no-index">
+
 | 引数  | 型          |                             | 説明                     |
 | --- | ---------- | --------------------------- | ---------------------- |
 | 戻り値 | Collection | <- | 最適化コンテキストオブジェクトのコレクション |
 
+</div>
 <!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。  ほとんどの場合、使用する必要はないでしょう。
@@ -370,10 +385,13 @@ $info:=$ds.getAllRemoteContexts()
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明                |
 | --- | ---- | --------------------------- | ----------------- |
 | 戻り値 | Real | <- | グローバル変更スタンプのカレント値 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -422,10 +440,13 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明           |
 | --- | ------ | :-------------------------: | ------------ |
 | 戻り値 | Object | <- | データストアのプロパティ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -490,11 +511,14 @@ $info:=$remoteDS.getInfo()
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 
+<div class="no-index">
+
 | 引数          | 型      |                             | 説明           |
 | ----------- | ------ | --------------------------- | ------------ |
 | contextName | Text   | ->                          | コンテキストの名称    |
 | 戻り値         | Object | <- | 最適化コンテキストの詳細 |
 
+</div>
 <!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。  ほとんどの場合、使用する必要はないでしょう。
@@ -542,10 +566,13 @@ $info:=$remoteDS.getInfo()
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 
+<div class="no-index">
+
 | 引数  | 型          |                             | 説明                                                    |
 | --- | ---------- | :-------------------------: | ----------------------------------------------------- |
 | 戻り値 | Collection | <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -582,10 +609,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                                                                            |
 | --- | ------- | :-------------------------: | ----------------------------------------------------------------------------- |
 | 戻り値 | Boolean | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -614,10 +644,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 <!-- REF #DataStoreClass.locked().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明               |
 | --- | ------- | --------------------------- | ---------------- |
 | 戻り値 | Boolean | <- | ロックされている場合は true |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -652,10 +685,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -687,12 +723,15 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 
+<div class="no-index">
+
 | 引数            | 型      |                             | 説明            |
 | ------------- | ------ | --------------------------- | ------------- |
 | curPassPhrase | Text   | ->                          | カレントのパスフレーズ   |
 | curDataKey    | Object | ->                          | カレントのデータ暗号化キー |
 | 戻り値           | Object | <- | 暗号化キーのチェックの結果 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -763,10 +802,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
+<div class="no-index">
+
 | 引数     | 型       |    | 説明                                                                                               |
 | ------ | ------- | -- | ------------------------------------------------------------------------------------------------ |
 | status | Boolean | -> | `webAdmin`ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -805,10 +847,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
 
+<div class="no-index">
+
 | 引数       | 型    |    | 説明               |
 | -------- | ---- | -- | ---------------- |
 | newStamp | Real | -> | グローバル変更スタンプの新しい値 |
 
+</div>
 <!-- END REF -->
 
 :::info 詳細モード
@@ -860,6 +905,8 @@ ds.setGlobalStamp($newValue)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 
+<div class="no-index">
+
 | 引数              | 型                            |    | 説明                                                                                          |
 | --------------- | ---------------------------- | -- | ------------------------------------------------------------------------------------------- |
 | contextName     | Text                         | -> | コンテキストの名称                                                                                   |
@@ -870,6 +917,7 @@ ds.setGlobalStamp($newValue)
 | contextType     | Text                         | -> | 渡す場合、値は "main" または "currentItem" のいずれか                                                      |
 | pageLength      | Integer                      | -> | コンテキストにリンクされたエンティティセレクションのページ長 (デフォルトは 80)                               |
 
+</div>
 <!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。  ほとんどの場合、使用する必要はないでしょう。
@@ -992,12 +1040,15 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
+<div class="no-index">
+
 | 引数      | 型                       |    | 説明                                             |
 | ------- | ----------------------- | -- | ---------------------------------------------- |
 | file    | 4D.File | -> | File オブジェクト                                    |
 | options | Integer                 | -> | ログレスポンスオプション (サーバーのみ)       |
 | reqNum  | Integer                 | -> | メモリ内に保管するリクエストの数 (クライアントのみ) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1104,10 +1155,13 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1170,10 +1224,13 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |   | 説明         |
 | -- | - | - | ---------- |
 |    |   |   | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1204,10 +1261,13 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <!-- REF #DataStoreClass.unlock().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |   | 説明         |
 | -- | - | - | ---------- |
 |    |   |   | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1240,10 +1300,13 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |   | 説明         |
 | -- | - | - | ---------- |
 |    |   |   | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明

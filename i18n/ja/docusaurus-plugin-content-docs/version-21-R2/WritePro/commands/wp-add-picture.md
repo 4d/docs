@@ -60,7 +60,7 @@ displayed_sidebar: docs
  $obPict:=WP Add picture(myDoc;"/PACKAGE/Pictures/Saved Pictures/Sunrise.jpg")
 ```
 
-結果は以下のようになります:
+The result is:
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
  WP SET ATTRIBUTES($obImage;wk width;"650px";wk height;"120px")
 ```
 
-結果は以下のようになります:
+The result is:
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)
 

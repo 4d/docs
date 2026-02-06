@@ -49,11 +49,14 @@ Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singl
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                                              |                             | Descripción                            |
 | ---------- | ------------------------------------------------- | :-------------------------: | -------------------------------------- |
 | options    | Object                                            |              ->             | opciones por defecto para el HTTPAgent |
 | Resultado  | [4D.HTTPAgent](#httpagent-object) | <- | Nuevo objeto HTTPAgent                 |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

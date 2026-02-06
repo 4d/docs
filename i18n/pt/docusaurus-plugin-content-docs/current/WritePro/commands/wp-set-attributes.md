@@ -8,13 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| Parâmetro   | Tipo   |                             | Descrição                                                               |
-| ----------- | ------ | --------------------------- | ----------------------------------------------------------------------- |
-| targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                               |
-| attribName  | Text   | &#8594; | Nome do atributo a ser definido                                         |
-| attribValue | any    | &#8594; | Novo valor de atributo                                                  |
-| attribObj   | Object | &#8594; | Object containing attribute names and their corresponding values to set |
+<div class="no-index">
 
+| Parâmetro   | Tipo   |                             | Descrição                                                                  |
+| ----------- | ------ | --------------------------- | -------------------------------------------------------------------------- |
+| targetObj   | Object | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                            |
+| attribName  | Text   | &#8594; | Nome do atributo a ser definido                                            |
+| attribValue | any    | &#8594; | Novo valor de atributo                                                     |
+| attribObj   | Object | &#8594; | Objeto contendo nomes de atributo e seus valores correspondentes a definir |
+
+</div>
 <!-- END REF-->
 
 ## Descrição
@@ -24,39 +27,39 @@ The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary--
 Em *targetObj*, você pode passar:
 
 - um intervalo, ou
-- an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
+- um elemento (cabeçalho / rodapé / corpo / tabela / linha / parágrafo / imagem incorporada ou incorporada em linha / seção / subseção / folha de estilo), ou
 - um documento 4D Write Pro
 
 Você pode especificar atributos para *targetObj* de uma de duas maneiras:
 
 - Use os parâmetros *attribName* e *attribValue*. Em *attribName*, passe o nome do atributo para definir para o alvo e em *attribValue*, passe o novo valor para o conjunto. Você pode passar tantos pares *attribName*/*attribValue* quanto quiser em uma única chamada.
 
-- Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
+- Use o parâmetro *attribObj* para passar um único objeto contendo nomes de atributo e seus valores correspondentes como propriedades do objeto.
 
 For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 ## Exemplo 1
 
-In this 4D Write Pro area, you selected a word:
+Nesta área 4D Write Pro, você selecionou uma palavra:
 
 ![](../../assets/en/WritePro/commands/pict2643639.en.png)
 
 Se executar o seguinte código:
 
 ```4d
- $range:=WP Get selection(*;"WParea") //get the selected range
+ $range:=WP Get selection(*;"WParea") //recupera o intervalo selecionado
  
-  // set the shadow offset in pt for the selected text
+  // define o offset sombra no texto selecionado
  WP SET ATTRIBUTES($range;wk text shadow offset;1)
-  //set the paragraph padding
+  //define o parágrafo padding
  WP SET ATTRIBUTES($range;wk padding;1)
-  //define a border of 10 pt
+  //define uma borda de 10 pt
  WP SET ATTRIBUTES($range;wk border style;wk solid;wk border width;10)
-  //set the border colors
+  //define as cores do limite
  WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 
-You get the following result:
+Você recebeu o seguinte resultado:
 
 ![](../../assets/en/WritePro/commands/pict2643642.en.png)
 
@@ -71,13 +74,13 @@ Este exemplo ilustra o uso das constantes wk inside e wk outside:
  WP SET ATTRIBUTES($wpRange;wk border color+wk outside;"#00FA9A")
 ```
 
-Assuming all of the contents were selected, the result is:
+Supondo que todos os conteúdos foram selecionados, o resultado é:
 
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
 ## Exemplo 3
 
-You want to set a background image for the document:
+Se quiser definir uma imagem de fundo para o documento:
 
 ```4d
  var WParea : Object
@@ -92,7 +95,7 @@ O resultado é:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
-You want to set a background image that covers the whole printable area. All attributes are passed using a single object:
+Se quiser definir uma imagem de fundo que cubra toda a área de impressão. Todos os atributos são passados usando um único objeto:
 
 ```4d
  var WParea : Object
@@ -114,13 +117,13 @@ O resultado é:
 
 :::note
 
-The paper box value is only applicable to documents and sections.
+O valor da caixa de papel só é aplicável a documentos e seções.
 
 :::
 
 ## Exemplo
 
-You want to set tabs at varying intervals and designate a character as the leading character for the last tab:
+Se quiser definir abas em intervalos variados e designar um caractere como o caractere principal na última aba:
 
 ```4d
  $tab1:=New object()

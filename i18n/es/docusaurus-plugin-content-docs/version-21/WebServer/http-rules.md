@@ -87,7 +87,7 @@ $rules:=WEB Server.rules //reglas actuales
 
 ## Ejemplos
 
-Rules can be set using a `HTTPRules.json` file or the *settings* parameter of the [`.start()`](../API/WebServerClass.md#start) web server function.
+Las reglas de configuración pueden definirse utilizando un archivo `HTTPRules.json` o el parámetro *settings* de la función [`.start()`](../API/WebServerClass.md#start) del servidor web.
 
 ### Utilización de un archivo HTTPRules.json
 

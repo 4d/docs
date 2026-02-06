@@ -354,7 +354,7 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
 | Parámetros | Tipo                      |                             | Descripción                     |
 | ---------- | ------------------------- | :-------------------------: | ------------------------------- |
 | index      | Integer                   |              ->             | Índice de la entidad a devolver |
-| Resultado  | 4D.Entity | <- | La entidad en ese índice        |
+| Resultado  | 4D.Entity | <- | The entity at that index        |
 
 <!-- END REF -->
 
@@ -756,7 +756,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 | Parámetros | Tipo       |                             | Descripción                                              |
 | ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
 | atributo   | Text       |              ->             | Nombre del atributo del objeto cuyas rutas desea obtener |
-| Resultado  | Collection | <- | Nueva colección con rutas distintas                      |
+| Resultado  | Collection | <- | New collection with distinct paths                       |
 
 <!-- END REF -->
 
@@ -1086,7 +1086,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 La función `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->devuelve información sobre el contexto de optimización utilizado por la entity selection<!-- END REF -->.
 
-Si no hay un [contexto de optimización](../ORDA/client-server-optimization.md) para la entity selection, la función devuelve un texto vacío.
+If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
 
 #### Ejemplo
 

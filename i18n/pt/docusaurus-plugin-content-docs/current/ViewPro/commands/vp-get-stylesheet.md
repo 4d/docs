@@ -9,12 +9,17 @@ title: VP Get stylesheet
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
-| styleName  | Text    | ->                          | Nome do estilo                                              |                  |
-| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Objeto da folha de estilo                                   | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                                   |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |
+| styleName  | Text    | ->                          | Nome do estilo                                              |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados | Object  | <- | Objeto da folha de estilo                                   |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

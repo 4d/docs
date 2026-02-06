@@ -9,10 +9,15 @@ title: VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
-| 引数         | 型      |    | 説明                         |                  |
-| ---------- | ------ | -- | -------------------------- | ---------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名    |                  |
-| optionObj  | Object | -> | 設定するワークブックオプションを格納したオブジェクト | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型      |    | 説明                         |
+| ---------- | ------ | -- | -------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名    |
+| optionObj  | Object | -> | 設定するワークブックオプションを格納したオブジェクト |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

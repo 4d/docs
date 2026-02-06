@@ -9,11 +9,16 @@ title: VP SET FIELD
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| Paramètres    | Type    |    | Description                                    |                  |
-| ------------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| rangeObj      | Object  | -> | Objet plage                                    |                  |
-| champ         | Pointer | -> | Référence au champ dans la structure virtuelle |                  |
-| formatPattern | Text    | -> | Format du champ                                | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres    | Type    |    | Description                                    |
+| ------------- | ------- | -- | ---------------------------------------------- |
+| rangeObj      | Object  | -> | Objet plage                                    |
+| champ         | Pointer | -> | Référence au champ dans la structure virtuelle |
+| formatPattern | Text    | -> | Format du champ                                |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

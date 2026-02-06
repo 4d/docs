@@ -433,6 +433,8 @@ Esta propiedad es de **solo lectura**.
 
 <!-- REF #directory.copyTo().Params -->
 
+<div class="no-index">
+
 | Parámetros        | Tipo                      |                             | Descripción                                            |
 | ----------------- | ------------------------- | --------------------------- | ------------------------------------------------------ |
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino                                     |
@@ -440,6 +442,7 @@ Esta propiedad es de **solo lectura**.
 | overwrite         | Integer                   | ->                          | `fk overwrite` para sustituir los elementos existentes |
 | Resultado         | 4D.Folder | <- | Carpeta o archivo copiado                              |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -490,11 +493,14 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <!-- REF #directory.file().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                    |                             | Descripción                                                    |
 | ---------- | ----------------------- | --------------------------- | -------------------------------------------------------------- |
 | path       | Text                    | ->                          | Ruta POSIX relativa                                            |
 | Resultado  | 4D.File | <- | Objeto `File` (null si la ruta es inválida) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -534,11 +540,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <!-- REF #directory.files().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo       |                             | Descripción                          |
 | ---------- | ---------- | --------------------------- | ------------------------------------ |
 | options    | Integer    | ->                          | Opciones de la lista de archivos     |
 | Resultado  | Collection | <- | Colección de objetos de archivo hijo |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -600,11 +609,14 @@ Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 
 <!-- REF #directory.folder().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                      |                             | Descripción                                                           |
 | ---------- | ------------------------- | --------------------------- | --------------------------------------------------------------------- |
 | path       | Text                      | ->                          | Ruta POSIX relativa                                                   |
 | Resultado  | 4D.Folder | <- | Objeto carpeta creado (null si *path* es inválido) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -644,11 +656,14 @@ Un objeto `Folder` o null si *path* es inválido.
 
 <!-- REF #directory.folders().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo       |                             | Descripción                          |
 | ---------- | ---------- | --------------------------- | ------------------------------------ |
 | options    | Integer    | ->                          | Opciones de la lista de carpetas     |
 | Resultado  | Collection | <- | Colección de objetos de carpeta hijo |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -695,11 +710,14 @@ Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta d
 
 <!-- REF #directory.getIcon().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                          |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------------- |
 | size       | Integer | ->                          | Longitud del lado de la imagen devuelta (píxeles) |
 | Resultado  | Picture | <- | Icono                                                                |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

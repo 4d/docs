@@ -9,10 +9,15 @@ title: VP SET CELL STYLE
 
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
 
-| Paramètres | Type   |    | Description |                  |
-| ---------- | ------ | -- | ----------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage |                  |
-| styleObj   | Object | -> | Objet style | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |    | Description |
+| ---------- | ------ | -- | ----------- |
+| rangeObj   | Object | -> | Objet plage |
+| styleObj   | Object | -> | Objet style |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

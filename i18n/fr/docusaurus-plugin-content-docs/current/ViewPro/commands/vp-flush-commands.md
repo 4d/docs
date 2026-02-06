@@ -17,11 +17,14 @@ title: VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                        |    | Description                                                                                                                                            |
 | ---------- | --------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | vpAreaName | Text                        | -> | Nom d'objet formulaire zone 4D View Pro                                                                                                                |
 | callback   | 4D.Function | -> | (Facultatif) Une fonction de rappel exécutée après que toutes les commandes VP et les fonctions personnalisées 4D ont été exécutées |
 
+</div>
 <!-- END REF -->
 
 ## Description

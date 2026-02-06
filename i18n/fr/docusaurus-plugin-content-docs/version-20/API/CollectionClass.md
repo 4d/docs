@@ -855,7 +855,7 @@ La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collec
 
 :::note Notes
 
-- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. Elle ne vérifie pas l'égalité pour les objets natifs.
+- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. La callback reçoit les paramètres suivants :
 - Les éléments avec des valeurs **null** ne sont pas égaux aux éléments Undefined.
 
 :::
@@ -3250,13 +3250,13 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 
 
 <!-- REF #collection.sort().Params -->
-| Paramètres | Type        |    | Description                                           |
-| ---------- | ----------- |:--:| ----------------------------------------------------- |
-| ascOrDesc  | Integer     | -> | `ck ascending` ou `ck descending` (valeurs scalaires) |
-| formula    | 4D.Function | -> | Objet formule                                         |
-| methodName | Text        | -> | Nom de méthode                                        |
-| extraParam | any         | -> | Paramètre(s) à passer à la méthode                    |
-| Résultat   | Collection  | <- | Collection d'origine triée                            |
+| Paramètres | Type        |    | Description                                                                                                                   |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------------------------- |
+| ascOrDesc  | Integer     | -> | `ck ascending` ou `ck descending` (valeurs scalaires)                                                                         |
+| formula    | 4D.Function | -> | Objet formule                                                                                                                 |
+| methodName | Text        | -> | Nom de méthode                                                                                                                |
+| extraParam | any         | -> | Paramètre(s) à passer à la méthode                                                                                            |
+| Résultat   | Collection  | <- | Optionnellement, vous pouvez passer des paramètres à *formula* ou *methodName* en utilisant le(s) paramètre(s) *param*. |
 <!-- END REF -->
 
 

@@ -9,10 +9,15 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Paramètres | Type   |                             | Description                                                                        |                  |
-| ---------- | ------ | --------------------------- | ---------------------------------------------------------------------------------- | ---------------- |
-| rangeObj   | Object | ->                          | Objet plage                                                                        |                  |
-| Résultat   | Object | <- | Objet de cellules fusionnées (cell spans) dans la plage définie | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |                             | Description                                                                        |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------------------------------- |
+| rangeObj   | Object | ->                          | Objet plage                                                                        |
+| Résultat   | Object | <- | Objet de cellules fusionnées (cell spans) dans la plage définie |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

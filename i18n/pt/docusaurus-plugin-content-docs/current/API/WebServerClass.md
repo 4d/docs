@@ -599,11 +599,14 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de 
 
 <!-- REF #WebServerClass.start().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo   |                             | Descrição                                           |
 | ---------- | ------ | --------------------------- | --------------------------------------------------- |
 | settings   | Object | ->                          | Configurações do servidor Web a definir no arranque |
 | Resultados | Object | <- | Estado de arranque do servidor web                  |
 
+</div>
 <!-- END REF -->
 
 A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servidor da Web no qual ela é aplicada<!-- END REF -->, usando as propriedades definidas no parâmetro opcional do objeto *settings*.
@@ -620,8 +623,8 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                   |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | True se o servidor web foi correctamente iniciado, False caso contrário                     |
-| errors      |                                                                                             | Collection | Pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
+| success     |                                                                                             | Parâmetros | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário               |
+| errors      |                                                                                             | Collection | pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
 |             | \[].errCode            | Number     | Código de erro 4D                                                                           |
 |             | \[].message            | Text       | Descrição do erro 4D                                                                        |
 |             | \[].componentSignature | Text       | Assinatura da componente interna que devolveu o erro                                        |
@@ -661,10 +664,13 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 <!-- REF #WebServerClass.stop().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |   | Descrição                  |
 | --------- | ---- | - | -------------------------- |
 |           |      |   | Não exige nenhum parâmetro |
 
+</div>
 <!-- END REF -->
 
 A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->interrompe o servidor web no qual ele é aplicado<!-- END REF -->.
@@ -675,7 +681,7 @@ Se o servidor web foi iniciado, todas as ligações e processos web são fechado
 
 #### Exemplo
 
-Para interromper o servidor Web do banco de dados:
+Para parar o servidor Web da base de dados:
 
 ```4d
  var $webServer : 4D.WebServer

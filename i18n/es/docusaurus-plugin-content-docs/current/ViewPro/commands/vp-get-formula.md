@@ -9,10 +9,15 @@ title: VP Get formula
 
 <!-- REF #_method_.VP Get formula.Params -->
 
-| Parámetros | Tipo   |                             | Descripción  |                  |
-| ---------- | ------ | --------------------------- | ------------ | ---------------- |
-| rangeObj   | Object | ->                          | Objeto rango |                  |
-| Resultado  | Text   | <- | Formula      | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |                             | Descripción  |
+| ---------- | ------ | --------------------------- | ------------ |
+| rangeObj   | Object | ->                          | Objeto rango |
+| Resultado  | Text   | <- | Formula      |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

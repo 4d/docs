@@ -88,7 +88,7 @@ For a comprehensive list of attributes to pass, as well as their scope and respe
  WP SET ATTRIBUTES(WParea;wk background image;$picture)
 ```
 
-結果は以下のようになります:
+The result is:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
@@ -108,7 +108,7 @@ For a comprehensive list of attributes to pass, as well as their scope and respe
  WP SET ATTRIBUTES(WParea;$myAttributes)
 ```
 
-結果は以下のようになります:
+The result is:
 
 ![](../../assets/en/WritePro/commands/pict3514233.en.png)
 
@@ -142,7 +142,7 @@ paper box の値はドキュメントあるいはセクションに対しての�
  WP SET ATTRIBUTES(wpArea;wk tabs;$_tabs)
 ```
 
-結果は以下のようになります:
+The result is:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 

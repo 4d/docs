@@ -894,7 +894,7 @@ Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` va
 
 ### parámetro queryString
 
-El parámetro *queryString* utiliza la siguiente sintaxis:
+Ejemplo 1
 
 ```4d
 attributePath|formula comparator value   

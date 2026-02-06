@@ -9,11 +9,16 @@ title: VP IMPORT FROM BLOB
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
 
-| 引数         | 型                       |    | 説明                        |                  |
-| ---------- | ----------------------- | -- | ------------------------- | ---------------- |
-| vpAreaName | Text                    | -> | 4D View Pro フォームオブジェクト名   |                  |
-| vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob |                  |
-| paramObj   | Object                  | -> | 読み込みのオプション                | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型                       |    | 説明                        |
+| ---------- | ----------------------- | -- | ------------------------- |
+| vpAreaName | Text                    | -> | 4D View Pro フォームオブジェクト名   |
+| vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob |
+| paramObj   | Object                  | -> | 読み込みのオプション                |
+
+</div>
+<!-- END REF -->
 
 <details><summary>履歴</summary>
 

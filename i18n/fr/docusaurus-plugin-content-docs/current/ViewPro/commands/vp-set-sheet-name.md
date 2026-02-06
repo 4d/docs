@@ -9,11 +9,16 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Paramètres | Type    |    | Description                             |                  |
-| ---------- | ------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| name       | Text    | -> | Nouveau nom de la feuille               |                  |
-| sheet      | Integer | -> | Index de la feuille à renommer          | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |    | Description                             |
+| ---------- | ------- | -- | --------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
+| name       | Text    | -> | Nouveau nom de la feuille               |
+| sheet      | Integer | -> | Index de la feuille à renommer          |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -68,7 +68,7 @@ While `myForm` may not display typical object properties when examined in the de
 
 #### Descripción
 
-The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web page<!-- END REF -->.
+La función `.disableState()` <!-- REF #WebFormClass.disableState().Summary -->desactiva la renderización del *estado* en la página web actual<!-- END REF -->.
 
 Esta función no hace nada si:
 
@@ -146,7 +146,7 @@ myForm.setError("My error message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a red *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+Si la funcionalidad [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) está activada para el evento, el *mensaje* se muestra automáticamente como un *toast* rojo en la parte inferior de la página y desaparece automáticamente después de 5 segundos:
 
 ![](../assets/en/API/webformClass-pic1.png)
 
@@ -166,7 +166,7 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 La función `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envía *msg* como mensaje de información a la página web<!-- END REF -->.
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "message".
+La función devuelve una respuesta con un estado `200 OK` y un objeto `__WEBFORM` en el cuerpo con una propiedad `__NOTIFICATION.message` definida como *msg* y un `__NOTIFICATION.type` definido como "message".
 
 #### Ejemplo
 
@@ -181,7 +181,7 @@ myForm.setMessage("My information message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a green *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+Si la funcionalidad [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) está activada para el evento, el *mensaje* se muestra automáticamente como un *toast* verde en la parte inferior de la página y desaparece automáticamente después de 5 segundos:
 
 ![](../assets/en/API/webformClass-pic2.png)
 
@@ -201,7 +201,7 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 La función `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envía *msg* como mensaje de advertencia a la página web<!-- END REF -->.
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "warning".
+La función devuelve una respuesta con un estado `200 OK` y un objeto `__WEBFORM` en el cuerpo con una propiedad `__NOTIFICATION.message` definida como *msg* y un `__NOTIFICATION.type` definido como "warning".
 
 #### Ejemplo
 
@@ -216,7 +216,7 @@ myForm.setWarning("My warning message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a yellow *toast* at the bottom of the web page and disappears automatically after 5 seconds:
+Si la funcionalidad [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) está activada para el evento, el *mensaje* se muestra automáticamente como un *toast* amarillo en la parte inferior de la página web y desaparece automáticamente después de 5 segundos:
 
 ![](../assets/en/API/webformClass-pic3.png)
 

@@ -78,10 +78,13 @@ Cada dataclass en un datastore está disponible como propiedad del objeto [DataS
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
 |            |      |     | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -112,10 +115,13 @@ Ver el ejemplo de la función [`.startTransaction() `](#starttransaction).
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
 |            |      |     | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -146,10 +152,13 @@ En estos casos, puedes utilizar `.clearAllRemoteContexts()` para borrar sus cont
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                                                              |
 | ---------- | ------ | :-------------------------: | ------------------------------------------------------------------------ |
 | Resultado  | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -218,10 +227,13 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |   | Descripción                  |
 | ---------- | ---- | - | ---------------------------- |
 |            |      |   | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -294,10 +306,13 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo       |                             | Descripción                                    |
 | ---------- | ---------- | --------------------------- | ---------------------------------------------- |
 | Resultado  | Collection | <- | Colección de objetos contextos de optimización |
 
+</div>
 <!-- END REF -->
 
 > **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
@@ -369,15 +384,18 @@ $info:=$ds.getAllRemoteContexts()
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |                             | Descripción                                      |
 | ---------- | ---- | --------------------------- | ------------------------------------------------ |
 | Resultado  | Real | <- | Valor actual del marcador de modificación global |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
 
-The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->returns the current value of the global modification stamp of the datastore<!-- END REF -->.
+La función `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summary -->devuelve el valor actual del marcador de modificación global del datastore<!-- END REF -->.
 
 :::info
 
@@ -421,10 +439,13 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                      |
 | ---------- | ------ | :-------------------------: | -------------------------------- |
 | Resultado  | Object | <- | Propiedades del almacén de datos |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -433,12 +454,12 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devuelve 
 
 **Objeto devuelto**
 
-| Propiedad  | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type       | string  | <li>"4D": datastore principal, disponible a través de ds </li><li>"4D Server": datastore remoto, abrir con Open datastore</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| networked  | boolean | <li>True: el datastore se alcanza a través de una conexión de red.</li><li>False: el datastore no se alcanza a través de una conexión de red (base de datos local)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| localID    | text    | ID del almacén de datos en la máquina. ID del almacén de datos en la máquina. Cadena vacía ("") para el almacén de datos principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades disponibles:<table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>nombre de host</td><td>texto</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>booleano</td><td>True si se utiliza una conexión segura con el datastore remoto</td></tr><tr><td>idleTimeout</td><td>número</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>usuario</td><td>texto</td><td>Usuario autenticado en el almacén de datos remoto</td></tr></table> |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type       | string  | <li>"4D": datastore principal, disponible a través de ds </li><li>"4D Server": datastore remoto, abrir con Open datastore</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| networked  | boolean | <li>True: el datastore se alcanza a través de una conexión de red.</li><li>False: el datastore no se alcanza a través de una conexión de red (base de datos local)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| localID    | text    | ID del almacén de datos en la máquina. ID del almacén de datos en la máquina. Cadena vacía ("") para el almacén de datos principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades&#xA;disponibles:<table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>nombre de host</td><td>texto</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>booleano</td><td>True si se utiliza una conexión segura con el datastore remoto</td></tr><tr><td>idleTimeout</td><td>número</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>usuario</td><td>texto</td><td>Usuario autenticado en el almacén de datos remoto</td></tr></table> |
 
 - Si la función `.getInfo()` se ejecuta en un 4D Server o en un 4D monopuesto, `networked` es False.
 - Si la función `.getInfo()` se ejecuta en un 4D remoto, `networked` es True
@@ -489,11 +510,14 @@ En un almacén de datos remoto:
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 
+<div class="no-index">
+
 | Parámetros  | Tipo   |                             | Descripción              |
 | ----------- | ------ | --------------------------- | ------------------------ |
 | contextName | Text   | ->                          | Nombre del contexto      |
 | Resultado   | Object | <- | Descripción del contexto |
 
+</div>
 <!-- END REF -->
 
 > **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
@@ -541,10 +565,13 @@ Ver el ejemplo de la sección [`.setRemoteContextInfo()`](#example-1-3).
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo       |                             | Descripción                                                    |
 | ---------- | ---------- | :-------------------------: | -------------------------------------------------------------- |
 | Resultado  | Collection | <- | Colección de objetos, donde cada objeto describe una solicitud |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -581,10 +608,13 @@ Vea el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                                                                        |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------ |
 | Resultado  | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -613,10 +643,13 @@ Por defecto, se concede acceso al Data Explorer para las sesiones `webAdmin`, pe
 
 <!-- REF #DataStoreClass.locked().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción       |
 | ---------- | ------- | --------------------------- | ----------------- |
 | Resultado  | Boolean | <- | True si bloqueado |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -651,10 +684,13 @@ La función también devolverá `True` si el datastore fue bloqueado por otra fu
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
 |            |      |     | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -686,12 +722,15 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo   |                             | Descripción                                              |
 | ------------- | ------ | --------------------------- | -------------------------------------------------------- |
 | curPassPhrase | Text   | ->                          | Frase de cifrado actual                                  |
 | curDataKey    | Object | ->                          | Llave de encriptación de datos actual                    |
 | Resultado     | Object | <- | Resultado de la coincidencia de la llave de encriptación |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -762,10 +801,13 @@ Si no se proporciona *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelv
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |    | Descripción                                                                                                                                   |
 | ---------- | ------- | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | status     | Boolean | -> | True para desactivar el acceso Data Explorer a los datos del puerto `webAdmin`, False (por defecto) para otorgar el acceso |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -804,10 +846,13 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |    | Descripción                                     |
 | ---------- | ---- | -- | ----------------------------------------------- |
 | newStamp   | Real | -> | Nuevo valor del marcador de modificación global |
 
+</div>
 <!-- END REF -->
 
 :::info Modo avanzado
@@ -859,6 +904,8 @@ ds.setGlobalStamp($newValue)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 
+<div class="no-index">
+
 | Parámetros      | Tipo                         |    | Descripción                                                                                                    |
 | --------------- | ---------------------------- | -- | -------------------------------------------------------------------------------------------------------------- |
 | contextName     | Text                         | -> | Nombre del contexto                                                                                            |
@@ -869,6 +916,7 @@ ds.setGlobalStamp($newValue)
 | contextType     | Text                         | -> | Si se suministra, el valor debe ser "main" o "currentItem"                                                     |
 | pageLength      | Integer                      | -> | Longitud de la página de la selección de entidades asociada al contexto (por defecto es 80) |
 
+</div>
 <!-- END REF -->
 
 > **Modo avanzado**: esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
@@ -990,12 +1038,15 @@ End case
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                    |    | Descripción                                                                        |
 | ---------- | ----------------------- | -- | ---------------------------------------------------------------------------------- |
 | file       | 4D.File | -> | Objeto File                                                                        |
 | options    | Integer                 | -> | Opción de registro de respuesta (servidor únicamente)           |
 | reqNum     | Integer                 | -> | Número de peticiones a mantener en memoria (cliente únicamente) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1104,10 +1155,13 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
 |            |      |     | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1170,10 +1224,13 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |   | Descripción                  |
 | ---------- | ---- | - | ---------------------------- |
 |            |      |   | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1204,10 +1261,13 @@ Ver ejemplos para [`.startRequestLog()`](#startrequestlog).
 
 <!-- REF #DataStoreClass.unlock().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |   | Descripción                  |
 | ---------- | ---- | - | ---------------------------- |
 |            |      |   | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -1240,10 +1300,13 @@ Si se llama a la función `.unlock()` en un datastore desbloqueado, no hace nada
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |   | Descripción                  |
 | ---------- | ---- | - | ---------------------------- |
 |            |      |   | No requiere ningún parámetro |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

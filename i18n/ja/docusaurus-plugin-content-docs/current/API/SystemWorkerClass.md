@@ -61,12 +61,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
+<div class="no-index">
+
 | 引数          | 型                               |                             | 説明                                                        |
 | ----------- | ------------------------------- | :-------------------------: | --------------------------------------------------------- |
 | commandLine | Text                            |              ->             | 実行するコマンドライン                                               |
 | options     | Object                          |              ->             | ワーカーパラメーター                                                |
 | 戻り値         | 4D.SystemWorker | <- | 非同期の新規システムワーカー (プロセスが開始されなかった場合は null) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -272,10 +275,13 @@ Function _createFile($title : Text; $textBody : Text)
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -318,7 +324,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.commandLine` プロパティは、<!-- REF #SystemWorkerClass.commandLine.Summary -->[`new()`](#4dsystemworkernew) 関数に引数として渡したコマンドライン<!-- END REF -->を格納します。
+The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -436,11 +442,14 @@ $output:=$worker.response
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 
+<div class="no-index">
+
 | 引数          | 型    |     | 説明                                                  |
 | ----------- | ---- | :-: | --------------------------------------------------- |
 | message     | Text |  -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト |
 | messageBLOB | BLOB |  -> | 入力ストリームに書き込むバイト                                     |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -489,10 +498,13 @@ $output:=$worker.response
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -548,11 +560,14 @@ $output:=$worker.response
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
+<div class="no-index">
+
 | 引数      | 型                               |                             | 説明                           |
 | ------- | ------------------------------- | :-------------------------: | ---------------------------- |
 | timeout | Real                            |              ->             | 最大待機時間(秒) |
 | 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト          |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -565,7 +580,7 @@ $output:=$worker.response
 
 :::note
 
-`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 

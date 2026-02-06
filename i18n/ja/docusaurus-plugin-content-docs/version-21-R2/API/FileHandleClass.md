@@ -345,9 +345,9 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readLine().Params -->
 
-| 引数  | 型    |                             | 説明      |
-| --- | ---- | --------------------------- | ------- |
-| 戻り値 | Text | <- | 1行のテキスト |
+| 引数  | 型    |                             | 説明           |
+| --- | ---- | --------------------------- | ------------ |
+| 戻り値 | Text | <- | Line of text |
 
 <!-- END REF -->
 
@@ -387,10 +387,10 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readText().Params -->
 
-| 引数       | 型    |                             | 説明          |
-| -------- | ---- | --------------------------- | ----------- |
-| stopChar | Text | ->                          | 読み取りを停止する文字 |
-| 戻り値      | Text | <- | ファイルのテキスト   |
+| 引数       | 型    |                             | 説明                 |
+| -------- | ---- | --------------------------- | ------------------ |
+| stopChar | Text | ->                          | 読み取りを停止する文字        |
+| 戻り値      | Text | <- | Text from the file |
 
 <!-- END REF -->
 
@@ -468,9 +468,9 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.writeBlob().Params -->
 
-| 引数   | 型                                    |    | 説明             |
-| ---- | ------------------------------------ | -- | -------------- |
-| blob | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob |
+| 引数   | 型                                    |    | 説明                        |
+| ---- | ------------------------------------ | -- | ------------------------- |
+| blob | [4D.Blob](BlobClass) | -> | Blob to write in the file |
 
 <!-- END REF -->
 
@@ -502,9 +502,9 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.writeLine().Params -->
 
-| 引数         | 型    |    | 説明       |
-| ---------- | ---- | -- | -------- |
-| lineOfText | Text | -> | 書き込むテキスト |
+| 引数         | 型    |    | 説明            |
+| ---------- | ---- | -- | ------------- |
+| lineOfText | Text | -> | Text to write |
 
 <!-- END REF -->
 
@@ -536,9 +536,9 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.writeText().Params -->
 
-| 引数          | 型    |    | 説明       |
-| ----------- | ---- | -- | -------- |
-| textToWrite | Text | -> | 書き込むテキスト |
+| 引数          | 型    |    | 説明            |
+| ----------- | ---- | -- | ------------- |
+| textToWrite | Text | -> | Text to write |
 
 <!-- END REF -->
 

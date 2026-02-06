@@ -300,7 +300,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -492,7 +492,7 @@ Em um armazém de dados remoto:
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -855,19 +855,19 @@ ds.setGlobalStamp($newValue)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 
-| Parâmetro                                                                | Tipo                          |    | Descrição                                                                                         |
-| ------------------------------------------------------------------------ | ----------------------------- | -- | ------------------------------------------------------------------------------------------------- |
-| contextName                                                              | Text                          | -> | Nome do contexto                                                                                  |
-| dataClassName                                                            | Text                          | -> | Nome da dataclass                                                                                 |
-| dataClassObject                                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)     |
-| attributes                                                               | Text                          | -> | Lista de atributos separada por vírgulas                                                          |
-| Atributos do tipo BLOB não são gerenciados na datastore. | Collection                    | -> | Coleção de nomes de atributos (text)                                           |
-| contextType                                                              | Text                          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                            |
-| pageLength                                                               | Integer                       | -> | Duração da página da selecção da entidade ligada ao contexto (por padrão é 80) |
+| Parâmetro                                                                | Tipo                          |    | Descrição                                                                                     |
+| ------------------------------------------------------------------------ | ----------------------------- | -- | --------------------------------------------------------------------------------------------- |
+| contextName                                                              | Text                          | -> | Nome do contexto                                                                              |
+| dataClassName                                                            | Text                          | -> | Nome da dataclass                                                                             |
+| dataClassObject                                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee) |
+| attributes                                                               | Text                          | -> | Lista de atributos separada por vírgulas                                                      |
+| Atributos do tipo BLOB não são gerenciados na datastore. | Collection                    | -> | Coleção de nomes de atributos (text)                                       |
+| contextType                                                              | Text                          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                        |
+| pageLength                                                               | Integer                       | -> | Page length of the entity selection linked to the context (default is 80)  |
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 

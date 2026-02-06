@@ -463,7 +463,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Descripción
 
-La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) en el archivo, en el modo especificado o con las opciones especificadas<!-- END REF -->. Puede utilizar las funciones y propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
+Rutas de acceso Puede utilizar las funciones y propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
 
 Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file handle:
 
@@ -477,7 +477,7 @@ Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file h
 
 Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el objeto [file handle](FileHandleClass) abierto):
 
-| *options*         | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
+| *opciones*        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |

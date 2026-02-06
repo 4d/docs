@@ -463,7 +463,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Description
 
-La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode* spécifié ou avec les *options* spécifiées<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
+Chemins d'accès Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
 
 Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 
@@ -590,7 +590,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés *info* en tant que contenu d'information d'un fichier d'application<!-- END REF -->.
 
-La fonction doit être utilisée avec un fichier existant et pris en charge : **.plist** (toutes les plateformes), **.exe**/**.dll** (Windows), ou **exécutable macOS**. Si elle est utilisée avec un autre type de fichier ou avec un fichier **.exe**/**.dll** qui n'existe pas déjà sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
+The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. Si elle est utilisée avec un autre type de fichier ou avec un fichier **.exe**/**.dll** qui n'existe pas déjà sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 
 **Paramètre *info* avec un fichier .plist (toutes plateformes)**
 

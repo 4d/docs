@@ -17,13 +17,18 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| tableName  | Text    | -> | Nombre de la tabla                                             |                  |
-| column     | Integer | -> | Índice de la columna en la tabla                               |                  |
-| attributes | Object  | -> | Atributo(s) a aplicar a *column*            |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |    | Descripción                                                    |
+| ---------- | ------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |
+| tableName  | Text    | -> | Nombre de la tabla                                             |
+| column     | Integer | -> | Índice de la columna en la tabla                               |
+| attributes | Object  | -> | Atributo(s) a aplicar a *column*            |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

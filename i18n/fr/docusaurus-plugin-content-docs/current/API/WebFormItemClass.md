@@ -34,10 +34,13 @@ Par exemple, `WebFormObject.myImage` fait référence au composant image avec `m
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                                 |
 | ---------- | ---- | :-: | ------------------------------------------- |
 | className  | Text |  -> | Nom de la classe CSS à ajouter au composant |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -50,10 +53,13 @@ La fonction `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->a
 
 <!-- REF #WebFormItemClass.hide().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -86,10 +92,13 @@ exposed Function isHidden()
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                                   |
 | ---------- | ---- | :-: | --------------------------------------------- |
 | className  | Text |  -> | Nom de la classe CSS à supprimer du composant |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -102,10 +111,13 @@ La fonction `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summ
 
 <!-- REF #WebFormItemClass.show().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description

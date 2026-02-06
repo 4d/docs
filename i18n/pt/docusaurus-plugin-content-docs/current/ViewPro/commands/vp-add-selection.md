@@ -9,9 +9,14 @@ title: VP ADD SELECTION
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
-| Parâmetro | Tipo   |    | Descrição        |                  |
-| --------- | ------ | -- | ---------------- | ---------------- |
-| rangeObj  | Object | -> | Objeto intervalo | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro | Tipo   |    | Descrição        |
+| --------- | ------ | -- | ---------------- |
+| rangeObj  | Object | -> | Objeto intervalo |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

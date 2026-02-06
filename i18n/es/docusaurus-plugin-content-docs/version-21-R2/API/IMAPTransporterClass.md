@@ -481,7 +481,7 @@ Puede pasar:
 - en el parámetro `msgsIDs`, una colección contiene los IDs únicos de los mensajes específicos a eliminar, o
 - en el parámetro `allMsgs`, la constante `IMAP all` (entero) para borrar todos los mensajes en el buzón de correo seleccionado.
 
-La ejecución de esta función no elimina realmente los mensajes. Los mensajes con el marcador "delete" pueden seguir siendo encontrados por la función [.searchMails()](#searchmails). Los mensajes marcados se eliminan del servidor IMAP con la [función `.expunge()`](#expunge) o al seleccionar otro buzón o cuando el [objeto transporter](#imap-transporter-object) (creado con [IMAP New transporter](../commands/imap-new-transporter.md)) es destruido.
+La ejecución de esta función no elimina realmente los mensajes. Los mensajes con el marcador "delete" pueden seguir siendo encontrados por la función [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
 **Objeto devuelto**
 
@@ -1105,7 +1105,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 #### Resultado
 
-`.getMIMEAsBlob()` devuelve un `BLOB` que puede almacenarse en una base de datos o convertirse en un objeto [`Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
+`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
 
 #### Ejemplo
 
@@ -1528,13 +1528,13 @@ searchCriteria = FLAGGED FROM "SMITH"
 searchCriteria = OR SEEN FLAGGED
 ```
 
-... devuelve todos los mensajes con el marcador \Seen O \Flagged
+... returns all messages with \Seen flag set OR \Flagged flag set
 
 ```
 searchCriteria = NOT SEEN
 ```
 
-... devuelve todos los mensajes con el marcador \Seen.
+... returns all messages with \Seen flag not set.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...

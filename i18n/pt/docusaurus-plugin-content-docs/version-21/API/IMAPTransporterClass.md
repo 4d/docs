@@ -48,10 +48,10 @@ Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporte
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
-| Parâmetro  | Tipo                               |                             | Descrição                                             |
-| ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------- |
-| server     | Object                             |              ->             | Informação de servidor de correio                     |
-| Resultados | 4D.IMAPTransporter | <- | [Objeto transportador IMAP](#imap-transporter-object) |
+| Parâmetro  | Tipo                               |                             | Descrição                                                |
+| ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------- |
+| server     | Object                             |              ->             | Informação de servidor de correio                        |
+| Resultados | 4D.IMAPTransporter | <- | [Objeto do transportador IMAP](#imap-transporter-object) |
 
 <!-- END REF -->
 
@@ -289,7 +289,7 @@ A propriedade `.checkConnectionDelay` contém <!-- REF #IMAPTransporterClass.che
 | msgsIDs        | Collection |              ->             | Coleção de identificadores únicos de mensagens (strings)    |
 | allMsgs        | Integer    |              ->             | `IMAP all`: todas as mensagens na caixa de correio selecionada |
 | destinationBox | Text       |              ->             | Caixa de correio para receber mensagens copiadas                               |
-| Resultados     | Object     | <- | Estado da operação anexada                                                     |
+| Resultados     | Object     | <- | Status of the copy operation                                                   |
 
 <!-- END REF -->
 
@@ -386,10 +386,10 @@ Para copiar todas as mensagens na caixa de correio actual:
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                                         |
-| ---------- | ------ | :-------------------------: | ------------------------------------------------- |
-| name       | Text   |              ->             | Nome da nova caixa de correio                     |
-| Resultados | Object | <- | Estado da operação de criação da caixa de correio |
+| Parâmetro  | Tipo   |                             | Descrição                                |
+| ---------- | ------ | :-------------------------: | ---------------------------------------- |
+| name       | Text   |              ->             | Nome da nova caixa de correio            |
+| Resultados | Object | <- | Status of the mailbox creation operation |
 
 <!-- END REF -->
 
@@ -468,7 +468,7 @@ End if
 | ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------ |
 | msgsIDs    | Collection |              ->             | Coleção de identificadores únicos de mensagens (strings)    |
 | allMsgs    | Integer    |              ->             | `IMAP all`: todas as mensagens na caixa de correio selecionada |
-| Resultados | Object     | <- | Estado da operação apagada                                                     |
+| Resultados | Object     | <- | Status of the delete operation                                                 |
 
 <!-- END REF -->
 
@@ -481,7 +481,7 @@ Pode passar:
 - no parâmetro `msgsIDs`, uma coleção que contém as IDs exclusivas das mensagens específicas a serem excluídas, ou
 - no parâmetro `allMsgs`, a constante `IMAP all` (inteiro) para excluir todas as mensagens da caixa de correio selecionada.
 
-A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). As mensagens sinalizadas são excluídas do servidor IMAP com a função [`.expunge()`](#expunge) ou selecionando outra caixa de correio ou quando o [objeto transportador](#imap-transporter-object) (criado com [IMAP New transporter](../commands/imap-new-transporter.md)) é destruído.
+A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
 **Objeto devolvido**
 
@@ -564,10 +564,10 @@ Para apagar todas as mensagens na caixa de correio actual:
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                                            |
-| ---------- | ------ | :-------------------------: | ---------------------------------------------------- |
-| name       | Text   |              ->             | Nome da caixa de correio a apagar                    |
-| Resultados | Object | <- | Estado da operação de eliminação da caixa de correio |
+| Parâmetro  | Tipo   |                             | Descrição                                |
+| ---------- | ------ | :-------------------------: | ---------------------------------------- |
+| name       | Text   |              ->             | Nome da caixa de correio a apagar        |
+| Resultados | Object | <- | Status of the mailbox deletion operation |
 
 <!-- END REF -->
 
@@ -642,9 +642,9 @@ End if
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                     |
-| ---------- | ------ | :-------------------------: | ----------------------------- |
-| Resultados | Object | <- | Estado da operação de expurgo |
+| Parâmetro  | Tipo   |                             | Descrição                       |
+| ---------- | ------ | :-------------------------: | ------------------------------- |
+| Resultados | Object | <- | Status of the expunge operation |
 
 <!-- END REF -->
 
@@ -714,7 +714,7 @@ $status:=$transporter.expunge()
 | Parâmetro  | Tipo   |                             | Descrição                     |
 | ---------- | ------ | :-------------------------: | ----------------------------- |
 | name       | Text   |              ->             | Nome da nova caixa de correio |
-| Resultados | Object | <- | objecto boxInfo               |
+| Resultados | Object | <- | boxInfo object                |
 
 <!-- END REF -->
 
@@ -767,10 +767,10 @@ O objeto `boxInfo` retornado contém as seguintes propriedades:
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                              |
-| ---------- | ---------- | :-------------------------: | -------------------------------------- |
-| parameters | Object     |              ->             | Parâmetros                             |
-| Resultados | Collection | <- | Coleção de objetos da caixa de correio |
+| Parâmetro  | Tipo       |                             | Descrição                     |
+| ---------- | ---------- | :-------------------------: | ----------------------------- |
+| parameters | Object     |              ->             | Parâmetros                    |
+| Resultados | Collection | <- | Collection of mailbox objects |
 
 <!-- END REF -->
 
@@ -1081,7 +1081,7 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 | msgNumber  | Integer    |              ->             | Número sequencial da mensagem                                                                                                             |
 | msgID      | Text       |              ->             | ID única da mensagem                                                                                                                      |
 | updateSeen | Parâmetros |              ->             | Se Verdadeiro, a mensagem é marcada "visto" na caixa de correio. Se Falso, a mensagem é deixada intocada. |
-| Resultados | BLOB       | <- | Blob da string MIME retornado do servidor mail                                                                                            |
+| Resultados | BLOB       | <- | Blob of the MIME string returned from the mail server                                                                                     |
 
 <!-- END REF -->
 
@@ -1158,7 +1158,7 @@ O parâmetro opcional *updateSeen* permite que você especifique se a mensagem e
 | msgsIDs        | Collection |              ->             | Coleção de identificadores únicos de mensagens (strings)    |
 | allMsgs        | Integer    |              ->             | `IMAP all`: todas as mensagens na caixa de correio selecionada |
 | destinationBox | Text       |              ->             | Caixa de correio para receber mensagens movimentadas                           |
-| Resultados     | Object     | <- | Estado da operação de mudança                                                  |
+| Resultados     | Object     | <- | Status of the move operation                                                   |
 
 <!-- END REF -->
 
@@ -1260,7 +1260,7 @@ Para mover todas as mensagens na mailbox atual:
 | ---------- | ---------- | :-------------------------: | -------------------------------------- |
 | startMsg   | Integer    |              ->             | Número sequencial da primeira mensagem |
 | endMsg     | Integer    |              ->             | Número sequencial da última mensagem   |
-| Resultados | Collection | <- | Colecção de identificações únicas      |
+| Resultados | Collection | <- | Collection of unique IDs               |
 
 <!-- END REF -->
 
@@ -1324,7 +1324,7 @@ A função devolve uma colecção de cordas (identificações únicas).
 | ---------- | ------ | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | any    |              ->             | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
 | keywords   | Object |              ->             | Flags de palavras-chave a remover                                                                                                                                                                                                                           |
-| Resultados | Object | <- | Estado da operação removeFlags                                                                                                                                                                                                                              |
+| Resultados | Object | <- | Status of the removeFlags operation                                                                                                                                                                                                                         |
 
 <!-- END REF -->
 
@@ -1411,11 +1411,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
 
-| Parâmetro   | Tipo   |                             | Descrição                          |
-| ----------- | ------ | :-------------------------: | ---------------------------------- |
-| currentName | Text   |              ->             | Nome da caixa de correio actual    |
-| newName     | Text   |              ->             | Nome da nova caixa de correio      |
-| Resultados  | Object | <- | Estado da operação de renomeamento |
+| Parâmetro   | Tipo   |                             | Descrição                        |
+| ----------- | ------ | :-------------------------: | -------------------------------- |
+| currentName | Text   |              ->             | Nome da caixa de correio actual  |
+| newName     | Text   |              ->             | Nome da nova caixa de correio    |
+| Resultados  | Object | <- | Status of the renaming operation |
 
 <!-- END REF -->
 
@@ -1490,10 +1490,10 @@ End if
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 
-| Parâmetro      | Tipo       |                             | Descrição                       |
-| -------------- | ---------- | :-------------------------: | ------------------------------- |
-| searchCriteria | Text       |              ->             | Critérios de pesquisa           |
-| Resultados     | Collection | <- | Coleção de números de mensagens |
+| Parâmetro      | Tipo       |                             | Descrição                     |
+| -------------- | ---------- | :-------------------------: | ----------------------------- |
+| searchCriteria | Text       |              ->             | Critérios de pesquisa         |
+| Resultados     | Collection | <- | Collection of message numbers |
 
 <!-- END REF -->
 
@@ -1526,13 +1526,13 @@ searchCriteria = FLAGGED FROM "SMITH"
 searchCriteria = OR SEEN FLAGGED
 ```
 
-... devolve todas as mensagens com o conjunto de bandeiras visíveis OU o conjunto de bandeiras sinalizadoras
+... returns all messages with \Seen flag set OR \Flagged flag set
 
 ```
 searchCriteria = NOT SEEN
 ```
 
-... devolve todas as mensagens com a bandeira não estabelecida.
+... returns all messages with \Seen flag not set.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
@@ -1641,7 +1641,7 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 | ---------- | ------- | :-------------------------: | ----------------------------------- |
 | name       | Text    |              ->             | Nome da nova caixa de correio       |
 | state      | Integer |              ->             | Estado de acesso à caixa de correio |
-| Resultados | Object  | <- | objecto boxInfo                     |
+| Resultados | Object  | <- | boxInfo object                      |
 
 <!-- END REF -->
 
@@ -1788,10 +1788,10 @@ End if
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                      |
-| ---------- | ------ | :-------------------------: | ------------------------------ |
-| name       | Text   |              ->             | Nome da nova caixa de correio  |
-| Resultados | Object | <- | Estado da operação unsubscribe |
+| Parâmetro  | Tipo   |                             | Descrição                           |
+| ---------- | ------ | :-------------------------: | ----------------------------------- |
+| name       | Text   |              ->             | Nome da nova caixa de correio       |
+| Resultados | Object | <- | Status of the unsubscribe operation |
 
 <!-- END REF -->
 

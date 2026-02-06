@@ -112,12 +112,15 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 
 <!-- REF #FunctionClass.apply().Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo       |                             | Descripción                                                                                                                |
 | ------------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------- |
 | thisObj       | Object     |              ->             | Objeto a devolver por el comando This en la fórmula                                                                        |
 | formulaParams | Collection |              ->             | Colección de valores que se pasan como $1...$n cuando se ejecuta `formula` |
 | Resultado     | any        | <- | Valor obtenido de la ejecución de la fórmula                                                                               |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -172,12 +175,15 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 
 <!-- REF #FunctionClass.call().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                                                                                                                                              |
 | ---------- | ------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | thisObj    | Object | ->                          | Objeto a devolver por el comando This en la fórmula                                                                                                      |
 | params     | any    | ->                          | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
 | Resultado  | any    | <- | Valor obtenido de la ejecución de la fórmula                                                                                                             |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

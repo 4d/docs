@@ -368,10 +368,13 @@ La propiedad `.user` contiene <!-- REF #transporter.user.Summary --> el nombre d
 
 <!-- REF #transporter.checkConnection().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                                    |
 | ---------- | ------ | :-------------------------: | ---------------------------------------------- |
 | Resultado  | Object | <- | Estado de la conexión del objeto transportador |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
+<div class="no-index">
+
 | Paramètres          | Type       |                             | Description                                        |
 | ------------------- | ---------- | --------------------------- | -------------------------------------------------- |
 | targetObj           | Object     | &#8594; | Plage ou élément ou document 4D Write Pro          |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | attribName          | Text       | &#8594; | Nom d'attribut(s) à supprimer   |
 | attribColl          | Collection | &#8594; | Collection d'attributs à supprimer                 |
 
+</div>
 <!-- END REF-->
 
 ## Description

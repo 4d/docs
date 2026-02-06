@@ -9,11 +9,16 @@ title: VP All
 
 <!-- REF #_method_.VP All.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
-| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Objeto intervalo de todas as células                        | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                                   |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados | Object  | <- | Objeto intervalo de todas as células                        |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

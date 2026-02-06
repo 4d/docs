@@ -138,9 +138,9 @@ Executar esse método não remove de verdade qualquer email. O email marcado ser
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição       |
-| ---------- | ------ | :-------------------------: | --------------- |
-| Resultados | Object | <- | objecto boxInfo |
+| Parâmetro  | Tipo   |                             | Descrição      |
+| ---------- | ------ | :-------------------------: | -------------- |
+| Resultados | Object | <- | boxInfo object |
 
 <!-- END REF -->
 
@@ -379,10 +379,10 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                      |
-| ---------- | ------- | :-------------------------: | ---------------------------------------------- |
-| msgNumber  | Integer |              ->             | Número da mensagem que na lista                |
-| Resultados | Blob    | <- | Blob da string MIME retornado do servidor mail |
+| Parâmetro  | Tipo    |                             | Descrição                                             |
+| ---------- | ------- | :-------------------------: | ----------------------------------------------------- |
+| msgNumber  | Integer |              ->             | Número da mensagem que na lista                       |
+| Resultados | Blob    | <- | Blob of the MIME string returned from the mail server |
 
 <!-- END REF -->
 

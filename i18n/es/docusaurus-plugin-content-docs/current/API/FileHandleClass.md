@@ -206,10 +206,13 @@ Esta propiedad es de **solo lectura**.
 
 <!--REF #FileHandleClass.getSize().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |                             | Descripción                   |
 | ---------- | ---- | --------------------------- | ----------------------------- |
 | Resultado  | Real | <- | Tamaño del documento en bytes |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -275,7 +278,7 @@ Esta propiedad es **lectura-escritura**.
 
 :::caution
 
-Cuando se crea un file handle, el valor `.offset` es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
+Cuando se crea un file handle, el valor `.offset` es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por eso, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
 
 ```4d
   // Abrir un fichero de texto europeo con codificación utf-16 (dos bytes por caracter)
@@ -310,11 +313,14 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readBlob().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                                 |                             | Descripción              |
 | ---------- | ------------------------------------ | --------------------------- | ------------------------ |
 | bytes      | Real                                 | ->                          | Número de bytes a leer   |
 | Resultado  | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -345,10 +351,13 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.readLine().Params -->
 
-| Parámetros | Tipo |                             | Descripción    |
-| ---------- | ---- | --------------------------- | -------------- |
-| Resultado  | Text | <- | Línea de texto |
+<div class="no-index">
 
+| Parámetros | Tipo |                             | Descripción  |
+| ---------- | ---- | --------------------------- | ------------ |
+| Resultado  | Text | <- | Line of text |
+
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -387,11 +396,14 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 <!--REF #FileHandleClass.readText().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |                             | Descripción                                              |
 | ---------- | ---- | --------------------------- | -------------------------------------------------------- |
 | stopChar   | Text | ->                          | Caracter(es) en los que dejar de leer |
 | Resultado  | Text | <- | Texto del archivo                                        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -434,10 +446,13 @@ Si se pasa el parámetro *stopChar* y no se encuentra, `.readText()` devuelve un
 
 <!--REF #FileHandleClass.setSize().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |    | Descripción                         |
 | ---------- | ---- | -- | ----------------------------------- |
 | size       | Real | -> | Nuevo tamaño del documento en bytes |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -468,10 +483,13 @@ Si el valor de *size* es menor que el tamaño actual del documento, el contenido
 
 <!--REF #FileHandleClass.writeBlob().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                                 |    | Descripción                   |
 | ---------- | ------------------------------------ | -- | ----------------------------- |
 | blob       | [4D.Blob](BlobClass) | -> | Blob a escribir en el archivo |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -502,10 +520,13 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.writeLine().Params -->
 
-| Parámetros | Tipo |    | Descripción      |
-| ---------- | ---- | -- | ---------------- |
-| lineOfText | Text | -> | Texto a escribir |
+<div class="no-index">
 
+| Parámetros | Tipo |    | Descripción   |
+| ---------- | ---- | -- | ------------- |
+| lineOfText | Text | -> | Text to write |
+
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -536,10 +557,13 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.writeText().Params -->
 
-| Parámetros  | Tipo |    | Descripción      |
-| ----------- | ---- | -- | ---------------- |
-| textToWrite | Text | -> | Texto a escribir |
+<div class="no-index">
 
+| Parámetros  | Tipo |    | Descripción   |
+| ----------- | ---- | -- | ------------- |
+| textToWrite | Text | -> | Text to write |
+
+</div>
 <!-- END REF -->
 
 #### Descripción

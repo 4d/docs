@@ -24,7 +24,7 @@ No se puede activar directamente la ejecución de la función de evento. Los eve
 
 :::info Nota de compatibilidad
 
-Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA. Note also that, unlike triggers, ORDA entity events do not lock the entire underlying table of a dataclass while saving or dropping entities. Varios eventos pueden ejecutarse en paralelo siempre que afecten a entidades distintas (es decir, registros).
+Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA. Tenga en cuenta también que, a diferencia de los triggers, los eventos de la entidad ORDA no bloquean toda la tabla subyacente de un dataclass mientras se guardan o se eliminan entidades. Varios eventos pueden ejecutarse en paralelo siempre que afecten a entidades distintas (es decir, registros).
 
 :::
 
@@ -265,7 +265,7 @@ Note over Client:$people.lastname is uppercased
 
     Client->>+Server: $people.apply()
    
-   Note over Server: The $people entity is received with the lastname attribute uppercased
+      Nota sobre el servidor: la entidad $people se recibe con el atributo lastname en mayúsculas
 
 ```
 
@@ -285,9 +285,9 @@ sequenceDiagram
 
    Note over Server: Function event touched lastname($event : Object) <br>  This.lastname:=Uppercase(This.lastname)
 
-    Server-->>-Client: The $people entity is updated
+    Server-->>-Client: la entidad $people se actualiza
 
-   Note over Client:$people.lastname is uppercased
+   Note over Client:$people.lastname se pone en mayúsculas
 
 
 ```
@@ -504,7 +504,7 @@ Este evento se activa con las siguientes funcionalidades:
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
 - [deletion control rules](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) that can be defined at the database structure level.
 
-This event is triggered **before** the entity is actually dropped, allowing you to check data consistency and if necessary, to stop the drop action.
+Este evento se activa **antes** de que la entidad sea realmente eliminada, permitiéndole comprobar la consistencia de los datos y, si es necesario, detener la acción de eliminación.
 
 Para detener la acción, el código de la función debe devolver un [objeto error](#error-object).
 

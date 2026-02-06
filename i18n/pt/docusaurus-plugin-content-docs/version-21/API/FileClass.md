@@ -249,10 +249,10 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                           |
-| ------- | ---------------------------------- |
-| 20 R9   | Ler os UUIDs nos executáveis macOS |
-| 19      | Adicionado                         |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 20 R9   | Ler UUIDs nos executáveis macOS |
+| 19      | Adicionado                      |
 
 </details>
 
@@ -327,18 +327,20 @@ ALERT($info.Copyright)
 #### Exemplo 2
 
 ```4d
- // display copyright info of application .exe file (windows)
+// definir copyright e versão de um arquivo .exe (Windows)
 var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
-$info:=$exeFile.getAppInfo()
-ALERT($info.LegalCopyright)
+$info:=New object
+$info.LegalCopyright:="Copyright 4D 2021"
+$info.ProductVersion:="1.0.0"
+$exeFile.setAppInfo($info)
 ```
 
 #### Exemplo 3
 
 ```4d
- // Get uuids of an application (macOS)
+ // Obter uuids de um aplicativo (macOS)
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 ```
@@ -477,7 +479,7 @@ Se utilizar o parâmetro *mode* (text), passe o modo de abertura para o file han
 
 Se você usar o parâmetro *options* (objeto), poderá passar mais opções para o identificador de arquivo por meio das seguintes propriedades (essas propriedades podem ser lidas posteriormente a partir do [objeto de identificador de arquivo](FileHandleClass) aberto):
 
-| *opções*          | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
+| *options*         | Tipo           | Descrição                                                                                                                                                                     | Por padrão    |
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `.mode`           | Text           | Modo de abertura (consulte *modo* acima)                                                                                                                   | "read"        |
 | `.charset`        | Text           | Conjunto de carateres utilizado para ler ou escrever no ficheiro. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
@@ -568,11 +570,11 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <details><summary>História</summary>
 
-| Release | Mudanças                           |
-| ------- | ---------------------------------- |
-| 20 R9   | Ler os UUIDs nos executáveis macOS |
-| 20      | Suporte de WinIcon                 |
-| 19      | Adicionado                         |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 20 R9   | Ler UUIDs nos executáveis macOS |
+| 20      | Suporte de WinIcon              |
+| 19      | Adicionado                      |
 
 </details>
 
@@ -634,26 +636,26 @@ Para a propriedade `WinIcon`, se o arquivo de ícone não existir ou tiver um fo
 
 **Parâmetro *info* com um arquivo macOS executável (somente macOS)**
 
-*info* devem ser um objeto com uma única propriedade chamada `archs` que é uma coleção de objetos no formato retornado por [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* devem ser um objeto com uma única propriedade chamada `archs` que é uma coleção de objetos no formato retornado por [`getAppInfo()`](#getappinfo). Cada objeto deve conter pelo menos as propriedades `type` e `uuid` (`name` não são usadas).
 
 Cada objeto na coleção *info*.archs deve conter as seguintes propriedades:
 
-| Propriedade | Tipo   | Descrição                                          |
-| ----------- | ------ | -------------------------------------------------- |
-| type        | Number | Numerical identifier of the architecture to modify |
-| uuid        | Text   | Textual representation of the new executable uuid  |
+| Propriedade | Tipo   | Descrição                                            |
+| ----------- | ------ | ---------------------------------------------------- |
+| type        | Number | Identificador numérico da arquitetura para modificar |
+| uuid        | Text   | Representação textual do novo uuid executável        |
 
 #### Exemplo 1
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
-var $infoPlistFile : 4D.File
+  // define algumas chaves em um arquivo info.plist (todas as plataformas)
+var $infoPlistFile : 4D. ile
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=New object
-$info.Copyright:="Copyright 4D 2023" //text
+$info:=Novo objeto
+$info. opyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info. hipmentDate:="2023-04-22T06:00:00Z" //timestamp
 $info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
@@ -661,28 +663,26 @@ $infoPlistFile.setAppInfo($info)
 #### Exemplo 2
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
-var $exeFile; $iconFile : 4D.File
+  // estabelece copyright e versão do arquivo .exe (Windows)
+var $exeFile : 4D. File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
-$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2023"
-$info.ProductVersion:="1.0.0"
-$info.WinIcon:=$iconFile.path
+$info. LegalCopyright:="Copyright 4D 2021"
+$info. ProductVersion:="1.0.0"
 $exeFile.setAppInfo($info)
 ```
 
 #### Exemplo 3
 
 ```4d
-// regenerate uuids of an application (macOS)
+// regenera  as uuids de uma aplicação (macOS)
 
-// read myApp uuids 
+// lê os uuids myApp 
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 
-// regenerate uuids for all architectures
+// regenera uuids para todas as arquiteturas
 For each ($i; $info.archs)
 	$i.uuid:=Generate UUID
 End for each 
@@ -758,7 +758,7 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 #### Descrição
 
-A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- FIM REF -->.
 
 Se o arquivo referenciado no objeto `File` não existir no disco, ele será criado pela função. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
@@ -779,9 +779,9 @@ Em breakMode, você pode passar um número indicando o processamento a aplicar a
 | ----------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Não processado                                                                                                                                                                                                                                        |
 | `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (avanço de linha) no macOS, CRLF (retorno de carro + avanço de linha) no Windows |
-| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                                                                                                 |
-| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                                                                            |
-| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                                                                             |
+| `Document with CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                                                                                                 |
+| `Document with CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                                                                            |
+| `Document with LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                                                                             |
 
 Por padrão, ao omitir o parâmetro *breakMode*, as quebras de linha são processadas no modo nativo (1).
 

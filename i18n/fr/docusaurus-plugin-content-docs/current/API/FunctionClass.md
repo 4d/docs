@@ -112,12 +112,15 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 <!-- REF #FunctionClass.apply().Params -->
 
+<div class="no-index">
+
 | Paramètres    | Type       |                             | Description                                                                                                                       |
 | ------------- | ---------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------- |
 | thisObj       | Object     |              ->             | Objet à retourner par la commande This dans la formule                                                                            |
 | formulaParams | Collection |              ->             | Collection des valeurs à passer en tant que $1...$n lorsque `formula` est exécuté |
 | Résultat      | any        | <- | Valeur obtenue à partir de l'exécution de la formule                                                                              |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -172,12 +175,15 @@ Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètre
 
 <!-- REF #FunctionClass.call().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type   |                             | Description                                                                                                                           |
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | thisObj    | Object | ->                          | Objet à retourner par la commande This dans la formule                                                                                |
 | params     | any    | ->                          | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté |
 | Résultat   | any    | <- | Valeur obtenue à partir de l'exécution de la formule                                                                                  |
 
+</div>
 <!-- END REF -->
 
 #### Description

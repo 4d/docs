@@ -147,7 +147,7 @@ En este caso, el modo de renderizado Fluent UI se utilizará por defecto en Wind
 
 :::note
 
-If the current configuration is not compliant with the [Fluent UI requirements](#requirements), an error message is displayed next to the check box.
+Si la configuración actual no cumple las [condiciones de Fluent UI](#requirements), aparecerá un mensaje de error junto a la casilla de verificación.
 
 :::
 

@@ -17,12 +17,15 @@ title: VP IMPORT FROM OBJECT
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
+<div class="no-index">
+
 | Paramètres | Type   |    | Description                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro               |
 | viewPro    | Object | -> | Objet 4D View Pro                                     |
 | paramObj   | Object | -> | (Facultatif) options d'importation |
 
+</div>
 <!-- END REF -->
 
 ## Description

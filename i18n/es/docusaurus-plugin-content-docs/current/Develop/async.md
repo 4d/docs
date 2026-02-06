@@ -109,7 +109,7 @@ Several 4D classes support asynchronous processing:
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
 
-All these classes follow the same rules regarding asynchronous execution. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. For example, you can create an `onResponse()` function in the class, it will be automatically called asychronously when a *reponse* event is fired.
+All these classes follow the same rules regarding asynchronous execution. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. Por ejemplo, puede crear una función `onResponse()` en la clase, que será llamada automáticamente de forma asíncrona cuando se dispare un evento *reponse*.
 
 We recommend the following sequence:
 

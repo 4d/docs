@@ -9,11 +9,11 @@ title: VP SET FORMULA
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Paramètres    | Type   |    | Description           |                  |
-| ------------- | ------ | -- | --------------------- | ---------------- |
-| rangeObj      | Object | -> | Objet plage           |                  |
-| formula       | Text   | -> | Formule ou méthode 4D |                  |
-| formatPattern | Text   | -> | Format du champ       | <!-- END REF --> |
+| Paramètres    | Type   |    | Description                                                                                                                                                                                                                                            |                  |
+| ------------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| rangeObj      | Object | -> | Objet plage                                                                                                                                                                                                                                            |                  |
+| formula       | Text   | -> | Nom d'un paramètre à afficher pour <code>&lt;functionName&gt;</code>.<strong x-id="1">Note</strong>: Les noms des paramètres ne doivent pas contenir d'espace. |                  |
+| formatPattern | Text   | -> | Format du champ                                                                                                                                                                                                                                        | <!-- END REF --> |
 
 ## Description
 
