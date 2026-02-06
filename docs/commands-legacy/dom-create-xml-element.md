@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* : Text ; *xPath* : Text; {; ...(*attribName* : Text, *attrValue* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* : Text ; *xPath* : Text; {; ...(*attribName* : Text ; *attrValue* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
 <div class="no-index">
 
