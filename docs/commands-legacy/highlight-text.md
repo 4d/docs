@@ -5,14 +5,14 @@ slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *object* : Variable, Field, any ; *startSel* : Integer ; *endSel* : Integer )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer )<br/>**HIGHLIGHT TEXT** ( *object* : Variable, Field ; *startSel* : Integer ; *endSel* : Integer )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a field or variable |
-| object | Field, Variable, any | &#8594;  | Object name (if * is specified) or Enterable field or variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object name (if * is specified) or Enterable field or variable (if * is omitted) |
 | startSel | Integer | &#8594;  | New text selection starting position |
 | endSel | Integer | &#8594;  | New text selection ending position |
 </div>
