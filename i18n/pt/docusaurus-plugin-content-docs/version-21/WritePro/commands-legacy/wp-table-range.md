@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table range.Syntax-->**WP Table range** ( *objFaixa* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table range.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objFaixa | Object | &#8594;  | faixa de objetos ou elemento do documento 4D Write Pro |
 | Resultado | Object | &#8592; | Objeto de Faixa contendo apenas tabelas |
-
+</div>
 <!-- END REF-->
 
 ## Compatibilidade 

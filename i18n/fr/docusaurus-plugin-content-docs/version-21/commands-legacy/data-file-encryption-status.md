@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( cheminStructure , cheminDonnées ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminStructure | Text | &#8594;  | Chemin d'accès du fichier de structure à vérifier |
 | cheminDonnées | Text | &#8594;  | Chemin d'accès du fichier de données 4D à vérifier |
 | Résultat | Object | &#8592; | Informations sur le chiffrement du fichier de données et de chaque table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

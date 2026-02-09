@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window reduced.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number |
 | Function result | Boolean | &#8592; | True if the window is reduced in the taskbar or the in dock, False otherwise |
-
+</div>
 <!-- END REF-->
 
 ## Description 

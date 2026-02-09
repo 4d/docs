@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( taille )}<br/>**FLUSH CACHE** {( * )}<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | taille &#124; * | Réel, Opérateur | &#8594;  | * pour vider le cache, ou nombre d'octets minimum de libération du cache |
-
+</div>
 <!-- END REF-->
 
 ## Description 

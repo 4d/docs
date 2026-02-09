@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *cheminDossierDest* : Text {; *tailleMax* : Integer {; *cheminHistorique* : Text {; *attribChamp* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminDossierDest | Text | &#8594; | Chemin d'accès du dossier de destination du fichier sauvegardé |
 | tailleMax | Integer | &#8594; | Taille maximale du fichier JSON à créer (octets) |
 | cheminHistorique | Text | &#8594; | Chemin d'accès du fichier d'historique à exporter ; utiliser l'historique courant si omis |
 | attribChamp | Integer | &#8594; | Attribut de description du champ : 1 = utiliser numéro (défaut), 2 = utiliser nom |
-
+</div>
 <!-- END REF-->
 
 ## Description 

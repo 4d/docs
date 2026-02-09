@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Syntax-->**Position** ( *find* : Text ; *aString* : Text {; *start* : Integer {; *lengthFound* : Integer}}{; *} ) -> Integer<br/>**Position** ( *find* : Text ; *aString* : Text; *start* : Integer ; *lengthFound* : Integer ; *options* : Integer ) -> Integer
 <!-- END REF-->
 <!--REF #_command_.Position.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pesquisar | Text | &#8594; | Cadeia a procurar |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | * | Operador | &#8594; | Se passado: avaliação baseada em códigos de caracteres |
 | opções | Integer | &#8594; | Condições de pesquisa |
 | Resultado | Integer | &#8592; | Posição da primeira ocorrência |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get text.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | débutSél | Integer | &#8594;  | Début de la sélection |
 | finSél | Integer | &#8594;  | Fin de la sélection |
 | Résultat | Text | &#8592; | Texte incluant les balises de style |
-
+</div>
 <!-- END REF-->
 
 ## Description 

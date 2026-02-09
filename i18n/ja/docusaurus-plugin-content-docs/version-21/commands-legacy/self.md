@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Self.Syntax-->**Self**  : Pointer<!-- END REF-->
 <!--REF #_command_.Self.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Pointer | &#8592; | メソッドが現在実行されているフォーム オブジェクトへのポインタ そうでない場合コンテキストの外側ではNil (->[]) |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

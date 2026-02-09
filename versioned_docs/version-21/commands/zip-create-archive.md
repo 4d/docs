@@ -7,6 +7,8 @@ displayed_sidebar: docs
 <!-- REF #_command_.ZIP Create archive.Syntax -->**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br/>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br/>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |fileToZip|4D.File|&#8594; |File or Folder object to compress|
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 |destinationFile|4D.File|&#8594; |Destination file for the archive|
 |options|Integer|&#8594; |*folderToZip* option: `ZIP Without enclosing folder`|
 |Result|Object|&#8592;|Status object|
+</div>
 <!-- END REF -->
 
 

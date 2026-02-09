@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in field.Syntax-->**Find in field** ( *champCible* ; *valeur* ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in field.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | champCible | Field | &#8594;  | Champ sur lequel effectuer la recherche |
 | valeur | Field, Variable | &#8594;  | Valeur à rechercher |
 | &#8592; | Valeur trouvée |
 | Résultat | Integer | &#8592; | Numéro de l’enregistrement trouvé ou -1 si pas d’enregistrement trouvé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

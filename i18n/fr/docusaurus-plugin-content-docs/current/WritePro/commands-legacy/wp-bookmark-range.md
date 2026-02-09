@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *docWP* : Object ; *nomSignet* : Text ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Bookmark range.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Document 4D Write Pro |
 | nomSignet | Text | &#8594;  | Nom du signet dont vous souhaitez récupérer la plage |
 | Résultat | Object | &#8592; | Plage du signet |
-
+</div>
 <!-- END REF-->
 
 ## Description 

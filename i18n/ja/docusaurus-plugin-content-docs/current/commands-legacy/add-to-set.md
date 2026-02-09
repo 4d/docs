@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | カレントレコードのテーブル, または 省略時デフォルトテーブル |
 | set | Text | &#8594; | カレントレコードを追加するセットの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

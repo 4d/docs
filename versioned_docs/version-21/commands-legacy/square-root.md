@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Square root.Syntax-->**Square root** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Square root.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number whose square root is calculated |
 | Function result | Real | &#8592; | Square root of the number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

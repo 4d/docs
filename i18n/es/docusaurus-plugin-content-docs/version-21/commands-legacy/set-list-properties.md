@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *lista* ; *apariencia* {; *icono* {; *altoLinea* {; *dobleClic* {; *multiSeleccion* {; *editable*}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | lista | Integer | &#8594;  | Número de referencia de la lista |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | dobleClic | Integer | &#8594;  | Desplegar/Contraer sublista con doble-clic 0 = Sí, 1= No |
 | multiSeleccion | Integer | &#8594;  | Selecciones múltiples: 0 = No (por defecto), 1 = Sí |
 | editable | Integer | &#8594;  | 0 = Lista no editable por el usuario, 1 = Lista editable por el usuario (por defecto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

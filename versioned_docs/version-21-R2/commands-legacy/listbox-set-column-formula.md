@@ -5,15 +5,17 @@ slug: /commands/listbox-set-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( * ; *object* : Text ; *formula* : Text ; *dataType* : Integer )<br/>**LISTBOX SET COLUMN FORMULA** ( *object* : Field, Variable ; *formula* : Text ; *dataType* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( * ; *object* : Text ; *formula* : Text ; *dataType* : Integer )<br/>**LISTBOX SET COLUMN FORMULA** ( *object* : Variable ; *formula* : Text ; *dataType* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or  Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Object Name (if * is specified) or  Variable (if * is omitted) |
 | formula | Text | &#8594;  | 4D formula associated with column |
 | dataType | Integer | &#8594;  | Type of formula result |
-
+</div>
 <!-- END REF-->
 
 ## Description 

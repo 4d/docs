@@ -5,14 +5,16 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *object* : Text ) : Text<br/>**WA Get page title** ( *object* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *object* : Text ) : Text<br/>**WA Get page title** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Text | &#8592; | Title of current page |
-
+</div>
 <!-- END REF-->
 
 ## Description 

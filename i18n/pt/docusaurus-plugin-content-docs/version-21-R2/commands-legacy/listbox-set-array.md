@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *objeto* : Text ; *tipoArray* : Integer ; *proArray* : Pointer )<br/>**LISTBOX SET ARRAY** ( *objeto* : Field, Variable ; *tipoArray* : Integer ; *proArray* : Pointer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
 | tipoArray | Integer | &#8594; | Tipo de Array |
 | proArray | Pointer | &#8594; | Array a associar com propriedade |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

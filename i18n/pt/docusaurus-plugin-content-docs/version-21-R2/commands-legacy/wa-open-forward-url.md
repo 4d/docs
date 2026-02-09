@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA OPEN FORWARD URL.Syntax-->**WA OPEN FORWARD URL** ( * ; *objeto* : Text )<br/>**WA OPEN FORWARD URL** ( *objeto* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA OPEN FORWARD URL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( {* ;} *objeto* ; *fila* {; *tipoCor*} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color as number.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | fila | Integer | &#8594;  | Número da linha |
 | tipoCor | Integer | &#8594;  | cor de fonte listbox (normal) ou cor de fundo de list box |
 | Resultado | Integer | &#8592; | Valor da cor |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

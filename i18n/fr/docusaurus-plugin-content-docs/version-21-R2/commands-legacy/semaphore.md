@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *sémaphore* : Text {; *nbTicks* : Integer} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Semaphore.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sémaphore | Text | &#8594; | Sémaphore à tester et à positionner |
 | nbTicks | Integer | &#8594; | Temps d’attente maximum |
 | Résultat | Boolean | &#8592; | sémaphore a été correctement créé (Faux) ou sémaphore était déjà créé (Vrai) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

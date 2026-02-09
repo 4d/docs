@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *zone* ; *sélecteur* ; *titreGauche* ; *titreCentre* ; *titreDroit* ; *hauteur* {; *image* {; *alignementImage*}} )<!-- END REF-->
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594;  | Référence de la zone |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | hauteur | Integer | &#8592; | Hauteur de l'en-tête ou du pied de page |
 | image | Picture | &#8592; | Image à afficher |
 | alignementImage | Integer | &#8592; | Alignement de l'image |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,8 +5,10 @@ slug: /commands/listbox-get-row-color-as-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( * ; *object* : Text ; *row* : Integer {; *colorType* : Integer} )  : Integer<br/>**LISTBOX Get row color as number** ( *object* : Field, Variable ; *row* : Integer {; *colorType* : Integer} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( * ; *object* : Text ; *row* : Integer {; *colorType* : Integer} )  : Integer<br/>**LISTBOX Get row color as number** ( *object* : Variable ; *row* : Integer {; *colorType* : Integer} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color as number.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | row | Integer | &#8594; | 列番号 |
 | colorType | Integer | &#8594; | Listbox font color (デフォルト値) または Listbox background color |
 | 戻り値 | Integer | &#8592; | カラーの値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

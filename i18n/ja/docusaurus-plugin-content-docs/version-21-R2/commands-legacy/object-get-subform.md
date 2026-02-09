@@ -5,8 +5,10 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *object* : Text ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<br/>**OBJECT GET SUBFORM** ( *object* : Field, Variable ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *object* : Text ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<br/>**OBJECT GET SUBFORM** ( *object* : Variable, Field ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tablePtr | Table | &#8592; | フォームが属するテーブルへのポインター |
 | detailSubform | Text | &#8592; | サブフォームの詳細フォーム名 |
 | listSubform | Text | &#8592; | サブフォームのリストフォーム名 (テーブルフォーム) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

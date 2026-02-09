@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table range.Syntax-->**WP Table range** ( *targetObj* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table range.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro ドキュメント、レンジまたは要素 |
 | 戻り値 | Object | &#8592; | 表のみを格納したレンジオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

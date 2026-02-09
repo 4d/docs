@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get header.Syntax-->**WP Get header** ( *objCible* : Object ) | (*docWP* : Object ; *indexSection* : Integer {; *typeSousSection* : Integer} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get header.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément section/sous-section 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | indexSection | Integer | &#8594;  | Numéro de la section |
 | typeSousSection | Integer | &#8594;  | Type de sous-section (wk first page, wk left page ou wk right page) |
 | Résultat | Object | &#8592; | En-tête 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Description 

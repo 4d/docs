@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Syntax-->**SET MENU ITEM PROPERTY** ( *menu* : Integer, Text ; *menuItem* : Integer ; *property* : Text ; *value* : Text, Real, Boolean {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PROPERTY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu reference or menu number |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | property | Text | &#8594;  | Property type |
 | value | Text, Real, Boolean | &#8594;  | Property value |
 | process | Integer | &#8594;  | Process number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

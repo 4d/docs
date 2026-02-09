@@ -7,13 +7,16 @@ title: VP Get stylesheet
 **VP Get stylesheet** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName|Text|->|4D View Pro area form object name|
 |styleName|Text|->|Name of style|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|Result|Object|<-|Style sheet object|
+</div>
+<!-- END REF -->
 
 ## Description
 

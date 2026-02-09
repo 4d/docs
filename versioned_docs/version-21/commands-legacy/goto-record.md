@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*aTable* ;} *record* )<!-- END REF-->
 <!--REF #_command_.GOTO RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table in which to go to the record, or Default table, if omitted |
 | record | Integer | &#8594;  | Number returned by Record number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

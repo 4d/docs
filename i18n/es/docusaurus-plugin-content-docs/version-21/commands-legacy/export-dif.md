@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*tabla* ;} *doc* )<!-- END REF-->
 <!--REF #_command_.EXPORT DIF.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla de la cual exportar datos, o Tabla por defecto, si se omite |
 | doc | Text | &#8594;  | Documento DIF para recibir los datos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

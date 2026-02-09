@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* ; *elementName* ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML elements.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML要素参照 |
 | elementName | Text | &#8594;  | 数えるXML要素名 |
 | 戻り値 | Integer | &#8592; | 要素数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

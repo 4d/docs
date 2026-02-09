@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *liste* ; *blob* {; *blob*} )<!-- END REF-->
 <!--REF #_command_.LIST TO BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | liste | Integer | &#8594;  | Liste hiérarchique à stocker dans le BLOB |
 | blob | Blob | &#8594;  | BLOB devant recevoir la liste hiérarchique |
 | blob | * | &#8594;  | Ajouter la liste à la fin du BLOB |
-
+</div>
 <!-- END REF-->
 
 ## Description 

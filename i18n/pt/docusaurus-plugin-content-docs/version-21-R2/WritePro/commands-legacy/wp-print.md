@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP PRINT.Syntax-->**WP PRINT** ( *wpDoc* : Object {; *modoImpr* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP PRINT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Nome do documento 4D Write Pro |
 | modoImpr | Integer | &#8594;  | Modo de impressão para o documento 4D Write Pro: 0 (normal) = modo 4D Write Pro, 1 = HTML WYSWYG |
-
+</div>
 <!-- END REF-->
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*

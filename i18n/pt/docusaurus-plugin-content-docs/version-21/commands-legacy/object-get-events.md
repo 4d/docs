@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( {* ;} *objeto* ; *arrEvents* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594;  | Nome de objeto "" para designar o formulário (se for especificado *) ou<br/>Campo ou variável (se for omitido *) |
 | arrEvents | Integer array | &#8592; | Array de eventos desativados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

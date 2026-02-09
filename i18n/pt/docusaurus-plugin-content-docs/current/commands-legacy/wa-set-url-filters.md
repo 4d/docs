@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( * ; *objeto* : Text ; *arrFiltro* : Text array ; *permitirArrRecusar* : Boolean array )<br/>**WA SET URL FILTERS** ( *objeto* : Field, Variable ; *arrFiltro* : Text array ; *permitirArrRecusar* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET URL FILTERS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | arrFiltro | Text array | &#8594; | Array filtros |
 | permitirArrRecusar | Boolean array | &#8594; | Array autorizar- recusar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

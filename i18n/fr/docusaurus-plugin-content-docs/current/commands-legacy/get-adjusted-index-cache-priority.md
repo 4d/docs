@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *leChamp* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ pour lequel connaître la valeur de priorité des index |
 | Résultat | Integer | &#8592; | Valeur de priorité courante des index du champ |
-
+</div>
 <!-- END REF-->
 
 ## Description 

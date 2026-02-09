@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( targetObj | {*tableRef* ; *colNumber*} {; *numColumns*} )  -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table insert columns.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | colNumber | Integer | &#8594;  | カラム番号 |
 | numColumns | Integer | &#8594;  | 挿入するカラムの数(デフォルト値=1) |
 | 戻り値 | Object | &#8592; | 表のカラムのレンジ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

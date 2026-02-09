@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *imagem* : Picture ; *largura* : Real ; *altura* : Real {; *hDesp* : Integer {; *vDesp* : Integer {; *modo* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8594; | Imagem para a qual conseguir informação |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | hDesp | Integer | &#8592; | Offset horizontal quando a imagem é exibida no segundo plano |
 | vDesp | Integer | &#8592; | Offset vertical quando a imagem é exibida no segundo plano |
 | modo | Integer | &#8592; | Modo de transferência quando a imagem é exibida no segundo plano |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

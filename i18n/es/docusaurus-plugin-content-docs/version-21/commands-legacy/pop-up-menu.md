@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contenido* {; *porDefecto* {; *CoordX* ; *CoordY*}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Pop up menu.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | contenido | Text | &#8594;  | Definición del texto del menú |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | CoordX | Integer | &#8594;  | Coordenada X de la esquina superior izquierda |
 | CoordY | Integer | &#8594;  | Coordenada Y de la esquina superior izquierda |
 | Resultado | Integer | &#8592; | Número de elemento de menú seleccionado |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

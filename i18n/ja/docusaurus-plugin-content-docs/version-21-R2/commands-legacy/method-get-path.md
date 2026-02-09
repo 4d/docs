@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *methodType* : Integer {; *aTable* : Table}{; *objectName* : Text{; *formObjectName* : Text}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | methodType | Integer | &#8594; | オブジェクトタイプセレクターを指定 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | formObjectName | Text | &#8592; | フォームオブジェクト名 |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 | 戻り値 | Text | &#8592; | オブジェクトのフルパス |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

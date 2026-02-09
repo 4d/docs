@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( {* ;} *objet* ; *débutSél* ; *finSél* ; *nomAttribut* ; *valeurAttribut* {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} )<!-- END REF-->
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | finSél | Integer | &#8594;  | Fin de la nouvelle sélection de texte |
 | nomAttribut | Text | &#8594;  | Attribut à définir |
 | valeurAttribut | Text, Integer | &#8594;  | Nouvelle valeur d’attribut |
-
+</div>
 <!-- END REF-->
 
 ## Description 

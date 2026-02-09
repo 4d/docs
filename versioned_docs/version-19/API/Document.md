@@ -397,12 +397,16 @@ This property is **read-only**.
 
 
 <!-- REF #document.copyTo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |destinationFolder | 4D.Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.File|<-|Copied file|<!-- END REF -->
+|Result|4D.File|<-|Copied file|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -448,9 +452,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
-|Result | Blob |<-|File content|<!-- END REF -->
+|Result | Blob |<-|File content|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -488,10 +496,14 @@ To save a document's contents in a `BLOB` field:
 
 
 <!-- REF #document.getIcon().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|<!-- END REF -->
+|Result|Picture|<-|Icon|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -521,12 +533,16 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |charSetName |Text |-> |Name of character set|
 |charSetNum |Integer |-> |Number of character set|
 |breakMode|Integer |-> |Processing mode for line breaks|
-|Result |Text  |<- |Text from the document|<!-- END REF -->
+|Result |Text  |<- |Text from the document|
+</div>
+<!-- END REF -->
 
 #### Description
 

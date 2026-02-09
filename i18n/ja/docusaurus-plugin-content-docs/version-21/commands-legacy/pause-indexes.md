@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTable* )<!-- END REF-->
 <!--REF #_command_.PAUSE INDEXES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | インデックスを停止するテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

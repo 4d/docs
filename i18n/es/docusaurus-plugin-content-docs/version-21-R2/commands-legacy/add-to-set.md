@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*tabla* : Table ;} *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla del registro actual o Tabla por defecto si se omite |
 | conjunto | Text | &#8594; | Nombre del conjunto al cual añadir el registro actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

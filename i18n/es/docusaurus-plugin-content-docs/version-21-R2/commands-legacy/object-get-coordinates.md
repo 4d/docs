@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *objeto* : Text ; *izquierdo* : Integer ; *superior* : Integer ; *derecho* : Integer ; *inferior* : Integer )<br/>**OBJECT GET COORDINATES** ( *objeto* : Field, Variable ; *izquierdo* : Integer ; *superior* : Integer ; *derecho* : Integer ; *inferior* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es el nombre del objeto (cadena) Si se omite, objeto es una variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | superior | Integer | &#8592; | Coordenada superior del objeto |
 | derecho | Integer | &#8592; | Coordenada derecha del objeto |
 | inferior | Integer | &#8592; | Coordenada inferior del objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

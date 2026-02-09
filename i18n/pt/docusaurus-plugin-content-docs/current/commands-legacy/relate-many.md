@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( tabela1 | campo1 )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela1 &#124; campo1 | Tabela, Campo | &#8594; | Tabela para estabelecer todas as relações Um a Muitos, ou campo UM |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

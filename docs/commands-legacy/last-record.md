@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.LAST RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to move to the last selected record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

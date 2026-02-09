@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TEXT KEYWORDS.Syntax-->**GET TEXT KEYWORDS** ( *texto* ; *arrPalabrasClaves* {; *} )<!-- END REF-->
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | texto | Text | &#8594;  | Texto original |
 | arrPalabrasClaves | Text array | &#8592; | Array que contiene las palabras claves |
 | * | Operador | &#8594;  | Si se pasa = palabras únicas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
+<div class="no-index">
+
 | Parâmetro   | Tipo   |                             | Descrição                                                          |
 | ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
 | targetObj   | Object | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                    |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | rangeUpdate | Real   | &#8594; | Inclui ou exclui o conteúdo inserido dentro do intervalo           |
 | Resultado   | Object | &#8592; | Objeto de intervalo de texto que representa o resultado da fórmula |
 
+</div>
 <!-- END REF-->
 
 ## Descrição
@@ -46,7 +49,7 @@ No parâmetro *mode*, passe uma das seguintes constantes para indicar o modo de 
 | ---------- | ------- | ----- | ---------------------------------- |
 | wk append  | Integer | 2     | Inserir conteúdo no final do alvo  |
 | wk prepend | Integer | 1     | Inserir conteúdo no início do alvo |
-| wk replace | Integer | 0     | Substituir o conteúdo de destino   |
+| wk replace | Integer | 0     | Replace target contents            |
 
 - Se *targetObj* for um intervalo, você poderá usar o parâmetro opcional *rangeUpdate* para passar uma das seguintes constantes e especificar se a *fórmula* inserida está ou não incluída no intervalo resultante:
 

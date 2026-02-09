@@ -5,12 +5,14 @@ slug: /commands/listbox-duplicate-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *object* : Field, Variable ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *object* : Variable ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) of the column to be duplicated |
+| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) of the column to be duplicated |
 | colPosition | Integer | &#8594;  | Location of new duplicated column |
 | colName | Text | &#8594;  | Name of new column |
 | colVariable | Array, Field, Variable, Pointer | &#8594;  | Name of the column array variable or field or variable |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | headerVar | Integer, Pointer | &#8594;  | Column header variable |
 | footerName | Text | &#8594;  | Column footer object name |
 | footerVar | Variable, Pointer | &#8594;  | Column footer variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

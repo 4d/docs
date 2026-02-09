@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *rotaAlias* : Text ; *rotaObjetivo* : Text )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaAlias | Text | &#8594; | Nome ou rota de acesso do alias/atalho |
 | rotaObjetivo | Text | &#8592; | Nome ou rota de acesso do alias/atalho alvo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

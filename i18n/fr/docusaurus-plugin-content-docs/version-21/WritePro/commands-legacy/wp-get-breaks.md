@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *objCible* {; *typeSaut*} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get breaks.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | typeSaut | Integer | &#8594;  | Type de sauts à retourner |
 | Résultat | Collection | &#8592; | Collection de plages |
-
+</div>
 <!-- END REF-->
 
 ## Description 

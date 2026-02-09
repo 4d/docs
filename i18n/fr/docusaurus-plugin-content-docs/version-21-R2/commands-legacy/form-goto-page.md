@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *numéroPage* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GOTO PAGE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numéroPage | Integer | &#8594; | Numéro de la page à afficher |
 | * | Opérateur | &#8594; | Changer la page du sous-formulaire courant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

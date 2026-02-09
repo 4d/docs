@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *leChamp* ; *tableau* : Array {; *tabNbVal* : Integer array} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ à utiliser |
 | tableau | Array | &#8592; | Tableau devant recevoir les données du champ indexable |
 | tabNbVal | Integer array | &#8592; | Tableau devant recevoir le nombre d'occurrences de chaque valeur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

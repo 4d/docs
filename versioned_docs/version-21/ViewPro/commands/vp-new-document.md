@@ -8,10 +8,13 @@ title: VP NEW DOCUMENT
 **VP NEW DOCUMENT** ( *vpAreaName* : Text ) <!-- END REF -->
 
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
+|vpAreaName   |Text|->|4D View Pro area form object name|
+</div>
+<!-- END REF -->
 
 
 

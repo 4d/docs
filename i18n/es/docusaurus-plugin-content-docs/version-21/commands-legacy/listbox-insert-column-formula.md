@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *objeto* ; *posicionCol* ; *nomCol* ; *formula* ; *tipoDatos* ; *nomEncabezado* ; *varEncabezado* {; *nomPie* ; *variablePie*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | varEncabezado | Integer, Pointer | &#8594;  | Variable del encabezado de la columna |
 | nomPie | Text | &#8594;  | Nombre del objeto de pie de la columna |
 | variablePie | Variable, Pointer | &#8594;  | Variable de pie de columna |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

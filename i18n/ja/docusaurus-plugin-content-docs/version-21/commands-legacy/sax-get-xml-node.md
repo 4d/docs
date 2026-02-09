@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* ) : Integer<!-- END REF-->
 <!--REF #_command_.SAX Get XML node.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | 開いたドキュメントの参照 |
 | 戻り値 | Integer | &#8592; | 関数から返されたイベント |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

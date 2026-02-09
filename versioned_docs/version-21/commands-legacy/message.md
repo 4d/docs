@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | message | Text | &#8594;  | Message to display |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* ; *numColumna* ; *numLinea* ; *propiedad* ; *valor* )<!-- END REF-->
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referencia del área |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numLinea | Integer | &#8594;  | Número de línea |
 | propiedad | Integer | &#8594;  | Número de propiedad |
 | valor | Integer, Text | &#8594;  | Valor de la propiedad seleccionada |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

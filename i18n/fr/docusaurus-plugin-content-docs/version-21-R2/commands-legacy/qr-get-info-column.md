@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *zone* : Integer ; *numColonne* : Integer ; *titre* : Text ; *objet* : Text ; *cachée* : Integer ; *taille* : Integer ; *valeursRépétées* : Integer ; *format* : Text {; *varRésultat* : Text} )<!-- END REF-->
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594; | Référence de la zone |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | valeursRépétées | Integer | &#8592; | 0 = non répétées, 1 = répétées |
 | format | Text | &#8592; | Format d'affichage des données |
 | varRésultat | Text | &#8592; | Nom de la variable de formule |
-
+</div>
 <!-- END REF-->
 
 ## Description 

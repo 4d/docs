@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *path* : Text, Text array ; *code* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET CODE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
 | code | Text, Text array | &#8594;  | Code of designated method(s) |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

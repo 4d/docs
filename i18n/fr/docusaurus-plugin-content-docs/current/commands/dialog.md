@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Cette commande permet de concevoir des interfaces utilisateur personnalisées et sophistiquées, basées sur des formulaires. Vous pouvez l'utiliser pour afficher des informations provenant de la base ou d'autres sources, ou proposer des fonctions de saisie des données. Contrairement à [ADD RECORD](../commands-legacy/add-record.md) ou [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** vous donne un contrôle total sur le formulaire, son contenu et les boutons de navigation et de validation.
 
-Cette commande est généralement appelée avec la commande [Open form window](../commands-legacy/open-form-window.md) pour afficher des formulaires complexes, comme le montre l'exemple suivant :
+Cette commande est généralement appelée avec la commande [Open form window](open-form-window.md) pour afficher des formulaires complexes, comme le montre l'exemple suivant :
 
 ![](../assets/en/commands/pict3541609.en.png)
 
@@ -171,7 +171,7 @@ Après un appel à **DIALOG**, si le dialogue est accepté, OK est mis à 1 ; s'
 [CALL FORM](../commands-legacy/call-form.md)\
 [CANCEL](../commands-legacy/cancel.md)\
 [Form](form.md)\
-[Open window](../commands-legacy/open-window.md)
+[Open window](open-window.md)
 
 ## Propriétés
 

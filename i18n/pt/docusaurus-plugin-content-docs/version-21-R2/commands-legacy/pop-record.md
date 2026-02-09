@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.POP RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela da qual desempilhar o registro, a tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

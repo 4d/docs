@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Syntax-->**SELECTION RANGE TO ARRAY** ( *inicio* ; *fin* {; *campo* ; *array*} {; *campo2* ; *array2* ; ... ; *campoN* ; *arrayN*} )<!-- END REF-->
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | inicio | Integer | &#8594;  | Número de registro seleccionado a partir del cual comenzar la recuperación de datos |
 | fin | Integer | &#8594;  | Número de registro seleccionado donde termina la recuperación de datos |
 | campo | Field, Table | &#8594;  | Campo a utilizar para recuperar los datos o Tabla a utilizar para recuperar los números de registros |
 | array | Array | &#8592; | Array para recibir los datos o números de registros de los campos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

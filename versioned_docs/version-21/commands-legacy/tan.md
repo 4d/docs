@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Tan.Syntax-->**Tan** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Tan.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number, in radians, whose tangent is returned |
 | Function result | Real | &#8592; | Tangent of number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

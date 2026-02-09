@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( *campo* ; *array* {; *campo* ; *array* {; *campo2* ; *array2* ; ... ; *campoN* ; *arrayN*}}{; *})}<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campo | Field, Table | &#8594;  | Campo a utilizar para recuperar datos o Tabla a utilizar para recuperar números de registros |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | campo | Field | &#8594;  | Campo a recuperar en el array |
 | array | Array | &#8592; | Array que recibe los valores del campo |
 | * | Operador | &#8594;  | Esperar ejecución |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

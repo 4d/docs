@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *blob* ; *offset* ; *len* )<!-- END REF-->
 <!--REF #_command_.DELETE FROM BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB from which to delete bytes |
 | offset | Integer | &#8594;  | Starting offset where bytes will be deleted |
 | len | Integer | &#8594;  | Number of bytes to be deleted |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -21,7 +23,7 @@ displayed_sidebar: docs
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
 
 ## See also 
 

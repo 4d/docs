@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.SHOW PROCESS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Process number of process to be shown |
-
+</div>
 <!-- END REF-->
 
 ## Description 

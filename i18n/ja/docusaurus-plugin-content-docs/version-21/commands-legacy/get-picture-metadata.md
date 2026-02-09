@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE METADATA.Syntax-->**GET PICTURE METADATA** ( *picture* ; *metaName* ; *metaContents* {; *metaName2* ; *metaContents2* ; ... ; *metaNameN* ; *metaContentsN*} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE METADATA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | メタデータを読むピクチャ |
 | metaName | Text | &#8594;  | 取得するブロックの名前またはパス |
 | metaContents | Variable | &#8592; | メタデータの内容 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* : Integer, Text, Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU BAR.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menuBar | Integer, Text, Text | &#8594;  | Number or name of the menu bar or Menu reference |
 | process | Integer | &#8594;  | Process reference number |
 | * | Operator | &#8594;  | Save menu bar state |
-
+</div>
 <!-- END REF-->
 
 ## Description 

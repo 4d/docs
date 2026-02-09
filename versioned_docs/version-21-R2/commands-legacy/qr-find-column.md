@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* : Integer ; *expression* : Text, Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Find column.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | expression | Text, Pointer | &#8594;  | Column object |
 | Function result | Integer | &#8592; | Number of the column |
-
+</div>
 <!-- END REF-->
 
 ## Description 

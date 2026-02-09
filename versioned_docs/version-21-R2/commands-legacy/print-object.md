@@ -5,18 +5,20 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *object* : Text {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<br/>**Print object** ( *object* : Field, Variable {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *object* : Text {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<br/>**Print object** ( *object* : Variable, Field {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
 | posX | Integer | &#8594;  | Horizontal location of object |
 | posY | Integer | &#8594;  | Vertical location of object |
 | width | Integer | &#8594;  | Width of object (pixels) |
 | height | Integer | &#8594;  | Height of object (pixels) |
 | Function result | Boolean | &#8592; | True = object entirely printed; otherwise False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

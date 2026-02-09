@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Date.Syntax-->**Date** ( *expression* ) : Date<!-- END REF-->
 <!--REF #_command_.Date.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Text, Date | &#8594;  | String representing the date to be returned or Date expression |
 | Function result | Date | &#8592; | Date expression |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -36,7 +38,7 @@ The following characters are valid date separators: slash (/), space, period (.)
 * If you pass an invalid date (such as "13/35/94" or "aa/12/94") in *expression*, **Date** returns an empty date (00/00/00). It is your responsibility to verify that *expression* is a valid date.
 * If the *expression* evaluates to undefined, **Date** returns an empty date (00/00/00). This is useful when you expect the result to be a date, even if it can be undefined (*e.g.* an object attribute).
 
-**Note:** As of 4D v16 R6, dates can be stored in object attributes as date type values. In previous releases, they could only be stored as strings (for more information on this option, see the *Compatibility page* section, "Use date type instead of ISO date format in objects"). To know if an attribute contains a date stored as a string or as a date, you need to use the [Value type](value-type.md) command (see last example).
+**Note:** Dates can be stored in object attributes as date type or as string type values, depending on your current [database date settings](./set-database-parameter.md#dates-inside-objects-85). To know if an attribute contains a date stored as a string or as a date, you need to use the [Value type](./value-type.md) command (see last example).
 
 **Date type expression**  
 If *expression* is of date type, **Date** returns the date passed in the parameter 'as is'. This is particularly useful in the context of generic programming using pointers or object attributes.

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*tabla* ;} *doc* {; *nomMetodo*}{; *} )<!-- END REF-->
 <!--REF #_command_.QR REPORT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla a utilizar para el informe o tabla por defecto si se omite |
 | doc | Text | &#8594;  | Documento de informe rápido a cargar |
 | nomMetodo | Text | &#8594;  | Nombre del método a llamar |
 | * | Operador | &#8594;  | Eliminación de las cajas de diálogo de impresión |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

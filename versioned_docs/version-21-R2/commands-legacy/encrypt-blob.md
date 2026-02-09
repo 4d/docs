@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* : Blob ; *sendPrivKey* : Blob {; *recipPubKey* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | toEncrypt | Blob | &#8596;  | Data to encrypt |
 ||| | Encrypted data |
 | sendPrivKey | Blob | &#8594;  | Sender’s private key |
 | recipPubKey | Blob | &#8594;  | Recipient’s public key |
-
+</div>
 <!-- END REF-->
 
 ## Description 

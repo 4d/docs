@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET OPTION.Syntax-->**WEB GET OPTION** ( *selector* ; *valor* )<!-- END REF-->
 <!--REF #_command_.WEB GET OPTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | Código de la opción a modificar |
 | valor | Integer, Text, Collection | &#8592; | Valor de la opción |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

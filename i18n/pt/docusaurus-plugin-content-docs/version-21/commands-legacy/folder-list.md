@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *nomeRota* ; *diretorios* )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeRota | Text | &#8594;  | Rota de acesso ao volume, diretório ou pasta |
 | diretorios | Text array | &#8592; | Nomes dos diretórios presentes nessa localização |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

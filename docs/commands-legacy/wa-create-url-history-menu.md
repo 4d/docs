@@ -5,15 +5,17 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *object* : Text {; *direction* : Integer} ) : Text<br/>**WA Create URL history menu** ( *object* : Field, Variable {; *direction* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *object* : Text {; *direction* : Integer} ) : Text<br/>**WA Create URL history menu** ( *object* : Variable, Field {; *direction* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | direction | Integer | &#8594;  | 0 or omitted=List of previous URLs, 1=List of next URLs |
 | Function result | Text | &#8592; | Menu reference |
-
+</div>
 <!-- END REF-->
 
 ## Description 

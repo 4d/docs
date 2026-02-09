@@ -14,12 +14,15 @@ title: VP Copy to object
 **VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Copy to object.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj|Object|->|Range object|
 |options|Object|->|Additional options|
-|Result|Object|<-|Object returned. Contains the copied data|<!-- END REF -->
+|Result|Object|<-|Object returned. Contains the copied data|
+</div>
+<!-- END REF -->
 
 
 ## Description

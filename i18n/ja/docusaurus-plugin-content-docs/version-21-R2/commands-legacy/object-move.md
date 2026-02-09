@@ -5,8 +5,10 @@ slug: /commands/object-move
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *object* : Text ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *object* : Field, Variable ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<!-- END REF-->
+<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *object* : Text ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *object* : Variable, Field ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | resizeH | Integer | &#8594; | オブジェクトの水平方向へのサイズ変更値 |
 | resizeV | Integer | &#8594; | オブジェクトの垂直方向へのサイズ変更値 |
 | * | 演算子 | &#8594; | 指定時 = 絶対座標 省略時 = 相対座標 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

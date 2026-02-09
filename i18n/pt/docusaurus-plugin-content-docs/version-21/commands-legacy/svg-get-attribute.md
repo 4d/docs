@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *objetoImagem* ; id_Elemento ; *nomeAtrib* ; *valorAtributo* )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | id_Elemento | Text | &#8594;  | ID do elemento cujo valor de atributo você deseja conseguir |
 | nomeAtrib | Text | &#8594;  | Atributo cujo valor você deseja obter |
 | valorAtributo | Text, Integer | &#8592; | Valor atual do atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

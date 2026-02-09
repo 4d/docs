@@ -5,13 +5,15 @@ slug: /commands/wa-open-web-inspector
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *object* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *object* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *object* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *object* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
-
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+</div>
 <!-- END REF-->
 
 ## Description 

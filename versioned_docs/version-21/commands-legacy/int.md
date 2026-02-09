@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Int.Syntax-->**Int** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Int.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number whose integer portion is returned |
 | Function result | Real | &#8592; | Integer portion of number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

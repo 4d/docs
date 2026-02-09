@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.End selection.Syntax-->**End selection** ( *laTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table pour laquelle tester si le pointeur d'enregistrement courant est au-delà du dernier enregistrement de la sélection courante ou Table par défaut si ce paramètre est omis |
 | Résultat | Boolean | &#8592; | Oui (Vrai), Non (Faux) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

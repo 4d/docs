@@ -5,14 +5,16 @@ slug: /commands/object-set-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *object* : Text ; *threeStates* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *object* : Field, Variable ; *threeStates* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *object* : Text ; *threeStates* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *object* : Variable, Field ; *threeStates* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | threeStates | Boolean | &#8594;  | True = three-states checkbox, False = standard checkbox |
-
+</div>
 <!-- END REF-->
 
 ## Description 

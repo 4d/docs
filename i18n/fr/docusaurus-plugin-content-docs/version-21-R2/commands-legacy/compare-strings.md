@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *aString* : Text ; *bString* : Text {; *options* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Compare strings.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | aString | Text | &#8594; | Chaîne à comparer |
 | bString | Text | &#8594; | Chaîne à comparer |
 | options | Integer | &#8594; | Règle(s) de comparaison |
 | Résultat | Integer | &#8592; | Résultat de la comparaison de chaînes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

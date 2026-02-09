@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Syntax-->**Match regex** ( *motif* ; *laChaîne* ; *début* {; pos_trouvée ; long_trouvée}{; *} ) -> Résultat <br/>
 **Match regex** ( *motif* ; *laChaîne* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | motif | Text | &#8594;  | Expression régulière |
@@ -22,7 +24,7 @@ displayed_sidebar: docs
 | motif | Text | &#8594;  | Expression régulière (égalité complète) |
 | laChaîne | Text | &#8594;  | Chaîne dans laquelle s'effectue la recherche |
 | Résultat | Boolean | &#8592; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
-
+</div>
 <!-- END REF-->
 
 ## Description 

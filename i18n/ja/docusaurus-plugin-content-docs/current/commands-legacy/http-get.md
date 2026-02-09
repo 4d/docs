@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | url | Text | &#8594; | リクエスト送信先URL |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | headerValues | Text array | &#8596; | *in:* Header values of the request<br/> *out:* Returned header values |
 | * | 演算子 | &#8594; | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
 | 戻り値 | Integer | &#8592; | HTTPステータスコード |
-
+</div>
 <!-- END REF-->
 
 :::info 互換性

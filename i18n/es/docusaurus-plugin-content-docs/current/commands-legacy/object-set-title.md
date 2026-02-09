@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *objeto* : Text ; *titulo* : Text )<br/>**OBJECT SET TITLE** ( *objeto* : Field, Variable ; *titulo* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Variable (si se omite *) |
 | titulo | Text | &#8594; | Nuevo título para el objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 
@@ -53,7 +55,7 @@ El siguiente ejemplo es el método de objeto de un botón de búsqueda ubicado e
  End case
 ```
 
-## Ejemplo 2 
+## Ejemplo
 
 Usted quiere insertar los títulos en dos líneas:
 

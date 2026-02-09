@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* : Object ; *pageNum* : Real ) : Object<!-- END REF-->
 <!--REF #_command_.WP New text box.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | pageNum | Real | &#8594;  | Page number where to anchor the text box |
 | Function result | Object | &#8592; | Text box object |
-
+</div>
 <!-- END REF-->
 
 *This command is not thread-safe, it cannot be used in preemptive code.*

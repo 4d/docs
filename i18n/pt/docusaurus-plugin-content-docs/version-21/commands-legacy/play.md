@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PLAY.Syntax-->**PLAY** ( *nomeObjeto* {; *canal*} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeObjeto | Text | &#8594;  | Nome d arquivo de som ou recurso de Mac OS "snd" ou string vazia de som de sistema para parar a ação assincrônica |
 | canal | Integer | &#8594;  | Se especificado, canal de sintetizadr e execução assincrônica; se omitido, execução sincrônica |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

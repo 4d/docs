@@ -5,15 +5,17 @@ slug: /commands/st-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( * ; *object* : Text ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<br/>**ST SET OPTIONS** ( *object* : Field, Variable ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<!-- END REF-->
+<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( * ; *object* : Text ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer ; *value* : Integer)} )<br/>**ST SET OPTIONS** ( *object* : Variable, Field ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer ; *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET OPTIONS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
 | option | Integer | &#8594;  | Option to set |
 | value | Integer | &#8594;  | New value of option |
-
+</div>
 <!-- END REF-->
 
 ## Description 

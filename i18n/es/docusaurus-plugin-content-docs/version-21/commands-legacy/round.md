@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Round.Syntax-->**Round** ( *redond* ; *decimales* ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | redond | Real | &#8594;  | Número a redondear |
 | decimales | Integer | &#8594;  | Número de lugares decimales a redondear |
 | Resultado | Real | &#8592; | Número redondeado para el número de lugares decimales especificado por decimales |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

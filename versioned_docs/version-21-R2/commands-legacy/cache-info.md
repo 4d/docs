@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Cache info.Syntax-->**Cache info** ( *dbFilter* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dbFilter | Object | &#8594;  | Defines list of attributes to be returned (filtered per DB) |
 | Function result | Object | &#8592; | Information about cache |
-
+</div>
 <!-- END REF-->
 
 ## Description 

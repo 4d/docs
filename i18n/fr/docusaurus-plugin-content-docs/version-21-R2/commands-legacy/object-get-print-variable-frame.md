@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( * ; *objet* : Text ; *tailleVariable* : Boolean {; *fixeSousForm* : Integer} )<br/>**OBJECT GET PRINT VARIABLE FRAME** ( *objet* : Field, Variable ; *tailleVariable* : Boolean {; *fixeSousForm* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | tailleVariable | Boolean | &#8592; | Vrai = Impression taille variable, Faux = Impression taille fixe |
 | fixeSousForm | Integer | &#8592; | Option d’impression en taille fixe des sous-formulaires |
-
+</div>
 <!-- END REF-->
 
 ## Description 

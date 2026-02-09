@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Web Connection database method.Syntax-->On Web Connection($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text)<!-- END REF-->
 <!--REF #_command_.On Web Connection database method.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | $url | Texto | &#8592; | URL |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | $ipServer | Texto | &#8592; | Endereço IP do servidor |
 | $user | Texto | &#8592; | Nome de usuário |
 | $pw | Texto | &#8592; | Senha |
-
+</div>
 <!-- END REF-->
 
 ## 

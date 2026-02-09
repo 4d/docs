@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; *firstChar* {; *numChars*} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | source | Text | &#8594;  | 一部を取り出す文字列 |
 | firstChar | Integer | &#8594;  | 最初の文字位置 |
 | numChars | Integer | &#8594;  | 取り出す文字列の長さ |
 | 戻り値 | Text | &#8592; | 文字列の一部 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

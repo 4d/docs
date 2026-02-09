@@ -5,14 +5,16 @@ slug: /commands/listbox-set-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( * ; *object* : Text ; *calculation* : Integer )<br/>**LISTBOX SET FOOTER CALCULATION** ( *object* : Field, Variable ; *calculation* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( * ; *object* : Text ; *calculation* : Integer )<br/>**LISTBOX SET FOOTER CALCULATION** ( *object* : Variable ; *calculation* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | calculation | Integer | &#8594;  | Calculation for footer area |
-
+</div>
 <!-- END REF-->
 
 ## Description 

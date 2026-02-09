@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *map* : Text, Operator {; *mapInOut* : Integer} )<!-- END REF-->
 <!--REF #_command_.USE CHARACTER SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | map | Text, Operator | &#8594;  | Name of character set  to use, or * to reset to default character set |
 | mapInOut | Integer | &#8594;  | 0 = Output map 1 = Input map, If omitted, output map |
-
+</div>
 <!-- END REF-->
 
 ## Description 

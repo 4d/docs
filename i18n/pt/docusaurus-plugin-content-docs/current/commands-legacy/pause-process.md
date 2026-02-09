@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAUSE PROCESS.Syntax-->**PAUSE PROCESS** ( *processo* : Integer )<!-- END REF-->
 <!--REF #_command_.PAUSE PROCESS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | processo | Integer | &#8594; | Número de processo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

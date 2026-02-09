@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( elemRef|documento ; *seletor* ; *valor* {; *seletor2* ; *valor2* ; ... ; *seletorN* ; *valorN*} )<!-- END REF-->
 <!--REF #_command_.XML SET OPTIONS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | elemRef&#124;documento | Texto | &#8594;  | Elemento de referencia raiz XML ou Referência de documento aberto |
 | seletor | Integer | &#8594;  | Opção a estabelecer |
 | valor | Integer | &#8594;  | Valor da opção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

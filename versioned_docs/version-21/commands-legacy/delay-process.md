@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELAY PROCESS.Syntax-->**DELAY PROCESS** ( *process* ; *duration* )<!-- END REF-->
 <!--REF #_command_.DELAY PROCESS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Process number |
 | duration | Real | &#8594;  | Duration expressed in ticks |
-
+</div>
 <!-- END REF-->
 
 ## Description 

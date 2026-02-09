@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get position.Syntax-->**WP Get position** ( *targetObj* {; *layout*} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get position.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | layout | Integer | &#8594;  | 4D Write Pro document layout used for evaluation: 0 (default)=4D Write Pro layout, 1=HTML WYSIWYG |
 | Function result | Object | &#8592; | Position information |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -72,7 +72,7 @@ Para eliminar la exposición REST de un campo:
 
 2. Desmarque la opción **Exponer como recurso REST** para el campo.<br/>
    ![alt-text](../assets/en/REST/field.png)<br/>
-   Repeat this for each field whose exposure needs to be modified.
+   Repita esta operación para cada campo cuya exposición deba modificarse.
 
 > Para que un campo sea accesible a través de REST, la tabla padre también debe serlo. Si la tabla padre no está expuesta, ninguno de sus campos lo estará, independientemente de su estado.
 

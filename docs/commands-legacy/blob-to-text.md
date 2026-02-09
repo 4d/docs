@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *blob* : Blob ; *textFormat* : Integer {; *offset* : Variable {; *textLength* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.BLOB to text.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB from which to get the text |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | || | New offset after reading |
 | textLength | Integer | &#8594;  | Number of characters to be read |
 | Function result | Text | &#8592; | Text extracted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

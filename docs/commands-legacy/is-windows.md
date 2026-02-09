@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is Windows.Syntax-->**Is Windows** : Boolean<!-- END REF-->
 <!--REF #_command_.Is Windows.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | True if operating system = Windows, else False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

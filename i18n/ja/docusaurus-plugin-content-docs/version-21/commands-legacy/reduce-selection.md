@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*aTable* ;} *number* )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | セレクションの数を減らすテーブル, または 省略時デフォルトテーブル |
 | number | Integer | &#8594;  | 選択するレコード数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

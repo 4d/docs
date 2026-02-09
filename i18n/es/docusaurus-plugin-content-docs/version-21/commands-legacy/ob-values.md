@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Values.Syntax-->**OB Values** ( *objeto* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Values.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objeto | Object | &#8594;  | Objeto para devolver valores de propiedad |
 | Resultado | Collection | &#8592; | Colección de valores de propiedad (variante) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

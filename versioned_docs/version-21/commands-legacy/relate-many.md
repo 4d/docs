@@ -7,10 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* )<br/>**RELATE MANY** ( *Field* )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| oneTable &#124; Field | Table, Field | &#8594;  | Table to establish all one-to-many relations, or One Field |
-
+| oneTable | Table | &#8594;  | Table to establish all one-to-many relations |
+| oneField | Field | &#8594;  | One Field |
+</div>
 <!-- END REF-->
 
 ## Description 

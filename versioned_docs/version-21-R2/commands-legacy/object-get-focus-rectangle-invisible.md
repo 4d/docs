@@ -16,12 +16,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( {* ;} *object* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable or field |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable or field (if * is omitted) |
 | Function result | Boolean | &#8592; | True = focus rectangle hidden, False = focus rectangle shown |
-
+</div>
 <!-- END REF-->
 
 ## Description 

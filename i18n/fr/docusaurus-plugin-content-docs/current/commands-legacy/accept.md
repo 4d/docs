@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCEPT.Syntax-->**ACCEPT**<!-- END REF-->
 <!--REF #_command_.ACCEPT.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -24,7 +26,7 @@ La commande **ACCEPT** doit être employée dans une méthode objet ou formulair
 
 **ACCEPT** est fréquemment exécutée à la suite de la sélection d'une commande de menu. **ACCEPT** est également souvent appelée dans la méthode objet d'un bouton auquel la propriété "Pas d'action" a été associée.
 
-Enfin, cette commande peut être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](open-window.md). Si la fenêtre comporte une case de menu Système, **ACCEPT** et [CANCEL](cancel.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.
+Enfin, cette commande peut être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](../commands/open-window.md). Si la fenêtre comporte une case de menu Système, **ACCEPT** et [CANCEL](cancel.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.
 
 Il n'est pas possible d'enchaîner plusieurs **ACCEPT**. En d'autres termes, l'exécution consécutive de deux commandes **ACCEPT** dans une méthode en réponse à un événement aura le même résultat que l'exécution d'une seule.
 

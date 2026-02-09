@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Exit database method.Syntax-->**Método banco de dados On Exit**<!-- END REF-->
 <!--REF #_command_.On Exit database method.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## 

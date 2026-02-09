@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get section.Syntax-->**WP Get section** ( *targetObj* : Object ) | (*wpDoc* : Object ; *indiceSeccion* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get section.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Rango o elemento |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
 | indiceSeccion | Integer | &#8594;  | Índice de sección |
 | Resultado | Object | &#8592; | Sección 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

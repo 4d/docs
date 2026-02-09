@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *indiceN* ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | indiceN | Integer | &#8594;  | Nième fichier inclus dans le glisser |
 | Résultat | Text | &#8592; | Chemin d'accès de fichier extrait du conteneur de données |
-
+</div>
 <!-- END REF-->
 
 ## Description 

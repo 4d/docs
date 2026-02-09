@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** ( *defaultColor* : Integer {; *message* : Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | defaultColor | Integer | &#8594;  | Preselected RGB color |
 | message | Text | &#8594;  | Title of selection window |
 | Function result | Integer | &#8592; | RGB color |
-
+</div>
 <!-- END REF-->
 
 ## Description 

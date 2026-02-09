@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Abs.Syntax-->**Abs** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Abs.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | 絶対値を求める数値 |
 | 戻り値 | Real | &#8592; | 絶対値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get header.Syntax-->**WP Get header** ( *targetObj* : Object ) : Object<br/>**WP Get header** (*wpDoc* : Object ; *sectionIndex* : Integer {; *subSectionType* : Integer} )  : Object<!-- END REF-->
 <!--REF #_command_.WP Get header.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro range or section/sub-section element |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | sectionIndex | Integer | &#8594;  | Section index |
 | subSectionType | Integer | &#8594;  | Sub-section type (wk first page, wk left page, or wk right page) |
 | Function result | Object | &#8592; | 4D Write Pro header |
-
+</div>
 <!-- END REF-->
 
 ## Description 

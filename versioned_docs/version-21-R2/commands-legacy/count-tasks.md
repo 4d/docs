@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count tasks.Syntax-->**Count tasks**  : Integer<!-- END REF-->
 <!--REF #_command_.Count tasks.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Number of open processes (including kernel processes) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

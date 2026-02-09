@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594; | Numéro de référence du document |
-
+</div>
 <!-- END REF-->
 
 ## Description 

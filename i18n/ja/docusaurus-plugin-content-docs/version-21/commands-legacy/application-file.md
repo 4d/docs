@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application file.Syntax-->**Application file**  : Text<!-- END REF-->
 <!--REF #_command_.Application file.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | 4D実行形式のファイルまたはアプリケーションのパス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

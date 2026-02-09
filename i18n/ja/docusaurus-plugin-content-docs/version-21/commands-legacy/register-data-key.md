@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* ) : Boolean<br/>**Register data key** ( *curDataKey* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Register data key.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | curPassPhrase &#124; curDataKey | テキスト, オブジェクト | &#8594;  | カレントのパスフレーズ(テキスト)またはカレントのデータ暗号化キー(オブジェクト) |
 | 戻り値 | Boolean | &#8592; | 暗号化キーが正常に4D キーチェーンに読み込まれた場合にはTrue、キーがすでに4D キーチェーンに入っていた場合にはFlaseを返す |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

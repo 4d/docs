@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *fonte* ; *dest* {; *largura* {; *altura* {; *modo* {; *profundidade*}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | fonte | Picture | &#8594;  | Fonte da imagem 4D ou variável a converter para uma miniatura |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | altura | Integer | &#8594;  | Altura da miniatura em pixels. Valor padrão = 48 |
 | modo | Integer | &#8594;  | Módulo de criação de miniaturas; Valor padrão= Proporcional centralizado (6) |
 | profundidade | Integer | &#8594;  | Obsoleto, não usar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -5,15 +5,17 @@ slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* : Text ; *errorAction* : Integer {; *attribName* : Text ; *attribValue* : Text} {; ...(*attribName* : Text, *attribValue* : Text)} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* : Text ; *errorAction* : Integer {; *attribName* : Text ; *attribValue* : Text} {; ...(*attribName* : Text ; *attribValue* : Text)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | scriptPath | Text | &#8594; | 実行するSQLスクリプトが書かれたファイルの完全パス名 |
 | errorAction | Integer | &#8594; | スクリプト実行中にエラーが発生した場合のアクション |
 | attribName | Text | &#8594; | 使用する属性の名前 |
 | attribValue | Text | &#8594; | 属性の値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

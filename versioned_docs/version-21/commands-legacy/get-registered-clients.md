@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *clientList* ; *methods* )<!-- END REF-->
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | clientList | Text array | &#8592; | List of the saved 4D Clients |
 | methods | Integer array | &#8592; | List of the methods to be executed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

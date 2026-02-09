@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userID | Integer | &#8594;  | Unique user ID number |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | lastLogin | Date | &#8592; | Date of last login to the database (Binary databases only) |
 | memberships | Integer array | &#8592; | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &#8592; | ID number of user group owner (Binary databases only) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

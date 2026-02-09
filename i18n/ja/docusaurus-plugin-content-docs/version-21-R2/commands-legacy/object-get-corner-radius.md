@@ -5,14 +5,16 @@ slug: /commands/object-get-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get corner radius** ( *object* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get corner radius** ( *object* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get corner radius.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列) 省略時objectは変数またはフィールド |
 | object | any | &#8594; | オブジェクト名 (* 指定時)、またはフィールドまたは変数 (* 省略時) |
 | 戻り値 | Integer | &#8592; | 丸い角の半径(ピクセル単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

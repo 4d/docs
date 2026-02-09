@@ -8,12 +8,15 @@ title: VP SET FORMULA
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |formula |Text|->|Formula or 4D method|
-|formatPattern |Text|->|Format of field|<!-- END REF -->
+|formatPattern |Text|->|Format of field|
+</div>
+<!-- END REF -->
 
 ## Description
 

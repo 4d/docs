@@ -9,7 +9,7 @@ title: On Double Clicked
 
 :::note
 
-The `On Double Clicked` event is not supported with [**steppers**](FormObjects/stepper.md) on Windows when [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) rendering theme is enabled.
+`On Double Clicked` イベントは、Windows 上で[Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) レンダリングテーマが有効化されている場合には、[**ステッパー**](FormObjects/stepper.md) に対してはサポートされません。
 
 :::
 

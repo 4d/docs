@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* : Text ; *oldString* : Text ; *newString* : Text {; *howMany* : Integer}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594;  | Original string |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | howMany | Integer | &#8594;  | How many times to replace If omitted, all occurrences are replaced |
 | * | Operator | &#8594;  | If passed: evaluation based on character codes |
 | Function result | Text | &#8592; | Resulting string |
-
+</div>
 <!-- END REF-->
 
 ## Description 

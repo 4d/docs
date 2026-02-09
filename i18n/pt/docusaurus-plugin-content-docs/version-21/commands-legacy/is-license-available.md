@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licença* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | licença | Integer | &#8594;  | Testar se o plug-in desejado está disponível |
 | Resultado | Boolean | &#8592; | Verdadeiro se o plug-in estiver disponível, senão False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

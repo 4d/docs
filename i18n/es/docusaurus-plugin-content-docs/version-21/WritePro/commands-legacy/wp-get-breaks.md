@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *objRango* {; *tipoRuptura*} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get breaks.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
 | tipoRuptura | Integer | &#8594;  | Tipo de rupturas a devolver |
 | Resultado | Collection | &#8592; | Colección de rangos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

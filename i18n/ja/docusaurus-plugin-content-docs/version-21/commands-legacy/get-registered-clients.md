@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *clientList* ; *methods* )<!-- END REF-->
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | clientList | Text array | &#8592; | 登録されている4D Clientのリスト |
 | methods | Integer array | &#8592; | 実行するメソッドのリスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

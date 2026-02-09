@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *longint* ; *blob* ; *byteOrder* {; offset } )<br/>**LONGINT TO BLOB** ( *longint* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
 <!--REF #_command_.LONGINT TO BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | longInt | Integer | &#8594;  | Valor de tipo Inteiro longo a escrever no BLOB |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | byteOrder | Integer | &#8594;  | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
 | offset &#124; * | Variável, Operador | &#8596;  | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
 ||| | Novo offset depois da escritura se * for omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

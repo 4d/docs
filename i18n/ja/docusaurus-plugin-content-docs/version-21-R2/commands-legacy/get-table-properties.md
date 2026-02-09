@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( tablePtr| tableNum ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | tablePtr&#124; tableNum | ポインター, 倍長整数 | &#8594; | テーブルポインタ、またはテーブル番号 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | trigSaveRec | Boolean | &#8592; | True = トリガ“既存レコード保存時”が有効、 False = それ以外 |
 | trigDelRec | Boolean | &#8592; | True = トリガ“レコード削除時”が有効、 False = それ以外 |
 | trigLoadRec | Boolean | &#8592; | ***使用しない (廃止) *** |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

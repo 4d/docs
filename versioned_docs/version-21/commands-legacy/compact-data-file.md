@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* ; *dataPath* {; *archiveFolder* {; *option* {; *method*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | structurePath | Text | &#8594;  | Pathname of structure file |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | option | Integer | &#8594;  | Compacting options |
 | method | Text | &#8594;  | Name of 4D callback method |
 | Function result | Text | &#8592; | Complete pathname of folder containing original data file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *list* : Integer, Text ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array {; *}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定した場合, listはオブジェクト名 (文字列) 省略した場合, listはリスト参照番号 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | itemsArray | Integer array | &#8592; | 2番目の * 省略時: 見つけた項目の位置配列 - 2番目の * 指定時: 見つけた項目の項目参照番号配列 |
 | * | 演算子 | &#8594; | - 省略時: 項目位置を使用 - 指定時: 項目参照番号使用 |
 | 戻り値 | Integer | &#8592; | - 2番目の * 省略時: 見つけた項目の位置 - 2番目の * 指定時: 見つけた項目の項目参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

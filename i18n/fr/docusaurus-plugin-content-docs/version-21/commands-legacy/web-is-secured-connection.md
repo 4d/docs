@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Is secured connection.Syntax-->**WEB Is secured connection**  : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Is secured connection.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Vrai = la connexion Web est sécurisée, Faux = la connexion Web n’est pas sécurisée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

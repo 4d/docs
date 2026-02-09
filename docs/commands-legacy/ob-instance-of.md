@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* : Object ; *class* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object | &#8594;  | Object whose class is to be tested |
 | class | Object | &#8594;  | Class to test belongship |
 | Function result | Boolean | &#8592; | True if object belongs to the specified class or a child class, and false otherwise |
-
+</div>
 <!-- END REF-->
 
 ## Description 

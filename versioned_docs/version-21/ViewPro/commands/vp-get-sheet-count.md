@@ -7,11 +7,14 @@ title: VP Get sheet count
 **VP Get sheet count** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet count.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|Function result|Integer|<-|Number of sheets|<!-- END REF -->
+|Function result|Integer|<-|Number of sheets|
+</div>
+<!-- END REF -->
 
 ## Description
 

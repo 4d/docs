@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current method path.Syntax-->**Current method path**  : Text<!-- END REF-->
 <!--REF #_command_.Current method path.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Text | &#8592; | Chemin interne complet de la méthode en cours d’exécution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

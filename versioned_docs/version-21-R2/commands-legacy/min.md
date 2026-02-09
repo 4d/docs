@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Min.Syntax-->**Min** ( *series* : Field, Array {; *attributePath* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Min.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Data for which to return the minimum value |
 | attributePath | Text | &#8594;  | Path of attribute for which to return the minimum value |
-| Function result | Date, Real | &#8592; | Minimum value in series |
-
+| Function result | any | &#8592; | Minimum value in series (Date or Real) |
+</div>
 <!-- END REF-->
 
 ## Description 

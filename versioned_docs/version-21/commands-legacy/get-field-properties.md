@@ -7,16 +7,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* ; *fieldNum* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | Pointer, Integer | &#8594;  | Table number or Field pointer |
+| fieldPtr | Pointer | &#8594;  | Field pointer |
+| tableNum | Integer | &#8594;  | Table number |
 | fieldNum | Integer | &#8594;  | Field number if Table number is passed |
 | fieldType | Integer | &#8592; | Type of field |
 | fieldLength | Integer | &#8592; | Length of field, if Alphanumeric |
 | indexed | Boolean | &#8592; | True = Indexed, False = Non indexed |
 | unique | Boolean | &#8592; | True = Unique, False = Non unique |
 | invisible | Boolean | &#8592; | True = Invisible, False = Visible |
-
+</div>
 <!-- END REF-->
 
 ## Description 

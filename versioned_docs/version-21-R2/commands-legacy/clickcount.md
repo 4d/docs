@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Clickcount.Syntax-->**Clickcount**  : Integer<!-- END REF-->
 <!--REF #_command_.Clickcount.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Number of consecutive clicks |
-
+</div>
 <!-- END REF-->
 
 ## Description 

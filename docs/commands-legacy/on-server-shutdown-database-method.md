@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Shutdown database method.Syntax-->**On Server Shutdown database method**<!-- END REF-->
 <!--REF #_command_.On Server Shutdown database method.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## 

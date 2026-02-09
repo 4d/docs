@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *aTable* ; *formula* {; > or <}{; *formula2* ; > or <2 ; ... ; *formulaN* ; > or <N} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records |
 | formula | Expression | &#8594;  | Expression on which to set the order for each level (can be of type Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean) |
-| > or < | Operator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
-
+| > or < | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+</div>
 <!-- END REF-->
 
 ## Description 

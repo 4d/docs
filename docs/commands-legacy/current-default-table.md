@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current default table.Syntax-->**Current default table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current default table.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Pointer | &#8592; | Pointer to the default table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

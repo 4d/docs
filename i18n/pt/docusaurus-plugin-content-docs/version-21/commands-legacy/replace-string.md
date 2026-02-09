@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Replace string.Syntax-->**Replace string** ( *fonte* ; *obsoleto* ; *novo* {; *quantasVezes*}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | fonte | Text | &#8594;  | Cadeia original |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | quantasVezes | Integer | &#8594;  | Quantas vezes substituir; se omitido, todas as ocorrências serão substituídas |
 | * | Operador | &#8594;  | Se passado: avaliação baseada em códigos de caracteres |
 | Resultado | Text | &#8592; | Cadeia resultante |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

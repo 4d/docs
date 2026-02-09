@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *objetImage* ; id_Element ; *nomAttribut* : Text ; *valeurAttribut* : Text, Integer {; ...(*nomAttribut* : Text, *valeurAttribut* : Text, Integer)} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomAttribut | Text | &#8594; | Attribut à définir |
 | valeurAttribut | Text, Integer | &#8594; | Nouvelle valeur d’attribut |
 | * | Opérateur | &#8594; | Si passé = modifier l'arbre DOM interne de l'image SVG (variable uniquement) |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -56,19 +58,37 @@ A noter que pour des raisons techniques, les attributs de certains éléments ai
 | polyline                                                                                         |                                                                                                                           |
 | polygon                                                                                          |                                                                                                                           |
 | path                                                                                             |                                                                                                                           |
-| rect                                                                                             |                                                                                                                           |
-| text, tspan, textArea                                                                            | L’attribut spécifique "4d-text" vous permet de modifier le texte d’un élément "text", "tspan" ou "textArea" (cf. exemple) |
-| Image                                                                                            |                                                                                                                           |
+| rect                                                                                             |                      **Eléments dont les attributs sont modifiables**   
+
+|Eléments | Commentaires|
+|---|---|
+| svg | Restrictions: <ul><li>"width" et "height" ne sont pas modifiables (1) </li><li>"viewBox" n'est modifiable que si "width" et "height" sont définis dans le document d’origine </li></ul>|
+g |  |
+| defs  |  |
+| use   |  |
+| filter  | Restriction : les éléments enfants fe\_xxx ne sont pas modifiables                                                        |
+| circle  |  |
+| ellipse |  |
+| line  |  |
+| polyline  |  |
+| polygon  |  |
+| path  |   |
+| rect | |
+| text, tspan, textArea | L’attribut spécifique "4d-text" vous permet de modifier le texte d’un élément "text", "tspan" ou "textArea" (cf. exemple) |
+| Image  |  |
 
 **Eléments dont les attributs ne sont pas modifiables**   
 
+|Eléments|Commentaire|
+|---|---|
 | linearGradient, radialGradient, Stop, solidColor, marker, symbol, clipPath, filter et les éléments commençant par fe, style, pattern | Cet ensemble désigne tous les éléments référençables ou contenus dans un élément référençable. Cela signifie qu’il n’est pas possible par exemple de redéfinir les attributs d’un gradient (mais il est possible de changer le gradient utilisé). De même, pour changer un marqueur de couleur noire en marqueur rouge, il faudra définir deux marqueurs dans le document SVG (un noir et un rouge) et sélectionner l’un ou l’autre. Il n’est pas possible non plus par exemple de modifier la couleur d'un rectangle s’il a pour parent un élément symbol ou marker |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 
 **Attributs non modifiables**  
 
-| id ou xml:id       |                                                          |
-| ------------------ | -------------------------------------------------------- |
+|Attribut|Commentaire|
+|---|---|
+| id ou xml:id       |      
 | lang ou xml:lang   |                                                          |
 | class ou xml:class |                                                          |
 | width, height      | Concerne les attributs de l’élément 'svg' uniquement (1) |

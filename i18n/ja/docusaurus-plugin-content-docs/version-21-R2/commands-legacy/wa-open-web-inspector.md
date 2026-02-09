@@ -5,13 +5,15 @@ slug: /commands/wa-open-web-inspector
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *object* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *object* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *object* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *object* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時、objectはオブジェクト名 (文字列) 省略時、objectは変数 |
 | object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

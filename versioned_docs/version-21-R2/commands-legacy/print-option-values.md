@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *option* : Integer ; *namesArray* : Text array {; *info1Array* : Integer array {; *info2Array* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.PRINT OPTION VALUES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | option | Integer | &#8594;  | Option number |
 | namesArray | Text array | &#8592; | Names of values |
 | info1Array | Integer array | &#8592; | Values (1) of the option |
 | info2Array | Integer array | &#8592; | Values (2) of the option |
-
+</div>
 <!-- END REF-->
 
 ## Description 

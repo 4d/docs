@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*tabla* : Table ;} *doc* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT TEXT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla desde la cual exportar datos o Tabla por defecto, si se omite |
 | doc | Text | &#8594; | Documento texto para recibir los datos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

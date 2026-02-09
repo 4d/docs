@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* : Text {; *siblingElemName* : Text {; *siblingElemValue* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get next sibling XML element.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594; | XML要素参照 |
 | siblingElemName | Text | &#8592; | 兄弟XML要素名 |
 | siblingElemValue | Text | &#8592; | 兄弟XML要素値 |
 | 戻り値 | Text | &#8592; | 兄弟XML要素参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

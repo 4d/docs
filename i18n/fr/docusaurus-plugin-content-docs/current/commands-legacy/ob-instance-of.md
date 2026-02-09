@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *objet* : Object ; *classe* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objet | Object | &#8594; | Objet dont la classe doit être identifiée |
 | classe | Object | &#8594; | Classe dont l'appartenance est à identifier |
 | Résultat | Boolean | &#8592; | Vrai si l'objet appartient à la classe ou classe enfant indiquée, sinon faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

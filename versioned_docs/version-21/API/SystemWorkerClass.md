@@ -60,11 +60,14 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 
 <!-- REF #4D.SystemWorker.new().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |commandLine|Text|->|Command line to execute|
 |options|Object|->|Worker parameters|
-|result|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|  
+|result|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -271,9 +274,12 @@ Function _createFile($title : Text; $textBody : Text)
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -425,10 +431,13 @@ This property is **read-only**.
 
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |message|Text|->|Text to write on the input stream (stdin) of the external process|
 |messageBLOB|Blob|->|Bytes write on the input stream|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -474,9 +483,12 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -529,10 +541,13 @@ This property is **read-only**.
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Maximum wait time in seconds|
 |Result|4D.SystemWorker|<-|SystemWorker object|
+</div>
 <!-- END REF -->
 
 #### Description

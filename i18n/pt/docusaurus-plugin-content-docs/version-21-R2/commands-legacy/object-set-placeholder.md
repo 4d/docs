@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( * ; *objeto* : Text ; *textoExemplo* : Text )<br/>**OBJECT SET PLACEHOLDER** ( *objeto* : Field, Variable ; *textoExemplo* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
 | textoExemplo | Text | &#8594; | Texto de exemplo associado ao objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

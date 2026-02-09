@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resFilename | Text | &#8594;  | Short or long name of resource file, or Empty string for standard Open File dialog box |
 | fileType | Text | &#8594;  | Mac OS file type (4-character string), or Windows file extension (1- to 3-character string), or All files, if omitted |
 | Function result | Time | &#8592; | Resource file reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

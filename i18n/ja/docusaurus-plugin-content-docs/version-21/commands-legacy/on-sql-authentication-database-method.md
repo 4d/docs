@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On SQL Authentication database method.Syntax-->$user, $pw, $ip -> On SQL Authenticationデータベースメソッド : Boolean<!-- END REF-->
 <!--REF #_command_.On SQL Authentication database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $user | テキスト | &#8592; | ユーザー名 |
 | $pw | テキスト | &#8592; | パスワード |
 | $ip | テキスト | &#8592; | (オプション) リクエスト送信元クライアントのIPアドレス |
 | 戻り値 | Boolean | &#8592; | True = リクエストを受け入れる、False = リクエストを拒否する |
-
+</div>
 <!-- END REF-->
 
 ## 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resID* {; *resFile*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resType | Text | &#8594;  | 4文字のリソースタイプ |
 | resID | Integer | &#8594;  | リソースID番号 |
 | resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 | 戻り値 | Integer | &#8592; | リソースの属性 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

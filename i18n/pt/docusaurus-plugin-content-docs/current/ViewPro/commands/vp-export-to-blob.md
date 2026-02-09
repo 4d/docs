@@ -9,10 +9,15 @@ title: VP EXPORT TO BLOB
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                  |                  |
-| ---------- | ------ | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |                  |
-| paramObj   | Object | -> | Opções de exportação                       | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo   |    | Descrição                                  |
+| ---------- | ------ | -- | ------------------------------------------ |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |
+| paramObj   | Object | -> | Opções de exportação                       |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

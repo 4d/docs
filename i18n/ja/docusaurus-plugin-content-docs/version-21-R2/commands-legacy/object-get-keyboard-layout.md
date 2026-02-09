@@ -5,14 +5,16 @@ slug: /commands/object-get-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( * ; *object* : Text ) : Text<br/>**OBJECT Get keyboard layout** ( *object* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( * ; *object* : Text ) : Text<br/>**OBJECT Get keyboard layout** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
 | object | any | &#8594; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
 | 戻り値 | Text | &#8592; | レイアウトのランゲージコード、"" = レイアウトなし |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

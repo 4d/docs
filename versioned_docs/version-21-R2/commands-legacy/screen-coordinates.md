@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *screenID* : Integer {; *screenArea* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | left | Integer | &#8592; | Global left coordinate of screen area |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | bottom | Integer | &#8592; | Global bottom coordinate of screen area |
 | screenID | Integer | &#8594;  | Screen number, or main screen if omitted |
 | screenArea | Integer | &#8594;  | Entire screen (default) or working area |
-
+</div>
 <!-- END REF-->
 
 ## Description 

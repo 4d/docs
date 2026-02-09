@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *imagem* ; *operador* {; *param1* {; *param2* {; *param3* {; *param4*}}}} )<!-- END REF-->
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8594;  | Fonte da imagem a ser transformada |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | param2 | Real | &#8594;  | Parâmetro de transformação |
 | param3 | Real | &#8594;  | Parâmetro de transformação |
 | param4 | Real | &#8594;  | Parâmetro de transformação |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

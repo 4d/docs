@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Drop position.Syntax-->**Drop position** ( *columnNumber* : 倍長整数 ) : Integer<br/>**Drop position** ( *pictPosY* : 倍長整数 ) : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | columnNumber &#124; pictPosY | 倍長整数 | &#8592; | リストボックス列番号 (ドロップ位置が最後の列を超えた場合-1)、またはピクチャーの場合Y座標の位置 |
 | 戻り値 | Integer | &#8592; | ・数値 (配列/リストボックス) または・位置 (階層リスト) または・ドロップ先項目の文字列中の位置 (テキスト/コンボボックス) または・最後の配列要素やリスト項目を超えてドロップされた場合-1 または・ピクチャー中のX座標の位置 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

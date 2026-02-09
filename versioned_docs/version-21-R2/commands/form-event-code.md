@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Syntax-->**Form event code**  : Integer<!-- END REF-->
 <!--REF #_command_.Form event code.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Form event number |
-
+</div>
 <!-- END REF-->
 
 

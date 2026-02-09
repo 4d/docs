@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Tan.Syntax-->**Tan** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Tan.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Numero | Real | &#8594; | Número, en radianes, cuya tangente se devuelve |
 | Resultado | Real | &#8592; | Tangente del número |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

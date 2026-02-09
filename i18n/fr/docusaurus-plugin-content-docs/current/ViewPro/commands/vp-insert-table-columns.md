@@ -17,14 +17,19 @@ title: VP INSERT TABLE COLUMNS
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Params -->
 
-| Paramètres  | Type    |    | Description                                                                 |                  |
-| ----------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| tableName   | Text    | -> | Nom de table                                                                |                  |
-| column      | Integer | -> | Index dans la table de la colonne de départ à insérer                       |                  |
-| count       | Integer | -> | Nombre de colonnes à ajouter (doit être >0)              |                  |
-| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*                |                  |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres  | Type    |    | Description                                                                 |
+| ----------- | ------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
+| tableName   | Text    | -> | Nom de table                                                                |
+| column      | Integer | -> | Index dans la table de la colonne de départ à insérer                       |
+| count       | Integer | -> | Nombre de colonnes à ajouter (doit être >0)              |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*                |
+| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

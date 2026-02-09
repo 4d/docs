@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *httpMethod* : Text ; *url* : Text ; *contents* : Text, Blob, Picture, Object ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | httpMethod | Text | &#8594;  | HTTP method for request |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | headerValues | Text array | &#8596;  | *in:* Header values of the request<br/>*out:* Returned header values |
 | * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
 | Function result | Integer | &#8592; | HTTP status code |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibility

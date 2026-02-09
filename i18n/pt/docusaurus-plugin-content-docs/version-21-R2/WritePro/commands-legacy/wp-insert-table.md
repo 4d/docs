@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *objFaixa* : Object ; *modo* : Integer {; *atFaixa* : Integer {; *numCol* : Integer {; *numFilas* : Integer}}} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objFaixa | Object | &#8594;  | Objeto Faixa de seleção |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | numCol | Integer | &#8594;  | Número de colunas a estabelecer na tabela |
 | numFilas | Integer | &#8594;  | Numero de filas a estabelecer na tabela |
 | Resultado | Object | &#8592; | Objeto referência tabela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

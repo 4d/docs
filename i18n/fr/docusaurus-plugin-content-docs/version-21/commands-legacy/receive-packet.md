@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* ;} *réceptVar* ; *stopChar* )<br/>**RECEIVE PACKET** ( {*docRef* ;} *réceptVar* ; *numBytes* )<!-- END REF-->
 <!--REF #_command_.RECEIVE PACKET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594;  | Numéro de référence de document ou canal courant (port série ou document) |
 | réceptVar | Text, Blob | &#8592; | Variable devant recevoir les données |
 | stopCar &#124; nbOctets | Chaîne, Entier long | &#8594;  | Caractère(s) au(x)quel(s) stopper la réception des données ou Nombre d'octets à recevoir |
-
+</div>
 <!-- END REF-->
 
 ## Description 

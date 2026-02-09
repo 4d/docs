@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *title* : Text {; *window* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW TITLE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | title | Text | &#8594; | ウィンドウタイトル |
 | window | Integer | &#8594; | ウィンドウ参照番号, または 省略時カレントプロセスの最前面ウィンドウ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

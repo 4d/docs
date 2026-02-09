@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *fichierWeb* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | fichierWeb | Text | &#8594; | Chemin d'accès au fichier Web à envoyer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

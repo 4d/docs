@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *objeto* : Text ; *posicionCol* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *objeto* : Field, Variable ; *posicionCol* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre del objeto (si se especifica *) o<br/>Variable (si se omite *) de la columna a mover |
 | posicionCol | Integer | &#8594; | Nueva ubicación de la columna |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

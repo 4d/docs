@@ -5,13 +5,15 @@ slug: /commands/screen-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen width.Syntax-->**Screen width** ( * ) : Integer<!-- END REF-->
+<!--REF #_command_.Screen width.Syntax-->**Screen width** ({ * }) : Integer<!-- END REF-->
 <!--REF #_command_.Screen width.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Windows: width of application window, or width of screen if * is specified Macintosh: width of main screen |
 | Function result | Integer | &#8592; | Width expressed in pixels |
-
+</div>
 <!-- END REF-->
 
 ## Description 

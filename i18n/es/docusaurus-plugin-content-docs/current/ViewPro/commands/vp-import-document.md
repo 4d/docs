@@ -18,11 +18,16 @@ title: VP IMPORT DOCUMENT
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                  |                  |
-| ---------- | ------ | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| filePath   | Text   | -> | Ruta de acceso del documento                 |                  |
-| paramObj   | Object | -> | Opciones de importación                      | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |
+| filePath   | Text   | -> | Ruta de acceso del documento                 |
+| paramObj   | Object | -> | Opciones de importación                      |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 
@@ -77,7 +82,7 @@ El parámetro opcional *paramObj* permite definir las propiedades del documento 
 - Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Para más información sobre el formato CSV y los valores separados por delimitadores en general, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 - Se recomienda utilizar el objeto *excelOptions* al importar en formato ".xlsx". Asegúrese de no mezclar este objeto con la propiedad heredada de primer nivel *password* para evitar problemas potenciales.
-- La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+- La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. De este modo se garantiza que los procesos dependientes, como las modificaciones o exportaciones de documentos, solo se realicen una vez que se hayan resuelto por completo todos los cálculos basados en fórmulas.
 
 :::
 

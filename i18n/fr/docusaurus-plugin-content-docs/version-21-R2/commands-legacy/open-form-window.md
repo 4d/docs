@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*laTable* : Table ;} *nomForm* : Text, Object {; *type* : Integer {; *posH* : Integer {; *posV* : Integer {; *}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table du formulaire ou Table par défaut si ce paramètre est omis |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | posV | Integer | &#8594; | Position verticale de la fenêtre |
 | * | Opérateur | &#8594; | Conserver la position et la taille précédentes de la fenêtre |
 | Résultat | Integer | &#8592; | Numéro de référence de la fenêtre |
-
+</div>
 <!-- END REF-->
 
 ## Description 

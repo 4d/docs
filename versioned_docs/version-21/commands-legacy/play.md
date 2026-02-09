@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PLAY.Syntax-->**PLAY** ( *objectName* {; *async*} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectName | Text | &#8594;  | Name or path of sound file or system soundEmpty string for stopping asynchronous play |
 | async | Integer | &#8594;  | (Windows) If specified, asynchronous execution; If omitted, synchronous execution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

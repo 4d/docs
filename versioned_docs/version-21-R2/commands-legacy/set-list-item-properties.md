@@ -5,18 +5,20 @@ slug: /commands/set-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<br/>**SET LIST ITEM PROPERTIES** ( * ; *list* : Integer, Text ; * ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current list item |
+| itemRef | Integer, Operator | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current list item |
 | enterable | Boolean | &#8594;  | TRUE = Enterable, FALSE = Non-enterable |
 | styles | Integer | &#8594;  | Font style for the item |
 | icon | Text, Integer | &#8594;  | Picture name or number ("" or 0 for no icon) |
 | color | Integer | &#8594;  | RGB color value or -1 = reset to original color |
-
+</div>
 <!-- END REF-->
 
 ## Description 

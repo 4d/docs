@@ -5,13 +5,15 @@ slug: /commands/current-time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current time.Syntax-->**Current time** ( * ) : Time<!-- END REF-->
+<!--REF #_command_.Current time.Syntax-->**Current time** ({ * }) : Time<!-- END REF-->
 <!--REF #_command_.Current time.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns the current time from the server |
 | Function result | Time | &#8592; | Current time |
-
+</div>
 <!-- END REF-->
 
 ## Description 

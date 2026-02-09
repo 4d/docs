@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( targetObj | {*tableRef* ; *rowNumber*} {; *numRows*} )  -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table insert rows.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | rowNumber | Integer | &#8594;  | 行インデックス番号 |
 | numRows | Integer | &#8594;  | 挿入する行の数(デフォルト値=1) |
 | 戻り値 | Object | &#8592; | 表の行のレンジ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET VIEW PROPERTIES.Syntax-->**WP SET VIEW PROPERTIES** ( {* ;} *wpArea* : Text, Object ; *wpViewProps* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET VIEW PROPERTIES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, wpArea é um nome de objeto formulário (string). Se omitido, wpArea é um campo objeto ou variável (documento) |
 | wpArea | Text, Object | &#8594;  | Nome objeto formulário (se * for especificado) ou viarável ou campo objeto 4D Wriote Pro (se * for omitido) |
 | wpViewProps | Object | &#8594;  | Propriedades de vista a modificar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

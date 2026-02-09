@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *area* : Integer ; *propiedad* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get area property.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | Referencia del área |
 | propiedad | Integer | &#8594; | Elemento de interfaz |
 | Resultado | Integer | &#8592; | 1 = mostrado, 0 = oculto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

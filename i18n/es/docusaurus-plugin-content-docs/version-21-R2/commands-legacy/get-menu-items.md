@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* : Integer, Text ; *arrayTitMenus* : Text array ; *arraysRefMenus* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | Referencia de menú o número de menú |
 | arrayTitMenus | Text array | &#8592; | Array de títulos de menú |
 | arraysRefMenus | Text array | &#8592; | Array de referencias de menú |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

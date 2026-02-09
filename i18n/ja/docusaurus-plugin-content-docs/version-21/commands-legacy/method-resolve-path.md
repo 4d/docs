@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *path* ; *methodType* ; *ptrTable* ; *objectName* ; *formObjectName* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | path | Text | &#8594;  | 解決するパス |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | objectName | Text | &#8592; | フォームまたはデータベースメソッド名 |
 | formObjectName | Text | &#8592; | フォームオブジェクト名 |
 | * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

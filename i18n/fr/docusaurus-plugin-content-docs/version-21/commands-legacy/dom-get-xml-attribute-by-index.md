@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Syntax-->**DOM GET XML ATTRIBUTE BY INDEX** ( *refElément* ; *indexAttribut* ; *nomAttribut* ; *valeurAttribut* )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594;  | Référence d’élément XML |
 | indexAttribut | Integer | &#8594;  | Numéro d’indice de l’attribut |
 | nomAttribut | Variable | &#8592; | Nom de l’attribut |
 | valeurAttribut | Variable | &#8592; | Valeur de l’attribut |
-
+</div>
 <!-- END REF-->
 
 ## Description 

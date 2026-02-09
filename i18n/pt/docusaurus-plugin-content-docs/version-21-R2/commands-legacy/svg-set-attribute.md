@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *objetoImagem* ; id_Elemento ; *nomeAtrib* : Text ; *valorAtributo* : Text, Integer {; ...(*nomeAtrib* : Text, *valorAtributo* : Text, Integer)} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objImagem é um nome objeto (string). Se omitido, objImagem é uma variável |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomeAtrib | Text | &#8594; | Atributo a estabelecer |
 | valorAtributo | Text, Integer | &#8594; | Novo valor do atributo |
 | * | Operador | &#8594; | Se passado = modifica a própria imagem SVG |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

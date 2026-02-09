@@ -5,15 +5,20 @@ title: VP SET NUM VALUE
 
 <!-- REF #_method_.VP SET NUM VALUE.Syntax -->
 
-**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } ) <!-- END REF -->
+**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Real { ; *formatPattern* : Text } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 
-| Paramètres    | Type   |    | Description              |                  |
-| ------------- | ------ | -- | ------------------------ | ---------------- |
-| rangeObj      | Object | -> | Objet plage              |                  |
-| numberValue   | Number | -> | Valeur du nombre à fixer |                  |
-| formatPattern | Text   | -> | Format de la valeur      | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres    | Type   |    | Description              |
+| ------------- | ------ | -- | ------------------------ |
+| rangeObj      | Object | -> | Objet plage              |
+| numberValue   | Real   | -> | Valeur du nombre à fixer |
+| formatPattern | Text   | -> | Format de la valeur      |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

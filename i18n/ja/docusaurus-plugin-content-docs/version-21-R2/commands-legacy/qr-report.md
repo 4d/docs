@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*aTable* : Table ;} *document* : Text {; *methodName* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.QR REPORT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | レポートを作成するテーブル、省略時はデフォルトテーブル |
 | document | Text | &#8594; | ロードするクイックレポートドキュメント |
 | methodName | Text | &#8594; | 呼び出すメソッドの名前 |
 | * | 演算子 | &#8594; | プリントダイアログボックスを表示しない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

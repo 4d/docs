@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get sections.Syntax-->**WP Get sections** ( *objCible* : Object ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get sections.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou document 4D Write Pro |
 | Résultat | Collection | &#8592; | Collection de toutes les sections contenues dans objCible |
-
+</div>
 <!-- END REF-->
 
 ## Description 

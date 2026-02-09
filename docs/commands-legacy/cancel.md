@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CANCEL.Syntax-->**CANCEL**<!-- END REF-->
 <!--REF #_command_.CANCEL.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -25,7 +27,7 @@ The **CANCEL** command is used in form or object methods (or in a subroutine) to
 
 **CANCEL** is commonly executed as a result of a menu command being chosen. **CANCEL** is also commonly used in the object method of a “no action” button.
 
-It is also often used in the optional close box method for the [Open window](open-window.md) command. If there is a Control-menu box on a window, [ACCEPT](accept.md) or **CANCEL** can be called, in the method to be executed, when the Control-menu box is double-clicked or the **Close** menu command is chosen.
+It is also often used in the optional close box method for the [Open window](../commands/open-window.md) command. If there is a Control-menu box on a window, [ACCEPT](accept.md) or **CANCEL** can be called, in the method to be executed, when the Control-menu box is double-clicked or the **Close** menu command is chosen.
 
 **CANCEL** cannot be queued up. Executing two **CANCEL** commands in a row from within a method in response to an event would have the same effect as executing only one.
 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( {* ;} *objeto* ; *arrayURLs* {; *endereço* {; *arrTitulos*}} )<!-- END REF-->
 <!--REF #_command_.WA GET URL HISTORY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | arrayURLs | Text array | &#8592; | Array das URLs visitadas |
 | endereço | Integer | &#8594;  | 0 ou omitido = Lista das URLs anteriores; 1 = Lista das próximas URLs |
 | arrTitulos | Text array | &#8592; | Array de titulos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

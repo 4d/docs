@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Mobile App Action database method.Syntax-->**mobileInfo** -> On Mobile App Action database method : Object<!-- END REF-->
 <!--REF #_command_.On Mobile App Action database method.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | mobileInfo | Object | &#8594;  | Information passée par l'application mobile |
 | status | Object | &#8592; | Statut de l'action & synchronisation des données |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -9,11 +9,16 @@ title: VP Get sheet index
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| 引数         | 型       |                             | 説明                      |                  |
-| ---------- | ------- | --------------------------- | ----------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名 |                  |
-| name       | Text    | ->                          | シート名                    |                  |
-| 戻り値        | Integer | <- | シートのインデックス              | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |                             | 説明                      |
+| ---------- | ------- | --------------------------- | ----------------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名 |
+| name       | Text    | ->                          | シート名                    |
+| 戻り値        | Integer | <- | シートのインデックス              |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

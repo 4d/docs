@@ -5,15 +5,17 @@ slug: /commands/set-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *font* : Text, Integer )<br/>**SET LIST ITEM FONT** ( * ; *list* : Integer, Text ; * ; *font* : Text, Integer )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *font* : Text, Integer )<br/>**SET LIST ITEM FONT** ( *list* : Integer ; *itemRef* : Integer, Operator ; *font* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
 | font | Text, Integer | &#8594;  | Font name or number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

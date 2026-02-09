@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Character code.Syntax-->**Character code** ( *character* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Character code.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | character | Text | &#8594; | 取得したい文字を得るためのコード |
 | 戻り値 | Integer | &#8592; | 文字コード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

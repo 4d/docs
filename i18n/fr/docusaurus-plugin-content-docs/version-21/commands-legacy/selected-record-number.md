@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle retourner le numéro de l'enregistrement courant dans la sélection |
 | Résultat | Integer | &#8592; | Numéro dans la sélection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

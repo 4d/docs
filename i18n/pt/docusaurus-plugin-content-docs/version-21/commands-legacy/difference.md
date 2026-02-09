@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *conjunto1* ; *conjunto2* ; *conjuntoResultado* )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | conjunto1 | Text | &#8594;  | Conjunto |
 | conjunto2 | Text | &#8594;  | Conjunto que será subtraído |
 | conjuntoResultado | Text | &#8594;  | Conjunto Resultado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

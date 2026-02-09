@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( {* ;} *object* ; *formula* ; *dataType* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)、省略時objectは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または変数 (* 省略時) |
 | formula | Text | &#8594;  | 列に割り当てる4Dフォーミュラ |
 | dataType | Integer | &#8594;  | フォーミュラの結果型 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

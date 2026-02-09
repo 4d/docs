@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *nomFichier* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
 <!--REF #_command_.SAVE VARIABLES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomFichier | Text | &#8594;  | Nom du document dans lequel sauvegarder la ou les variable(s) |
 | variable | Variable | &#8594;  | Variable(s) à sauvegarder |
-
+</div>
 <!-- END REF-->
 
 ## Description 

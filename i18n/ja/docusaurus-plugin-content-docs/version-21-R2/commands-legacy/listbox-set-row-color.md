@@ -5,8 +5,10 @@ slug: /commands/listbox-set-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( * ; *object* : Text ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<br/>**LISTBOX SET ROW COLOR** ( *object* : Field, Variable ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( * ; *object* : Text ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<br/>**LISTBOX SET ROW COLOR** ( *object* : Variable ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | row | Integer | &#8594; | 列番号 |
 | color | Text, Integer | &#8594; | RGBカラー |
 | colorType | Integer | &#8594; | Listbox font color(デフォルトの値) またはListbox background color |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

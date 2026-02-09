@@ -7,11 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Syntax-->**WP DELETE SUBSECTION** ( *wpSection* ; *subSectionType* )<br/>**WP DELETE SUBSECTION** ( *subSection* )<!-- END REF-->
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpSection | Object | &#8594;  | 4D Write Pro section |
 | subSectionType | Integer | &#8594;  | Subsection type (wk first page, wk left page, or wk right page) |
 | subSection | Object | &#8594;  | 4D Write Pro subsection |
+</div>
 <!-- END REF-->
 
 

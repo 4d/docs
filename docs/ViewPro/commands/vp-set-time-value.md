@@ -8,12 +8,15 @@ title: VP SET TIME VALUE
 **VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Time { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |timeValue |Time|->|Time value to set|
-|formatPattern |Text|->|Format of value|<!-- END REF -->
+|formatPattern |Text|->|Format of value|
+</div>
+<!-- END REF -->
 
 ## Description
 

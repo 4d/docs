@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *leChamp* ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leChamp | Text, Blob, Picture | &#8594;  | Champ dont vous souhaitez obtenir le lieu de stockage |
 | Résultat | Text | &#8592; | Chemin d’accès complet du fichier de stockage externe |
-
+</div>
 <!-- END REF-->
 
 ## Description 

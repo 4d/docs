@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns structure file of host database |
 | Function result | Text | &#8592; | Long name of the database structure file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

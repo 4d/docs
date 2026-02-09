@@ -5,8 +5,10 @@ slug: /commands/listbox-get-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( * ; *object* : Text ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<br/>**LISTBOX GET TABLE SOURCE** ( *object* : Field, Variable ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( * ; *object* : Text ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<br/>**LISTBOX GET TABLE SOURCE** ( *object* : Variable ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tableNum | Integer | &#8592; | セレクションのテーブル番号 |
 | name | Text | &#8592; | 命名セレクション名 またはカレントセレクションの場合"" |
 | highlightName | Text | &#8592; | ハイライトセット名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

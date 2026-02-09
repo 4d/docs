@@ -5,8 +5,10 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *object* : Text {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<br/>**Print object** ( *object* : Field, Variable {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *object* : Text {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<br/>**Print object** ( *object* : Variable, Field {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | width | Integer | &#8594; | オブジェクトの幅 (ピクセル) |
 | height | Integer | &#8594; | オブジェクトの高さ (ピクセル) |
 | 戻り値 | Boolean | &#8592; | True = オブジェクトが完全に印刷された; そうでなければFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

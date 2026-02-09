@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Syntax-->**Last errors** : Collection<!-- END REF-->
 <!--REF #_command_.Last errors.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Collection | &#8592; | Collection of error objects |
-
+</div>
 <!-- END REF-->
 
 ## Description 

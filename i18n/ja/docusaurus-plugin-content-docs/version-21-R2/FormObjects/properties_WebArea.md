@@ -29,7 +29,7 @@ Webエリアで実行される JavaScript コードから 4Dメソッドおよ�
 
 倍長整数型変数の名前です。 この変数には 0 から 100 までの値が格納され、この数値は Webエリアに表示されるページのロードされたパーセンテージを表します。 手動で変更することはできません。
 
-> As of 4D 19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> 4D 19 R5 以降、Windows上では、Web エリアが [ 埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用している場合にのみ、この変数が更新されます。
 
 #### JSON 文法
 
@@ -85,12 +85,12 @@ URL 変数は[`WA OPEN URL`](../commands-legacy/wa-open-url.md) と同じ効果�
 
 > Windows で Microsoft Edge WebView2がインストールされていない場合、4D はシステムのレンダリングエンジンとして埋め込みエンジンを使用します。 システムにインストールされているかどうかを確認するには、アプリケーションパネルで "Microsoft Edge WebView2 Runtime" を検索してください。
 
-- **チェックあり** - `JSON値: embedded`: この場合、4D は Chromium Embedded Framework (CEF) を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, [new versions of the engines are regularly provided through 4D](../Notes/updates.md#library-table).
+- **チェックあり** - `JSON値: embedded`: この場合、4D は Chromium Embedded Framework (CEF) を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。 [使用エンジンの新バージョンは 4D のリリースを通して定期的に提供されます](../Notes/updates.md#ライブラリの一覧) 。
 
 CEFエンジンには以下のような制約があります:
 
-- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command, the first drop must be preceded by at least one call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or one assignment to the URL variable associated to the area.
+- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md): このコマンドを使用する場合、([`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
+- [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) コマンドの `WA enable URL drop` セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は [`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すか、またはエリアに割り当てられている URL 変数に URL が渡されている必要があります。
 
 :::note
 

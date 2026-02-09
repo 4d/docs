@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *groupID* ; *name* ; *owner* {; *members*} )<!-- END REF-->
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | groupID | Integer | &#8594;  | Unique group ID number |
 | name | Text | &#8592; | Name of the group |
 | owner | Integer | &#8592; | User ID number of group owner (Binary databases only) |
 | members | Integer array | &#8592; | Group members |
-
+</div>
 <!-- END REF-->
 
 ## Description 

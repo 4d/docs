@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *chavPriv* ; *chavPublica* {; *tamanho*} )<!-- END REF-->
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | chavPriv | Blob | &#8592; | BLOB que contém a chave privada |
 | chavPublica | Blob | &#8592; | BLOB que contém a chave pública |
 | tamanho | Integer | &#8594;  | Tamanho da chave (bits) [512...2048]. O valor normal é  512 |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

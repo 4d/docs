@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *estruturaXML* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | estruturaXML | Text | &#8594; | Definição XML da estrutura da base 4D |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

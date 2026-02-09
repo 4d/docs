@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form table.Syntax-->**Current form table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current form table.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Pointer | &#8592; | 現在表示されているフォームが属すテーブルへのポインタ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Modified.Syntax-->**Modified** ( *leChamp* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ dont vous voulez tester la modification |
 | Résultat | Boolean | &#8592; | Vrai si une nouvelle valeur a été assignée au champ, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

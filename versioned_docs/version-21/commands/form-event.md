@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Syntax-->**FORM Event** : Object<!-- END REF-->
 <!--REF #_command_.FORM Event.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Object | &#8592; | Event object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

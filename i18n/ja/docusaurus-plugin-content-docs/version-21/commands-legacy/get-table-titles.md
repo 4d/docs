@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *tableTitles* ; *tableNums* )<!-- END REF-->
 <!--REF #_command_.GET TABLE TITLES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | tableTitles | Text array | &#8592; | カレントテーブルの名前 |
 | tableNums | Integer array | &#8592; | テーブル番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

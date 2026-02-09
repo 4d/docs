@@ -9,11 +9,16 @@ title: VP Get sheet name
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
-| 引数         | 型       |                             | 説明                      |                  |
-| ---------- | ------- | --------------------------- | ----------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名 |                  |
-| sheet      | Integer | ->                          | シートのインデックス              |                  |
-| 戻り値        | Text    | <- | シート名                    | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |                             | 説明                      |
+| ---------- | ------- | --------------------------- | ----------------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名 |
+| sheet      | Integer | ->                          | シートのインデックス              |
+| 戻り値        | Text    | <- | シート名                    |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

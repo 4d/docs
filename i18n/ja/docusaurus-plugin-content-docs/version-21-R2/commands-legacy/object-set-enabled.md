@@ -5,14 +5,16 @@ slug: /commands/object-set-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *object* : Text ; *active* : Boolean )<br/>**OBJECT SET ENABLED** ( *object* : Field, Variable ; *active* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *object* : Text ; *active* : Boolean )<br/>**OBJECT SET ENABLED** ( *object* : Variable, Field ; *active* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数 |
 | object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
 | active | Boolean | &#8594; | True = オブジェクトは有効; そうでなければFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

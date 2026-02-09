@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *seletor* {; *nomeObjeto* {; *nomeSubformulario*}})} : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | seletor | Integer | &#8594;  | Categoria objeto |
 | nomeObjeto | Text | &#8594;  | Nome do objeto |
 | nomeSubformulario | Text | &#8594;  | Nome de objeto de subformulário |
 | Resultado | Pointer | &#8592; | Ponteiro à variável de objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

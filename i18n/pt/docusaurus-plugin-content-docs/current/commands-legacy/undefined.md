@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Undefined.Syntax-->**Undefined** ( *variavel* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | variavel | Expression | &#8594; | Variável a testar |
 | Resultado | Boolean | &#8592; | TRUE=Variável é atualmente indefinida; FALSE= Variável é atualmente definida |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

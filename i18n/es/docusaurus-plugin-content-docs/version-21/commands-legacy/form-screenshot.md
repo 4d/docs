@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*tabla* ;} *nomForm* ;} *imagForm* {; *pagNum*} )<!-- END REF-->
 <!--REF #_command_.FORM SCREENSHOT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla del formulario |
 | nomForm | Text | &#8594;  | Nombre del formulario |
 | imagForm | Picture | &#8592; | Imagen del formulario en ejecución si el primer parámetro se omite, o <br/>Imagen del formulario en el editor de formularios si se pasa un nombre de formulario |
 | pagNum | Integer | &#8594;  | Número de página del formulario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

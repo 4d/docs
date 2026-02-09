@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *area* ; *selector* ; *leftTitle* ; *centerTitle* ; *rightTitle* ; *height* {; *picture* {; *pictAlignment*}} )<!-- END REF-->
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | height | Integer | &#8594;  | ヘッダまたはフッタの高さ |
 | picture | Picture | &#8594;  | 表示するピクチャ |
 | pictAlignment | Integer | &#8594;  | ピクチャの整列属性 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

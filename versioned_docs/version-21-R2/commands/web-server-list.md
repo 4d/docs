@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Syntax-->**WEB Server list** : Collection<!-- END REF-->
 <!--REF #_command_.WEB Server list.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Collection | &#8592; | Collection of the available Web Server objects |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

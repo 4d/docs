@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Log.Syntax-->**Log** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nombre | Real | &#8594;  | Nombre dont vous voulez obtenir le logarithme népérien |
 | Résultat | Real | &#8592; | Logarithme népérien de nombre |
-
+</div>
 <!-- END REF-->
 
 ## Description 

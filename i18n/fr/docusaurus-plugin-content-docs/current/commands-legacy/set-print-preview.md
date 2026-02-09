@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *aperçu* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | aperçu | Boolean | &#8594; | Impression à l'écran (Vrai) ou non (Faux) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

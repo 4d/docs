@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *BLOB* : Blob ; *offset* : Integer ; *numero* : Integer {; *relleno* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN BLOB.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOB en el cual insertar los bytes |
 | offset | Integer | &#8594; | Posición de inicio de inserción de los bytes |
 | numero | Integer | &#8594; | Número de bytes a insertar |
 | relleno | Integer | &#8594; | Valor de byte por defecto (0x00..0xFF) 0x00 si se omite |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

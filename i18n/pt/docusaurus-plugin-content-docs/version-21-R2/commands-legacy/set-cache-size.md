@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *tamanho* : Real {; *libMin* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tamanho | Real | &#8594; | Tamanho do banco de dados em bytes |
 | libMin | Real | &#8594; | Mínimo número de bytes a liberar quando cache estiver cheia |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

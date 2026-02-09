@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report kind.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referência da área |
 | Resultado | Integer | &#8592; | Tipo de relatório |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

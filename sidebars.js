@@ -751,7 +751,7 @@ module.exports =
                 "commands-legacy/json-stringify",
                 "commands-legacy/json-stringify-array",
                 "commands-legacy/json-to-selection",
-                "commands-legacy/json-validate",
+                "commands/json-validate",
                 "commands-legacy/selection-to-json"
               ]
             },
@@ -2097,8 +2097,8 @@ module.exports =
                 "commands-legacy/maximize-window",
                 "commands-legacy/minimize-window",
                 "commands-legacy/next-window",
-                "commands-legacy/open-form-window",
-                "commands-legacy/open-window",
+                "commands/open-form-window",
+                "commands/open-window",
                 "commands-legacy/redraw-window",
                 "commands-legacy/reduce-restore-window",
                 "commands-legacy/resize-form-window",
@@ -2304,7 +2304,8 @@ module.exports =
           },
           items: [
             "Develop/processes",
-            "Develop/preemptive-processes"
+            "Develop/preemptive-processes",
+            "Develop/async"
           ]
         },
         {

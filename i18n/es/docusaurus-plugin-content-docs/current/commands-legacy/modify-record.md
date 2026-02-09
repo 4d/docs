@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*tabla* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla a utilizar para entrada de datos o Tabla por defecto, si se omite |
 | * | Operator | &#8594; | Ocultar barras de desplazamiento |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

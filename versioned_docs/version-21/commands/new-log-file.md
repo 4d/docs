@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Syntax-->**New log file** : Text<!-- END REF-->
 <!--REF #_command_.New log file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Full pathname of closed log file |
-
+</div>
 <!-- END REF-->
 
 

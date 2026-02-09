@@ -5,14 +5,16 @@ slug: /commands/object-set-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *object* : Text ; *font* : Text )<br/>**OBJECT SET FONT** ( *object* : Field, Variable ; *font* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *object* : Text ; *font* : Text )<br/>**OBJECT SET FONT** ( *object* : Variable, Field ; *font* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
 | font | Text | &#8594;  | Font name |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is record loaded.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table of the record to examine or Default table if this parameter is omitted |
 | Function result | Boolean | &#8592; | True if the record is loaded Otherwise False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

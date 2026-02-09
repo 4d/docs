@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*tabla* : Table }{;}{ *criterioBusqueda* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla en la cual efectuar la búsqueda o Tabla por defecto, si se omite |
 | criterioBusqueda | Expression | &#8594; | Líneas de búsqueda |
 | * | Operador | &#8594; | Bandera para continuar la búsqueda |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

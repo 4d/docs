@@ -5,15 +5,17 @@ slug: /commands/listbox-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *object* : Text ; *arrType* : Integer ; *arrPtr* : Pointer )<br/>**LISTBOX SET ARRAY** ( *object* : Field, Variable ; *arrType* : Integer ; *arrPtr* : Pointer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *object* : Text ; *arrType* : Integer ; *arrPtr* : Pointer )<br/>**LISTBOX SET ARRAY** ( *object* : Variable ; *arrType* : Integer ; *arrPtr* : Pointer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
 | object | any | &#8594; | オブジェクト名(* 指定時)、または変数(* 省略時) |
 | arrType | Integer | &#8594; | 配列のタイプ |
 | arrPtr | Pointer | &#8594; | プロパティに関連付ける配列を指定 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* : Integer ; *info1* : Integer, Date ; *info2* : Text, Time )<!-- END REF-->
 <!--REF #_command_.RESTORE INFO.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594; | 取得する情報のタイプ |
 | info1 | Integer, Date | &#8592; | セレクタの値1 |
 | info2 | Text, Time | &#8592; | セレクタの値2 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

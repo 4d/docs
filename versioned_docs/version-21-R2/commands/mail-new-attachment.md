@@ -15,6 +15,8 @@ displayed_sidebar: docs
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!--REF #_command_.MAIL New attachment.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 |file|4D.File|&#8594; |Attachment file|
@@ -26,6 +28,7 @@ displayed_sidebar: docs
 |type|Text|&#8594; |Value of the content-type header|
 |disposition|Text|&#8594; |Value of the content-disposition header: "inline" or "attachment".|
 |Result|4D.MailAttachment|&#8592;|Attachment object|
+</div>
 <!-- END REF-->
 
 

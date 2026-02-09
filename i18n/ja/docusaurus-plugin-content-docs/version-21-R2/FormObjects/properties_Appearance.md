@@ -37,7 +37,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 :::note
 
-The focus rectangle is only available on macOS and (for text and picture [inputs](input_overview.md)) on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI.
+フォーカスの四角形はmacOS (テキストおよびピクチャーの[入力](input_overview.md)) および [Fluent UI](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されているWindows でのみ利用可能です。 Windows クラシックUI ではサポートされていません。
 
 :::
 

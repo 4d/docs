@@ -211,9 +211,13 @@ This property is **read-only**.
 
 
 <!--REF #FileHandleClass.getSize().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Real|<-|Size of the document in bytes|<!-- END REF -->
+|Result|Real|<-|Size of the document in bytes|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -314,10 +318,14 @@ $s:=$fh.readText()
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |bytes|Real|->|Number of bytes to be read|
-|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|<!-- END REF -->
+|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
+</div>
+<!-- END REF -->
 
 
 
@@ -350,9 +358,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 
 <!--REF #FileHandleClass.readLine().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Text|<-|Line of text|<!-- END REF -->
+|Result|Text|<-|Line of text|
+</div>
+<!-- END REF -->
 
 
 
@@ -392,10 +404,14 @@ This function assumes that the [`.offset`](#offset) property is a number of char
 
 
 <!--REF #FileHandleClass.readText().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |stopChar|Text|->|Character(s) at which to stop reading|
-|Result|Text|<-|Text from the file|<!-- END REF -->
+|Result|Text|<-|Text from the file|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -437,9 +453,13 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 
 <!--REF #FileHandleClass.setSize().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|size|Real|->|New size of the document in bytes|<!-- END REF -->
+|size|Real|->|New size of the document in bytes|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -469,9 +489,13 @@ If the *size* value is less than the current document size, the document content
 
 
 <!--REF #FileHandleClass.writeBlob().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|<!-- END REF -->
+|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -503,9 +527,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|lineOfText|Text|->|Text to write|<!-- END REF -->
+|lineOfText|Text|->|Text to write|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -535,9 +563,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 
 <!--REF #FileHandleClass.writeText().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|textToWrite|Text|->|Text to write|<!-- END REF -->
+|textToWrite|Text|->|Text to write|
+</div>
+<!-- END REF -->
 
 
 #### Description

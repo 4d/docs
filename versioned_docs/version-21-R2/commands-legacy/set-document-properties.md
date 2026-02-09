@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; created on ; created at ; modified on ; modified at )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Text | &#8594;  | Document name or Full document pathname |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | created at | Time | &#8594;  | Creation time |
 | modified on | Date | &#8594;  | Last modification date |
 | modified at | Time | &#8594;  | Last modification time |
-
+</div>
 <!-- END REF-->
 
 ## Description 

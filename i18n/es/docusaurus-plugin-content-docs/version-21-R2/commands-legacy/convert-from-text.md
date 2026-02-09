@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *texto4D* : Text ; *juegoCaracteres* : Text, Integer ; *blobConvertido* : Blob )<!-- END REF-->
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | texto4D | Text | &#8594; | Texto expresado en el juego de caracteres actual de 4D |
 | juegoCaracteres | Text, Integer | &#8594; | Nombre o número del juego de caracteres |
 | blobConvertido | Blob | &#8592; | BLOB que contiene el texto convertido |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

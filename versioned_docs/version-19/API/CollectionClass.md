@@ -70,10 +70,14 @@ A collection is initialized with:
 
 
 <!-- REF #_command_.New collection.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|The new collection|<!-- END REF -->
+|Result|Collection|<-|The new collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -150,10 +154,14 @@ You create a new collection and then add a new element:
 
 
 <!-- REF #_command_.New shared collection.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection|->|Shared collection's value(s)|
-|Result|Collection|<-|The new shared collection|<!-- END REF -->
+|Result|Collection|<-|The new shared collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -211,10 +219,14 @@ You can pass any number of values of the following supported types:
 
 
 <!-- REF #collection.average().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real, Undefined|<-|Arithmetic mean (average) of collection values|<!-- END REF -->
+|Result|Real, Undefined|<-|Arithmetic mean (average) of collection values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -266,9 +278,13 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 
 <!-- REF #collection.clear().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Original collection with all elements removed|<!-- END REF -->
+|Result|Collection|<-|Original collection with all elements removed|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -302,11 +318,15 @@ $vSize:=$col.length //$vSize=0
 
 
 <!-- REF #collection.combine().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |col2|Collection|->|Collection to combine|
 |index|Integer|->|Position to which insert elements to combine in collection (default=length+1)|
-|Result|Collection|<-|Original collection containing combined element(s)|<!-- END REF -->
+|Result|Collection|<-|Original collection containing combined element(s)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -349,10 +369,14 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 
 <!-- REF #collection.concat().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|any|->|Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection|
-|Result|Collection|<-|New collection with value(s) added to the original collection|<!-- END REF -->
+|Result|Collection|<-|New collection with value(s) added to the original collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -391,12 +415,16 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 <!-- REF #collection.copy().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |option|Integer|->|`ck resolve pointers`: resolve pointers before copying,<br/>`ck shared`: return a shared collection|
 |groupWithCol |Collection|->|Shared collection to be grouped with the resulting collection|
 |groupWithObj |Object|->|Shared object to be grouped with the resulting collection|
-|Result|Collection|<-|Deep copy of the original collection|<!-- END REF -->
+|Result|Collection|<-|Deep copy of the original collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -517,10 +545,14 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 
 <!-- REF #collection.count().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real|<-|Number of elements in the collection|<!-- END REF -->
+|Result|Real|<-|Number of elements in the collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -560,11 +592,15 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 
 <!-- REF #collection.countValues().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Text, Number, Boolean, Date, Object, Collection|->|Value to count|
 |propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real|<-|Number of occurrences of the value |<!-- END REF -->
+|Result|Real|<-|Number of occurrences of the value |
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -633,11 +669,15 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 <!-- REF #collection.distinct().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |option|Integer|->|`ck diacritical`: diacritical evaluation ("A" # "a" for example)|
 |propertyPath|Text|->|Path of attribute whose distinct values you want to get|
-|Result|Collection|<-|New collection with only distinct values|<!-- END REF -->
+|Result|Collection|<-|New collection with only distinct values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -682,11 +722,15 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 
 <!-- REF #collection.equal().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |collection2|Collection|->|Collection to compare|
 |option|Integer|->|`ck diacritical`: diacritical evaluation ("A" # "a" for example)
-|Result|Boolean|<-|True if collections are identical, false otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if collections are identical, false otherwise|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -741,12 +785,16 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 
 
 <!-- REF #collection.every().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |startFrom|Integer|->|Index to start the test at|
 |methodName|Text|->|Name of the method to call for the test|
 |param|Mixed|->|Parameter(s) to pass to methodName|
-|Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
+|Result|Boolean|<-|True if all elements successfully passed the test|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -832,12 +880,16 @@ End if
 
 
 <!-- REF #collection.extract().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path whose values must be extracted to the new collection|
 |targetpath|Text|->|Target property path or property name|
 |option|Integer|->|`ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed.|
-|Result|Collection|<-|New collection containing extracted values|<!-- END REF -->
+|Result|Collection|<-|New collection containing extracted values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -899,12 +951,16 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|number, Text, Collection, Object, Date, Boolean|->|Filling value|
 |startFrom|Integer|->|Start index (included)|
 |end|Integer|->|End index (not included)|
-|Result|collection|<-|Original collection with filled values|<!-- END REF -->
+|Result|collection|<-|Original collection with filled values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -950,11 +1006,15 @@ In case of inconsistency, the following rules apply:
 
 
 <!-- REF #collection.filter().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |methodName|Text|->|Name of the function to call to filter the collection|
 |param|Mixed|->|Parameter(s) to pass to *methodName*|
-|Result|Collection|<-|New collection containing filtered elements (shallow copy)|<!-- END REF -->
+|Result|Collection|<-|New collection containing filtered elements (shallow copy)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1039,12 +1099,16 @@ The code for ***TypeLookUp*** is:
 
 
 <!-- REF #collection.find().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |startFrom|Integer|->|Index to start the search at|
 |methodName|Text|->|Name of the function to call for the find|
 |param|any|->|Parameter(s) to pass to *methodName*|
-|Result|any |<-|First value found, or Undefined if not found|<!-- END REF -->
+|Result|any |<-|First value found, or Undefined if not found|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1133,12 +1197,16 @@ The code for ***FindCity*** is:
 
 
 <!-- REF #collection.findIndex().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |startFrom|Integer|->|Index to start the search at|
 |methodName|Text|->|Name of the function to call for the find|
 |param|any|->|Parameter(s) to pass to *methodName*|
-|Result|Integer |<-|Index of first value found, or -1 if not found|<!-- END REF -->
+|Result|Integer |<-|Index of first value found, or -1 if not found|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1208,11 +1276,15 @@ The code for ***FindCity*** method is:
 
 
 <!-- REF #collection.indexOf().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |toSearch|expression|->|Expression to search in the collection|
 |startFrom|Integer|->|Index to start the search at|
-|Result|Integer |<-|Index of the first occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
+|Result|Integer |<-|Index of the first occurrence of toSearch in the collection, -1 if not found|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1264,11 +1336,15 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 <!-- REF #collection.indices().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
 |value|any|->|Value(s) to compare when using placeholder(s)|
-|Result|Collection |<-|Element index(es) matching queryString in the collection|<!-- END REF -->
+|Result|Collection |<-|Element index(es) matching queryString in the collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1316,11 +1392,15 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 
 <!-- REF #collection.insert().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |index|Integer|->|Where to insert the element|
 |element|any|->|Element to insert in the collection|
-|Result|Collection |<-|Original collection containing inserted element|<!-- END REF -->
+|Result|Collection |<-|Original collection containing inserted element|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1365,11 +1445,15 @@ Any type of element accepted by a collection can be inserted, even another colle
 
 
 <!-- REF #collection.join().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |delimiter|Text|->|Separator to use between elements|
 |option|Integer|->|`ck ignore null or empty`: ignore null and empty strings in the result|
-|Result|Text |<-|String containing all elements of the collection, separated by delimiter|<!-- END REF -->
+|Result|Text |<-|String containing all elements of the collection, separated by delimiter|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1406,11 +1490,15 @@ By default, null or empty elements of the collection are returned in the resulti
 
 
 <!-- REF #collection.lastIndexOf().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |toSearch|expression|->|The element that is to be searched for within the collection|
 |startFrom|Integer|->|Index to start the search at|
-|Result|Integer |<-|Index of last occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
+|Result|Integer |<-|Index of last occurrence of toSearch in the collection, -1 if not found|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1493,11 +1581,15 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 
 <!-- REF #collection.map().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |methodName|Text|->|Name of method used to transform the collection elements|
 |param|any|->|Parameter(s) for the method|
-|Result|Collection |<-|Collection of transformed values|<!-- END REF -->
+|Result|Collection |<-|Collection of transformed values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1552,10 +1644,14 @@ Here is the ***Percentage*** method:
 
 
 <!-- REF #collection.max().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for evaluation|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|Maximum value in the collection|<!-- END REF -->
+|Result|Boolean, Text, Number, Collection, Object, Date |<-|Maximum value in the collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1599,10 +1695,14 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 
 <!-- REF #collection.min().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for evaluation|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|Minimum value in the collection|<!-- END REF -->
+|Result|Boolean, Text, Number, Collection, Object, Date |<-|Minimum value in the collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1646,12 +1746,16 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |pathStrings|Text|->|Property path(s) on which to order the collection|
 |pathObjects|Collection|->|Collection of criteria objects|
 |ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)|
-|Result|Collection |<-|Ordered copy of the collection (shallow copy)|<!-- END REF -->
+|Result|Collection |<-|Ordered copy of the collection (shallow copy)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1778,15 +1882,19 @@ Ordering with a property path:
 
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
+<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *methodName* : Text { ; *...extraParam* : expression } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.orderByMethod().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |methodName|Text|->|Name of method used to specify the sorting order|
 |extraParam|expression|->|Parameter(s) for the method |
-|Result|Collection |<-|Sorted copy of the collection (shallow copy)|<!-- END REF -->
+|Result|Collection |<-|Sorted copy of the collection (shallow copy)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1884,9 +1992,13 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.pop().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|any |<-|Last element of collection|<!-- END REF -->
+|Result|any |<-|Last element of collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1927,10 +2039,14 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 
 
 <!-- REF #collection.push().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |element|Mixed|->|Element(s) to add to the collection|
-|Result|Collection |<-|Original collection containing added elements|<!-- END REF -->
+|Result|Collection |<-|Original collection containing added elements|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -1980,12 +2096,16 @@ You want to sort the resutling collection:
 
 
 <!-- REF #collection.query().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
 |value|Mixed|->|Value(s) to compare when using placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes|
-|Result|Collection |<-|Element(s) matching queryString in the collection|<!-- END REF -->
+|Result|Collection |<-|Element(s) matching queryString in the collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2080,12 +2200,16 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 <!-- REF #collection.reduce().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |methodName |Text|->|Name of the function to call to process collection elements|
 |initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *methodName*|
 |param |expression|->|Parameter(s) to pass to *methodName*|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|<!-- END REF -->
+|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2164,11 +2288,15 @@ With the following ***Flatten*** method:
 
 
 <!-- REF #collection.remove().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |index |Integer|->|Element at which to start removal|
 |howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Original collection without removed element(s)|<!-- END REF -->
+|Result|Collection|<-|Original collection without removed element(s)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2216,11 +2344,15 @@ If you try to remove an element from an empty collection, the method does nothin
 
 
 <!-- REF #collection.resize().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |size |Integer|->|New size of the collection|
 |defaultValue |Number, Text, Object, Collection, Date, Boolean|->|Default value to fill new elements|
-|Result|Collection|<-|Resized original collection|<!-- END REF -->
+|Result|Collection|<-|Resized original collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2270,9 +2402,13 @@ By default, new elements are filled will **null** values. You can specify the va
 
 
 <!-- REF #collection.reverse().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Inverted copy of the collection|<!-- END REF -->
+|Result|Collection|<-|Inverted copy of the collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2305,9 +2441,13 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 
 <!-- REF #collection.shift().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|any|<-|First element of collection|<!-- END REF -->
+|Result|any|<-|First element of collection|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2345,11 +2485,15 @@ If the collection is empty, this method does nothing.
 
 
 <!-- REF #collection.slice().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |startFrom |Integer |->|Start index (included)|
 |end |Integer |->|End index (not included)|
-|Result|Collection|<-|New collection containing sliced elements (shallow copy)|<!-- END REF -->
+|Result|Collection|<-|New collection containing sliced elements (shallow copy)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2392,12 +2536,16 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |startFrom |Integer |->|Index to start the test at|
 |methodName |Text |->|Name of the method to call for the test|
 |param |Mixed |->|Parameter(s) to pass to *methodName*|
-|Result|Boolean|<-|True if at least one element successfully passed the test|<!-- END REF -->
+|Result|Boolean|<-|True if at least one element successfully passed the test|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2465,12 +2613,15 @@ With the following *NumberGreaterThan0* method:
 
 
 <!-- REF #collection.sort().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)|
 |methodName |Text |->|Name of method used to specify the sorting order|
 |extraParam |any |->|Parameter(s) for the method|
 |Result|Collection|<-|Original collection sorted|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -2560,10 +2711,14 @@ If you want to sort the collection elements in some other order or sort any type
 
 
 <!-- REF #collection.sum().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath |Text |->|Object property path to be used for calculation|
-|Result|Real|<-|Sum of collection values|<!-- END REF -->
+|Result|Real|<-|Sum of collection values|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -2618,11 +2773,15 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 
 <!-- REF #collection.unshift().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value |Text, Number, Object, Collection, Date |->|Value(s) to insert at the beginning of the collection|
 |Result|Collection|<-|Collection containing added element(s)
-|<!-- END REF -->
+|
+</div>
+<!-- END REF -->
 
 #### Description
 

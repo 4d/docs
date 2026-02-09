@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *objCible* {; *typeElement*} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get elements.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | typeElement | Integer | &#8594;  | Choix du type d'éléments à retrouver |
 | Résultat | Collection | &#8592; | Collection contenant des références d'éléments |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *rotaRelativa* ) : Text<!-- END REF-->
 <!--REF #_command_.Localized document path.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaRelativa | Text | &#8594;  | Rota relativa do documento para qual quer obter a versão localizada |
 | Resultado | Text | &#8592; | Rota de acesso absoluta ao documento localizado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

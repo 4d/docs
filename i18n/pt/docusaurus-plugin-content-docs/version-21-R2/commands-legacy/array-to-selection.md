@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *array* : Array ; *campo* : Field {; ...(*array* : Array, *campo* : Field)}{; *} })<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | array | Array | &#8594; | Array a se copiar na seleção |
 | campo | Field | &#8592; | Campo para receber os valores do array |
 | * | Operador | &#8594; | Aguarda execução |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

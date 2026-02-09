@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported** ( *targetObj* ; *wpFontStyle* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Is font style supported.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素 |
 | wpFontStyle | Integer | &#8594;  | フォントスタイル定数 |
 | 戻り値 | Boolean | &#8592; | wpFontStyleがサポートされている部分がレンジ内にあればTrue、それ以外はFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

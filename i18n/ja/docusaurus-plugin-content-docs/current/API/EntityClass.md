@@ -90,10 +90,13 @@ title: Entity
 
 <!-- REF #EntityClass.clone().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                         |                             | 説明                  |
 | --- | ------------------------- | :-------------------------: | ------------------- |
 | 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -146,12 +149,15 @@ title: Entity
 
 <!-- REF #EntityClass.diff().Params -->
 
+<div class="no-index">
+
 | 引数                  | 型                         |                             | 説明                  |
 | ------------------- | ------------------------- | :-------------------------: | ------------------- |
 | entityToCompare     | 4D.Entity |              ->             | 対象エンティティと比較するエンティティ |
 | attributesToCompare | Collection                |              ->             | 比較する属性の名称           |
 | 戻り値                 | Collection                | <- | エンティティ間の差異          |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -349,16 +355,19 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- REF #EntityClass.drop().Params -->
 
+<div class="no-index">
+
 | 引数   | 型       |                             | 説明                                                                           |
 | ---- | ------- | :-------------------------: | ---------------------------------------------------------------------------- |
 | mode | Integer |              ->             | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
 | 戻り値  | Object  | <- | ドロップの結果                                                                      |
 
+</div>
 <!-- END REF -->
 
 #### 説明
 
-`.drop()` 関数は、データクラスに対応するテーブルにおいて、<!-- REF #EntityClass.drop().Summary -->データストアのエンティティに格納されているデータをデータストアから削除します<!-- END REF -->。 ただしエンティティそのものはメモリ内に残るという点に注意してください。
+`.drop()` 関数は、データクラスに対応するテーブルにおいて、<!-- REF #EntityClass.drop().Summary -->データストアのエンティティに格納されているデータをデータストアから削除します<!-- END REF -->。 データクラスに対応するテーブルからエンティティが削除される一方、 エンティティそのものはメモリ内に残るという点に注意してください。
 
 マルチユーザー、あるいはマルチプロセスアプリケーションにおいて、`.drop()` 関数は ["オプティミスティック・ロック"](ORDA/entities.md#entity-locking) 機構のもとで実行されます。これはレコードが保存されるたびに内部的なロックスタンプが自動的に増分していくという機構です。
 
@@ -459,10 +468,13 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- REF #EntityClass.first().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                         |                             | 説明                                                           |
 | --- | ------------------------- | :-------------------------: | ------------------------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -499,10 +511,13 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- REF #EntityClass.fromObject().Params -->
 
+<div class="no-index">
+
 | 引数     | 型      |     | 説明                    |
 | ------ | ------ | :-: | --------------------- |
 | filler | Object |  -> | エンティティの属性値を設定するオブジェクト |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -587,10 +602,13 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- REF #EntityClass.getDataClass().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                            |                             | 説明                             |
 | --- | ---------------------------- | :-------------------------: | ------------------------------ |
 | 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -633,11 +651,14 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- REF #EntityClass.getKey().Params -->
 
+<div class="no-index">
+
 | 引数   | 型       |                             | 説明                                                                       |
 | ---- | ------- | :-------------------------: | ------------------------------------------------------------------------ |
 | mode | Integer |              ->             | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
 | 戻り値  | any     | <- | エンティティのプライマリーキーの値(整数またはテキスト)                          |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -672,10 +693,13 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明                                                |
 | --- | ---- | --------------------------- | ------------------------------------------------- |
 | 戻り値 | Text | <- | エンティティにリンクされたコンテキスト属性 (カンマ区切り) |
 
+</div>
 <!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。  ほとんどの場合、使用する必要はないでしょう。
@@ -731,10 +755,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.getSelection().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                                  |                             | 説明                                                         |
 | --- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------- |
 | 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -775,10 +802,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.getStamp().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                                                      |
 | --- | ------- | :-------------------------: | ------------------------------------------------------- |
 | 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -823,11 +853,14 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.indexOf().Params -->
 
+<div class="no-index">
+
 | 引数              | 型                                  |                             | 説明                            |
 | --------------- | ---------------------------------- | :-------------------------: | ----------------------------- |
 | entitySelection | 4D.EntitySelection |              ->             | エンティティの位置を取得する対象のエンティティセレクション |
 | 戻り値             | Integer                            | <- | エンティティセレクション内でのエンティティの位置      |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -872,10 +905,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.isNew().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                                         |
 | --- | ------- | :-------------------------: | ------------------------------------------ |
 | 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -912,10 +948,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.last().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                         |                             | 説明                                                           |
 | --- | ------------------------- | :-------------------------: | ------------------------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -952,11 +991,14 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.lock().Params -->
 
+<div class="no-index">
+
 | 引数   | 型       |                             | 説明                                                                       |
 | ---- | ------- | :-------------------------: | ------------------------------------------------------------------------ |
 | mode | Integer |              ->             | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
 | 戻り値  | Object  | <- | ロックの結果                                                                   |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1075,10 +1117,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.next().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                         |                             | 説明                                                            |
 | --- | ------------------------- | :-------------------------: | ------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1118,10 +1163,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.previous().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                         |                             | 説明                                                            |
 | --- | ------------------------- | :-------------------------: | ------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1160,10 +1208,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.reload().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明          |
 | --- | ------ | :-------------------------: | ----------- |
 | 戻り値 | Object | <- | ステータスオブジェクト |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1225,11 +1276,14 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.save().Params -->
 
+<div class="no-index">
+
 | 引数   | 型       |                             | 説明                                               |
 | ---- | ------- | :-------------------------: | ------------------------------------------------ |
 | mode | Integer |              ->             | `dk auto merge`: 自動マージモードを有効化します |
 | 戻り値  | Object  | <- | 保存の結果                                            |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1364,6 +1418,8 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.toObject().Params -->
 
+<div class="no-index">
+
 | 引数           | 型          |                             | 説明                                                                                                                                                                               |
 | ------------ | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | filterString | Text       |              ->             | 取得する属性 (カンマ区切り)                                                                                                                                               |
@@ -1371,6 +1427,7 @@ $info:=$address.getRemoteContextAttributes()
 | options      | Integer    |              ->             | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_STAMP プロパティを追加 |
 | 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト                                                                                                                                                            |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1653,10 +1710,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <!-- REF #EntityClass.touched().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                                                   |
 | --- | ------- | :-------------------------: | ---------------------------------------------------- |
 | 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1700,10 +1760,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
 
+<div class="no-index">
+
 | 引数  | 型          |                             | 説明                      |
 | --- | ---------- | :-------------------------: | ----------------------- |
 | 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1775,10 +1838,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <!-- REF #EntityClass.unlock().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明          |
 | --- | ------ | :-------------------------: | ----------- |
 | 戻り値 | Object | <- | ステータスオブジェクト |
 
+</div>
 <!-- END REF -->
 
 #### 説明

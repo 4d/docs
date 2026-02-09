@@ -9,10 +9,15 @@ title: VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                                     |                  |
-| ---------- | ------ | -- | --------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                    |                  |
-| optionObj  | Object | -> | Objeto que contiene las opciones del libro de trabajo a definir | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción                                                     |
+| ---------- | ------ | -- | --------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                    |
+| optionObj  | Object | -> | Objeto que contiene las opciones del libro de trabajo a definir |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

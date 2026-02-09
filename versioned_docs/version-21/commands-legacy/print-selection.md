@@ -7,11 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *aTable* {; *} )<br/>**PRINT SELECTION** ( *aTable* {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to print the selection, or Default table, if omitted |
-| * &#124; > | Operator | &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
-
+| *  | Operator | &#8594;  | Suppress the printing dialog box |
+| > | Comparator | &#8594;  | Do not reinitialize print settings |
+</div>
 <!-- END REF-->
 
 ## Description 

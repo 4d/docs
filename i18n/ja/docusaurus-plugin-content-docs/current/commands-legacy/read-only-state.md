@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Read only state.Syntax-->**Read only state** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Read only state.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | 読み込みのみ状態を調べるテーブル, または 省略時はデフォルトテーブル |
 | 戻り値 | Boolean | &#8592; | TRUE: テーブルへのアクセスは読み込みのみ FALSE: テーブルへのアクセスは読み書き可 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

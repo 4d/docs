@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *groupID* : Integer ; *name* : Text ; *owner* : Integer {; *members* : Integer array} )<!-- END REF-->
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | groupID | Integer | &#8594; | ユニークなグループID番号 |
 | name | Text | &#8592; | グループの名前 |
 | owner | Integer | &#8592; | グループオーナーのユーザーID番号 (バイナリデータベースのみ) |
 | members | Integer array | &#8592; | グループメンバー |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

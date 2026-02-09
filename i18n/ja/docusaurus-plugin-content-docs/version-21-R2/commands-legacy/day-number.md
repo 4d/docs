@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aDate | Date | &#8594; | 曜日に対応する数値を得る日付 |
 | 戻り値 | Integer | &#8592; | 曜日を示す数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

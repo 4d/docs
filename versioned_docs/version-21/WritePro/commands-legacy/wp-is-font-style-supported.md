@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported** ( *targetObj* ; *wpFontStyle* ) : Boolean<!-- END REF-->
 <!--REF #_command_.WP Is font style supported.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
 | wpFontStyle | Integer | &#8594;  | Font style constant |
 | Function result | Boolean | &#8592; | True if any part of targetObj supports wpFontStyle; False otherwise |
-
+</div>
 <!-- END REF-->
 
 ## Description 

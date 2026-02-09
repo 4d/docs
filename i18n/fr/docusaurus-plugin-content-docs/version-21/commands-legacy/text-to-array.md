@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varTexte* ; *tabTexte* ; *largeur* ; *nomPolice* ; *taillePolice* {; *stylePolice* {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | varText | Text | &#8594;  | Texte original à découper |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | taillePolice | Integer | &#8594;  | Taille de police |
 | stylePolice | Integer | &#8594;  | Style de police |
 | * | Opérateur | &#8594;  | Si passé = interpréter le texte en multistyle |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -12,7 +12,7 @@ El Explorador de datos ofrece una interfaz web para ver, consultar y editar los 
 El Explorador de datos se basa en el componente servidor web [`WebAdmin`](webAdmin.md) para la configuración y los parámetros de autenticación.
 
 - **configuración**: la configuración del Explorador de datos reutiliza los parámetros del servidor web [`WebAdmin`](webAdmin.md#settings),
-- **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication) and has the "WebAdmin" privilege. Cuando se accede al Explorador de datos a través del elemento de menú **Explorador de datos** (ver más adelante), se proporciona una autenticación automática.
+- **autenticación**: el acceso al Explorador de datos se concede cuando el [usuario de la sesión está autenticado](webAdmin.md#authentication) y tiene el privilegio "WebAdmin". Cuando se accede al Explorador de datos a través del elemento de menú **Explorador de datos** (ver más adelante), se proporciona una autenticación automática.
 
 > El acceso al Explorador de Datos puede desactivarse mediante la función [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection).
 

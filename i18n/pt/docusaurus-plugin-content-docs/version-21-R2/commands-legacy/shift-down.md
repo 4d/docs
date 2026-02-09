@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Shift down.Syntax-->**Shift down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Shift down.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Estado da tecla Shift |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

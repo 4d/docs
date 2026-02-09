@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *returnValue* {; *returnName* {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | returnValue | Variable | &#8592; | Value returned by the Web Service |
 | returnName | Text | &#8594;  | Name of the parameter to be retrieved |
 | * | Operator |  &#8594;  | Free up memory |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** {( *objetos* ; *opções* ; *metodo* {; *arrayTabelas* {; *arrayCampos*}} )}<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objetos | Integer | &#8594;  | Objeto a ser verificado |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | metodo | Text | &#8594;  | Nome do método 4D de retrochamada |
 | arrayTabelas | Integer array | &#8594;  | Números de tabelas a serem verificadas |
 | arrayCampos | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Número de índices a serem verificados |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

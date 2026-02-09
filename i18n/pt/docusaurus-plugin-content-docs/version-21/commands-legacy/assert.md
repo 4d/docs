@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressaoBool* {; *mensagemTexto*} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | expressaoBool | Boolean | &#8594;  | Expressão Booleana |
 | mensagemText | Text | &#8594;  | Texto de mensagem de erro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

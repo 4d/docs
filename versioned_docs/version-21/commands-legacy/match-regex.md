@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* ; *aString* ; *start* {; pos_found ; length_found}{; *} ) -> Function result <br/>
 **Match regex** ( *pattern* ; *aString* ) -> Function result<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pattern | Text | &#8594;  | Regular expression |
@@ -22,7 +24,7 @@ displayed_sidebar: docs
 | pattern | Text | &#8594;  | Regular expression (complete equality) |
 | aString | Text | &#8594;  | String in which search will be done |
 | Function result | Boolean | &#8592; | True = search has found an occurrence; Otherwise, False. |
-
+</div>
 <!-- END REF-->
 
 ## Description 

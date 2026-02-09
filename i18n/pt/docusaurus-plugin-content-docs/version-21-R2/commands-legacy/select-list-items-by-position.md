@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Syntax-->**SELECT LIST ITEMS BY POSITION** ( {* ;} *lista* : Integer, Text ; *posiçaoElem* : Integer  {; *posiçaoArray* : Integer array} )<!-- END REF-->
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
 | lista | Integer, Text | &#8594; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
 | posiçaoElem | Integer | &#8594; | Posição do elemento na(s) lista(s) expandida(s) /contraída(s) |
 | posiçaoArray | Integer array | &#8594; | Array de posições na(s) lista(s) expandida(s) /contraída(s) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

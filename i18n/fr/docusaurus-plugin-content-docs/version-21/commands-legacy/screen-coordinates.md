@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *gauche* ; *haut* ; *droite* ; *bas* {; *idEcran* {; *zoneEcran*}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | gauche | Integer | &#8592; | Coordonnée gauche de la zone de l'écran |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | bas | Integer | &#8592; | Coordonnée inférieure de la zone de l'écran |
 | idEcran | Integer | &#8594;  | Numéro de l'écran ou écran principal si omis |
 | zoneEcran | Integer | &#8594;  | Ecran entier (par défaut) ou zone de travail |
-
+</div>
 <!-- END REF-->
 
 ## Description 

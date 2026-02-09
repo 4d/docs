@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* : Text {; *type* : Integer}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | jsonString | Text | &#8594;  | JSON string to parse |
 | type | Integer | &#8594;  | Type in which to convert the values |
 | * | Operator | &#8594;  | Adds line position and offset of each property if returned value is an object |
 | Function result | any | &#8592; | Values extracted from JSON string |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -41,8 +43,8 @@ By default, if you omit the *type* parameter, 4D attempts to convert the value o
 
 * Real type values must be included in the range ±10.421e±10
 * In text type values, all special characters must be escaped, including quotes (see examples)
-* By default when you use the Is date constant, the command considers that a date string contains a local time and not GMT. You can modify this setting using the Dates inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
-* Starting with 4D v16 R6, if the current date storage setting is "date type", JSON date strings in "YYYY-MM-DD" format are automatically returned as date values by the **JSON Parse** command. For more information on this setting, please refer to the "Use date type instead of ISO date format in objects" option in the *Compatibility page*.
+* By default when you use the `Is date` constant, the command considers that a date string contains a local time and not GMT. You can modify this setting using the [`Dates inside objects` date setting of the `SET DATABASE PARAMETER`(./set-database-parameter.md#dates-inside-objects-85) command.
+* If the current date setting is `Date type` (deafult), JSON date strings in "YYYY-MM-DD" format are automatically returned as date values by the **JSON Parse** command. 
 * Time type values can be returned from numbers in strings. By default, the parsed value is considered a number of seconds.
 
 If you pass the *\** optional parameter and if the *jsonString* parameter represents an object, the returned object contains an additional property named *\_\_symbols* that provides path, line position, and line offset of each property and sub-property of the object. This information can be useful for debugging purposes. The structure of the *\_\_symbols* property is: 
@@ -188,7 +190,7 @@ beta[1].golf:{line:10,offset:12}}}
 *Field and Variable Types*  
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
-[JSON Validate](json-validate.md)  
+[JSON Validate](../commands/json-validate.md)  
 
 ## Properties
 

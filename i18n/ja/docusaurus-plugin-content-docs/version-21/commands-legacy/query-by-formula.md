@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *aTable* {; *queryFormula*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY FORMULA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | レコードセレクションを求めるテーブル |
 | queryFormula | Boolean | &#8594;  | 検索フォーミュラ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

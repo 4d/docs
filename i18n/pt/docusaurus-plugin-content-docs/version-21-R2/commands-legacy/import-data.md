@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT DATA.Syntax-->**IMPORT DATA** ( *nomeArquivo* : Text {; *projeto* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.IMPORT DATA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeArquivo | Text | &#8594; | Rota de acesso do arquivo importado |
 | projeto | Text, Blob | &#8596; | *in:* Contents of the import project<br/> *out:* New contents of the import project (if the * parameter has been passed) |
 | * | Operador | &#8594; | Exibir a caixa de diálogo importada e atualiza o projeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

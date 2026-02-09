@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* : Integer ; *coordY* : Integer ; *depuis* : Integer ; *vers* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | coordX | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
 | coordY | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
 | depuis | Integer | &#8594; | Système de coordonnées d'origine |
 | vers | Integer | &#8594; | Système de coordonnées dans lequel convertir le point |
-
+</div>
 <!-- END REF-->
 
 ## Description 

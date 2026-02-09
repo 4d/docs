@@ -17,11 +17,16 @@ title: VP MOVE CELLS
 
 <!-- REF #_method_.VP MOVE CELLS.Params -->
 
-| Paramètres  | Type   |    | Description                                                |                  |
-| ----------- | ------ | -- | ---------------------------------------------------------- | ---------------- |
-| originRange | Object | -> | Plage de cellules à copier                                 |                  |
-| targetRange | Object | -> | Plage cible pour les valeurs, le formatage et les formules |                  |
-| options     | Object | -> | Options supplémentaires                                    | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres  | Type   |    | Description                                                |
+| ----------- | ------ | -- | ---------------------------------------------------------- |
+| originRange | Object | -> | Plage de cellules à copier                                 |
+| targetRange | Object | -> | Plage cible pour les valeurs, le formatage et les formules |
+| options     | Object | -> | Options supplémentaires                                    |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

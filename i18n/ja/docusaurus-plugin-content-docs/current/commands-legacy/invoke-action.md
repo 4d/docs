@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* : Text {; *target* : Integer} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | action | Text | &#8594; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
 | target | Integer | &#8594; | アクションを実行する場所を定義: カレントフォーム(デフォルト)あるいはメインフォーム |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

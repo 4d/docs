@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *rutaCarpetaDest* {; *tamMax* {; *rutaHist* {; *atribCampo*}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaCarpetaDest | Text | &#8594;  | Ruta de acceso de la carpeta de destino del archivo guardado |
 | tamMax | Integer | &#8594;  | Tamaño máximo del archivo JSON a crear (bytes) |
 | rutaHist | Text | &#8594;  | Ruta de acceso del archivo de historial a exportar; utilizar el historial actual si se omite |
 | atribCampo | Integer | &#8594;  | Atributo de descripción del campo: 1 = utilizar número(por defecto), 2 = utilizar nombre |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

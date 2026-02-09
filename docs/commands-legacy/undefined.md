@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Expression | &#8594;  | Expression whose resulting value to be evaluated |
 | Function result | Boolean | &#8592; | True = undefined, False = not undefined |
-
+</div>
 <!-- END REF-->
 
 ## Description 

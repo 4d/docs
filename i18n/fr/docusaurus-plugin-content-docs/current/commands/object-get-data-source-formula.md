@@ -4,15 +4,15 @@ title: OBJECT Get data source formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( * ; *object* : Text ) : 4D.Formula<br/>**OBJECT Get data source formula** ( *object* : Field, Variable ) : 4D.Formula<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( * ; *object* : Text ) : 4D.Formula<br/>**OBJECT Get data source formula** ( *object* : Variable, Field ) : 4D.Formula<!-- END REF-->
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
 | Paramètres | Type                       |                             | Description                                                                                                             |
 | ---------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur                  | &#8594; | Si spécifié, *object* est un nom d'objet (chaîne)<br/>Si omis, *object* est un champ ou une variable |
-| object     | any                        | &#8594; | Nom d'objet (si \* est spécifié) ou<br/>Champ ou variable (si \* est omis)        |
-| formula    | 4D.Formula | &#8592; | Formule associée à l'objet de formulaire (`Null` si aucune formule n'est associée)                   |
+| \*         | Opérateur                  | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
+| object     | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
+| Résultat   | 4D.Formula | &#8592; | Formule associée à l'objet de formulaire (`Null` si aucune formule n'est associée)                   |
 
 <!-- END REF-->
 

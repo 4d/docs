@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *width* ; *height* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | width | Integer | &#8592; | サブフォームオブジェクトの幅 |
 | height | Integer | &#8592; | サブフォームオブジェクトの高さ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

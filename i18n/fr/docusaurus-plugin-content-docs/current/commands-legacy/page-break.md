@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** ({ * })<br/>**PAGE BREAK** ({ > })<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594; | Cancel printing job started with Print form |
 | > | Operator | &#8594; | Force one printing job |
-
+</div>
 <!-- END REF-->
 
 ## Description 

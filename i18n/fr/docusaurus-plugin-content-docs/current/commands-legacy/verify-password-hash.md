@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Verify password hash.Syntax-->**Verify password hash** ( *motDePasse* : Text ; *hash* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Verify password hash.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | motDePasse | Text | &#8594; | Mot de passe utilisateur (seuls les 72 premiers caractères sont utilisés) |
 | hash | Text | &#8594; | Hash du mot de passe |
 | Résultat | Boolean | &#8592; | Vrai si motDePasse et hash correspondent, Faux sinon |
-
+</div>
 <!-- END REF-->
 
 ## Description 

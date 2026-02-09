@@ -7,11 +7,14 @@ title: VP SET BOOLEAN VALUE
 **VP SET BOOLEAN VALUE** ( *rangeObj* : Object  ; *boolValue* : Boolean) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|boolValue    |Boolean|->|Boolean value to set|<!-- END REF -->
+|boolValue    |Boolean|->|Boolean value to set|
+</div>
+<!-- END REF -->
 
 ## Description
 

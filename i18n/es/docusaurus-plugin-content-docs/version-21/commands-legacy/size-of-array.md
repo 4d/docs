@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array cuyo tamaño se devuelve |
 | Resultado | Integer | &#8592; | Devuelve el número de elementos en el array |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *areaWP*;} {*targetObj*} {; *rangoInicio* ; *rangoFinal*} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, areaWP es un nombre de objeto de formulario (cadena). Si se omite, areaWP es un campo o una variable objeto (documento). |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | targetObj | Object | &#8594;  | Nombre del objeto formulario (si * se especifica) o variable objeto 4D Write Pro o campo (si * se omite) |
 | rangoInicio | Integer | &#8594;  | Posición inicial del rango texto |
 | rangoFinal | Integer | &#8594;  | Posición final del rango texto |
-
+</div>
 <!-- END REF-->
 
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*

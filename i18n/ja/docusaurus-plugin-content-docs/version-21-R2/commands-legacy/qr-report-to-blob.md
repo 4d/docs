@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *area* : Integer ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | エリア参照 |
 | Blob | Blob | &#8592; | クイックレポートを納めるBLOB |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -5,14 +5,16 @@ slug: /commands/wa-forward-url-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Forward URL available.Syntax-->**WA Forward URL available** ( * ; *object* : Text ) : Boolean<br/>**WA Forward URL available** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
+<!--REF #_command_.WA Forward URL available.Syntax-->**WA Forward URL available** ( * ; *object* : Text ) : Boolean<br/>**WA Forward URL available** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.WA Forward URL available.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | Function result | Boolean | &#8592; | True if there is a following URL in the sequence of URLs opened;otherwise, False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

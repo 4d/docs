@@ -12,7 +12,7 @@ title: VP IMPORT FROM BLOB
 | Paramètres | Type                    |    | Description                             |                  |
 | ---------- | ----------------------- | -- | --------------------------------------- | ---------------- |
 | vpAreaName | Text                    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| vpBlob     | 4D.Blob | -> | Blob contenant un document 4D View Pro  |                  |
+| vpBlob     | 4D.Blob | -> | \|                                      |                  |
 | paramObj   | Object                  | -> | Options d'import                        | <!-- END REF --> |
 
 <details><summary>Historique</summary>

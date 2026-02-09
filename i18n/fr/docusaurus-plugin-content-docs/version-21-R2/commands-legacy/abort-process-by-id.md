@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *uniqueID* : Integer )<!-- END REF-->
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | uniqueID | Integer | &#8594; | ID unique du process |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Syntax-->**REJECT NEW REMOTE CONNECTIONS** ( *statutRejet* )<!-- END REF-->
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | statutRejet | Boolean | &#8594;  | Vrai si rejet des nouvelles connexions, sinon Faux. |
-
+</div>
 <!-- END REF-->
 
 ## Description 

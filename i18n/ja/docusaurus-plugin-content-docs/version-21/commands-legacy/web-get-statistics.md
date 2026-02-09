@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* ; *hits* ; *usage* )<!-- END REF-->
 <!--REF #_command_.WEB GET STATISTICS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pages | Text array | &#8592; | 最も閲覧されるページの名前 |
 | hits | Integer array | &#8592; | 各ページのヒット数 |
 | usage | Integer | &#8592; | キャッシュの使用率 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

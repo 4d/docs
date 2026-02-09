@@ -8,10 +8,14 @@ title: VP SET WORKBOOK OPTIONS
 **VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
-|optionObj |Object|->|Object containing the workbook options to be set|<!-- END REF -->
+|optionObj |Object|->|Object containing the workbook options to be set|
+</div>
+<!-- END REF -->
 
 ## Description
 

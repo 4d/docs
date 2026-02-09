@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Syntax-->**Position** ( àChercher ; *laChaîne* {; *début* {; *longTrouvée*}}{; *} ) -> Résultat <br/>
 **Position** ( àChercher ; *laChaîne* ; *début* ; *longTrouvée* ; *options* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.Position.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | àChercher | Text | &#8594;  | Chaîne à rechercher |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | longTrouvée | Integer | &#8594;  | Longueur de la chaîne trouvée |
 | options | Integer | &#8594;  | Critère(s) de recherche |
 | Résultat | Integer | &#8592; | Position de la première occurrence de àChercher |
-
+</div>
 <!-- END REF-->
 
 ## Description 

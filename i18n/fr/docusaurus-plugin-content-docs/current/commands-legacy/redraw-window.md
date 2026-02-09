@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.REDRAW WINDOW.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

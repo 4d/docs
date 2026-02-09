@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( * ; *objet* : Text ; *largeur* : Integer {; *largeurMini* : Integer {; *largeurMaxi* : Integer}} )<br/>**LISTBOX SET COLUMN WIDTH** ( *objet* : Field, Variable ; *largeur* : Integer {; *largeurMini* : Integer {; *largeurMaxi* : Integer}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | largeur | Integer | &#8594; | Largeur de colonne (en pixels) |
 | largeurMini | Integer | &#8594; | Largeur minimale de colonne (en pixels) |
 | largeurMaxi | Integer | &#8594; | Largeur maximale de colonne (en pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

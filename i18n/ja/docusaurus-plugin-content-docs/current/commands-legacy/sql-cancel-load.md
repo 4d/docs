@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL CANCEL LOAD.Syntax-->**SQL CANCEL LOAD**<!-- END REF-->
 <!--REF #_command_.SQL CANCEL LOAD.Params-->
+<div class="no-index">
+
 | このコマンドは引数を必要としません |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

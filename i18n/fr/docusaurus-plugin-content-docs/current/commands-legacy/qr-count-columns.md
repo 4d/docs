@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *zone* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Count columns.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594; | Référence de la zone |
 | Résultat | Integer | &#8592; | Nombre de colonnes dans la zone |
-
+</div>
 <!-- END REF-->
 
 ## Description 

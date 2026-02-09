@@ -5,8 +5,10 @@ slug: /commands/listbox-collapse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *object* : Field, Variable {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *object* : Variable, Field {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | selector | Integer | &#8594; | 折りたたむリストボックスのパーツ |
 | line | Integer | &#8594; | 折り畳むブレーク行の番号、または折り畳むリストボックスレベルの番号 |
 | column | Integer | &#8594; | 折り畳むブレーク列の番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

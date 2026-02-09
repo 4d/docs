@@ -5,14 +5,16 @@ slug: /commands/object-get-maximum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET MAXIMUM VALUE.Syntax-->**OBJECT GET MAXIMUM VALUE** ( * ; *object* : Text ; *maxValue* : Date, Time, Real )<br/>**OBJECT GET MAXIMUM VALUE** ( *object* : Field, Variable ; *maxValue* : Date, Time, Real )<!-- END REF-->
+<!--REF #_command_.OBJECT GET MAXIMUM VALUE.Syntax-->**OBJECT GET MAXIMUM VALUE** ( * ; *object* : Text ; *maxValue* : Date, Time, Real )<br/>**OBJECT GET MAXIMUM VALUE** ( *object* : Variable, Field ; *maxValue* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
 | maxValue | Date, Time, Real | &#8592; | Current maximum value for object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

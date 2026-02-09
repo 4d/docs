@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *toDecrypt* ; *sendPubKey* {; *recipPrivKey*} )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | toDecrypt | Blob | &#8596;  | Data to decrypt |
 | ||| Decrypted data |
 | sendPubKey | Blob | &#8594;  | Sender’s public key |
 | recipPrivKey | Blob | &#8594;  | Recipient’s private key |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Startup database method.Syntax-->**On Startupデータベースメソッド**<!-- END REF-->
 <!--REF #_command_.On Startup database method.Params-->
+<div class="no-index">
+
 | このコマンドは引数を必要としません |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## 

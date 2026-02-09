@@ -9,10 +9,15 @@ title: VP Get row attributes
 
 <!-- REF #_method_.VP Get row attributes.Params -->
 
-| Parámetros | Tipo       |                             | Descripción                          |                  |
-| ---------- | ---------- | --------------------------- | ------------------------------------ | ---------------- |
-| rangeObj   | Object     | ->                          | Objeto rango                         |                  |
-| Resultado  | Collection | <- | Colección de propiedades de la línea | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo       |                             | Descripción                          |
+| ---------- | ---------- | --------------------------- | ------------------------------------ |
+| rangeObj   | Object     | ->                          | Objeto rango                         |
+| Resultado  | Collection | <- | Colección de propiedades de la línea |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

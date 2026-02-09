@@ -6,11 +6,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 <!--REF #_command_.SELECT LOG FILE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | logFile | Text | &#8594;  | Name of the log file  |
 | \* | Operator | &#8594;  | Close the current log file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

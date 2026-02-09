@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Menu selected.Syntax-->**Menu selected** ( *subMenu* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | subMenu | Text | &#8592; | Reference of menu containing item selected |
 | Function result | Integer | &#8592; | Menu command selected Menu number in high word Menu item number in low word |
-
+</div>
 <!-- END REF-->
 
 ## Description 

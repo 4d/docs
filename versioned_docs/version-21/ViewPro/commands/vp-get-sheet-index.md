@@ -7,12 +7,15 @@ title: VP Get sheet index
 **VP Get sheet index** ( *vpAreaName* : Text ; *name* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet index.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |name| Text|->|Sheet name|
-|Function result|Integer|<-|Sheet index|<!-- END REF -->
+|Function result|Integer|<-|Sheet index|
+</div>
+<!-- END REF -->
 
 ## Description
 

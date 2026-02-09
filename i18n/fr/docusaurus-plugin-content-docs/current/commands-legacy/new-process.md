@@ -16,6 +16,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Syntax-->**New process** ( *méthode* : Text ; *pile* : Integer {; *nom* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | méthode | Text | &#8594; | Méthode à exécuter dans le process |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | param | Expression | &#8594; | Paramètre(s) de la méthode |
 | * | Opérateur | &#8594; | Process unique |
 | Résultat | Integer | &#8592; | Numéro du process nouvellement créé ou du process déjà en cours d'exécution |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -78,7 +80,7 @@ Examinons la méthode projet suivante :
  Until(OK=0)
 ```
 
-Si vous associez cette méthode projet à une commande de menu créé dans l'éditeur de barres de menus et que vous lui affectez la propriété **Démarrer un process**, 4D va automatiquement créer un nouveau process lors de l'exécution de la méthode. L'instruction [SET MENU BAR](set-menu-bar.md)(1) associe cette barre de menus au nouveau process. En l'absence de toute fenêtre (que vous pourriez avoir ouverte avec [Open window](open-window.md)), l'appel à [ADD RECORD](add-record.md) en créera une automatiquement.
+Si vous associez cette méthode projet à une commande de menu créé dans l'éditeur de barres de menus et que vous lui affectez la propriété **Démarrer un process**, 4D va automatiquement créer un nouveau process lors de l'exécution de la méthode. L'instruction [SET MENU BAR](set-menu-bar.md)(1) associe cette barre de menus au nouveau process. En l'absence de toute fenêtre (que vous pourriez avoir ouverte avec [Open window](../commands/open-window.md)), l'appel à [ADD RECORD](add-record.md) en créera une automatiquement.
 
 Si maintenant vous voulez pouvoir démarrer le process Ajout Clients lorsque vous cliquez sur un bouton situé dans un tableau de contrôle personnalisé, vous pouvez écrire : 
 

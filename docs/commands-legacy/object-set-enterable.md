@@ -5,14 +5,16 @@ slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *object* : Text ; *enterable* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *object* : Field, Variable ; *enterable* : Boolean, Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *object* : Text ; *enterable* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *object* : Variable, Field, Table ; *enterable* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or Table or Field or Variable (if * is omitted) |
+| object | Text, Variable, Field, Table | &#8594;  | Object Name (if * is specified), or<br/>Variable or Field or Table (if * is omitted) |
 | enterable | Boolean, Integer | &#8594;  | Boolean: True=enterable, False=non-enterableLongint: 0=not enterable, 1=enterable, 2=not enterable not focusable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *targetObj* ; *startRange* ; *endRange* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Text range.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | startRange | Integer | &#8594;  | Starting offset of range in the area |
 | endRange | Integer | &#8594;  | Ending offset of range in the area |
 | Function result | Object | &#8592; | Range object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

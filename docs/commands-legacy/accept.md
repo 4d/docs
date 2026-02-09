@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCEPT.Syntax-->**ACCEPT**<!-- END REF-->
 <!--REF #_command_.ACCEPT.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -24,7 +26,7 @@ The **ACCEPT** command is used in form or object methods (or in subroutines) to:
 
 **ACCEPT** is commonly executed as a result of choosing a menu command. **ACCEPT** is also commonly used in the object method of a “no action” button.
 
-It is also often used in the optional close box method for the [Open window](open-window.md) command. If there is a Control-menu box on a window, **ACCEPT** or [CANCEL](cancel.md) can be called, in the method to be executed, when the Control-menu box is double-clicked or the Close menu command is chosen.
+It is also often used in the optional close box method for the [Open window](../commands/open-window.md) command. If there is a Control-menu box on a window, **ACCEPT** or [CANCEL](cancel.md) can be called, in the method to be executed, when the Control-menu box is double-clicked or the Close menu command is chosen.
 
 **ACCEPT** cannot be queued up. In response to an event, executing two **ACCEPT** commands in a row from within a method would have the same effect as executing one.
 

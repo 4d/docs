@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *folder* : Text {; *deleteOption* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | folder | Text | &#8594; | 削除されるフォルダーの名称またはフルパス |
 | deleteOption | Integer | &#8594; | フォルダー削除オプション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

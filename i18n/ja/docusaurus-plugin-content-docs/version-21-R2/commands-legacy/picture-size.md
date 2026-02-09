@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Picture size.Syntax-->**Picture size** ( *picture* : Picture ) : Integer<!-- END REF-->
 <!--REF #_command_.Picture size.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594; | サイズを知りたいピクチャ |
 | 戻り値 | Integer | &#8592; | ピクチャのサイズ (バイト) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get footer.Syntax-->**WP Get footer** ( *objRango* : Object ) | (*wpDoc* : Object ; *indiceSeccion* : Integer {; *tipoSubSeccion* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get footer.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | indiceSeccion | Integer | &#8594;  | Índice de sección |
 | tipoSubSeccion | Integer | &#8594;  | Subtipo de la sección (wk primera página, wk página de la izquierda, o wk página de la derecha) |
 | Resultado | Object | &#8592; | Pie 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Method called on event.Syntax-->**Method called on event**  : Text<!-- END REF-->
 <!--REF #_command_.Method called on event.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Text | &#8592; | Nom de la méthode d’appel sur evenement |
-
+</div>
 <!-- END REF-->
 
 ## Description 

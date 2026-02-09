@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Keystroke.Syntax-->**Keystroke**  : Text<!-- END REF-->
 <!--REF #_command_.Keystroke.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | ユーザが入力した文字 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

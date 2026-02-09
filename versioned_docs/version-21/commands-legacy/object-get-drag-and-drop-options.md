@@ -7,15 +7,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Syntax-->**OBJECT GET DRAG AND DROP OPTIONS** ( {* ;} *object* ; *draggable* ; *automaticDrag* ; *droppable* ; *automaticDrop* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | draggable | Boolean | &#8592; | Draggable = True; otherwise, False |
 | automaticDrag | Boolean | &#8592; | Automatic Drag = True; otherwise, False |
 | droppable | Boolean | &#8592; | Droppable = True; otherwise, False |
 | automaticDrop | Boolean | &#8592; | Automatic Drop = True; otherwise, False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

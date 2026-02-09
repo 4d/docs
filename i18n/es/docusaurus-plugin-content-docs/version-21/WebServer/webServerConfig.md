@@ -379,7 +379,7 @@ Este parámetro permite seleccionar el formato de este archivo. Valores disponib
 | `WEB SET OPTION`              | `Web max concurrent processes`                                                                                                   |             |
 | Caja de diálogo de parámetros | Página [Opciones (I)/Máximo de procesos web simultáneos](../settings/web.md#maximum-concurrent-web-processes) |             |
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
+Límite superior de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor cuando se utilizan **sin sesiones** o **sesiones heredadas** (las **sesiones escalables** admiten un [número ilimitado](sessions.md) de procesos apropiativos). Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
 
 Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
@@ -605,7 +605,7 @@ Estado de validación de la dirección IP para las cookies de sesión. Por razon
 
 ### Usuario web genérico
 
-This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". En este caso, cada navegador autorizado a conectarse a la base de datos obtiene las autorizaciones y restricciones de acceso asociadas a este usuario.
+Esta opción permite designar a un usuario, previamente definido en la [tabla de contraseñas 4D](../Users/handling_users_groups.md), como "Usuario Web Genérico". En este caso, cada navegador autorizado a conectarse a la base de datos obtiene las autorizaciones y restricciones de acceso asociadas a este usuario.
 
 #### Enviar directamente los caracteres extendidos
 
@@ -623,7 +623,7 @@ En algunos casos, se pueden invocar otras funciones internas optimizadas. Las co
 
 Dos opciones le permiten definir cómo funcionan las conexiones persistentes:
 
-- **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
+- **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limitar el número de peticiones por conexión permite evitar la saturación del servidor, debido a un gran número de peticiones entrantes (una técnica utilizada por los hackers).<p>
   El valor por defecto (100) puede ser aumentado o disminuido en función de los recursos de la máquina que aloja el servidor 4D web.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Una vez finalizado este periodo, el servidor cierra la conexión.<p>

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get headers height.Syntax-->**LISTBOX Get headers height** ( * ; *objeto* : Text {; *unidad* : Integer} ) : Integer<br/>**LISTBOX Get headers height** ( *objeto* : Field, Variable {; *unidad* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get headers height.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | unidad | Integer | &#8594; | Unidad de valor de altura: 0 o si se omite = píxeles, 1 = líneas |
 | resultado | Integer | &#8592; | Alto de la línea |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

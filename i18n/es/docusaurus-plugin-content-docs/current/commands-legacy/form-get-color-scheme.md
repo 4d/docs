@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Get color scheme.Syntax-->**FORM Get color scheme**  : Text<!-- END REF-->
 <!--REF #_command_.FORM Get color scheme.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Esquema de colores del formulario actual: "claro" u "oscuro" |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

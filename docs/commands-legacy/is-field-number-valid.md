@@ -5,14 +5,17 @@ slug: /commands/is-field-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *tablePtr* : Integer, Pointer ; *fieldNum* : Integer ) : Boolean<br/>**Is field number valid** ( *tableNum* : Integer, Pointer ; *fieldNum* : Integer ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *tablePtr* : Pointer ; *fieldNum* : Integer ) : Boolean<br/>**Is field number valid** ( *tableNum* : Integer ; *fieldNum* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field number valid.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Integer, Pointer | &#8594;  | Table number or Pointer to table |
+| tableNum | Integer | &#8594;  | Table number |
+| tablePtr | Pointer | &#8594;  | Pointer to table |
 | fieldNum | Integer | &#8594;  | Field number |
 | Function result | Boolean | &#8592; | True = field exists in the table False = field does not exist in the table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

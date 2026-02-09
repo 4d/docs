@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*aTable* : Table ;} *set* : Text ; *document* : Text )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | セットの属しているテーブル、または 省略時、デフォルトテーブル |
 | set | Text | &#8594; | 作成するセットの名前 |
 | document | Text | &#8594; | セットを保存したドキュメントの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

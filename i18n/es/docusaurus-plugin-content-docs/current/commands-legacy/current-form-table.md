@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form table.Syntax-->**Current form table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current form table.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Pointer | &#8592; | Puntero hacia la tabla del formulario de salida actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

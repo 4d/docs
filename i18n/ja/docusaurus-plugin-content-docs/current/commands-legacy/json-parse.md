@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* : Text {; *type* : Integer}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | jsonString | Text | &#8594; | 解析したいJSON文字列 |
 | type | Integer | &#8594; | 値を変換したい型 |
 | * | 演算子 | &#8594; | 返された値がオブジェクトの場合、各プロパティの行の位置とオフセットを追加 |
 | 戻り値 | any, Object | &#8592; | JSON文字列から取り出した値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 
@@ -184,7 +186,7 @@ beta[1].golf:{line:10,offset:12}}}
 *Field and Variable Types*  
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
-[JSON Validate](json-validate.md)  
+[JSON Validate](../commands/json-validate.md)  
 
 ## プロパティ
 

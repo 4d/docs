@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Get body part count.Syntax-->**WEB Get body part count** : Integer<!-- END REF-->
 <!--REF #_command_.WEB Get body part count.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Números de partes no corpo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

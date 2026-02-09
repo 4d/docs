@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *accessURL* : Text ; *soapAction* : Text ; *methodName* : Text ; *nameSpace* : Text {; *complexType* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | accessURL | Text | &#8594; | WebサービスへのアクセスURL |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nameSpace | Text | &#8594; | 名前空間 |
 | complexType | Integer | &#8594; | 複合タイプの設定 (省略された場合、シンプルタイプ) |
 | * | 演算子 | &#8594; | 接続を終了しない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

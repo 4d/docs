@@ -21,7 +21,7 @@ Pueden crearse utilizando:
 - las [acciones estándar](./standard-actions.md) `listStyleType` o `listStyleImage`,
 - o [por programación](../commands-legacy/4d-write-pro-attributes.md#lists) utilizando [WP SET ATTRIBUTE](./commands/wp-set-attributes).
 
-When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. El valor del margen insertado corresponde al desplazamiento de la pestaña por defecto (`wk tab default`).
+Cuando se crea una lista utilizando una acción estándar (`listStyleType` o `listStyleImage`) o la barra de herramientas/barra lateral, 4D Write Pro inserta automáticamente un margen antes del texto para que el marcador se sitúe en él. El valor del margen insertado corresponde al desplazamiento de la pestaña por defecto (`wk tab default`).
 
 ![](../../assets/en/WritePro/margin-bullets.png)
 

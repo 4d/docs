@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On System Event database method.Syntax-->On System Event($event : Integer)<!-- END REF-->
 <!--REF #_command_.On System Event database method.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | $event | Integer | &#8592; | Event code |
-
+</div>
 <!-- END REF-->
 
 ## Description 

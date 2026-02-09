@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE PROCESS.Syntax-->**HIDE PROCESS** ( *process* )<!-- END REF-->
 <!--REF #_command_.HIDE PROCESS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Numéro du process à cacher |
-
+</div>
 <!-- END REF-->
 
 ## Description 

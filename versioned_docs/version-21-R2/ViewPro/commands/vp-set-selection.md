@@ -7,10 +7,13 @@ title: VP SET SELECTION
 **VP SET SELECTION** ( *rangeObj* : Object  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj |Object|->|Range object of cells|<!-- END REF -->
+|rangeObj |Object|->|Range object of cells|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *arrNames* : Text array {; *filter* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET NAMES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | arrNames | Text array | &#8592; | プロジェクトメソッド名配列 |
 | filter | Text | &#8594; | 名前フィルター |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

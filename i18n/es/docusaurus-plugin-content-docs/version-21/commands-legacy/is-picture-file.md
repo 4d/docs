@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *rutaArchivo* {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaArchivo | Text | &#8594;  | Ruta de acceso del archivo |
 | * | Operador | &#8594;  | Validar los datos |
 | Resultado | Boolean | &#8592; | True = rutaArchivo designa un archivo imagen, de lo contrario False |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *folderPath* {; *silentErrors*} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderPath | Text | &#8594;  | Pathname of folder (package under macOS) containing updated application |
 | silentErrors | Boolean | &#8594;  | False (default) = report errors visibly, <br/>True = do not report them |
-
+</div>
 <!-- END REF-->
 
 ## Description 

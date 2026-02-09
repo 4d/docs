@@ -5,14 +5,16 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* : Field ; *number* : Integer {; > or <} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* : Field ; *number* : Integer {; *>_or_<* : Comparator} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Indexed field on which to scan index |
 | number | Integer | &#8594;  | Number of records to return |
-| > or < | Operator | &#8594;  | > from beginning of index < from end of index |
-
+| >_or_< | Comparator | &#8594;  | > from beginning of index < from end of index |
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *ação* {; *alvo*} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | ação | Text | &#8594;  | Nome ação padrão ou padrão incluindo parâmetro se exigido |
 | alvo | Integer | &#8594;  | Define onde executar a ação: formulário atual (padrão) ou formulário principal |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

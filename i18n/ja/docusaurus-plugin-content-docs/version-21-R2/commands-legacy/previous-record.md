@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | セレクションの前レコードをカレントレコードにする テーブル、省略時はデフォルトテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

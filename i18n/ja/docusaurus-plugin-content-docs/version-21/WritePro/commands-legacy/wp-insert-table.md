@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *targetObj* ; *mode* {; *rangeUpdate* {; *nbCols* {; *nbRows*}}} ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジオブジェクト |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nbCols | Integer | &#8594;  | テーブル内に設定するカラム数 |
 | nbRows | Integer | &#8594;  | テーブル内に設定する行数 |
 | 戻り値 | Object | &#8592; | テーブル参照オブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -5,16 +5,18 @@ slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *object* : Text ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *object* : Field, Variable ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *object* : Text ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *object* : Variable, Field ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified = object is an object name (String) If omitted = object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Field or variable (if * is omitted) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | bestWidth | Integer | &#8592; | Optimum object width |
 | bestHeight | Integer | &#8592; | Optimum object height |
 | maxWidth | Integer | &#8594;  | Maximum object width |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table.Syntax-->**Table** ( numTable | unPtr ) : any<!-- END REF-->
 <!--REF #_command_.Table.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable &#124; unPtr | Entier long, Pointeur | &#8594;  | Numéro de table ou Pointeur de table ou Pointeur de champ |
 | Résultat | Integer, Pointer | &#8592; | Pointeur de table si un Numéro de table est passé, Numéro de table si un Pointeur de table est passé, Numéro de table si un Pointeur de champ est passé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

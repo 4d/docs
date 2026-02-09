@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graf* : Picture ; *xmin* : Integer, Date, Time ; *xmax* : Integer, Date, Time ; *ymin* : Integer ; *ymax* : Integer ; *xprop* : Boolean ; *xgrid* : Boolean ; *ygrid* : Boolean ; *titulo* : Text {; *...titulo* : Text} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | graf | Picture | &#8594; | Área del gráfico o variable imagen |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | xgrid | Boolean | &#8594; | TRUE para rejilla del eje x; FALSE para no rejilla en el eje x (sólo si xprop es TRUE) |
 | ygrid | Boolean | &#8594; | TRUE para rejilla del eje y; FALSE para no rejilla el eje y |
 | titulo | Text | &#8594; | Título(s) para las leyenda(s) del gráfico |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Web Legacy Close Session database method.Syntax-->**Método base On Web Legacy Close Session**<!-- END REF-->
 <!--REF #_command_.On Web Legacy Close Session database method.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Nota de compatibilidad 

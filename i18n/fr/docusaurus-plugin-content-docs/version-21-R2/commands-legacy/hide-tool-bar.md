@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE TOOL BAR.Syntax-->**HIDE TOOL BAR**<!-- END REF-->
 <!--REF #_command_.HIDE TOOL BAR.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

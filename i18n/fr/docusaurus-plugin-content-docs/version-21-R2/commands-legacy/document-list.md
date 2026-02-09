@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *cheminAccès* : Text ; *documents* : Text array {; *options* : Integer} )<!-- END REF-->
 <!--REF #_command_.DOCUMENT LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminAccès | Text | &#8594; | Chemin d'accès de volume ou de dossier |
 | documents | Text array | &#8592; | Nom des documents situés à cet endroit |
 | options | Integer | &#8594; | Options de construction de la liste |
-
+</div>
 <!-- END REF-->
 
 ## Description 

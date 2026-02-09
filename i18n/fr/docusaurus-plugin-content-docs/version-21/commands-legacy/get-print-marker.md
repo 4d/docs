@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *numTaquet* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get print marker.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTaquet | Integer | &#8594;  | Numéro de taquet |
 | Résultat | Integer | &#8592; | Position du taquet |
-
+</div>
 <!-- END REF-->
 
 ## Description 

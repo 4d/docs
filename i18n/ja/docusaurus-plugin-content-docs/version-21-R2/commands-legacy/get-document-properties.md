@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; created on ; created at ; modified on ; modified at )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Text | &#8594; | ドキュメントの名前 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | created at | 時間 | &#8592; | 作成時間 |
 | modified on | 日付 | &#8592; | 更新日 |
 | modified at | 時間 | &#8592; | 更新時間 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *esquerda* ; *superior* ; *direita* ; *inferior* {; *janela*}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | esquerda | Integer | &#8594;  | Coordenada global esquerda da área de conteúdo da janela |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | inferior | Integer | &#8594;  | Coordenada global inferior da área de conteúdo da janela |
 | janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 | * | Operador | &#8594;  | Se omitido (padrão) = muda janela para o fundo<br/>Se passado = não muda o nível da janela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

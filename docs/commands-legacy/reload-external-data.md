@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *aField* : Text, Blob, Picture, Object )<!-- END REF-->
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Text, Blob, Picture, Object | &#8594;  | Field for which to set the storage location |
-
+</div>
 <!-- END REF-->
 
 ## Description 

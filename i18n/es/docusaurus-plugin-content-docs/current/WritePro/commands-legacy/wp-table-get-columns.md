@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get columns.Syntax-->**WP Table get columns**  ( *objTarget* : Object ) | ( *refTabla* : Object ; *colIni* : Integer {; *numCol* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table get columns.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | colIni | Integer | &#8594;  | Posición de la primera columna |
 | numCol | Integer | &#8594;  | Número de columnas a obtener |
 | Resultado | Object | &#8592; | Nuevo rango de tabla que contiene columnas seleccionadas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

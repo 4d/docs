@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* : Integer ; *yCoord* : Integer ; *from* : Integer ; *to* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | xCoord | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
 | yCoord | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
 | from | Integer | &#8594; | 変換前の座標系 |
 | to | Integer | &#8594; | 変換後の座標系 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 
@@ -33,7 +35,7 @@ displayed_sidebar: docs
 
 このコマンドがサブフォームまたはサブフォームのオブジェクトから呼び出され、セレクターのどれか一つがXY Current formであった場合、座標系はサブフォーム自身に対して相対的であり、親フォームに対して相対的ではありません。
 
-フォームウィンドウの位置を変換、または位置へ変換する場合(例えば[GET WINDOW RECT](get-window-rect.md)の結果を変換する場合、または[Open form window](open-form-window.md)に渡された値へ変換する場合)、この座標系はWindowsマシンのウィンドウコマンドで使用されているものであるため、XY Main windowを使用する必要があります。これはOS Xにおいてもこの目的で使用する事ができ、その場合はXY Screenと同等になります。
+フォームウィンドウの位置を変換、または位置へ変換する場合(例えば[GET WINDOW RECT](get-window-rect.md)の結果を変換する場合、または[Open form window](../commands/open-form-window.md)に渡された値へ変換する場合)、この座標系はWindowsマシンのウィンドウコマンドで使用されているものであるため、XY Main windowを使用する必要があります。これはOS Xにおいてもこの目的で使用する事ができ、その場合はXY Screenと同等になります。
 
 *from* 引数がXY Current formであり、点がリストフォームのボディセクション内にある場合、コマンドの実行コンテキストによって結果が変化します:
 

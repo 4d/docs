@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *sessionID* : Text )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | sessionID | Text | &#8594; | セッションUUID |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

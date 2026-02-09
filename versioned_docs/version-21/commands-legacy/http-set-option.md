@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP SET OPTION.Syntax-->**HTTP SET OPTION** ( *option* ; *value* )<!-- END REF-->
 <!--REF #_command_.HTTP SET OPTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | option | Integer | &#8594;  | Code of option to set |
 | value | Integer | &#8594;  | Value of option |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibility

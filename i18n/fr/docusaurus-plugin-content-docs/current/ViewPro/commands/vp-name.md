@@ -9,12 +9,17 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Params -->
 
-| Paramètres | Type    |                             | Description                                                            |                  |
-| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                |                  |
-| rangeName  | Text    | ->                          | Nom de plage existante                                                 |                  |
-| sheet      | Integer | ->                          | Emplacement de la plage (si omis, feuille courante) |                  |
-| Résultat   | Object  | <- | Plage nommée                                                           | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                                                            |
+| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                |
+| rangeName  | Text    | ->                          | Nom de plage existante                                                 |
+| sheet      | Integer | ->                          | Emplacement de la plage (si omis, feuille courante) |
+| Résultat   | Object  | <- | Plage nommée                                                           |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

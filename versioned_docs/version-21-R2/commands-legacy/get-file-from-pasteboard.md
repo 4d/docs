@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | xIndex | Integer | &#8594;  | Xth file included in drag action |
 | Function result | Text | &#8592; | Pathname of file extracted from pasteboard |
-
+</div>
 <!-- END REF-->
 
 ## Description 

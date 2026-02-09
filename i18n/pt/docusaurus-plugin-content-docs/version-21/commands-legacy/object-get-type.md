@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
 | object | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | Resultado | Integer | &#8592; | Tipo de objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

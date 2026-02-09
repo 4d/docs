@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* ; *colNum* ; *rowNum* ; *property* ) : any<!-- END REF-->
 <!--REF #_command_.QR Get text property.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | エリア参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | rowNum | Integer | &#8594;  | 行番号 |
 | property | Integer | &#8594;  | プロパティ番号 |
 | 戻り値 | Integer, Text | &#8592; | 選択したプロパティの値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

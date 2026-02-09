@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *lista* : Integer, Text ; refElem | * ; *textElem* : Text ; *nuevaRef* : Integer {; *sublista* : Integer ; *desplegada* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | nuevaRef | Integer | &#8594; | Nuevo número de referencia del elemento |
 | sublista | Integer | &#8594; | Nueva sublista asociada al elemento, o 0 = ninguna sublista (separar actual, si la hay), o -1 = ningún cambio |
 | desplegada | Boolean | &#8594; | Indica si la sublista debe ser desplegada o contraída |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *aField* ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Text, Blob, Picture | &#8594;  | Field whose storage location you want to get |
 | Function result | Text | &#8592; | Full pathname of external storage file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

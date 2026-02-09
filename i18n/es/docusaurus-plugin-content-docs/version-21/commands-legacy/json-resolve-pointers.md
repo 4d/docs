@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *objeto* {; *opciones*} ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Resolve pointers.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objeto | Object | &#8594;  | Objeto que contiene punteros JSON para resolver |
 | &#8592; | Objeto con punteros JSON resueltos (sólo si resultado es un objeto) |
 | opciones | Object | &#8594;  | Opciones para la resolución de punteros |
 | Resultado | Object | &#8592; | Objeto que contiene el resultado del proceso |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

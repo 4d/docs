@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( {* ;} *objeto* ; *fila* ; *coluna* {; *açao*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | fila | Integer | &#8594;  | Número de quebra de fila |
 | coluna | Integer | &#8594;  | Número de quebra de coluna |
 | açao | Integer | &#8594;  | Ação de seleção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

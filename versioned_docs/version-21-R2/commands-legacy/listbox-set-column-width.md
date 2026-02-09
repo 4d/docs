@@ -5,16 +5,18 @@ slug: /commands/listbox-set-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( * ; *object* : Text ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<br/>**LISTBOX SET COLUMN WIDTH** ( *object* : Field, Variable ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( * ; *object* : Text ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<br/>**LISTBOX SET COLUMN WIDTH** ( *object* : Variable ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | width | Integer | &#8594;  | Column width (in pixels) |
 | minWidth | Integer | &#8594;  | Minimum column width (in pixels) |
 | maxWidth | Integer | &#8594;  | Maximum column width (in pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

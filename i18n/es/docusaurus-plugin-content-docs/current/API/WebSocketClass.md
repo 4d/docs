@@ -74,12 +74,15 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 
 <!-- REF #4D.WebSocket.new().Params -->
 
+<div class="no-index">
+
 | Parámetros                                        | Tipo                         |                             | Descripción                                    |
 | ------------------------------------------------- | ---------------------------- | :-------------------------: | ---------------------------------------------- |
 | url                                               | Text                         |              ->             | URL a la que conectarse                        |
 | [connectionHandler](#connectionhandler-parameter) | Object                       |              ->             | Objeto que declara las retrollamadas WebSocket |
 | Resultado                                         | 4D.WebSocket | <- | Nuevo [objeto WebSocket](#websocket-object)    |
 
+</div>
 <!-- END REF -->
 
 La función `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->crea y devuelve un nuevo [objeto `4D.WebSocket`](#websocket-object) conectado al servidor WebSocket en la dirección especificada en *url*<!-- END REF -->. El objeto `4D.WebSocket` ofrece una API para crear y gestionar una conexión WebSocket a un servidor, así como para enviar y recibir datos hacia y desde el servidor.
@@ -181,10 +184,13 @@ Esta propiedad es de sólo lectura.
 
 <!-- REF #WebSocketClass.send().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo               |     | Descripción      |
 | ---------- | ------------------ | :-: | ---------------- |
 | message    | Text, Blob, Object |  -> | Mensaje a enviar |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -223,11 +229,14 @@ Esta propiedad es de sólo lectura.
 
 <!-- REF #WebSocketClass.terminate().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |     | Descripción                                                |
 | ---------- | ------- | :-: | ---------------------------------------------------------- |
 | code       | Integer |  -> | Código de estado que explica por qué se cierra la conexión |
 | reason     | Text    |  -> | La razón por la que se cierra la conexión                  |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* ; *arrNames* ; *arrValues* ; *arrCount* )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | infoType | Integer | &#8594;  | 取得する情報のセレクター |
 | arrNames | Text array | &#8592; | 情報のタイトル |
 | arrValues | Real array | &#8592; | 情報の値 |
 | arrCount | Real array | &#8592; | 関連するオブジェクトの数 (利用可能な場合) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRACE.Syntax-->**TRACE**<!-- END REF-->
 <!--REF #_command_.TRACE.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

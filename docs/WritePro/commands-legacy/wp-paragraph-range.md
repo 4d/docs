@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Paragraph range.Syntax-->**WP Paragraph range** ( *targetObj* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.WP Paragraph range.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
 | Function result | Object | &#8592; | Range addressing only paragraphs |
-
+</div>
 <!-- END REF-->
 
 ## Description 

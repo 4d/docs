@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( * ; *list* : Text ; *itemRef* : Integer, Operator {; *} )<br/>**DELETE FROM LIST** ( *list* : Integer ; *itemRef* : Integer, Operator {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number, or 0 for the last item added to the list or * for the currently selected list item |
+| itemRef | Integer, Operator | &#8594;  | Item reference number, or 0 for the last item added to the list or * for the currently selected list item |
 | * | Operator |  &#8594;  | If specified, erases sublists (if any) from memory If omitted, sublists (if any) are not erased |
-
+</div>
 <!-- END REF-->
 
 ## Description 

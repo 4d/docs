@@ -7,11 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Drop position.Syntax-->**Drop position** {( *columnNumber* )} : Integer<br/>**Drop position** {( *pictPosY* )} : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| columnNumber &#124; pictPosY | Integer | &#8592; | List box column number (-1 if the drop occurs beyond the last column) or Position of Y coordinate in picture |
+| columnNumber | Integer | &#8592; | List box column number (-1 if the drop occurs beyond the last column) |
+| pictPosY | Integer | &#8592; | Position of Y coordinate in picture |
 | Function result | Integer | &#8592; | • Number (list box) or • Position (hierarchical list) or • Position in string (text/combo box/4D Write Pro area) of destination item or • -1 if drop occurred beyond the last list item • Position of X coordinate in picture |
-
+</div>
 <!-- END REF-->
 
 ## Description 

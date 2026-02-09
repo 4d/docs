@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *documento* ; *codificaçao* ; *versao* ; *autonomo* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Time | &#8594;  | Referência do documento aberto |
 | codificaçao | Text | &#8592; | conjunto de caracteres do documento XML |
 | versao | Text | &#8592; | Versão XML |
 | autonomo | Boolean | &#8592; | True = documento é autônomo; senão False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

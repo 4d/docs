@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *puerto* ; *param* ) <br/>
 **SET CHANNEL** ( *operacion* ; *doc* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | puerto | Integer | &#8594; | Número de puerto serial |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo | Descripción |  |
 | operacion | Integer | &#8594; | Operación a efectuar en el documento |
 | doc | Text | &#8594; | Nombre del documento |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

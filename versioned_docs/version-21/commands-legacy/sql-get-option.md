@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET OPTION.Syntax-->**SQL GET OPTION** ( *option* ; *value* )<!-- END REF-->
 <!--REF #_command_.SQL GET OPTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | option | Integer | &#8594;  | Option number |
 | value | Integer, Text | &#8592; | Option value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -30,14 +30,17 @@ title: WebFormItem
 
 ### .addCSSClass()
 
-<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : string)<!-- END REF -->
+<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : Text)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
+
+<div class="no-index">
 
 | 引数        | 型    |     | 説明                      |
 | --------- | ---- | :-: | ----------------------- |
 | className | Text |  -> | コンポーネントに追加する CSSクラスの名前。 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -50,10 +53,13 @@ title: WebFormItem
 
 <!-- REF #WebFormItemClass.hide().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -82,14 +88,17 @@ exposed Function isHidden()
 
 ### .removeCSSClass()
 
-<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: string)<!-- END REF -->
+<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: Text)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
+
+<div class="no-index">
 
 | 引数        | 型    |     | 説明                       |
 | --------- | ---- | :-: | ------------------------ |
 | className | Text |  -> | コンポーネントから削除する CSSクラスの名前。 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -102,10 +111,13 @@ exposed Function isHidden()
 
 <!-- REF #WebFormItemClass.show().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明

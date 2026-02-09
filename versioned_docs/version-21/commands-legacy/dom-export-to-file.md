@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* ; *filePath* )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | Root XML element reference |
 | filePath | Text | &#8594;  | Full access path of the file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

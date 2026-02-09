@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *numColumna* : Integer ; *objeto* : Field, Variable, Pointer )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | Referencia del área |
 | numColumna | Integer | &#8594; | Número de columna |
 | objeto | Field, Variable, Pointer | &#8594; | Objeto a insertar en la columna |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

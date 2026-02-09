@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* : Field ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field for which the priority of the index(es) has to be retrieved |
 | Function result | Integer | &#8592; | Current priority value for index(es) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Backup Shutdown database method.Syntax-->On Backup Shutdown ($status)<!-- END REF-->
 <!--REF #_command_.On Backup Shutdown database method.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | $status | Integer | &#8592; | 0 = backup executed correctly; other value = error, interrupted by user or code returned by On Backup Startup |
-
+</div>
 <!-- END REF-->
 
 ## 

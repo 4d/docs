@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *userName* ; *password* ) : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Validate digest.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userName | Text | &#8594;  | User name |
 | password | Text | &#8594;  | User password |
 | Function result | Boolean | &#8592; | True=Authentication OK, False=Authentication failed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

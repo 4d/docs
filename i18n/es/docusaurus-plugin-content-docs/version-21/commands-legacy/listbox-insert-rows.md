@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( {* ;} *objeto* ; *posicionL* {; *numLineas*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | posicionL | Integer | &#8594;  | Posición de la fila a insertar |
 | numLineas | Integer | &#8594;  | Número de líneas a insertar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

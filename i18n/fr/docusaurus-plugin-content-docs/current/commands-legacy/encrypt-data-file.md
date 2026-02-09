@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* : Text ; *cheminDonnées* : Text {; *nouvellePhraseSecrète* : Texte, Objet {; *dossierArchive* : Text {; *phraseSecrèteCour* : Texte, Objet {; *nomMéthode* : Text}}}} ) : Text<br/>**Encrypt data file** ( *cheminStructure* : Text ; *cheminDonnées* : Text {; *nouvelleCléDonnées* : Texte, Objet {; *dossierArchive* : Text {; *cléDonnéesCour* : Texte, Objet {; *nomMéthode* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminStructure | Text | &#8594; | Chemin d'accès du fichier de structure |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594; | Phrase secrète courante (texte) ou clé de chiffrement courante (objet) |
 | nomMéthode | Text | &#8594; | Nom de la méthode 4D de rétro-appel |
 | Résultat | Text | &#8592; | Nom de chemin d'accès complet au dossier dans lequel les fichiers originaux ont été stockés |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *aPointer* : Pointer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a variable.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aPointer | Pointer | &#8594;  | Pointer to be tested |
 | Function result | Boolean | &#8592; | TRUE = Pointer points to a variable FALSE = Pointer does not point to a variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

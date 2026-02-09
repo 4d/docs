@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET DESTINATION.Syntax-->**QR GET DESTINATION** ( *area* : Integer ; *tipo* : Integer {; *especificos* : Text, Variable} )<!-- END REF-->
 <!--REF #_command_.QR GET DESTINATION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | Referencia del área |
 | tipo | Integer | &#8592; | Tipo de informe |
 | especificos | Text, Variable | &#8592; | Específicos asociados al tipo de salida |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

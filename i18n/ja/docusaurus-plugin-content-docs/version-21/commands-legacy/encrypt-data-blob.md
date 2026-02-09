@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* ; *keyObject* ; *salt* ; *encryptedBLOB* ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* ; *passPhrase* ; *salt* ; *encryptedBLOB* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | blobToEncrypt | Blob | &#8594;  | 暗号化したいBLOB |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | salt | Integer | &#8594;  | アルゴリズムのための追加のsalt |
 | encryptedBlob | Blob | &#8592; | 暗号化されたBLOB |
 | 戻り値 | Boolean | &#8592; | 暗号化が正常に実行された場合にはTrue、それ以外の場合にはFalse |
-
+</div>
 <!-- END REF-->
 
 ## 詳細 

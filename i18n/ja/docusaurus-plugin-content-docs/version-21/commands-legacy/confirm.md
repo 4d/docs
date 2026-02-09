@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* {; OK button title {; cancel button title}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | message | Text | &#8594;  | 確認ダイアログボックスに表示するメッセージ |
 | OK button title | 文字 | &#8594;  | OKボタンのタイトル |
 | cancel button title | 文字 | &#8594;  | キャンセルボタンのタイトル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

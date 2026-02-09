@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( {* ;} *object* ; *newText* {; *startSel* {; *endSel*}} )<!-- END REF-->
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | newText | Text | &#8594;  | Text to insert |
 | startSel | Integer | &#8594;  | Start of selection |
 | endSel | Integer | &#8594;  | End of selection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

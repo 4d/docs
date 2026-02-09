@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *laTable* : Table ; *priorité* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table dont vous souhaitez ajuster la priorité des données "blobs" |
 | priorité | Integer | &#8594; | Priorité des données "blobs" de la table dans le cache |
-
+</div>
 <!-- END REF-->
 
 ## Mode expert 

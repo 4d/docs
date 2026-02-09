@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Monitored activity.Syntax-->**Monitored activity**  : Collection<!-- END REF-->
 <!--REF #_command_.Monitored activity.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Collection | &#8592; | Colección de actividades monitoreadas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

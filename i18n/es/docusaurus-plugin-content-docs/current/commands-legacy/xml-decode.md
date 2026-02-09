@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML DECODE.Syntax-->**XML DECODE** ( valor XML ; *objeto4D* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.XML DECODE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | valor XML | Texto | &#8594; | Valor de tipo texto proveniente de una estructura XML |
 | objeto4D | Field, Variable | &#8592; | Variable o campo 4D que recibe el valor XML convertido |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 
@@ -20,8 +22,8 @@ displayed_sidebar: docs
 
 | **Valor** | **Ejemplos**                                                                         | Conversión en sistema inglés                                                                                                                                                                                        |
 | --------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| numérico  | <Price>8,5</Price><Price>8.5</Price>                                                 | Real: 8.5                                                                                                                                                                                                           |
-| Booleano  | <Double>1</Double> <Double>0</Double> o <Double>true</Double> <Double>false</Double> | Booleano: True/False                                                                                                                                                                                                |
+| numérico  | `<Price>8,5</Price><Price>8.5</Price>`                                                 | Real: 8.5                                                                                                                                                                                                           |
+| Booleano  | `<Double>1</Double> <Double>0</Double>` o `<Double>true</Double> <Double>false</Double>` | Booleano: True/False                                                                                                                                                                                                |
 | BLOB      | Decodificación Base64                                                                |                                                                                                                                                                                                                     |
 | Imágenes  | Decodificación Base64 + comando BLOB to picture                                      |                                                                                                                                                                                                                     |
 | Fechas    | 2009-10-25T01:03:20+01:00                                                            | !10/25/2009! -> Supresión de la parte hora y de la zona horaria                                                                                                                                                     |

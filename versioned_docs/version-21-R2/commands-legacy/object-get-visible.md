@@ -5,14 +5,16 @@ slug: /commands/object-get-visible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get visible.Syntax-->**OBJECT Get visible** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get visible** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get visible.Syntax-->**OBJECT Get visible** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get visible** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get visible.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Boolean | &#8592; | True = object(s) visible; Otherwise, False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

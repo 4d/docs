@@ -6,13 +6,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 <!--REF #_command_.DIALOG.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table owning the form or If omitted: default table or use of project form |
 | form | Text, Object | &#8594;  | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
 | formData | Object | &#8594;  | Data to associate to the form |
 | * | Operator | &#8594;  | Use the same process |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -21,7 +23,7 @@ displayed_sidebar: docs
 
 This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](../commands-legacy/add-record.md) or [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons. 
 
-This command is typically called along with the [Open form window](../commands-legacy/open-form-window.md) to display sophisticated forms, as shown in the following example: 
+This command is typically called along with the [Open form window](open-form-window.md) to display sophisticated forms, as shown in the following example: 
 
 ![](../assets/en/commands/pict3541609.en.png)
 
@@ -168,7 +170,7 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [CALL FORM](../commands-legacy/call-form.md)  
 [CANCEL](../commands-legacy/cancel.md)  
 [Form](form.md)  
-[Open window](../commands-legacy/open-window.md)  
+[Open window](open-window.md)  
 
 ## Properties
 

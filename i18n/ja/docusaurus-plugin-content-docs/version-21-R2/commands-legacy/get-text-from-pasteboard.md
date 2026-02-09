@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get text from pasteboard.Syntax-->**Get text from pasteboard**  : Text<!-- END REF-->
 <!--REF #_command_.Get text from pasteboard.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | ペーストボード中のテキスト (あれば) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

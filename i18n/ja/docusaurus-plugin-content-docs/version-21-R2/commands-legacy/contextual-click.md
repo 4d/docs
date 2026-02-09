@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Contextual click.Syntax-->**Contextual click**  : Boolean<!-- END REF-->
 <!--REF #_command_.Contextual click.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | コンテキストクリックを検知した場合True、 そうでなければFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

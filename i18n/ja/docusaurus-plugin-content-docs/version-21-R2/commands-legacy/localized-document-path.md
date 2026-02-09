@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *relativePath* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized document path.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | relativePath | Text | &#8594; | ローカライズされたバージョンを取得したいドキュメントの相対パス名 |
 | 戻り値 | Text | &#8592; | ローカライズされたドキュメントの絶対パス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

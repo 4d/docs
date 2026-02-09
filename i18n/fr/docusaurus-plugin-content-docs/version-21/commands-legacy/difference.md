@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ensemble1 | Text | &#8594;  | Ensemble initial |
 | ensemble2 | Text | &#8594;  | Ensemble à exclure |
 | résultat | Text | &#8594;  | Ensemble résultant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

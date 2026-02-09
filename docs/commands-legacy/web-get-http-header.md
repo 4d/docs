@@ -5,13 +5,16 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *header* : Text, Text array )<br/>**WEB GET HTTP HEADER** ( *fieldArray* : Text, Text array ; *valueArray* : Text array )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *header* : Text )<br/>**WEB GET HTTP HEADER** ( *fieldArray* : Text array ; *valueArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| header&#124;fieldArray | Text, Text array | &#8592; | Request HTTP header or HTTP header fields |
+| header | Text | &#8592; | Request HTTP header |
+| fieldArray | Text array | &#8592; | HTTP header fields |
 | valueArray | Text array | &#8592; | HTTP header fields content |
-
+</div>
 <!-- END REF-->
 
 ## Description 

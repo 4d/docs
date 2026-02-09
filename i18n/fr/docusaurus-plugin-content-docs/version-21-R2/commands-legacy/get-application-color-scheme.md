@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Retourne le schéma couleur de la base hôte |
 | Résultat | Text | &#8592; | Schéma de couleur de l'application courante |
-
+</div>
 <!-- END REF-->
 
 ## Description 

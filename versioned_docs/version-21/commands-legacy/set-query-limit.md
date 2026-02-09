@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limit* )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | limit | Integer | &#8594;  | Number of records, or 0 for no limit |
-
+</div>
 <!-- END REF-->
 
 ## Description 

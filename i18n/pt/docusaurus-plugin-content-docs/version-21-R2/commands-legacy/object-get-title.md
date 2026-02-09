@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get title** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get title.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | se especificado, objueto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
 | objeto | any | &#8594; | Nome de objeto (se * é especificado) ou variável ou campo (se * for omitido) |
 | Resultado | Text | &#8592; | Título do botão |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

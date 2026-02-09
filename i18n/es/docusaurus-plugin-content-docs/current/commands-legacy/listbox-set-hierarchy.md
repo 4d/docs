@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *objeto* : Text ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *objeto* : Field, Variable ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | jerarquico | Boolean | &#8594; | True = list box jerárquico False = list box no jerárquico |
 | jerarquia | Pointer array | &#8594; | Array de punteros |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

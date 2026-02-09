@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *fileName* : Text {; *project* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.EXPORT DATA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594; | エクスポートファイルのフルパス名 |
 | project | Text, Blob | &#8596; | *in:* Contents of the export project<br/>*out:* New contents of the export project (if the * parameter has been passed) |
 | * | 演算子 | &#8594; | エクスポートダイアログを表示し プロジェクトの内容を更新 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

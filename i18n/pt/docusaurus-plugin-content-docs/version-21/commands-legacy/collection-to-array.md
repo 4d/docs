@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *coleção* ; *array* {; *nomProp*}{; *array2* ; *nomProp2* ; ... ; *arrayN* ; *nomPropN*} )<!-- END REF-->
 <!--REF #_command_.COLLECTION TO ARRAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | coleção | Collection | &#8594;  | Coleção a copiar em array |
 | array | Array | &#8592; | Array que vai receber os elementos da coleção; se nomeProp for passado, array que  vai receber os valores de nomeProp na coleção |
 | nomProp | Text | &#8594;  | Nome de propriedade de objeto cujos valores vão ser copiados em array ("" para todos os elementos) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

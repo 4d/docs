@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* : Array {; *orden* : Operator}{; ...*array* : Array ; ...*orden* : Operator} )<br/>**MULTI SORT ARRAY** ( *ptrArrayNombre* : Pointer array ; *ordenArrayNombre* : Integer array )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#8594; | Array(s) a ordenar |
 | orden | Operator | &#8594; | `>` to sort by increasing order or  `<` to sort by decreasing order; if omitted no sort |
 | ptrArrayNombre | Pointer array | &#8594; | Array de punteros de arrays |
 | ordenArrayNombre | Integer array | &#8594; | Array de criterio de ordenación (1= ordenar por orden creciente, -1= ordenar por orden decreciente), 0= sincronización con ordenaciones anteriores |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

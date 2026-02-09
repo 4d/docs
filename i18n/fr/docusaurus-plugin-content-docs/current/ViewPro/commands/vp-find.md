@@ -9,13 +9,18 @@ title: VP Find
 
 <!-- REF #_method_.VP Find.Params -->
 
-| Paramètres      | Type   |                             | Description                                                         |                  |
-| --------------- | ------ | --------------------------- | ------------------------------------------------------------------- | ---------------- |
-| rangeObj        | Object | ->                          | Objet plage                                                         |                  |
-| searchValue     | Text   | ->                          | Valeur de recherche                                                 |                  |
-| searchCondition | Object | ->                          | Objet contenant la/les condition(s) de recherche |                  |
-| replaceValue    | Text   | ->                          | Valeur de remplacement                                              |                  |
-| Résultat        | Object | <- | Objet plage                                                         | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres      | Type   |                             | Description                                                         |
+| --------------- | ------ | --------------------------- | ------------------------------------------------------------------- |
+| rangeObj        | Object | ->                          | Objet plage                                                         |
+| searchValue     | Text   | ->                          | Valeur de recherche                                                 |
+| searchCondition | Object | ->                          | Objet contenant la/les condition(s) de recherche |
+| replaceValue    | Text   | ->                          | Valeur de remplacement                                              |
+| Résultat        | Object | <- | Objet plage                                                         |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

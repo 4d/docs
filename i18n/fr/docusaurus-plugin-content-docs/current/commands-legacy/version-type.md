@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Version type.Syntax-->**Version type**  : Integer<!-- END REF-->
 <!--REF #_command_.Version type.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Informations sur le type de version (champ de bits) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

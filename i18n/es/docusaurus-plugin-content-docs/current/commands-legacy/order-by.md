@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*tabla* : Table ;}{; ...(*unField* : Field {; >,<}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla para la cual ordenar los registros seleccionados o Tabla por defecto si se omite |
 | unField | Field | &#8594; | Campo en el cual efectuar la ordenación para cada nivel |
 | > o < | Operador | &#8594; | Sentido de la ordenación para cada nivel: > para orden ascendente o < para orden descendente |
 | * | Operador | &#8594; | Continua la bandera de ordenación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

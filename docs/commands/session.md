@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session.Syntax -->**Session** : 4D.Session<!-- END REF -->
 <!--REF #_command_.Session.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | 4D.Session | &#8592; | Session object |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

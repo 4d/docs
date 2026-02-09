@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *sourceName* : Text ; *destinationName* : Text {; *newName* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | sourceName | Text | &#8594;  | Pathname of file or folder to be copied |
 | destinationName | Text | &#8594;  | Name or pathname of copied file or folder |
 | newName | Text | &#8594;  | New name of copied file or folder |
 | * | Operator | &#8594;  | Override existing document if any |
-
+</div>
 <!-- END REF-->
 
 ## Description 

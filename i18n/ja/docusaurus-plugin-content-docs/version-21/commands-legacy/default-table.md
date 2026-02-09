@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *aTable* )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | デフォルトとして設定するテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

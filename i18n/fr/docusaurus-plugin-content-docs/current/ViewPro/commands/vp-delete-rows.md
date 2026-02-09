@@ -9,9 +9,14 @@ title: VP DELETE ROWS
 
 <!-- REF #_method_.VP DELETE ROWS.Params -->
 
-| Paramètres | Type   |    | Description |                  |
-| ---------- | ------ | -- | ----------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |    | Description |
+| ---------- | ------ | -- | ----------- |
+| rangeObj   | Object | -> | Objet plage |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

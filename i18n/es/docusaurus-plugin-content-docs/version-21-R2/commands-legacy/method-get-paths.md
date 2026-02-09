@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomCarpeta* : Text ;} *tipoMetodo* : Integer ; *arrRutas* : Text array {; *marcador* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomCarpeta | Text | &#8594; | Nombre de carpeta de la página Inicio |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | arrRutas | Text array | &#8592; | Array de rutas y nombres de los métodos |
 | marcador | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
 | * | Operador | &#8594; | Si se pasa = comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** {( *window* )}<!-- END REF-->
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number or if omitted, all the current process frontmost windows (Windows) or current process frontmost window (macOS) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

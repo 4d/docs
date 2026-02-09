@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*laTable* ;} *nomForm* ; *largeur* ; *hauteur* {; *nbPages* {; *largeurFixe* {; *hauteurFixe* {; *titre*}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table du formulaire ou Table par défaut si ce paramètre est omis |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | largeurFixe | Boolean | &#8592; | Vrai = Largeur fixe, Faux = Largeur variable |
 | hauteurFixe | Boolean | &#8592; | Vrai = Hauteur fixe, Faux = Hauteur variable |
 | titre | Text | &#8592; | Nom de la fenêtre du formulaire |
-
+</div>
 <!-- END REF-->
 
 ## Description 

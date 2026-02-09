@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* )<!-- END REF-->
 <!--REF #_command_.CLEAR VARIABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#8594;  | Variable to clear |
-
+</div>
 <!-- END REF-->
 
 ## Description 

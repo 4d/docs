@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *chemin* ; *dateMod* ; *heureMod* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
 | dateMod | Date, Date array | &#8592; | Date(s) de modification de méthode(s) |
 | heureMod | Time, Integer array | &#8592; | Heure(s) de modification de méthode(s) |
 | * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

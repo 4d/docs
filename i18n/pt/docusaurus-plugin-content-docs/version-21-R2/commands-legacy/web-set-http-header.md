@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( cabeçalho|arrayCampo {; *valorArray* : Text array} )<!-- END REF-->
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | cabeçalho&#124;arrayCampo | Texto, Array texto | &#8594; | Campo ou variável contendo o cabeçalho HTTP requisitado ou campos cabeçalho HTTP |
 | valorArray | Text array | &#8594; | Conteúdo de campo de cabeçalho HTTP |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

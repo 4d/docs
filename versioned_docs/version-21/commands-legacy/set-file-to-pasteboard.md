@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *file* {; *} )<!-- END REF-->
 <!--REF #_command_.SET FILE TO PASTEBOARD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | file | Text | &#8594;  | File name or complete pathname of file |
 | * | Operator | &#8594;  | If passed = add; If omitted = replace |
-
+</div>
 <!-- END REF-->
 
 ## Description 

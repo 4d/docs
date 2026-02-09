@@ -5,15 +5,17 @@ slug: /commands/listbox-set-grid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET GRID.Syntax-->**LISTBOX SET GRID** ( * ; *object* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID** ( *object* : Field, Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET GRID.Syntax-->**LISTBOX SET GRID** ( * ; *object* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID** ( *object* : Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | horizontal | Boolean | &#8594;  | True = show, False = hide |
 | vertical | Boolean | &#8594;  | True = show, False = hide |
-
+</div>
 <!-- END REF-->
 
 ## Description 

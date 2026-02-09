@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | verrou | Boolean | &#8594; | Vrai = verrouiller les enregistrements trouvés par les recherches, Faux = ne pas les verrouiller |
-
+</div>
 <!-- END REF-->
 
 ## Description 

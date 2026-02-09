@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *varName* ; *varValue* )<!-- END REF-->
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | varName | Text | &#8594;  | Variable name to set |
 | varValue | Text | &#8594;  | Value of the variable or  "" to reset default value |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibility

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Syntax-->**DOM REMOVE XML ELEMENT** ( *elementRef* )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
-
+</div>
 <!-- END REF-->
 
 ## Description 

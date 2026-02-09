@@ -18,11 +18,16 @@ title: VP EXPORT DOCUMENT
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
-| Paramètres | Type   |    | Description                             |                  |
-| ---------- | ------ | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| filePath   | Text   | -> | Chemin d'accès du document              |                  |
-| paramObj   | Object | -> | Options d'export                        | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |    | Description                             |
+| ---------- | ------ | -- | --------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |
+| filePath   | Text   | -> | Chemin d'accès du document              |
+| paramObj   | Object | -> | Options d'export                        |
+
+</div>
+<!-- END REF -->
 
 ## Description
 
@@ -90,7 +95,7 @@ Le paramètre optionnel *paramObj* vous permet de définir plusieurs propriété
 
 - Lors de l'export d'un document 4D View Pro en un fichier au format Microsoft Excel, certains paramètres peuvent être perdus. Par exemple, les méthodes et formules 4D ne sont pas prises en charge par Excel. Vous pouvez vérifier d'autres paramètres avec [cette liste de SpreadJS] (https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - L'export dans ce format est exécuté de manière asynchrone, utilisez la propriété `formula` de *paramObj* pour que le code soit exécuté après l'export.
-- L'utilisation de l'objet *excelOptions* est recommandée pour l'exportation au format ".xlsx". Assurez-vous de ne pas confondre cet objet avec les propriétés legacy de premier niveau (*password*, *includeBindingSource*...) pour éviter les problèmes potentiels.
+- L'utilisation de l'objet *excelOptions* est recommandée pour l'exportation au format ".xlsx". Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource...*) to avoid potiental issues.
 
 **Notes sur le format PDF** :
 

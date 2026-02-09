@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML CDATA.Syntax-->**SAX GET XML CDATA** ( *documento* ; *valor* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML CDATA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Time | &#8594;  | Referência do documento aberto |
 | valor | Text, Blob | &#8592; | Valor do elemento |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

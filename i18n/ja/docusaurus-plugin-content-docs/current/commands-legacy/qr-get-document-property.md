@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* : Integer ; *property* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | エリア参照 |
 | property | Integer | &#8594; | 1 = 印刷ダイアログ, 2 = ドキュメント単位 |
 | 戻り値 | Integer | &#8592; | プロパティ値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

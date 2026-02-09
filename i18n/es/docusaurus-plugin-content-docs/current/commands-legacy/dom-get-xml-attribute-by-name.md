@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Syntax-->**DOM GET XML ATTRIBUTE BY NAME** ( *elementRef* : Text ; *nomAtrib* : Text ; *valorAtrib* : Variable )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594; | Referencia del elemento XML |
 | nomAtrib | Text | &#8594; | Nombre del atributo |
 | valorAtrib | Variable | &#8592; | Valor del atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

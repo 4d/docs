@@ -6,12 +6,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* : Table ;} *form* : Text )<br/>**FORM EDIT** ( {*aTable* : Table ;} *form* : Text ; *object* : Text )<!-- END REF-->
 <!--REF #_command_.FORM EDIT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table owning the form or If omitted: default table or use of project form |
 | form | Text | &#8594;  | Form name |
 | object | Text | &#8594;  | Form object name or group name |
-
+</div>
 <!-- END REF-->
 <details><summary>History</summary>
 

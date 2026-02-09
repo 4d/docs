@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *idField* : Field ) : Integer<!-- END REF-->
 <!--REF #_command_.Get subrecord key.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | idField | Field | &#8594;  | "Subtable Relation" or "Longint" type field of a former subtable relation |
 | Function result | Integer | &#8592; | Internal key of relation |
-
+</div>
 <!-- END REF-->
 
 ## Description 

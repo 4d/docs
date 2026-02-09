@@ -15,8 +15,8 @@ title: リリースノート
 
 #### ハイライト
 
-- 4D 20.8 LTS is certified on Windows 11 25H2.
-- 4D 20.8 LTS is certified on macOS Tahoe (macOS 26).
+- 4D 20.8 LTS は Windows 11 25H2 対応です。
+- 4D 20.8 LTS は macOS Tahoe (macOS 26) 対応です。
 - [**修正リスト**](https://bugs.4d.com/fixes?version=20.8): 4D 20.8 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 

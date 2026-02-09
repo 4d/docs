@@ -15,6 +15,7 @@ title: VP INSERT TABLE COLUMNS
 **VP INSERT TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )<!-- END REF -->
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -23,7 +24,9 @@ title: VP INSERT TABLE COLUMNS
 |column|Integer|->|Index in the table of the starting column to insert|
 |count|Integer|->|Number of columns to add (must be >0) |
 |insertAfter|Integer|->|`vk table insert before` or `vk table insert after` *column*|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( {* ;} *objet* ; *tabsUrls* {; *sens* {; *tabTitres*}} )<!-- END REF-->
 <!--REF #_command_.WA GET URL HISTORY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tabsUrls | Text array | &#8592; | Tableau des URLs visités |
 | sens | Integer | &#8594;  | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
 | tabTitres | Text array | &#8592; | Tableau des titres de fenêtres |
-
+</div>
 <!-- END REF-->
 
 ## Description 

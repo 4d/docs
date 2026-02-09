@@ -55,13 +55,13 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 :::note
 
-La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. De este modo se garantiza que los procesos dependientes, como las modificaciones o exportaciones de documentos, solo se realicen una vez que se hayan resuelto por completo todos los cálculos basados en fórmulas.
 
 :::
 
 ## Ejemplo
 
-You want to import a spreadsheet that was previously saved in an object field, and trigger a callback function after all 4D custom functions have responded:
+Desea importar una hoja de cálculo previamente guardada en un campo objeto, y activar una función de retrollamada después de que todas las funciones personalizadas 4D hayan respondido:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)

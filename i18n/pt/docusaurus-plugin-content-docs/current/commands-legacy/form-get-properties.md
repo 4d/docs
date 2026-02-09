@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*tabela* : Table ;} *nomeForm* : Text ; *largura* : Integer ; *altura* : Integer {; *numPags* : Integer {; *larguraFixa* : Boolean {; *alturaFixa* : Boolean {; *titulo* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela do formulário ou tabela por padrão, se for omitido |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | larguraFixa | Boolean | &#8592; | Verdadeiro = Largura fixo, Falso = Largura variável |
 | alturaFixa | Boolean | &#8592; | Verdadeiro = Altura fixa, Falso = Altura variável |
 | titulo | Text | &#8592; | Título da janela do formulário |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
@@ -40,7 +42,7 @@ O parâmetro *título* retorna o título da janela do formulário, tal como foi 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
-[Open form window](open-form-window.md)  
+[Open form window](../commands/open-form-window.md)  
 
 ## Propriedades
 

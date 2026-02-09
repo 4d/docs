@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared object.Syntax-->**New shared object** ( *propriedade* : Text ; *valor* : any {; ...(*propriedade* : Text, *valor* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | propriedade | Text | &#8594; | Nome de propriedade a criar |
 | valor | any | &#8594; | Valor da propriedade |
 | Resultado | Object | &#8592; | Novo objeto compartido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

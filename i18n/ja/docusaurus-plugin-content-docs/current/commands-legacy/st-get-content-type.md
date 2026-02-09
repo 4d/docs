@@ -5,8 +5,10 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Field, Variable {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | startBlock | Integer | &#8592; | 選択範囲内の、同一のタイプの開始地点 |
 | endBlock | Integer | &#8592; | 選択範囲内の、同一のタイプの終了地点 |
 | 戻り値 | Integer | &#8592; | 内容のタイプ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -8,12 +8,15 @@ title: VP SET TEXT VALUE
 **VP SET TEXT VALUE** ( *rangeObj* : Object ; *textValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |textValue |Text|->|Text value to set|
-|formatPattern |Text|->|Format of value|<!-- END REF -->
+|formatPattern |Text|->|Format of value|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY POINTER.Syntax-->**ARRAY POINTER** ( *nomTableau* ; *taille* : Integer {; *taille2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY POINTER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomArray | Array | &#8594; | Nom du tableau |
 | taille | Integer | &#8594; | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
 | taille2 | Integer | &#8594; | Nombre d'éléments des tableaux à deux dimensions |
-
+</div>
 <!-- END REF-->
 
 ## Description 

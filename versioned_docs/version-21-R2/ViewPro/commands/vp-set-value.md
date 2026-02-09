@@ -8,11 +8,14 @@ title: VP SET VALUE
 **VP SET VALUE** ( *rangeObj* : Object ; *valueObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET VALUE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-|valueObj  |Object|->|Cell values and format options|<!-- END REF -->
+|valueObj  |Object|->|Cell values and format options|
+</div>
+<!-- END REF -->
 
 ## Description
 

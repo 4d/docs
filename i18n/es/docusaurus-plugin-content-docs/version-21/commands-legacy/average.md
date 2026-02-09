@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Average.Syntax-->**Average** ( *series* {; *rutaAtributo*} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Datos para los cuales se devuelve el promedio |
 | rutaAtributo | Text | &#8594;  | Ruta del atributo del cual calcular el promedio |
 | Resultado | Real | &#8592; | Media aritmética (promedio) de series |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to list.Syntax-->**BLOB to list** ( *BLOB* : Blob {; *offset* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to list.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOB que contém uma lista hierárquica |
 | offset | Integer | &#8596; | Offset no BLOB (expressado em bytes) |
 |  |  |  | Novo offset depois da leitura |
 | Resultado | Integer | &#8592; | Referência da lista criada recentemente |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

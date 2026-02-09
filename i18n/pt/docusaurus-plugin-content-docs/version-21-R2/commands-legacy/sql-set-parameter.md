@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *objeto* : Object ; *paramTipo* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objeto | Object | &#8594; | Objeto 4D a ser usado (variável, array ou campo) |
 | paramTipo | Integer | &#8594; | Tipo de parâmetro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

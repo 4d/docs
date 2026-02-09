@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Locked.Syntax-->**Locked** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | ロックを検証するレコードが属するテーブル, または 省略時、デフォルトテーブル |
 | 戻り値 | Boolean | &#8592; | TRUE: レコードはロックされている FALSE: レコードはロックされていない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Syntax-->**SPELL ADD TO USER DICTIONARY** ( *words* : Text, Text配列 )<!-- END REF-->
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | words | Text, Text配列 | &#8594; | ユーザー辞書に追加する単語または単語リスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

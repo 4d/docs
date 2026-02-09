@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Params-->
 
+<div class="no-index">
+
 | Parámetros     | Tipo                    |                             | Descripción                                                     |
 | -------------- | ----------------------- | --------------------------- | --------------------------------------------------------------- |
 | wpDoc          | Object                  | &#8594; | Documento 4D Write Pro                                          |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | pictureFileObj | 4D.File | &#8594; | Objeto 4D.File que representa un archivo imagen |
 | Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                          |
 
+</div>
 <!-- END REF-->
 
 ## Descripción

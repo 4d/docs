@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*laTable* ;} *tabChemins* {; *filtre*}{; *marqueur*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Référence de table |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | marqueur | Real | &#8594;  | Valeur minimum de marqueur |
 | &#8592; | Nouvelle valeur courante |
 | * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

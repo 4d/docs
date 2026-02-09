@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*tabla* : Table ;} *nomConjunto* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla de la cual leer los registros seleccionados Si se omite, tabla del formulario actual |
 | nomConjunto | Text | &#8594; | Conjunto en el cual guardar los registros seleccionados |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

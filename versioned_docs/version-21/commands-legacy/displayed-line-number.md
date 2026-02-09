@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Displayed line number.Syntax-->**Displayed line number**  : Integer<!-- END REF-->
 <!--REF #_command_.Displayed line number.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Number of row being displayed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *mode* )<!-- END REF-->
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | mode | Integer | &#8594;  | Access mode for locked objects |
-
+</div>
 <!-- END REF-->
 
 ## Description 

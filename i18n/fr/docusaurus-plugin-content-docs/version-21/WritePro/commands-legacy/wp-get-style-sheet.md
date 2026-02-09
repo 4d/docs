@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get style sheet.Syntax-->**WP Get style sheet** ( *docWP* ; *nomFeuilleStyle* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get style sheet.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Document 4D Write Pro |
 | nomFeuilleStyle | Text | &#8594;  | Nom de la feuille de style |
 | Résultat | Object | &#8592; | Objet feuille de style |
-
+</div>
 <!-- END REF-->
 
 ## Description 

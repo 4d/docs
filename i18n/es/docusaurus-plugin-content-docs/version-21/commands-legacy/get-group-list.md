@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *nomGrupos* ; *numGrupos* )<!-- END REF-->
 <!--REF #_command_.GET GROUP LIST.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomGrupos | Text array | &#8592; | Nombres de los grupos tal como aparecen en el editor de contraseñas |
 | numGrupos | Integer array | &#8592; | Números de referencia únicos para cada grupo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

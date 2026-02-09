@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( objCible | {*refTableau* ; *numCol*} {; *nbCols*} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Table insert columns.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numCol | Integer | &#8594;  | Numéro de colonne |
 | nbCols | Integer | &#8594;  | Nombre de colonnes à insérer (valeur par défaut = 1) |
 | Résultat | Object | &#8592; | Plage de colonnes du tableau |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomObjetos* : Text array {; numPag | * } )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomObjetos | Text array | &#8592; | Nombres de objetos ordenados por orden de entrada |
 | numPag &#124; * | Entero largo, Operador | &#8594; | Número de la página para la que se obtiene el orden de entrada definido (página actual si se omite), o  * para obtener el orden de entrada real de la página actual |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

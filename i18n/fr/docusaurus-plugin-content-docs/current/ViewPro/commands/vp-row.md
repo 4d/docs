@@ -9,13 +9,18 @@ title: VP Row
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Paramètres | Type    |                             | Description                                                                 |                  |
-| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| row        | Integer | ->                          | Indice de la ligne                                                          |                  |
-| rowCount   | Integer | ->                          | Nombre de lignes                                                            |                  |
-| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Plage de ligne(s)                                        | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                                                                 |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |
+| row        | Integer | ->                          | Indice de la ligne                                                          |
+| rowCount   | Integer | ->                          | Nombre de lignes                                                            |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Plage de ligne(s)                                        |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

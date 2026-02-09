@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *tabla* ; *arrayCampos* ; *tipoIndice* ; *nombreIndice* {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla para la cual crear un índice |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | tipoIndice | Integer | &#8594;  | Tipo de índice a crear: -1 = Palabras claves, 0 = por defecto, 1 = B-Tree estándar, 3 = B-Tree cluster |
 | nombreIndice | Text | &#8594;  | Nombre del índice a crear |
 | * | Operador | &#8594;  | Si pasa = indexación asincrónica |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

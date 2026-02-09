@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *endAcesso* )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | endAcesso | Text | &#8594;  | Nome ou endereço completo de acesso ao arquivo de dados a ser criado |
-
+</div>
 <!-- END REF-->
 
 ## Description 

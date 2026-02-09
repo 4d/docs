@@ -9,10 +9,15 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
-| 引数       | 型          |                             | 説明              |                  |
-| -------- | ---------- | --------------------------- | --------------- | ---------------- |
-| rangeObj | Object     | ->                          | レンジオブジェクト       |                  |
-| 戻り値      | Collection | <- | カラムプロパティのコレクション | <!-- END REF --> |
+<div class="no-index">
+
+| 引数       | 型          |                             | 説明              |
+| -------- | ---------- | --------------------------- | --------------- |
+| rangeObj | Object     | ->                          | レンジオブジェクト       |
+| 戻り値      | Collection | <- | カラムプロパティのコレクション |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

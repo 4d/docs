@@ -7,16 +7,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE TOOL BAR.Syntax-->**HIDE TOOL BAR**<!-- END REF-->
 <!--REF #_command_.HIDE TOOL BAR.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.HIDE TOOL BAR.Summary-->La commande **HIDE TOOL BAR** permet de gérer l'affichage des barres d'outils personnalisées créées par la commande [Open form window](open-form-window.md) pour le process courant.<!-- END REF-->
+<!--REF #_command_.HIDE TOOL BAR.Summary-->La commande **HIDE TOOL BAR** permet de gérer l'affichage des barres d'outils personnalisées créées par la commande [Open form window](../commands/open-form-window.md) pour le process courant.<!-- END REF-->
 
-Si une fenêtre barre d'outils a été créée par la commande [Open form window](open-form-window.md) avec l'option Toolbar form window, la commande masque la fenêtre. Si la fenêtre barre d'outils était déjà masquée ou si aucune fenêtre de ce type n'a été créée, la commande ne fait rien
+Si une fenêtre barre d'outils a été créée par la commande [Open form window](../commands/open-form-window.md) avec l'option Toolbar form window, la commande masque la fenêtre. Si la fenêtre barre d'outils était déjà masquée ou si aucune fenêtre de ce type n'a été créée, la commande ne fait rien
 
 ## Exemple 
 

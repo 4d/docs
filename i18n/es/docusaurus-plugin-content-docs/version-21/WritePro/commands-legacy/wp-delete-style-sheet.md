@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE STYLE SHEET.Syntax-->**WP DELETE STYLE SHEET** ( *objetoHojaEstilo* ) | (*wpDoc* ; *nombreHojaEstilo* )<!-- END REF-->
 <!--REF #_command_.WP DELETE STYLE SHEET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objetoHojaEstilo | Object | &#8594;  | Objeto hoja de estilo |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
 | nombreHojaEstilo | Text | &#8594;  | Nombre de la hoja de estilo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( * ; *objeto* : Text ) : Text<br/>**WA Get page content** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page content.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | Resultado | Text | &#8592; | HTML source code |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

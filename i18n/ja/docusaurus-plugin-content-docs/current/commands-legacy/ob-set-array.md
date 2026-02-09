@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *object* : Object, Object ; *property* : Text ; *array* : Array, Variable )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594; | 構造化されたオブジェクト |
 | property | Text | &#8594; | 設定したいプロパティ名 |
 | array | Array, Variable | &#8594; | プロパティに保存したい配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *unCampo* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594;  | Campo a evaluar |
 | Resultado | Boolean | &#8592; | True = campo es NULL, False = campo no es NULL |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

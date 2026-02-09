@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* ; *menuItem* ; *iconRef* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM ICON.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu reference or Menu number |
 | menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
 | iconRef | Text, Integer | &#8594;  | Name or number of picture to be associated with menu item |
 | process | Integer | &#8594;  | Process number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

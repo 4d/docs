@@ -5,14 +5,16 @@ slug: /commands/object-set-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *object* : Text ; *size* : Integer )<br/>**OBJECT SET FONT SIZE** ( *object* : Field, Variable ; *size* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *object* : Text ; *size* : Integer )<br/>**OBJECT SET FONT SIZE** ( *object* : Variable, Field ; *size* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
 | size | Integer | &#8594;  | Font size in points |
-
+</div>
 <!-- END REF-->
 
 ## Description 

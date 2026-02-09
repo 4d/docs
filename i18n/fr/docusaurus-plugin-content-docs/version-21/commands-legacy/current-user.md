@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current user.Syntax-->**Current user** {( *utilisateur* )} : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | utilisateur | Integer | &#8594;  | Alias utilisateur ou compte utilisateur 4D |
 | Résultat | Text | &#8592; | Nom de l'utilisateur courant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

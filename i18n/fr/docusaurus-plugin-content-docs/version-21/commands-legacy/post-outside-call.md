@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST OUTSIDE CALL.Syntax-->**POST OUTSIDE CALL** ( *process* )<!-- END REF-->
 <!--REF #_command_.POST OUTSIDE CALL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Numéro du process |
-
+</div>
 <!-- END REF-->
 
 ## Note de compatibilité 

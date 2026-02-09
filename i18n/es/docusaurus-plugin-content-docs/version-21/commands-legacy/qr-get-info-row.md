@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* ; *linea* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referencia del área creada |
 | linea | Integer | &#8594;  | Línea |
 | Resultado | Integer | &#8592; | 0 = visible, 1 = oculta |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

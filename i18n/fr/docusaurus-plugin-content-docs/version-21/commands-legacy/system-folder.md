@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | type | Integer | &#8594;  | Type de dossier système |
 | Résultat | Text | &#8592; | Chemin d’accès d’un dossier du système actif |
-
+</div>
 <!-- END REF-->
 
 ## Description 

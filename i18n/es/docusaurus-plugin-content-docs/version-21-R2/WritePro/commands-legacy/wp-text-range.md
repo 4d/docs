@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *objRango* : Object ; *rangoInicio* : Integer ; *rangoFin* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Text range.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o referencia del elemento o documento 4D Write Pro |
 | rangoInicio | Integer | &#8594;  | Punto inicial del rango de texto |
 | rangoFin | Integer | &#8594;  | Punto final del rango de texto |
 | Resultado | Object | &#8592; | Rango de objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

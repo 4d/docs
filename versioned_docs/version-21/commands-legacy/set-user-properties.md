@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userID | Integer | &#8594;  | Unique ID number of user account, -1 for adding a user |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | memberships | Integer array | &#8594;  | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &#8594;  | Reference number of user group owner (Binary databases only) |
 | Function result | Integer | &#8592; | Unique ID number of new user |
-
+</div>
 <!-- END REF-->
 
 ## Description 

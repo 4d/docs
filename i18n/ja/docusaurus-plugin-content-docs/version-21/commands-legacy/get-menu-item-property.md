@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* ; *menuItem* ; *property* ; *value* {; *process*} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer | &#8594;  | メニュー参照またはメニュー番号 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | property | Text | &#8594;  | プロパティタイプ |
 | value | any | &#8592; | プロパティ値 |
 | process | Integer | &#8594;  | プロセス番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

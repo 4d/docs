@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* : Blob ; *byteOrder* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | 倍長整数値を取り出すBLOB |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596; | BLOB中のオフセット (バイト単位) |
 |  |  |  | 読み込み後、新しいオフセット |
 | 戻り値 | Integer | &#8592; | 4バイト整数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

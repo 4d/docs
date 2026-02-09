@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *blob* ; *charSet* ) : Text<!-- END REF-->
 <!--REF #_command_.Convert to text.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB containing text expressed in a specific character set |
 | charSet | Text, Integer | &#8594;  | Name or Number of BLOB character set |
 | Function result | Text | &#8592; | Contents of BLOB expressed in 4D character set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

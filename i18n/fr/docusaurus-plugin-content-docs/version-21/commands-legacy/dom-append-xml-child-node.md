@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElément* ; *typeEnfant* ; *valeurEnfant* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594;  | Référence d’élément XML |
 | typeEnfant | Integer | &#8594;  | Type d’enfant à ajouter |
 | valeurEnfant | Text, Blob | &#8594;  | Texte ou variable (Texte ou BLOB) dont la valeur doit être insérée en tant que noeud enfant |
 | Résultat | Text | &#8592; | Référence de l’élément XML enfant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

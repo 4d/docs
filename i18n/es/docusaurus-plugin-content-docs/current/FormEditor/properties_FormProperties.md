@@ -46,7 +46,7 @@ Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente
 
 Asociar una clase al formulario ofrece las siguientes ventajas:
 
-- Cuando trabajas en el [Editor de formularios](../FormEditor/formEditor.md), la clase asociada se utiliza para comprobar con precisión la sintaxis de expresiones como `Form.myProperty` en todas las áreas de la [Lista de propiedades](../FormEditor/formEditor.md#property-list) que soporta [expresiones](../Concepts/quick-tour.md#expressions) (por ejemplo, **Variable o Expresión**, **Expresión de color de fuente**...). Los errores se muestran en rojo y las advertencias se muestran en amarillo en la columna izquierda de la lista de propiedades y puede pasar el cursor para obtener explicaciones:
+- Cuando trabajas en el [Editor de formularios](../FormEditor/formEditor.md), la clase asociada se utiliza para comprobar con precisión la sintaxis de expresiones como `Form.myProperty` en todas las áreas de la [Lista de propiedades](../FormEditor/formEditor.md#property-list) que soporta [expresiones](../Concepts/quick-tour.md#expressions) (por ejemplo, **Variable o Expresión**, **Expresión de color de fuente*...*). Los errores se muestran en rojo y las advertencias se muestran en amarillo en la columna izquierda de la lista de propiedades y puede pasar el cursor para obtener explicaciones:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
@@ -82,13 +82,13 @@ El nombre del formulario está definido por el nombre de la carpeta que contiene
 
 ## Form Theme on Windows
 
-This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+Esta propiedad le permite seleccionar explícitamente el tema de interfaz que desea que se utilice cuando el formulario se ejecute en Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
 
 Valores disponibles:
 
 - **heredado** (por defecto): hereda del tema del proyecto
 - **Classic**: use the Windows classic interface theme
-- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+- **Fluent UI**: utilice el tema de interfaz [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) ([cuando esté disponible](../FormEditor/forms.md#requirements)).
 
 :::note
 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *cheminRelatif* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized document path.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminRelatif | Text | &#8594; | Chemin d’accès relatif du document dont on veut obtenir la version localisée |
 | Résultat | Text | &#8592; | Chemin d’accès absolu du document localisé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

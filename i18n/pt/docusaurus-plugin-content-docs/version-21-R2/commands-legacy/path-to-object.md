@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Path to object.Syntax-->**Path to object**  ( *rota* : Text {; *tipoRota* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rota | Text | &#8594; | Nome da rota |
 | tipoRota | Integer | &#8594; | Sintaxe do tipo de rota: System (padrão) ou Posix |
 | Resultado | Object | &#8592; | Objeto que descreve o conteúdo da rota. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

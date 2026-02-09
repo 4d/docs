@@ -58,12 +58,15 @@ While `myForm` may not display typical object properties when examined in the de
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |state|Text|->|Name of state to disable from the web form|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -83,12 +86,15 @@ For more information on web pages states, please refer to the [States section in
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : Text )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |state|Text|->|Name of state to enable on the web form|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -117,12 +123,15 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msg|Text|->|Error message to display in the web form|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -150,12 +159,15 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msg|Text|->|Information message to display in the web form|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -183,12 +195,15 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msg|Text|->|Warning message to display in the web form|
+</div>
 <!-- END REF -->
 
 #### Description

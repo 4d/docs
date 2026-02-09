@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *objCible* : Object ; *mode* : Integer {; *miseAJourPlage* : Integer {; *nbCols* : Integer {; *nbLignes* : Integer}}} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nbCols | Integer | &#8594;  | Nombre de colonnes à créer dans le tableau |
 | nbLignes | Integer | &#8594;  | Nombre de lignes à créer dans le tableau |
 | Résultat | Object | &#8592; | Objet listant les propriétés du tableau |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY REAL.Syntax-->**ARRAY REAL** ( *nomeArray* : Array ; *tamanho* : Integer {; *tamanho2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY REAL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeArray | Array | &#8594; | Nome do array |
 | tamanho | Integer | &#8594; | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
 | tamanho2 | Integer | &#8594; | Número de colunas no array de duas dimensões |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

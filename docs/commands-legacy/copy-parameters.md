@@ -5,13 +5,15 @@ slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** ( *startFrom* : Integer ) : Collection<!-- END REF-->
+<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** ({ *startFrom* : Integer }) : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | startFrom | Integer | &#8594;  | Starting index (included) |
 | Function result | Collection | &#8592; | New collection containing parameters actually passed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

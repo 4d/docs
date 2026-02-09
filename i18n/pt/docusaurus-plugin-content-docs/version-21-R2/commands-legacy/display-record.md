@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela para qual exibir o registro atual, ou tabela Padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

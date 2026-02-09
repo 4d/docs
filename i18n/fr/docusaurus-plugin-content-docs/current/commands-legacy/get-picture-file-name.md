@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *image* : Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | image | Picture | &#8594; | Image dont vous souhaitez obtenir le nom par défaut |
 | Résultat | Text | &#8592; | Nom par défaut du fichier image |
-
+</div>
 <!-- END REF-->
 
 ## Description 

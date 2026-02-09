@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *champObjet* ; *tabChemins* )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | champObjet | Field | &#8594;  | Champ objet indexé |
 | tabChemins | Text array | &#8592; | Tableau devant recevoir les chemins d'attributs du champ |
-
+</div>
 <!-- END REF-->
 
 ## Description 

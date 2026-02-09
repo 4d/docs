@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB TO DOCUMENT.Syntax-->**BLOB TO DOCUMENT** ( *documento* : Text ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO DOCUMENT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Text | &#8594; | Nome do documento gerado |
 | Blob | Blob | &#8594; | Novo conteúdo para o documento |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

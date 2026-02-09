@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( {* ;} *object* ; *filtersArr* ; *allowDenyArr* )<!-- END REF-->
 <!--REF #_command_.WA GET URL FILTERS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | filtersArr | Text array | &#8592; | Filters array |
 | allowDenyArr | Boolean array | &#8592; | Allow-deny array |
-
+</div>
 <!-- END REF-->
 
 ## Description 

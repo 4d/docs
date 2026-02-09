@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL SET OPTION.Syntax-->**SQL SET OPTION** ( *opción* ; *valor* )<!-- END REF-->
 <!--REF #_command_.SQL SET OPTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | opción | Integer | &#8594;  | Número de opción a definir |
 | valor | Integer, Text | &#8594;  | Nuevo valor de opción |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

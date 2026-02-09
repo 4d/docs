@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *dataType* ; *data* )<!-- END REF-->
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | dataType | Text | &#8594;  | 追加するデータのタイプ |
 | data | Blob | &#8594;  | ペーストボードに追加するデータ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

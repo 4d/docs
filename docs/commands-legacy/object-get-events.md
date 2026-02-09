@@ -5,14 +5,16 @@ slug: /commands/object-get-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array )<br/>**OBJECT GET EVENTS** ( *object* : Field, Variable ; *arrEvents* : Integer array )<!-- END REF-->
+<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array )<br/>**OBJECT GET EVENTS** ( *object* : Variable, Field ; *arrEvents* : Integer array )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name or "" to designate the form (if * is specified) orField or variable (if * is omitted) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| object | Text, Variable, Field | &#8594;  | Object name or "" to designate the form (if * is specified), or<br/>Variable or field (if * is omitted) |
 | arrEvents | Integer array | &#8592; | Array of enabled events |
-
+</div>
 <!-- END REF-->
 
 ## Description 

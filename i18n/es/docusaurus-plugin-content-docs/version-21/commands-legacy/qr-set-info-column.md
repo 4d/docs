@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET INFO COLUMN.Syntax-->**QR SET INFO COLUMN** ( *area* ; *numColumna* ; *titulo* ; *objeto* ; *oculta* ; *tamaño* ; *valoresRepetidos* ; *formato* )<!-- END REF-->
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referencia del área |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | tamaño | Integer | &#8594;  | Largo de la columna |
 | valoresRepetidos | Integer | &#8594;  | 0 = no repetidos, 1 = repetido |
 | formato | Text | &#8594;  | Formato de visualización |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

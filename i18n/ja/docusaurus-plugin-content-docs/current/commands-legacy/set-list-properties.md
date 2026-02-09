@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *list* : Integer ; *appearance* : Integer {; *icon* : Integer {; *lineHeight* : Integer {; *doubleClick* : Integer {; *multiSelections* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | list | Integer | &#8594; | リスト参照番号 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | doubleClick | Integer | &#8594; | ダブルクリックでサブリストを展開/折り畳み 0 = Yes, 1= No |
 | multiSelections | Integer | &#8594; | 複数行選択: 0 = No (デフォルト), 1 = Yes |
 | editable | Integer | &#8594; | 0 = ユーザによるリスト編集不可, 1 = ユーザによるリスト編集可 (デフォルト) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

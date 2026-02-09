@@ -9,11 +9,14 @@ title: VP Font to object
 
 <!-- REF #_method_.VP Font to object.Params -->
 
+<div class="no-index">
+
 | Paramètres | Type   |                             | Description                                                     |
 | ---------- | ------ | --------------------------- | --------------------------------------------------------------- |
 | font       | Text   | ->                          | Chaîne raccourcie pour la police (shorthand) |
 | Résultat   | Object | <- | Objet police                                                    |
 
+</div>
 <!-- END REF -->
 
 ## Description

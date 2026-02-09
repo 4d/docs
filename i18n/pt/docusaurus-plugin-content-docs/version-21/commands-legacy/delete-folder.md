@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *pasta* {; delete Opcao} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pasta | Text | &#8594;  | Nome da pasta, ou rota de acesso completa da pasta a apagar |
 | delete Opcao | Inteiro longo | &#8594;  | Opção de apagar a pasta |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *blob* : Blob ; *offset* : Integer ; *len* : Integer {; *filler* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB into which bytes will be inserted |
 | offset | Integer | &#8594;  | Starting position where bytes will be inserted |
 | len | Integer | &#8594;  | Number of bytes to be inserted |
 | filler | Integer | &#8594;  | Default byte value (0x00..0xFF) 0x00 if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -26,7 +28,7 @@ Before the call, you pass in the *offset* parameter the position of the insertio
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
 
 ## See also 
 

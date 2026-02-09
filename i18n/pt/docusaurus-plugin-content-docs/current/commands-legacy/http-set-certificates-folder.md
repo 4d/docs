@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *pastaCertificados* : Text )<!-- END REF-->
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pastaCertificados | Text | &#8594; | Caminho e nome da pasta de certificados do cliente |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilidade

@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Startup database method.Syntax-->**On Startup database method**<!-- END REF-->
 <!--REF #_command_.On Startup database method.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## 

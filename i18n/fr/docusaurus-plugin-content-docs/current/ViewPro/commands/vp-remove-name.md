@@ -9,11 +9,16 @@ title: VP REMOVE NAME
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
-| Paramètres | Type    |    | Description                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                        |                  |
-| name       | Text    | -> | Nom de la plage nommée ou de la formule nommée à supprimer     |                  |
-| scope      | Integer | -> | "Scope" cible (par défaut=feuille courante) | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |    | Description                                                    |
+| ---------- | ------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                        |
+| name       | Text    | -> | Nom de la plage nommée ou de la formule nommée à supprimer     |
+| scope      | Integer | -> | "Scope" cible (par défaut=feuille courante) |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

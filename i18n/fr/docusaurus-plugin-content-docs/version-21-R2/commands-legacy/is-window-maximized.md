@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *window* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window maximized.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594; | Numéro de référence de la fenêtre |
 | Résultat | Boolean | &#8592; | Vrai si la fenêtre est maximisée, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

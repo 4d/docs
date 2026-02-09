@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTORE.Syntax-->**RESTORE** {( *endArquivo* {; *endPastaDestino*} )}<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | endArquivo | Text | &#8594;  | Endereço de acesso do arquivo a ser restituído |
 | endPastaDestino | Text | &#8594;  | Endereço de acesso da pasta de destino |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *unCampo* )<!-- END REF-->
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594; | Campo al cual atribuir el valor NULL |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

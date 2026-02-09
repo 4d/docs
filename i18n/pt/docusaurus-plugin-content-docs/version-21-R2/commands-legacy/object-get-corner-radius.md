@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get corner radius** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get corner radius.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável ou um campo |
 | objeto | any | &#8594; | Nome de objeto (se especificado *) ou Campo ou variável (se omitido *) |
 | Resultado | Integer | &#8592; | Rádio de esquinas arredondadas (em píxels) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is macOS.Syntax-->**Is macOS** : Boolean<!-- END REF-->
 <!--REF #_command_.Is macOS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | True si el sistema operativo = macOS, de lo contrario False |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

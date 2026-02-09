@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *laTable* : Table {; *} )<!-- END REF-->
 <!--REF #_command_.RESUME INDEXES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table pour laquelle réactiver les index |
 | * | Opérateur | &#8594; | Si passé = indexation asynchrone |
-
+</div>
 <!-- END REF-->
 
 ## Description 

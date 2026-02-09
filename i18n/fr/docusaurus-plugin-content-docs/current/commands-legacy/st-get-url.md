@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( * ; *objet* : Text ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST GET URL** ( *objet* : Field, Variable ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST GET URL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | adresseURL | Text | &#8592; | Adresse de l’URL |
 | débutSél | Integer | &#8594; | Début de la sélection |
 | finSél | Integer | &#8594; | Fin de la sélection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

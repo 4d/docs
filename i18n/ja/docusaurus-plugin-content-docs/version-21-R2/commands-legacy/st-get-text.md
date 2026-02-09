@@ -5,8 +5,10 @@ slug: /commands/st-get-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<br/>**ST Get text** ( *object* : Field, Variable {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<br/>**ST Get text** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get text.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数またはフィールド |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | startSel | Integer | &#8594; | 文字選択の開始位置 |
 | endSel | Integer | &#8594; | 文字選択の終了位置 |
 | 戻り値 | Text | &#8592; | スタイルタグを含むテキスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

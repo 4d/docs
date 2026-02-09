@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *BLOB* : Blob ; *offset* : Integer ; *tamanho* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE FROM BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOB do qual deletar bytes |
 | offset | Integer | &#8594; | Offset inicial onde os bytes serão deletados |
 | tamanho | Integer | &#8594; | Número de bytes a serem excluídos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

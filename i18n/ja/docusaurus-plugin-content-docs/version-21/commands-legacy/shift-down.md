@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Shift down.Syntax-->**Shift down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Shift down.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | Shift キーのステータス |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

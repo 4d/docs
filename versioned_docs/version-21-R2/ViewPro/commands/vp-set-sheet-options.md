@@ -7,12 +7,15 @@ title: VP SET SHEET OPTIONS
 **VP SET SHEET OPTIONS** ( *vpAreaName* : Text; *sheetOptions* : Object { ; *sheet* : Integer}  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area name|
 |sheetOptions |Object|->|Sheet option(s) to set|
-|sheet |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|sheet |Integer|->|Sheet index (current sheet if omitted)|
+</div>
+<!-- END REF -->
 
 ## Description
 

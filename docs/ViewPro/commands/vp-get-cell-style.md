@@ -8,11 +8,14 @@ title: VP Get cell style
 **VP Get cell style** (  *rangeObj* : Object ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get cell style.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
-|Result  |Object|<-|Style object|<!-- END REF -->
+|Result  |Object|<-|Style object|
+</div>
+<!-- END REF -->
 
 ## Description
 

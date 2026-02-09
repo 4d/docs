@@ -9,6 +9,8 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                                                 |
 | ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- |
 | vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |
@@ -17,6 +19,7 @@ title: VP Cell
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
 | Résultat   | Object  | <- | Objet plage d'une seule cellule                                             |
 
+</div>
 <!-- END REF -->
 
 ## Description

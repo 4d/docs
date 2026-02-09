@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *path* : Text {; *line* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD OPEN PATH.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | path | Text | &#8594; | 開くメソッドのパス |
 | line | Real | &#8594; | Line number |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

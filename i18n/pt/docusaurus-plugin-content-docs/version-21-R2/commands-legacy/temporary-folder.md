@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Temporary folder.Syntax-->**Temporary folder**  : Text<!-- END REF-->
 <!--REF #_command_.Temporary folder.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Rota de acesso à pasta temporal |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

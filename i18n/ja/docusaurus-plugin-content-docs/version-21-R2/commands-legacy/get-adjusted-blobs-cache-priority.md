@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | "blob"優先度値を取得したいテーブル |
 | 戻り値 | Integer | &#8592; | "blob"フィールドのカレントの優先度値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

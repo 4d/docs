@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *object* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
 | object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
 | 戻り値 | Integer | &#8592; | オブジェクトのタイプ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

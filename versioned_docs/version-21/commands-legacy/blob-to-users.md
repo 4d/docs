@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *users* )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | users | Blob | &#8594;  | BLOB (encrypted) containing database user accounts created and saved by the database Administrator |
-
+</div>
 <!-- END REF-->
 
 ## Description 

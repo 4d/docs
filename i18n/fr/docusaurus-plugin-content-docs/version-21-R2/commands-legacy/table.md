@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table.Syntax-->**Table** ( *tableNum* : Integer ) : Pointer<br/>**Table** ( *tablePtr* : Pointer ) : Integer<br/>**Table** ( *fieldPtr* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableNum | Integer | &#8594;  | Numéro de table |
 | tablePtr | Pointer | &#8594;  | Pointeur de table |
 | fieldPtr | Pointer | &#8594;  | Pointeur de champ |
 | Résultat | Pointer, Integer | &#8592; | Pointeur de table si un numéro de table est passé<br/>Numéro de table si un pointeur de table ou un pointeur de champ est passé|
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get body.Syntax-->**WP Get body** ( *wpDoc* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get body.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
 | 戻り値 | Object | &#8592; | 4D Write Pro ボディ(本文) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

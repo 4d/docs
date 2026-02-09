@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE TEXT BOX.Syntax-->**WP DELETE TEXT BOX** ( *textBox* : Object )<!-- END REF-->
 <!--REF #_command_.WP DELETE TEXT BOX.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | textBox | Object | &#8594;  | Text box |
-
+</div>
 <!-- END REF-->
 
 *This command is not thread-safe, it cannot be used in preemptive code.*

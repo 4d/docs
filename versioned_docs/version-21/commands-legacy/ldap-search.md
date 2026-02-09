@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filter* {; *scope* {; *attributes* {; *attributesAsArray*}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dnRootEntry | Text | &#8594;  | Distinguished Name of root entry where search is to start |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | attributes | Text array | &#8594;  | Attribute(s) to fetch |
 | attributesAsArray | Boolean array | &#8594;  | True = force attributes to be returned as array; False = force attributes to be returned as a simple variable |
 | Function result | Object | &#8592; | Key/value attributes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

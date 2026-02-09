@@ -15,12 +15,15 @@ title: VP MOVE CELLS
 **VP MOVE CELLS** ( *originRange* : Object ; *targetRange* : Object ; *options* : Object )<!-- END REF -->
 
 <!-- REF #_method_.VP MOVE CELLS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |originRange|Object|->|Cell range to copy from|
 |targetRange|Object|->|Target range for the values, formatting and formulas|
-|options|Object|->|Additional options|<!-- END REF -->
+|options|Object|->|Additional options|
+</div>
+<!-- END REF -->
 
 ## Description
 

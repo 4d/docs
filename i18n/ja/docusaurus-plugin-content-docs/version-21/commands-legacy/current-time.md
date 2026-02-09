@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current time.Syntax-->**Current time** {( * )} : Time<!-- END REF-->
 <!--REF #_command_.Current time.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | サーバの時刻を返す |
 | 戻り値 | Time | &#8592; | 現在の時刻 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

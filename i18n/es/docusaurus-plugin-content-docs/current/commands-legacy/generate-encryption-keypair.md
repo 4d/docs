@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *llavePriv* : Blob ; *llavepublica* : Blob {; *longitud* : Integer} )<!-- END REF-->
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | llavePriv | Blob | &#8592; | BLOB que contiene la llave privada |
 | llavepublica | Blob | &#8592; | BLOB que contiene la llave pública |
 | longitud | Integer | &#8594; | Longitud de la llave (bits) [512...2048] Valor por defecto = 512 |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

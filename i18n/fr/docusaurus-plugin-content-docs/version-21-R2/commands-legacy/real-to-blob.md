@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *réel* : Real ; *blob* : Blob ; *formatRéel* : Integer {; offset } )<br/>**REAL TO BLOB** ( *réel* : Real ; *blob* : Blob ; *formatRéel* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.REAL TO BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | réel | Real | &#8594; | Valeur de type Réel à écrire dans le BLOB |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | formatRéel | Integer | &#8594; | 0=Format réel natif, 1=Format réel étendu, 2=Format réel double Macintosh, 3=Format réel double Windows |
 | offset &#124; * | Variable, Opérateur | &#8596; | Offset (en octets) dans le BLOB ou  * pour ajouter la valeur à la fin du BLOB |
 |  |  |  | Nouvel offset après l'écriture si * omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

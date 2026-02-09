@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.SEND RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela da qual enviar o registro corrente, ou Tabela padrão, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

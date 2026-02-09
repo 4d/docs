@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET LINK.Syntax-->**WP SET LINK** ( *targetObj* : Object ; *linkObj* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET LINK.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
 | linkObj | Object | &#8594;  | ハイパーリンクの値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *laTable* ; *priorité* )<!-- END REF-->
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table dont vous souhaitez modifier la priorité des données "blobs" pour toute la session |
 | priorité | Integer | &#8594;  | Priorité des données "blobs" de la table dans le cache |
-
+</div>
 <!-- END REF-->
 
 ## Mode expert 

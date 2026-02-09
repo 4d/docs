@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *fileName* ; *picture* {; *} )<!-- END REF-->
 <!--REF #_command_.READ PICTURE FILE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | Name or full pathname of the file to read, or empty string |
 | picture | Picture | &#8592; | Field or variable receiving picture |
 | * | Operator | &#8594;  | If passed = accept any type of file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

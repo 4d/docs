@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomVar* ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomVar | Text | &#8594;  | Nombre de una variable proceso o interproceso |
 | Resultado | Pointer | &#8592; | Puntero hacia una variable proceso o interproceso |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

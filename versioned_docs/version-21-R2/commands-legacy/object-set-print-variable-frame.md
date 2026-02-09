@@ -5,15 +5,17 @@ slug: /commands/object-set-print-variable-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( * ; *object* : Text ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<br/>**OBJECT SET PRINT VARIABLE FRAME** ( *object* : Field, Variable ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( * ; *object* : Text ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<br/>**OBJECT SET PRINT VARIABLE FRAME** ( *object* : Variable, Field ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
 | variableFrame | Boolean | &#8594;  | True = Variable frame printing, False = Fixed frame printing |
 | fixedSubform | Integer | &#8594;  | Options for printing subforms in fixed size |
-
+</div>
 <!-- END REF-->
 
 ## Description 

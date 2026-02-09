@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *targetObj* : Object {; *elementType* : Integer} ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get elements.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | 4D Write Pro ドキュメント、レンジ、または要素 |
 | elementType | Integer | &#8594;  | 取得したい要素の型 |
 | 戻り値 | Collection | &#8592; | 要素の参照を格納するコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

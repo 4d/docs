@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *titulo* {; *janela*} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW TITLE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | titulo | Text | &#8594;  | título da janela |
 | janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

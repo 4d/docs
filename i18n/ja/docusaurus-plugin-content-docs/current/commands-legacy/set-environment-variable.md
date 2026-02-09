@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *varName* : Text ; *varValue* : Text )<!-- END REF-->
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | varName | Text | &#8594; | 設定する変数の名前 |
 | varValue | Text | &#8594; | 変数の値、 またはデフォルト値をリセットする "" |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

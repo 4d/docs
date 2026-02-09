@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get query limit.Syntax-->**Get query limit** : Integer<!-- END REF-->
 <!--REF #_command_.Get query limit.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Nombre limite d’enregistrements, 0 = nombre illimité |
-
+</div>
 <!-- END REF-->
 
 ## Description 

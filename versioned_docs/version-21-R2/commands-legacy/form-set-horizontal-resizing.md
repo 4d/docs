@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *resize* : Boolean {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resize | Boolean | &#8594;  | True: The form can be resized horizontally False: The form cannot be resized horizontally |
 | minWidth | Integer | &#8594;  | Smallest form width allowed (pixels) |
 | maxWidth | Integer | &#8594;  | Largest form width allowed (pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

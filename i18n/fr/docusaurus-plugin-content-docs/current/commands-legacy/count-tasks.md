@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count tasks.Syntax-->**Count tasks**  : Integer<!-- END REF-->
 <!--REF #_command_.Count tasks.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Nombre total de process ouverts (y compris les process du moteur de 4D) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

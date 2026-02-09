@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Log.Syntax-->**Log** ( *Numero* ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Numero | Real | &#8594;  | Número para el cual devolver el logaritmo |
 | Resultado | Real | &#8592; | Logaritmo del número |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

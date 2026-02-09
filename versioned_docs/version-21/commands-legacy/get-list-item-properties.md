@@ -7,16 +7,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *list* ; *itemRef* ; *enterable* {; *styles* {; *icon* {; *color*}}} )<br/>**GET LIST ITEM PROPERTIES** ( * ; *list* ; * ; *enterable* {; *styles* {; *icon* {; *color*}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last list item added, or * for the current list item |
+| itemRef  | Integer, Operator | &#8594;  | Item reference number, or 0 for last list item added, or * for the current list item |
 | enterable | Boolean | &#8592; | TRUE = Enterable, FALSE = Non-enterable |
 | styles | Integer | &#8592; | Font style for the item |
 | icon | Text, Integer | &#8592; | Picture name or number |
 | color | Integer | &#8592; | RGB color value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

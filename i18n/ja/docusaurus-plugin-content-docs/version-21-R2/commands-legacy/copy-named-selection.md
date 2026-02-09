@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | セレクションをコピーするテーブル, または 省略した場合デフォルトテーブル |
 | name | Text | &#8594; | 作成する命名セレクションの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

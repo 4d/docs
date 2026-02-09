@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *arrNoms* {; *filtro*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET NAMES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrNoms | Text array | &#8592; | Array de nombres de métodos de proyecto |
 | filtro | Text | &#8594;  | Filtros de nombres |
 | * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

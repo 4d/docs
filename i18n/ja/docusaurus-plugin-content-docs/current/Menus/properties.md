@@ -12,9 +12,9 @@ title: メニュープロパティ
 メニューエディターを使って、テキストリテラルを直接、ラベルとして入力することができます。 または、変数参照、xliff参照を使用することもできます。これによりアプリケーションの翻訳が容易になります。 次のの参照タイプを使用できます:
 
 - :xliff:MyLabel という形の XLIFFリソース参照。 XLIFF参照についての詳細は、*4D デザインリファレンス* の [XLIFF アーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) の章を参照ください。
-- (**Deprecated**) An interprocess variable name followed by a number, for example: `:<>vlang,3`. この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
+- (**非推奨**) `:<>vlang,3` という形のインタープロセス変数名と、それに続く数値。 この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
 
-Using the 4D language, you set the title property through the *itemText* parameter of the [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), and [`SET MENU ITEM`](../commands/set-menu-item) commands.
+4D ランゲージを使用することで、[`APPEND MENU ITEM`](../commands/append-menu-item)、 [`INSERT MENU ITEM`](../commands/insert-menu-item)、 および [`SET MENU ITEM`](../commands/set-menu-item) コマンドらの *itemText* 引数を通してタイトルのプロパティを設定することができます。
 
 ### 制御文字の使用
 
@@ -33,9 +33,9 @@ Using the 4D language, you set the title property through the *itemText* paramet
 
 ## 引数
 
-各メニュー項目にカスタム引数を関連付けることができます。 メニュー項目の引数は、その内容を自由に設定できる文字列です。 It can be set in the Menu editor, or through the [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter) command.
+各メニュー項目にカスタム引数を関連付けることができます。 メニュー項目の引数は、その内容を自由に設定できる文字列です。 これはメニューエディター内で設定するか、あるいは [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter) コマンドを通して設定することができます。
 
-Menu item parameters are useful with programmed management of menus, in particular when using the [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu), [`Get menu item parameter`](../commands/get-menu-item-parameter) and [`Get selected menu item parameter`](../commands/get-selected-menu-item-parameter) commands.
+メニュー項目引数は、メニューのプログラミングによる管理において特に有用で、具体的には [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu)、 [`Get menu item parameter`](../commands/get-menu-item-parameter) および [`Get selected menu item parameter`](../commands/get-selected-menu-item-parameter) コマンドを使用している際に有用です。
 
 ## 動作
 
@@ -57,7 +57,7 @@ Menu item parameters are useful with programmed management of menus, in particul
 - **標準アクション**: 割り当てたいアクションを "標準アクション" コンボボックスから選択するか、記述します。 サポートされているアクションと引数 (任意) であれば、エリア内に入力することができます。 標準アクションの一覧については、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) を参照してください。
   **macOS に関する注記:** macOS の場合、プラットフォームインタフェース標準に合わせるために、*quit* (終了) アクションが割り当てられたカスタムメニューコマンドは自動でアプリケーションメニュー内に置かれます。
 
-Using the 4D language, you can associate a project method using the [`SET MENU ITEM METHOD`](../commands/set-menu-item-method) command, and a standard action using the [`SET MENU ITEM PROPERTY`](../commands/set-menu-item-property) command.
+4D ランゲージを使用すると、[`SET MENU ITEM METHOD`](../commands/set-menu-item-method) コマンドを使用してプロジェクトメソッドを割り当てることができる他、[`SET MENU ITEM PROPERTY`](../commands/set-menu-item-property) を使用して標準アクションを割り当てることもできます。
 
 ### 新規プロセスで開始
 
@@ -93,7 +93,7 @@ Using the 4D language, you can associate a project method using the [`SET MENU I
 メニューエディターでは、メニューのタイトルエリアにテキストを入力する代わりに、**区切り線** オプションを選択します。 すると、カレントメニューバーのエリアに線が表示されます。 このオプションが選択されると、ほかのプロパティは無効になります。
 **注:** macOS ではメニュー項目タイトルの一文字目を "-" にすると、その行が区切り線になります。
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), or [`SET MENU ITEM`](../commands/set-menu-item) commands.
+4D ランゲージにおいては、[`APPEND MENU ITEM`](../commands/append-menu-item)、 [`INSERT MENU ITEM`](../commands/insert-menu-item)、 および [`SET MENU ITEM`](../commands/set-menu-item) コマンドの *itemText* に対して`-` あるいは `(-` を入力することで分割線を挿入することができます。
 
 ### ショートカット
 
@@ -153,13 +153,13 @@ In the 4D language, you insert a separator line by entering `-` or `(-` as itemT
 
 ### チェック
 
-このオプションを使用して、メニュー項目にシステムチェックマークを関連付けることができます。 You can then manage the display of the check mark using language commands ([`SET MENU ITEM MARK`](../commands/set-menu-item-mark) and [`Get menu item mark`](../commands/get-menu-item-mark)).
+このオプションを使用して、メニュー項目にシステムチェックマークを関連付けることができます。 [`SET MENU ITEM MARK`](../commands/set-menu-item-mark) および [`Get menu item mark`](../commands/get-menu-item-mark) などのランゲージコマンドを使用することでチェックマークの表示を管理することができます。
 
 通常チェックマークは連続したアクションをおこなうメニュー項目に付けられ、そのアクションを現在実行中であることを示すために使用されます。
 
 ### フォントスタイル
 
-メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) language command.
+メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 メニューエディターのオプションを使用して、または [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) ランゲージコマンドを使って、メニューのスタイルを太字・イタリック・下線でカスタマイズすることができます。
 
 一般的なルールとして、フォントスタイルの適用は慎重におこなってください。 煩雑なスタイルの使用はユーザーの注意をそらし、アプリケーションの見た目を悪くします。
 
@@ -177,4 +177,4 @@ In the 4D language, you insert a separator line by entering `-` or `(-` as itemT
 
 項目からアイコンを取り除くには、"項目アイコン" エリアのメニューから **アイコンなし** を選択します。
 
-To define item icons using the 4D language, call the [`SET MENU ITEM ICON`](../commands/set-menu-item-icon) command.
+4Dランゲージを使って項目アイコンを設定するには、[`SET MENU ITEM ICON`](../commands/set-menu-item-icon) コマンドを使います。

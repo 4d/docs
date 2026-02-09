@@ -14,11 +14,13 @@ title: VP FLUSH COMMANDS
 **VP FLUSH COMMANDS** ( *vpAreaName* : Text {; *callback* : 4D.Function} )<!-- END REF -->
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
+<div class="no-index">
 
 | Parameter    | Type         |  | Description |
 |-------------|-------------|---|-------------|
 | vpAreaName  | Text        | -> | 4D View Pro area form object name |
-| callback    | 4D.Function | -> | (Optional) A callback function executed after all VP commands and 4D custom functions have been executed |  
+| callback    | 4D.Function | -> | (Optional) A callback function executed after all VP commands and 4D custom functions have been executed |
+</div>
 <!-- END REF -->
 
 ## Description

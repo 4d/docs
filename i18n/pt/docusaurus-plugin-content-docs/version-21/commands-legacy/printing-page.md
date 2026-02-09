@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Printing page.Syntax-->**Printing page**  : Integer<!-- END REF-->
 <!--REF #_command_.Printing page.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de página da página atualmente sendo impressa |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

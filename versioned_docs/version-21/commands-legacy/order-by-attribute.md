@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* ;} *objectField* ; *attributePath* ; > or < {; *objectField2* ; *attributePath2* ; > or <2 ; ... ; *objectFieldN* ; *attributePathN* ; > or <N} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records, or Default table, if omitted |
 | objectField | Object | &#8594;  | Object field containing the sorting attribute |
 | attributePath | Text | &#8594;  | Name or path of attribute on which to set the order for each level |
-| > or < | Operator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| > or < | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 | * | Operator | &#8594;  | Continue order flag |
-
+</div>
 <!-- END REF-->
 
 ## Description 

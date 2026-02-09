@@ -5,15 +5,17 @@ slug: /commands/st-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( * ; *object* : Text ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<br/>**ST GET OPTIONS** ( *object* : Field, Variable ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<!-- END REF-->
+<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( * ; *object* : Text ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer ; *value* : Integer)} )<br/>**ST GET OPTIONS** ( *object* : Variable, Field ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer ; *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST GET OPTIONS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | option | Integer | &#8594;  | Option to get |
 | value | Integer | &#8592; | Current value of option |
-
+</div>
 <!-- END REF-->
 
 ## Description 

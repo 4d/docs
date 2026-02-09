@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ({ *objects* : Integer ; *options* : Integer ; *method* : Text {; *tablesArray* : Integer array {; *fieldsArray* : Integer array}} })<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objects | Integer | &#8594;  | Objects to check |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | method | Text | &#8594;  | Name of 4D callback method |
 | tablesArray | Integer array | &#8594;  | Numbers of tables to be checked |
 | fieldsArray | Integer array | &#8594;  | 2D array, numbers of indexes to be checked |
-
+</div>
 <!-- END REF-->
 
 ## Description 

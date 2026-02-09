@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *barra* : Integer, Text, Text {; *proceso* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU BAR.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | barra | Integer, Text, Text | &#8594; | Número o nombre de la barra de menús o Referencia de menú |
 | proceso | Integer | &#8594; | Número de referencia del proceso |
 | * | Operador | &#8594; | Guardar el estado de la barra de menús |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

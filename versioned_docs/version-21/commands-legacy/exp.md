@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Exp.Syntax-->**Exp** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number to evaluate |
 | Function result | Real | &#8592; | Natural log base by the power of number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

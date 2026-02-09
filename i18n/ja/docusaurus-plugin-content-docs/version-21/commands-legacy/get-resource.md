@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* ; *resID* ; *resData* {; *resFile*} )<!-- END REF-->
 <!--REF #_command_.GET RESOURCE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resType | Text | &#8594;  | 4文字のリソースタイプ |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | resData | Blob | &#8594;  | データを受け取るBLOBフィールドまたは変数 |
 | &#8592; | リソースの内容 |
 | resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

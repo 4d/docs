@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *lista* ; *refElem* {; *refArray*} )<!-- END REF-->
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | lista | Integer | &#8594;  | Número de referência da lista |
 | refElem | Integer | &#8594;  | Número de referência do elemento ou 0 para o último elemento adicionado à lista |
 | refArray | Integer array | &#8594;  | Array de números de referência de elementos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost process.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Número do processo para a primeira janela não flutuante |
 | Resultado | Integer | &#8592; | Número do processo cujas janelas estão em primeiro plano |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

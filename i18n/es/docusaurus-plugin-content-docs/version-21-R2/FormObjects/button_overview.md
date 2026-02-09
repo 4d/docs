@@ -281,7 +281,7 @@ El estilo de botón Círculo aparece como un botón sistema circular.
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
+Este estilo de botón es compatible con macOS y [el tema Fluent UI Windows](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
 
 On Windows Classic UI theme, it is identical to the “None” style (the circle in the background is not taken into account).
 

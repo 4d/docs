@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is a list.Syntax-->**Is a list** ( *liste* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a list.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | liste | Integer | &#8594;  | Référence de la liste à tester |
 | Résultat | Boolean | &#8592; | Vrai si liste est une liste hiérarchique Faux si liste n'est pas une liste hiérarchique |
-
+</div>
 <!-- END REF-->
 
 ## Description 

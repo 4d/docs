@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *arrayComponentes* : Text array )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arrayComponentes | Text array | &#8592; | Nomes dos componentes |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

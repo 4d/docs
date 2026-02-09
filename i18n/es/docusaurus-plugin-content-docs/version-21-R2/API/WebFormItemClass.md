@@ -64,7 +64,7 @@ La función `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->oculta el com
 
 Para llamar a una función que oculta una imagen cuando el usuario hace clic en un botón:
 
-1. Create an [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function inside a shared singleton class named `isHidden` that contains the following code:
+1. Crear una función [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) al interior de una clase singleton compartida llamada `isHidden` que contiene el siguiente código:
 
 ```4d
 
@@ -73,7 +73,7 @@ exposed Function isHidden()
 	var myComponent : 4D.WebFormItem
 	
 	myComponent:=Web Form.myImage
-	myComponent.hide()  // Hide the component that has "myImage" as server reference 
+	myComponent.hide()  // Oculta el componente que tiene "myImage" como referencia servidor. 
 ```
 
 2. En Qodly Studio: seleccione el componente imagen en la página e introduzca una referencia del lado del servidor en el panel Propiedades > Server Side, por ejemplo "myImage".
@@ -110,7 +110,7 @@ La función `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summ
 
 #### Descripción
 
-The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->.If the component was already visible, the function does nothing.
+La función `.show()` <!-- REF #WebFormItemClass.show().Summary -->hace visible el componente<!-- END REF -->. Si el componente ya era visible, la función no hace nada.
 
 ## Ver también
 

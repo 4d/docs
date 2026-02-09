@@ -8,10 +8,13 @@ title: VP SUSPEND COMPUTING
 **VP SUSPEND COMPUTING** ( *vpAreaName* : Text ) <!-- END REF -->
 
 <!-- REF #_method_.VP SUSPEND COMPUTING.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|<!-- END REF -->
+|vpAreaName |Text|->|4D View Pro area form object name|
+</div>
+<!-- END REF -->
 
 ## Description
 

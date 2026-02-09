@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Select document.Syntax-->**Select document** ( *diretorio* ; *tipoArquivos* ; *titulo* ; *opçoes* {; *selecionados*} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | diretorio | Text, Integer | &#8594;  | Rota de acesso do diretório a exibir na caixa de diálogo de seleção de documentos, ou String vazia para exibir a pasta de usuário padrão ("Meus documentos" em Windows e "Documentos" em Mac OS) ou Número da rota de acesso memorizada. |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | opçoes | Integer | &#8594;  | Opções de seleção |
 | selecionados | Text array | &#8592; | Array que contém a lista de rotas de acesso + nomes dos arquivos selecionados |
 | Resultado | Text | &#8592; | Nome dos arquivos selecionados (primeiro arquivo da lista em caso de seleção múltipla) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

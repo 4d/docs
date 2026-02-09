@@ -9,10 +9,15 @@ title: VP SET ROW ATTRIBUTES
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
-| Paramètres  | Type   |    | Description                              |                  |
-| ----------- | ------ | -- | ---------------------------------------- | ---------------- |
-| rangeObj    | Object | -> | Plage de lignes                          |                  |
-| propertyObj | Object | -> | Objet contenant des propriétés de lignes | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres  | Type   |    | Description                              |
+| ----------- | ------ | -- | ---------------------------------------- |
+| rangeObj    | Object | -> | Plage de lignes                          |
+| propertyObj | Object | -> | Objet contenant des propriétés de lignes |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

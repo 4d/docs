@@ -7,11 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; *pageNumber* } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectNames | Text array | &#8592; | Object names sorted by entry order |
-| pageNumber &#124; * | Integer, Operator | &#8594;  | Number of the page for which to get the defined entry order (current page if omitted), or* to get the actual entry order of the current page |
-
+| pageNumber | Integer | &#8594;  | Number of the page for which to get the defined entry order (current page if omitted) |
+| * | Operator | &#8594;  | Get the actual entry order of the current page |
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE PARAMETER.Syntax-->**SET DATABASE PARAMETER** ( {*aTable* : Table ;} *selector* : Integer ; *value* : Real, Text )<!-- END REF-->
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to set the parameter or, Default table if this parameter is omitted |
 | selector | Integer | &#8594;  | Code of the database parameter to modify |
 | value | Real, Text | &#8594;  | Value of the parameter |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -273,7 +275,7 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 
 
-### Dates inside objects (85)
+### Dates inside objects (85) {#dates-inside-objects-85}
 
 **Scope:** Current process
 
@@ -283,11 +285,15 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 **Description**: Defines the way dates are stored within objects, as well as how they will be imported/exported in JSON. 
 
-When the selector value is Date type (default value for databases created with 4D v17 and higher), 4D dates are stored with the date type within objects, with respect to the local date settings. When converted to JSON format, date attributes will be converted to strings which do not include a time. (**Note:** this setting can be set by means of the "Use date type instead of ISO date format in objects" option found on the *Compatibility page* of the Database Settings).
+- `Date type` (default value): 4D dates are stored with the date type within objects. When converted to JSON format, date attributes will be converted to strings which do not include a time. 
+- `String type with time zone`: Converts 4D dates into ISO strings and takes the local time zone into account. For example, converting the date 23/08/2013 gives you "2013-08-22T22:00:000Z" in JSON format when the operation is performed in France during Daylight Savings Time (GMT+2). This principle conforms to the standard operation of JavaScript.
+- `String type without time zone`: Converts 4D dates into ISO strings and does not take the local time zone into account. Taking the local time zone into account (previous option) can be a source of errors when you want to send JSON date values to someone in a different time zone. This is the case for example when you export a table using [Selection to JSON](selection-to-json.md) in France that is meant to be reimported in the US using [JSON TO SELECTION](json-to-selection.md). Since dates are re-interpreted in each time zone, the time values stored in the database will be different. When setting `String type without time zone`, converting the date 23/08/2013 will then give you "2013-08-23T00:00:00Z" in all cases.
 
-Passing String type with time zone in this selector will convert 4D dates into ISO strings and take the local time zone into account. For example, converting the date 23/08/2013 gives you "2013-08-22T22:00:000Z" in JSON format when the operation is performed in France during Daylight Savings Time (GMT+2). This principle conforms to the standard operation of JavaScript. This can be a source of errors when you want to send JSON date values to someone in a different time zone. For example, when you export a table using [Selection to JSON](selection-to-json.md) in France that is meant to be reimported in the US using [JSON TO SELECTION](json-to-selection.md). Since dates are re-interpreted in each time zone, the values stored in the database will be different. In this case, you can modify the conversion mode for dates so that they do not take the time zone into account by passing String type without time zone in this selector. Converting the date 23/08/2013 will then give you "2013-08-23T00:00:00Z" in all cases.
+:::note
 
+In `Date type` mode (default), only JSON date strings in short format (e.g. "2026-08-23") are imported as date values in 4D objects. JSON date strings in datetime format (e.g. "2026-08-23T00:00:00Z") are imported as string values.
 
+:::
 
 
 ### Debug log recording (34)

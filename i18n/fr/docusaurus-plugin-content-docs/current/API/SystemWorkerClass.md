@@ -61,12 +61,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
+<div class="no-index">
+
 | Paramètres  | Type                            |                             | Description                                                            |
 | ----------- | ------------------------------- | :-------------------------: | ---------------------------------------------------------------------- |
 | commandLine | Text                            |              ->             | Ligne de commande à exécuter                                           |
 | options     | Object                          |              ->             | Paramètres du worker                                                   |
 | Résultat    | 4D.SystemWorker | <- | Nouveau System worker asynchrone ou null si le process n'a pas démarré |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -272,10 +275,13 @@ Function _createFile($title : Text; $textBody : Text)
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -318,7 +324,7 @@ $output:=$worker.response
 
 #### Description
 
-La propriété `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contient la ligne de commande passée en paramètre à la fonction [`new()`](#4dsystemworkernew)<!-- END REF -->.
+The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -436,11 +442,14 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 
+<div class="no-index">
+
 | Paramètres  | Type |     | Description                                                                        |
 | ----------- | ---- | :-: | ---------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texte à écrire dans le flux d'entrée (stdin) du process externe |
 | messageBLOB | Blob |  -> | Octets écrits dans le flux d'entrée                                                |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -489,10 +498,13 @@ La propriété `.responseError` <!-- REF #SystemWorkerClass.responseError.Summar
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -548,11 +560,14 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                            |                             | Description                                         |
 | ---------- | ------------------------------- | :-------------------------: | --------------------------------------------------- |
 | timeout    | Real                            |              ->             | Délai d'attente maximum en secondes pour la réponse |
 | Résultat   | 4D.SystemWorker | <- | Objet SystemWorker                                  |
 
+</div>
 <!-- END REF -->
 
 #### Description

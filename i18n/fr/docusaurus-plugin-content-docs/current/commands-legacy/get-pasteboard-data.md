@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *typeDonnées* : Text ; *données* : Blob )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | typeDonnées | Text | &#8594; | Type de données à extraire du conteneur |
 | données | Blob | &#8592; | Données extraites du conteneur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

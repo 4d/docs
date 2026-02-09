@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*aTable* : Table }{;}{ *setName* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table where records will be highlighted If omitted, table of current form |
 | setName | Text | &#8594;  | Set of records to highlight or Userset if omitted |
 | * | Operator | &#8594;  | Disable the automatic scroll of the list |
-
+</div>
 <!-- END REF-->
 
 ## Description 

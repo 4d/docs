@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SOAP Get info.Syntax-->**SOAP Get info** ( *infoNum* ) : Text<!-- END REF-->
 <!--REF #_command_.SOAP Get info.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | infoNum | Integer | &#8594;  | 取得するSOAP情報のタイプ番号 |
 | 戻り値 | Text | &#8592; | SOAP情報 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

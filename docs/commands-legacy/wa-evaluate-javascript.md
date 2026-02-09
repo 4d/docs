@@ -5,16 +5,18 @@ slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *object* : Text ; *jsCode* : Text {; *type* : Integer} )  : any<br/>**WA Evaluate JavaScript** ( *object* : Field, Variable ; *jsCode* : Text {; *type* : Integer} )  : any<!-- END REF-->
+<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *object* : Text ; *jsCode* : Text {; *type* : Integer} ) : any<br/>**WA Evaluate JavaScript** ( *object* : Variable, Field ; *jsCode* : Text {; *type* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | jsCode | Text | &#8594;  | JavaScript code |
 | type | Integer | &#8594;  | Type into which to convert result |
-| Function result | Date, Object, Pointer, Real, Text, Time | &#8592; | Result of evaluation |
-
+| Function result | any | &#8592; | Result of evaluation |
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -34,7 +36,7 @@ By default, the command returns values as strings. You can use the optional *typ
 | Is text       | Integer | 2     |
 | Is time       | Integer | 11    |
 
-**Warning**: Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print()**...) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
+**Warning**: Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print()*...*) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
 
 ## Example 1 
 

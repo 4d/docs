@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *assertions* : Boolean {; *} )<!-- END REF-->
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | assertions | Boolean | &#8594;  | True = enable assertions<br/>False = disable assertions |
 | * | Operator | &#8594;  | If omitted = command applies to all the processes (existing or created subsequently)<br/>If passed= command applies to current process only |
-
+</div>
 <!-- END REF-->
 
 ## Description 

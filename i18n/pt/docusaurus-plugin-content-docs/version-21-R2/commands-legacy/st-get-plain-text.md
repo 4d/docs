@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *objeto* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *objeto* : Field, Variable {; *refMode* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo. |
 | objeto | any | &#8594; | Nome de objeto (se * é especificado) ou Variável ou campo (se * é omitido) |
 | refMode | Integer | &#8594; | Mode for handling references found in the text |
 | Resultado | Text | &#8592; | Texto sem tags |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

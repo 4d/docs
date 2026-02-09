@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *infoType* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.WEB SERVICE Get info.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | infoType | Integer | &#8594; | 取得する情報 |
 | 戻り値 | Text | &#8592; | 最新のSOAPエラーに関する情報 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

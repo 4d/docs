@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Validate password.Syntax-->**Validate password** ( *refUsuario* ; *contraseña* {; *digest*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refUsuario | Integer, Text | &#8594;  | Número de referencia único |
 | contraseña | Text | &#8594;  | Contraseña no encriptada |
 | digest | Boolean | &#8594;  | Contraseña digest = True, <br/>Contraseña texto plano (por defecto) = False |
 | Resultado | Boolean | &#8592; | True = contraseña correcta False = contraseña incorrecta |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

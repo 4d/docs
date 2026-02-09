@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Timestamp.Syntax-->**Timestamp** : Text<!-- END REF-->
 <!--REF #_command_.Timestamp.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | ISOフォーマットを使用してミリ秒付きで返された現在時刻 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

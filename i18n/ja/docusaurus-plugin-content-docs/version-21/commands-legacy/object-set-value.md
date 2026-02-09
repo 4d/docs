@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* ; *value* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | objectName | Text | &#8594;  | オブジェクト名 |
 | value | any | &#8594;  | フォームオブジェクトのデータソースの新しい値 |
-
+</div>
 <!-- END REF-->
 
-## 例題 1 
+## 説明
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** は、*objectName* 引数で指定したフォームオブジェクトのカレントのデータソースに対して*value* 引数の値を設定します。<!-- END REF-->
 
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 
 **注**: データソースが代入不可能な式だった場合、**OBJECT SET VALUE** は何もしません。詳細な情報については、*代入可 vs 代入不可の式* を参照して下さい。
 
-## 例題 2 
+## 例題
 
 あるフォームオブジェクトのデータソース値を取得し、その名前を取得して新しい値を設定したい場合を考えます:
 

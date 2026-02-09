@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *methodType* {; *aTable*}{; *objectName*{; *formObjectName*}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | methodType | Integer | &#8594;  | Design object type selector |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | formObjectName | Text | &#8592; | Name of form object |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 | Function result | Text | &#8592; | Full path of object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Syntax-->**SELECT LIST ITEMS BY POSITION** ( {* ;} *list* ; *itemPos* {; *positionsArray*} )<!-- END REF-->
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
 | itemPos | Integer | &#8594;  | Position of item in expanded/collapsed list(s) |
 | positionsArray | Integer array | &#8594;  | Array of the positions in the expanded/collapsed list(s) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

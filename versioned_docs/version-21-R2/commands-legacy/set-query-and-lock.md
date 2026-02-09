@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *lock* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | lock | Boolean | &#8594;  | True = Lock the records found by queries False = Do not lock records |
-
+</div>
 <!-- END REF-->
 
 ## Description 

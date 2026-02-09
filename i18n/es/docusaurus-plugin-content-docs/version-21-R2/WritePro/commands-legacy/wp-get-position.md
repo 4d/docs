@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get position.Syntax-->**WP Get position** ( *objRango* : Object {; *layout* : Integer} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get position.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
 | layout | Integer | &#8594;  | Diseño de documento 4D Write Pro utilizado para la evaluación: 0 (predeterminado)= diseño 4D Write Pro, 1=HTML WYSIWYG |
 | Resultado | Object | &#8592; | Información de la posición |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB START SERVER.Syntax-->**WEB START SERVER**<!-- END REF-->
 <!--REF #_command_.WEB START SERVER.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

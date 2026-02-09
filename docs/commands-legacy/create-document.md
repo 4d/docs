@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create document.Syntax-->**Create document** ( *document* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Create document.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Text | &#8594;  | Document name or Full document pathname or Empty string for standard file dialog box |
 | fileType | Text | &#8594;  | List of types of documents to be screened, or "*" to not screen the documents |
 | Function result | Time | &#8592; | Document reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

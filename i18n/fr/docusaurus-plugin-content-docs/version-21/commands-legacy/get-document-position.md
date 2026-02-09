@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get document position.Syntax-->**Get document position** ( *docRef* ) : Real<!-- END REF-->
 <!--REF #_command_.Get document position.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594;  | Numéro de référence de document |
 | Résultat | Real | &#8592; | Position dans le fichier (exprimée en octets) à partir du début du fichier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

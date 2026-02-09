@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *aTable* : Table {; *...aField* : Field}{; *template* : Object})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to serialize |
 | aField | Field | &#8594;  | Field(s) whose contents must be serialized |
 | template | Object | &#8594;  | Object for selection of labels and fields |
 | Function result | Text | &#8592; | String containing serialized JSON array |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,15 +5,17 @@ slug: /commands/wa-set-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( * ; *object* : Text ; *selector* : Integer ; *value* : Boolean )<br/>**WA SET PREFERENCE** ( *object* : Field, Variable ; *selector* : Integer ; *value* : Boolean )<!-- END REF-->
+<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( * ; *object* : Text ; *selector* : Integer ; *value* : Boolean )<br/>**WA SET PREFERENCE** ( *object* : Variable, Field ; *selector* : Integer ; *value* : Boolean )<!-- END REF-->
 <!--REF #_command_.WA SET PREFERENCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | selector | Integer | &#8594;  | Preference to be modified |
 | value | Boolean | &#8594;  | Value of the preference (True = allowed,  False = not allowed) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

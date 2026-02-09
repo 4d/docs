@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *objeto* : Text ; *activo* : Boolean )<br/>**OBJECT SET ENABLED** ( *objeto* : Field, Variable ; *activo* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
 | objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable (se se omite *) |
 | activo | Boolean | &#8594; | True = objeto(s) activo(s), de lo contrario False |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

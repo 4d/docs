@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *list* : Integer, Text {; *itemsArray* : Integer array {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | itemsArray | Integer array | &#8592; | 2番目の * 省略時: 配列にはリスト中で選択された 項目の位置配列が返される 2番目の * 指定時: 配列には選択された項目の 参照が返される |
 | * | 演算子 | &#8594; | 省略時: 項目位置 指定時: 項目参照 |
 | 戻り値 | Integer | &#8592; | 2番目の * 省略時: 展開/折りたたまれたされたリスト中 現在選択されている項目位置 2番目の * 指定時: 選択されている項目の参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

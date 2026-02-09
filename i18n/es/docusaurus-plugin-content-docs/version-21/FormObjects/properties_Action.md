@@ -195,9 +195,9 @@ Puede asignar al mismo tiempo una acción estándar y un método proyecto de un 
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                                                                                                                                                                                             |
-| ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| action | string         | The name of a valid [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) or [4D Write Pro standard action](../WritePro/user-legacy/standard-actions.md). |
+| Nombre | Tipos de datos | Valores posibles                                                                                                                                                                                                       |
+| ------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| action | string         | El nombre de una [acción estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) o de una [acción estándar 4D Write Pro](../WritePro/user-legacy/standard-actions.md) válida. |
 
 #### Objetos soportados
 

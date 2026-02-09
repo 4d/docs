@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Syntax-->**Open window** ( *izquierda* ; *superior* ; *derecha* ; *inferior* {; *tipo* {; *titulo* {; *casillaCerrar*}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | izquierda | Integer | &#8594;  | Coordenada global izquierda del interior de la ventana |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | titulo | Text | &#8594;  | Título de la ventana |
 | casillaCerrar | Text | &#8594;  | Método a llamar en caso de doble clic del menú Control o de clic en la casilla Cerrar |
 | Resultado | Integer | &#8592; | Número de referencia de la ventana |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

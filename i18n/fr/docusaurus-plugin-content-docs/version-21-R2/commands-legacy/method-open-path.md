@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *chemin* : Text {; *line* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD OPEN PATH.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chemin | Text | &#8594; | Chemin de la méthode à ouvrir |
 | line | Real | &#8594; | Line number |
 | * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

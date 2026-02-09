@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imageRésultat* : Picture ; *image1* : Picture ; *opérateur* : Integer ; *image2* : Picture {; *décalHoriz* : Integer ; *décalVert* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | imageRésultat | Picture | &#8592; | Image résultant de la combinaison |
@@ -15,10 +17,9 @@ displayed_sidebar: docs
 | image2 | Picture | &#8594; | Seconde image à combiner |
 | décalHoriz | Integer | &#8594; | Décalage horizontal pour la superposition |
 | décalVert | Integer | &#8594; | Décalage vertical pour la superposition |
-
+</div>
 <!-- END REF-->
 
-## Description 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->La commande **COMBINE PICTURES** permet de combiner les images *image1* et *image2* en mode *opérateur* pour en produire une troisième, *imageRésultat*.<!-- END REF--> L’image résultat est de type composé et conserve toutes les caractéristiques des images sources.
 
@@ -33,7 +34,7 @@ Si les paramètres facultatifs *décalHoriz* et *décalVert* sont utilisés, une
 
 **Note :** La superposition effectuée par la commande **COMBINE PICTURES** diffère de la superposition proposée par les opérateurs “classiques” & et | (superposition exclusive et superposition inclusive). Tandis que la commande **COMBINE PICTURES** conserve les caractéristiques de chaque image source dans l’image résultante, les opérateurs & et | traitent chaque pixel et génèrent une image bitmap dans tous les cas. Ces opérateurs, conçus à l’origine pour les images monochromes, sont désormais obsolètes.
 
-## Exemple 
+#### Exemple 
 
 Soient les images suivantes : 
 

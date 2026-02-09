@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is editing text.Syntax-->**Is editing text**  : Boolean<!-- END REF-->
 <!--REF #_command_.Is editing text.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Vrai si le texte est en cours de saisie, sinon faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

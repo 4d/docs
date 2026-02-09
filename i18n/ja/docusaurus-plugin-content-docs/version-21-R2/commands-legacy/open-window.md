@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Syntax-->**Open window** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *type* : Integer {; *title* : Text {; *controlMenuBox* : Text}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | left | Integer | &#8594; | ウィンドウ内容領域のグローバル左座標 |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | title | Text | &#8594; | ウィンドウのタイトル または "" でデフォルトのフォームタイトルを使用 |
 | controlMenuBox | Text | &#8594; | コントロールメニューボックスがダブルクリック またはクローズボックスがクリックされたときに 呼び出すメソッド |
 | 戻り値 | Integer | &#8592; | ウィンドウ参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

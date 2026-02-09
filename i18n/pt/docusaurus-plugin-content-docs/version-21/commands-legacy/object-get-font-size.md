@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( {* ;} *objeto* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font size.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
 | objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Variável ou Campo (se * é omitido). |
 | Resultado | Integer | &#8592; | Tamanho de fonte em pontos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

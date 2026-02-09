@@ -64,7 +64,7 @@ title: ピクチャー
 
 *(\*) 通常は  macOS = 72dpi, Windows = 96dpi*
 
-## Dark mode pictures
+## ダークモードピクチャー
 
 [フォームがダークスキームを使用](properties_FormProperties.md#カラースキーム) している場合に、標準のピクチャーの代わりに使用する専用のピクチャーやアイコンを定義することができます。
 
@@ -79,7 +79,7 @@ title: ピクチャー
 
 :::note
 
-The dark mode is not available on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows).
+ダークモードは、Windows の [クラシックテーマ](../settings/interface.md#windows-上でfluent-ui-を使用) では利用できません。
 
 :::
 

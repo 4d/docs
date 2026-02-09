@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* ; *formula* {; *return* {; *param*} {; *param2* ; ... ; *paramN*}} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | subformObject | Text | &#8594;  | Name of subform object |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | return | *, Variable | &#8594;  | * if formula does not return a value |
 | &#8592; | Value returned by formula |
 | param | Expression | &#8594;  | Parameter(s) passed to formula |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get subsection.Syntax-->**WP Get subsection** ( *targetObj* : Object ) : Object<br/>**WP Get subsection** (*wpSection* : Object ; *subSectionType* : Integer ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get subsection.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
 | wpSection | Object | &#8594;  | 4D Write Pro section |
 | subSectionType | Integer | &#8594;  | Subsection type (wk first page, wk left page, or wk right page) |
 | Function result | Object | &#8592; | Subsection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

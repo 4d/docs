@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET LINK.Syntax-->**WP SET LINK** ( *targetObj* ; *linkObj* )<!-- END REF-->
 <!--REF #_command_.WP SET LINK.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | linkObj | Object | &#8594;  | Hyperlink value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

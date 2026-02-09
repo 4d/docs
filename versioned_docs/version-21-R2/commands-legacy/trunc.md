@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trunc.Syntax-->**Trunc** ( *number* : Real ; *places* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number to be truncated |
 | places | Integer | &#8594;  | Number of decimal places used for truncating |
 | Function result | Real | &#8592; | Number with its decimal part truncated to the number of decimal places specified by Places |
-
+</div>
 <!-- END REF-->
 
 ## Description 

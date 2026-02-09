@@ -63,9 +63,9 @@ title: アニメーション
 
 ---
 
-## Switch every x seconds
+## アニメーション間隔 (秒)
 
-Enables cycling through the contents of the picture button at the specified speed (in seconds). このモードでは、他のすべてのオプションが無視されます。
+このモードを使用すると、一定のスピードで (秒単位) ピクチャーボタンの内容が繰り返し表示されます。 このモードでは、他のすべてのオプションが無視されます。
 
 #### JSON 文法
 

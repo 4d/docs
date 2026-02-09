@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REMOVE FROM SET.Syntax-->**REMOVE FROM SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.REMOVE FROM SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Current record's table, or Default table, if omitted |
 | set | Text | &#8594;  | Name of the set from which to remove the current record |
-
+</div>
 <!-- END REF-->
 
 ## Description 

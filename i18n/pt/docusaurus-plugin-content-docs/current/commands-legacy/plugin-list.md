@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *numerosArray* : Integer array ; *arrayNomes* : Text array )<!-- END REF-->
 <!--REF #_command_.PLUGIN LIST.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numerosArray | Integer array | &#8592; | Números de plug-ins |
 | arrayNomes | Text array | &#8592; | Nomes de plug-ins |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

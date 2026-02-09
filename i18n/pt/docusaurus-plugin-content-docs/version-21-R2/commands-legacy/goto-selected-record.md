@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*tabela* : Table ;} *posicao* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela na qual ir ao registro selecionado ou Tabela por padrão, se omitida |
 | posicao | Integer | &#8594; | Posição do registro na seleção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

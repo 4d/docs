@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( *header* : テキスト, テキスト配列 )<br/>**WEB SET HTTP HEADER** ( *fieldArray* : テキスト, テキスト配列 ; *valueArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | header&#124;fieldArray | テキスト, テキスト配列 | &#8594; | リクエストHTTPヘッダーを格納したフィールドまたは変数、またはHTTPヘッダーフィールド |
 | valueArray | Text array | &#8594; | HTTPヘッダーフィールドコンテンツ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

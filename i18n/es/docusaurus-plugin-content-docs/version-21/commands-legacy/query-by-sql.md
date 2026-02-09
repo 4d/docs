@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*tabla* ;} *formulaSQL* )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla en la cual devolver una selección de registros o Tabla por defecto si este parámetro se omite |
 | formulaSQL | Text | &#8594;  | Fórmula de búsqueda SQL válida representando la cláusula WHERE de la búsqueda SELECT |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

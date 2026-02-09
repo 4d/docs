@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Devuelve el archivo de estructura de la base local |
 | Resultado | Text | &#8592; | Nombre largo del archivo de estructura de la base |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

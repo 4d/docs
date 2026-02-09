@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *left* ; *top* ; *right* ; *bottom* {; *screen* {; *screenArea*}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | left | Integer | &#8592; | 画面エリアの左端のグローバル座標 |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | bottom | Integer | &#8592; | 画面エリアの下端のグローバル座標 |
 | screen | Integer | &#8594;  | 画面番号、または省略した場合には主画面(メインスクリーン) |
 | screenArea | Integer | &#8594;  | 画面全体(デフォルト)または利用可能エリア |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

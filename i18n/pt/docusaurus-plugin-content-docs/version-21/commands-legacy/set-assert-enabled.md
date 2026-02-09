@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *asserções* {; *} )<!-- END REF-->
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | asserções | Boolean | &#8594;  | TRUE = Ativa asserções FALSE = desativa asserções |
 | * | Operador | &#8594;  | Se omitido = comando aplica a todos os processos (existidos ou que serão criados) se passado, o comando = aplica apenas ao processo atual. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -5,14 +5,16 @@ slug: /commands/object-get-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get enabled** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get enabled** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enabled.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Boolean | &#8592; | True = object(s) enabled; Otherwise, false |
-
+</div>
 <!-- END REF-->
 
 ## Description 

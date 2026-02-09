@@ -19,6 +19,12 @@ La librería se muestra en una ventana aparte:
 
 ![](../assets/en/FormEditor/library2.png)
 
+:::info
+
+Some objects in this library are only available if a [specific component](../Extensions/overview.md#components-developed-by-4d) is loaded in the application. For example, 4D Write Pro areas need the [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) component to be loaded.
+
+:::
+
 La ventana tiene las siguientes características principales:
 
 - Área de vista previa con mensajes de ayuda: el área central muestra una vista previa de cada objeto. Puede pasar el ratón por encima de un objeto para obtener información sobre el mismo en un mensaje de ayuda.

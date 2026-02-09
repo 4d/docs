@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Refresh license.Syntax-->**Refresh license** : Object<!-- END REF-->
 <!--REF #_command_.Refresh license.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Object | &#8592; | Objeto de estado |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

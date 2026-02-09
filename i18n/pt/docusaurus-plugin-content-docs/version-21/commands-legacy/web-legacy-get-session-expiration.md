@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *idSessao* ; *dataVenc* ; *horaVenc* )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | idSessao | Text | &#8594;  | UUID de sessão |
 | dataVenc | Date | &#8592; | Data de vencimento da cookie |
 | horaVenc | Time | &#8592; | Hora de vencimento da cookie |
-
+</div>
 <!-- END REF-->
 
 ## Nota de compatibilidade 

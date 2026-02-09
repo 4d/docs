@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *area* ; *aTable* )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | aTable | Integer | &#8594;  | Table number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

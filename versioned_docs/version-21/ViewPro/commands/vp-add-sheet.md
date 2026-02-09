@@ -7,12 +7,15 @@ title: VP ADD SHEET
 **VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer ; *name* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |index|Integer|-> |Index of the new sheet|
-|name|Text|->|Sheet name|<!-- END REF -->
+|name|Text|->|Sheet name|
+</div>
+<!-- END REF -->
 
 ## Description
 

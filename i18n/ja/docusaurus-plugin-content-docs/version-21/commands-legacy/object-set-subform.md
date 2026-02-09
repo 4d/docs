@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( {* ;} *object* {; *aTable*}; *detailSubform* {; *listSubform*} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | aTable | Table | &#8594;  | フォームのテーブル (テーブルフォームの場合) |
 | detailSubform | Text, Object | &#8594;  | 詳細フォーム名(テキスト)あるいは詳細フォームを定義した.jsonファイルへのPOSIXパス(テキスト)、あるいはサブフォームの詳細フォームを定義したオブジェクト |
 | listSubform | Text, Object | &#8594;  | リストフォーム名(テキスト)、あるいはリストフォームを定義した.jsonファイルへのPOSIXパス(テキスト)、あるいはサブフォームのリストフォーム(テーブルフォーム)を定義したオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

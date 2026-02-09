@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Records in selection.Syntax-->**Records in selection** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in selection.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return number of selected records, or Default table, if omitted |
 | Function result | Integer | &#8592; | Records in selection of table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | url | Text | &#8594;  | URL auquel envoyer la requête |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | &#8592; | Valeurs d’en-têtes retournées |
 | * | Opérateur | &#8594;  | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
 | Résultat | Integer | &#8592; | Code de statut HTTP |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilité

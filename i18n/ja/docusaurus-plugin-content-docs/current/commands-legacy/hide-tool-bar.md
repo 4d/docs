@@ -7,16 +7,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE TOOL BAR.Syntax-->**HIDE TOOL BAR**<!-- END REF-->
 <!--REF #_command_.HIDE TOOL BAR.Params-->
+<div class="no-index">
+
 | このコマンドは引数を必要としません |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## 説明 
 
-<!--REF #_command_.HIDE TOOL BAR.Summary-->**HIDE TOOL BAR** コマンドは、カレントプロセスにおいて[Open form window](open-form-window.md) コマンドで作成されたカスタムのツールバーの表示を管理します。<!-- END REF-->
+<!--REF #_command_.HIDE TOOL BAR.Summary-->**HIDE TOOL BAR** コマンドは、カレントプロセスにおいて[Open form window](../commands/open-form-window.md) コマンドで作成されたカスタムのツールバーの表示を管理します。<!-- END REF-->
 
-[Open form window](open-form-window.md) コマンドにToolbar form window オプションを使用してツールバーウィンドウが作成されている場合、このコマンドはそのウィンドウを非表示にします。ツールバーウィンドウが既に非表示状態であるとき、またはこのタイプのウィンドウが作成されていない場合には、コマンドは何もしません。
+[Open form window](../commands/open-form-window.md) コマンドにToolbar form window オプションを使用してツールバーウィンドウが作成されている場合、このコマンドはそのウィンドウを非表示にします。ツールバーウィンドウが既に非表示状態であるとき、またはこのタイプのウィンドウが作成されていない場合には、コマンドは何もしません。
 
 ## 例題 
 

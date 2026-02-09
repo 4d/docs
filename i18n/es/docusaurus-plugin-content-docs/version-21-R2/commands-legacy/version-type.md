@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Version type.Syntax-->**Version type**  : Integer<!-- END REF-->
 <!--REF #_command_.Version type.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Información sobre el tipo de versión (bitfield) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

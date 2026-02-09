@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last field number.Syntax-->**Last field number** ( numTable ) : Integer<br/>**Last field number** ( ptrTable ) : Integer<!-- END REF-->
 <!--REF #_command_.Last field number.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable &#124; ptrTable | Entier long, Pointeur | &#8594;  | Numéro de table ou Pointeur vers une table |
 | Résultat | Integer | &#8592; | Numéro de champ le plus élevé dans la table |
-
+</div>
 <!-- END REF-->
 
 #### Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*aTable* ;} *set* )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to create an empty set, or Default table, if omitted |
 | set | Text | &#8594;  | Name of the new empty set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

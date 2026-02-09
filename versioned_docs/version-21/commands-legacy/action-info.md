@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *target*} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Standard action name or pattern including parameter if required |
 | target | Integer | &#8594;  | Defines the target of the action to get information: main form or current form |
 | Function result | Object | &#8592; | Object containing action status as boolean properties: isEnabled, isVisible, isChecked, isMixed, isUnknownState |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *zone* : Integer ; *numColonne* : Integer ; *numLigne* : Integer ; *propriété* : Integer ) : any<!-- END REF-->
 <!--REF #_command_.QR Get text property.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594; | Référence de la zone |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numLigne | Integer | &#8594; | Numéro de ligne |
 | propriété | Integer | &#8594; | Numéro de propriété |
 | Résultat | Text, Integer | &#8592; | Valeur de la propriété |
-
+</div>
 <!-- END REF-->
 
 ## Description 

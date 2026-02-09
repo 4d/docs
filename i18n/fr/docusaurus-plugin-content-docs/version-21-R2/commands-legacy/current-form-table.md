@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form table.Syntax-->**Current form table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current form table.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Pointer | &#8592; | Pointeur vers la table à laquelle appartient le formulaire actuellement affiché |
-
+</div>
 <!-- END REF-->
 
 ## Description 

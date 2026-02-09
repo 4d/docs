@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *liste* ; *apparence* {; *icône* {; *hauteurLigne* {; *doubleClic* {; *multiSélection* {; *modifiable*}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | liste | Integer | &#8594;  | Numéro de référence de la liste |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | doubleClic | Integer | &#8594;  | Déploiement/contraction sur double-clic 0 = autoriser, 1= empêcher |
 | multiSélection | Integer | &#8594;  | Sélections multiples 0 = interdire (défaut), 1 = autoriser |
 | modifiable | Integer | &#8594;  | Enumération modifiable 0 = non, 1 = oui (défaut) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

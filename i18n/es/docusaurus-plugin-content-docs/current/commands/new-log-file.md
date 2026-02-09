@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 **Nota preliminar:** este comando sólo funciona con 4D Server. Sólo puede ejecutarse mediante el comando [Execute on server](../commands-legacy/execute-on-server.md) o en un procedimiento almacenado.
 
-<!--REF #_command_.New log file.Summary-->The **New log file** command closes the current log file, renames it and creates a new one with the same name in the same location as the previous one<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
+<!--REF #_command_.New log file.Summary-->El comando **New log file** cierra el archivo de registro actual, le cambia el nombre y crea uno nuevo con el mismo nombre en la misma ubicación que el anterior<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
 
 El comando devuelve el nombre completo de la ruta (ruta de acceso + nombre) del archivo de registro que se está cerrando (llamado “segment”). Este archivo se almacena en la misma ubicación que el archivo de registro actual (especificado en la [página de configuración](../Backup/settings.md#configuration) en el tema de copia de seguridad de la configuración). El comando no realiza ningún procesamiento (compresión, segmentación) en el archivo guardado. No aparece ninguna
 caja de diálogo.

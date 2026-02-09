@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Transaction level.Syntax-->**Transaction level**  : Integer<!-- END REF-->
 <!--REF #_command_.Transaction level.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Nível transação atual (0 se nenhuma transação for iniciada) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variável* : Variable ; *BLOB* : Blob {; offset | *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | variável | Variable | &#8594; | Variável a ser armazenada no BLOB |
 | Blob | Blob | &#8594; | BLOB a receber a variável |
 | offset &#124; * | Variável, Operador | &#8596; | Offset da variável(expressado em bytes) no BLOB ou * para adicionar o valor |
 |  |  |  | Novo offset depois de escrita se * for omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

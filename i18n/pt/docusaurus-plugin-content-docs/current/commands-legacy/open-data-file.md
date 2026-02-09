@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *endAcesso* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATA FILE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | endAcesso | Text | &#8594; | Nome o endereço de acesso completo ao arquivo de dados a ser aberto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

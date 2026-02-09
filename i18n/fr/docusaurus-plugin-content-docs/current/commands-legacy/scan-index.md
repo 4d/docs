@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *leChamp* ; *nombre* : Integer {; > ou <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ indexé avec lequel "scanner" les enregistrements |
 | nombre | Integer | &#8594; | Nombre d'enregistrements à retourner |
 | > ou < | Opérateur | &#8594; | > à partir du début de l'index < à partir de la fin de l'index |
-
+</div>
 <!-- END REF-->
 
 ## Description 

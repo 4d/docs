@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *mouseX* : Real ; *mouseY* : Real ; *mouseButton* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.MOUSE POSITION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | mouseX | Real | &#8592; | Horizontal coordinate of mouse |
 | mouseY | Real | &#8592; | Vertical coordinate of mouse |
 | mouseButton | Integer | &#8592; | Mouse button state: 0 = Button up 1 = Button down 2 = Right button down 3 = Both buttons down |
 | * | Operator | &#8594;  | If specified, global coordinate system is usedIf omitted, local coordinate system is used |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*aTable* ;} *document* )<!-- END REF-->
 <!--REF #_command_.EXPORT SYLK.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table from which to export data, or Default table, if omitted |
 | document | Text | &#8594;  | SYLK document to receive the data |
-
+</div>
 <!-- END REF-->
 
 ## Description 

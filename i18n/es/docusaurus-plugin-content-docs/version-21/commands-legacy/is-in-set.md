@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is in set.Syntax-->**Is in set** ( *conjunto* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is in set.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | conjunto | Text | &#8594;  | Nombre del conjunto a borrar |
 | Resultado | Boolean | &#8592; | El registro actual está en el conjunto (True) o El registro actual no está en el conjunto (False) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -281,9 +281,9 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
+このボタンスタイルはmacOS および[Windows Fluent UI テーマ](../FormEditor/forms.md#fluent-ui-レンダリングを有効化する)でサポートされています。
 
-On Windows Classic UI theme, it is identical to the “None” style (the circle in the background is not taken into account).
+Windows Classic UI テーマ上では、これは"なし"スタイルと同一です(背景の円は考慮されません)。
 
 #### JSON 例:
 

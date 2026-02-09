@@ -7,11 +7,14 @@ title: VP SET COLUMN ATTRIBUTES
 **VP SET COLUMN ATTRIBUTES** ( *rangeObj* : Object  ; *propertyObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|propertyObj |Object|->|Object containing column properties|<!-- END REF -->
+|propertyObj |Object|->|Object containing column properties|
+</div>
+<!-- END REF -->
 
 ## Description
 

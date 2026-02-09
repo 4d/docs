@@ -5,14 +5,16 @@ slug: /commands/object-set-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *object* : Text ; *active* : Boolean )<br/>**OBJECT SET ENABLED** ( *object* : Field, Variable ; *active* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *object* : Text ; *active* : Boolean )<br/>**OBJECT SET ENABLED** ( *object* : Variable, Field ; *active* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | active | Boolean | &#8594;  | True = object(s) enabled; otherwise, False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last table number.Syntax-->**Last table number**  : Integer<!-- END REF-->
 <!--REF #_command_.Last table number.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Highest table number in the database |
-
+</div>
 <!-- END REF-->
 
 ## Description 

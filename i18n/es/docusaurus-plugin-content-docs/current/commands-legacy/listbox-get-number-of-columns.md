@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get number of columns.Syntax-->**LISTBOX Get number of columns** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get number of columns** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get number of columns.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | Resultado | Integer | &#8592; | Número de columnas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

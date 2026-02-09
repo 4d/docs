@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get selected menu item parameter.Syntax-->**Get selected menu item parameter**  : Text<!-- END REF-->
 <!--REF #_command_.Get selected menu item parameter.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Parâmetro personalizado do item de menu |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* ; *column* ; *row* ; *border* ; *line* {; *color*} )<!-- END REF-->
 <!--REF #_command_.QR SET BORDERS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | border | Integer | &#8594;  | Border composite value |
 | line | Integer | &#8594;  | Line thickness |
 | color | Integer | &#8594;  | Border color |
-
+</div>
 <!-- END REF-->
 
 ## Description 

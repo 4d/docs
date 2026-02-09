@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *ptrChp* : Pointeur, Entier long ; *énumération* : Text ; *obligatoire* : Boolean ; *nonSaisissable* : Boolean ; *nonModifiable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTable* : Pointeur, Entier long ; *numChamp* : Integer ; *énumération* : Text ; *obligatoire* : Boolean ; *nonSaisissable* : Boolean ; *nonModifiable* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChp &#124; numTable | Pointeur, Entier long | &#8594; | Pointeur de champ ou Numéro de table |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | obligatoire | Boolean | &#8592; | Vrai = Obligatoire, Faux = Facultatif |
 | nonSaisissable | Boolean | &#8592; | Vrai = Non saisissable, Faux = Saisissable |
 | nonModifiable | Boolean | &#8592; | Vrai = Non modifiable, Faux = Modifiable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

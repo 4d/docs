@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *aTable* ; *fieldsArray* ; *indexType* ; *indexName* {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | インデックスを作成するためのテーブル |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | indexType | Integer | &#8594;  | 作成されるインデックスのタイプ: -1 = キーワード、 0 = デフォルト、 1 = 標準 B-Tree、 3 = クラスタ B-Tree |
 | indexName | Text | &#8594;  | 作成するインデックスの名前 |
 | * | 演算子 | &#8594;  | 渡されると = 非同期インデックス |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

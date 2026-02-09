@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *path* {; *appName*}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text | &#8594;  | Path of document or URL to open |
 | appName | Text | &#8594;  | Name of application to use |
 | * | Operator | &#8594;  | If specified = URL is not translated, If omitted = URL is translated |
-
+</div>
 <!-- END REF-->
 
 ## Description 

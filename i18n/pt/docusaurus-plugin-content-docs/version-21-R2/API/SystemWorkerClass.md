@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descrição
 
-A propriedade `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contém a linha de comando passada como parâmetro para a função [`new()`](#4dsystemworkernew)<!-- END REF -->.
+The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -439,7 +439,7 @@ Essa propriedade é **somente leitura**.
 | Parâmetro   | Tipo |     | Descrição                                                                              |
 | ----------- | ---- | :-: | -------------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texto para escrever no fluxo de entrada (stdin) do processo externo |
-| messageBLOB | Blob |  -> | Bytes escritos no fluxo de entrada                                                     |
+| messageBLOB | Blob |  -> | Bytes write on the input stream                                                        |
 
 <!-- END REF -->
 
@@ -551,7 +551,7 @@ Essa propriedade é **somente leitura**.
 | Parâmetro  | Tipo                            |                             | Descrição                          |
 | ---------- | ------------------------------- | :-------------------------: | ---------------------------------- |
 | timeout    | Real                            |              ->             | Tempo máximo de espera em segundos |
-| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker               |
+| Resultados | 4D.SystemWorker | <- | SystemWorker object                |
 
 <!-- END REF -->
 

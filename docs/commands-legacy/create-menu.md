@@ -5,13 +5,15 @@ slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create menu.Syntax-->**Create menu** ( *menu* : Text, Integer, Text ) : Text<!-- END REF-->
+<!--REF #_command_.Create menu.Syntax-->**Create menu** ({ *menu* : Text, Integer }) : Text<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Text, Integer, Text | &#8594;  | Menu reference or Number or Name of menu bar |
+| menu | Text, Integer | &#8594;  | Menu reference or Number or Name of menu bar |
 | Function result | Text | &#8592; | Menu reference |
-
+</div>
 <!-- END REF-->
 
 ## Description 

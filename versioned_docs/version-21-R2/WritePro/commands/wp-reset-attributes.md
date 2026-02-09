@@ -6,13 +6,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Syntax-->**WP RESET ATTRIBUTES** ( *targetObj* : Object ; *...attribName* : Text )<br/>**WP RESET ATTRIBUTES** ( *sectionOrSubsection* : Object {; *...attribName* : Text })<br/>**WP RESET ATTRIBUTES** ( *targetObj* : Object ; *attribColl* : Collection )<br/> **WP RESET ATTRIBUTES** ( *sectionOrSubsection* : Object {; *attribColl* : Collection})<!-- END REF-->
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | sectionOrSubsection | Object | &#8594;  | Section or subsection of a 4D Write Pro document |
 | attribName | Text | &#8594;  | Name of attribute(s) to remove |
 | attribColl | Collection | &#8594;  | Collection of attributes to remove |
-
+</div>
 <!-- END REF-->
 
 ## Description 

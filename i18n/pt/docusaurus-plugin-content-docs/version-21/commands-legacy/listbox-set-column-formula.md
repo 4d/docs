@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( {* ;} *objeto* ; *formula* ; *tipoDado* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | formula | Text | &#8594;  | Fórmula 4D associada à coluna |
 | tipoDado | Integer | &#8594;  | Tipo de resultado da fórmula |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

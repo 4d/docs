@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Replace string.Syntax-->**Replace string** ( *fuente* ; *obsoleta* ; *nueva* {; *reemplazos*}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | fuente | Text | &#8594;  | Cadena original |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | reemplazos | Integer | &#8594;  | Número de reemplazos a efectuar Si se omite, se reemplazan todas las ocurrencias |
 | * | Operador | &#8594;  | Si se pasa: evaluación basada en los códigos de los caracteres |
 | Resultado | Text | &#8592; | Cadena resultante |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

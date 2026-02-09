@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *rota* ; *tipoMetodo* ; *prtTabela* ; *nomObjeto* ; *nomObjetoForm* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rota | Text | &#8594;  | Rota a resolver |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomObjeto | Text | &#8592; | Nome de formulário ou método de base |
 | nomObjetoForm | Text | &#8592; | Nome de objeto de formulário |
 | * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

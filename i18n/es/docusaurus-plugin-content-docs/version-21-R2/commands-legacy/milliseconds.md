@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Milliseconds.Syntax-->**Milliseconds**  : Integer<!-- END REF-->
 <!--REF #_command_.Milliseconds.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de milisegundos transcurridos desde que se inició el equipo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

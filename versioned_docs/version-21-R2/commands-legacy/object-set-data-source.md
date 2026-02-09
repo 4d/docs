@@ -5,14 +5,16 @@ slug: /commands/object-set-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( * ; *object* : Text ; *dataSource* : Pointer )<br/>**OBJECT SET DATA SOURCE** ( *object* : Field, Variable ; *dataSource* : Pointer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( * ; *object* : Text ; *dataSource* : Pointer )<br/>**OBJECT SET DATA SOURCE** ( *object* : Variable, Field ; *dataSource* : Pointer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Form object name (if * is specified) or<br/>Field or variable (if * is omitted) |
 | dataSource | Pointer | &#8594;  | Pointer to new data source for object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *liste* ; *refElément* ) : Text<br/>**Get list item font** ( * ; *liste* ; * ) : Text<!-- END REF-->
 <!--REF #_command_.Get list item font.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
 | liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
 | refElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
 | Résultat | Text | &#8592; | Nom de police |
-
+</div>
 <!-- END REF-->
 
 ## Description 

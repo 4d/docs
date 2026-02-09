@@ -8,12 +8,15 @@ title: VP Export to object
 **VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Export to object.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |options| Object|->|Export options|
-|Result| Object|<-|4D View Pro object|<!-- END REF -->
+|Result| Object|<-|4D View Pro object|
+</div>
+<!-- END REF -->
 
 ## Description
 

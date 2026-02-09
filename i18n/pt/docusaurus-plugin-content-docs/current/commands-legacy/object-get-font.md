@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get font.Syntax-->**OBJECT Get font** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get font** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get font.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
 | objeto | any | &#8594; | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido). |
 | Resultado | Text | &#8592; | Nome da fonte |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *objet* ; *propriété* )<!-- END REF-->
 <!--REF #_command_.OB SET NULL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objet | Object, Object | &#8594;  | Objet structuré |
 | propriété | Text | &#8594;  | Nom de la propriété à laquelle appliquer la valeur null |
-
+</div>
 <!-- END REF-->
 
 ## Description 

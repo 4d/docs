@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Version type.Syntax-->**Version type**  : Integer<!-- END REF-->
 <!--REF #_command_.Version type.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | バージョンのタイプに関する情報(ビットフィールド形式) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

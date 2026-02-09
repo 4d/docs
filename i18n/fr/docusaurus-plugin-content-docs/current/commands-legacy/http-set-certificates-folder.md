@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *dossierCertificats* : Text )<!-- END REF-->
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | dossierCertificats | Text | &#8594; | Chemin d’accès et nom du dossier des certificats du client |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilité

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL End selection.Syntax-->**SQL End selection**  : Boolean<!-- END REF-->
 <!--REF #_command_.SQL End selection.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | El resultado establece los límites alcanzados |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -5,15 +5,17 @@ slug: /commands/listbox-set-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( * ; *object* : Text ; *row* : Integer ; *height* : Integer )<br/>**LISTBOX SET ROW HEIGHT** ( *object* : Field, Variable ; *row* : Integer ; *height* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( * ; *object* : Text ; *row* : Integer ; *height* : Integer )<br/>**LISTBOX SET ROW HEIGHT** ( *object* : Variable ; *row* : Integer ; *height* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | row | Integer | &#8594;  | List box row whose height you want to set |
 | height | Integer | &#8594;  | Height of list box row |
-
+</div>
 <!-- END REF-->
 
 ## Description 

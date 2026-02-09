@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *objeto* : Text ; numTabela | tempo  {; *nomeSelecionado* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *objeto* : Field, Variable ; numTabela | tempo  {; *nomeSelecionado* : Text} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | numTabela &#124; tempo | Inteiro longo, String | &#8594; | Seleção temporária |
 | nomeSelecionado | Text | &#8594; | Nome do conjunto selecionado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

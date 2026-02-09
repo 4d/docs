@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Syntax-->**LISTBOX SET STATIC COLUMNS** ( * ; *objet* : Text ; *nbColonnes* : Integer )<br/>**LISTBOX SET STATIC COLUMNS** ( *objet* : Field, Variable ; *nbColonnes* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | nbColonnes | Integer | &#8594; | Nombre de colonnes à rendre statiques |
-
+</div>
 <!-- END REF-->
 
 ## Description 

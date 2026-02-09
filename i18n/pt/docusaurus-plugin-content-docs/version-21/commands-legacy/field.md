@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Syntax-->**Field** ( *numTabela* ; *numCampo* ) -> pontCampo <br/>
 **Field** ( *pontCampo* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Field.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numTabela | Integer | &#8594;  | Número da tabela |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo | Descrição |
 | pontCampo | Pointer | &#8594;  | Ponteiro do campo |
 | Resultado | Integer | &#8592; | Número do campo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

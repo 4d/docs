@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *objectField* ; *path* ; *valuesArray* )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | objectField | Field | &#8594;  | 重複しない属性値の一覧を取得したいオブジェクトフィールド |
 | path | Text | &#8594;  | 重複しない値を取得したい属性へのパス |
 | valuesArray | Text array, Integer array, Boolean array, Date array, Time array | &#8592; | 属性パス内の重複しない値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

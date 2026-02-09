@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* ; *menuTitlesArray* ; *menuRefsArray* )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | メニュー参照またはメニュー番号 |
 | menuTitlesArray | Text array | &#8592; | メニュータイトル配列 |
 | menuRefsArray | Text array | &#8592; | メニュー参照配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

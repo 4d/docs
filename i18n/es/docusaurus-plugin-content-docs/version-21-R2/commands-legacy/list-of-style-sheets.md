@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *arrHojasEstilo* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrHojasEstilo | Text array | &#8592; | Nombres de las hojas de estilo definidas en la aplicación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

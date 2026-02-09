@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( {* ;} *objeto* {; *item*} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Tabela ou Variável (se * é omitido) |
 | item | Integer | &#8594;  | Número do item |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

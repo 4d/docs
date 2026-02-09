@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Picture range.Syntax-->**WP Picture range** ( *rangoObj* : Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Picture range.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rangoObj | Object | &#8594;  | Rango de objetos del cual obtener imágenes |
 | Resultado | Object | &#8592; | Rango de objetos que contiene imágenes únicamente |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

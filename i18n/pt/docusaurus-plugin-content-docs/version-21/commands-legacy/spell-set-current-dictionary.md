@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dicionário* )<!-- END REF-->
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | dicionário | Integer, Text | &#8594;  | Dicionário a ser usado para correção ortográfica |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

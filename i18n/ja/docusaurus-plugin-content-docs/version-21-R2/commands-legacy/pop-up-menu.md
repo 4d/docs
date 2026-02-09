@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contents* : Text {; *default* : Integer {; *xCoord* : Integer ; *yCoord* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Pop up menu.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | contents | Text | &#8594; | 定義された項目テキスト |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | xCoord | Integer | &#8594; | 左上角のX座標 |
 | yCoord | Integer | &#8594; | 左上角のY座標 |
 | 戻り値 | Integer | &#8592; | 選択された項目番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

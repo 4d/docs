@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *largura* : Integer ; *altura* : Integer )<!-- END REF-->
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | largura | Integer | &#8594; | Pixels a adicionar ou remover da largura da janela do formulário atual |
 | altura | Integer | &#8594; | Pixels a adicionar ou remover da altura da janela do formulário atual |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

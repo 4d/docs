@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *tabNoms* {; *tabNomsAlt* {; *tabModèles*}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabNoms | Text array | &#8592; | Noms des imprimantes |
 | tabNomsAlt | Text array | &#8592; | Windows : Emplacements des imprimantes, macOS : Noms personnalisés des imprimantes |
 | tabModèles | Text array | &#8592; | Modèles des imprimantes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

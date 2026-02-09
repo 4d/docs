@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get focus rectangle invisible** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
 | objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
 | Resultado | Boolean | &#8592; | True = retângulo de foco oculto, False = retângulo de foco visível |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

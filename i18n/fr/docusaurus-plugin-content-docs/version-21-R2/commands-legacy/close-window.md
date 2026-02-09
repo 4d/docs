@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre externe ou Fenêtre de premier plan du process si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

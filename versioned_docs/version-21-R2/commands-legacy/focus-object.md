@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Focus object.Syntax-->**Focus object**  : Pointer<!-- END REF-->
 <!--REF #_command_.Focus object.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Pointer | &#8592; | Pointer to the object having the focus |
-
+</div>
 <!-- END REF-->
 
 ## Compatibility Note 

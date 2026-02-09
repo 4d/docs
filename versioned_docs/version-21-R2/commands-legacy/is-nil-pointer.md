@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *aPointer* : Pointer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is nil pointer.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aPointer | Pointer | &#8594;  | Pointer to be tested |
 | Function result | Boolean | &#8592; | TRUE = Nil pointer (->[]) FALSE = Valid pointer to an existing object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

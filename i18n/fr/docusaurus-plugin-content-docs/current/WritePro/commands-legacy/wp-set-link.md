@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET LINK.Syntax-->**WP SET LINK** ( *objCible* : Object ; *objLien* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET LINK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | objLien | Object | &#8594;  | Valeur du lien hypertexte |
-
+</div>
 <!-- END REF-->
 
 ## Description 

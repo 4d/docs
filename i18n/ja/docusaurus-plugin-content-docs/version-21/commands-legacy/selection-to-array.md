@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( field | table ; *array* {; *aField* ; *array* {; *aField2* ; *array2* ; ... ; *aFieldN* ; *arrayN*}}{; *})}<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | field &#124; table | フィールド, テーブル | &#8594;  | データを取得するフィールドまたは レコード番号を取得するテーブル |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | aField | Field | &#8594;  | 配列に値を取得するフィールド |
 | array | Array | &#8592; | フィールドデータを受け取る配列 |
 | * | 演算子 | &#8594;  | 実行をスタックする |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

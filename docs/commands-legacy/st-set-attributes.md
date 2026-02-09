@@ -5,17 +5,19 @@ slug: /commands/st-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text, *attribValue* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *object* : Field, Variable ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text, *attribValue* : Text, Integer)} )<!-- END REF-->
+<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Text, Integer {; ...(*attribName* : Integer ; *attribValue* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *object* : Variable, Field ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Text, Integer {; ...(*attribName* : Integer ; *attribValue* : Text, Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Text field or variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | startSel | Integer | &#8594;  | Start of new text selection |
 | endSel | Integer | &#8594;  | End of new text selection |
-| attribName | Text | &#8594;  | Attribute to set |
+| attribName | Integer | &#8594;  | Attribute to set |
 | attribValue | Text, Integer | &#8594;  | New value of attribute |
-
+</div>
 <!-- END REF-->
 
 ## Description 

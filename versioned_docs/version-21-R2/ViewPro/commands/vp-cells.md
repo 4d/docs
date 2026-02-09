@@ -15,6 +15,7 @@ title: VP Cells
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -24,7 +25,9 @@ title: VP Cells
 |columnCount| Integer|->|Number of columns|
 |rowCount| Integer|->|Number of rows|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of cells|<!-- END REF -->
+|Result|Object|<-|Range object of cells|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -14,6 +14,7 @@ title: VP REMOVE TABLE COLUMNS
 **VP REMOVE TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *sheet* : Integer }} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -21,7 +22,9 @@ title: VP REMOVE TABLE COLUMNS
 |tableName|Text|->|Table name|
 |column|Integer|->|Index in the table of the starting column to remove|
 |count|Integer|->|Number of columns to remove (must be >0) |
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+</div>
+<!-- END REF -->
 
 ## Description
 

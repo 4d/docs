@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table from which to copy selection, or Default table, if omitted |
 | name | Text | &#8594;  | Name of the named selection to create |
-
+</div>
 <!-- END REF-->
 
 ## Description 

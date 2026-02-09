@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.RECEIVE RECORD.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table dans laquelle recevoir l'enregistrement, ou Table par défaut si omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

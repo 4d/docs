@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *refElément* ; *cheminFichier* )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594;  | Référence d’élément XML racine |
 | cheminFichier | Text | &#8594;  | Chemin d’accès complet du fichier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

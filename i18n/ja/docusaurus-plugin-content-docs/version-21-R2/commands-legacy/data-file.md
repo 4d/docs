@@ -5,13 +5,15 @@ slug: /commands/data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file.Syntax-->**Data file** ( *segment* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Data file.Syntax-->**Data file** ( { *segment* : Integer } ) : Text<!-- END REF-->
 <!--REF #_command_.Data file.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | segment | Integer | &#8594; | 廃止、使用されません |
 | 戻り値 | Text | &#8592; | データベースのデータファイルのロング名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

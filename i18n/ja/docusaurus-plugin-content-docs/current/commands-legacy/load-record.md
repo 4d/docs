@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | レコードをロードするテーブル, または 省略時、デフォルトテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

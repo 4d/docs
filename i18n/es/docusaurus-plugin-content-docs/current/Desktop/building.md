@@ -498,7 +498,7 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 ## Página licencias y certificados
 
-The Licenses & Certificate page can be used to:
+La página Licencias y certificados puede utilizarse para:
 
 - configure las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) que quiere integrar en su aplicación [monopuesto](#application-page) o [cliente-servidor](#clientserver-page),
 - firmar la aplicación mediante un certificado en macOS.

@@ -4,15 +4,15 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> *contextObj* : Object<br/>**WA Get context** ( *object* : Field, Variable ) -> *contextObj* : Object<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
 
 <!--REF #_command_.WA Get context.Params-->
 
-| Parâmetro  | Tipo     |                             | Descrição                                                                                                                                       |
-| ---------- | -------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador | &#8594; | Se especificado, *object* é um nome de objeto (string). Se omitido, *object* é uma variável. |
-| object     | any      | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                  |
-| contextObj | Object   | &#8592; | Context object if previously defined, otherwise `null`.                                                                         |
+| Parâmetro | Tipo           |                             | Descrição                                                                                                                                       |
+| --------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*        | Operador       | &#8594; | Se especificado, *object* é um nome de objeto (string). Se omitido, *object* é uma variável. |
+| object    | Text, Variable | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                  |
+| Resultado | Object         | &#8592; | Context object if previously defined, otherwise `null`.                                                                         |
 
 <!-- END REF-->
 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *campoObjeto* : Field ; *arrayRuta* : Text array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campoObjeto | Field | &#8594; | Campo objeto indexado |
 | arrayRuta | Text array | &#8592; | Array para recibir la lista de rutas diferentes |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -5,8 +5,10 @@ slug: /commands/listbox-get-cell-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *object* : Text {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *object* : Field, Variable {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *object* : Text {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *object* : Variable {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | column | Integer | &#8592; | 列番号 |
 | row | Integer | &#8592; | 行番号 |
 | colVar | Pointer | &#8592; | 列変数へのポインタ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

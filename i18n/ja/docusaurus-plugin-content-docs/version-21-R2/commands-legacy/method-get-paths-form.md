@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTable* : Table ;} *arrPaths* : Text array {; *filter* : Text}{; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | テーブル参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | filter | Text | &#8594; | 名前フィルター |
 | stamp | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

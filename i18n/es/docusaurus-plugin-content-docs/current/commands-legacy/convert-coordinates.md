@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* : Integer ; *coordY* : Integer ; *de* : Integer ; *a* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | coordX | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
 | coordY | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
 | de | Integer | &#8594; | Sistema de coordenadas de origen |
 | a | Integer | &#8594; | Sistema de coordenadas a convertir el punto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 
@@ -33,7 +35,7 @@ En el parámetro *de*, pase el sistema de coordenadas inicial del punto de entra
 
 Cuando este comando se llama desde el método de un subformulario o un objeto de un subformulario, y si uno de los selectores es XY Current form, a continuación, las coordenadas son relativas al subformulario en sí, no a su formulario padre.
 
-Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](get-window-rect.md), o con los valores pasados ​​a [Open form window](open-form-window.md)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en macOS, donde es equivalente a XY Screen.
+Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](get-window-rect.md), o con los valores pasados ​​a [Open form window](../commands/open-form-window.md)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en macOS, donde es equivalente a XY Screen.
 
 Cuando *de* es XY Current form y el punto se encuentra en la sección del cuerpo de un formulario listado, el resultado depende del contexto de llamada del comando:
 

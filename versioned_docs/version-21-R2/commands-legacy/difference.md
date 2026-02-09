@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set1 | Text | &#8594;  | Set |
 | set2 | Text | &#8594;  | Set to subtract |
 | resultSet | Text | &#8594;  | Resulting set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

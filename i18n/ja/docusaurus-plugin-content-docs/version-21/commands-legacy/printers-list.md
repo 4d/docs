@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *namesArray* {; *altNamesArray* {; *modelsArray*}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | namesArray | Text array | &#8592; | プリンタ名 |
 | altNamesArray | Text array | &#8592; | Windows: プリンタの場所 macOS: カスタムプリンタ名 |
 | modelsArray | Text array | &#8592; | プリンタモデル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

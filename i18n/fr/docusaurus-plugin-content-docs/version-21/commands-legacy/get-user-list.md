@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *nomsUtil* ; *réfUtil* )<!-- END REF-->
 <!--REF #_command_.GET USER LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomsUtil | Text array | &#8592; | Noms des utilisateurs tels qu'ils apparaissent dans l'éditeur de Mots de passe |
 | réfUtil | Integer array | &#8592; | Numéros de référence uniques pour chaque utilisateur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

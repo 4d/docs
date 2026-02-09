@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( {* ;} *objeto* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get current URL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
 | Resultado | Text | &#8592; | URL actualmente cargada en el área Web |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

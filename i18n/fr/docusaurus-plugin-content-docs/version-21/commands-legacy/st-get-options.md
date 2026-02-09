@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( {* ;} *objet* ; *option* ; *valeur* {; *option2* ; *valeur2* ; ... ; *optionN* ; *valeurN*} )<!-- END REF-->
 <!--REF #_command_.ST GET OPTIONS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
 | objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | option | Integer | &#8594;  | Option à lire |
 | valeur | Integer | &#8592; | Valeur courante de l’option |
-
+</div>
 <!-- END REF-->
 
 ## Description 

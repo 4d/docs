@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *texto* ; *posErr* ; *longErr* ; *posVerif* ; *arrSug* )<!-- END REF-->
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | texto | Text | &#8594;  | Texto a revisar |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | longErr | Integer | &#8592; | Longitude da palavra desconhecida |
 | posVerif | Integer | &#8594;  | Posição de inicio da verificação |
 | arrSug | Text array | &#8592; | Lista de sugestões |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

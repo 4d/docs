@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *targetField* : Field ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetField | Field | &#8594;  | Field used to compare the values |
 | array | Array | &#8594;  | Array of searched values |
-
+</div>
 <!-- END REF-->
 
 ## Description 

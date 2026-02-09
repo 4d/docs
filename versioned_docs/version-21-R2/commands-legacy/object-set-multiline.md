@@ -5,14 +5,16 @@ slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *object* : Text ; *multiline* : Integer )<br/>**OBJECT SET MULTILINE** ( *object* : Field, Variable ; *multiline* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *object* : Text ; *multiline* : Integer )<br/>**OBJECT SET MULTILINE** ( *object* : Variable, Field ; *multiline* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Form object name (if * is specified) or<br/>Field or variable (if * is omitted) |
 | multiline | Integer | &#8594;  | Status of multiline property |
-
+</div>
 <!-- END REF-->
 
 ## Description 

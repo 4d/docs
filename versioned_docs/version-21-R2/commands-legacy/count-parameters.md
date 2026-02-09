@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count parameters.Syntax-->**Count parameters**  : Integer<!-- END REF-->
 <!--REF #_command_.Count parameters.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Number of parameters actually passed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

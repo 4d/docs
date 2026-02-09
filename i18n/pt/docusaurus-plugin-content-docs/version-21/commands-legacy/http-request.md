@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *metodoHTTP* ; *url* ; *conteúdo* ; *resultado* {; *nomCab* ; *valCab*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | metodoHTTP | Text | &#8594;  | Método HTTP para a solicitação |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | &#8592; | Valores dos cabeçalhos devolvidos |
 | * | Operador | &#8594;  | Se passada, a conexão se mantém (keep-alive)Se omitida, a conexão é fechada automaticamente. |
 | Resultado | Integer | &#8592; | Código de estado HTTP |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilidade

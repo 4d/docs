@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( {* ;} *object* ; *key* {; *modifiers*} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable or field |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable or field (if * is omitted) |
 | key | Text | &#8594;  | Key to associate with object |
 | modifiers | Integer | &#8594;  | Modifier key mask or combination of masks |
-
+</div>
 <!-- END REF-->
 
 ## Description 

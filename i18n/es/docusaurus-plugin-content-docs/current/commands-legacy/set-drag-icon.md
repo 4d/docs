@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icono* : Picture {; *despH* : Integer {; *despV* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET DRAG ICON.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | icono | Picture | &#8594; | Icono a utilizar durante arrastrar |
 | despH | Integer | &#8594; | Desplazamiento horizontal del borde izquierdo de la imagen con respecto a la posición del cursor (> = 0, a la izquierda, <0 = a la derecha) |
 | despV | Integer | &#8594; | Desplazamiento vertical del borde superior de la imagen con respecto a la posición del cursor (> 0 = hacia arriba, <0 = hacia abajo) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get root XML element.Syntax-->**DOM Get root XML element** ( *refElemento* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get root XML element.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594; | Referência de elemento XML |
 | Resultado | Text | &#8592; | Referência do elemento raiz ou "" em caso de erro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Type.Syntax-->**Type** ( *fieldVar* ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fieldVar | Field, Variable | &#8594;  | テストするフィールドまたは変数 |
 | 戻り値 | Integer | &#8592; | データタイプ番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

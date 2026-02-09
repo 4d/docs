@@ -5,8 +5,10 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* : Text {; *nameSpace* : Text} {; *nameSpaceName* : Text ; *nameSpaceValue* : Text} {; ...(*nameSpaceName* : Text, *nameSpaceValue* : Text)} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* : Text {; *nameSpace* : Text} {; ...(*nameSpaceName* : Text ; *nameSpaceValue* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | root | Text | &#8594;  | Name of root element |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nameSpaceName | Text | &#8594;  | Namespace name |
 | nameSpaceValue | Text | &#8594;  | Namespace value |
 | Function result | Text | &#8592; | Root XML element reference |
-
+</div>
 <!-- END REF-->
 
 ## Description 

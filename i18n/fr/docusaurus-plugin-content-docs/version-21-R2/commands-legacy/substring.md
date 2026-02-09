@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Substring.Syntax-->**Substring** ( *source* : Text ; àPartirDe {; *nbCars* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594; | Chaîne de laquelle extraire une sous-chaîne |
 | àPartirDe | Integer | &#8594; | Position du premier caractère |
 | nbCars | Integer | &#8594; | Nombre de caractères à extraire |
 | Résultat | Text | &#8592; | Sous-chaîne de source |
-
+</div>
 <!-- END REF-->
 
 ## Description 

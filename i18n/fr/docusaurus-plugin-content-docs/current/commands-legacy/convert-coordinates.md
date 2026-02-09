@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* : Integer ; *coordY* : Integer ; *depuis* : Integer ; *vers* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | coordX | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
 | coordY | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
 | depuis | Integer | &#8594; | Système de coordonnées d'origine |
 | vers | Integer | &#8594; | Système de coordonnées dans lequel convertir le point |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -33,7 +35,7 @@ Dans le paramètre *depuis*, passez le système d'origine dans lequel sont expri
 
 Lorsque cette commande est appelée depuis la méthode d'un sous-formulaire ou d'un objet du sous-formulaire, si l'un des sélecteurs est XY Current form, les coordonnées correspondantes sont relatives au sous-formulaire lui-même, et non celles de son formulaire parent. 
 
-Lorsque vous effectuez une conversion depuis/vers la position d'une fenêtre de formulaire (par exemple une conversion depuis les résultats de [GET WINDOW RECT](get-window-rect.md), ou vers des valeurs passées à [Open form window](open-form-window.md)), le sélecteur XY Main window doit être utilisé car il s'agit du système de coordonnées utilisé par les commandes de gestion des fenêtres sous Windows. Ce sélecteur peut également être utilisé dans ce but sous macOS, où il est équivalent à XY Screen.
+Lorsque vous effectuez une conversion depuis/vers la position d'une fenêtre de formulaire (par exemple une conversion depuis les résultats de [GET WINDOW RECT](get-window-rect.md), ou vers des valeurs passées à [Open form window](../commands/open-form-window.md)), le sélecteur XY Main window doit être utilisé car il s'agit du système de coordonnées utilisé par les commandes de gestion des fenêtres sous Windows. Ce sélecteur peut également être utilisé dans ce but sous macOS, où il est équivalent à XY Screen.
 
 Lorsque le sélecteur *depuis* contient XY Current form et que le point à convertir est situé dans la zone de corps d'un formulaire liste, le résultat dépend du contexte d'appel de la commande : 
 

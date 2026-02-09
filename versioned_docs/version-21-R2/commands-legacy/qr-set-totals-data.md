@@ -5,15 +5,18 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : Integer, Text )<br/>**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *value* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : Integer )<br/>**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *value* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | colNum | Integer | &#8594;  | Column number |
 | breakNum | Integer | &#8594;  | Break number |
-| operator &#124; value | Integer, Text | &#8594;  | Operator value for the cell or Cell content |
-
+| operator | Integer | &#8594;  | Operator value for the cell |
+| value | Text | &#8594;  | Cell content |
+</div>
 <!-- END REF-->
 
 ## Description 

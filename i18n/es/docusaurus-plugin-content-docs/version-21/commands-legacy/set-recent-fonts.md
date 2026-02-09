@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *arrayFuentes* )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrayFuentes | Text array | &#8594;  | Array de nombres de fuentes |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

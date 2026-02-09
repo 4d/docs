@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL Get current data source.Syntax-->**SQL Get current data source**  : Text<!-- END REF-->
 <!--REF #_command_.SQL Get current data source.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Nombre de la fuente de datos que está siendo utilizada |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

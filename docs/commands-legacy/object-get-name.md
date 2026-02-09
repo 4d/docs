@@ -5,23 +5,25 @@ slug: /commands/object-get-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** ( *selector* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** ({ *selector* : Integer }) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get name.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | Object category |
 | Function result | Text | &#8592; | Name of object |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
 <!--REF #_command_.OBJECT Get name.Summary-->The **OBJECT Get name** command returns the name of a form object.<!-- END REF--> 
 
-The command can be used to designate two types of objects according to the value of the *selector* parameter. In this parameter, you can pass one of the following constants (placed in the "*Form Objects (Access)*" theme:
+The command can be used to designate two types of objects according to the value of the *selector* parameter. In this parameter, you can pass one of the constants (placed in the "*Form Objects (Access)*" theme:
 
-* Object current or *selector* omitted: If you pass this selector or omit the *selector* parameter, the command returns the name of the object from which it was called (object method or submethod called by the object method). In this case, the command must be called in the context of a form object, otherwise it returns an empty string.
-* Object with focus: If you pass this selector, the command returns the name of the object that has the focus in the form.
+* `Object current` or *selector* omitted: If you pass this selector or omit the *selector* parameter, the command returns the name of the object from which it was called (object method or submethod called by the object method). In this case, the command must be called in the context of a form object, otherwise it returns an empty string.
+* `Object with focus`: If you pass this selector, the command returns the name of the object that has the focus in the form.
 
 ## Example 
 

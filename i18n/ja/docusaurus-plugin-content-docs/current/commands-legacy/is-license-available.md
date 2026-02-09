@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is license available.Syntax-->**Is license available** ( *license* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | license | Integer | &#8594; | ライセンスの有効性テストを行うプラグイン |
 | 戻り値 | Boolean | &#8592; | プラグインが利用可能な場合はTrue、その他の場合はFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

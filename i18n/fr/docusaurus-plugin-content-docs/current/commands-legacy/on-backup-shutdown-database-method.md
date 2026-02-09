@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Backup Shutdown database method.Syntax-->On Backup Shutdown ($status)<!-- END REF-->
 <!--REF #_command_.On Backup Shutdown database method.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | $status | Integer | &#8592; | 0 = sauvegarde terminée normalement, autre valeur = erreur, interruption utilisateur ou code retourné par Sur démarrage sauvegarde |
-
+</div>
 <!-- END REF-->
 
 ## 

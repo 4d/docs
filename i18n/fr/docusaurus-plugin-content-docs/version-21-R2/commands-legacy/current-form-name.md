@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form name.Syntax-->**Current form name**  : Text<!-- END REF-->
 <!--REF #_command_.Current form name.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Text | &#8592; | Nom du formulaire projet courant ou du formulaire table courant dans le process |
-
+</div>
 <!-- END REF-->
 
 ## Description 

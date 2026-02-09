@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *ptrChp* ; *tableDest* ; *champDest* {; *discriminant* {; *allerAuto* {; *retourAuto*}}} )<br/>**GET RELATION PROPERTIES** ( *numTable* ; *numChamp* ; *tableDest* ; *champDest* {; *discriminant* {; *allerAuto* {; *retourAuto*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de champ ou Numéro de table |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | discriminant | Integer | &#8592; | Numéro du champ discriminant ou 0 si aucun champ discriminant |
 | allerAuto | Boolean | &#8592; | Vrai = Lien aller automatique, Faux = Lien aller manuel |
 | retourAuto | Boolean | &#8592; | Vrai = Lien retour automatique, Faux = Lien retour manuel |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,14 +5,16 @@ slug: /commands/set-picture-metadata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *picture* : Picture ; *metaName* : Text ; *metaContents* : Variable {; ...(*metaName* : Text, *metaContents* : Variable)} )<!-- END REF-->
+<!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *picture* : Picture ; *metaName* : Text ; *metaContents* : Variable {; ...(*metaName* : Text ; *metaContents* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PICTURE METADATA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594; | メタデータを設定するピクチャ |
 | metaName | Text | &#8594; | 設定するブロックの名前またはパス |
 | metaContents | Variable | &#8594; | メタデータの内容 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

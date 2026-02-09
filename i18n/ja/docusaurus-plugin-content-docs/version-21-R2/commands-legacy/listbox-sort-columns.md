@@ -5,15 +5,17 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Field, Variable ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Variable ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
 | object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | colNum | Integer | &#8594; | 並び替える列番号 |
 | order | Operator | &#8594; | `>` to sort in ascending order or `<` to sort in descending order |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

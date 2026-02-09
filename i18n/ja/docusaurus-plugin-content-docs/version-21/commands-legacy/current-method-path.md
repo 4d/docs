@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current method path.Syntax-->**Current method path**  : Text<!-- END REF-->
 <!--REF #_command_.Current method path.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | 実行中のメソッドの内部的な完全パス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

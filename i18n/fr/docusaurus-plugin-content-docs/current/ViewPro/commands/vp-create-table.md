@@ -19,12 +19,17 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| Paramètres | Type                                                                                  |    | Description                                                  |                  |
-| ---------- | ------------------------------------------------------------------------------------- | -- | ------------------------------------------------------------ | ---------------- |
-| rangeObj   | Object                                                                                | -> | Objet plage                                                  |                  |
-| tableName  | Text                                                                                  | -> | Nom de la table                                              |                  |
-| source     | Text                                                                                  | -> | Nom de la propriété du Data context à afficher dans la table |                  |
-| options    | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Options supplémentaires                                      | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type                                                                                  |    | Description                                                  |
+| ---------- | ------------------------------------------------------------------------------------- | -- | ------------------------------------------------------------ |
+| rangeObj   | Object                                                                                | -> | Objet plage                                                  |
+| tableName  | Text                                                                                  | -> | Nom de la table                                              |
+| source     | Text                                                                                  | -> | Nom de la propriété du Data context à afficher dans la table |
+| options    | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Options supplémentaires                                      |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

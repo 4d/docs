@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *rotaPastaDest* {; *tamMax* {; *rotaHist* {; *atrCampo*}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaPastaDest | Text | &#8594;  | Rota da pasta de destino do arquivo salvo |
 | tamMax | Integer | &#8594;  | Tamanho máximo do arquivo JSON a criar (bytes) |
 | rotaHist | Text | &#8594;  | Rota do arquivo de histórico a exportar; se omitido, usa o arquivo de histórico atual |
 | atrCampo | Integer | &#8594;  | Descrição do atributo do campo: 1 = usa número (padrão), 2 = usa nome |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

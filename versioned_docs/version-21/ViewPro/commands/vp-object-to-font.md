@@ -8,11 +8,14 @@ title: VP Object to font
 **VP Object to font** ( *fontObj* : Object ) : Text <!-- END REF -->
 
 <!-- REF #_method_.VP Object to font.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |fontObj   |Object|->|Font object|
-|Result   |Text|<-|Font shorthand|<!-- END REF -->
+|Result   |Text|<-|Font shorthand|
+</div>
+<!-- END REF -->
 
 ## Description
 

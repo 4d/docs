@@ -6,6 +6,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* ; *...attribName* ; *...attribValue* ) : Object<br/>**WP Get attributes** ( *targetObj* ; *attribColl* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get attributes.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -13,6 +15,7 @@ displayed_sidebar: docs
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl | Collection | &#8594; | Collection of attribute names to get |
 | Function result | Object | &#8592; | Attribute names and values |
+</div>
 <!-- END REF-->
 
 ## Description 

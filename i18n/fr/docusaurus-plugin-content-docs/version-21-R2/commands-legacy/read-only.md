@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ({ laTable })<br/>**READ ONLY** ({ * })<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable &#124; * | Table, Opérateur | &#8594; | Table à définir en mode lecture seulement ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

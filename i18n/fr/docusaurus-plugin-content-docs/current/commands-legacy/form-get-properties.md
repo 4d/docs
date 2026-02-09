@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*laTable* : Table ;} *nomForm* : Text ; *largeur* : Integer ; *hauteur* : Integer {; *nbPages* : Integer {; *largeurFixe* : Boolean {; *hauteurFixe* : Boolean {; *titre* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table du formulaire ou Table par défaut si ce paramètre est omis |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | largeurFixe | Boolean | &#8592; | Vrai = Largeur fixe, Faux = Largeur variable |
 | hauteurFixe | Boolean | &#8592; | Vrai = Hauteur fixe, Faux = Hauteur variable |
 | titre | Text | &#8592; | Nom de la fenêtre du formulaire |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -40,7 +42,7 @@ Le paramètre *titre* retourne le nom de la fenêtre du formulaire, tel qu’il 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
-[Open form window](open-form-window.md)  
+[Open form window](../commands/open-form-window.md)  
 
 ## Propriétés
 

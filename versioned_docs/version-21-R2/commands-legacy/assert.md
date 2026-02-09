@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* : Boolean {; *messageText* : Text} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | boolExpression | Boolean | &#8594;  | Boolean expression |
 | messageText | Text | &#8594;  | Text of error message |
-
+</div>
 <!-- END REF-->
 
 ## Description 

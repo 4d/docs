@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *resultingPict* : Picture ; *pict1* : Picture ; *operator* : Integer ; *pict2* : Picture {; *horOffset* : Integer ; *vertOffset* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resultingPict | Picture | &#8592; | Picture resulting from combination |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | pict2 | Picture | &#8594;  | Second picture to combine |
 | horOffset | Integer | &#8594;  | Horizontal offset for superimposition |
 | vertOffset | Integer | &#8594;  | Vertical offset for superimposition |
-
+</div>
 <!-- END REF-->
 
 ## Description 

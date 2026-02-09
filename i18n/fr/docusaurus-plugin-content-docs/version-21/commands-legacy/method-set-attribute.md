@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *chemin* ; *typeAttribut* ; *valeurAttribut* {; *typeAttribut2* ; *valeurAttribut2* ; ... ; *typeAttributN* ; *valeurAttributN*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chemin | Text | &#8594;  | Chemin de méthode projet |
 | typeAttribut | Integer | &#8594;  | Type d’attribut |
 | valeurAttribut | Boolean, Text | &#8594;  | Vrai = sélectionner l’attribut, Faux = désélectionner l’attribut ou Nom du dossier |
 | * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *sourceType* : Integer ; *sourceNamesArr* : Text array ; *driversArr* : Text array )<!-- END REF-->
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | sourceType | Integer | &#8594;  | Source type: user or system |
 | sourceNamesArr | Text array | &#8592; | Array of data source names |
 | driversArr | Text array | &#8592; | Array of drivers for sources |
-
+</div>
 <!-- END REF-->
 
 ## Description 

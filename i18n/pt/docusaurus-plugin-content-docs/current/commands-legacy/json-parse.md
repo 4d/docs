@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *cadeiaJSON* : Text {; *tipo* : Integer}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | cadeiaJSON | Text | &#8594; | Cadeia em JSON a analisar |
 | tipo | Integer | &#8594; | Tipo no qual converter os valores |
 | * | Operador | &#8594; | Adiciona uma posição de linha e offset de cada propriedade se o valor retornado for um objeto |
 | Resultado | any, Object | &#8592; | Valores extraídos da cadeia JSON |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
@@ -187,7 +189,7 @@ beta[1].golf:{line:10,offset:12}}}
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
-[JSON Validate](json-validate.md)  
+[JSON Validate](../commands/json-validate.md)  
 *Tipos de campos e variáveis*  
 
 ## Propriedades

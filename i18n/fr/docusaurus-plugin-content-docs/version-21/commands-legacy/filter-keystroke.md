@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *carFiltré* )<!-- END REF-->
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | carFiltré | Text | &#8594;  | Caractère(s) de remplacement ou Chaîne vide pour annuler le filtrage clavier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

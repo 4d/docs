@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCEPT.Syntax-->**ACCEPT**<!-- END REF-->
 <!--REF #_command_.ACCEPT.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 
@@ -24,7 +26,7 @@ El comando **ACCEPT** se utiliza en métodos de objeto o de formulario (o en sub
 
 **ACCEPT** se ejecuta con frecuencia como resultado de la selección de un comando de menú. **ACCEPT** es igualmente utilizado en el método de objeto de un botón “sin acción”.
 
-También se usa a menudo en el método de caja cierre opcional para el comando [Open window](open-window.md). Si hay una caja del menú de control en una ventana, se puede llamar a **ACCEPT** o [CANCEL](cancel.md), en el método a ejecutar, cuando se hace doble clic en la caja del menú de control o se elige el comando del menú de cierre.
+También se usa a menudo en el método de caja cierre opcional para el comando [Open window](../commands/open-window.md). Si hay una caja del menú de control en una ventana, se puede llamar a **ACCEPT** o [CANCEL](cancel.md), en el método a ejecutar, cuando se hace doble clic en la caja del menú de control o se elige el comando del menú de cierre.
 
 **ACCEPT** no puede encadenarse. En respuesta a un evento, la ejecución de dos comandos **ACCEPT** en una fila desde dentro de un método tendría el mismo efecto que la ejecución de uno.
 

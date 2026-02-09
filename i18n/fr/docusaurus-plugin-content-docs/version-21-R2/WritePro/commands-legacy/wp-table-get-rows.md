@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *objCible* : Object ) | ( *refTableau* : Object ; *debutLigne* : Integer, Text {; *nbLignes* : Integer} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | debutLigne | Integer, Text | &#8594;  | Position de la première ligne |
 | nbLignes | Integer | &#8594;  | Nombre de lignes à lire |
 | Résultat | Object | &#8592; | Nouvelle plage contenant les lignes sélectionnées |
-
+</div>
 <!-- END REF-->
 
 ## Description 

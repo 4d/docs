@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}{; *})<br/>**SELECTION TO ARRAY** ( *laTable* : Champ, Table ; *tableau* : Array {; *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}}{; *}})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leChamp &#124; laTable | Champ, Table | &#8594; | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | leField | Field | &#8594; | Champ à récupérer dans le tableau |
 | tableau | Array | &#8592; | Tableau recevant les valeurs du champ |
 | * | Opérateur | &#8594; | Attente d’exécution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

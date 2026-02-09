@@ -31,7 +31,7 @@ Crea una representación vectorial para la entrada, el modelo y los parámetros 
 ```4d
 var $result:=$client.embeddings.create("it rains cats and dogs"; "text-embedding-ada-002")
 var $vector: 4D.Vector:=$result.vector
-// or var $embedding: cs.AIKit.OpenAIEmbedding:=$result.embedding
+// o var $embedding: cs.AIKit.OpenAIEmbedding:=$result.embedding
 ```
 
 ##### Obtener vectores para una colección de entradas de texto
@@ -39,12 +39,12 @@ var $vector: 4D.Vector:=$result.vector
 ```4d
 var $inputs:=["it rains cats and dogs"; "il pleut à boire debout"]
 var $result:=$client.embeddings.create($inputs; "text-embedding-ada-002")
-var $vectors : Collection:=$result.vectors // collection of 4D.Vector
+var $vectors : Collection:=$result.vectors // colección de 4D.Vector
 ```
 
 ##### Utilizar otro servicio
 
-> Before using embeddings with a specific service, please check its documentation to see if embeddings are supported, and select the appropriate embedding model.
+> Antes de utilizar las representaciones vectoriales con un servicio específico, compruebe en su documentación si admite embeddings y seleccione el modelo de representación vectorial adecuado.
 
 Por ejemplo, para Mistral, utilice [mistral-embed o codestral-embed](https://docs.mistral.ai/capabilities/embeddings/)
 

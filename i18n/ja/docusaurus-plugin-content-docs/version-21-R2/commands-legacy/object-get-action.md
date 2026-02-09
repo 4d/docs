@@ -5,14 +5,16 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *object* : Text ) : Text<br/>**OBJECT Get action** ( *object* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *object* : Text ) : Text<br/>**OBJECT Get action** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
 | object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
 | 戻り値 | Text | &#8592; | 関連付けられた標準アクション名と(あれば)引数の文字列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

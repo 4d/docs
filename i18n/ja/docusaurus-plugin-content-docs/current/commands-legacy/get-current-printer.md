@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get current printer.Syntax-->**Get current printer**  : Text<!-- END REF-->
 <!--REF #_command_.Get current printer.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | カレントプリンター名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

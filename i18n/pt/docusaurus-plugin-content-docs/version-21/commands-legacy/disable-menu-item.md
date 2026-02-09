@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISABLE MENU ITEM.Syntax-->**DISABLE MENU ITEM** ( *menu* ; *menuItem* {; *processo*} )<!-- END REF-->
 <!--REF #_command_.DISABLE MENU ITEM.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
 | menuItem | Integer | &#8594;  | Número de item de menu ou -1 para o último item adicionado |
 | processo | Integer | &#8594;  | Número de referência do processo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

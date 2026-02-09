@@ -5,7 +5,7 @@ title: Reglas HTTP
 
 Puede definir reglas HTTP para controlar los encabezados de respuesta HTTP para toda petición recibida por el servidor web 4D, incluyendo las peticiones REST. Puede añadir, modificar o eliminar los encabezados HTTP, enviar redirecciones o establecer el estado HTTP. Esta funcionalidad es útil para implementar políticas de seguridad basadas en el manejo de encabezados.
 
-Para definir reglas HTTP, sólo tiene que escribir RegEx para declarar los patrones de URL que quiere controlar así como cómo modificar los encabezados de respuesta. You can set these rules using a `HTTPRules.json` file stored in the project folder, or using the *settings* parameter [`start()`](../API/WebServerClass.md#start) function of the web server object.
+Para definir reglas HTTP, sólo tiene que escribir RegEx para declarar los patrones de URL que quiere controlar así como cómo modificar los encabezados de respuesta. Puede definir estas reglas usando un archivo `HTTPRules.json` almacenado en la carpeta del proyecto, o usando el parámetro *settings* de la función [`start()`](../API/WebServerClass.md#start) del objeto servidor web.
 
 ## Requisitos
 
@@ -87,7 +87,7 @@ $rules:=WEB Server.rules //reglas actuales
 
 ## Ejemplos
 
-Rules can be set using a `HTTPRules.json` file or the *settings* parameter of the [`.start()`](../API/WebServerClass.md#start) web server function.
+Las reglas de configuración pueden definirse utilizando un archivo `HTTPRules.json` o el parámetro *settings* de la función [`.start()`](../API/WebServerClass.md#start) del servidor web.
 
 ### Utilización de un archivo HTTPRules.json
 

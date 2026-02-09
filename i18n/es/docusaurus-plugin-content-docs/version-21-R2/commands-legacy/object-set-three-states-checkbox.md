@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *objeto* : Text ; *tresEst* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *objeto* : Field, Variable ; *tresEst* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
 | objeto | any | &#8594; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
 | tresEst | Boolean | &#8594; | True = casilla de selección de tres estados, False = casilla de selección estándar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Drop position.Syntax-->**Drop position** ( colNum|posYimagem ) : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | colNum&#124;posYimagem | Integer | &#8592; | Número de coluna de list box (-1 se soltar antes da última coluna) ou  posição da coordenada Y da imagem |
 | Resultado | Integer | &#8592; | • Número (array/list box) ou • Posição (lista hierárquica) ou • Posição em string (texto/combo box) de item destino ou • -1 se soltar antes do último elemento do array ou item da lista • Posição da coordenada X da imagem |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

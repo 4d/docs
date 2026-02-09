@@ -5,8 +5,10 @@ slug: /commands/listbox-get-auto-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get auto row height.Syntax-->**LISTBOX Get auto row height** ( * ; *object* : Text ; *selector* : Integer {; *unit* : Integer} )  : Integer<br/>**LISTBOX Get auto row height** ( *object* : Field, Variable ; *selector* : Integer {; *unit* : Integer} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get auto row height.Syntax-->**LISTBOX Get auto row height** ( * ; *object* : Text ; *selector* : Integer {; *unit* : Integer} )  : Integer<br/>**LISTBOX Get auto row height** ( *object* : Variable ; *selector* : Integer {; *unit* : Integer} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get auto row height.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | selector | Integer | &#8594; | 取得する高さの値:lk row min height あるいは lk row max height |
 | unit | Integer | &#8594; | 行の高さの最小値、あるいは最大値 |
 | 戻り値 | Integer | &#8592; | 選択された行の高さの値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

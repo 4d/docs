@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | フォームが属するテーブル、または省略時デフォルトテーブル |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | vPos | Integer | &#8594;  | ウィンドウの縦位置 |
 | * | 演算子 | &#8594;  | ウィンドウの現在の位置とサイズを保存 |
 | 戻り値 | Integer | &#8592; | ウィンドウ参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

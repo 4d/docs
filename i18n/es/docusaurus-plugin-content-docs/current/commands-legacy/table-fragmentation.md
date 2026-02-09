@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *laTabla* ) : Real<!-- END REF-->
 <!--REF #_command_.Table fragmentation.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Tabla para la cual obtener la tasa de fragmentación |
 | Resultado | Real | &#8592; | Porcentaje de fragmentación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

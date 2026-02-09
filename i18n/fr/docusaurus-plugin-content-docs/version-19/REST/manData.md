@@ -22,7 +22,7 @@ Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($m
 
 Outre la récupération d'une seule entité dans une dataclass à l'aide de [\{dataClass\}](%7BdataClass%7D_%7Bkey%7D.html), vous pouvez également écrire une [fonction de classe](ClassFunctions.md#function-calls) qui renvoie une entity selection (ou une collection).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) on one or more attributes (even relation attributes).
+Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) sur un ou plusieurs attributs (même des attributs de relation).
 
 
 ## Parcourir les données

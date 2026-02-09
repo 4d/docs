@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *destFolderPath* : Text {; *maxSize* : Integer {; *logPath* : Text {; *fieldAtt* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | destFolderPath | Text | &#8594;  | Path of the saved file destination folder |
 | maxSize | Integer | &#8594;  | Maximum size of JSON file to create (bytes) |
 | logPath | Text | &#8594;  | Pathname of log file to export; use current log file if omitted |
 | fieldAtt | Integer | &#8594;  | Field description attribute: 1 = use number (default), 2 = use name |
-
+</div>
 <!-- END REF-->
 
 ## Description 

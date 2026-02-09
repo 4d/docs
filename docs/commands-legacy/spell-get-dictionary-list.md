@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* : Integer array ; *langFiles* : Text array ; *langNames* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | langID | Integer array | &#8592; | Unique ID of languages |
 | langFiles | Text array | &#8592; | Names of language files installed |
 | langNames | Text array | &#8592; | Local names of languages |
-
+</div>
 <!-- END REF-->
 
 ## Description 

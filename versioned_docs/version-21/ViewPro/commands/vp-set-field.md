@@ -8,12 +8,15 @@ title: VP SET FIELD
 **VP SET FIELD** ( *rangeObj* : Object ; *field* : Pointer { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FIELD.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |field |Pointer|->|Reference to field in virtual structure|
-|formatPattern |Text|->|Format of field|<!-- END REF -->
+|formatPattern |Text|->|Format of field|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*aTable* ;} *set* )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Current record's table, or Default table, if omitted |
 | set | Text | &#8594;  | Name of the set to which to add the current record |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -110,7 +110,7 @@ title: コンポーネントの開発
 標準の4D IDE 機能がコンポーネントに対して利用可能です。 以下のアクションを実行することができます:
 
 - [メソッドおよびクラス](../Project/code-overview.md)の追加、複製、削除、編集/保存
-- preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md),
+- コードのプレビュー、[ドキュメンテーション](../Project/documentation.md) の表示/編集、[メソッドプロパティ](../Project/project-method-properties.md) の表示/編集
 - メソッドの実行
 - ゴミ箱からの復元、あるいはゴミ箱を空にする。
 
@@ -453,31 +453,31 @@ SAVE RECORD($tablepointer->)
 
 ## カスタムアイコン
 
-You can use a **custom icon** for your dependency, so that it can be visually distinguished from other components in the [Project Dependencies panel](../Project/components.md#monitoring-project-dependencies).
+依存関係には**カスタムアイコン**を使用することもでき、これによって [プロジェクト依存関係パネル](../Project/components.md#monitoring-project-dependencies) 内で他のコンポーネントと視覚的に区別をすることができます。
 
-When no custom icon is defined, components use a **default icon**:
+カスタムアイコンがなにも定義されていない場合、コンポーネントは**デフォルトのアイコン**を使用します:
 
 ![](../assets/en/Develop/icon-comp-default.png)
 
-To declare a custom icon for your component:
+コンポーネントに対してカスタムアイコンを宣言したい場合:
 
-1. Create a picture file for the icon and name it `logo.svg` or `logo.png`. Note that the picture will be displayed with a square shape (and automatically resized if necessary). The **svg** format is recommended.
+1. アイコン用のピクチャファイルを作成し、 `logo.svg` あるいは `logo.png` という名前をつけます。 ピクチャーは正方形で表示されるという点に注意してください(必要であれば自動的にリサイズされます)。 推奨されるのは **svg** フォーマットです。
 
-2. Copy the icon file in the [**Resources folder**](../Project/architecture.md#resources) of the component.
+2. アイコンファイルをコンポーネントの [**Resources フォルダ**](../Project/architecture.md#resources) にコピーします。
 
-The logo file will be used in the Project Dependency window for the component, whether it is interpreted or [built](../Desktop/building.md#build-component).
+このロゴファイルは、コンポーネントがインタープリタ版か [ビルトされている](../Desktop/building.md#コンポーネントをビルド) かに関わらず、プロジェクト依存関係ウィンドウ内においてそのコンポーネントに対して使用されます。
 
 ![](../assets/en/Develop/icon-comp.png)
 
 :::note
 
-If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priority.
+`logo.svg` および `logo.png` ファイルの両方が見つかった場合、`logo.svg` の方が優先されます。
 
 :::
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#monitoring-project-dependencies).
+コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
 
 :::note
 
@@ -485,7 +485,7 @@ Components can have an `Info.plist` file at their [root folder](../Project/archi
 
 :::
 
-コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 However, they are used by the [Dependency manager](../Project/components.md#monitoring-project-dependencies) on all platforms.
+コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies) によって使用されます。
 
 定義可能なキーは以下の通りです:
 

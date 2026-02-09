@@ -7,11 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *fieldPtr* {; *} )<br/>**DELETE INDEX** ( *indexName* {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr &#124; indexName | Pointer, Text | &#8594;  | Pointer to field whose indexes are to be deleted or Name of index to be deleted |
+| fieldPtr | Pointer, Text | &#8594;  | Pointer to field whose indexes are to be deleted |
+| indexName | Pointer, Text | &#8594;  | Name of index to be deleted |
 | * | Operator | &#8594;  | If passed = asynchronous operation |
-
+</div>
 <!-- END REF-->
 
 ## Description 

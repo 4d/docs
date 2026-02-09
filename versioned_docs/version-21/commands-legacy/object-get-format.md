@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *object* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a field or a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Field or variable (if * is omitted) |
 | Function result | Text | &#8592; | Object display format |
-
+</div>
 <!-- END REF-->
 
 ## Description 

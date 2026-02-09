@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *pathname* : Text ; *directories* : Text array )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pathname | Text | &#8594; | ボリュームのパス名、ディレクトリ、またはフォルダ |
 | directories | Text array | &#8592; | ロケーションにあるディレクトリの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *opción* : Integer ; *valor* : Integer )<!-- END REF-->
 <!--REF #_command_.HTTP GET OPTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | opción | Integer | &#8594; | Código de la opción a leer |
 | valor | Integer | &#8592; | Valor actual de la opción |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilidad

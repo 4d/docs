@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *nomMéthode* {; *résultat* {; *param*}}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomMéthode | Text | &#8594;  | Nom de méthode projet à exécuter |
 | résultat | Variable, * | &#8592; | Variable recevant le résultat de la méthode ou * pour une méthode ne retournant pas de résultat |
 | param | Expression | &#8594;  | Paramètre(s) de la méthode |
-
+</div>
 <!-- END REF-->
 
 ## Description 

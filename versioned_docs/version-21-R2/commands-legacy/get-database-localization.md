@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get database localization.Syntax-->**Get database localization** ( {*languageType* : Integer}{;}{*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get database localization.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | languageType | Integer | &#8594;  | Type of language |
 | * | Operator | &#8594;  | Return information about host database |
 | Function result | Text | &#8592; | Current language of the database |
-
+</div>
 <!-- END REF-->
 
 ## Description 

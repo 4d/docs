@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST INSERT EXPRESSION.Syntax-->**ST INSERT EXPRESSION** ( {* ;} *objeto* ; *expressao* {; *inicioSel* {; *fimSel*}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT EXPRESSION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | expressao | Text | &#8594;  | Expressão e (opcional) formato a inserir |
 | inicioSel | Integer | &#8594;  | Início da seleção |
 | fimSel | Integer | &#8594;  | Fim da seleção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

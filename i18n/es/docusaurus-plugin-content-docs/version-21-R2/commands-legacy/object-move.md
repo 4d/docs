@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *objeto* : Text ; *moveH* : Integer ; *moveV* : Integer {; *redimH* : Integer {; *redimV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *objeto* : Field, Variable ; *moveH* : Integer ; *moveV* : Integer {; *redimH* : Integer {; *redimV* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | redimH | Integer | &#8594; | Valor del redimensionamiento horizontal del objeto |
 | redimV | Integer | &#8594; | Valor del redimensionamiento vertical del objeto |
 | * | Operador | &#8594; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

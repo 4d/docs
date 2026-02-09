@@ -112,12 +112,15 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <!-- REF #FunctionClass.apply().Params -->
 
+<div class="no-index">
+
 | Parâmetro     | Tipo       |                             | Descrição                                                                                                                       |
 | ------------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
 | thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                             |
 | formulaParams | Collection |              ->             | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
 | Resultados    | any        | <- | Valores de execução de fórmula                                                                                                  |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -168,9 +171,11 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros s�
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; *...params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
+
+<div class="no-index">
 
 | Parâmetro  | Tipo   |                             | Descrição                                                                                                            |
 | ---------- | ------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -178,6 +183,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros s�
 | params     | any    | ->                          | Valores a serem passados como $1...$n quando a fórmula for executada |
 | Resultados | any    | <- | Valores de execução de fórmula                                                                                       |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

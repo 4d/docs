@@ -5,15 +5,17 @@ slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *icon* : Picture )<br/>**GET LIST ITEM ICON** ( * ; *list* : Integer, Text ; * ; *icon* : Picture<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *icon* : Picture )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| itemRef | Operator, Integer | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
 | icon | Picture | &#8592; | Icon associated with item |
-
+</div>
 <!-- END REF-->
 
 ## Description 

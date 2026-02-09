@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*aTable* : Table ;} *document* : Text {; *methodName* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.QR REPORT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to use for the report, or Default table if omitted |
 | document | Text | &#8594;  | Quick Report document to load |
 | methodName | Text | &#8594;  | Name of method to call |
 | * | Operator | &#8594;  | Deletion of printing dialog boxes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

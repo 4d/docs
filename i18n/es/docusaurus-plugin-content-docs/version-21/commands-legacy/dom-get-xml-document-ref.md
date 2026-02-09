@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *refElement* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML document ref.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refElement | Text | &#8594;  | Referencia de un elemento existente en un árbol DOM |
 | Resultado | Text | &#8592; | Referencia del primer elemento del árbol DOM (nodo document) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

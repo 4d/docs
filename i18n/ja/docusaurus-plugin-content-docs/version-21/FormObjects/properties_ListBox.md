@@ -78,7 +78,7 @@ title: リストボックス
 
 ---
 
-## Highlight Set {#highlight-set}
+## ハイライトセット {#highlight-set}
 
 `セレクション型リストボックス`
 
@@ -184,7 +184,7 @@ title: リストボックス
 
 ---
 
-## Row Control Array {#row-control-array}
+## 行コントロール配列 {#row-control-array}
 
 `配列型リストボックス`
 

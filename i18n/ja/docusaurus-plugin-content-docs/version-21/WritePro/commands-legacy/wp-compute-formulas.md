@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP COMPUTE FORMULAS.Syntax-->**WP COMPUTE FORMULAS** ( *targetObj* )<!-- END REF-->
 <!--REF #_command_.WP COMPUTE FORMULAS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

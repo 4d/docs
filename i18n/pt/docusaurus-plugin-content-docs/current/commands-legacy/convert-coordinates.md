@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* : Integer ; *yCoord* : Integer ; *de* : Integer ; *para* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | xCoord | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
 | yCoord | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
 | de | Integer | &#8594; | Sistema de coordenadas que vai ser convertido |
 | para | Integer | &#8594; | Sistema de coordenadas para o qual vai converter |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
@@ -33,7 +35,7 @@ No parâmetro *de*, passe o sistema de coordenadas inicial que o ponto de input 
 
 Quando este comando for chamado a partir do método de um subformulário ou de um objeto de subformulário, e se um dos seletores for XY Current form, então as coordenadas são relativas ao próprio subformulário, e não ao seu formulário pai. 
 
-Quando convertendo de/para a posição de uma janela formulário (por exemplo quando convertendo dos resultados de [GET WINDOW RECT](get-window-rect.md), ou para valores passados a [Open form window](open-form-window.md)), XY Main window deve ser usado já que é o sistema de coordenadas usado pelos comandos de janela em Windows. Também pode ser usado para esse propósito em macOS, onde é equivalente a XY Screen.
+Quando convertendo de/para a posição de uma janela formulário (por exemplo quando convertendo dos resultados de [GET WINDOW RECT](get-window-rect.md), ou para valores passados a [Open form window](../commands/open-form-window.md)), XY Main window deve ser usado já que é o sistema de coordenadas usado pelos comandos de janela em Windows. Também pode ser usado para esse propósito em macOS, onde é equivalente a XY Screen.
 
 Quando *de* for XY Current form e o ponto estiver na seção corpo do formulário lista, o resultado depende do contexto de chamada do comando:
 

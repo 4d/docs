@@ -7,12 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *manyTable* ; *one* ; *many* )<br/>**SET FIELD RELATION** ( *field* ; *one* ; *many* )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable &#124; Field | Table, Field | &#8594;  | Starting table of relations or Starting field of a relation |
+| manyTable | Table | &#8594;  | Starting table of relations |
+| manyField | Field | &#8594;  | Starting field of a relation |
 | one | Integer | &#8594;  | Status of the Many-to-One relation starting from the field or the Many-to-One relations of the table |
 | many | Integer | &#8594;  | Status of the One-to-Many relation starting from the field or the One-to-Many relations of the table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

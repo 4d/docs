@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*aTable* : Table ;} *arrNames* : Text array {; *filter* : Text {; *marker* : Real}}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET NAMES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | テーブル参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | filter | Text | &#8594; | 名前のフィルター |
 | marker | Real | &#8596; | *in:* Marker for minimum version to return<br/>*out:* New value |
 | * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

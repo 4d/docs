@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Add to date.Syntax-->**Add to date** ( *data* : Date ; *anos* : Integer ; *meses* : Integer ; *dias* : Integer ) : Date<!-- END REF-->
 <!--REF #_command_.Add to date.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | data | Date | &#8594; | Data a qual adicionar dias, meses e anos |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | meses | Integer | &#8594; | Número de meses a adicionar a data |
 | dias | Integer | &#8594; | Números de dias a adicionar a data |
 | Resultado | Date | &#8592; | Data resultante |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

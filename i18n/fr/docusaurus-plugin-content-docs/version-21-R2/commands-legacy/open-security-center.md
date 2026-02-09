@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN SECURITY CENTER.Syntax-->**OPEN SECURITY CENTER**<!-- END REF-->
 <!--REF #_command_.OPEN SECURITY CENTER.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current process name.Syntax-->**Current process name**  : Text<!-- END REF-->
 <!--REF #_command_.Current process name.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Nome do processo atual |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

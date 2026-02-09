@@ -5,15 +5,17 @@ slug: /commands/listbox-get-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( * ; *object* : Text {; *unit* : Integer} ) : Integer<br/>**LISTBOX Get rows height** ( *object* : Field, Variable {; *unit* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( * ; *object* : Text {; *unit* : Integer} ) : Integer<br/>**LISTBOX Get rows height** ( *object* : Variable {; *unit* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get rows height.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | unit | Integer | &#8594;  | Unit of height value: 0 or omitted = pixels, 1 = lines |
 | Function result | Integer | &#8592; | Row height |
-
+</div>
 <!-- END REF-->
 
 ## Description 

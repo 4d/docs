@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Storage.Syntax-->**Storage**  : Object<!-- END REF-->
 <!--REF #_command_.Storage.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Object | &#8592; | 登録された共有オブジェクトおよび共有コレクションのカタログ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

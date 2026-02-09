@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Syntax-->**QR SET DOCUMENT PROPERTY** ( *area* ; *property* ; *value* )<!-- END REF-->
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | property | Integer | &#8594;  | 1 = Printing dialog, 2 = Document unit |
 | value | Integer | &#8594;  | Value for the property |
-
+</div>
 <!-- END REF-->
 
 ## Description 

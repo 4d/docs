@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field to be evaluated |
 | Function result | Boolean | &#8592; | True = field is NULL, False = field is not NULL |
-
+</div>
 <!-- END REF-->
 
 ## Description 

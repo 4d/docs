@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( * ; *objet* : Text ; *rayon* : Integer )<br/>**OBJECT SET CORNER RADIUS** ( *objet* : Field, Variable ; *rayon* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
 | rayon | Integer | &#8594; | Nouveau rayon des angles arrondis (en pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

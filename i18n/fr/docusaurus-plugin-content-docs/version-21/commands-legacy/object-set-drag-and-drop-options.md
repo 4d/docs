@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax-->**OBJECT SET DRAG AND DROP OPTIONS** ( {* ;} *objet* ; *glissable* ; *glissableAuto* ; *déposable* ; *déposableAuto* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | glissableAuto | Boolean | &#8594;  | Glisser automatique = Vrai, sinon Faux |
 | déposable | Boolean | &#8594;  | Déposable = Vrai, sinon Faux |
 | déposableAuto | Boolean | &#8594;  | Déposer automatique = Vrai, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

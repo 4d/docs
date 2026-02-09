@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *area* : Integer ; *seletor* : Integer ; *tituloEsq* : Text ; *tituloCentro* : Text ; *tituloDir* : Text ; *altura* : Integer {; *imagem* : Picture {; *alinImag* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | Referência da área |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | altura | Integer | &#8594; | Altura do cabeçalho ou rodap~e |
 | imagem | Picture | &#8594; | Imagem a exibir |
 | alinImag | Integer | &#8594; | Atributo de alinhamento da imagem |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

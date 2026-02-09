@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Get color scheme.Syntax-->**FORM Get color scheme**  : Text<!-- END REF-->
 <!--REF #_command_.FORM Get color scheme.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | カレントフォームのカラースキーム: "light" または "dark" |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

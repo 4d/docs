@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *wpArea* : Object ; *inicioFaixa* : Integer ; *fimFaixa* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Text range.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | wpArea | Object | &#8594;  | Objeto variável ou campo 4D Write Pro |
 | inicioFaixa | Integer | &#8594;  | Início offset da faixa de texto |
 | fimFaixa | Integer | &#8594;  | Final offset da faixa texto |
 | Resultado | Object | &#8592; | Faixa de objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

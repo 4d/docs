@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ALL RECORDS.Syntax-->**ALL RECORDS** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.ALL RECORDS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de laquelle vous voulez sélectionner tous les enregistrements ou Table par défaut si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

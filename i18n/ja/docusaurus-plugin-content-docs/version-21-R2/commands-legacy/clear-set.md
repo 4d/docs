@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *set* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | set | Text | &#8594; | メモリからクリアするセットの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application type.Syntax-->**Application type**  : Integer<!-- END REF-->
 <!--REF #_command_.Application type.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Valeur numérique représentant le type de l'application |
-
+</div>
 <!-- END REF-->
 
 ## Description 

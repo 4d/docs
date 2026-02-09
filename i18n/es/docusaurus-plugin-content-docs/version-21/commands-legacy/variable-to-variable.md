@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Syntax-->**VARIABLE TO VARIABLE** ( *proceso* ; *dstVar* ; *srcVar* {; *dstVar2* ; *srcVar2* ; ... ; *dstVarN* ; *srcVarN*} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO VARIABLE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | proceso | Integer | &#8594;  | Número de proceso de destino |
 | dstVar | Variable | &#8594;  | Variable de destino |
 | srcVar | Variable | &#8594;  | Variable fuente |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

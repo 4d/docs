@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *typeInfo* ; *tabNoms* ; *tabValeurs* ; *tabNombre* )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | typeInfo | Integer | &#8594;  | Sélecteur d’information à obtenir |
 | tabNoms | Text array | &#8592; | Libellés des informations |
 | tabValeurs | Real array | &#8592; | Valeurs des informations |
 | tabNombre | Real array | &#8592; | Nombre d’objets concernés (si disponible) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

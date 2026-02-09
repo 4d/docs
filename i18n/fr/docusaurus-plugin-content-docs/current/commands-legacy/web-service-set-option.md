@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE SET OPTION.Syntax-->**WEB SERVICE SET OPTION** ( *option* : Integer ; *valeur* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE SET OPTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | option | Integer | &#8594; | Code de l’option à fixer |
 | valeur | Integer, Text | &#8594; | Valeur de l’option |
-
+</div>
 <!-- END REF-->
 
 ## Note préliminaire 

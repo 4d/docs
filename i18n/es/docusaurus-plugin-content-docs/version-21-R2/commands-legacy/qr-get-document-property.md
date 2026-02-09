@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* : Integer ; *propiedad* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | Referencia del área |
 | propiedad | Integer | &#8594; | 1 = Diálogo de impresión, 2 = Unidad del documento |
 | Resultado | Integer | &#8592; | Valor de la propiedad |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License usage.Syntax-->**License usage** : Collection<!-- END REF-->
 <!--REF #_command_.License usage.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Collection | &#8592; | Uma coleção de objetos com informação sobre licenças retidas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

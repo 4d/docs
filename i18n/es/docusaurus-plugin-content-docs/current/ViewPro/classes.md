@@ -157,7 +157,7 @@ La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[color
 
 **.foreColor** : Text<!-- END REF -->
 
-The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propiedad `.foreColor` es el <!-- REF #TableStyle.foreColor.Summary -->[color de primer plano](configuring.md#background--foreground) de la tabla<!-- END REF -->.
 
 ### .font
 

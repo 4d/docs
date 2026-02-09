@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.UNION.Syntax-->**UNION** ( *conjunto1* ; *conjunto2* ; *resultado* )<!-- END REF-->
 <!--REF #_command_.UNION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | conjunto1 | Text | &#8594;  | Primer conjunto |
 | conjunto2 | Text | &#8594;  | Segundo conjunto |
 | resultado | Text | &#8594;  | Conjunto resultante |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE SET.Syntax-->**USE SET** ( *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.USE SET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | conjunto | Text | &#8594; | Nombre del conjunto a utilizar |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

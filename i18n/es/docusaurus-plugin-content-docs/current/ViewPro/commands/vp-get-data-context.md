@@ -13,15 +13,20 @@ title: VP Get data context
 
 <!-- REF #_method_.VP Get data context.Syntax -->
 
-**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
+**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #_method_.VP Get data context.Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                           |                  |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro          |                  |
-| sheet      | Integer | ->                          | Índice de la hoja para obtener el contexto de datos   |                  |
-| Resultado  | Variant | <- | Contexto de datos. Objeto o colección | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |                             | Descripción                                           |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro          |
+| sheet      | Integer | ->                          | Índice de la hoja para obtener el contexto de datos   |
+| Resultado  | any     | <- | Contexto de datos. Objeto o colección |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

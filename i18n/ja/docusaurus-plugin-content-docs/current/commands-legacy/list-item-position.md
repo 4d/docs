@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
 | list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
 | itemRef | Integer | &#8594; | 項目参照番号 |
 | 戻り値 | Integer | &#8592; | 展開/折りたたまれたリストにおける項目位置 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

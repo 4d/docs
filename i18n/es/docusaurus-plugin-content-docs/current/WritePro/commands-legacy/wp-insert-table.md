@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *objRango* : Object ; *modo* : Integer {; *actRango* : Integer {; *numCol* : Integer {; *numFilas* : Integer}}} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | numCol | Integer | &#8594;  | Número de columnas a definir en la tabla |
 | numFilas | Integer | &#8594;  | Número de filas a definir en la tabla |
 | Resultado | Object | &#8592; | Objeto de referencia de tabla |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

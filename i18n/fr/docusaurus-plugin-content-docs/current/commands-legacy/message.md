@@ -7,19 +7,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* : Text )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | message | Text | &#8594; | Message à afficher |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.MESSAGE.Summary-->La commande **MESSAGE** affiche *message* à l'écran dans une fenêtre spéciale de message qui est ouverte et refermée à chaque fois que vous l'appelez (à moins que vous ne travailliez dans une fenêtre préalablement ouverte par la commande [Open window](open-window.md), cf.<!-- END REF--> ci-dessous). Le message est temporaire et est effacé dès qu'un formulaire est affiché ou dès que l'exécution de la méthode est stoppée. Si une autre commande **MESSAGE** est exécutée, le précédent message est effacé. 
+<!--REF #_command_.MESSAGE.Summary-->La commande **MESSAGE** affiche *message* à l'écran dans une fenêtre spéciale de message qui est ouverte et refermée à chaque fois que vous l'appelez (à moins que vous ne travailliez dans une fenêtre préalablement ouverte par la commande [Open window](../commands/open-window.md), cf.<!-- END REF--> ci-dessous). Le message est temporaire et est effacé dès qu'un formulaire est affiché ou dès que l'exécution de la méthode est stoppée. Si une autre commande **MESSAGE** est exécutée, le précédent message est effacé. 
 
 **MESSAGE** est généralement utilisée pour informer l'utilisateur du déroulement d'une action. 
 
-Si une fenêtre a été ouverte par la commande [Open window](open-window.md), tous les appels ultérieurs à la commande **MESSAGE** affichent les messages dans cette fenêtre. Cette fenêtre se comporte en quelque sorte comme un terminal :
+Si une fenêtre a été ouverte par la commande [Open window](../commands/open-window.md), tous les appels ultérieurs à la commande **MESSAGE** affichent les messages dans cette fenêtre. Cette fenêtre se comporte en quelque sorte comme un terminal :
 
 * Chaque message successif n'efface pas le précédent, les messages se placent les uns à la suite des autres.
 * Si un message est plus large que la fenêtre, 4D insère automatiquement un retour à la ligne.
@@ -30,7 +32,7 @@ Si une fenêtre a été ouverte par la commande [Open window](open-window.md), t
 * La fenêtre est une fenêtre d'affichage statique : son contenu n'est pas redessiné lorsque d'autres fenêtres s'affichent par-dessus.
 * La police et la taille des caractères affichés dans la fenêtre peuvent être modifiées via la page "Interface" des Propriétés de la base.
 
-**Note :** **MESSAGE** est compatible avec la commande [Open form window](open-form-window.md), toutefois dans ce contexte le second paramètre *\** de [Open form window](open-form-window.md), permettant de conserver la taille et position de la fenêtre, n'est pas pris en charge. 
+**Note :** **MESSAGE** est compatible avec la commande [Open form window](../commands/open-form-window.md), toutefois dans ce contexte le second paramètre *\** de [Open form window](../commands/open-form-window.md), permettant de conserver la taille et position de la fenêtre, n'est pas pris en charge. 
 
 ## Exemple 1 
 
@@ -50,7 +52,7 @@ La fenêtre suivante s'affiche puis disparaît à chaque appel de **MESSAGE** :
 
 ## Exemple 2 
 
-Afin d'éliminer le "clignotement" de la fenêtre, il est préférable, comme dans ce deuxième exemple, d'afficher les messages dans une fenêtre ouverte par l'intermédiaire de la commande [Open window](open-window.md) :
+Afin d'éliminer le "clignotement" de la fenêtre, il est préférable, comme dans ce deuxième exemple, d'afficher les messages dans une fenêtre ouverte par l'intermédiaire de la commande [Open window](../commands/open-window.md) :
 
 ```4d
  Open window(50;50;500;250;5;"Opération en cours")
@@ -113,7 +115,7 @@ Voici le résultat (sous Windows) :
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## Propriétés
 

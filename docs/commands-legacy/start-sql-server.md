@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.START SQL SERVER.Syntax-->**START SQL SERVER**<!-- END REF-->
 <!--REF #_command_.START SQL SERVER.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

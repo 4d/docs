@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE MARGIN.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | left | Integer | &#8592; | Left margin |
 | top | Integer | &#8592; | Top margin |
 | right | Integer | &#8592; | Right margin |
 | bottom | Integer | &#8592; | Bottom margin |
-
+</div>
 <!-- END REF-->
 
 ## Description 

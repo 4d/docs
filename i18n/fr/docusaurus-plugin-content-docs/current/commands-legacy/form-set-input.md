@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*laTable* : Table ;} *formulaire* : Text, Object {; *formUtilisateur* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table pour laquelle définir le formulaire entrée ou Table par défaut si ce paramètre est omis |
 | formulaire | Text, Object | &#8594; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
 | formUtilisateur | Text | &#8594; | Nom du formulaire utilisateur à utiliser |
 | * | Operator | &#8594; | Taille de fenêtre automatique |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -47,7 +49,7 @@ Les commandes [DISPLAY SELECTION](display-selection.md) et [MODIFY SELECTION](mo
 
 Le formulaire entrée est aussi utilisé par les commandes d'import [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) et [IMPORT DIF](import-dif.md).
 
-Le paramètre optionnel *\** est destiné à être utilisé conjointement avec les propriétés du formulaire, que vous définissez en mode Développement dans la fenêtre des Propriétés du formulaire, et avec la commande [Open window](open-window.md). En passant le paramètre \*, vous indiquez à 4D d'utiliser les propriétés du formulaire pour redimensionner automatiquement la fenêtre lors de l'utilisation ultérieure de la fenêtre comme formulaire entrée ou comme dialogue. Reportez-vous à la description de la commande [Open window](open-window.md) pour plus d'informations sur ce point.
+Le paramètre optionnel *\** est destiné à être utilisé conjointement avec les propriétés du formulaire, que vous définissez en mode Développement dans la fenêtre des Propriétés du formulaire, et avec la commande [Open window](../commands/open-window.md). En passant le paramètre \*, vous indiquez à 4D d'utiliser les propriétés du formulaire pour redimensionner automatiquement la fenêtre lors de l'utilisation ultérieure de la fenêtre comme formulaire entrée ou comme dialogue. Reportez-vous à la description de la commande [Open window](../commands/open-window.md) pour plus d'informations sur ce point.
 
 **Note :** Que vous passiez ou non le paramètre \*, **FORM SET INPUT** change le formulaire entrée pour la table. 
 
@@ -100,7 +102,7 @@ Résultat :
 [IMPORT TEXT](import-text.md)  
 [MODIFY RECORD](modify-record.md)  
 [MODIFY SELECTION](modify-selection.md)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
 ## Propriétés

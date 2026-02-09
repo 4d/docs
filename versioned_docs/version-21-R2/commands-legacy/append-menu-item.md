@@ -5,16 +5,18 @@ slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer ; *itemText* : Text {; *subMenu* : Text {; *process* : Integer {; *}}} )<!-- END REF-->
+<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer, Text ; *itemText* : Text, Integer {; *subMenu* : Text {; *process* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Menu number or Menu reference |
+| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | itemText | Text | &#8594;  | Text for the new menu items |
 | subMenu | Text | &#8594;  | Reference of submenu associated with item |
 | process | Integer | &#8594;  | Process reference number |
 | * | Operator | &#8594;  | If passed: consider metacharacters as standard characters |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get page count.Syntax-->**WP Get page count** ( *wpDoc* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get page count.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
 | 戻り値 | Integer | &#8592; | ドキュメントのページ数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.New data key.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | passPhrase | Text | &#8594;  | Passphrase to use to generate the AES data encryption key |
 | Function result | Object | &#8592; | Object containing the key (encodedKey property) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

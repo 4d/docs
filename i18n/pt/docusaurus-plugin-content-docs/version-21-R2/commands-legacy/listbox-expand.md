@@ -5,8 +5,10 @@ slug: /commands/listbox-expand
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<br/>**LISTBOX EXPAND** ( *object* : Field, Variable {; *recursive* : Boolean {; *selector* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<br/>**LISTBOX EXPAND** ( *object* : Variable, Field {; *recursive* : Boolean {; *selector* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX EXPAND.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | selector | Integer | &#8594; | Part of list box to expand |
 | linha &#124; nivel | Inteiro longo | &#8594; | Number of break row to expand or <br/>Number of list box level to expand |
 | coluna | Integer | &#8594; | Number of break column to expand |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

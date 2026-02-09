@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( * ; *objeto* : Text ; *tecla* : Text {; *modifiers* : Integer} )<br/>**OBJECT SET SHORTCUT** ( *objeto* : Field, Variable ; *tecla* : Text {; *modifiers* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável ou um campo |
 | objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
 | tecla | Text | &#8594; | Tecla à associar ao objeto |
 | modifiers | Integer | &#8594; | Modifier key mask or combination of masks |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get element by ID.Syntax-->**WP Get element by ID** ( *wpDoc* ; *ID* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get element by ID.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro ドキュメント |
 | ID | Text | &#8594;  | 取得する要素のID |
 | 戻り値 | Object | &#8592; | 4D Write Pro 要素 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

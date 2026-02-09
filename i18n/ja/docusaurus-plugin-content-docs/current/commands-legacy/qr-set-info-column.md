@@ -5,8 +5,10 @@ slug: /commands/qr-set-info-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET INFO COLUMN.Syntax-->**QR SET INFO COLUMN** ( *area* : Integer ; *colNum* : Integer ; *title* : Text ; *object* : Field, Variable ; *hide* : Integer ; *size* : Integer ; *repeatedValue* : Integer ; *displayFormat* : Text )<!-- END REF-->
+<!--REF #_command_.QR SET INFO COLUMN.Syntax-->**QR SET INFO COLUMN** ( *area* : Integer ; *colNum* : Integer ; *title* : Text ; *object* : Variable, Field ; *hide* : Integer ; *size* : Integer ; *repeatedValue* : Integer ; *displayFormat* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | エリア参照 |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | size | Integer | &#8594; | カラムサイズ |
 | repeatedValue | Integer | &#8594; | 0 = 繰り返ししない, 1 = 繰り返す |
 | displayFormat | Text | &#8594; | データの表示フォーマット |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

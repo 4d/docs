@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *document* ; *data* )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML CDATA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Reference of open document |
 | data | Blob, Text | &#8594;  | Text or BLOB to insert in the document between CData tags |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,14 +5,16 @@ slug: /commands/data-file-encryption-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( structurePath , dataPath ) : Object<!-- END REF-->
+<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( *structurePath* : Text ; *dataPath* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | structurePath | Text | &#8594;  | Pathname of 4D structure file to be checked |
 | dataPath | Text | &#8594;  | Pathname of 4D data file to be checked |
 | Function result | Object | &#8592; | Information about the encryption of the data file and of each table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

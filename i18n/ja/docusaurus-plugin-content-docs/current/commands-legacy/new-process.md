@@ -16,6 +16,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Syntax-->**New process** ( *method* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | method | Text | &#8594; | プロセスで実行させるメソッド |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | param | Expression | &#8594; | メソッドに渡す引数 |
 | * | 演算子 | &#8594; | 重複しないプロセス |
 | 戻り値 | Integer | &#8592; | 新規に作成されたプロセス番号 または既存のプロセス番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 
@@ -77,7 +79,7 @@ displayed_sidebar: docs
  Until(OK=0)
 ```
 
-**メニューバーエディタ**でカスタムメニュー項目にこのプロジェクトメソッドを指定し、**新規プロセス開始**チェックボックスをチェックしている場合、4Dはそのメソッドを実行する新規プロセスを自動的に開始します。[SET MENU BAR](set-menu-bar.md "SET MENU BAR")(1)を実行すると、この新規プロセスに対してメニューバーが追加されます。ウィンドウ ([Open window](open-window.md "Open window")コマンドでオープンするウインドウ) が何も存在しない場合、[ADD RECORD](add-record.md "ADD RECORD")コマンドを実行することにより、自動的にウィンドウが開かれます。
+**メニューバーエディタ**でカスタムメニュー項目にこのプロジェクトメソッドを指定し、**新規プロセス開始**チェックボックスをチェックしている場合、4Dはそのメソッドを実行する新規プロセスを自動的に開始します。[SET MENU BAR](set-menu-bar.md "SET MENU BAR")(1)を実行すると、この新規プロセスに対してメニューバーが追加されます。ウィンドウ ([Open window](../commands/open-window.md "Open window")コマンドでオープンするウインドウ) が何も存在しない場合、[ADD RECORD](add-record.md "ADD RECORD")コマンドを実行することにより、自動的にウィンドウが開かれます。
 
 カスタムのコントロールパネルのボタンをクリックすると、“Add Customers”プロセスが開始されるようにするには、以下のようにします:
 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *objectField* : Field ; *pathArray* : Text array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectField | Field | &#8594;  | Indexed object field |
 | pathArray | Text array | &#8592; | Array to receive list of distinct paths |
-
+</div>
 <!-- END REF-->
 
 ## Description 

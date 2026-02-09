@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Null.Syntax-->**Null**  : Null<!-- END REF-->
 <!--REF #_command_.Null.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Null | &#8592; | Valor Null |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

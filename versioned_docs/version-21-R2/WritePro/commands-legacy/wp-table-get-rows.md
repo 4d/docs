@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *targetObj* : Object ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; startRow {; *numRows* : Integer} ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; *headers* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | headers | Text | &#8594;  | `wk header rows` |
 | numRows | Integer | &#8594;  | Number of rows to get |
 | Function result | Object | &#8592; | New row range containing selected rows |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *aTable* ; *fieldTitles* ; *fieldNums* )<!-- END REF-->
 <!--REF #_command_.GET FIELD TITLES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which you want to find out the field names |
 | fieldTitles | Text array | &#8592; | Current field names |
 | fieldNums | Integer array | &#8592; | Field numbers |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *resultingPict* ; *pict1* ; *operator* ; *pict2* {; *horOffset* ; *vertOffset*} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resultingPict | Picture | &#8592; | 重ね合わせた結果のピクチャ |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | pict2 | Picture | &#8594;  | 重ね合わせる2つ目のピクチャ |
 | horOffset | Integer | &#8594;  | 重ね合わせの横オフセット |
 | vertOffset | Integer | &#8594;  | 重ね合わせの縦オフセット |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

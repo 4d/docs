@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Cos.Syntax-->**Cos** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Cos.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | Number, in radians, whose cosine is returned |
 | Function result | Real | &#8592; | Cosine of number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

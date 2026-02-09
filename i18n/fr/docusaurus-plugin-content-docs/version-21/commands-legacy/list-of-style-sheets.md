@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *tabFeuillesStyle* )<!-- END REF-->
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabFeuillesStyle | Text array | &#8592; | Noms des feuilles de style définies dans l’application |
-
+</div>
 <!-- END REF-->
 
 #### Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*tabla* : Table ;} *form* : Text, Object {; *formUsuario* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla para la cual definir el formulario de entrada o Tabla por defecto, si se omite |
 | form | Text, Object | &#8594; | Nombre del formulario a definir como formulario de entrada |
 | formUsuario | Text | &#8594; | Nombre del formulario usuario a utilizar |
 | * | Operator | &#8594; | Tamaño de ventana automático |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 
@@ -51,7 +53,7 @@ Los comandos [DISPLAY SELECTION](display-selection.md) y [MODIFY SELECTION](modi
 
 Los comandos de importación [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) e [IMPORT DIF](import-dif.md) utilizan el formulario de entrada actual para importar registros.
 
-El parámetro opcional *\** se utiliza en conjunto con las propiedades del formulario que definió en la ventana de propiedades del formulario del entorno Diseño y el comando [Open window](open-window.md). El especificar el parámetro \* le indica a 4D que utilice las propiedades del formulario para redimensionar automáticamente la ventana para el siguiente uso del formulario (como un formulario de entrada o como una caja de diálogo). Ver mayor información en [Open window](open-window.md).
+El parámetro opcional *\** se utiliza en conjunto con las propiedades del formulario que definió en la ventana de propiedades del formulario del entorno Diseño y el comando [Open window](../commands/open-window.md). El especificar el parámetro \* le indica a 4D que utilice las propiedades del formulario para redimensionar automáticamente la ventana para el siguiente uso del formulario (como un formulario de entrada o como una caja de diálogo). Ver mayor información en [Open window](../commands/open-window.md).
 
 **Nota:** bien sea que pase el parámetro opcional *\** o no, FORM SET INPUT cambia el formulario de entrada para la tabla.
 
@@ -104,7 +106,7 @@ que devuelve:
 [IMPORT TEXT](import-text.md)  
 [MODIFY RECORD](modify-record.md)  
 [MODIFY SELECTION](modify-selection.md)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
 ## Propiedades

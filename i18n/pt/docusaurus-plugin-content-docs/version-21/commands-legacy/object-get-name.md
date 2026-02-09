@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** {( *seletor* )} : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get name.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | seletor | Integer | &#8594;  | Categoria de objeto |
 | Resultado | Text | &#8592; | Nome de objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

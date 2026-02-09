@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *area* ; *subtotal* ; *valor* )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS SPACING.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referência da área |
 | subtotal | Integer | &#8594;  | Nº de subtotal |
 | valor | Integer | &#8592; | 0= sem espaço, 32000=insere um salto de página, >0=espaço adicionado no topo do nível de quebra, <0=incremento proporcional |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

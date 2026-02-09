@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** {( *tabla* )}<!-- END REF-->
 <!--REF #_command_.LAST RECORD.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla de la cual mover el último registro seleccionado o Tabla por defecto, si se omite |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

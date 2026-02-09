@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *imagen* : Picture ; *arrayPalabrasClaves* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | imagen | Picture | &#8594; | Imagen para la cual obtener las palabras claves asociadas |
 | arrayPalabrasClaves | Text array | &#8592; | Array con las palabras claves extraídas |
 | * | Operador | &#8594; | Si se pasa = usar valores distintos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

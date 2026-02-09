@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get database localization.Syntax-->**Get database localization** ( {*languageType* : Integer}{;}{*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get database localization.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | languageType | Integer | &#8594; | ランゲージの種類 |
 | * | 演算子 | &#8594; | ホストデータベースについての情報を返す |
 | 戻り値 | Text | &#8592; | データベースのカレントランゲージ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

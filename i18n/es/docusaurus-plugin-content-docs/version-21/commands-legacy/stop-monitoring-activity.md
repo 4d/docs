@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.STOP MONITORING ACTIVITY.Syntax-->**STOP MONITORING ACTIVITY**<!-- END REF-->
 <!--REF #_command_.STOP MONITORING ACTIVITY.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

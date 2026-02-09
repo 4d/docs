@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *laTable* : Table {; *formule* : Boolean} )<!-- END REF-->
 <!--REF #_command_.QUERY BY FORMULA.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table dans laquelle effectuer la recherche |
 | formule | Boolean | &#8594; | Formule de recherche |
-
+</div>
 <!-- END REF-->
 
 ## Description 

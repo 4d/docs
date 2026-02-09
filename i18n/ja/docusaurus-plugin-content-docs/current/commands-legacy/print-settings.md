@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ({ *dialType* : Integer })<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | dialType | Integer | &#8594; | 表示するダイアログボックス |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

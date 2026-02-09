@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Values.Syntax-->**OB Values** ( *object* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Values.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object | &#8594;  | プロパティ値を取得したいオブジェクト |
 | 戻り値 | Collection | &#8592; | プロパティ値の(バリアント型の)コレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

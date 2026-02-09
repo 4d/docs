@@ -5,8 +5,10 @@ slug: /commands/listbox-get-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *object* : Text ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *object* : Field, Variable ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *object* : Text ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *object* : Variable ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | arrStyles | Pointer array | &#8592; | 配列へのポインターまたは スタイル、カラー、および行管理変数またはNil |
 | arrFooterNames | Text array | &#8592; | 列フッターオブジェクト名 |
 | arrFooterVars | Pointer array | &#8592; | 列フッター変数へのポインター |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

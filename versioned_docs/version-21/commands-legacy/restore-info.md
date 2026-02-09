@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
 <!--REF #_command_.RESTORE INFO.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | Type of information to get |
 | info1 | Integer, Date | &#8592; | Value 1 of the selector |
 | info2 | Text, Time | &#8592; | Value 2 of the selector |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* {; *modifiers* {; *process*}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | code | Integer | &#8594;  | Code d'un caractère ou code de touche de fonction |
 | modifiers | Integer | &#8594;  | Etat des touches Modifier |
 | process | Integer | &#8594;  | Numéro de référence du process de destination ou File d'attente des événements de l'application si paramètre omis ou égal à 0 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

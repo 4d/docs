@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find next.Syntax-->**WP Find next** ( *objCible* ; *rechercherAprès* ; *rechercherValeur* ; *conditionRecherche* {; *remplacerValeur*} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Find next.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | conditionRecherche | Integer | &#8594;  | Règle(s) de recherche |
 | remplacerValeur | Text | &#8594;  | Chaîne de remplacement |
 | Résultat | Object | &#8592; | Plage de la valeur trouvée/remplacée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

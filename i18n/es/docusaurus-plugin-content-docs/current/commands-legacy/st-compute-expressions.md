@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )<br/>**ST COMPUTE EXPRESSIONS** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *finSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es el nombre de un objeto (cadena). Si se omite es un campo o una variable. |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
 | inicioSel | Integer | &#8594; | Inicio de la selección |
 | finSel | Integer | &#8594; | Fin de la selección |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

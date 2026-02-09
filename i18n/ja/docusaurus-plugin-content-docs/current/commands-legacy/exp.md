@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Exp.Syntax-->**Exp** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number | Real | &#8594; | 評価する数値 |
 | 戻り値 | Real | &#8592; | 指数関数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

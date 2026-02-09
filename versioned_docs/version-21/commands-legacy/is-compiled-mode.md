@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Returns information about host database |
 | Function result | Boolean | &#8592; | Compiled (True), Interpreted (False) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

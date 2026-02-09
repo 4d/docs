@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*laTable* : Table ;} *nomEnsemble* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de laquelle lire les enregistrements marqués Si omis, table du formulaire courant |
 | nomEnsemble | Text | &#8594; | Ensemble dans lequel stocker les enregistrements marqués |
-
+</div>
 <!-- END REF-->
 
 ## Description 

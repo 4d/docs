@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE PARAMETER.Syntax-->**SET DATABASE PARAMETER** ( {*tabela* : Table ;} *seletor* : Integer ; *value* : Real, Text )<!-- END REF-->
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela a qual atribuir o parâmetro ou, Tabela padrão se o parâmetro for omitido. |
 | seletor | Integer | &#8594; | Código do banco de dados a ser modificado |
 | value | Real, Text | &#8594; | Valor do parâmetro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

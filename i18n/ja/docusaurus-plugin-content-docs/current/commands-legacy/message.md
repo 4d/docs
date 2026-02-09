@@ -7,17 +7,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* : Text )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | message | Text | &#8594; | 表示するメッセージ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 
 
-<!--REF #_command_.MESSAGE.Summary-->MESSAGE コマンドは、通常ユーザに対して何らかの動作を知らせるために使用します。<!-- END REF-->このコマンドは画面上の特別なメッセージウィンドウに *message* を表示します。このメッセージウィンドウは、 [Open window](open-window.md) を使って（後述）あらかじめ開かれたウィンドウを使用していないかぎり、MESSAGE コマンドをコールするたびに表示されたり閉じられたりします。このメッセージは一時的なもので、フォームを表示する、またはメソッドの実行が終了するとすぐに消去されます。別のMESSAGE コマンドを実行すると古いメッセージは、消去されます。 
+<!--REF #_command_.MESSAGE.Summary-->MESSAGE コマンドは、通常ユーザに対して何らかの動作を知らせるために使用します。<!-- END REF-->このコマンドは画面上の特別なメッセージウィンドウに *message* を表示します。このメッセージウィンドウは、 [Open window](../commands/open-window.md) を使って（後述）あらかじめ開かれたウィンドウを使用していないかぎり、MESSAGE コマンドをコールするたびに表示されたり閉じられたりします。このメッセージは一時的なもので、フォームを表示する、またはメソッドの実行が終了するとすぐに消去されます。別のMESSAGE コマンドを実行すると古いメッセージは、消去されます。 
 
-[Open window](open-window.md) でウィンドウを開いている場合、続く MESSAGE コマンドの呼び出しはすべてそのウィンドウにメッセージを表示します。ウィンドウはターミナルのようなに振舞います:
+[Open window](../commands/open-window.md) でウィンドウを開いている場合、続く MESSAGE コマンドの呼び出しはすべてそのウィンドウにメッセージを表示します。ウィンドウはターミナルのようなに振舞います:
 
 * 一連のメッセージがこのウィンドウで表示されると、前のメッセージを消去しません。その代わりに、新しいメッセージは既存のメッセージに続けて表示されます。
 * メッセージがウィンドウの幅よりも長い場合、4Dは自動的に改行を行います。
@@ -28,7 +30,7 @@ displayed_sidebar: docs
 * このウィンドウは単なる出力用ウィンドウであり、別のウィンドウがオーバーラップしても再描画されません。
 * ウィンドウに表示される文字のフォントとサイズは、データベース設定"インターフェース"ページ内にて変更することができます。
 
-**注:** **MESSAGE** は[Open form window](open-form-window.md) コマンドと互換性がありますが、このコンテキストでは、[Open form window](open-form-window.md)コマンドの、ウィンドウのサイズと位置を保存する第2*\** 引数はサポートされません。
+**注:** **MESSAGE** は[Open form window](../commands/open-form-window.md) コマンドと互換性がありますが、このコンテキストでは、[Open form window](../commands/open-form-window.md)コマンドの、ウィンドウのサイズと位置を保存する第2*\** 引数はサポートされません。
 
 ## 例題 1 
 
@@ -48,7 +50,7 @@ MESSAGEをコールするたびに、以下のウィンドウが表示されて�
 
 ## 例題 2 
 
-ウィンドウのちらつきを避けるため、以下の例題のように[Open window](open-window.md "Open window")で開いたウィンドウにメッセージを表示することができます: 
+ウィンドウのちらつきを避けるため、以下の例題のように[Open window](../commands/open-window.md "Open window")で開いたウィンドウにメッセージを表示することができます: 
 
 ```4d
  Open window(50;50;500;250;5;"Operation in Progress")
@@ -111,7 +113,7 @@ MESSAGEをコールするたびに、以下のウィンドウが表示されて�
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## プロパティ
 

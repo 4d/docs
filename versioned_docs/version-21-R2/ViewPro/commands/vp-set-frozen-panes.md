@@ -8,12 +8,14 @@ title: VP SET FROZEN PANES
 **VP SET FROZEN PANES** ( *vpAreaName* : Text ; *paneObj* : Object { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |paneObj |Object|->|Object containing frozen column and row information|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
+</div>
 <!-- END REF -->
 
 ## Description

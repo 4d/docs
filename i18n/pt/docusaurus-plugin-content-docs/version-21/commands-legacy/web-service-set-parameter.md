@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Syntax-->**WEB SERVICE SET PARAMETER** ( *nome* ; *valor* {; *tipoSoap*} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nome | Text | &#8594;  | Nome do parâmetro a incluir na petição SOAP |
 | valor | Variable | &#8594;  | Variável 4D que contém o valor do parâmetro |
 | tipoSoap | Text | &#8594;  | Tipo SOAP do parâmetro |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

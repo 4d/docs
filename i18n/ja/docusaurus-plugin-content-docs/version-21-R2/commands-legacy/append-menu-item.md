@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer ; *itemText* : Text {; *subMenu* : Text {; *process* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer | &#8594; | メニュー番号またはメニュー参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | subMenu | Text | &#8594; | 項目に関連付けるサブメニューの参照 |
 | process | Integer | &#8594; | プロセス参照番号 |
 | * | 演算子 | &#8594; | 指定時: メタ文字を標準文字として扱う |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

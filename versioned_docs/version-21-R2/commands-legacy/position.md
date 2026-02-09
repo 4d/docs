@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Position.Syntax-->**Position** ( *find* : Text ; *aString* : Text {; *start* : Integer {; *lengthFound* : Integer}}{; *} ) -> Integer<br/>**Position** ( *find* : Text ; *aString* : Text; *start* : Integer ; *lengthFound* : Integer ; *options* : Integer ) -> Integer<!-- END REF-->
 <!--REF #_command_.Position.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | find | Text | &#8594;  | String to find |
@@ -16,8 +18,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If passed: evaluation based on character codes |
 | options | Integer | &#8594;  | Search condition(s) |
 | Function result | Integer | &#8592; | Position of first occurrence |
-
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -17,10 +17,15 @@ title: VP Get binding path
 
 <!-- REF #_method_.VP Get binding path.Params -->
 
-| Parámetros | Tipo   |                             | Descripción                              |                  |
-| ---------- | ------ | --------------------------- | ---------------------------------------- | ---------------- |
-| rangeObj   | Object | ->                          | Objeto rango                             |                  |
-| Resultado  | Text   | <- | Nombre del atributo vinculado a la celda | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |                             | Descripción                              |
+| ---------- | ------ | --------------------------- | ---------------------------------------- |
+| rangeObj   | Object | ->                          | Objeto rango                             |
+| Resultado  | Text   | <- | Nombre del atributo vinculado a la celda |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

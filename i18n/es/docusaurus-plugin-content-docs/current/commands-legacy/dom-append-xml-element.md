@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *refElementTarget* : Text ; *refElementFuente* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML element.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refElementTarget | Text | &#8594; | Referencia del elemento XML padre |
 | refElementFuente | Text | &#8594; | Referencia del elemento XML a añadir |
 | Resultado | Text | &#8592; | Referencia del nuevo elemento XML |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

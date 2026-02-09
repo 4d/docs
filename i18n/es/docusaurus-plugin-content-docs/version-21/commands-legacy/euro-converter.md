@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *valor* ; *deMoneda* ; *aMoneda* ) : Real<!-- END REF-->
 <!--REF #_command_.Euro converter.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | valor | Real | &#8594;  | Valor a convertir |
 | deMoneda | Text | &#8594;  | Código de la moneda en que está expresado el valor |
 | aMoneda | Text | &#8594;  | Código de la moneda a la que debe convertirse el valor |
 | Resultado | Real | &#8592; | Valor convertido |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

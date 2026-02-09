@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *certificatesFolder* : Text )<!-- END REF-->
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | certificatesFolder | Text | &#8594;  | Pathname and name of client certificates folder |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibility

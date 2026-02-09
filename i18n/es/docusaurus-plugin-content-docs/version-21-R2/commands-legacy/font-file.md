@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Font file.Syntax-->**Font file** ( *familiaFuente* : Text {; *estiloFuente* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | familiaFuente | Text | &#8594; | Nombre de la familia de fuente |
 | estiloFuente | Integer | &#8594; | Estilo de fuente: 0=normal (por defecto), 1=negrita, 2=itálica |
 | Resultado | Null, Object | &#8592; | Objeto archivo fuente |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

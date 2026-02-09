@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Average.Syntax-->**Average** ( *séries* {; *cheminAttribut*} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | séries | Field, Array | &#8594;  | Valeurs dont vous voulez calculer la moyenne |
 | cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la moyenne |
 | Résultat | Real | &#8592; | Moyenne arithmétique de séries |
-
+</div>
 <!-- END REF-->
 
 ## Description 

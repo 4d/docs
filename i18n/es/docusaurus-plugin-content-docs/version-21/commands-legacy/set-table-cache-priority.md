@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *tabla* ; *prioridad* )<!-- END REF-->
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla cuyo valor de prioridad de datos escalares tiene que ser definido para la sesión |
 | prioridad | Integer | &#8594;  | Valor de prioridad de caché para valores escalares en la tabla |
-
+</div>
 <!-- END REF-->
 
 ## Modo experto 

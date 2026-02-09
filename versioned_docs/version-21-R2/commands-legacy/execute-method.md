@@ -5,21 +5,24 @@ slug: /commands/execute-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *methodName* : Text ; *result* : Variable {; ...*param* : Expression} )<br/>**EXECUTE METHOD** ( *methodName* : Text ; * {; ...*param* : Expression} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *methodName* : Text ; *result* : Variable {; *...param* : Expression} )<br/>**EXECUTE METHOD** ( *methodName* : Text ; * {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | methodName | Text | &#8594;  | Name of project method to be executed |
-| result | Variable, Operator | &#8592; | Variable receiving the method result or * for a method not returning a result |
+| result | Variable | &#8592; | Variable receiving the method result |
+| * | Operator | &#8594; | Method not returning a result |
 | param | Expression | &#8594;  | Parameter(s) of the method |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1.<!-- END REF-->..paramN*. You can pass the name of any method that can be called from the database or the component executing the command.
+<!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1...paramN*<!-- END REF-->. You can pass the name of any method that can be called from the database or the component executing the command.
 
-In *result*, you can pass a variable which will receive the result of the execution of *methodName* (value placed in $0 inside *methodName*). If the method does not return a result, pass *\** as the second parameter. If the method does not return a result and does not require any parameters to be passed, pass only the *methodName* parameter.
+In *result*, you can pass a variable which will receive the result of the execution of *methodName*. If the method does not return a result, pass *\** as the second parameter. If the method does not return a result and does not require any parameters to be passed, pass only the *methodName* parameter.
 
 The execution context is preserved in the called method, which means that the current form and any current form event remain defined. 
 

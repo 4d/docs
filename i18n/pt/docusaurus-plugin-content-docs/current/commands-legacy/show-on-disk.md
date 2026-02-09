@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *nomeRota* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SHOW ON DISK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeRota | Text | &#8594; | Rota de acesso ao item a exibir |
 | * | Operador | &#8594; | Se o item é uma pasta, mostras os conteúdos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *userNames* : Text array ; *userNumbers* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET USER LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userNames | Text array | &#8592; | User names as they appear in the Password editor window |
 | userNumbers | Integer array | &#8592; | Corresponding unique user ID numbers |
-
+</div>
 <!-- END REF-->
 
 ## Description 

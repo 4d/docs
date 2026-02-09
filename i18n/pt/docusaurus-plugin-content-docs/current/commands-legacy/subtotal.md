@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *valores* : Field {; *saltoPag* : Integer} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | valores | Field | &#8594; | Campo númerico ou variável onde quer devolver o subtotal |
 | saltoPag | Integer | &#8594; | Nivel de quebra para o qual realizar um salto de página |
 | Resultado | Real | &#8592; | Subtotal dos valores |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open document.Syntax-->**Open document** ( *document* : Text {; *fileType* : Text}{; *mode* : Integer} ) : Time<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Text | &#8594;  | Document name or Full document pathname or Empty string for standard file dialog box |
 | fileType | Text | &#8594;  | List of types of documents to be screened, or "*" to not screen the documents |
 | mode | Integer | &#8594;  | Document’s opening mode |
 | Function result | Time | &#8592; | Document reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

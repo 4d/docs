@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CURRENT PRINTER.Syntax-->**SET CURRENT PRINTER** ( *nomImpr* : Text )<!-- END REF-->
 <!--REF #_command_.SET CURRENT PRINTER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomImpr | Text | &#8594; | Nome da impressora a ser usada |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

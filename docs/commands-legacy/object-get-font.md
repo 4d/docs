@@ -5,14 +5,16 @@ slug: /commands/object-get-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font.Syntax-->**OBJECT Get font** ( * ; *object* : Text ) : Text<br/>**OBJECT Get font** ( *object* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get font.Syntax-->**OBJECT Get font** ( * ; *object* : Text ) : Text<br/>**OBJECT Get font** ( *object* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get font.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Text | &#8592; | Name of font |
-
+</div>
 <!-- END REF-->
 
 ## Description 

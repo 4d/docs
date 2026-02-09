@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* ; *arrResult* ; *filtro* {; *alcance* {; *atributos* {; *atributosenArray*}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | dnRootEntry | Text | &#8594;  | Distinguished Name del elemento raíz donde iniciar la búsqueda |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | alcance | Text | &#8594;  | Alcance de la búsqueda: "base" (por defecto), "one", o "sub" |
 | atributos | Text array | &#8594;  | Atributos a recuperar |
 | atributosenArray | Boolean array | &#8594;  | True = forzar el retorno de los atributos como array; false = forzar el retorno de los atributos como variables simples |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

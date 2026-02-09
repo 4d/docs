@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Picture range.Syntax-->**WP Picture range** ( *targetObj* ) : Object<!-- END REF-->
 <!--REF #_command_.WP Picture range.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element |
 | Function result | Object | &#8592; | Range object containing pictures only |
-
+</div>
 <!-- END REF-->
 
 ## Description 

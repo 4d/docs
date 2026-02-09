@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Not.Syntax-->**Not** ( *boolean* : Boolean ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | boolean | Boolean | &#8594;  | Boolean value to negate |
 | Function result | Boolean | &#8592; | Opposite of Boolean |
-
+</div>
 <!-- END REF-->
 
 ## Description 

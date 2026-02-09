@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML DECODE.Syntax-->**XML DECODE** ( *valeurXML* : Text ; *var4D* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.XML DECODE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | valeurXML | Text | &#8594; | Valeur de type texte provenant d’une structure XML |
 | var4D | Field, Variable | &#8592; | Variable ou champ 4D devant recevoir la valeur XML convertie |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -20,8 +22,8 @@ displayed_sidebar: docs
 
 | **Valeur** | **Exemples**                                                                         | **Conversion sur système français**                                                                                                                                                                                          |
 | ---------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| numérique  | <Prix>8,5</Prix><Prix>8.5</Prix>                                                     | Réel : 8,5                                                                                                                                                                                                                   |
-| booléenne  | <Double>1</Double> <Double>0</Double> ou <Double>vrai</Double> <Double>faux</Double> | Booléen : Vrai/Faux                                                                                                                                                                                                          |
+| numérique  | `<Prix>8,5</Prix><Prix>8.5</Prix>`                                                     | Réel : 8,5                                                                                                                                                                                                                   |
+| booléenne  | `<Double>1</Double> <Double>0</Double>` ou `<Double>vrai</Double> <Double>faux</Double>` | Booléen : Vrai/Faux                                                                                                                                                                                                          |
 | BLOB       | Décodage base64                                                                      |                                                                                                                                                                                                                              |
 | Images     | Décodage base64 + commande BLOB vers image                                           |                                                                                                                                                                                                                              |
 | Dates      | 2009-10-25T01:03:20+01:00                                                            | !25/10/2009! -> Suppression de la partie heure et du fuseau horaire                                                                                                                                                          |
@@ -33,6 +35,17 @@ Si le type du paramètre *var4D* n'est pas défini, le type texte est utilisé p
 
 Importation de données depuis un document XML dans lequel les valeurs sont stockées en tant qu’attributs.  
 Exemple de document XML :  
+
+```xml
+<CD Date="2003-01-01T00:00:00Z" 
+Description="This double CD reissued by EMI in 1995 combines 4 Stabat mater hymns. One by Rossini interpreted by the Berlin Symphony Orchestra, directed by Karl Forster. Followed by a work of Verdi, by the Philharmonic Orchestra, directed by Carlo Maria Giulini. On the second CD, you will find Francis Poulenc interpreted by Régine Crespin. This compilation ends with a little-known version, that of the Polish composer Karol Szymanowski. Polish National Radio Symphony Orchestra directed by Antoni Wit"
+Double="true"
+Duration="7246"
+Type="Sacred music"
+CD_ID="5" Performer="Various"
+Price="8.5"
+Title="4 Stabat mater"/>
+```
 
 ```4d
  Repeat

@@ -17,6 +17,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* ; *autoLicenseTarget* ) : Object<br/>**Create deployment license** ( *mergedApp* ; *buildLicense* {; *oemLicense*} ) : Object<!-- END REF-->
 
 <!--REF #_command_.Create deployment license.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | mergedApp | 4D.Folder | &#8594;  | Folder containing the merged application |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | buildLicense | 4D.File | &#8594;  | License required to generate the embedded license |
 | oemLicense | 4D.File | &#8594;  | 4D OEM XML Key license if server license |
 | Function result | Object | &#8592; | Status |
-
+</div>
 <!-- END REF-->
 
 ## Description 

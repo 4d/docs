@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Selection range.Syntax-->**WP Selection range** ( {* ;} *zoneWP* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Selection range.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet. |
 | zoneWP | Text | &#8594;  | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
 | Résultat | Object | &#8592; | Nouvel objet plage ou image |
-
+</div>
 <!-- END REF-->
 
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*

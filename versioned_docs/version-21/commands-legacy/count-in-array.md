@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Count in array.Syntax-->**Count in array** ( *array* ; *value* ) : Integer<!-- END REF-->
 <!--REF #_command_.Count in array.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array where count should occur |
 | value | Expression | &#8594;  | Value to count |
 | Function result | Integer | &#8592; | Number of instances found |
-
+</div>
 <!-- END REF-->
 
 ## Description 

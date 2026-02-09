@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *pictureObject* : Picture ; element_ID ; *attribName* : Text ; *attribValue* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | element_ID | Text | &#8594;  | ID of element whose attribute value you want to get |
 | attribName | Text | &#8594;  | Attribute whose value you want to get |
 | attribValue | Text, Integer | &#8592; | Current value of attribute |
-
+</div>
 <!-- END REF-->
 
 ## Description 

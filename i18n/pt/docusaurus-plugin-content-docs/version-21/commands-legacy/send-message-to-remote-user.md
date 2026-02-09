@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Syntax-->**SEND MESSAGE TO REMOTE USER** ( *message* {; *userSession*} )<!-- END REF-->
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | message | Text | &#8594;  | Text sent to user |
 | userSession | Text | &#8594;  | User's session ID |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On SQL Authentication database method.Syntax-->On SQL Authentication($user : Text ; $pw : Text ; $ip : Text) -> $result : Boolean<!-- END REF-->
 <!--REF #_command_.On SQL Authentication database method.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | $user | Text | &#8592; | User name |
 | $pw | Text | &#8592; | Password |
 | $ip | Text | &#8592; | (Optional) IP address of client at origin of the request |
 | $result | Boolean | &#8592; | True = request accepted, False = request refused |
-
+</div>
 <!-- END REF-->
 
 ## 

@@ -5,15 +5,17 @@ slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *object* : Text ; *vPosition* : Integer {; *hPosition* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *object* : Field, Variable ; *vPosition* : Integer {; *hPosition* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *object* : Text ; *vPosition* : Integer {; *hPosition* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *object* : Variable, Field ; *vPosition* : Integer {; *hPosition* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field or table (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | vPosition | Integer | &#8592; | Number of first line displayed or Vertical scrolling in pixels (pictures) |
 | hPosition | Integer | &#8592; | Number of first column displayed or<br/>Horizonal scrolling in pixels (pictures) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

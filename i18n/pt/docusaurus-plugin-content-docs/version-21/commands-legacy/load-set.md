@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*tabela* ;} *conjunto* ; *documento* )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela à qual o conjunto pertence, ou tabela padrão, se omitido |
 | conjunto | Text | &#8594;  | Nome do conjunto a ser criado em memória |
 | documento | Text | &#8594;  | Documento que contém o conjunto |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

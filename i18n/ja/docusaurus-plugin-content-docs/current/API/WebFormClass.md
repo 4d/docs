@@ -31,7 +31,7 @@ title: WebForm
 
 #### 説明
 
-The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
+Web ページのコンポーネント (構成要素) とは、これらの Web ページの<!-- REF WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF -->。
 
 返されるオブジェクトは、[`4D.WebFormItem`](WebFormItemClass.md) クラスのものです。 これらのオブジェクトは、コンポーネントを動的に管理するために使用できる関数を持っています。
 
@@ -56,14 +56,17 @@ shared singleton Class constructor()
 
 ### .disableState()
 
-<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : string)<!-- END REF -->
+<!-- REF #WebFormClass.disableState().Syntax -->**.disableState**( *state* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.disableState().Params -->
+
+<div class="no-index">
 
 | 引数    | 型    |     | 説明                       |
 | ----- | ---- | :-: | ------------------------ |
 | state | Text |  -> | Webフォーム上で無効化する state の名称 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -81,14 +84,17 @@ Web ページのステートについての詳細な情報については、[Qod
 
 ### .enableState()
 
-<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : string )<!-- END REF -->
+<!-- REF #WebFormClass.enableState().Syntax -->**.enableState**( *state* : Text )<!-- END REF -->
 
 <!-- REF #WebFormClass.enableState().Params -->
+
+<div class="no-index">
 
 | 引数    | 型    |     | 説明                       |
 | ----- | ---- | :-: | ------------------------ |
 | state | Text |  -> | Webフォーム上で有効化する state の名称 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -117,14 +123,17 @@ Function authenticationError()
 
 ### .setError()
 
-<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setError().Syntax -->**.setError**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
+
+<div class="no-index">
 
 | 引数  | 型    |     | 説明                   |
 | --- | ---- | :-: | -------------------- |
 | msg | Text |  -> | Webフォームに表示するエラーメッセージ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -152,14 +161,17 @@ myForm.setError("My error message")
 
 ### .setMessage()
 
-<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setMessage().Syntax -->**.setMessage**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
+
+<div class="no-index">
 
 | 引数  | 型    |     | 説明                  |
 | --- | ---- | :-: | ------------------- |
 | msg | Text |  -> | Webフォームに表示する情報メッセージ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -187,14 +199,17 @@ myForm.setMessage("My information message")
 
 ### .setWarning()
 
-<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : string)<!-- END REF -->
+<!-- REF #WebFormClass.setWarning().Syntax -->**.setWarning**( *msg* : Text)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
+
+<div class="no-index">
 
 | 引数  | 型    |     | 説明                  |
 | --- | ---- | :-: | ------------------- |
 | msg | Text |  -> | Webフォームに表示する警告メッセージ |
 
+</div>
 <!-- END REF -->
 
 #### 説明

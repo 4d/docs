@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *BLOB* {; *textoCodificado*}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 ENCODE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Blob | Blob, Text | &#8594;  | BLOB a codificar em formato Base64 |
 | &#8592; | BLOB  codificado em formato Base64 |
 | textoCodificado | Blob, Text | &#8592; | Resultado do BLOB codificado em formato Base64 |
 | * | Operador | &#8594;  | Codificar no formato em Base64URL |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

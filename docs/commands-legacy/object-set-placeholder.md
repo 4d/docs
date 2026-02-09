@@ -5,14 +5,16 @@ slug: /commands/object-set-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( * ; *object* : Text ; *placeholderText* : Text )<br/>**OBJECT SET PLACEHOLDER** ( *object* : Field, Variable ; *placeholderText* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( * ; *object* : Text ; *placeholderText* : Text )<br/>**OBJECT SET PLACEHOLDER** ( *object* : Variable, Field ; *placeholderText* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | placeholderText | Text | &#8594;  | Placeholder text associated with object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

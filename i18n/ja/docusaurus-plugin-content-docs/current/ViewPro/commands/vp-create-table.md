@@ -19,12 +19,17 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| 引数        | 型                                                                                     |    | 説明                    |                  |
-| --------- | ------------------------------------------------------------------------------------- | -- | --------------------- | ---------------- |
-| rangeObj  | Object                                                                                | -> | レンジオブジェクト             |                  |
-| tableName | Text                                                                                  | -> | 表組みの名称                |                  |
-| source    | Text                                                                                  | -> | 表に表示するデータコンテキストプロパティ名 |                  |
-| options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | 追加のオプション              | <!-- END REF --> |
+<div class="no-index">
+
+| 引数        | 型                                                                                     |    | 説明                    |
+| --------- | ------------------------------------------------------------------------------------- | -- | --------------------- |
+| rangeObj  | Object                                                                                | -> | レンジオブジェクト             |
+| tableName | Text                                                                                  | -> | 表組みの名称                |
+| source    | Text                                                                                  | -> | 表に表示するデータコンテキストプロパティ名 |
+| options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | 追加のオプション              |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

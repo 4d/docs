@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Month of.Syntax-->**Month of** ( *laDate* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Month of.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laDate | Date | &#8594; | Date dont vous voulez extraire le mois |
 | Résultat | Integer | &#8592; | Nombre indiquant le mois de date |
-
+</div>
 <!-- END REF-->
 
 ## Description 

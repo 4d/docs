@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.In break.Syntax-->**In break**  : Boolean<!-- END REF-->
 <!--REF #_command_.In break.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Devuelve True si el ciclo de ejecución es in break |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

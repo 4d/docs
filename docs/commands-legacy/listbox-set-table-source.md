@@ -5,15 +5,18 @@ slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; *tableNum* : Integer, Text {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Field, Variable ; *tableNum* : Integer, Text {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; *selName* : Integer, Text {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Field, Variable ; *selName* : Integer, Text {; *highlightName* : Text} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; *tableNum* : Integer {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Variable ; *tableNum* : Integer {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; *selName* : Text {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Variable ; *selName* : Text {; *highlightName* : Text} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
-| tableNum &#124; selName | Integer, Text | &#8594;  | Number of table whose current selection is to be used or Named selection to be used |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
+| tableNum | Integer | &#8594;  | Number of table whose current selection is to be used |
+| selName | Text | &#8594;  | Named selection to be used |
 | highlightName | Text | &#8594;  | Name of highlight set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

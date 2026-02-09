@@ -88,11 +88,11 @@ Plusieurs types de références de méthode sont pris en charge :
   `ObjectMethods/objectName.4dm`  
   ... où `objectName` est le [nom de l'objet](properties_Object.md#object-name). Ce type de référence indique que le fichier de méthode se trouve à l'emplacement par défaut ("sources/forms/*formName*/ObjectMethods/"). Dans ce cas, 4D gère automatiquement la méthode objet lorsque des opérations sont exécutées sur l'objet formulaire (renommage, duplication, copier/coller, etc.)
 
-- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
+- un nom de méthode projet : nom d'une méthode projet existante sans extension de fichier, c'est-à-dire : `maMéthode` Dans ce cas, 4D ne prend pas en charge automatiquement les opérations sur les objets.
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
-  `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
+- un chemin d'accès du fichier de méthode personnalisé comprenant l'extension .4dm, par exemple :  
+  `../../CustomMethods/myMethod.4dm` Vous pouvez également utiliser un filesystem :  
+  `/RESOURCES/Buttons/bOK.4dm` Dans ce cas, 4D ne prend pas en charge automatiquement les opérations sur les objets.
 
 #### Grammaire JSON
 

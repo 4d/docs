@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *picture* ; *width* ; *height* {; *hOffset* {; *vOffset* {; *mode*}}} )<!-- END REF-->
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | Picture for which to get information |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | hOffset | Integer | &#8592; | Horizontal offset when displayed on background |
 | vOffset | Integer | &#8592; | Vertical offset when displayed on background |
 | mode | Integer | &#8592; | Transfer mode when displayed on background |
-
+</div>
 <!-- END REF-->
 
 ## Description 

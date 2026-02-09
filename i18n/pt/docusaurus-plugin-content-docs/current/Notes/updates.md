@@ -3,6 +3,16 @@ id: updates
 title: Notas de lançamento
 ---
 
+## 4D 21 R3
+
+#### Destaques
+
+- The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12.
+
+#### Mudanças de comportamento
+
+- The [`JSON Validate`](../commands/json-validate.md) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
+
 ## 4D 21 R2
 
 Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D v21 R2.
@@ -15,7 +25,7 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21
 - You can now create and open Qodly Pages from the [Explorer](../Develop/explorer.md).
 - You can [customize the icons of your components](../Extensions/develop-components.md#custom-icon).
 - 4D AIKit component: new [File API](../aikit/Classes/OpenAIFilesAPI.md) class to implement **file upload** features.
-- [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in contents**](../Project/search-replace.md#replace-in-content) features can now support editable components.
+- [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in content**](../Project/search-replace.md#replace-in-content) features can now support editable components.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R2): lista de todos os bugs corrigidos em 4D 21 R2.
 
 #### Prévia do desenvolvedor

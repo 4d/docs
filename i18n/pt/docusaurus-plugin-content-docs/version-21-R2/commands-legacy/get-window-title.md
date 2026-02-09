@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get window title.Syntax-->**Get window title** ( *janela* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janela | Integer | &#8594; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 | Resultado | Text | &#8592; | Título da janela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

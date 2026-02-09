@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *fileName* ; *text* {; *charSet* {; *breakMode*}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO DOCUMENT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | Document name or Pathname to document |
 | text | Text | &#8594;  | Text to store in the document |
 | charSet | Text, Integer | &#8594;  | Name or Number of character set |
 | breakMode | Integer | &#8594;  | Processing mode for line breaks |
-
+</div>
 <!-- END REF-->
 
 ## Description 

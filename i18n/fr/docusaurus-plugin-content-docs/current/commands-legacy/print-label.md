@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *laTable* : Table {; *nomFichier* : Text {; * }} )<br/>**PRINT LABEL** ( *laTable* : Table{; *nomFichier* : Text {; >}} )<!-- END REF-->
 <!--REF #_command_.PRINT LABEL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table à imprimer ou Table par défaut si ce paramètre est omis |
 | nomFichier | Text | &#8594; | Nom de fichier d'étiquettes sur disque |
 | * &#124; > | Operator | &#8594; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
-
+</div>
 <!-- END REF-->
 
 ## Description 

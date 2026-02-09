@@ -19,12 +19,14 @@ displayed_sidebar: docs
 <!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
 
 <!--REF #_command_.Open datastore.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | connectionInfo | Object | &#8594;  | Connection properties used to reach the remote datastore |
 | localID | Text | &#8594;  | Id to assign to the opened datastore on the local application (mandatory) |
 | Function result | 4D.DataStoreImplementation | &#8592; | Datastore object |
-
+</div>
 <!-- END REF-->
 
 ## Description

@@ -7,6 +7,7 @@ title: VP Column
 **VP Column** ( *vpAreaName* : Text ; *column*: Integer ; *columnCount* : Integer { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Column.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -14,7 +15,9 @@ title: VP Column
 |column| Integer|->|Column index|
 |columnCount| Integer|->|Number of columns|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of cells|<!-- END REF -->
+|Result|Object|<-|Range object of cells|
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -5,18 +5,20 @@ slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* : Integer, Text ; *itemPos* : Operator, Integer ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**GET LIST ITEM** ( {* ;} *list* : Integer, Text ; * ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( * ; *list* : Text ; *itemPos* : Integer, Operator ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**GET LIST ITEM** ( *list* : Integer ; *itemPos* : Integer, Operator ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemPos &#124; * | Operator, Integer | &#8594;  | Position of item in expanded/collapsed list(s) or * for the current item in the list |
+| * | Operator | &#8594;  | If specified, list is an object name (string). If omitted, list is a list reference number |
+| list | Text, Integer | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemPos | Integer, Operator | &#8594;  | Position of item in expanded/collapsed list(s) or * for the current item in the list |
 | itemRef | Integer | &#8592; | Item reference number |
 | itemText | Text | &#8592; | Text of the list item |
 | sublist | Integer | &#8592; | Sublist list reference number (if any) |
 | expanded | Boolean | &#8592; | If a sublist is attached: TRUE = sublist is currently expanded FALSE = sublist is currently collapsed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

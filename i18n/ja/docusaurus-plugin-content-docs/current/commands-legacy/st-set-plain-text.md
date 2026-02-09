@@ -5,8 +5,10 @@ slug: /commands/st-set-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( * ; *object* : Text ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST SET PLAIN TEXT** ( *object* : Field, Variable ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( * ; *object* : Text ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST SET PLAIN TEXT** ( *object* : Variable, Field ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時、objectはオブジェクト名 (文字列)。省略時、オブジェクトは変数またはフィールド |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | newText | Text | &#8594; | 挿入するテキスト |
 | startSel | Integer | &#8594; | 選択の開始位置 |
 | endSel | Integer | &#8594; | 選択の終了位置 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

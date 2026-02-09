@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current default table.Syntax-->**Current default table**  : Pointer<!-- END REF-->
 <!--REF #_command_.Current default table.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Pointer | &#8592; | デフォルトテーブルへのポインタ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

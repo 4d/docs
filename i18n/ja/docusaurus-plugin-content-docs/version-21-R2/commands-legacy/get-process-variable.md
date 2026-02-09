@@ -5,14 +5,16 @@ slug: /commands/get-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* : Integer ; *srcVar* : Variable ; *dstVar* : Variable {; ...(*srcVar* : Variable, *dstVar* : Variable)} )<!-- END REF-->
+<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* : Integer ; *srcVar* : Variable ; *dstVar* : Variable {; ...(*srcVar* : Variable ; *dstVar* : Variable)} )<!-- END REF-->
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | process | Integer | &#8594; | ソースプロセス番号 |
 | srcVar | Variable | &#8594; | ソース変数 |
 | dstVar | Variable | &#8592; | 受け取る変数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* ; *colNum* ; *rowNum* ; *property* ) : any<!-- END REF-->
 <!--REF #_command_.QR Get text property.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | colNum | Integer | &#8594;  | Column number |
 | rowNum | Integer | &#8594;  | Row number |
 | property | Integer | &#8594;  | Property number |
-| Function result | Integer, Text | &#8592; | Value for the selected property |
-
+| Function result | any | &#8592; | Value for the selected property (Integer or Text) |
+</div>
 <!-- END REF-->
 
 ## Description 

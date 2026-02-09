@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last field number.Syntax-->**Last field number** ( *numTabla* : Entero largo, Puntero ) : Integer<br/>**Last field number** ( *ptrTabla* : Entero largo, Puntero ) : Integer<!-- END REF-->
 <!--REF #_command_.Last field number.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594; | Número de tabla o puntero a una tabla |
 | Resultado | Integer | &#8592; | Número de campo más alto en la tabla |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

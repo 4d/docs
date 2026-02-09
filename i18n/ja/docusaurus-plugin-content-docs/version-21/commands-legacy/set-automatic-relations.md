@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *one* {; *many*} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | one | Boolean | &#8594;  | すべてのn対1リレーションの状態 |
 | many | Boolean | &#8594;  | すべての1対nリレーションの状態 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

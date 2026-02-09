@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; *newPassPhrase* {; *archiveFolder* {; *curPassPhrase* {; *methodName*}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* ; *dataPath* {; *newDataKey* {; *archiveFolder* {; *curDataKey* {; *methodName*}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | structurePath | Text | &#8594;  | ストラクチャーファイルのパス名 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | curPassPhrase &#124; curDataKey | テキスト, オブジェクト | &#8594;  | カレントのパスフレーズ(テキスト)またはカレントの暗号化キー(オブジェクト) |
 | methodName | Text | &#8594;  | 4Dコールバックメソッド名 |
 | 戻り値 | Text | &#8592; | 元のファイルが保存されたフォルダの完全なパス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

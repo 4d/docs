@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *objet* : Text ; *police* : Text )<br/>**OBJECT SET FONT** ( *objet* : Field, Variable ; *police* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
 | objet | any | &#8594; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
 | police | Text | &#8594; | Nom de police de caractères |
-
+</div>
 <!-- END REF-->
 
 ## Description 

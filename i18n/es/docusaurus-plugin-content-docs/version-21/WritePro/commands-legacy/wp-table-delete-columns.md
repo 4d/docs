@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Syntax-->**WP TABLE DELETE COLUMNS** ( *objTarget* ) | ( *refTabla* ; *numCol* {; *numColumns*} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
 | refTabla | Object | &#8594;  | Referencia de tabla |
 | numCol | Integer | &#8594;  | Número de columna |
 | numColumns | Integer | &#8594;  | Número de columnas a eliminar (valor por defecto = 1) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

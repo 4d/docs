@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leChamp | Text, Blob, Picture, Object | &#8594;  | Champ pour lequel recharger les données |
-
+</div>
 <!-- END REF-->
 
 ## Description 

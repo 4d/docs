@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *zone* : Integer ; *numTable* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594; | Référence de la zone |
 | numTable | Integer | &#8594; | Numéro de table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

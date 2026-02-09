@@ -5,8 +5,10 @@ slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* : Text ; *xPath* : Text {; *attribName* : Text ; *attrValue* : Text, Boolean, Integer, Real, Time, Date} {; ...(*attribName* : Text, *attrValue* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* : Text ; *xPath* : Text; {; ...(*attribName* : Text, *attrValue* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | Root XML element reference |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | attribName | Text | &#8594;  | Attribute to set |
 | attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
 | Function result | Text | &#8592; | Reference of the created XML element |
-
+</div>
 <!-- END REF-->
 
 ## Description 

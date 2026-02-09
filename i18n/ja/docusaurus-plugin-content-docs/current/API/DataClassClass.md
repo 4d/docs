@@ -136,11 +136,14 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- REF #DataClassClass.all().Params -->
 
+<div class="no-index">
+
 | 引数       | 型                                  |                             | 説明                                |
 | -------- | ---------------------------------- | :-------------------------: | --------------------------------- |
 | settings | Object                             |              ->             | ビルドオプション: context |
 | 戻り値      | 4D.EntitySelection | <- | データクラスの全エンティティの参照                 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -184,10 +187,13 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- REF #DataClassClass.clearRemoteCache().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -241,12 +247,15 @@ $ds.Persons.clearRemoteCache()
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 
+<div class="no-index">
+
 | 引数        | 型                                  |                             | 説明                                |
 | --------- | ---------------------------------- | :-------------------------: | --------------------------------- |
 | objectCol | Collection                         |              ->             | エンティティにマップするオブジェクトのコレクション         |
 | settings  | Object                             |              ->             | ビルドオプション: context |
 | 戻り値       | 4D.EntitySelection | <- | コレクションから作成したエンティティセレクション          |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -442,12 +451,15 @@ $ds.Persons.clearRemoteCache()
 
 <!-- REF #DataClassClass.get().Params -->
 
+<div class="no-index">
+
 | 引数         | 型                         |                             | 説明                                |
 | ---------- | ------------------------- | :-------------------------: | --------------------------------- |
 | primaryKey | Integer, Text             |              ->             | 取得するエンティティのプライマリーキー値              |
 | settings   | Object                    |              ->             | ビルドオプション: context |
 | 戻り値        | 4D.Entity | <- | 指定したプライマリーキーに合致するエンティティ           |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -525,10 +537,13 @@ $ds.Persons.clearRemoteCache()
 
 <!-- REF #DataClassClass.getCount().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                  |
 | --- | ------- | --------------------------- | ------------------- |
 | 戻り値 | Integer | <- | データクラスに含まれる全エンティティ数 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -566,10 +581,13 @@ $number:=$ds.Persons.getCount()
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                            |                             | 説明                 |
 | --- | ---------------------------- | :-------------------------: | ------------------ |
 | 戻り値 | cs.DataStore | <- | データクラスが属しているデータストア |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -622,10 +640,13 @@ $number:=$ds.Persons.getCount()
 
 <!-- REF #DataClassClass.getInfo().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明        |
 | --- | ------ | --------------------------- | --------- |
 | 戻り値 | Object | <- | データクラスの情報 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -693,10 +714,13 @@ $number:=$ds.Persons.getCount()
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明                               |
 | --- | ------ | --------------------------- | -------------------------------- |
 | 戻り値 | Object | <- | データクラスの ORDAキャッシュの内容を記述したオブジェクト。 |
 
+</div>
 <!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。  ほとんどの場合、使用する必要はないでしょう。
@@ -783,10 +807,13 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <!-- REF #DataClassClass.new().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                         |                             | 説明              |
 | --- | ------------------------- | --------------------------- | --------------- |
 | 戻り値 | 4D.Entity | <- | データクラスの新規エンティティ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -830,11 +857,14 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <!-- REF #DataClassClass.newSelection().Params -->
 
+<div class="no-index">
+
 | 引数        | 型                                  |                             | 説明                                                                                                                                                    |
 | --------- | ---------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder | Integer                            | ->                          | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br/>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
 | 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション                                                                                                                               |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -876,6 +906,8 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <!-- REF #DataClassClass.query().Params -->
 
+<div class="no-index">
+
 | 引数            | 型                                  |                             | 説明                                                                                                   |
 | ------------- | ---------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | queryString   | Text                               | ->                          | 検索条件 (文字列)                                                                        |
@@ -884,6 +916,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 | querySettings | Object                             | ->                          | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
 | 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション                                |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -986,7 +1019,7 @@ attributePath|formula 比較演算子 値
 | 定義 | *queryString* に `:paramIndex` (例 :1, :2...) という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 最大で 128個の *value* 引数を渡すことができます。 | `:paramName` (例: myparam など) という形でパラメーターが挿入され、その値は *querySettings* 引数の attributes または parameters オブジェクトで提供されます。 |
 | 例題 | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                        | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`               |
 
-*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
+*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
 
 - 定数値 (プレースホルダーを使用しない)
 - インデックスプレースホルダーや命名プレースホルダー
@@ -1000,7 +1033,7 @@ attributePath|formula 比較演算子 値
  $result:=$col.query($vquery)
 ```
 
-非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 しかしながら、もしユーザーが *myname* に *smith OR status='private'* のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
+非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 しかしながら、もしユーザーが *myname* に *smith OR status='private'* のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
 
 プレースホルダーを使用した場合、セキュリティ条件を上書きすることは不可能です:
 
@@ -1642,10 +1675,13 @@ ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 
+<div class="no-index">
+
 | 引数       | 型      |    | 説明                                            |
 | -------- | ------ | -- | --------------------------------------------- |
 | settings | Object | -> | データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定するオブジェクト |
 
+</div>
 <!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。  ほとんどの場合、使用する必要はないでしょう。

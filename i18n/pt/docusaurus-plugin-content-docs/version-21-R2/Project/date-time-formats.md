@@ -9,7 +9,7 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 - o comando [`String`](../commands/string.md),
 - os comandos [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) e [`OBJECT Get format`](../commands-legacy/object-get-format.md),
-- the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
+- the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md#date-format) and [`timeFormat`](../FormObjects/properties_Display.md#time-format) JSON properties.
 
 ## Lista de padrões
 

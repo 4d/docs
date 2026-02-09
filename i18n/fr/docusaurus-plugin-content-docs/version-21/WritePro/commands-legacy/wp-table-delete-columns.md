@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Syntax-->**WP TABLE DELETE COLUMNS** ( *objCible* ) | ( *refTableau* ; *numCol* {; *nbCols*} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D View Pro |
 | refTableau | Object | &#8594;  | Référence de tableau |
 | numCol | Integer | &#8594;  | Numéro de colonne |
 | nbCols | Integer | &#8594;  | Nombre de colonnes à supprimer (valeur par défaut=1) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

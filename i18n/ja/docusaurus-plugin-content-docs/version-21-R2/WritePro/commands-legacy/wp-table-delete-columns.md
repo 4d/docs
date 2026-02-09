@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Syntax-->**WP TABLE DELETE COLUMNS** ( *targetObj* : Object ) | ( *tableRef* : Object ; *colNumber* : Integer {; *numColumns* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
 | tableRef | Object | &#8594;  | 表の参照 |
 | colNumber | Integer | &#8594;  | カラムの番号 |
 | numColumns | Integer | &#8594;  | 削除するカラムの数(デフォルト値=1) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

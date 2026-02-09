@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *raiz* {; *nomeEspaço*} {; *nSNome* ; *nSValor*} {; *nSNome2* ; *nSValor2* ; ... ; *nSNomeN* ; *nSValorN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | raiz | Text | &#8594;  | Nome do elemento raiz |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nSNome | Text | &#8594;  | Nome do Namespace |
 | nSValor | Text | &#8594;  | Valor do Namespace |
 | Resultado | Text | &#8592; | Raiz XML do elemento referência |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

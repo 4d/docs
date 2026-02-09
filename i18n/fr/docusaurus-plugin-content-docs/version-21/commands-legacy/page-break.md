@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * )}<br/>**PAGE BREAK** {( > )}<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * &#124; > |Operator| &#8594;  | * Annule l'impression lancée par Imprimer ligne ou > Rend l'impression prioritaire |
-
+</div>
 <!-- END REF-->
 
 ## Description 

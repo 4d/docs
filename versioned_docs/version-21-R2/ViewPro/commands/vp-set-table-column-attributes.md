@@ -15,6 +15,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 **VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -22,7 +23,9 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 |tableName|Text|->|Table name|
 |column|Integer|->|Index of the column in the table|
 |attributes |Object|->|Attribute(s) to apply to the *column*|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+</div>
+<!-- END REF -->
 
 ## Description
 

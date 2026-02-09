@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aField* : Text, Blob, Picture ; *path* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Text, Blob, Picture | &#8594;  | Field for which to set the storage location |
 | path | Text, Integer | &#8594;  | Pathname and file name of external storage or0 = use structure definition 1 = use default folder |
-
+</div>
 <!-- END REF-->
 
 ## Description 

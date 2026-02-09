@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTipos* : Text array {; *resArchivo* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | resTipos | Text array | &#8592; | Lista de tipos de recursos disponibles |
 | resArchivo | Time | &#8594; | Número de referencia del archivo de recursos o Todos los archivos de recursos abiertos, si se omite |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

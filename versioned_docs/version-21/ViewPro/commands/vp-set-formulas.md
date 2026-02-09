@@ -8,11 +8,14 @@ title: VP SET FORMULAS
 **VP SET FORMULAS** ( *rangeObj* : Object ; *formulasCol* : Collection ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET FORMULAS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Cell range object|
-|formulasCol |Collection|->|Collection of formulas|<!-- END REF -->
+|formulasCol |Collection|->|Collection of formulas|
+</div>
+<!-- END REF -->
 
 ## Description
 

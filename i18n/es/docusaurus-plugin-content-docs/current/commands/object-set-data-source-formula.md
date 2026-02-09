@@ -4,15 +4,15 @@ title: OBJECT SET DATA SOURCE FORMULA
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax-->**OBJECT SET DATA SOURCE FORMULA** ( * ; *object* : Text ; *formula* : 4D.Formula )<br/>**OBJECT SET DATA SOURCE FORMULA** ( *object* : Field, Variable ; *formula* : 4D.Formula )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax-->**OBJECT SET DATA SOURCE FORMULA** ( * ; *object* : Text ; *formula* : 4D.Formula )<br/>**OBJECT SET DATA SOURCE FORMULA** ( *object* : Variable, Field ; *formula* : 4D.Formula )<!-- END REF-->
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Params-->
 
-| Parámetros | Tipo                       |                             | Descripción                                                                                                                |
-| ---------- | -------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador                   | &#8594; | Si se especifica, object es un nombre de objeto (cadena)<br/>Si se omite, object es un campo o variable |
-| object     | any                        | &#8594; | Nombre del objeto (si se especifica \*) o<br/>Campo o variable (si se omite \*)      |
-| formula    | 4D.Formula | &#8594; | Fórmula a asignar como fuente de datos                                                                                     |
+| Parámetros | Tipo                       |                             | Descripción                                                                                                             |
+| ---------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador                   | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
+| object     | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
+| formula    | 4D.Formula | &#8594; | Fórmula a asignar como fuente de datos                                                                                  |
 
 <!-- END REF-->
 

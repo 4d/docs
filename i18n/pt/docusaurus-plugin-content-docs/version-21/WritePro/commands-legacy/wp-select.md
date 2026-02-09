@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *wpArea*;} {*wpArea*} {; *faixaInicio* ; *faixaFim*} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, wpArea é um formulário nome objeto (string). Se omitido, wpArea é um campo objeto ou variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | wpArea | Object | &#8594;  | Nome de objeto de formulário (se * for especificado) ou 4D Write Pro variável objeto ou campo (se * for omitido) |
 | faixaInicio | Integer | &#8594;  | Início offset da faixa de texto |
 | faixaFim | Integer | &#8594;  | Final offset da faixa de texto |
-
+</div>
 <!-- END REF-->
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*

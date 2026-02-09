@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *laTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table pour laquelle connaître la valeur de priorité des données scalaires |
 | Résultat | Integer | &#8592; | Valeur de priorité courante pour les champs scalaires |
-
+</div>
 <!-- END REF-->
 
 ## Description 

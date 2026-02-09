@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | numArray | Integer array | &#8592; | Array of port numbers |
 | nameArray | Text array | &#8592; | Array of port names |
-
+</div>
 <!-- END REF-->
 
 ## Description 

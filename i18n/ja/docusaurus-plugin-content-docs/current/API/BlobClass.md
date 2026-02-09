@@ -27,12 +27,15 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <!-- REF #4D.Blob.new().Params -->
 
+<div class="no-index">
+
 | 引数       | 型                       |                             | 説明                         |
 | -------- | ----------------------- | :-------------------------: | -------------------------- |
 | blobScal | BLOB                    |              ->             | コピーする BLOB                 |
 | blobObj  | 4D.Blob |              ->             | コピーする BLOB                 |
 | 戻り値      | 4D.Blob | <- | 新規 4D.Blob |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -63,12 +66,15 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <!-- REF #Blob.slice().Params -->
 
+<div class="no-index">
+
 | 引数    | 型                       |                             | 説明                               |
 | ----- | ----------------------- | :-------------------------: | -------------------------------- |
 | start | Real                    |              ->             | 新しい `4D.Blob` に含める最初のバイトのインデックス  |
 | end   | Real                    |              ->             | 新しい `4D.Blob` に含めない最初のバイトのインデックス |
 | 戻り値   | 4D.Blob | <- | 新規 `4D.Blob`                     |
 
+</div>
 <!-- END REF -->
 
 #### 説明

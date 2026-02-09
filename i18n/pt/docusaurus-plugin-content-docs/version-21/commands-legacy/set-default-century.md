@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *seculo* {; *anoPivo*} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | seculo | Integer | &#8594;  | Século por padrão (menos um) para a entrada de anos com dois dígitos |
 | anoPivo | Integer | &#8594;  | Ano pivô para a entrada de anos com dois dígitos |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

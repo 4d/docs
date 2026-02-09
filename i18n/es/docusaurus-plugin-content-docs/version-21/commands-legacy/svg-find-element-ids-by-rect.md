@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetoImagen* ; *x* ; *y* ; *ancho* ; *alto* ; *arrIDs* ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es un campo o una variable. |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | alto | Integer | &#8594;  | Altura del rectángulo de selección |
 | arrIDs | Text array | &#8592; | IDs de los elementos cuyo rectángulo circundante está en intersección con el rectángulo de selección |
 | Resultado | Boolean | &#8592; | True = se encontró al menos un elemento |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

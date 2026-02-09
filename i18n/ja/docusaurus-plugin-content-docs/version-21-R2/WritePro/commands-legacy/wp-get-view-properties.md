@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get view properties.Syntax-->**WP Get view properties** ( * ; *wpArea* : Text, Object ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get view properties.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: wpAreaはフォームオブジェクト名(文字列) 省略時: wpArea はオブジェクトフィールドまたは変数(ドキュメント) |
 | wpArea | Text, Object | &#8594;  | フォームオブジェクト名(* 指定時)または4D Write Proオブジェクト変数またはフィールド(* 省略時) |
 | 戻り値 | Object | &#8592; | カレントビュープロパティ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

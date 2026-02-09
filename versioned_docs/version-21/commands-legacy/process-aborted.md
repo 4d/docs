@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process aborted.Syntax-->**Process aborted**  : Boolean<!-- END REF-->
 <!--REF #_command_.Process aborted.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | True = the process is about to be aborted, False = the process is not about to be aborted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

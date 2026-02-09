@@ -433,6 +433,8 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #document.copyTo().Params -->
 
+<div class="no-index">
+
 | Parâmetro         | Tipo                       |                             | Descrição                                              |
 | ----------------- | -------------------------- | :-------------------------: | ------------------------------------------------------ |
 | destinationFolder | 4D. Folder |              ->             | Pasta de destino                                       |
@@ -440,6 +442,7 @@ Essa propriedade é **somente leitura**.
 | overwrite         | Integer                    |              ->             | `fk overwrite` para substituir os elementos existentes |
 | Resultados        | 4D. File   | <- | Arquivo copiado                                        |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -489,10 +492,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                     |                             | Descrição           |
 | ---------- | ------------------------ | --------------------------- | ------------------- |
 | Resultados | 4D. Blob | <- | Conteúdo do arquivo |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -533,11 +539,14 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 <!-- REF #document.getIcon().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |                             | Descrição                                                          |
 | ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
 | size       | Integer | ->                          | Longitude de lado da imagem devolvida (píxeles) |
 | Resultados | Imagem  | <- | Ícone                                                              |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -570,6 +579,8 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 <!-- REF #document.getText().Params -->
 
+<div class="no-index">
+
 | Parâmetro   | Tipo    |                             | Descrição                                   |
 | ----------- | ------- | --------------------------- | ------------------------------------------- |
 | charSetName | Text    | ->                          | Nome do conjunto de caracteres              |
@@ -577,6 +588,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 | breakMode   | Integer | ->                          | Modo de processamento para quebras de linha |
 | Resultados  | Text    | <- | Texto do documento                          |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -599,9 +611,9 @@ Em *breakMode*, você pode passar um número indicando o processamento a aplicar
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Não processado                                                                                                                                                                                                                                           |
 | `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operacional: CR (retorno de carro) sob macOS, CRLF (retorno do carro + salto de linha) em Windows |
-| `Documento com CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                                        |
-| `Documento com CR`            | 3     | Quebras de linha são convertidas para o formato macOS: CR (retorno de carro)                                                                                                                                          |
-| `Documento com LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                                  |
+| `Document with CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                                        |
+| `Document with CR`            | 3     | Quebras de linha são convertidas para o formato macOS: CR (retorno de carro)                                                                                                                                          |
+| `Document with LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                                  |
 
 Por padrão, ao omitir o parâmetro *breakMode*, as quebras de linha são processadas no modo nativo (1).
 

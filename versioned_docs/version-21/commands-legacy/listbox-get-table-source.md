@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( {* ;} *object* ; *tableNum* {; *name* {; *highlightName*}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | tableNum | Integer | &#8592; | Table number of selection |
 | name | Text | &#8592; | Name of named selection or "" for the current selection |
 | highlightName | Text | &#8592; | Name of highlight set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

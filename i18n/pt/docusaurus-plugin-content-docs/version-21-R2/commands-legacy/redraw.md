@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *objeto* : any )<!-- END REF-->
 <!--REF #_command_.REDRAW.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objeto | any | &#8594; | Tabela para a qual vai redesenhar o sub-formulário; ou Campo para o qual redesenhar a área; ou Variável para a qual redesenhar a área; ou List Box a ser atualizada; ou Formulário de tabela a redesenhar ou um navegador Web. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

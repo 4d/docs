@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *docWP* ; *nombk* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Bookmark range.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Documento 4D Write Pro |
 | nombk | Text | &#8594;  | Nombre del marcador cuyo rango desea obtener |
 | Resultado | Object | &#8592; | Rango del marcador |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

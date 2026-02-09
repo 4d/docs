@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET FRAME.Syntax-->**WP SET FRAME** ( {* ;} *areaWP* : Text ; *selectorMarco* : Integer {; *textBoxID* : Text} )<!-- END REF-->
 <!--REF #_command_.WP SET FRAME.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, areaWP es un nombre de objeto de formulario (cadena). Si se omite, areaWP es un campo o una variable objeto. |
 | areaWP | Text | &#8594;  | Nombre de objeto de formulario (si se especifica *) o campo o variable objeto 4D Write Pro (si se omite *) |
 | selectorMarco | Integer | &#8594;  | Marco donde debe colocarse el cursor |
 | textBoxID | Text | &#8594;  | Id de la caja de texto donde se debe colocar el cursor |
-
+</div>
 <!-- END REF-->
 
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*

@@ -5,8 +5,10 @@ slug: /commands/st-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text, *attribValue* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *object* : Field, Variable ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text, *attribValue* : Text, Integer)} )<!-- END REF-->
+<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text ; *attribValue* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *object* : Variable, Field ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text ; *attribValue* : Text, Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | endSel | Integer | &#8594; | 新しいテキスト選択の終了位置 |
 | attribName | Text | &#8594; | 設定する属性 |
 | attribValue | Text, Integer | &#8594; | 新しい属性値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

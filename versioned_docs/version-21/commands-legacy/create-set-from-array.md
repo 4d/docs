@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *aTable* ; *recordsArray* {; *setName*} )<!-- END REF-->
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table of the set |
 | recordsArray | Integer, Boolean array | &#8594;  | Array of record numbers, or Array of booleans (True = the record is in the set, False = the record is not in the set) |
 | setName | Text | &#8594;  | Name of the set to create, or Apply the command to the Userset if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

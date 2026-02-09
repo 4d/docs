@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *objectName* ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectName | Text | &#8594;  | Object name |
 | Function result | any | &#8592; | Current value of the form object's data source |
-
+</div>
 <!-- END REF-->
 
 ## Description 

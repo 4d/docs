@@ -5,14 +5,25 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R2|Support of JSON Schema draft 2020-12|
+
+</details>
+
+
 <!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | vJson | Object | &#8594;  | JSON object to validate |
 | vSchema | Object | &#8594;  | JSON schema used to validate JSON objects |
 | Function result | Object | &#8592; | Validation status and errors (if any) |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -21,13 +32,50 @@ displayed_sidebar: docs
 
 In *vJson*, pass a JSON object containing the JSON contents to be validated. 
 
-**Note:** Validating a JSON string consists of checking that it follows the rules defined in a JSON schema. This is different from checking that the JSON is well-formed, which is done by the [JSON Parse](json-parse.md) command. 
+**Note:** Validating a JSON string consists of checking that it follows the rules defined in a JSON schema. This is different from checking that the JSON is well-formed, which is done by the [JSON Parse](./commands/json-parse) command. 
 
 In *vSchema*, pass the JSON schema to use for the validation. For more information on how to create a JSON schema, you may consult the [json-schema.org](http://json-schema.org/) web site.
 
-**Note:** To validate a JSON object, 4D uses the norm described in the [JSON Schema Validation](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) document (this draft is still being written and can evolve in the future). 4D's current implementation is based upon the version 4 of the draft. 
+### Supported JSON schema validation drafts
 
- If the JSON schema is not valid, 4D returns a [Null](null.md) object and throws an error that can be caught by an on error call method.
+To validate a JSON object, 4D uses the norm described in a **JSON Schema Validation draft document**. Several versions of these documents have been produced over time. 
+
+4D supports two versions of the draft:
+
+- [version 2020-12](https://json-schema.org/draft/2020-12/json-schema-validation) (recommended). All parts of the norm are supported, except:
+    - vocabulary
+    - `contentEncoding`, `contentMediaType`, and `contentSchema` (validation of non-JSON content)
+    - for references: `$dynamicRef`/`$dynamicAnchor` and references in `https:...`
+- [version 4](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) (legacy implementation, used by default). Note that the support of this norm has more limitations than version 2020-12.
+
+#### Specifying the version to use
+
+The version to use should be inserted in the schema using the *$schema* key:
+
+- version 2020-12:
+
+```json
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+```
+
+- version 4:
+
+```json
+"$schema": "http://json-schema.org/draft-04/schema#",
+```
+
+
+For compatibility reasons, the version 4 is used if the *$schema* key is omitted. However, it is recommended to use the version 2020-12 which provides the most reliable controls.
+
+:::note
+
+If you declare another schema version using the *$schema* key, an error is returned. 
+
+:::
+
+### Validation result
+
+If the JSON schema is not valid, 4D returns a [Null](./commands/null) object and throws an error that can be caught by an [on error call method](../Concepts/error-handling.md#installing-an-error-handling-method).
 
 The **JSON Validate** returns an object that provides the status of the validation. This object can contain the following properties:  
 
@@ -39,17 +87,17 @@ The **JSON Validate** returns an object that provides the status of the validati
 Each error object of the *errors* collection contains the following properties:  
 
 | **Property name** | **Type** | **Description**                                                                                                                                                                            |
-| ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| *code*            | Number   | Error code                                                                                                                                                                                 |
-| *jsonPath*        | Text   | JSON path that cannot be validated in *vJson*                                                                                                                                              |
-| *line*            | Number   | Line number of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](json-parse.md) with the *\** parameter. Otherwise, the property is omitted. |
-| *message*         | Text   | Error message                                                                                                                                                                              |
-| *offset*          | Number   | Line offset of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](json-parse.md) with the *\** parameter. Otherwise, the property is omitted. |
-| *schemaPaths*     | Text   | JSON path in the schema that causes the validation error                                                                                                                                   |
+| ----------------- | -------- | ----------------- |
+| *code*            | Number   | Error code      |
+| *jsonPath*        | Text   | JSON path that cannot be validated in *vJson*    |
+| *line*            | Number   | Line number of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](./commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
+| *message*         | Text   | Error message    |
+| *offset*          | Number   | Line offset of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](./commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
+| *schemaPaths*     | Text   | JSON path in the schema that causes the validation error      |
 
-### Error management 
+### Error list
 
-The following errors may be returned :   
+<details>The following errors may be returned:
 
 | **Code** | **JSON Keyword**     | **Message**                                                                                                   |
 | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -74,8 +122,31 @@ The following errors may be returned :
 | 20       | type                 | Incorrect type. Expected type is: {s1}                                                                        |
 | 21       | oneOf                | The JSON matches more than one value.                                                                         |
 | 22       | oneOf                | The JSON does not match any value.                                                                            |
-| 23       | not                  | The JSON is valid against the value of 'not'.                                                                 |
+| 23       | not                  | The JSON is invalid against the value of 'not'.                                                               |
 | 24       | format               | The string does not match ("{s1}")                                                                            |
+| 25       | const               | Value "{s1}" does not match the 'const' value in the schema.                                                   |
+| 26       | unevalutedProperties| Unevaluated properties are not allowed by the schema. The property(ies) {s1} should be removed.                |
+| 27       | unevalutedItems     | Unevaluated array items are not allowed. Item at index {s1} is not covered by any schema.                      |
+| 28       | propertyNames      | Property name "{s1}" does not validate against the 'propertyNames' schema.                                      |
+| 29       | contains           | Array does not contain any items matching the 'contains' schema.                                                |
+| 30       | contains           | Array must contain at least {s1} items matching the 'contains' schema, but only {s2} were found.                |
+| 31       | contains           | Array must contain at most {s1} items matching the 'contains' schema, but {s2} were found.                      |
+| 32       | required           | The property "{s1}" requires the property "{s2}" to be present.                                                 |
+| 35       | prefixItems        | Array items at the beginning do not match the 'prefixItems' schemas.                                            |
+| 36       | dependentSchemas   | Validation failed against 'dependentSchemas'.                                                                   |
+| 37       | $ref               | Reference could not be resolved.                                                                                |
+| 38       | $ref               | Circular reference detected.                                                                                    |
+
+</details>
+
+
+:::tip Related blog post
+
+[Simplify JSON Validation and Boost Robustness](https://blog.4d.com/simplify-json-validation-and-boost-robustness)
+
+:::
+
+
 
 ## Example 
 
@@ -97,13 +168,14 @@ You want to validate a JSON object with a schema and get the list of validation 
  End if
 ```
 
-**Note:** This example requires that object notation is activated (see the *Compatibility page*). 
+
+
 
 ## See also 
 
   
   
-[JSON Parse](json-parse.md)  
+[JSON Parse](./commands/json-parse)  
 
 ## Properties
 

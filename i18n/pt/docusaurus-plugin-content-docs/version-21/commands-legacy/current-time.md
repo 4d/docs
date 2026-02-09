@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current time.Syntax-->**Current time** {( * )} : Time<!-- END REF-->
 <!--REF #_command_.Current time.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Devolve a hora atual do servidor |
 | Resultado | Time | &#8592; | Hora atual |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -5,15 +5,17 @@ slug: /commands/listbox-get-grid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( * ; *object* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX GET GRID** ( *object* : Field, Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( * ; *object* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX GET GRID** ( *object* : Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
 | object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
 | horizontal | Boolean | &#8592; | True: 表示、False: 非表示 |
 | vertical | Boolean | &#8592; | True: 表示、False: 非表示 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

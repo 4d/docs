@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*umaTabela*}{;}{*operadorConj* ;} *campoObj* ; *rotaAtributo* ; *operadorPesq* ; *valor* {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | umaTable | Table | &#8594;  | Tabela para a quel vai retornar uma seleção de registros, ou tabela Padrão se omitido |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | operadorPesq | *, Text | &#8594;  | Operador Pesquisa (comparador) |
 | valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
 | * | Operador | &#8594;  | Continua flag de pesquisa |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

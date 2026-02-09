@@ -521,7 +521,7 @@ title: Commandes par nom
 [`JSON Stringify`](../commands-legacy/json-stringify.md)<br/>
 [`JSON Stringify array`](../commands-legacy/json-stringify-array.md)<br/>
 [`JSON TO SELECTION`](../commands-legacy/json-to-selection.md)<br/>
-[`JSON Validate`](../commands-legacy/json-validate.md)<br/>
+[`JSON Validate`](json-validate.md)<br/>
 
 <a id="K"><b>K</b></a>
 
@@ -727,7 +727,7 @@ title: Commandes par nom
 [`OBJECT GET COORDINATES`](../commands-legacy/object-get-coordinates.md)<br/>
 [`OBJECT Get corner radius`](../commands-legacy/object-get-corner-radius.md)<br/>
 [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md)<br/>
-[`OBJECT Get data source formula`](object-get-data-source-formula.md) **nouveau 4D 20 R10**<br/>
+[`OBJECT Get data source formula`](object-get-data-source-formula.md) **new 4D 20 R10**<br/>
 [`OBJECT GET DRAG AND DROP OPTIONS`](../commands-legacy/object-get-drag-and-drop-options.md)<br/>
 [`OBJECT Get enabled`](../commands-legacy/object-get-enabled.md)<br/>
 [`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md)<br/>
@@ -776,7 +776,7 @@ title: Commandes par nom
 [`OBJECT SET COORDINATES`](../commands-legacy/object-set-coordinates.md)<br/>
 [`OBJECT SET CORNER RADIUS`](../commands-legacy/object-set-corner-radius.md)<br/>
 [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md)<br/>
-[`OBJECT SET DATA SOURCE FORMULA`](object-set-data-source-formula.md) **nouveau 4D 20 R10**<br/>
+[`OBJECT SET DATA SOURCE FORMULA`](object-set-data-source-formula.md) **new 4D 20 R10**<br/>
 [`OBJECT SET DRAG AND DROP OPTIONS`](../commands-legacy/object-set-drag-and-drop-options.md)<br/>
 [`OBJECT SET ENABLED`](../commands-legacy/object-set-enabled.md)<br/>
 [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)<br/>
@@ -826,14 +826,14 @@ title: Commandes par nom
 [`Open datastore`](open-datastore.md)<br/>
 [`Open document`](../commands-legacy/open-document.md)<br/>
 [`OPEN FONT PICKER`](../commands-legacy/open-font-picker.md)<br/>
-[`Open form window`](../commands-legacy/open-form-window.md)<br/>
+[`Open form window`](open-form-window.md)<br/>
 [`OPEN PRINTING JOB`](../commands-legacy/open-printing-job.md)<br/>
 [`Open resource file`](../commands-legacy/open-resource-file.md)<br/>
 [`OPEN RUNTIME EXPLORER`](../commands-legacy/open-runtime-explorer.md)<br/>
 [`OPEN SECURITY CENTER`](../commands-legacy/open-security-center.md)<br/>
 [`OPEN SETTINGS WINDOW`](../commands-legacy/open-settings-window.md)<br/>
 [`OPEN URL`](../commands-legacy/open-url.md)<br/>
-[`Open window`](../commands-legacy/open-window.md)<br/>
+[`Open window`](open-window.md)<br/>
 [`ORDER BY`](../commands-legacy/order-by.md)<br/>
 [`ORDER BY ATTRIBUTE`](../commands-legacy/order-by-attribute.md)<br/>
 [`ORDER BY FORMULA`](../commands-legacy/order-by-formula.md)<br/>

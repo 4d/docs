@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** {( *délai* )}<!-- END REF-->
 <!--REF #_command_.QUIT 4D.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | délai | Integer | &#8594;  | Délai (secondes) avant que le serveur ne quitte |
-
+</div>
 <!-- END REF-->
 
 ## Description 

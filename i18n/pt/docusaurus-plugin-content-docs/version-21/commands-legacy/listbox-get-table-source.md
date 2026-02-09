@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( {* ;} *objeto* ; *numTabela* {; *nome* {; *highlightName*}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numTabela | Integer | &#8592; | número da tabela selecionada |
 | nome | Text | &#8592; | Nome da seleção ou ** para seleção atual |
 | highlightName | Text | &#8592; | Nome do set destacado. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

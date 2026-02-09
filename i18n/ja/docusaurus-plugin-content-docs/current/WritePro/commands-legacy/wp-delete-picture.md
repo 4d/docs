@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE PICTURE.Syntax-->**WP DELETE PICTURE** ( *imgObj* : Object )<!-- END REF-->
 <!--REF #_command_.WP DELETE PICTURE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | imgObj | Object | &#8594;  | 画像オブジェクト(インラインまたはアンカー) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

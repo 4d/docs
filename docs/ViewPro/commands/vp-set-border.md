@@ -7,12 +7,15 @@ title: VP SET BORDER
 **VP SET BORDER** ( *rangeObj* : Object ; *borderStyleObj* : Object  ; *borderPosObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BORDER.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
 |borderStyleObj    |Object|->|Object containing border line style|
-|borderPosObj    |Object|->|Object containing border placement|<!-- END REF -->
+|borderPosObj    |Object|->|Object containing border placement|
+</div>
+<!-- END REF -->
 
 ## Description
 

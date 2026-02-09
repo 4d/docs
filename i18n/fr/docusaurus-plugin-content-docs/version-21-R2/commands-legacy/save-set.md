@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *ensemble* : Text ; *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ensemble | Text | &#8594; | Nom de l'ensemble à stocker |
 | nomFichier | Text | &#8594; | Nom du fichier dans lequel stocker l'ensemble |
-
+</div>
 <!-- END REF-->
 
 ## Description 

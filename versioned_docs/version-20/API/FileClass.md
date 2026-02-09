@@ -72,13 +72,17 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |path|Text|->|File path|
 |fileConstant|Integer|->|4D file constant|
 |pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
 |*||->|* to return file of host database|
-|Result|4D.File|<-|New file object|<!-- END REF -->
+|Result|4D.File|<-|New file object|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -169,9 +173,13 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 
 <!--REF #FileClass.create().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if the file was created successfully, false otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if the file was created successfully, false otherwise|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -208,12 +216,16 @@ Creation of a preferences file in the database folder:
 
 
 <!--REF #FileClass.createAlias().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
-|Result|4D.File|<-|Alias or shortcut file reference|<!-- END REF -->
+|Result|4D.File|<-|Alias or shortcut file reference|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -262,10 +274,13 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|----|---|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 
@@ -319,9 +334,13 @@ You want to delete a specific file in the database folder:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -411,11 +430,15 @@ ALERT($info.Copyright)
 
 
 <!--REF #FileClass.moveTo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |destinationFolder|4D.Folder|->|Destination folder|
 |newName|Text|->|Full name for the moved file|
-|Result|4D.File|<-|Moved file|<!-- END REF -->
+|Result|4D.File|<-|Moved file|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -455,11 +478,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |mode|Text|->|Opening mode: "read", "write", "append"|
 |options|Object|->|Opening options|
-|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|<!-- END REF -->
+|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -534,10 +561,14 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the file|
-|Result|4D.File|<-|Renamed file|<!-- END REF -->
+|Result|4D.File|<-|Renamed file|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -576,9 +607,13 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -666,9 +701,13 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|content|BLOB|->|New contents for the file|<!-- END REF -->
+|content|BLOB|->|New contents for the file|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -699,12 +738,16 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|----|---|--------|
 |text|Text|->|Text to store in the file|
 |charSetName|Text|->|Name of character set|
 |charSetNum|Integer|->|Number of character set|
-|breakMode|Integer|->|Processing mode for line breaks|<!-- END REF -->
+|breakMode|Integer|->|Processing mode for line breaks|
+</div>
+<!-- END REF -->
 
 
 #### Description

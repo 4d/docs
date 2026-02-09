@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Picture range.Syntax-->**WP Picture range** ( *targetObj* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Picture range.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジ または 要素 |
 | 戻り値 | Object | &#8592; | ピクチャーのみを含んだレンジオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

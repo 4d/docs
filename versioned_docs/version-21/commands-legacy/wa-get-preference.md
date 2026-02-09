@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( {* ;} *object* ; *selector* ; *value* )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | selector | Integer | &#8594;  | Preference to get |
 | value | Variable | &#8592; | Current value of the preference |
-
+</div>
 <!-- END REF-->
 
 ## Description 

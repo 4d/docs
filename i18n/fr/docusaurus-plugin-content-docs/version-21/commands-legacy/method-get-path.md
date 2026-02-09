@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *typeMéthode* {; *laTable*}{; *nomObjet*{; *nomObjetForm*}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | typeMéthode | Integer | &#8594;  | Sélecteur de type d’objet du développement |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomObjetForm | Text | &#8592; | Nom d’objet du formulaire |
 | * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 | Résultat | Text | &#8592; | Chemin complet de l’objet |
-
+</div>
 <!-- END REF-->
 
 ## Description 

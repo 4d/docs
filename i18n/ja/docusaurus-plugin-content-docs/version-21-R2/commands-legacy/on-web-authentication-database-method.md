@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Web Authentication database method.Syntax-->$url, $http, $ipBrowser, $ipServer, $user, $pw -> On Web Authenticationデータベースメソッド : Boolean<!-- END REF-->
 <!--REF #_command_.On Web Authentication database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $url | テキスト | &#8592; | URL |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | $user | テキスト | &#8592; | ユーザー名 |
 | $pw | テキスト | &#8592; | パスワード |
 | 戻り値 | Boolean | &#8592; | True = リクエストを受け入れる, False = リクエストを拒否する |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

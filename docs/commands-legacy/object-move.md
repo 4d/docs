@@ -5,18 +5,20 @@ slug: /commands/object-move
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *object* : Text ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *object* : Field, Variable ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<!-- END REF-->
+<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *object* : Text ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *object* : Variable, Field ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified= object is an object name (string) If omitted = object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Field or variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | moveH | Integer | &#8594;  | Value of the horizontal move of the object (>0 = to the right, <0 = to the left) |
 | moveV | Integer | &#8594;  | Value of the vertical move of the object (>0 = to the bottom, <0 = to the top) |
 | resizeH | Integer | &#8594;  | Value of the horizontal resize of the object |
 | resizeV | Integer | &#8594;  | Value of the vertical resize of the object |
 | * | Operator | &#8594;  | If specified = absolute coordinates If omitted = relative coordinates |
-
+</div>
 <!-- END REF-->
 
 ## Description 

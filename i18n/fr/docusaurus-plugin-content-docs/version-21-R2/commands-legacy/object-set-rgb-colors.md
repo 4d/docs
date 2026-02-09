@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objet* : Text ; *couleurAvantPlan* : Text, Integer {; *couleurArrièrePlan* : Text, Integer {; *couleurArrièrePlanAlt* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *objet* : Field, Variable ; *couleurAvantPlan* : Text, Integer {; *couleurArrièrePlan* : Text, Integer {; *couleurArrièrePlanAlt* : Text, Integer}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | couleurAvantPlan | Text, Integer | &#8594; | Valeur de la couleur RVB d'avant-plan |
 | couleurArrièrePlan | Text, Integer | &#8594; | Valeur de la couleur RVB d'arrière-plan |
 | couleurArrièrePlanAlt | Text, Integer | &#8594; | Valeur de la couleur RVB d'arrière-plan alternée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

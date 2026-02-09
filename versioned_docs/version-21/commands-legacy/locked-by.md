@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*aTable* ;} *process* ; *4Duser* ; *sessionUser* ; *processName* )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to check for record locked, or Default table, if omitted |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | 4Duser | Text | &#8592; | 4D user name |
 | sessionUser | Text | &#8592; | Name of user that opened work-session |
 | processName | Text | &#8592; | Process name |
-
+</div>
 <!-- END REF-->
 
 ## Description 

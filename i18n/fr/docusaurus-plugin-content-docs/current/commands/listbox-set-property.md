@@ -4,16 +4,16 @@ title: LISTBOX SET PROPERTY
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( * ; *object* : Text ; *property* : Integer ; *value* : Integer, Text )<br/>**LISTBOX SET PROPERTY** ( *object* : Field, Variable ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( * ; *object* : Text ; *property* : Integer ; *value* : Integer, Text )<br/>**LISTBOX SET PROPERTY** ( *object* : Variable ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 
-| Paramètres | Type          |                             | Description                                                                                                                                          |
-| ---------- | ------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur     | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
-| object     | any           | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis)                                               |
-| property   | Integer       | &#8594; | Propriété de list box ou de colonne de list box                                                                                                      |
-| value      | Integer, Text | &#8594; | Valeur de la propriété                                                                                                                               |
+| Paramètres | Type           |                             | Description                                                                                                                                          |
+| ---------- | -------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
+| object     | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)                                           |
+| property   | Integer        | &#8594; | Propriété de list box ou de colonne de list box                                                                                                      |
+| value      | Integer, Text  | &#8594; | Valeur de la propriété                                                                                                                               |
 
 <!-- END REF-->
 

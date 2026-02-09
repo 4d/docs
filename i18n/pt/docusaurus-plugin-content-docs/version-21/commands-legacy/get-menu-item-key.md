@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *menuItem* {; *processo*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
 | menuItem | Integer | &#8594;  | Número de item de Menu item ou -1 para o último item adicionado |
 | processo | Integer | &#8594;  | Número de referência de processo |
 | Resultado | Integer | &#8592; | Código de caractere da tecla de atalho padrão associada com o item de menu |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

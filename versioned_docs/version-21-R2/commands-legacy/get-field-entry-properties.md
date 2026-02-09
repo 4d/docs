@@ -5,17 +5,20 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr* : Pointer, Integer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* : Pointer, Integer ; *fieldNum* : Integer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr* : Pointer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* : Integer ; *fieldNum* : Integer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | Pointer, Integer | &#8594;  | Field pointer or table number |
+| fieldPtr | Pointer | &#8594;  | Field pointer |
+| tableNum | Integer | &#8594;  | Table number |
 | fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
 | list | Text | &#8592; | Associated choice list name or empty string |
 | mandatory | Boolean | &#8592; | True = Mandatory, False = Optional |
 | nonEnterable | Boolean | &#8592; | True = Non-enterable, False = Enterable |
 | nonModifiable | Boolean | &#8592; | True = Non-modifiable, False = Modifiable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -9,11 +9,16 @@ title: VP Get sheet index
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| Paramètres | Type    |                             | Description                             |                  |
-| ---------- | ------- | --------------------------- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
-| name       | Text    | ->                          | Nom de la feuille                       |                  |
-| Résultat   | Integer | <- | Numéro d'indice de la feuille           | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                             |
+| ---------- | ------- | --------------------------- | --------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
+| name       | Text    | ->                          | Nom de la feuille                       |
+| Résultat   | Integer | <- | Numéro d'indice de la feuille           |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domain* ; *protocol* )} : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | domain | Text | &#8592; | ドメイン名 |
 | protocol | Text | &#8592; | "Kerberos"、"NTLM"、または空の文字列 |
 | 戻り値 | Text | &#8592; | Windows が返すセッションユーザーのログイン名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

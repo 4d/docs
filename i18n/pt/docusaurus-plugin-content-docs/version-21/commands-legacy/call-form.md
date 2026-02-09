@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *janela* ; *metodo* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.CALL FORM.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janela | Integer | &#8594;  | Número de referência da janela |
 | metodo | Object, Text | &#8594;  | Nome do método de projeto a chamar |
 | param | Expression | &#8594;  | Parâmetros passados ao método |
-
+</div>
 <!-- END REF-->
 
 Descrição

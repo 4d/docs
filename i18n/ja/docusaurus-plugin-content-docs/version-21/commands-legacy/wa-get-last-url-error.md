@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *object* ; *url* ; *description* ; *errorCode* )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | url | Text | &#8592; | エラー元のURL |
 | description | Text | &#8592; | エラーの説明 (macOS) |
 | errorCode | Integer | &#8592; | エラーコード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

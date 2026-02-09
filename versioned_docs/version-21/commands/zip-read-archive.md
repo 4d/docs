@@ -7,11 +7,14 @@ displayed_sidebar: docs
 <!-- REF #_command_.ZIP Read archive.Syntax -->**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |zipFile|4D.File|&#8594; |Zip archive file|
 |password|Text|&#8594; |ZIP archive password if any|
 |Result|4D.ZipArchive|&#8592;|Archive object|
+</div>
 <!-- END REF -->
 
 <details><summary>History</summary>

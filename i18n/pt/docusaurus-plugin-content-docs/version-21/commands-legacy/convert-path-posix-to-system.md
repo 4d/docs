@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *rotaPosix* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path POSIX to system.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaPosix | Text | &#8594;  | Nome de rota POSIX |
 | * | Operador | &#8594;  | Opção de codificação |
 | Resultado | Text | &#8592; | Rota de acesso expressa em sintaxe de sistema |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

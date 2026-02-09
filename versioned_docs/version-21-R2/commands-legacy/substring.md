@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Substring.Syntax-->**Substring** ( *source* : Text ; *firstChar* : Integer {; *numChars* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594;  | String from which to get substring |
 | firstChar | Integer | &#8594;  | Position of first character |
 | numChars | Integer | &#8594;  | Number of characters to get |
 | Function result | Text | &#8592; | Substring of source |
-
+</div>
 <!-- END REF-->
 
 ## Description 

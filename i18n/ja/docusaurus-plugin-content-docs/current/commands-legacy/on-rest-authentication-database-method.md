@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On REST Authentication database method.Syntax-->$1, $2, $3, $4 -> On REST Authentication データベースメソッド : Boolean<!-- END REF-->
 <!--REF #_command_.On REST Authentication database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $1 | テキスト | &#8592; | ユーザー名 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | $3 | ブール | &#8592; | True = ダイジェストモード<br/>False = ベーシックモード |
 | $4 | テキスト | &#8592; | 呼び出し元のIPアドレス |
 | 戻り値 | Boolean | &#8592; | True = セッション開始を許可、False = セッション開始を拒否 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

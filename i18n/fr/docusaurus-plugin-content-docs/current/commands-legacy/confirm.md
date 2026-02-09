@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* : Text {; *libelléBoutonOK* : Text {; *libelléBoutonAnn* : Text}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | message | Text | &#8594; | Message à afficher dans la boîte de dialogue de confirmation |
 | libelléBoutonOK | Text | &#8594; | Libellé du bouton OK |
 | libelléBoutonAnn | Text | &#8594; | Libellé du bouton Annuler |
-
+</div>
 <!-- END REF-->
 
 ## Description 

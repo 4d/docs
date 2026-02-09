@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variable* )<!-- END REF-->
 <!--REF #_command_.SEND VARIABLE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#8594;  | Variable à envoyer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

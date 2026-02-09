@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*laTable* : Table ;} *enregistrement* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table dans laquelle aller à l'enregistrement spécifié ou Table par défaut si ce paramètre est omis |
 | enregistrement | Integer | &#8594; | Position de l'enregistrement dans la sélection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

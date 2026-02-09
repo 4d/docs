@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomeArquivo* {; *conjCaracteres* {; *modoRetorno*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Document to text.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeArquivo | Text | &#8594;  | Nome do documento ou caminho ao documento |
 | conjCaracteres | Text, Integer | &#8594;  | Nome ou número do conjunto de caracteres |
 | modoRetorno | Integer | &#8594;  | Modo de processamento para as linhas de ruptura |
 | Resultado | Text | &#8592; | Texto do documento |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

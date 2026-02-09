@@ -5,19 +5,21 @@ slug: /commands/listbox-get-cell-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( * ; *object* : Text ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**LISTBOX GET CELL COORDINATES** ( *object* : Field, Variable ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( * ; *object* : Text ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**LISTBOX GET CELL COORDINATES** ( *object* : Variable ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified = object is the name of the object (string) If omitted = object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | column | Integer | &#8594;  | Column number |
 | row | Integer | &#8594;  | Row number |
 | left | Integer | &#8592; | Left coordinate of the object |
 | top | Integer | &#8592; | Top coordinate of the object |
 | right | Integer | &#8592; | Right coordinate of the object |
 | bottom | Integer | &#8592; | Bottom coordinate of the object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

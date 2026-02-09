@@ -30,7 +30,7 @@ SDIモードは以下の実行環境に限り利用可能です:
 
 :::info
 
-Because the development environment is executed in MDI, switching from design mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+開発環境は MDI で実行されるため、**アプリケーションをテスト(SDIモード)** のメニューを選択してデザインモードからランタイムモードに切り替えることは、アプリケーションを再起動することを意味します。
 
 :::
 
@@ -55,7 +55,7 @@ SDIモードでは、同プロセス中に開かれたすべてのドキュメ�
 
 ### デバッガー
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to design environment requires to abort execution and restart the application in MDI mode.
+SDIモードで表示されている場合、[デバッガーウィンドウ](../Debugging/debugger.md) には [編集ボタン](../Debugging/debugger.md#ツールバーボタン) がありません。これは、デザイン環境に切り替えるにあたって実行を中断し、MDIモードでアプリケーションを再起動する必要があるためです。
 
 ### 自動終了
 

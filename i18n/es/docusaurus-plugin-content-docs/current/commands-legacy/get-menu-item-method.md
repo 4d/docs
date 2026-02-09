@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item method.Syntax-->**Get menu item method** ( *menu* : Integer, Text ; *lineaMenu* : Integer {; *proceso* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item method.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | Referencia de menú o Número de menú |
 | lineaMenu | Integer | &#8594; | Número de línea de menú o -1 para el último elemento añadido al menú |
 | proceso | Integer | &#8594; | Número de proceso |
 | Resultado | Text | &#8592; | Nombre del método |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

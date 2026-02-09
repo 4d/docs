@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*laTable* : Table ;} *nom* : Text )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de laquelle il faut copier la sélection ou Table par défaut si ce paramètre est omis |
 | nom | Text | &#8594; | Nom de la sélection temporaire à créer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

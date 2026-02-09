@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *area* : Integer ; *colNum* : Integer ; *title* : Text ; *object* : Text ; *hide* : Integer ; *size* : Integer ; *repeatedValue* : Integer ; *displayFormat* : Text {; *resultVar* : Text} )<!-- END REF-->
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | repeatedValue | Integer | &#8592; | 0 = not repeated, 1 = repeated |
 | displayFormat | Text | &#8592; | Display format for the data |
 | resultVar | Text | &#8592; | Name of the formula variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

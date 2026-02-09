@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objet | Object, Object | &#8594;  | Objet structuré |
 | Résultat | Boolean | &#8592; | Vrai si objet est vide ou indéfini, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

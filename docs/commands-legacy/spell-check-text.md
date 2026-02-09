@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* : Text ; *errPos* : Integer ; *errLength* : Integer ; *checkPos* : Integer ; *arrSuggest* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | text | Text | &#8594;  | Text to check |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | errLength | Integer | &#8592; | Length of unknown word |
 | checkPos | Integer | &#8594;  | Start position for check |
 | arrSuggest | Text array | &#8592; | List of suggestions |
-
+</div>
 <!-- END REF-->
 
 ## Description 

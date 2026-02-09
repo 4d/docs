@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objeto* ; *propriedade* ; *array* )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objeto | Object, Object | &#8594;  | Objeto estruturado |
 | propriedade | Text | &#8594;  | Nome da propriedade a definir |
 | array | Array, Variable | &#8594;  | Array a armazenar em propriedade |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *elCampo* ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elCampo | Text, Blob, Picture | &#8594;  | Campo del cual obtener el lugar de almacenamiento |
 | resultado | Text | &#8592; | Ruta de acceso completa del archivo de almacenamiento externo |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

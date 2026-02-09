@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* {; *} ) : Real<!-- END REF-->
 <!--REF #_command_.Get document size.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Text, Time | &#8594;  | ドキュメント参照番号 または、ドキュメントの名前 |
 | * | 演算子 | &#8594;  | Mac OSのみ: 省略した場合、データフォークのサイズ 指定した場合、リソースフォークのサイズ |
 | 戻り値 | Real | &#8592; | ドキュメントのサイズ(バイト単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

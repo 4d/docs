@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OLD RELATED MANY.Syntax-->**OLD RELATED MANY** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.OLD RELATED MANY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594; | Champ recevant un lien |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *pathName* : Text ; *operationNum* : Real {; *mode* : Integer {; *errObject* : Object}} )<!-- END REF-->
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pathName | Text | &#8594; | 統合されるログファイルの名前もしくはパス名 |
 | operationNum | Real | &#8596; | *in:* Number of last operation integrated or -2 to integrate the whole file<br/>*out:* New number of last operation integrated |
 | mode | Integer | &#8594; | 0=厳格な統合モード(デフォルトモード)、1=自動修復モード |
 | errObject | Object | &#8592; | 失われたオペレーション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

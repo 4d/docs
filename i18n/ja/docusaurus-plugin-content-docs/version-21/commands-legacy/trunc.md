@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trunc.Syntax-->**Trunc** ( *number* ; *places* ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | 切り捨てる数値 |
 | places | Integer | &#8594;  | 切り捨てを行う位置 |
 | 戻り値 | Real | &#8592; | 切り捨てられた数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

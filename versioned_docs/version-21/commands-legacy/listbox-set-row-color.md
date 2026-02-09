@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( {* ;} *object* ; *row* ; *color* {; *colorType*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
 | row | Integer | &#8594;  | Row number |
 | color | Text, Integer | &#8594;  | RGB color value |
 | colorType | Integer | &#8594;  | Listbox font color (default) or listbox background color |
-
+</div>
 <!-- END REF-->
 
 ## Description 

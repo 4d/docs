@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *aTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return the sequence number, or Default table, if omitted |
 | Function result | Integer | &#8592; | Sequence number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

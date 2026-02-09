@@ -8,11 +8,14 @@ title: VP REMOVE SHEET
 **VP REMOVE SHEET** ( *vpAreaName* : Text ; *index*: Integer ) <!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
-|index  |Integer|->|Index of the sheet to remove|<!-- END REF -->
+|index  |Integer|->|Index of the sheet to remove|
+</div>
+<!-- END REF -->
 
 ## Description
 

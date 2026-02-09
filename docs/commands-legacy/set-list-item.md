@@ -5,18 +5,20 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**SET LIST ITEM** ( * ; *list* : Integer, Text ; * ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( * ; *list* : Text ; *itemRef* : Integer,  Operator ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**SET LIST ITEM** ( *list* : Integer ; *itemRef* : Integer,  Operator ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
+| itemRef | Integer, Operator | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
 | newItemText | Text | &#8594;  | New item text |
 | newItemRef | Integer | &#8594;  | New item reference number |
 | sublist | Integer | &#8594;  | New sublist attached to item, or 0 for no sublist (detaching current one, if any), or -1 for no change |
 | expanded | Boolean | &#8594;  | Indicates if the optional sublist will be expanded or collapsed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

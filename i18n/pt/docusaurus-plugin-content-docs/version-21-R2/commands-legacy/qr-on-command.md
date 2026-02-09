@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *area* : Integer ; *nomeMetodo* : Text )<!-- END REF-->
 <!--REF #_command_.QR ON COMMAND.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | Referência da área |
 | nomeMetodo | Text | &#8594; | Nome do método a ser chamado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

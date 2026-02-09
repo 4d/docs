@@ -71,7 +71,7 @@ title: データソース
 
 ---
 
-## Current item {#current-item}
+## カレントの項目 {#current-item}
 
 `コレクションまたはエンティティセレクションリストボックス`
 
@@ -95,7 +95,7 @@ title: データソース
 
 ---
 
-## Current item position {#current-item-position}
+## カレントの項目の位置 {#current-item-position}
 
 `コレクションまたはエンティティセレクションリストボックス`
 
@@ -301,7 +301,7 @@ title: データソース
 
 ---
 
-## Selected Items {#selected-items}
+## 選択された項目 {#selected-items}
 
 `コレクションまたはエンティティセレクションリストボックス`
 

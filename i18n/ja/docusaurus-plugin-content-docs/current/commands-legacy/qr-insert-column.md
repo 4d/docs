@@ -5,14 +5,16 @@ slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Field, Variable, Pointer )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Variable, Field, Pointer )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | エリア参照 |
 | colNumber | Integer | &#8594; | カラム番号 |
 | object | Field, Variable, Pointer | &#8594; | カラムに挿入するオブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

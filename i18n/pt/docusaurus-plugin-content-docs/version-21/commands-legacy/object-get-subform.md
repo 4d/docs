@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *objeto* ; *pontTabela* ; *subFormDet* {; *subFormList*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | pontTable | Table | &#8592; | Ponteiro à tabela do formulário |
 | subFormDet | Text | &#8592; | Nome do formulário detalhado do sub-formulário |
 | subFormList | Text | &#8592; | Nome do formulário listado do sub-formulário (formulário tabela) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

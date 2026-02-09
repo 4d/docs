@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET VERTICAL RESIZING.Syntax-->**FORM GET VERTICAL RESIZING** ( *redimensao* {; *alturaMin* {; *alturaMax*}} )<!-- END REF-->
 <!--REF #_command_.FORM GET VERTICAL RESIZING.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | redimensao | Boolean | &#8592; | True: Form can be resized vertically<br/>False: Form cannot be resized vertically |
 | alturaMin | Integer | &#8592; | Smallest form height allowed (pixels) |
 | alturaMax | Integer | &#8592; | Largest form height allowed (pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

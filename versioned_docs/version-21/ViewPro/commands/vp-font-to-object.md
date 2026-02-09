@@ -9,11 +9,13 @@ title: VP Font to object
 
 
 <!-- REF #_method_.VP Font to object.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |font  |Text|->|Font shorthand string|  
 |Result  |Object|<-|Font object|
+</div>
 <!-- END REF -->
 
 

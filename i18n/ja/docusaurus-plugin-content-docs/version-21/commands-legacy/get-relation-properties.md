@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *fieldPtr* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<br/>**GET RELATION PROPERTIES** ( *tableNum* ; *fieldNum* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fieldPtr&#124;tableNum | ポインター, 倍長整数 | &#8594;  | フィールドポインタ、またはテーブル番号 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | choiceField | Integer | &#8592; | 選択フィールド番号、または選択フィールドが未定義の場合は0（ゼロ） |
 | autoOne | Boolean | &#8592; | True = 自動1対1リレート False = 1対1マニュアルリレート |
 | autoMany | Boolean | &#8592; | True = 自動1対nリレート False = 1対nマニュアルリレート |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

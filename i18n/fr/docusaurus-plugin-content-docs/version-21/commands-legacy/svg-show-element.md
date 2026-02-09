@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *objetImage* ; *id* {; *marge*} )<!-- END REF-->
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
 | objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
 | id | Text | &#8594;  | Attribut id de l’élément à visualiser |
 | marge | Integer | &#8594;  | Marge de visibilité (en pixels par défaut) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

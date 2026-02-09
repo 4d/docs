@@ -8,13 +8,15 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *settings* ) <br/>
 **SET CHANNEL** ( *operation* ; *document* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | port | Integer | &#8594;  | Serial port number |
 | settings | Integer | &#8594;  | Serial port settings |
 | operation | Integer | &#8594;  | Document operation to perform |
 | document | Text | &#8594;  | Document name |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Right click.Syntax-->**Right click**  : Boolean<!-- END REF-->
 <!--REF #_command_.Right click.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | True if a right click was detected, otherwise False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

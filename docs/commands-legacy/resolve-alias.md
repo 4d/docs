@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *aliasPath* : Text ; *targetPath* : Text )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aliasPath | Text | &#8594;  | Name or access path of the alias/shortcut |
 | targetPath | Text | &#8592; | Name or access path of the alias/shortcut target |
-
+</div>
 <!-- END REF-->
 
 ## Description 

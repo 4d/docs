@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *umPonteiro* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is nil pointer.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | umPointer | Pointer | &#8594;  | Ponteiros a ser testado |
 | Resultado | Boolean | &#8592; | TRUE = ponteiro nulo (->[])FALSE = ponteiro válido a um objeto existente |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

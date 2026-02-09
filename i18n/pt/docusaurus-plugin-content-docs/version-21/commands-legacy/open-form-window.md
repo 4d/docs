@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*tabela* ;} *nomeForm* {; *tipo* {; *hPos* {; *vPos* {; *}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela do formulário ou tabela padrão, se omitido |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | vPos | Integer | &#8594;  | Posição vertical da janela |
 | * | Operador | &#8594;  | Salvar posição atual e tamanho da janela |
 | Resultado | Integer | &#8592; | Número de referência de janela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process aborted.Syntax-->**Process aborted**  : Boolean<!-- END REF-->
 <!--REF #_command_.Process aborted.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Boolean | &#8592; | Vrai = le process est sur le point d’être interrompu, Faux = le process n’est pas sur le point d’être interrompu |
-
+</div>
 <!-- END REF-->
 
 ## Description 

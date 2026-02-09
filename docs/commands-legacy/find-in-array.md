@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* : Array ; *value* : Expression {; *start* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in array.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array to search |
 | value | Expression | &#8594;  | Value of same type to search in the array |
 | start | Integer | &#8594;  | Element at which to start searching |
 | Function result | Integer | &#8592; | Number of the first element in array that matches value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

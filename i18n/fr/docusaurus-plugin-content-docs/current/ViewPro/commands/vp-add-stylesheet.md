@@ -9,12 +9,17 @@ title: VP ADD STYLESHEET
 
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| styleName  | Text    | -> | Nom du style                                                                |                  |
-| styleObj   | Object  | -> | Objet définissant les propriétés de l'attribut                              |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |    | Description                                                                 |
+| ---------- | ------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
+| styleName  | Text    | -> | Nom du style                                                                |
+| styleObj   | Object  | -> | Objet définissant les propriétés de l'attribut                              |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

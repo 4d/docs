@@ -17,6 +17,8 @@ displayed_sidebar: docs
 
 
 <!-- REF #_command_.Folder.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |path|Text|&#8594; |Folder path|
@@ -24,6 +26,7 @@ displayed_sidebar: docs
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
 |*|operator|&#8594; |* to return folder of host database|
 |Result|[4D.Folder](../API/FolderClass.md)|&#8592;|New folder object|
+</div>
 <!-- END REF -->
 
 ## Description

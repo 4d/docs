@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get text.Syntax-->**WP Get text** ( *objCible* {; *expressions*} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get text.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | expressions | Number | &#8594;  | Instructions pour l'évaluation de l'expression |
 | Résultat | Text | &#8592; | Texte de objCible |
-
+</div>
 <!-- END REF-->
 
 ## Description 

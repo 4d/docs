@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFile* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resFile | Time | &#8594;  | Resource file reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

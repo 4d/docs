@@ -125,7 +125,7 @@ title: オブジェクト
 
 ---
 
-## Variable or Expression {#variable-or-expression}
+## 変数はあるいは式 {#variable-or-expression}
 
 > セレクションおよびコレクション型のリストボックス列に関しては **[式](properties_DataSource.md#式)** の章も参照ください。
 

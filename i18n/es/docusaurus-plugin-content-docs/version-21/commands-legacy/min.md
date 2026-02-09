@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Min.Syntax-->**Min** ( *series* {; *rutaAtributo*} ) : any<!-- END REF-->
 <!--REF #_command_.Min.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Datos para los cuales devuelve el valor mínimo |
 | rutaAtributo | Text | &#8594;  | Ruta de atributo para el cual calcular el valor mínimo |
 | Resultado | Date, Number | &#8592; | Valor mínimo en series |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

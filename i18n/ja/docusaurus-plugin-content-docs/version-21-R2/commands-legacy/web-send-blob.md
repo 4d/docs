@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *BLOB* : Blob ; *type* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND BLOB.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | ブラウザへ送るBLOB |
 | type | Text | &#8594; | BLOBのデータタイプ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

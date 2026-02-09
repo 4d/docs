@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *ancho* ; *alto* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ancho | Integer | &#8592; | Ancho del objeto subformulario |
 | alto | Integer | &#8592; | Alto del objeto subformulario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

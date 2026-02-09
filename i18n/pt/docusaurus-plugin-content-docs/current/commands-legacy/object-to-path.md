@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Object to path.Syntax-->**Object to path** ( *objRota* : Object ) : Text<!-- END REF-->
 <!--REF #_command_.Object to path.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objRota | Object | &#8594; | Objeto que descreve os conteúdos da rota |
 | Resultado | Text | &#8592; | Nome da rota |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *ruta* ; *fechaMod* ; *horaMod* {; *operador*} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ruta | Text, Text array | &#8594;  | Texto o array texto que contiene una o más rutas de acceso |
 | fechaMod | Date, Date array | &#8592; | Fecha(s) de modificación de métodos(s) |
 | horaMod | Time, Integer array | &#8592; | Hora(s) de modificación de métodos(s) |
 | operador | * | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

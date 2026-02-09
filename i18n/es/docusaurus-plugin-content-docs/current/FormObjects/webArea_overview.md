@@ -15,7 +15,7 @@ Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4D
 
 You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
 
-In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses for a high level of security.
+In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security.
 
 :::tip Entrada de blog relacionada
 
@@ -53,7 +53,7 @@ Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-m
 
 ## Objeto $4d
 
-The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. Por defecto, `$4d` permite acceder a todos los métodos proyecto 4D utilizando la notación de puntos.
+El [`motor de renderización web integrado de 4D`](properties_WebArea.md#use-embedded-web-rendering-engine) ofrece un **objeto JavaScript llamado `$4d`** en el área web. Por defecto, `$4d` permite acceder a todos los métodos proyecto 4D utilizando la notación de puntos.
 
 Por ejemplo, llamando al método `HelloWorld` en 4D:
 

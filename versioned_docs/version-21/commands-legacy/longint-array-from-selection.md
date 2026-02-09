@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *aTable* ; *recordArray* {; *selection*} )<!-- END REF-->
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table of the current selection |
 | recordArray | Integer array | &#8592; | Array of record numbers |
 | selection | Text | &#8594;  | Name of the named selection or the current selection if this parameter is omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

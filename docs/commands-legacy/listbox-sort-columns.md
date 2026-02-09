@@ -5,15 +5,17 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Field, Variable ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer ; *order* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Variable ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer ; *order* : Operator)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | colNum | Integer | &#8594;  | Column number(s) to sort |
 | order | Operator | &#8594;  | `>` to sort in ascending order or `<` to sort in descending order |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -26,7 +28,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 In *colNum*, pass the column number of the column whose values you want to use as the sort criteria. You can use any type of array data, except pictures and pointers.
 
-In *order*, pass the symbol > or < to indicate the sort order. If *order* contains the “greater than” symbol (>), the sort order is ascending. If *order* contains the “less than” symbol (<), the sort oder is descending.
+In *order*, pass the symbol >_or_< to indicate the sort order. If *order* contains the “greater than” symbol (>), the sort order is ascending. If *order* contains the “less than” symbol (<), the sort oder is descending.
 
 You can define multi-level sorts: to do so, pass as many pairs (*colNum;order*) as necessary. The sorting level is defined by the position of the parameter in the call.
 

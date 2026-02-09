@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *elementRef* ; *errorText* {; *row* {; *column*}} )<!-- END REF-->
 <!--REF #_command_.XML GET ERROR.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML要素参照 |
 | errorText | Variable | &#8592; | エラーテキスト |
 | row | Variable | &#8592; | 行番号 |
 | column | Variable | &#8592; | 列番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,16 +7,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HIDE TOOL BAR.Syntax-->**HIDE TOOL BAR**<!-- END REF-->
 <!--REF #_command_.HIDE TOOL BAR.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
 
-<!--REF #_command_.HIDE TOOL BAR.Summary-->O comando HIDE TOOL BAR  gerencia a visualização das barras de ferramentas personalizadas criadas pelo comando [Open form window](open-form-window.md) para o processo atual.<!-- END REF-->
+<!--REF #_command_.HIDE TOOL BAR.Summary-->O comando HIDE TOOL BAR  gerencia a visualização das barras de ferramentas personalizadas criadas pelo comando [Open form window](../commands/open-form-window.md) para o processo atual.<!-- END REF-->
 
-Se uma janela barra de ferramentas foi criada pelo comando [Open form window](open-form-window.md) com a opção Toolbar form window, o comando oculta esta janela. Se a janela barra de ferramentas já estava oculta ou se nenhuma janela deste tipo foi criada, o comando não faz nada.
+Se uma janela barra de ferramentas foi criada pelo comando [Open form window](../commands/open-form-window.md) com a opção Toolbar form window, o comando oculta esta janela. Se a janela barra de ferramentas já estava oculta ou se nenhuma janela deste tipo foi criada, o comando não faz nada.
 
 ## Exemplo 
 

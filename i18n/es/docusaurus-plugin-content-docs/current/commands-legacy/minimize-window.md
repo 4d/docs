@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** ({ *ventana* : Integer })<!-- END REF-->
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ventana | Integer | &#8594; | Número de referencia de la ventana o si se omite todas las ventanas del primer plano del proceso actual (Windows) o ventana del primer plano del proceso actual (macOS) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

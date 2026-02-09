@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.System folder.Syntax-->**System folder** ( *tipo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tipo | Integer | &#8594; | Tipo de pasta sistema |
 | Resultado | Text | &#8592; | Rota de acesso de uma pasta do sistema ativo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

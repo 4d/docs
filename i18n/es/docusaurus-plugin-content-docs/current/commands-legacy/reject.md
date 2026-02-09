@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *unCampo* })<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594; | Campo a rechazar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

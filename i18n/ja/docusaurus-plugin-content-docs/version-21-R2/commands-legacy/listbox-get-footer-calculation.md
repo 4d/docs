@@ -5,14 +5,16 @@ slug: /commands/listbox-get-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get footer calculation** ( *object* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get footer calculation** ( *object* : Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
 | object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
 | 戻り値 | Integer | &#8592; | 計算タイプ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

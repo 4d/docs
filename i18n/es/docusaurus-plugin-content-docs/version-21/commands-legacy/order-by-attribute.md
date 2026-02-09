@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*tabla* ;} *campoObjeto* ; *rutaAtrib* ; > o < {; *campoObjeto2* ; *rutaAtrib2* ; > o <2 ; ... ; *campoObjetoN* ; *rutaAtribN* ; > o <N} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla para la cual ordenar los registros seleccionados, o tabla por defecto, si se omite |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | rutaAtrib | Text | &#8594;  | Nombre o ruta del atributo en el que se define el orden para cada nivel |
 | > o < | Operador | &#8594;  | Dirección de ordenación para cada nivel: > para ordenar en orden ascendente o < para ordenar en orden descendente |
 | * | Operador | &#8594;  | Continuar bandera de orden |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,16 +7,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* : Integer ; *y* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | x | Integer | &#8594;  | x (horizontal) position of cursor |
 | y | Integer | &#8594;  | y (vertical) position of cursor |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](open-window.md).<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](../commands/open-window.md).<!-- END REF-->  
   
 **GOTO XY** positions the character cursor (an invisible cursor) to set the location of the next message in the window.
 

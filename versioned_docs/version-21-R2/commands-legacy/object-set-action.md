@@ -5,14 +5,16 @@ slug: /commands/object-set-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( * ; *object* : Text ; *action* : Text )<br/>**OBJECT SET ACTION** ( *object* : Field, Variable ; *action* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( * ; *object* : Text ; *action* : Text )<br/>**OBJECT SET ACTION** ( *object* : Variable, Field ; *action* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ACTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Form object name (if * is specified) or<br/>Field or variable (if * is omitted) |
 | action | Text | &#8594;  | Name of action to associate (including parameters if necessary) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -18,11 +18,16 @@ title: VP EXPORT DOCUMENT
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                  |                  |
-| ---------- | ------ | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| filePath   | Text   | -> | Ruta de acceso del documento                 |                  |
-| paramObj   | Object | -> | Opciones de exportación                      | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |
+| filePath   | Text   | -> | Ruta de acceso del documento                 |
+| paramObj   | Object | -> | Opciones de exportación                      |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 
@@ -90,7 +95,7 @@ El parámetro opcional *paramObj* le permite definir múltiples propiedades para
 
 - Al exportar un documento 4D View Pro a un archivo con formato Microsoft Excel, pueden perderse algunos parámetros. Por ejemplo, los métodos y fórmulas 4D no son soportados por Excel. Puede verificar otras configuraciones con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad `formula` del *paramObj* para el código a ejecutar después de la exportación.
-- Se recomienda utilizar el objeto *excelOptions* al exportar en formato ".xlsx". Asegúrese de no mezclar este objeto con propiedades heredadas de primer nivel (*password*, *includeBindingSource*...) para evitar problemas potientales.
+- Se recomienda utilizar el objeto *excelOptions* al exportar en formato ".xlsx". Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource...*) to avoid potiental issues.
 
 **Notas sobre el formato PDF**:
 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* : Real )<!-- END REF-->
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | epsilon | Real | &#8594; | Valeur epsilon pour les comparaisons d'égalité des réels |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -165,3 +165,9 @@ summary {
  --docsearch-searchicon-color: var(--ifm-color-secondary-darkest);
  --docsearch-searchbox-background: var(--ifm-color-primary);
 }
+
+
+
+a.footer__link-item:hover {
+    color: #1e90ff !important;
+}

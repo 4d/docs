@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Data for which to return the standard deviation |
 | Function result | Real | &#8592; | Standard deviation of series |
-
+</div>
 <!-- END REF-->
 
 ## Description 

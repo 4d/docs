@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *refElément* ; *xPath* {; *nomAttribut* ; *valeurAttribut*} {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594;  | Référence d’élément XML racine |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nomAttribut | Text | &#8594;  | Attribut à définir |
 | valeurAttribut | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Nouvelle valeur d’attribut |
 | Résultat | Text | &#8592; | Référence de l’élément XML créé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

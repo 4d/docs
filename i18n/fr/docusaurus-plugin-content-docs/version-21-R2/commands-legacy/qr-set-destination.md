@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *zone* : Integer ; *type* : Integer {; *spécificités* : Text, Variable} )<!-- END REF-->
 <!--REF #_command_.QR SET DESTINATION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594; | Référence de la zone |
 | type | Integer | &#8594; | Type d'état |
 | spécificités | Text, Variable | &#8594; | Spécificités du type de destination |
-
+</div>
 <!-- END REF-->
 
 ## Description 

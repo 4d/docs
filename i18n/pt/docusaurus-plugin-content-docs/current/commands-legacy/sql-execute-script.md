@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *rotaScript* : Text ; *açãoErro* : Integer {; *nomeAtrib* : Text ; *valorAtrib* : Text} {; ...(*nomeAtrib* : Text, *valorAtrib* : Text)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaScript | Text | &#8594; | Nome completo da rota do arquivo que contém o script SQL a ser executado |
 | açãoErro | Integer | &#8594; | Ação a executar em caso de erro durante a execução do script |
 | nomeAtrib | Text | &#8594; | Nome do atributo a usar |
 | valorAtrib | Text | &#8594; | Valor do atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

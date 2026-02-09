@@ -7,10 +7,13 @@ title: VP SET ACTIVE CELL
 **VP SET ACTIVE CELL** ( *rangeObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|<!-- END REF -->
+|rangeObj   |Object|->|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

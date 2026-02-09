@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* : Integer, Text ; *lineamenu* : Integer ; *refIcon* : Text, Integer	 {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM ICON.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | Referencia de menú o número de menú |
 | lineamenu | Integer | &#8594; | Número de línea de menú o -1 para el último elemento añadido |
 | refIcon | Text, Integer | &#8594; | Nombre o número de la librería de imágenes a asociar a la línea de menú |
 | proceso | Integer | &#8594; | Número de proceso |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ; *width* : Integer ; *height* : Integer ; *arrIDs* : Text array ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | height | Integer | &#8594; | 選択領域の高さ |
 | arrIDs | Text array | &#8592; | バインドされた四角が選択領域に交差する要素のID |
 | 戻り値 | Boolean | &#8592; | True = 最低1つの要素が見つかった |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

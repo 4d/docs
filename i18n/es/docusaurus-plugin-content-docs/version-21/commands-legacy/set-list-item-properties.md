@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *lista* ; refElem | * ; *editable* ; *estilos* {; *icono* {; *color*}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | estilos | Integer | &#8594;  | Estilo de fuente para el elemento |
 | icono | Text, Integer | &#8594;  | Nombre o número de la imagen ("" o 0 para ningún icono) |
 | color | Integer | &#8594;  | Valor de color RGB o -1 = restablecer color original |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

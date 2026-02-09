@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get subsection.Syntax-->**WP Get subsection** ( *targetObj* ) | (*wpSection* ; *subSectionType* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get subsection.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素 |
 | wpSection | Object | &#8594;  | 4D Write Pro セクション |
 | subSectionType | Integer | &#8594;  | サブセクションのタイプ(wk first page, wk left page, または wk right page) |
 | 戻り値 | Object | &#8592; | サブセクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *zone* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594;  | Référence de la zone |
 | Résultat | Integer | &#8592; | Emplacement du "déposer" |
-
+</div>
 <!-- END REF-->
 
 ## Description 

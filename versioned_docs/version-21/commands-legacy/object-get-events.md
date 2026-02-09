@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( {* ;} *object* ; *arrEvents* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name or "" to designate the form (if * is specified) orField or variable (if * is omitted) |
 | arrEvents | Integer array | &#8592; | Array of enabled events |
-
+</div>
 <!-- END REF-->
 
 ## Description 

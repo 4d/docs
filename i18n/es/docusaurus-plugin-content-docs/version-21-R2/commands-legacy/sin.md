@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sin.Syntax-->**Sin** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Sin.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Numero | Real | &#8594; | Número, en radianes, cuyo seno se devuelve |
 | Resultado | Real | &#8592; | Seno del número |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

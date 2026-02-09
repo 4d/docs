@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *tabla* : Table ; *rutaCarpeta* : Text {; *numArchivos* : Integer {; *tamLimiteArchivos* : Integer {; *tamLimiteCampos* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla de la cual exportar la selección |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numArchivos | Integer | &#8594; | Número máximo de archivos por carpeta |
 | tamLimiteArchivos | Integer | &#8594; | Tamaño máximo del archivo Export.sql (en KB) |
 | tamLimiteCampos | Integer | &#8594; | Límite de tamaño debajo del cual el contenido de un campo Texto, BLOB o imagen se integrará al archivo principal (en bytes) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -36,6 +36,7 @@ Attachment objects provide the following read-only properties and functions:
 
 
 <!-- REF #_command_.MAIL New attachment.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
@@ -47,7 +48,9 @@ Attachment objects provide the following read-only properties and functions:
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
 |disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|<!-- END REF -->
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -181,6 +184,7 @@ $transporter.send($email)
 
 
 <!-- REF #4D.MailAttachment.new().Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
@@ -192,7 +196,9 @@ $transporter.send($email)
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
 |disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|<!-- END REF -->
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -229,9 +235,13 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|--- |:---:|------|
-|Result|4D.Blob|<-|Content of the attachment|<!-- END REF -->
+|Result|4D.Blob|<-|Content of the attachment|
+</div>
+<!-- END REF -->
 
 
 #### Description

@@ -15,7 +15,7 @@ Los objetos TCPConnection se liberan cuando ya no existen referencias a ellos en
 
 :::info 4DTCPUDPLog.txt file
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to TCP connections. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
+Para la depuración y monitorización, puede utilizar el [archivo de registro 4DTCPUDPLog.txt](../Debugging/debugLogFiles.md#4dtcpudplogtxt) que registra los eventos relacionados con las conexiones TCP. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
 
 :::
 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *elementRef* ; *xPath* {; *attribNamesArray* ; *attribValuesArray*} {; *attribNamesArray2* ; *attribValuesArray2* ; ... ; *attribNamesArrayN* ; *attribValuesArrayN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XMLルート要素参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | attribNamesArray | Text array | &#8594;  | 属性名配列 |
 | attribValuesArray | Text array | &#8594;  | 属性値配列 |
 | 戻り値 | Text | &#8592; | 作成されたXML要素の参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

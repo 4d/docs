@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableNum | Integer | &#8594;  | Table number |
 | Function result | Boolean | &#8592; | True = table exists in database, False = table does not exist in database |
-
+</div>
 <!-- END REF-->
 
 ## Description 

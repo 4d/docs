@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *name* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | name | Text | &#8594;  | Name of named selection to be cleared |
-
+</div>
 <!-- END REF-->
 
 ## Description 

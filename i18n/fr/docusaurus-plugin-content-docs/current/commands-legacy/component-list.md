@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *tabComposants* : Text array )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabComposants | Text array | &#8592; | Noms des composants |
-
+</div>
 <!-- END REF-->
 
 ## Description 

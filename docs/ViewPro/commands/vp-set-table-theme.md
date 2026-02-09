@@ -15,6 +15,7 @@ title: VP SET TABLE THEME
 **VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -22,6 +23,7 @@ title: VP SET TABLE THEME
 |tableName|Text|->|Table name|
 |options|[cs.ViewPro.TableTheme](../classes.md#tabletheme)|->|Table theme properties to modify|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
+</div>
 <!-- END REF -->
 
 

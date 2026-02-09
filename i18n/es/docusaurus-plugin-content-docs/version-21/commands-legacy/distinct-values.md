@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *unCampo* ; *array* {; *contArray*} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594;  | Campo o subcampo indexable a utilizar para datos |
 | array | Array | &#8592; | Array a recibir los datos del campo |
 | contArray | Integer array, Real array | &#8592; | Array a recibir el número de ocurrencias de cada valor |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

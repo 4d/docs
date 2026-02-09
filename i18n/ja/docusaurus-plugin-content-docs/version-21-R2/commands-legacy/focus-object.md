@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Focus object.Syntax-->**Focus object**  : Pointer<!-- END REF-->
 <!--REF #_command_.Focus object.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Pointer | &#8592; | フォーカスを持つオブジェクトへのポインタ |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

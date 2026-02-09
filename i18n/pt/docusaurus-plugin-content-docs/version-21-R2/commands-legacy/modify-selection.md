@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}{; *} )<br/>**MODIFY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}; * {; *} )<!-- END REF-->
 <!--REF #_command_.MODIFY SELECTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594; | Tabela a exibir e modificar, ou tabela padrão, se omitido |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | entraLista | Boolean | &#8594; | Permite Enter na lista opção |
 | * | Operator | &#8594; | Use formulário de saída para uma seleção de registros e esconder as barras de rolagem no formulário de entrada |
 | * | Operator | &#8594; | Mostrar barras de rolagem no formulário de entrada (desativa segunda opção ou o primeiro * opcional) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

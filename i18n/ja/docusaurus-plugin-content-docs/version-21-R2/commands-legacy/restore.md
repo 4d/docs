@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *archivePath* : Text {; *destFolderPath* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | archivePath | Text | &#8594; | Pathname of archive to restore |
 | destFolderPath | Text | &#8594; | Pathname of destination folder |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

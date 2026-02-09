@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT OPTION.Syntax-->**SET PRINT OPTION** ( *option* ; *valeur1* {; *valeur2*} )<!-- END REF-->
 <!--REF #_command_.SET PRINT OPTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | option | Integer | &#8594;  | Numéro d’option ou Code d'option PDF |
 | valeur1 | Integer, Text | &#8594;  | Valeur 1 de l’option |
 | valeur2 | Integer, Text | &#8594;  | Valeur 2 de l’option |
-
+</div>
 <!-- END REF-->
 
 ## Description 

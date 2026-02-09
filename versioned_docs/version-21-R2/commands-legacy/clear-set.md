@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *set* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set | Text | &#8594;  | Name of the set to clear from memory |
-
+</div>
 <!-- END REF-->
 
 ## Description 

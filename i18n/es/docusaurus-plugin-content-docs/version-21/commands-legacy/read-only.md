@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** {( tabla | * )}<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla &#124; * | Tabla, Operador | &#8594;  | Tabla a definir en modo sólo lectura o * para todas las tablas o Tabla por defecto, si se omite |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

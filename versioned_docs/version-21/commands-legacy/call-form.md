@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *window* ; *formula* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.CALL FORM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number |
 | formula | Object, Text | &#8594;  | Formula object or Name of project method |
 | param | Expression | &#8594;  | Parameter(s) passed to formula |
-
+</div>
 <!-- END REF-->
 
 ## Description 

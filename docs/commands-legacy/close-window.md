@@ -7,17 +7,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** closes the active window opened by the [Open window](open-window.md) or [Open form window](open-form-window.md) command in the current process.<!-- END REF--> **CLOSE WINDOW** has no effect if a custom window is not open; it does not close system windows. **CLOSE WINDOW** also has no effect if called while a form is active in the window. You must call **CLOSE WINDOW** when you are done using a window opened by [Open window](open-window.md) or [Open form window](open-form-window.md).
+<!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** closes the active window opened by the [Open window](../commands/open-window.md) or [Open form window](../commands/open-form-window.md) command in the current process.<!-- END REF--> **CLOSE WINDOW** has no effect if a custom window is not open; it does not close system windows. **CLOSE WINDOW** also has no effect if called while a form is active in the window. You must call **CLOSE WINDOW** when you are done using a window opened by [Open window](../commands/open-window.md) or [Open form window](../commands/open-form-window.md).
 
-It is useless to pass a number to **CLOSE WINDOW** when closing a window previously opened by the [Open window](open-window.md) or [Open form window](open-form-window.md) function, since a call to **CLOSE WINDOW** will always close the last window created by one of these commands.
+It is useless to pass a number to **CLOSE WINDOW** when closing a window previously opened by the [Open window](../commands/open-window.md) or [Open form window](../commands/open-form-window.md) function, since a call to **CLOSE WINDOW** will always close the last window created by one of these commands.
 
 If you pass an external window reference number in the *Window* parameter, **CLOSE WINDOW** closes the specified external window. For more information about external windows, refer to the  function.
 
@@ -36,8 +38,8 @@ The following example opens a form window and adds new records with the [ADD REC
 
 ## See also 
 
-[Open form window](open-form-window.md)  
-[Open window](open-window.md)  
+[Open form window](../commands/open-form-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## Properties
 

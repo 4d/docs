@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *object* )<!-- END REF-->
 <!--REF #_command_.GOTO OBJECT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified = object is an object name (string) If omitted = object is a field or a variable |
 | object | Field, Variable | &#8594;  | Object name (if * specified) or Field or Variable (if * omitted) to go to |
-
+</div>
 <!-- END REF-->
 
 ## Description 

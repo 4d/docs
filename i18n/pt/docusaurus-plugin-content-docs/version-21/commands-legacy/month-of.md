@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Month of.Syntax-->**Month of** ( *data* ) : Integer<!-- END REF-->
 <!--REF #_command_.Month of.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | data | Date | &#8594;  | Data para a qual devolver o mês |
 | Resultado | Integer | &#8592; | Número que indica o mês da data |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

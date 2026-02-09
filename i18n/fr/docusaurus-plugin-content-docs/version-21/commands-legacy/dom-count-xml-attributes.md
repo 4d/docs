@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *refElément* ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML attributes.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594;  | Référence d’élément XML |
 | Résultat | Integer | &#8592; | Nombre d’attributs |
-
+</div>
 <!-- END REF-->
 
 ## Description 

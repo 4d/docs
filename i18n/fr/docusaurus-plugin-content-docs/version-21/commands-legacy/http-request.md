@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* ; *url* ; *contenu* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | méthodeHTTP | Text | &#8594;  | Méthode HTTP pour la requête |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | &#8592; | Valeurs d’en-têtes retournées |
 | * | Opérateur | &#8594;  | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
 | Résultat | Integer | &#8592; | Code de statut HTTP |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilité

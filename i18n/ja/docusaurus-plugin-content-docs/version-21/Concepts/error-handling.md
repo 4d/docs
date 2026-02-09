@@ -21,7 +21,7 @@ title: エラー処理
 
 :::
 
-## Predictable vs unpredictable errors {#predictable-vs-unpredictable-errors}
+## 予測可能なエラーvs予測不可能なエラー {#predictable-vs-unpredictable-errors}
 
 [`entity.save()`](../API/EntityClass.md#save) や [`transporter.send()`](../API/SMTPTransporterClass.md#send) などの多くの4D クラス関数は、*status* 情報を格納しているオブジェクトを返します。 このオブジェクトには、プログラムの実行を停止する必要のないエラー(無効なパスワード、ロックされたエンティティ)など、ランタイムコンテキストにおける**予測可能な**エラーを保存するのに使用されます。 このカテゴリのエラーは、**サイレントエラー**とも呼ばれ、通常のコードで管理することができます。 [`Try`](#tryexpression)、[`Try/Catch`](#trycatchend-try) あるいは[エラー処理メソッド](#エラー処理メソッドを実装する) などのエラー処理コンテキストにおいてこのようなエラーが発生した場合、これらは実行を中断することはせず、エラー処理(例: [`Try/Catch`](#trycatchend-try) の`Catch` 部分)をトリガーすることはありません。 これらは[`Last errors`](../commands/last-errors.md) のコレクションには含まれません。 エラーは返されるオブジェクトの`status` および `statusText` プロパティ内にのみ返されます。 これはビジネスロジックに応じて処理することが可能です。
 
@@ -193,7 +193,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable]{#predictable-vs-unpredictable-errors} errors:
+3. [予測可能なエラーと予測不可能なエラー]{#predictable-vs-unpredictable-errors} の両方を管理したい場合を考えます:
 
 ```4d
 var $e:=ds.Employee.new()

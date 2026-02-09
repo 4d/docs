@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* : Table ; *statement* : Expression )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to apply statement |
 | statement | Expression | &#8594;  | One line of code or a method |
-
+</div>
 <!-- END REF-->
 
 ## Description 

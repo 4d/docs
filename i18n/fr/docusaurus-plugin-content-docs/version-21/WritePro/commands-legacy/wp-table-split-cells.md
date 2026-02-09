@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Syntax-->**WP TABLE SPLIT CELLS** ( *targetObj* ) | ( *tableRef* ; *startColumn* ; *startRow* {; *columnCount*{; *rowCount*}} )<!-- END REF-->
 <!--REF #_command_.WP TABLE SPLIT CELLS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | startRow | Integer | &#8594;  | Position of first column row |
 | columnCount | Integer | &#8594;  | Number of columns to split |
 | rowCount | Integer | &#8594;  | Number of rows to split |
-
+</div>
 <!-- END REF-->
 
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* ; *attribName* ; *attrValue* {; *attribName2* ; *attrValue2* ; ... ; *attribNameN* ; *attrValueN*} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | attribName | Text | &#8594;  | Attribute to set |
 | attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

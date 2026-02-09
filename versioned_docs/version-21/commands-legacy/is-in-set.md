@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is in set.Syntax-->**Is in set** ( *set* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is in set.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set | Text | &#8594;  | Name of the set to test |
 | Function result | Boolean | &#8592; | Current record of set's table is in set (True) or Current record of set's table is not in set (False) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *nomeArray* : Text array ; *valorArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET VARIABLES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeArray | Text array | &#8592; | Nomes de variáveis de webform |
 | valorArray | Text array | &#8592; | Valor de variável de webform |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

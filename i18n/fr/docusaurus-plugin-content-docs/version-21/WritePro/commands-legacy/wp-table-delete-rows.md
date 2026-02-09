@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE DELETE ROWS.Syntax-->**WP TABLE DELETE ROWS** ( *objCible* ) | ( *refTableau* ; *numLigne* {; *nbLignes*} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D View Pro |
 | refTableau | Object | &#8594;  | Référence de tableau |
 | numLigne | Integer | &#8594;  | Numéro d'indice de la ligne |
 | nbLignes | Integer | &#8594;  | Nombre de lignes à supprimer (valeur par défaut=1) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

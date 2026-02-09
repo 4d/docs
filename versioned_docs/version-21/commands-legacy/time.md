@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Time.Syntax-->**Time** ( *timeValue* ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | timeValue | Text, Integer | &#8594;  | Value to return as a time |
 | Function result | Time | &#8592; | Time specified by timeValue |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,8 +5,10 @@ slug: /commands/st-get-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( * ; *object* : Text ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST GET URL** ( *object* : Field, Variable ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( * ; *object* : Text ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST GET URL** ( *object* : Variable, Field ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST GET URL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | urlAddress | Text | &#8592; | URL address |
 | startSel | Integer | &#8594;  | Start of selection |
 | endSel | Integer | &#8594;  | End of selection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

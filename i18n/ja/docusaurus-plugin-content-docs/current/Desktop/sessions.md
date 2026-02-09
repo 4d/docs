@@ -57,7 +57,7 @@ title: デスクトップセッション
 
 リモートユーザー `Session` オブジェクトは以下から利用できます:
 
-- Project methods that have the [Execute on Server](../Project/project-method-properties.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
+- [サーバー上で実行](../Project/project-method-properties.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "ツイン(双子)" プロセスで実行されます)
 - トリガー
 - ORDA [データモデル関数](../ORDA/ordaClasses.md) (ただし、[`local`](../ORDA/ordaClasses.md#local-functions) キーワードで宣言されているものを除く)
 - [`On Server Open Connection`](../commands/on-server-open-connection-database-method) と [`On Server Close Connection`](../commands/on-server-close-connection-database-method)などのデータベースメソッド。

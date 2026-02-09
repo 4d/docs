@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *dataType* ; *data* )<!-- END REF-->
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | dataType | Text | &#8594;  | Type of data to be added |
 | data | Blob | &#8594;  | Data to append to the pasteboard |
-
+</div>
 <!-- END REF-->
 
 ## Description 

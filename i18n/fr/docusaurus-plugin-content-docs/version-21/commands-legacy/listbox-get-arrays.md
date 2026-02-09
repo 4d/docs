@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( {* ;} *objet* ; *tabNomsCols* ; *tabNomsEntêtes* ; *tabVarCols* ; *tabVarEntêtes* ; *tabColsVisibles* ; *tabStyles* {; *tabNomsPieds* ; *tabVarPieds*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | tabStyles | Pointer array | &#8592; | Pointeurs vers les tableaux ou les variables de styles de couleurs et de contrôle des lignes ou Nil |
 | tabNomsPieds | Text array | &#8592; | Noms d’objet des pieds de colonnes |
 | tabVarPieds | Pointer array | &#8592; | Pointeurs vers les variables des pieds de colonnes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

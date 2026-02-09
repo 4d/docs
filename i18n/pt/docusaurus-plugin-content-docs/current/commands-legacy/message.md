@@ -7,17 +7,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *mensagem* : Text )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | mensagem | Text | &#8594; | Mensagem a exibir |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
 
-<!--REF #_command_.MESSAGE.Summary-->O comando **MESSAGE** geralmente se utiliza para informar ao usuário sobre alguma atividade.<!-- END REF--> Mostra *mensagem* na tela em uma janela de mensagem especial que se abre e fecha cada vez que chamar a **MESSAGE**, a menos que trabalhe com uma janela que abriu previamente utilizando [Open window](open-window.md) (ver detalhes abaixo). A mensagem é temporária e é apagada assim que um formulário for exibido ou o método parar de executar. Se outra **MESSAGE** for executada, a mensagem antiga é apagada.
+<!--REF #_command_.MESSAGE.Summary-->O comando **MESSAGE** geralmente se utiliza para informar ao usuário sobre alguma atividade.<!-- END REF--> Mostra *mensagem* na tela em uma janela de mensagem especial que se abre e fecha cada vez que chamar a **MESSAGE**, a menos que trabalhe com uma janela que abriu previamente utilizando [Open window](../commands/open-window.md) (ver detalhes abaixo). A mensagem é temporária e é apagada assim que um formulário for exibido ou o método parar de executar. Se outra **MESSAGE** for executada, a mensagem antiga é apagada.
 
-Se abrir uma janela com [Open window](open-window.md), todas as chamadas a **MESSAGE** mostram as mensagens nessa janela. A janela se comporta como um terminal:
+Se abrir uma janela com [Open window](../commands/open-window.md), todas as chamadas a **MESSAGE** mostram as mensagens nessa janela. A janela se comporta como um terminal:
 
 * As mensagens sucessivas não apagam as mensagens anteriores quando são mostradas na janela, são concatenadas em mensagens existentes.
 * Se uma mensagem for mais larga que a janela, 4D insere automaticamente um retorno a linha.
@@ -28,7 +30,7 @@ Se abrir uma janela com [Open window](open-window.md), todas as chamadas a **MES
 * A janela é apenas uma janela de output e não se redesenha quando outras janelas forem colocadas sobre ela.
 * Pode modificar a fonte e tamanho dos caracteres na janela através da página "Interface" nas Preferências de Banco de Dados.
 
-**Nota:** **MESSAGE** é compatível com o comando [Open form window](open-form-window.md); entretanto, no contexto do segundo parâmetro *\** de [Open form window](open-form-window.md), que salva o tamanho e posição da janela, não é suportado 
+**Nota:** **MESSAGE** é compatível com o comando [Open form window](../commands/open-form-window.md); entretanto, no contexto do segundo parâmetro *\** de [Open form window](../commands/open-form-window.md), que salva o tamanho e posição da janela, não é suportado 
 
 ## Exemplo 1 
 
@@ -48,7 +50,7 @@ A janela a seguir aparece e desaparece cada vez que se chama MESSAGE:
 
 ## Exemplo 2 
 
-Com o objetivo de evitar a janela "piscante", pode mostrar as mensagens em uma janela aberta utilizando [Open window](open-window.md "Open window"), como em este exemplo: 
+Com o objetivo de evitar a janela "piscante", pode mostrar as mensagens em uma janela aberta utilizando [Open window](../commands/open-window.md "Open window"), como em este exemplo: 
 
 ```4d
  Open window(50;50;500;250;5;"Operação em progresso")
@@ -111,7 +113,7 @@ O resultado é o seguinte (em Windows):
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## Propriedades
 

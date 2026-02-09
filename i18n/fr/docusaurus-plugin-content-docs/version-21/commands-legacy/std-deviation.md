@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *séries* ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir l'écart type |
 | Résultat | Real | &#8592; | Ecart type de séries |
-
+</div>
 <!-- END REF-->
 
 ## Description 

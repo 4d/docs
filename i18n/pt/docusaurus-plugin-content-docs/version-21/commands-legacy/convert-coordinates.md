@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* ; *yCoord* ; *de* ; *para* )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | xCoord | Integer | &#8594;  | Coordenada horizontal de um ponto (Inicial) |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | &#8592; | Coordenada vertical de um ponto (convertida) |
 | de | Integer | &#8594;  | Sistema de coordenadas que vai ser convertido |
 | para | Integer | &#8594;  | Sistema de coordenadas para o qual vai converter |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

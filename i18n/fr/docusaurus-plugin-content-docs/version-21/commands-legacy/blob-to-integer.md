@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *blob* ; *ordreOctet* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB duquel obtenir la valeur entière |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
 | || | Nouvel offset après la lecture |
 | Résultat | Integer | &#8592; | Valeur entière (2 octets) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

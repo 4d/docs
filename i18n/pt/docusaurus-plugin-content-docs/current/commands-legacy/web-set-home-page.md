@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *pagInicio* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pagInicio | Text | &#8594; | Nome da página ou rota de acesso HTML a página ou "" para não enviar a home page personalizada |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

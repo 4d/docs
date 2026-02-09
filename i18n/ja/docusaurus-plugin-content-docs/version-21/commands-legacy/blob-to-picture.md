@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB TO PICTURE.Syntax-->**BLOB TO PICTURE** ( *pictureBlob* ; *picture* {; *codec*} )<!-- END REF-->
 <!--REF #_command_.BLOB TO PICTURE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pictureBlob | Blob | &#8594;  | ピクチャを格納したBLOB |
 | picture | Picture | &#8592; | BLOBから取り出したピクチャ |
 | codec | Text | &#8594;  | ピクチャcodec ID |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

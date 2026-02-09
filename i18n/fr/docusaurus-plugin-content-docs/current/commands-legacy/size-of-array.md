@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Size of array.Syntax-->**Size of array** ( *tableau* : Array ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &#8594; | Tableau dont vous désirez connaître la taille |
 | Résultat | Integer | &#8592; | Nombre d'éléments dans le tableau |
-
+</div>
 <!-- END REF-->
 
 ## Description 

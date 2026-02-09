@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemText* : Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | itemText | Text | &#8594; | メニュー項目の新しいテキスト |
 | process | Integer | &#8594; | プロセス参照番号 |
 | * | 演算子 | &#8594; | 指定時: メタ文字を標準文字として扱う |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

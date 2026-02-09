@@ -3,7 +3,7 @@ id: dsmapping
 title: Objets du modèle de données
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying [database structure](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
+La technologie ORDA est basée sur un *mapping* automatique de la [structure d'une base de données](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html) sous-jacente. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
 
 
 ## Correspondance de la structure

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get frame.Syntax-->**WP Get frame** ( {* ;} *wpArea* {; *textBoxID*} ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get frame.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時、wpArea はフォームオブジェクト(文字列)。省略時、wpArea はオブジェクトフィールドあるいは変数 |
 | wpArea | Text | &#8594;  | フォームオブジェクト名(* 指定時)あるいは4D Write Pro オブジェクト変数あるいはフィールド(* 省略時) |
 | textBoxID | 文字 | &#x1F858; | テキストボックスのID(テキストボックスにフォーカスがある場合にのみ値が入ります) |
 | 戻り値 | Integer | &#8592; | カーソルが現在設定されているフレーム |
-
+</div>
 <!-- END REF-->
 
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *refUsuario* )<!-- END REF-->
 <!--REF #_command_.DELETE USER.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refUsuario | Integer | &#8594;  | Número de identificación del usuario a borrar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

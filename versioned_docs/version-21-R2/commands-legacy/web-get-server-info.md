@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** ( *withCache* : Boolean ) : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | withCache | Boolean | &#8594;  | True to return the Web cache description. Otherwise (default), the cache description is not returned. |
 | Function result | Object | &#8592; | Information on the running Web server and SOAP server |
-
+</div>
 <!-- END REF-->
 
 ## Description 

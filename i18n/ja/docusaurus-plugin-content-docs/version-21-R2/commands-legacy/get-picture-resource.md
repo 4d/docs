@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resID* : Integer ; *resData* : Field, Variable {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resID | Integer | &#8594; | リソースID番号 |
 | resData | Field, Variable | &#8596; | *in:* Picture field or variable to receive the picture<br/>*out:* Contents of the PICT resource |
 | resFile | Time | &#8594; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

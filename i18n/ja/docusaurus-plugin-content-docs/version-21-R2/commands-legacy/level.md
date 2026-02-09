@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Level.Syntax-->**Level**  : Integer<!-- END REF-->
 <!--REF #_command_.Level.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | カレントのブレークまはたヘッダのレベル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

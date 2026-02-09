@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *htmlFile* )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | htmlFile | Text | &#8594;  | HTMLファイルへのHTMLパス名 または、WEB SEND FILEを終了させる場合空の文字列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

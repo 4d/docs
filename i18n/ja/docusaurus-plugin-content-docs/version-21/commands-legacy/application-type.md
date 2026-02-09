@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application type.Syntax-->**Application type**  : Integer<!-- END REF-->
 <!--REF #_command_.Application type.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Integer | &#8592; | アプリケーションタイプを示す数値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

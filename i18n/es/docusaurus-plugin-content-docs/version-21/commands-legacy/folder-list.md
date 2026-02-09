@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *nombreRuta* ; *directorios* )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nombreRuta | Text | &#8594;  | Ruta de acceso del volumen, directorio o carpeta |
 | directorios | Text array | &#8592; | Nombres de los directorios presentes en esta ubicación |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

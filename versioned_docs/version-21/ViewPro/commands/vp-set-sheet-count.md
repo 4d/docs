@@ -8,11 +8,14 @@ title: VP SET SHEET COUNT
 **VP SET SHEET COUNT** ( *vpAreaName* : Text ; *number* : Integer  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
-|number |Integer|->|Number of sheets|<!-- END REF -->
+|number |Integer|->|Number of sheets|
+</div>
+<!-- END REF -->
 
 ## Description
 

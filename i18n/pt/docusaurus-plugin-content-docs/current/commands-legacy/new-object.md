@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New object.Syntax-->**New object** ( *propriedade* : Text ; *valor* : any {; ...(*propriedade* : Text, *valor* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | propriedade | Text | &#8594; | Nome da propriedade a criar |
 | valor | any | &#8594; | Valor da propriedade |
 | Resultado | Object | &#8592; | Novo objeto linguagem |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

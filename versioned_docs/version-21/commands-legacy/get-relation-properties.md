@@ -7,16 +7,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *fieldPtr* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<br/>**GET RELATION PROPERTIES** ( *tableNum* ; *fieldNum* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | Pointer, Integer | &#8594;  | Field pointer or table number |
+| fieldPtr | Pointer | &#8594;  | Field pointer |
+| tableNum | Integer | &#8594;  | Table number |
 | fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
 | oneTable | Integer | &#8592; | One table number or 0 if no relation is defined from the field |
 | oneField | Integer | &#8592; | One field number or 0 if no relation is defined from the field |
 | choiceField | Integer | &#8592; | Choice field number or 0 if no choice field |
 | autoOne | Boolean | &#8592; | True = Auto relate one, False = Manual relate one |
 | autoMany | Boolean | &#8592; | True = Auto one to many, False = Manual one to many |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,15 @@ title: VP SET DEFAULT STYLE
 **VP SET DEFAULT STYLE** ( *vpAreaName* : Text ; *styleObj* : Object { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET DEFAULT STYLE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |styleObj |Object|->|Style object|
-|sheet|Integer|->|Sheet index (default = current sheet)|<!-- END REF -->
+|sheet|Integer|->|Sheet index (default = current sheet)|
+</div>
+<!-- END REF -->
 
 ## Description
 

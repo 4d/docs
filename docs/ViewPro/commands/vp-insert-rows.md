@@ -8,10 +8,13 @@ title: VP INSERT ROWS
 **VP INSERT ROWS** ( *rangeObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP INSERT ROWS.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|<!-- END REF -->
+|rangeObj   |Object|->|Range object|
+</div>
+<!-- END REF -->
 
 ## Description
 

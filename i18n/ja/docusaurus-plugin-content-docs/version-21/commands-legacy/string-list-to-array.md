@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resID* ; *strings* {; *resFile*} )<!-- END REF-->
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resID | Integer | &#8594;  | リソースID番号、または 'group'要素の'id'属性 (XLIFF) |
 | strings | Text array | &#8592; | STR#リソースから取り出した文字列、または 'group'要素から取り出した文字列 (XLIFF) |
 | resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれているすべてのXLIFFファイル リソースファイル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

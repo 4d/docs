@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *pontTabela* : Inteiro longo, Ponteiro ; *numCampo* : Integer ) : Boolean<br/>**Is field number valid** ( *numTabela* : Inteiro longo, Ponteiro ; *numCampo* : Integer ) : Boolean<!-- END REF--> 
 <!--REF #_command_.Is field number valid.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#8594; | Número da tabela ou ponteiro a tabela |
 | numCampo | Integer | &#8594; | Número do campo |
 | Resultado | Boolean | &#8592; | True = Campo exista na tabela; False = campo não existe na tabela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

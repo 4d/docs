@@ -84,9 +84,12 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -118,9 +121,12 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -150,9 +156,12 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Object|<-|Information about the encryption of the current datastore and of each table|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -222,9 +231,12 @@ You want to know the number of encrypted tables in the current data file:
 
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 
@@ -301,9 +313,12 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Collection|<-|Collection of optimization context objects|
+</div>
 <!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
@@ -377,9 +392,12 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Real|<-|Current value of the global modification stamp|
+</div>
 <!-- END REF -->
 
 
@@ -429,9 +447,12 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Object|<-|Datastore properties|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -496,10 +517,13 @@ On a remote datastore:
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |contextName|Text|->|Name of the context|
 |Result|Object|<-|Description of the optimization context|
+</div>
 <!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
@@ -546,9 +570,12 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Collection|<-|Collection of objects, where each object describes a request|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -584,9 +611,12 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -616,9 +646,12 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 
 <!-- REF #DataStoreClass.locked().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Boolean|<-|True if locked|
+</div>
 <!-- END REF -->
 
 
@@ -656,9 +689,12 @@ The function will also return `True` if the datastore was locked by another admi
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -689,11 +725,14 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |curPassPhrase |Text|->|Current encryption passphrase|
 |curDataKey |Object|->|Current data encryption key|
 |Result|Object|<-|Result of the encryption key matching|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -765,9 +804,12 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -807,9 +849,12 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |newStamp|Real|->|New value of global modification stamp|
+</div>
 <!-- END REF -->
 
 
@@ -863,6 +908,8 @@ ds.setGlobalStamp($newValue)
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |contextName|Text|->|Name of the context|
@@ -872,6 +919,7 @@ ds.setGlobalStamp($newValue)
 |attributesColl|Collection|->|Collection of attribute names (text)|
 |contextType|Text|->|If provided, value must be "main" or "currentItem"|
 |pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|
+</div>
 <!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
@@ -994,11 +1042,14 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |file |4D.File|->|File object |
 |options |Integer|->|Log response option (server only)|
 |reqNum |Integer|->|Number of requests to keep in memory (client only)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1109,9 +1160,12 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|:---:|---|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 
@@ -1174,9 +1228,12 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -1208,9 +1265,12 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.unlock().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 
@@ -1245,9 +1305,12 @@ If the `.unlock()` function is called in an unlocked datastore, it does nothing.
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 #### Description

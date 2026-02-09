@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *processo* : Integer )<!-- END REF-->
 <!--REF #_command_.RESUME PROCESS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | processo | Integer | &#8594; | Número de processo |
-
+</div>
 <!-- END REF-->
 
 ## Description 

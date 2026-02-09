@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *fileName* ; *picture* {; *} )<!-- END REF-->
 <!--REF #_command_.READ PICTURE FILE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | 読み込むファイルのフルパス名, または空の文字列 |
 | picture | Picture | &#8592; | ピクチャを受け取るフィールドまたは変数 |
 | * | 演算子 | &#8594;  | 指定時 = すべてのファイルタイプを受け入れる |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

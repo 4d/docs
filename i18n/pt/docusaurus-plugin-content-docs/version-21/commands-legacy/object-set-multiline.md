@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( {* ;} *objeto* ; *multilinha* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se for especificado *) ou<br/>campo ou variável (se for omitido *) |
 | multilinha | Integer | &#8594;  | Estado da propriedade multi linha |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

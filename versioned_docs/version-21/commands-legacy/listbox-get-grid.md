@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( {* ;} *object* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | horizontal | Boolean | &#8592; | True = shown, False = hidden |
 | vertical | Boolean | &#8592; | True = shown, False = hidden |
-
+</div>
 <!-- END REF-->
 
 ## Description 

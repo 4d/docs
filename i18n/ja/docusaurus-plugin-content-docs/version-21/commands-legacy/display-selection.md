@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*aTable*}{; *selectMode*}{; *enterList*}{; *}{; *} )<!-- END REF-->
 <!--REF #_command_.DISPLAY SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | 表示するテーブル, または 省略時、デフォルトテーブル |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | enterList | Boolean | &#8594;  | リスト入力を許可するオプション |
 | * | Operator |  &#8594;  | 1レコードセレクションの場合にも出力フォームを使用し、 入力フォームのスクロールバーを隠す |
 | * | Operator |  &#8594;  | 入力フォームでスクロールバーを表示する (最初の*の2番目のオプションを上書きする) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -5,14 +5,16 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *array* : Array ; *aField* : Field {; ...(*array* : Array, *aField* : Field)}{; *} })<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *array* : Array ; *aField* : Field {; ...(*array* : Array; *aField* : Field)}{; *} })<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array to copy to the selection |
 | aField | Field | &#8592; | Field to receive the array data |
 | * | Operator | &#8594;  | Await execution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *typeDonnées* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | typeDonnées | Text | &#8594; | Type de données |
 | Résultat | Integer | &#8592; | Taille (en octets) des données présentes dans le conteneur ou code d'erreur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

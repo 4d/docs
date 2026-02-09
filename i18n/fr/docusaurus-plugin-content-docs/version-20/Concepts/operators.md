@@ -93,7 +93,7 @@ Les opérateurs d'affectation composés suivants sont pris en charge :
 |                | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                                           |
 |                | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionner $p1 de 5)`                                 |
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) except:
+Ces opérateurs s'appliquent à toutes les [expressions assignables](quick-tour.md#assignable-vs-non-assignable-expressions) sauf :
 - les images en tant que propriétés d'objet ou éléments de collection,
 - les variables d'index de tableau.
 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Tickcount.Syntax-->**Tickcount**  : Integer<!-- END REF-->
 <!--REF #_command_.Tickcount.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de tics (60avo de um segundo) passados desde que se inicio o equipo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

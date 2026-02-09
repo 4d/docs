@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Syntax-->**Open window** ( *esquerda* ; *superior* ; *direita* ; *inferior* {; *tipo* {; *titulo* {; *caixaFechar*}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | esquerda | Integer | &#8594;  | Coordenada global da área de conteúdo da janela |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | titulo | Text | &#8594;  | Título da janela ou "" para usar título do formulário padrão |
 | caixaFechar | Text | &#8594;  | Método a chamar quando a caixa control-menu recebe um clique duplo, ou quanod a caixa Fechar é clicada |
 | Resultado | Integer | &#8592; | Número de referência de janela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

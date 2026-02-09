@@ -121,10 +121,14 @@ Parameters are received within the method, in the order they are specified in th
 
 
 <!-- REF #_command_.Formula.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaExp|Expression|->|Formula to be returned as object|
-|Result|4D.Function|<-|Native function encapsulating the formula|<!-- END REF -->
+|Result|4D.Function|<-|Native function encapsulating the formula|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -257,10 +261,14 @@ Calling a formula using object notation:
 
 
 <!-- REF #_command_.Formula from string.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaString|Text|->|Text formula to be returned as object|
-|Result|4D.Function|<-|Native object encapsulating the formula|<!-- END REF -->
+|Result|4D.Function|<-|Native object encapsulating the formula|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -314,11 +322,15 @@ The following code will create a dialog accepting a formula in text format:
 
 
 <!-- REF #FunctionClass.apply().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
-|Result|any|<-|Value from formula execution|<!-- END REF -->
+|Result|any|<-|Value from formula execution|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -372,15 +384,19 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; *...params* : any } ) : any<!-- END REF -->
 
 
 <!-- REF #FunctionClass.call().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |params |any|->|Value(s) to be passed as $1...$n when formula is executed|
-|Result|any|<-|Value from formula execution|<!-- END REF -->
+|Result|any|<-|Value from formula execution|
+</div>
+<!-- END REF -->
 
 
 #### Description

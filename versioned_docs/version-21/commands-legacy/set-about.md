@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *itemText* ; *method* )<!-- END REF-->
 <!--REF #_command_.SET ABOUT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | itemText | Text | &#8594;  | New About menu item text |
 | method | Text | &#8594;  | Name of method to execute when menu item is chosen |
-
+</div>
 <!-- END REF-->
 
 ## Description 

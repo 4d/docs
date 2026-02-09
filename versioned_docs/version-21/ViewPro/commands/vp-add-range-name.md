@@ -8,12 +8,15 @@ title: VP ADD RANGE NAME
 **VP ADD RANGE NAME** ( *rangeObj* : Object ; *name* : Text { ; *options* : Object } )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD RANGE NAME.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj| Object|->|Range object |
 |name|Text|->|Name for the fomula|
-|options|Object|->|Options for the named formula|<!-- END REF -->
+|options|Object|->|Options for the named formula|
+</div>
+<!-- END REF -->
 
 ## Description
 

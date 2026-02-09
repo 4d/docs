@@ -97,10 +97,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!--REF #FileClass.create().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                                   |
 | --- | ------- | --------------------------- | ------------------------------------ |
 | 戻り値 | Boolean | <- | ファイルが正常に作成された場合に true、それ以外の場合は false |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -141,6 +144,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!--REF #FileClass.createAlias().Params -->
 
+<div class="no-index">
+
 | 引数                | 型                         |                             | 説明                       |
 | ----------------- | ------------------------- | --------------------------- | ------------------------ |
 | destinationFolder | 4D.Folder | ->                          | エイリアスまたはショートカットの作成先フォルダー |
@@ -148,6 +153,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | aliasType         | Integer                   | ->                          | エイリアスリンクのタイプ             |
 | 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照   |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -200,10 +206,13 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <!-- REF #FileClass.delete().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -260,10 +269,13 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <!--REF #FileClass.getAppInfo().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明             |
 | --- | ------ | --------------------------- | -------------- |
 | 戻り値 | Object | <- | アプリケーションファイル情報 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -405,12 +417,15 @@ var $info:=$app.getAppInfo()
 
 <!--REF #FileClass.moveTo().Params -->
 
+<div class="no-index">
+
 | 引数                | 型                         |                             | 説明              |
 | ----------------- | ------------------------- | --------------------------- | --------------- |
 | destinationFolder | 4D.Folder | ->                          | 宛先フォルダー         |
 | newName           | Text                      | ->                          | 移動先でのファイルの完全な名称 |
 | 戻り値               | 4D.File   | <- | 移動したファイル        |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -453,12 +468,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
+<div class="no-index">
+
 | 引数      | 型                                                |                             | 説明                                               |
 | ------- | ------------------------------------------------ | --------------------------- | ------------------------------------------------ |
 | mode    | Text                                             | ->                          | 開くモード: "read", "write", "append" |
 | options | Object                                           | ->                          | 開くオプション                                          |
 | 戻り値     | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト                            |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -534,11 +552,14 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
+<div class="no-index">
+
 | 引数      | 型                       |                             | 説明            |
 | ------- | ----------------------- | --------------------------- | ------------- |
 | newName | Text                    | ->                          | ファイルの新しい完全な名称 |
 | 戻り値     | 4D.File | <- | 名称変更されたファイル   |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -568,12 +589,12 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                        |
-| ----- | ------------------------- |
-| 21 R2 | support of removeFluentUI |
-| 20 R9 | macOS 実行ファイル内のUUID を読む    |
-| 20    | WinIcon をサポート             |
-| 19    | 追加                        |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 21 R2 | removeFluentUI のサポート   |
+| 20 R9 | macOS 実行ファイル内のUUID を読む |
+| 20    | WinIcon をサポート          |
+| 19    | 追加                     |
 
 </details>
 
@@ -581,17 +602,20 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.setAppInfo().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |    | 説明                        |
 | ---- | ------ | -- | ------------------------- |
 | info | Object | -> | アプリケーションファイル情報内に書き込むプロパティ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
 
-`.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。 It is designed for developers who want to customize their 4D application building chain.
+`.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。 これは4D アプリケーションのビルドチェーンをカスタマイズしたいデベロッパーのために設計されています。
 
-この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
+The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
 
 **.plist ファイル用の*info* オブジェクト (全プラットフォーム)**
 
@@ -617,18 +641,18 @@ $fhandle:=$f.open("read")
 
 *info* オブジェクト引数内に設定されているそれぞれの有効なプロパティは、.exe あるいは .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
-| プロパティ            | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CompanyName      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| FileDescription  | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| FileVersion      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| InternalName     | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| LegalCopyright   | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| OriginalFilename | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ProductName      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ProductVersion   | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| removeFluentUI   | Boolean | Can only be used with a merged 4D application (.exe file). Pass True to replace the *manifest* referencing the embedded Windows App SDK (required for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)) and the *.pri* file with versions allowing the use of a Windows App SDK installed in the OS. Using a local SDK allows to reduce the size of the generated application (you also need remove the default embedded files). Passing False or omitting the property does nothing. |
-| WinIcon          | Text    | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| プロパティ            | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CompanyName      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| FileDescription  | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| FileVersion      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| InternalName     | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| LegalCopyright   | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| OriginalFilename | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ProductName      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ProductVersion   | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| removeFluentUI   | Boolean | これは組み込み4D アプリケーション(.exe ファイル) でのみ使用可能です。 ここにTrue を渡すと、組み込みWindows App SDK ([Fluent UI レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) を使用するには必須) を参照している *manifest* と *.pri* ファイルを、OS にインストールされているWindows App SDK の使用を許可するバージョンに置き換えます。 ローカルのSDK を使用することで、生成されるアプリケーションのサイズを減らすことができます(ただしデフォルトの埋め込みファイルを削除する必要もあります)。 False を渡す、あるいはこのプロパティを省略した場合には、何も起こりません。 |
+| WinIcon          | Text    | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。                                                                                                                                                                                                                                                                                                                                                                                      |
 
 `WinIcon` を除き全てのプロパティにおいて、値としてnull または空の文字列を渡した場合、プロパティには空の文字列が書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 
@@ -713,10 +737,13 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
+<div class="no-index">
+
 | 引数      | 型    |    | 説明            |
 | ------- | ---- | -- | ------------- |
 | content | BLOB | -> | ファイルの新しいコンテンツ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -749,6 +776,8 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setText().Params -->
 
+<div class="no-index">
+
 | 引数          | 型       |    | 説明            |
 | ----------- | ------- | -- | ------------- |
 | text        | Text    | -> | ファイルに保存するテキスト |
@@ -756,6 +785,7 @@ $app.setAppInfo($info)
 | charSetNum  | Integer | -> | 文字セットの番号      |
 | breakMode   | Integer | -> | 改行の処理モード      |
 
+</div>
 <!-- END REF -->
 
 #### 説明

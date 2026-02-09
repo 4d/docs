@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get frame.Syntax-->**WP Get frame** ( {* ;} *wpArea* : Text {; *textBoxID* : String} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get frame.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, wpArea é um nome de objeto de formulário (string). Se omitido, wpArea é um campo de objeto ou variável |
 | wpArea | Text | &#8594;  | Nome de objeto de formulário (se * for especificado) ou variável ou campo de objeto 4D Write Pro |
 | textBoxID | String | &#x1F858; | ID of the text box (only filled if a text box has the focus) |
 | Resultado | Integer | &#8592; | o Frame onde o cursor está atualmente estabelecido |
-
+</div>
 <!-- END REF-->
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*

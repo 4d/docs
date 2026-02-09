@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; pos_found ; length_found}{; *} ) -> Function result <br/>**Match regex** ( *pattern* : Text ; *aString* : Text ) -> Function result<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pattern | Text | &#8594;  | Regular expression (complete equality with two-parameters syntax)|
@@ -16,8 +18,7 @@ displayed_sidebar: docs
 | length_found | Integer, Integer array | &#8592; | Length of occurrence |
 | * | Operator | &#8594;  | If passed: only searches at position indicated |
 | Function result | Boolean | &#8592; | True = search has found an occurrence; Otherwise, False. |
-
-
+</div>
 <!-- END REF-->
 
 ## Description 

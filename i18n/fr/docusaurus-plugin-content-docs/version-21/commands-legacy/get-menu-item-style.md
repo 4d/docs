@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* ; *ligneMenu* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item style.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
 | ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
 | process | Integer | &#8594;  | Numéro de référence de process |
 | Résultat | Integer | &#8592; | Style courant de la ligne de menu |
-
+</div>
 <!-- END REF-->
 
 ## Description 

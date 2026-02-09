@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*laTable* : Table}{; *modeSélection* : Integer}{; *saisieListe* : Boolean}{; *} )<br/>**MODIFY SELECTION** ( {*laTable* : Table}{; *modeSélection* : Integer}{; *saisieListe* : Boolean}; * {; *} )<!-- END REF-->
 <!--REF #_command_.MODIFY SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table à afficher et modifier ou Table par défaut si ce paramètre est omis |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | saisieListe | Boolean | &#8594; | Autoriser saisie en liste |
 | * | Operator | &#8594; | Utiliser formulaire sortie pour un seul enregistrement et cacher les barres de défilement dans le formulaire entrée |
 | * | Operator | &#8594; | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

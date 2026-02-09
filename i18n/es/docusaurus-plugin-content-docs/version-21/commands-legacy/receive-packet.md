@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* ;} *varRecep* ; stopCar | numBytes )<!-- END REF-->
 <!--REF #_command_.RECEIVE PACKET.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | docRef | Time | &#8594;  | Número de referencia del documento o canal actual (puerto serial o documento) |
 | varRecep | Text, Blob | &#8592; | Variable para recibir datos |
 | stopCar &#124; numBytes | Cadena, Entero largo | &#8594;  | Carácter(es) en el(los) cual(es) detener la recepción de datos o número de bytes a recibir |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

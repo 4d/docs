@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTabela* ; *objetoJson* )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Ponteiro a tabela 4D |
 | objetoJson | Text | &#8594;  | Cadeia em JSON |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

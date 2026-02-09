@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *folder* {; *options*} {; *})} : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | folder | Integer | &#8594;  | フォルダータイプ (省略時 = Active 4D folder) |
 | options | Object | &#8594;  | 4D Client database folder path configuration |
 | * | 演算子 | &#8594;  | ホストデータベースのフォルダーを返す |
 | 戻り値 | Text | &#8592; | 指定したフォルダーのパス名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

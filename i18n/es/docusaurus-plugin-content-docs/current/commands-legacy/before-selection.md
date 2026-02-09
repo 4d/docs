@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Before selection.Syntax-->**Before selection** ( *tabla* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla para la cual probar si el puntero se encuentra antes del primer registro seleccionado o Tabla por defecto, si se omite |
 | Resultado | Boolean | &#8592; | Sí (TRUE) o No (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

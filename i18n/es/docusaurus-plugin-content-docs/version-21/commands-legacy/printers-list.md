@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *arrayNoms* {; *arrayNomsAlt* {; *arrayModelos*}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrayNoms | Text array | &#8592; | Nombres de las impresoras |
 | arrayNomsAlt | Text array | &#8592; | Windows: Ubicación de las impresoras macOS: Nombres personalizados de las impresoras |
 | arrayModelos | Text array | &#8592; | Modelos de impresoras |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

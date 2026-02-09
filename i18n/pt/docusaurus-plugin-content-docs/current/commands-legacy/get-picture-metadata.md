@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE METADATA.Syntax-->**GET PICTURE METADATA** ( *imagem* : Picture ; *nomeMeta* : Text ; *conteudoMeta* : Variable {; ...(*nomeMeta* : Text, *conteudoMeta* : Variable)} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE METADATA.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8594; | Imagem cujos metadados você deseja conseguir |
 | nomeMeta | Text | &#8594; | Nome ou caminho do bloco a ser lido |
 | conteudoMeta | Variable | &#8592; | Conteúdo do Metadado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

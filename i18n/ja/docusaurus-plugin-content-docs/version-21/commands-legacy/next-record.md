@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** {( *aTable* )}<!-- END REF-->
 <!--REF #_command_.NEXT RECORD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | カレントレコードをセレクションの次のレコードに 移動するテーブル、省略時はデフォルトテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*aTable*}{;}{*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table, if omitted |
 | * | Operator | &#8594;  | If passed, the scrolling bar will not be displayed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

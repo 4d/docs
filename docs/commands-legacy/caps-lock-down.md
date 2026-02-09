@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Caps lock down.Syntax-->**Caps lock down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Caps lock down.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | State of the Caps Lock key |
-
+</div>
 <!-- END REF-->
 
 ## Description 

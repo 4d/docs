@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *indiceN* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | indiceN | Integer | &#8594; | Arquivo N incluído na ação de arrastar |
 | Resultado | Text | &#8592; | Rota do arquivo extraído da área de transferência |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

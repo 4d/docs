@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *BLOB* : Blob ; *conjuntoCaracteres* : Text, Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Convert to text.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | Blob que contém texto expresso num conjunto de caracteres específico |
 | conjuntoCaracteres | Text, Integer | &#8594; | Nome ou número do conjunto de caracteres do BLOB |
 | Resultado | Text | &#8592; | Conteúdos do BLOB expressos em conjunto de caracteres 4D |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( arrActividades | arrUUID ; *arrInicio* : Text array ; *arrDuracion* : Integer array ; *arrInfo* : Text array {; *arrDetails* : Object array}{; *} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrActividades &#124; arrUUID | Array objeto, Array texto | &#8592; | Descripción completa de operaciones (array objeto) o<br/>UUIDs de las operaciones (array texto) |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | arrInfo | Text array | &#8592; | Descripción |
 | arrDetails | Object array | &#8592; | Detalles del contexto y sub operaciones (si las hay) |
 | * | Operador | &#8594; | Si se pasa = Traer actividad del servidor |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

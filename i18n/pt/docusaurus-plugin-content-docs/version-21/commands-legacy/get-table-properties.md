@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *ponTabela* ; *invisible* {; *trigSalvarNovo* {; *trigSalvarRegistro* {; *trigApagarRegistro* {; *trigCarregarRegistro*}}}} )<br/>**GET TABLE PROPERTIES** ( *NumTabela* ; *invisible* {; *trigSalvarNovo* {; *trigSalvarRegistro* {; *trigApagarRegistro* {; *trigCarregarRegistro*}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | ponTabela&#124;NumTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro de tabela ou número de tabela |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | trigSalvarRegistro | Boolean | &#8592; | True = Trigger "On saving an existing record" ativado; senão, False |
 | trigApagarRegistro | Boolean | &#8592; | True = Trigger "On deleting a record" ativado; senão, False |
 | trigCarregarRegistro | Boolean | &#8592; | *** Não usar (obsoleto) *** |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

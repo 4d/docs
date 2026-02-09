@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set | Text | &#8594;  | Name of the set to test |
 | Function result | Integer | &#8592; | Number of records in set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

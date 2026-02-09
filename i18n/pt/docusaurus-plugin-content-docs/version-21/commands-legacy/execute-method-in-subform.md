@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *objetoSubForm* ; *nomeMetodo* {; *retorno* {; *param*} {; *param2* ; ... ; *paramN*}} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objetoSubForm | Text | &#8594;  | Nome de objeto subformulário |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | retorno | *, Variable | &#8594;  | * Se método não retornar um valor |
 | &#8592; | Valor retornado pelo método |
 | param | Expression | &#8594;  | Parâmetros a passar ao método |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

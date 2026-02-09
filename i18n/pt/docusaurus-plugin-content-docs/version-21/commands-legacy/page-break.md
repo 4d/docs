@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( *|> )}<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | *&#124;> | &#8594;  | * Cancela o trabalho de impressão iniciado com o Formulário de Impressão, ou > para forçar um trabalho de impressão. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

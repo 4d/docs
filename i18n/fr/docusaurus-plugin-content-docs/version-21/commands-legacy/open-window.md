@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Syntax-->**Open window** ( *gauche* ; *haut* ; *droite* ; *bas* {; *type* {; *titre* {; *caseFermeture*}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | gauche | Integer | &#8594;  | Coordonnée gauche de l'intérieur de la fenêtre |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | titre | Text | &#8594;  | Titre de la fenêtre |
 | caseFermeture | Text | &#8594;  | Méthode à appeler en cas de double-clic sur la case du menu Système ou de clic sur la case de fermeture |
 | Résultat | Integer | &#8592; | Numéro de référence de la fenêtre |
-
+</div>
 <!-- END REF-->
 
 ## Description 

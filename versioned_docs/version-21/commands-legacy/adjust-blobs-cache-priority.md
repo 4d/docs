@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table whose "blobs" data priority value has to be adjusted |
 | priority | Integer | &#8594;  | Cache priority value for BLOBs in the table |
-
+</div>
 <!-- END REF-->
 
 ## Expert mode 

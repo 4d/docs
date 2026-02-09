@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Square root.Syntax-->**Square root** ( *number* ) : Real<!-- END REF-->
 <!--REF #_command_.Square root.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | number | Real | &#8594;  | 平方根を求める数値 |
 | 戻り値 | Real | &#8592; | 平方根の値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

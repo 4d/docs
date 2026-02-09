@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *ruta* : Text, Text array ; *codigo* : Text, Text array {; *opcion* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET CODE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ruta | Text, Text array | &#8594; | Texto o array de texto que contiene una o varias rutas de método |
 | codigo | Text, Text array | &#8592; | Código de los métodos designados |
 | opcion | Integer | &#8594; | 0 o si se omite = exportación simple (sin tokens), 1 = exportación con tokens |
 | * | Operador | &#8594; | Si se pasa = comando se aplica a la base de datos de host cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

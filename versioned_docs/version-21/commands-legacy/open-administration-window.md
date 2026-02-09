@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Syntax-->**OPEN ADMINISTRATION WINDOW**<!-- END REF-->
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

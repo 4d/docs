@@ -5,12 +5,15 @@ slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : Integer, Text )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : Integer )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : Text )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picRef &#124; picName | Integer, Text | &#8594;  | Reference number of Picture Library graphic or Name of Picture Library graphic |
-
+| picRef | Integer | &#8594;  | Reference number of Picture Library graphic |
+| picName | Text | &#8594;  | Name of Picture Library graphic |
+</div>
 <!-- END REF-->
 
 ## Description 

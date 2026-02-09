@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Close Connection database method.Syntax-->$1, $2, $3 -> Método base On Server Close Connection<!-- END REF-->
 <!--REF #_command_.On Server Close Connection database method.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $1 | Entero largo | &#8592; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
 | $2 | Entero largo | &#8592; | Número de conexión utilizada internamente por 4D Server para identificar una conexión |
 | $3 | Entero largo | &#8592; | Obsoleto: devuelve siempre 0 pero debe declararse |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *nomVar* ; *valorVar* )<!-- END REF-->
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomVar | Text | &#8594;  | Nombre de la variable a definir |
 | valorVar | Text | &#8594;  | Valor de la variable o "" para restablecer el valor por defecto |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibilidad

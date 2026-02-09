@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New.Syntax-->**WP New** ( *source* : Text, Blob, Object {; *option* : Integer} )} -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP New.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | source | Text, Blob, Object | &#8594;  | 文字列: HTML ソース<br/>BLOB: 4D Write Pro ドキュメント(.4wp)あるいは4D Write Blob ドキュメント(.4w7/.4wt)<br/>Object: レンジあるいは要素または4D Write Pro ドキュメント |
 | option | Integer | &#8594;  | HTML 式の読み込みオプション |
 | 戻り値 | Object | &#8592; | 4D Write Pro オブジェクト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

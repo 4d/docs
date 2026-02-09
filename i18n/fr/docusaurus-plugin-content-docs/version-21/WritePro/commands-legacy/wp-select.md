@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *zoneWP*;} {*objCible*} {; *débutPlage* ; *finPlage*} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet (document) |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | objCible | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
 | débutPlage | Integer | &#8594;  | Position du début de la plage texte |
 | finPlage | Integer | &#8594;  | Position de la fin de la plage texte |
-
+</div>
 <!-- END REF-->
 
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*

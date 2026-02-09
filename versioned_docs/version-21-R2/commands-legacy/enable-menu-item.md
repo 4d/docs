@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.ENABLE MENU ITEM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Menu item number or -1 for the last item added |
 | process | Integer | &#8594;  | Proces reference number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

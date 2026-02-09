@@ -7,19 +7,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New object.Syntax-->**New object** {( *property* ; *value* {; *property2* ; *value2* ; ... ; *propertyN* ; *valueN*} )} : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | property | Text | &#8594;  | Name of property to create |
 | value | any | &#8594;  | Value of property |
 | Function result | Object | &#8592; | New language object |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
 <!--REF #_command_.New object.Summary-->The **New object** command creates a new empty or prefilled object and returns its reference.<!-- END REF-->
 
-If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D oject variable or a 4D object field.
+If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D object variable or a 4D object field.
 
 **Note:** `var : Object` declares a variable of the [Object](# "Data structured as a native 4D object") type but does not create any object.
 

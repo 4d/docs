@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( {* ;} *objeto* ; *tipoArray* ) : Pointer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get array.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Variável (se * for omitido) |
 | tipoArray | Integer | &#8594;  | Tipo de array |
 | Resultado | Pointer | &#8592; | Ponteiro ao array associado a propriedade |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

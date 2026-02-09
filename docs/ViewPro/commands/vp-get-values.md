@@ -7,11 +7,14 @@ title: VP Get values
 **VP Get values** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get values.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|Result  |Collection|<-|Collection of values|<!-- END REF -->
+|Result  |Collection|<-|Collection of values|
+</div>
+<!-- END REF -->
 
 ## Description
 

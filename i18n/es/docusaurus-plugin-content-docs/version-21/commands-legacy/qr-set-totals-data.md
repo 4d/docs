@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *numColumna* ; *numRuptura* ; operador | valor )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referencia del área |
 | numColumna | Integer | &#8594;  | Número de columna |
 | numRuptura | Integer | &#8594;  | Número de ruptura |
 | operador &#124; valor | Entero largo, Cadena | &#8594;  | Operador para la celda o contenido de la celda |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

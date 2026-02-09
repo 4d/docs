@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY BOOLEAN.Syntax-->**ARRAY BOOLEAN** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY BOOLEAN.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomArray | Array | &#8594;  | Nom du tableau |
 | taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
 | taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
-
+</div>
 <!-- END REF-->
 
 ## Description 

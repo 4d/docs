@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *size* : Real {; *minFreeSize* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | size | Real | &#8594;  | Size of database cache in bytes |
 | minFreeSize | Real | &#8594;  | Minimum number of bytes to release when cache is full |
-
+</div>
 <!-- END REF-->
 
 ## Description 

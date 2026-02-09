@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objet* ; *fonctionJS* ; résultat {; *param*}{; *param2* ; ... ; *paramN*} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objet* ; *fonctionJS* ; * {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | résultat &#124; * | Variable | &#8594;  | * pour une fonction sans résultat ou |
 | &#8592; | Résultat de la fonction (si attendu) |
 | param | Text, Number, Date, Object, Collection | &#8594;  | Paramètre(s) à passer à la fonction |
-
+</div>
 <!-- END REF-->
 
 ## Description 

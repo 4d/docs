@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* : Blob ; *ordreOctet* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594; | BLOB duquel extraire la valeur de type Entier long |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | offset | Variable | &#8596; | Offset (en octets) dans le BLOB |
 |  |  |  | Nouvel offset après lecture |
 | Résultat | Integer | &#8592; | Valeur de type Entier long (4 octets) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

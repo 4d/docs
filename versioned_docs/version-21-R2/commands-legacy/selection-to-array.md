@@ -5,16 +5,19 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *aField* : Field ; *array* : Array {; ...(*aField* : Field, *array* : Array)}{; *})<br/>**SELECTION TO ARRAY** ( *aTable* : Field, Table ; *array* : Array {; *aField* : Field ; *array* : Array {; ...(*aField* : Field, *array* : Array)}}{; *}})<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *aField* : Field ; *array* : Array {; ...(*aField* : Field ; *array* : Array)}{; *})<br/>**SELECTION TO ARRAY** ( *aTable* : Table ; *array* : Array {; *aField* : Field ; *array* : Array {; ...(*aField* : Field ; *array* : Array)}}{; *}})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField &#124; aTable | Field, Table | &#8594;  | Field to use for retrieving data or Table to use for retrieving record numbers |
+| aField | Field | &#8594;  | Field to use for retrieving data  |
+| aTable | Table | &#8594;  | Table to use for retrieving record numbers |
 | array | Array | &#8592; | Array to receive field data or record numbers |
 | aField | Field | &#8594;  | Field to retrieve in array |
 | array | Array | &#8592; | Array to receive field data |
 | * | Operator | &#8594;  | Await execution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

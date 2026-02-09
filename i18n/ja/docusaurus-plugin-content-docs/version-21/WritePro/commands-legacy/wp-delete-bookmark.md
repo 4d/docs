@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE BOOKMARK.Syntax-->**WP DELETE BOOKMARK** ( *wpDoc* ; *bkName* )<!-- END REF-->
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Proドキュメント |
 | bkName | Text | &#8594;  | 削除するブックマークの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

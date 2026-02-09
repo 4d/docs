@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | セレクションの先頭をカレントレコードにするテーブル または省略時デフォルトテーブル |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

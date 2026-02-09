@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *privKey* ; *pubKey* {; *length*} )<!-- END REF-->
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | privKey | Blob | &#8592; | BLOB to contain the private key |
 | pubKey | Blob | &#8592; | BLOB to contain the public key |
 | length | Integer | &#8594;  | Key length (bits) [512...2048] Default value = 512 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

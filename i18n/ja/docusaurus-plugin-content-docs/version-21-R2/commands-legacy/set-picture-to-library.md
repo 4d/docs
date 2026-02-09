@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *picture* : Picture ; *picRef* : Integer ; *picName* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594; | 新しいピクチャ |
 | picRef | Integer | &#8594; | ピクチャライブラリ画像の参照番号 |
 | picName | Text | &#8594; | ピクチャの新しい名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

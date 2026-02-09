@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *elCampo* )<!-- END REF-->
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | elCampo | Text, Blob, Picture, Object | &#8594;  | Campo para el cual recargar los datos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

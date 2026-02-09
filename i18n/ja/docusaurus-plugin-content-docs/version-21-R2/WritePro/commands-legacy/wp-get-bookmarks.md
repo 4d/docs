@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP GET BOOKMARKS.Syntax-->**WP GET BOOKMARKS** ( *wpDoc* : Object ; *arrBKNames* : テキスト配列 )<!-- END REF-->
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Proドキュメント |
 | arrBKNames | テキスト配列 | &#x1F858; | ブックマーク名の配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

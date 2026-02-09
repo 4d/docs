@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *object* {; *listType*}; *list* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
 | listType | Integer | &#8594;  | リストの種類: 選択リスト、必須リスト、除外リスト |
 | list | Text | &#8594;  | 選択リストとして使用するリストの名前 (デザインモードで定義) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

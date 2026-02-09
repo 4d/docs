@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* ) : Real<!-- END REF-->
 <!--REF #_command_.Table fragmentation.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to get the fragmentation rate |
 | Function result | Real | &#8592; | Percentage of fragmentation |
-
+</div>
 <!-- END REF-->
 
 ## Description 

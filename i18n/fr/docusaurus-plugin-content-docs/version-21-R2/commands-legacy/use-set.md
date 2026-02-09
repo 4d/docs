@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE SET.Syntax-->**USE SET** ( *ensemble* : Text )<!-- END REF-->
 <!--REF #_command_.USE SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ensemble | Text | &#8594; | Nom de l'ensemble à utiliser |
-
+</div>
 <!-- END REF-->
 
 ## Description 

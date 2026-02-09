@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *objAlvo* ) | ( *refTab* ; *iniFila* {; *numFilas*} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objAlvo | Object | &#8594;  | intervalo ou elemento ou documento 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | iniFila | Integer, Text | &#8594;  | Posição início fila |
 | numFilas | Integer | &#8594;  | Número de filas a obter |
 | Resultado | Object | &#8592; | Nova faixa de tabela contendo filas selecionadas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

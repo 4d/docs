@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*tabla*}{;}{* | >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla para la cual imprimir la selección, o Tabla por defecto, si se omite |
 | * &#124; > | Operador | &#8594;  | * para eliminar las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

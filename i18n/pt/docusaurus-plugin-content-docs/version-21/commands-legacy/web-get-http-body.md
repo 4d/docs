@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corpo* )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | corpo | Blob, Text | &#8592; | corpo da petição HTTP |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

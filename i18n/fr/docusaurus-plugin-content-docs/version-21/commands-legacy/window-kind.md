@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Window kind.Syntax-->**Window kind** {( *fenêtre* )} : Integer<!-- END REF-->
 <!--REF #_command_.Window kind.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 | Résultat | Integer | &#8592; | Type de la fenêtre |
-
+</div>
 <!-- END REF-->
 
 ## Description 

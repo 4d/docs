@@ -217,6 +217,10 @@ module.exports = {
               to: 'https://learn.4d.com',
             },
             {
+              label: '4D Doc Center (legacy documentation web site) ',
+              to: 'https://doc.4d.com',
+            },
+            {
               label: 'Knowledgebase',
               to: 'https://kb.4d.com',
             },

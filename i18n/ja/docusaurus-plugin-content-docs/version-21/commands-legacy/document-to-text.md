@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Document to text.Syntax-->**Document to text** ( *fileName* {; *charSet* {; *breakMode*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Document to text.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | ドキュメント名またはドキュメントへのパス名 |
 | charSet | Text, Integer | &#8594;  | 文字コード名の名前または数字 |
 | breakMode | Integer | &#8594;  | 改行の処理モード |
 | 戻り値 | Text | &#8592; | ドキュメントから取得したテキスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

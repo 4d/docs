@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( *arrActivities* {; *} )<br/>**ACTIVITY SNAPSHOT** ( *arrUUID* ; *arrStart* ; *arrDuration* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | arrActivities | Object array | &#8592; | Complete description of operations |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | arrInfo | Text array | &#8592; | Description |
 | arrDetails | Object array | &#8592; | Details of context and sub-operations (if any) |
 | * | Operator | &#8594;  | If passed = Get server activity |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -85,11 +85,14 @@ WebSocket objects provide the following properties and functions:
 
 
 <!-- REF #4D.WebSocket.new().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |url|Text|->|URL to which to connect|
 |[connectionHandler](#connectionhandler-parameter)|Object|->|Object declaring WebSocket callbacks|
 |Result|4D.WebSocket|<-|New [WebSocket object](#websocket-object)|
+</div>
 <!-- END REF -->
 
 
@@ -193,9 +196,12 @@ This property is read-only.
 
 
 <!-- REF #WebSocketClass.send().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |message|Text, Blob, Object|->|Message to be sent|
+</div>
 <!-- END REF -->
 
 
@@ -237,10 +243,13 @@ This property is read-only.
 
 
 <!-- REF #WebSocketClass.terminate().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |code|Integer|->|Status code explaining why the connection is being closed|
 |reason|Text|->|The reason why the connection is closing|
+</div>
 <!-- END REF -->
 
 

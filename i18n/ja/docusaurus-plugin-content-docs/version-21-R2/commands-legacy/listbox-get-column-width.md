@@ -5,8 +5,10 @@ slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( * ; *object* : Text {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<br/>**LISTBOX Get column width** ( *object* : Field, Variable {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( * ; *object* : Text {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<br/>**LISTBOX Get column width** ( *object* : Variable {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | minWidth | Integer | &#8592; | 列の最小幅 (ピクセル単位) |
 | maxWidth | Integer | &#8592; | 列の最大幅 (ピクセル単位) |
 | 戻り値 | Integer | &#8592; | 列幅 (ピクセル単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

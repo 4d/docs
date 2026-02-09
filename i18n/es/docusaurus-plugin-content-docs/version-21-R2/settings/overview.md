@@ -57,7 +57,7 @@ Este botón reinicializa todos los parámetros de la página actual. Se activa c
 
 4D ofrece dos modos de funcionamiento para las Propiedades de los proyectos:
 
-- **Standard** mode: all settings are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. Este es el modo por defecto, adecuado para la fase de desarrollo (todas las aplicaciones).
+- Modo **Estándar**: todos los parámetros se almacenan en el archivo [*settings.4DSettings* al nivel del proyecto](../Project/architecture.md#sources) y se aplican en todos los casos. Este es el modo por defecto, adecuado para la fase de desarrollo (todas las aplicaciones).
 
 - **Modo propiedades usuario**: una parte de los parámetros personalizados se almacena en un archivo *settings.4DSettings* [en la carpeta Settings](../Project/architecture.md#settings-user) (para todos los archivos de datos) o [en la carpeta Data](../Project/architecture.md#settings-user-data) (para este archivo de datos) y se utilizan en lugar de los parámetros de estructura. Este modo es adecuado para la fase de despliegue de las aplicaciones de escritorio. Este modo se activa mediante una opción situada en la [página Seguridad](./security.md) de las Propiedades.
 

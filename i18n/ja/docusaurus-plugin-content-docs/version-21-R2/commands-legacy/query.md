@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*aTable* : Table }{;}{ *queryArgument* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | レコードのセレクションを求めるテーブル, または 省略した場合、デフォルトテーブル |
 | queryArgument | Expression | &#8594; | 検索条件 |
 | * | 演算子 | &#8594; | 検索継続フラグ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

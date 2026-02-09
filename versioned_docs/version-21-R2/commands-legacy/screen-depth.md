@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *depth* : Integer ; *color* : Integer {; *screen* : Integer} )<!-- END REF-->
 <!--REF #_command_.SCREEN DEPTH.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | depth | Integer | &#8592; | Depth of the screen (number of colors = 2 ^ depth) |
 | color | Integer | &#8592; | 1 = Color screen, 0 = Black and white or Gray scale |
 | screen | Integer | &#8594;  | Screen number, or main screen if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

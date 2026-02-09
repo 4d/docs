@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION** ( *...collection* ; *...array* {; *...propertyName*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | collection | Collection | &#8592; | 配列のデータを受け取るコレクション |
 | array | Array | &#8594;  | コレクションにコピーする配列。propertyName引数指定時はコレクションのpropertyNameの値にコピーする配列。 |
 | propertyName | Text | &#8594;  | 配列の要素を値として格納するオブジェクトのプロパティ名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

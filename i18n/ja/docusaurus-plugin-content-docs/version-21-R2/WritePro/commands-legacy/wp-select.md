@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *wpArea* : Text, Object;} {*targetObj* : Object} {; *startRange* : Integer ; *endRange* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時、wpAreaはフォームオブジェクト名(文字列)。省略時、wpAreaはオブジェクトフィールドまたは変数。 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Pro ドキュメント |
 | startRange | Integer | &#8594;  | テキストレンジの開始のオフセット |
 | endRange | Integer | &#8594;  | テキストレンジの終わりのオフセット |
-
+</div>
 <!-- END REF-->
 
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*

@@ -121,13 +121,14 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 
 <!-- REF #_command_.Formula.Params -->
-| Paramètres | Type        |    | Description                                                       |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------- |
-| formulaExp | Expression  | -> | Formule à retourner comme objet                                   |
-| Résultat   | 4D.Function | <- | Fonction native encapsulant la formule|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formulaExp|Expression|->|Formula to be returned as object|
+|Result|4D.Function|<-|Native function encapsulating the formula|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -260,13 +261,14 @@ Appeler une formule à l'aide de la notation objet :
 
 
 <!-- REF #_command_.Formula from string.Params -->
-| Paramètres    | Type        |    | Description                                                   |
-| ------------- | ----------- |:--:| ------------------------------------------------------------- |
-| formulaString | Text        | -> | Formule texte à retourner comme objet                         |
-| Résultat      | 4D.Function | <- | Objet natif encapsulant la formule|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formulaString|Text|->|Text formula to be returned as object|
+|Result|4D.Function|<-|Native object encapsulating the formula|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -319,14 +321,15 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 
 <!-- REF #FunctionClass.apply().Params -->
-| Paramètres    | Type       |    | Description                                                                       |
-| ------------- | ---------- |:--:| --------------------------------------------------------------------------------- |
-| thisObj       | Object     | -> | Objet à retourner par la commande This dans la formule                            |
-| formulaParams | Collection | -> | Collection des valeurs à passer en tant que $1...$n lorsque `formula` est exécuté |
-| Résultat      | any        | <- | Valeur obtenue à partir de l'exécution de la formule|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|thisObj|Object|->|Object to be returned by the This command in the formula|
+|formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
+|Result|any|<-|Value from formula execution|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -380,18 +383,19 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; *...params* : any } ) : any<!-- END REF -->
 
 
 <!-- REF #FunctionClass.call().Params -->
-| Paramètres | Type   |    | Description                                                                     |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
-| thisObj    | Object | -> | Objet à retourner par la commande This dans la formule                          |
-| params     | any    | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté              |
-| Résultat   | any    | <- | Valeur obtenue à partir de l'exécution de la formule|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|thisObj|Object|->|Object to be returned by the This command in the formula|
+|params |any|->|Value(s) to be passed as $1...$n when formula is executed|
+|Result|any|<-|Value from formula execution|
+</div>
+<!-- END REF -->
 
 
 #### Description

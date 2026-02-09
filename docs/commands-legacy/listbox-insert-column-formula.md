@@ -5,12 +5,14 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *object* : Field, Variable ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *object* : Variable ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name  (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Object name  (if * is specified) or Variable (if * is omitted) |
 | colPosition | Integer | &#8594;  | Location of column to insert |
 | colName | Text | &#8594;  | Name of the column object |
 | formula | Text | &#8594;  | 4D formula associated with column |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | headerVar | Integer, Pointer | &#8594;  | Column header variable |
 | footerName | Text | &#8594;  | Column footer object name |
 | footerVar | Variable, Pointer | &#8594;  | Column footer variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

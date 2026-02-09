@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert break.Params-->
 
-| Parâmetro   | Tipo    |                             | Descrição                                 |
-| ----------- | ------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
-| breakType   | Integer | &#8594; | Type of break to insert                   |
-| mode        | Integer | &#8594; | Modo de inserção                          |
-| rangeUpdate | Integer | &#8594; | Modo de atualização de intervalo          |
-| Resultado   | Object  | &#8592; | Text range of the break character         |
+| Parâmetro   | Tipo    |                             | Descrição                                       |
+| ----------- | ------- | --------------------------- | ----------------------------------------------- |
+| targetObj   | Object  | &#8594; | Intervalo ou elemento ou documento 4D Write Pro |
+| breakType   | Integer | &#8594; | Type of break to insert                         |
+| mode        | Integer | &#8594; | Modo de inserção                                |
+| rangeUpdate | Integer | &#8594; | Modo de atualização de intervalo                |
+| Resultado   | Object  | &#8592; | Text range of the break character               |
 
 <!-- END REF-->
 
@@ -41,18 +41,18 @@ In *breakType*, pass one of the following constants from the *4D Write Pro Const
 
 In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
 
-| Parâmetros | Tipo    | Valor | Comentário                             |
-| ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Integer | 2     | Insert contents at end of target       |
-| wk prepend | Integer | 1     | Insert contents at beginning of target |
-| wk replace | Integer | 0     | Replace target contents                |
+| Parâmetros | Tipo    | Valor | Comentário                         |
+| ---------- | ------- | ----- | ---------------------------------- |
+| wk append  | Integer | 2     | Inserir conteúdo no final do alvo  |
+| wk prepend | Integer | 1     | Inserir conteúdo no início do alvo |
+| wk replace | Integer | 0     | Replace target contents            |
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
-| Parâmetros            | Tipo    | Valor | Comentário                                                               |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
+| Parâmetros            | Tipo    | Valor | Comentário                                                                     |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------------ |
+| wk exclude from range | Integer | 1     | Conteúdos inseridos não incluídos no intervalo atualizado                      |
+| wk include in range   | Integer | 0     | Conteúdo inserido incluído no intervalo atualizado (padrão) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 

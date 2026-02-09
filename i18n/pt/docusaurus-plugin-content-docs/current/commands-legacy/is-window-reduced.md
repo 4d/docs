@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *janela* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window reduced.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janela | Integer | &#8594; | Número de referência da janela |
 | Resultado | Boolean | &#8592; | true se a janela for reduzida no taskbar ou no dock. Se não, false |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

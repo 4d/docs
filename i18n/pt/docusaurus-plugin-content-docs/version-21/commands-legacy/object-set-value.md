@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjeto* ; *valor* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomObjeto | Text | &#8594;  | Nome de objeto |
 | valor | any | &#8594;  | Novo valor para a fonte de dados do objeto formulário |
-
+</div>
 <!-- END REF-->
 
 ## Exemplo 1 

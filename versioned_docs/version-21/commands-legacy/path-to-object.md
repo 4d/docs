@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Path to object.Syntax-->**Path to object** ( *path* {; *pathType*} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text | &#8594;  | Pathname |
 | pathType | Integer | &#8594;  | Type of path syntax: System (default) or Posix |
 | Function result | Object | &#8592; | Object describing the path contents |
-
+</div>
 <!-- END REF-->
 
 ## Description 

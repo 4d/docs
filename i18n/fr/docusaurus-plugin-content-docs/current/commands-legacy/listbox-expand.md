@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( * ; *objet* : Text {; *récursive* : Boolean {; *sélecteur* : Integer {; *ligne* : Integer {; *colonne* : Integer}}}} )<br/>**LISTBOX EXPAND** ( *objet* : Field, Variable {; *récursive* : Boolean {; *sélecteur* : Integer {; *ligne* : Integer {; *colonne* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX EXPAND.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | sélecteur | Integer | &#8594; | Partie de la list box à déployer |
 | ligne | Integer | &#8594; | Numéro de ligne de la rupture à déployer ou Numéro de niveau de la list box à déployer |
 | colonne | Integer | &#8594; | Numéro de colonne de la rupture à déployer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

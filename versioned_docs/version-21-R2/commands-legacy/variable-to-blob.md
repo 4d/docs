@@ -5,15 +5,17 @@ slug: /commands/variable-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; offset } )<br/>**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; *} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; offset : Integer } )<br/>**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#8594;  | Variable to store in the BLOB |
 | Blob | Blob | &#8594;  | BLOB to receive the variable |
-| offset &#124; * | Variable, Operator | &#8596; | Offset within the BLOB (expressed in bytes) or * to append the value |
-| ||| New offset after writing if not * |
-
+| offset | Variable | &#8596; | Offset within the BLOB (expressed in bytes) <br/> New offset after writing if not * |
+| * | Operator | &#8594; | Append the value |
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -46,7 +48,7 @@ After the call, if the variable has been successfully stored, the OK variable is
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
 
 ## System variables and sets 
 

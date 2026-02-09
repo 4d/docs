@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | volumes | Text array | &#8592; | 現在マウントされているボリュームの名前 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

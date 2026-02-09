@@ -7,11 +7,13 @@ displayed_sidebar: docs
 <!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New shared collection.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | value |Number, Text, Date, Time, Boolean, Object, Collection| &#8594;  | Shared collection's value(s) |
 | Function result | Collection | &#8592; | New shared collection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

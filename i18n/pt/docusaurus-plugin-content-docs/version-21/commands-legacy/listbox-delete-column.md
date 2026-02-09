@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( {* ;} *objeto* ; *posiçaoCol* {; *numero*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é a variável |
 | objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
 | posiçaoCol | Integer | &#8594;  | Número de coluna a remover |
 | numero | Integer | &#8594;  | Número de colunas a remover |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *document4DView* ) : Object<!-- END REF-->
 <!--REF #_command_.Load 4D View document.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | document4DView | Blob | &#8594;  | Document du plug-in 4D View |
 | Résultat | Object | &#8592; | Représentation du document 4D View sous forme d'objet |
-
+</div>
 <!-- END REF-->
 
 ## Description 

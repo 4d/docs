@@ -14,5 +14,5 @@ slug: /commands/theme/JSON
 |[<!-- INCLUDE #_command_.JSON Stringify.Syntax -->](../../commands-legacy/json-stringify.md)<br/>|
 |[<!-- INCLUDE #_command_.JSON Stringify array.Syntax -->](../../commands-legacy/json-stringify-array.md)<br/>|
 |[<!-- INCLUDE #_command_.JSON TO SELECTION.Syntax -->](../../commands-legacy/json-to-selection.md)<br/>|
-|[<!-- INCLUDE #_command_.JSON Validate.Syntax -->](../../commands-legacy/json-validate.md)<br/>|
+|[<!-- INCLUDE #_command_.JSON Validate.Syntax -->](../../commands/json-validate.md)<br/>|
 |[<!-- INCLUDE #_command_.Selection to JSON.Syntax -->](../../commands-legacy/selection-to-json.md)<br/>|

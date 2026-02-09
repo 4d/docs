@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *window* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | left | Integer | &#8592; | Left coordinate of window's contents area |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | right | Integer | &#8592; | Right coordinate of window's contents area |
 | bottom | Integer | &#8592; | Bottom coordinate of window's contents area |
 | window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted or MDI window if -1 (Windows) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -8,12 +8,15 @@ title: VP Get default style
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get default style.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area from object name|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Default style settings |<!-- END REF -->
+|Result  |Object|<-|Default style settings |
+</div>
+<!-- END REF -->
 
 ## Description
 

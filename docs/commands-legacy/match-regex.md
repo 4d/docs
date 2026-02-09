@@ -5,8 +5,10 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; pos_found ; length_found}{; *} ) -> Function result <br/>**Match regex** ( *pattern* : Text ; *aString* : Text ) -> Function result<!-- END REF-->
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* : Text ; *aString* : Text ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer ; *length_found* : Integer }{; *} ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer array ; *length_found* : Integer array }{; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pattern | Text | &#8594;  | Regular expression (complete equality with two-parameters syntax)|
@@ -16,13 +18,12 @@ displayed_sidebar: docs
 | length_found | Integer, Integer array | &#8592; | Length of occurrence |
 | * | Operator | &#8594;  | If passed: only searches at position indicated |
 | Function result | Boolean | &#8592; | True = search has found an occurrence; Otherwise, False. |
-
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Match regex.Summary-->The **Match regex** command checks the conformity of a character string with respect to a set of synthesized rules by means of a meta-language called “regular expression” or “rational expression.<!-- END REF-->” The regex abbreviation is commonly used to indicate these types of notations.
+<!--REF #_command_.Match regex.Summary-->The **Match regex** command checks the conformity of a character string with respect to a set of synthesized rules by means of a meta-language called regular expression" or "rational expression".<!-- END REF--> The **regex** abbreviation is commonly used to indicate these types of notations.
 
 Pass the regular expression to search for in *pattern*. This consists of a set of characters used for describing a character string, using special characters.
 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** {( *objets* ; *options* ; *méthode* {; *tabTables* {; *tabChamps*}} )}<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objets | Integer | &#8594;  | Objets à vérifier |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | méthode | Text | &#8594;  | Nom de la méthode 4D de rétro-appel |
 | tabTables | Integer array | &#8594;  | Numéros des tables à vérifier |
 | tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numéros des index à vérifier |
-
+</div>
 <!-- END REF-->
 
 ## Description 

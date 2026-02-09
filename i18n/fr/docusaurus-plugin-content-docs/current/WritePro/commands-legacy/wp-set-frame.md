@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET FRAME.Syntax-->**WP SET FRAME** ( {* ;} *zoneWP* : Text ; *sélecteurCadre* : Integer {; *textBoxID* : Text} )<!-- END REF-->
 <!--REF #_command_.WP SET FRAME.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
 | zoneWP | Text | &#8594;  | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
 | sélecteurCadre | Integer | &#8594;  | Cadre dans lequel placer le curseur |
 | textBoxID | Text | &#8594;  | Id of the text box where the cursor should be set |
-
+</div>
 <!-- END REF-->
 
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*

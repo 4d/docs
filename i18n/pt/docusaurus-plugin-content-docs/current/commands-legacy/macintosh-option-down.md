@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Macintosh option down.Syntax-->**Macintosh option down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Macintosh option down.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Estado da tecla de Opção em Macintosh (tecla Alt em Windows) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

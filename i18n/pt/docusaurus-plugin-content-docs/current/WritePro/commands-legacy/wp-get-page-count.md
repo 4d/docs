@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get page count.Syntax-->**WP Get page count** ( *docWP* : Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get page count.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | docWP | Object | &#8594;  | Documento 4D Write Pro |
 | Resultado | Integer | &#8592; | Número de páginas em documento |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

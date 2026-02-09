@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *ruta* {; *nomAp*}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ruta | Text | &#8594;  | Ruta del documento o URL a abrir |
 | nomAp | Text | &#8594;  | Nombre de la aplicación a utilizar |
 | * | Operador | &#8594;  | Si se especifica = la URL no está traducida, Si se omite = la URL está traducida |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

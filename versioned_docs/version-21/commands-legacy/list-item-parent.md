@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *list* ; *itemRef* ) : Integer<br/>**List item parent** ( * ; *list* ; * ) : Integer<!-- END REF-->
 <!--REF #_command_.List item parent.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number  (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item in the list |
+| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item in the list |
 | Function result | Integer | &#8592; | Item reference number of parent item or 0 if none |
-
+</div>
 <!-- END REF-->
 
 ## Description 

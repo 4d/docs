@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *lista* ; *valor* ; *alcance* {; *arrayElem* {; *}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | arrayElem | Integer array | &#8592; | - Si se omite el 2do *: array de posiciones de los elementos encontrados - Si se pasa el segundo *: array de números de referencia de  los elementos encontrados |
 | * | Operador | &#8594;  | - Si se omite: utiliza la posición de los elementos - Si se pasa: utiliza el número de referencia de los elementos |
 | Resultado | Integer | &#8592; | - Si se omite el 2do *: posición del elemento encontrado - Si se pasa 2do *: número de referencia del elemento encontrado |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

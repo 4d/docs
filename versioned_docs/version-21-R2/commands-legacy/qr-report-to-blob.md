@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *area* : Integer ; *blob* : Blob )<!-- END REF-->
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | Blob | Blob | &#8592; | BLOB to house the Quick Report |
-
+</div>
 <!-- END REF-->
 
 ## Description 

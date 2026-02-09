@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *lista* {; *arrayElem* {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica: lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | arrayElem | Integer array | &#8592; | Si  se omite el segundo *: Array contiene las posiciones de los elementos seleccionados en la(s) lista(s) Si se pasa el segundo *: Array contiene las referencias de los elementos seleccionados |
 | * | Operador | &#8594;  | Si se omite: posición(es) de(l) (los) elemento(s) Si se pasa: referencia(s) de(l) (los) elemento(s) |
 | Resultado | Integer | &#8592; | Si se omite segundo *: posición del elemento seleccionado en la(s) lista(s) desplegada(s) Si se pasa el segundo *: Referencia del elemento seleccionado |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** {( *tabla* )}<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla de la cual se borrarán todos los registros o tabla por defecto si se omite este parámetro |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CANCEL.Syntax-->**CANCEL**<!-- END REF-->
 <!--REF #_command_.CANCEL.Params-->
+<div class="no-index">
+
 | Ne requiert pas de paramètre |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -24,7 +26,7 @@ La commande **CANCEL** doit être employée dans une méthode objet ou formulair
 <!--REF #_command_.CANCEL.Summary-->Dans le contexte de la saisie, **CANCEL** effectue la même action que lorsque l'utilisateur utilise la touche d'annulation (**Esc**).<!-- END REF-->   
 **CANCEL** est fréquemment exécutée à la suite de la sélection d'une commande de menu. **CANCEL** est également souvent appelée dans la méthode objet d'un bouton auquel la propriété "Pas d'action" a été associée.
 
-Cette commande peut également être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](open-window.md). Si la fenêtre comporte une case de menu Système, **CANCEL** et [ACCEPT](accept.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.  
+Cette commande peut également être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](../commands/open-window.md). Si la fenêtre comporte une case de menu Système, **CANCEL** et [ACCEPT](accept.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.  
 Il n'est pas possible d'enchaîner plusieurs **CANCEL**. En d'autres termes, l'exécution consécutive de deux commandes **CANCEL** dans une méthode en réponse à un événement aura le même résultat que l'exécution d'une seule. 
 
 Enfin, cette commande peut être utilisée dans l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form.md). Dans ce contexte, la commande **CANCEL** suspend l’impression de la ligne sur le point d’être imprimée, puis la reprend page suivante. Ce mécanisme permet de gérer le manque de place ou les sauts de page lors des impressions des lignes. 

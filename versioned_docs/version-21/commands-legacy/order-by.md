@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* ;}{ *aField* }{; > or < }{; *aField2* ; > or <2 ; ... ; *aFieldN* ; > or <N}{; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records, or Default table, if omitted |
 | aField | Field | &#8594;  | Field on which to set the order for each level |
-| > or < | Operator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| > or < | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 | * | Operator | &#8594;  | Continue order flag |
-
+</div>
 <!-- END REF-->
 
 ## Description 

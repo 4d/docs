@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *laTable* )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table à définir comme table par défaut |
-
+</div>
 <!-- END REF-->
 
 ## Description 

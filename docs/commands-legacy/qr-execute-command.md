@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *area* : Integer ; *command* : Integer )<!-- END REF-->
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | command | Integer | &#8594;  | Menu command to be executed |
-
+</div>
 <!-- END REF-->
 
 ## Description 

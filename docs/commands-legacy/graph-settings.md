@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graphPicture* : Picture ; *xmin* : Integer, Date, Time ; *xmax* : Integer, Date, Time ; *ymin* : Integer ; *ymax* : Integer ; *xprop* : Boolean ; *xgrid* : Boolean ; *ygrid* : Boolean ; *title* : Text {; *...title* : Text} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | graphPicture | Picture | &#8594;  | Picture variable |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | xgrid | Boolean | &#8594;  | TRUE for x-axis grid; FALSE for no x-axis grid (only if xprop is TRUE) |
 | ygrid | Boolean | &#8594;  | TRUE for y-axis grid; FALSE for no y-axis grid |
 | title | Text | &#8594;  | Title(s) for graph legend(s) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *nomFuente* ; *nomDest* {; *nuevNombre*} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomFuente | Text | &#8594;  | Nombre del documento a copiar |
 | nomDest | Text | &#8594;  | Nombre del documento copiado |
 | nuevNombre | Text | &#8594;  | Nuevo nombre del archivo o carpeta copiado |
 | * | Operador | &#8594;  | Reemplazar documento existente si lo hay |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

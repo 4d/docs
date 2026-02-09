@@ -82,13 +82,13 @@ El nombre del formulario está definido por el nombre de la carpeta que contiene
 
 ## Form Theme on Windows
 
-This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+Esta propiedad le permite seleccionar explícitamente el tema de interfaz que desea que se utilice cuando el formulario se ejecute en Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
 
 Valores disponibles:
 
 - **heredado** (por defecto): hereda del tema del proyecto
 - **Classic**: use the Windows classic interface theme
-- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+- **Fluent UI**: utilice el tema de interfaz [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) ([cuando esté disponible](../FormEditor/forms.md#requirements)).
 
 :::note
 

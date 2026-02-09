@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *rutaEstruct* : Text ; *rutaDatos* : Text {; newPassPhrase | newDataKey {; *carpetaArchivo* : Text {; curPassPhrase | curDataKey {; *nomMetod* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaEstruct | Text | &#8594; | Nombre de ruta del archivo de estructura |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594; | passPhrase actual (texto) o llave de encripción actual(objeto) |
 | nomMetod | Text | &#8594; | Nombre del método de retrollamada 4D |
 | Resultado | Text | &#8592; | Nombre completo de la carpeta donde se guardaron los archivos originales |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

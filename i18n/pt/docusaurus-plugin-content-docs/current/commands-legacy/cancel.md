@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CANCEL.Syntax-->**CANCEL**<!-- END REF-->
 <!--REF #_command_.CANCEL.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
 
-<!--REF #_command_.CANCEL.Summary-->No contexto de entrada de dados, **CANCEL** realiza a mesma ação que se o usuário tivesse pressionado a tecla de cancelação (**Esc**).<!-- END REF--> Também é possível colocar no método de caixa de fechamento opcional de uma janela criada pelo comando[Open window](open-window.md)
+<!--REF #_command_.CANCEL.Summary-->No contexto de entrada de dados, **CANCEL** realiza a mesma ação que se o usuário tivesse pressionado a tecla de cancelação (**Esc**).<!-- END REF--> Também é possível colocar no método de caixa de fechamento opcional de uma janela criada pelo comando[Open window](../commands/open-window.md)
 
 O comando **CANCEL** se utiliza em métodos de objeto ou de formulário (ou em uma subrotina) para:
 
@@ -25,7 +27,7 @@ O comando **CANCEL** se utiliza em métodos de objeto ou de formulário (ou em u
 
 **CANCEL** é executado com frequência como resultado da seleção de um comando de menu. **CANCEL** também é utilizado com frequência no método de objeto de um botão “sem ação”.
 
-Este comando também é usado no método da caixa de fechamento opcional de uma janela criada por el comando [Open window](open-window.md). Se houver uma janela com caixa de controle de menu, pode chamar a [ACCEPT](accept.md) ou **CANCEL**, no método a executar, quando se dá duplo clique na caixa de controle de menu ou se selecione o comando de menu **Fechar**.
+Este comando também é usado no método da caixa de fechamento opcional de uma janela criada por el comando [Open window](../commands/open-window.md). Se houver uma janela com caixa de controle de menu, pode chamar a [ACCEPT](accept.md) ou **CANCEL**, no método a executar, quando se dá duplo clique na caixa de controle de menu ou se selecione o comando de menu **Fechar**.
 
 Não é possível concatenar vários **CANCEL**. A execução consecutiva de dois comandos **CANCEL** em um método terá o mesmo resultado que a execução de um só comando.
 

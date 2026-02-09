@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP NEW BOOKMARK.Syntax-->**WP NEW BOOKMARK** ( *objRango* ; *nombk* )<!-- END REF-->
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o elemento |
 | nombk | Text | &#8594;  | Nombre de marcador a crear |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

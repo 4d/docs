@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** ({ *source* : Text ; *nomUtilisateur* : Text ; *motDePasse* : Text ; * })<!-- END REF-->
 <!--REF #_command_.SQL LOGIN.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594; | Nom de publication de base 4D ouAdresse IP de base distante ouNom de source de données dans le gestionnaire ODBC ou"" pour afficher le dialogue de sélection |
 | nomUtilisateur | Text | &#8594; | Nom d’utilisateur enregistré dans la source de données |
 | motDePasse | Text | &#8594; | Mot de passe de l’utilisateur |
 | * | Opérateur | &#8594; | Appliquer à Debut SQL/Fin SQL Si omis : ne pas appliquer (base locale), si passé : appliquer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

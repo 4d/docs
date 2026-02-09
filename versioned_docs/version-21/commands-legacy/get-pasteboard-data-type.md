@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *4Dsignatures* ; *nativeTypes* {; *formatNames*} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | 4Dsignatures | Text array | &#8592; | 4D signatures of data types |
 | nativeTypes | Text array | &#8592; | Native data types |
 | formatNames | Text array | &#8592; | Format names or descriptions |
-
+</div>
 <!-- END REF-->
 
 ## Description 

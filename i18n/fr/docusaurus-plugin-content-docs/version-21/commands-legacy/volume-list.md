@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | volumes | Text array | &#8592; | Noms des volumes actuellement montés |
-
+</div>
 <!-- END REF-->
 
 ## Description 

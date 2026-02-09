@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Database measures.Syntax-->**Database measures** {( *opciones* )} : Object<!-- END REF-->
 <!--REF #_command_.Database measures.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | opciones | Object | &#8594;  | Opciones de retorno |
 | Resultado | Object | &#8592; | Objeto que contiene las medidas de la base |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

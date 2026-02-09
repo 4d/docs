@@ -5,14 +5,16 @@ slug: /commands/object-set-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *object* : Text ; *entryFilter* : Text )<br/>**OBJECT SET FILTER** ( *object* : Field, Variable ; *entryFilter* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *object* : Text ; *entryFilter* : Text )<br/>**OBJECT SET FILTER** ( *object* : Variable, Field ; *entryFilter* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FILTER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
 | entryFilter | Text | &#8594;  | New data entry filter for the enterable area |
-
+</div>
 <!-- END REF-->
 
 ## Description 

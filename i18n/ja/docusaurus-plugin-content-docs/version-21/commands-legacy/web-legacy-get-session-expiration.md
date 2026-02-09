@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *sessionID* ; *expDate* ; *expTime* )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | sessionID | Text | &#8594;  | セッションUUID |
 | expDate | Date | &#8592; | cookie有効期限日 |
 | expTime | Time | &#8592; | cookie有効期限時刻 |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

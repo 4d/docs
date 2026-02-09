@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Self.Syntax-->**Self**  : Pointer<!-- END REF-->
 <!--REF #_command_.Self.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Pointer | &#8592; | Pointeur vers l'objet du formulaire dont la méthode est en cours d'exécution (le cas échéant) Sinon Nil (->[]) si hors contexte |
-
+</div>
 <!-- END REF-->
 
 ## Note de compatibilité 

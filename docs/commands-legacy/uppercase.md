@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *aString* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aString | Text | &#8594;  | String to convert to uppercase |
 | * | Operator | &#8594;  | If passed: keep accents |
 | Function result | Text | &#8592; | String in uppercase |
-
+</div>
 <!-- END REF-->
 
 ## Description 

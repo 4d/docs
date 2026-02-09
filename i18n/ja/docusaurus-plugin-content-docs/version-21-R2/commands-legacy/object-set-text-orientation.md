@@ -5,14 +5,16 @@ slug: /commands/object-set-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( * ; *object* : Text ; *orientation* : Integer )<br/>**OBJECT SET TEXT ORIENTATION** ( *object* : Field, Variable ; *orientation* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( * ; *object* : Text ; *orientation* : Integer )<br/>**OBJECT SET TEXT ORIENTATION** ( *object* : Variable, Field ; *orientation* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列) 省略時: object は変数またはフィールド |
 | object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
 | orientation | Integer | &#8594; | オブジェクトの方向を決める値 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

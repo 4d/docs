@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* ; *pageNum* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP New text box.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
 | pageNum | Number | &#8594;  | Page number where to anchor the text box |
 | 戻り値 | Object | &#8592; | Text box object |
-
+</div>
 <!-- END REF-->
 
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*

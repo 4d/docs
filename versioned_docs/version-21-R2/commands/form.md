@@ -6,10 +6,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Syntax-->**Form**  : Object<!-- END REF-->
 <!--REF #_command_.Form.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Object | &#8592; | Form data of the current form |
-
+</div>
 <!-- END REF-->
 <details><summary>History</summary>
 

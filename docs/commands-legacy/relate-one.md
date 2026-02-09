@@ -5,13 +5,16 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* : Table, Field {; *choiceField* : Field} )<br/>**RELATE ONE** ( *field* : Table, Field {; *choiceField* : Field} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* : Table )<br/>**RELATE ONE** ( *manyField* : Field {; *choiceField* : Field} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable &#124; Field | Table, Field | &#8594;  | Table for which to establish all automatic relations, or Field with manual relation to one table |
+| manyTable | Table | &#8594;  | Table for which to establish all automatic relations |
+| manyField | Field | &#8594;  | Field with manual relation to one table |
 | choiceField | Field | &#8594;  | Choice field from the one table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

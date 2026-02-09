@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP NEW BOOKMARK.Syntax-->**WP NEW BOOKMARK** ( *objCible* ; *nomSignet* )<!-- END REF-->
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément |
 | nomSignet | Text | &#8594;  | Nom du signet à créer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *refElemento* ; *xRota* {; *nomeAtrib* ; *valorAtrib*} {; *nomeAtrib2* ; *valorAtrib2* ; ... ; *nomeAtribN* ; *valorAtribN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594;  | Referência do elemento Root XMLK |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nomeAtrib | Text | &#8594;  | Atributo a estabelecer |
 | valorAtrib | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Novo valor de atributo |
 | Resultado | Text | &#8592; | Referência do elemento XML criado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

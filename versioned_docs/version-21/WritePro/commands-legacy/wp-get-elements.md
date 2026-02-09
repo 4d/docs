@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *targetObj* {; *elementType*} ) : Collection<!-- END REF-->
 <!--REF #_command_.WP Get elements.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | elementType | Integer | &#8594;  | Desired type of element to retrieve |
 | Function result | Collection | &#8592; | Collection containing element references |
-
+</div>
 <!-- END REF-->
 
 ## Description 

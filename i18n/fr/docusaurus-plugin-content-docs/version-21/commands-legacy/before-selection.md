@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Before selection.Syntax-->**Before selection** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table pour laquelle vous testez si le pointeur se trouve avant la sélection |
 | Résultat | Boolean | &#8592; | Avant sélection (Vrai) sinon (Faux) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

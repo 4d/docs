@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( * ; *objet* : Text ; *tabEvénements* : Integer array ; *mode* : Integer )<br/>**OBJECT SET EVENTS** ( *objet* : Field, Variable ; *tabEvénements* : Integer array ; *mode* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
 | objet | any | &#8594; | Nom d'objet ou "" pour désigner le formulaire (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | tabEvénements | Integer array | &#8594; | Tableau d’événements à définir |
 | mode | Integer | &#8594; | Mode d’activation des événements définis dans tabEvénements |
-
+</div>
 <!-- END REF-->
 
 ## Description 

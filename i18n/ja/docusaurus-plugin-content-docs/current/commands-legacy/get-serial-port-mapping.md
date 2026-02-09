@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | numArray | Integer array | &#8592; | ポート番号の配列 |
 | nameArray | Text array | &#8592; | ポート名の配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

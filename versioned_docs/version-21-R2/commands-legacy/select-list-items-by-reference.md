@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *list* : Integer ; *itemRef* : Integer {; *refArray* : Integer array} )<!-- END REF-->
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
 | itemRef | Integer | &#8594;  | Item reference number or 0 for the last item added to the list |
 | refArray | Integer array | &#8594;  | Array of item reference numbers |
-
+</div>
 <!-- END REF-->
 
 ## Description 

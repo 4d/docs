@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *estruturaXML* {; *formato*} )<!-- END REF-->
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | estruturaXML | Text | &#8592; | Exportação da definição XML da estrutura de banco de dados 4D |
 | formato | Text | &#8594;  | Formato de exportação: formato xml (padrão) ou formato html |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

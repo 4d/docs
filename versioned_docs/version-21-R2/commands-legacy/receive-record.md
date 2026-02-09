@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.RECEIVE RECORD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table into which to receive the record, or Default table, if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

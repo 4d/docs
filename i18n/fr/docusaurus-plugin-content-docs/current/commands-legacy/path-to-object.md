@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Path to object.Syntax-->**Path to object** ( *chemin* : Text {; *typeChemin* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chemin | Text | &#8594; | Chemin |
 | typeChemin | Integer | &#8594; | Type de syntaxe du chemin : Système (par défaut) ou  Posix |
 | Résultat | Object | &#8592; | Objet décrivant le contenu du chemin |
-
+</div>
 <!-- END REF-->
 
 ## Description 

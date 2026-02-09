@@ -6,11 +6,13 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.WEB Server.Syntax -->**WEB Server** : 4D.WebServer<br/>**WEB Server**( *option* : Integer ) : 4D.WebServer<!-- END REF -->
 <!--REF #_command_.WEB Server.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | option | Integer | &#8594;  | Web server to get (default if omitted = `Web server database`) |
 | Function result | 4D.WebServer | &#8592; | Web server object |
-
+</div>
 <!-- END REF-->
 
 

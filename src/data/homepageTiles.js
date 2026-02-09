@@ -167,7 +167,7 @@ title: (
        <Link to="category/database-methods">
           <Translate>Database Methods</Translate>
         </Link>
-         <Link to="Develop-legacy/transactions">
+         <Link to="Develop/transactions">
           <Translate>Transactions</Translate>
         </Link>
         <Link to="Tags/transformation-tags">
@@ -200,8 +200,8 @@ title: (
         <Link to="WebServer/overview">
           <Translate>Web Server</Translate>
         </Link>
-        <Link to="REST/gettingStarted">
-          <Translate>REST Server</Translate>
+        <Link to="category/rest-api">
+          <Translate>REST API</Translate>
         </Link>
       </div>
     ),

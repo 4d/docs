@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Outside call.Syntax-->**Outside call**  : Boolean<!-- END REF-->
 <!--REF #_command_.Outside call.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | Devuelve True si el ciclo de ejecución es outside call |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

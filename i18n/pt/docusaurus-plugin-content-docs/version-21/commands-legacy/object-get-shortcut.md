@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( {* ;} *objeto* ; *tecla* ; *modificadores* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SHORTCUT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | tecla | Text | &#8592; | Tecla associada ao objeto |
 | modificadores | Integer | &#8592; | Máscara ou combinação de máscaras de teclas de modificação |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

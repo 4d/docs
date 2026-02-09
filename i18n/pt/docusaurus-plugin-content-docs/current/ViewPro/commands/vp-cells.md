@@ -17,15 +17,20 @@ title: VP Cells
 
 <!-- REF #_method_.VP Cells.Params -->
 
-| Parâmetro   | Tipo    |                             | Descrição                                                   |                  |
-| ----------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
-| column      | Integer | ->                          | Índice de coluna                                            |                  |
-| row         | Integer | ->                          | Índice de linha                                             |                  |
-| columnCount | Integer | ->                          | Número de colunas                                           |                  |
-| rowCount    | Integer | ->                          | Número de linhas                                            |                  |
-| sheet       | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados  | Object  | <- | Objeto intervalo de células                                 | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro   | Tipo    |                             | Descrição                                                   |
+| ----------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName  | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |
+| column      | Integer | ->                          | Índice de coluna                                            |
+| row         | Integer | ->                          | Índice de linha                                             |
+| columnCount | Integer | ->                          | Número de colunas                                           |
+| rowCount    | Integer | ->                          | Número de linhas                                            |
+| sheet       | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados  | Object  | <- | Objeto intervalo de células                                 |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

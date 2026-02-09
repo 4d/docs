@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* ; *value* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectName | Text | &#8594;  | Object name |
 | value | any | &#8594;  | New value for the form object's data source |
-
+</div>
 <!-- END REF-->
 
-## Example 1 
+## Description
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** sets the *value* of the current data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->
 
@@ -24,7 +26,7 @@ The *value* parameter allows you pass a new value (any type) for the form object
 
 **Note**: If the data source is a non-assignable expression, **OBJECT SET VALUE** does nothing. For more information, see *assignable vs non-assignable expressions*.
 
-## Example 2 
+## Example 
 
 You want to get the data source value for a form object, get its name, and set a new value:
 

@@ -9,10 +9,15 @@ title: VP Get values
 
 <!-- REF #_method_.VP Get values.Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição          |                  |
-| ---------- | ---------- | --------------------------- | ------------------ | ---------------- |
-| rangeObj   | Object     | ->                          | Objeto intervalo   |                  |
-| Resultados | Collection | <- | Coleção de valores | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo       |                             | Descrição          |
+| ---------- | ---------- | --------------------------- | ------------------ |
+| rangeObj   | Object     | ->                          | Objeto intervalo   |
+| Resultados | Collection | <- | Coleção de valores |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

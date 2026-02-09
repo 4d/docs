@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE NAMED SELECTION.Syntax-->**USE NAMED SELECTION** ( *nom* : Text )<!-- END REF-->
 <!--REF #_command_.USE NAMED SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nom | Text | &#8594; | Nom de la sélection temporaire à utiliser |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -9,9 +9,14 @@ title: VP RESUME COMPUTING
 
 <!-- REF #_method_.VP RESUME COMPUTING.Params -->
 
-| Paramètres | Type |    | Description                             |                  |
-| ---------- | ---- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text | -> | Nom d'objet formulaire zone 4D View Pro | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type |    | Description                             |
+| ---------- | ---- | -- | --------------------------------------- |
+| vpAreaName | Text | -> | Nom d'objet formulaire zone 4D View Pro |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE MENU ITEM.Syntax-->**DELETE MENU ITEM** ( *menu* ; *menuItem* {; *process*} )<!-- END REF-->
 <!--REF #_command_.DELETE MENU ITEM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
 | menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
 | process | Integer | &#8594;  | プロセス参照番号 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*laTable* ;} *nomFormulaire* ;} *imageForm* {; *pageNum*} )<!-- END REF-->
 <!--REF #_command_.FORM SCREENSHOT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table du formulaire |
 | nomFormulaire | Text | &#8594;  | Nom du formulaire |
 | imageForm | Picture | &#8592; | Image du formulaire en exécution si premier(s) paramètre(s) omis, ou <br/>Image du formulaire dans l'éditeur de formulaires si un nom de formulaire est passé |
 | pageNum | Integer | &#8594;  | Numéro de page du formulaire |
-
+</div>
 <!-- END REF-->
 
 ## Description 

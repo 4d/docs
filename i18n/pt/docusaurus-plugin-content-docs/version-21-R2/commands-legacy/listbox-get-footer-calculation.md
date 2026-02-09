@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get footer calculation** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
 | objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | resultado | Integer | &#8592; | Tipo de cálculo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

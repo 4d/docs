@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET LAST ERROR.Syntax-->**SQL GET LAST ERROR** ( *errCode* : Integer ; *errText* : Text ; *errODBC* : Text ; *errSQLServer* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL GET LAST ERROR.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | errCode | Integer | &#8592; | Código del error |
 | errText | Text | &#8592; | Texto del error |
 | errODBC | Text | &#8592; | Código del error ODBC |
 | errSQLServer | Integer | &#8592; | Código del error nativo servidor SQL |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

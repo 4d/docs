@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* ; *keyObject* ; *salt* ; *encryptedBLOB* ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* ; *passPhrase* ; *salt* ; *encryptedBLOB* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | blobToEncrypt | Blob | &#8594;  | BLOB à encrypter |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | salt | Integer | &#8594;  | Additional salt for algorithm |
 | encryptedBlob | Blob | &#8592; | BLOB encrypté |
 | Résultat | Boolean | &#8592; | True si le chiffrement a été effectué correctement. Sinon False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

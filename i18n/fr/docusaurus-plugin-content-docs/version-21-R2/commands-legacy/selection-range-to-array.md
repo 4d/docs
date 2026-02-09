@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Syntax-->**SELECTION RANGE TO ARRAY** ( *début* : Integer ; *fin* : Integer {; ...(*data* : Field, Table ; *tableau* : Array)} )<!-- END REF-->
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | début | Integer | &#8594; | Numéro de l'enregistrement sous-sélectionné à partir duquel commencer la copie des données |
 | fin | Integer | &#8594; | Numéro de l'enregistrement sous-sélectionné auquel arrêter la copie des données |
 | data | Champ, Table | &#8594; | Champ à utiliser pour récupérer les données ou Table à utiliser pour récupérer les numéros d'enregistrements |
 | tableau | Array | &#8592; | Tableau recevant les données ou les numéros d'enregistrements |
-
+</div>
 <!-- END REF-->
 
 ## Description 

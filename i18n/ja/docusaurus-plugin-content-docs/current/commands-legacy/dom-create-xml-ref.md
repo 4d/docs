@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* : Text {; *nameSpace* : Text} {; *nameSpaceName* : Text ; *nameSpaceValue* : Text} {; ...(*nameSpaceName* : Text, *nameSpaceValue* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | root | Text | &#8594; | ルート要素名 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nameSpaceName | Text | &#8594; | 名前空間名 |
 | nameSpaceValue | Text | &#8594; | 名前空間値 |
 | 戻り値 | Text | &#8592; | ルートXML要素参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

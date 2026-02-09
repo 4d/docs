@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ({ *typeDial* : Integer })<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | typeDial | Integer | &#8594; | Boîte(s) de dialogue à afficher |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Syntax-->**WP TABLE MERGE CELLS** ( *targetObj* : Object ) | ( *tableRef* : Object ; *startColumn* : Integer ; *startRow* : Integer {; *columnCount* : Integer{; *rowCount* : Integer}} )<!-- END REF-->
 <!--REF #_command_.WP TABLE MERGE CELLS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | startRow | Integer | &#8594;  | Posición de la primera línea de columna |
 | columnCount | Integer | &#8594;  | Número de columnas a fusionar |
 | rowCount | Integer | &#8594;  | Número de líneas a fusionar |
-
+</div>
 <!-- END REF-->
 
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*

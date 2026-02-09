@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** ( *dossier* : Integer {; *options* : Object} {; *}) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | dossier | Integer | &#8594; | Type de dossier (si omis=dossier 4D actif) |
 | options | Object | &#8594; | Configuration du chemin du dossier base 4D Client |
 | * | Opérateur | &#8594; | Retourne le dossier de la base hôte |
 | Résultat | Text | &#8592; | Chemin d'accès du dossier désigné |
-
+</div>
 <!-- END REF-->
 
 ## Description 

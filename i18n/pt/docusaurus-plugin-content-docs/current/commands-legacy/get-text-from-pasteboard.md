@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get text from pasteboard.Syntax-->**Get text from pasteboard**  : Text<!-- END REF-->
 <!--REF #_command_.Get text from pasteboard.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Retorna o texto (se houver) presente na área de transferência |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

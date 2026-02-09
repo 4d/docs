@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *blob* ; *offset* ; *nombre* )<!-- END REF-->
 <!--REF #_command_.DELETE FROM BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | BLOB duquel supprimer des octets |
 | offset | Integer | &#8594;  | Offset à partir duquel supprimer les octets |
 | nombre | Integer | &#8594;  | Nombre d'octets à supprimer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

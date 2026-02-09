@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *aVerificar* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is shared.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | aVerificar | Object, Collection | &#8594;  | Objeto ou coleção a verificar |
 | Resultado | Boolean | &#8592; | True se o objeto ou coleção for compartilhável, False se for alterável |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

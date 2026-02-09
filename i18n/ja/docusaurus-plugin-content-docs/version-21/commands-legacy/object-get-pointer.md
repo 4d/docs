@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *selector* {; *objectName* {; *subformName*}})} : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | オブジェクトカテゴリ |
 | objectName | Text | &#8594;  | オブジェクト名 |
 | subformName | Text | &#8594;  | サブフォームオブジェクト名 |
 | 戻り値 | Pointer | &#8592; | オブジェクト変数へのポインタ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

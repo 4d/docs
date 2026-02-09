@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item.Syntax-->**Get menu item** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
 | menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
 | process | Integer | &#8594;  | Process reference number |
 | Function result | Text | &#8592; | Text of the menu item |
-
+</div>
 <!-- END REF-->
 
 ## Description 

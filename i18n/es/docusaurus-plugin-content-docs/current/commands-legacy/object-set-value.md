@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjeto* : Text ; *valor* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomObjeto | Text | &#8594; | Nombre de objeto |
 | valor | any | &#8594; | Nuevo valor para la fuente de datos del objeto de formulario |
-
+</div>
 <!-- END REF-->
 
-## Ejemplo 1 
+## Descripción
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** define el *valor* de la fuente de datos actual para los objetos de formulario designados por el parámetro *nomObjeto*.<!-- END REF-->
 

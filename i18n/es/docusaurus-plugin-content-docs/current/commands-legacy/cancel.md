@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CANCEL.Syntax-->**CANCEL**<!-- END REF-->
 <!--REF #_command_.CANCEL.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 
@@ -25,7 +27,7 @@ El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una
 
 **CANCEL** se ejecuta con frecuencia como resultado de la selección de un comando de menú. **CANCEL** también se utiliza con frecuencia en el método de objeto de un botón “sin acción”.
 
-Este comando también se usa en el metódo de la caja de cierre opcional para el comando [Open window](open-window.md). Si hay una ventana con caja de control de menú, se puede llamar a [ACCEPT](accept.md) o **CANCEL**, en el método a ejecutar, cuando se haga doble clic en en la caja de control de menú o se seleccione el comando de menú **Cerrar**.
+Este comando también se usa en el metódo de la caja de cierre opcional para el comando [Open window](../commands/open-window.md). Si hay una ventana con caja de control de menú, se puede llamar a [ACCEPT](accept.md) o **CANCEL**, en el método a ejecutar, cuando se haga doble clic en en la caja de control de menú o se seleccione el comando de menú **Cerrar**.
 
 **CANCEL** no puede estar en la cola. Ejecutar dos comandos **CANCEL** en una fila desde dentro de un método en respuesta a un evento tendría el mismo efecto que ejecutar sólo uno.
 

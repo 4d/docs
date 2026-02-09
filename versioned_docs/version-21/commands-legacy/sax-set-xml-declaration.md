@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* ; *encoding* {; *standalone*} )<!-- END REF-->
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Reference of open document |
 | encoding | Text | &#8594;  | XML document character set |
 | standalone | Boolean | &#8594;  | True = the document is standalone False (default) = document is not standalone |
-
+</div>
 <!-- END REF-->
 
 ## Description 

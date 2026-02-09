@@ -111,11 +111,14 @@ WebSocket server objects provide the following properties and functions:
 
 
 <!-- REF #4D.WebSocketServer.new().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |[WSSHandler](#wsshandler-parameter)|Object|->|Object of the user class declaring the WebSocket Server callbacks|
 |[options](#options-parameter)|Object|->|WebSocket configuration parameters|
 |Result|4D.WebSocketServer|<-|New WebSocketServer object|
+</div>
 <!-- END REF -->
 
 
@@ -391,9 +394,12 @@ This property is read-only.
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Integer|->|Waiting time in seconds before terminating the WebSocket server|
+</div>
 <!-- END REF -->
 
 

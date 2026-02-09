@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*tabla* : Table ;} *posicion* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO RECORD.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla del registro de destino o Tabla por defecto, si se omite |
 | posicion | Integer | &#8594; | Número devuelto por número registro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

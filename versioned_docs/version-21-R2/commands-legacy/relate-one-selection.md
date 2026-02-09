@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *manyTable* : Table ; *oneTable* : Table )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | manyTable | Table | &#8594;  | Many table name (from which the relation starts) |
 | oneTable | Table | &#8594;  | One table name (to which the relation refers) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

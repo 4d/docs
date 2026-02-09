@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *bloq* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | bloq | Boolean | &#8594; | True = bloquear os registros encontrados por pesquisas; False = Não bloquear os registros |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( {* ;} *objeto* ; *numColuna* ; *ordenar* {; *numColuna2* ; *ordenar2* ; ... ; *numColunaN* ; *ordenarN*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
 | objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | numColuna | Integer | &#8594;  | Número da coluna a ordenar |
 | ordenar | * | &#8594;  | ">" para ordernar em ordem ascendente ou "<" para ordenar em ordem descendente |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

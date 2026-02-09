@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* : Integer {; *destinationObject* : Text, Variable {; *destinationPtr* : Pointer}} )<!-- END REF-->
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | destinationType | Integer | &#8594;  | 0 = current selection, 1 = set, 2 = named selection, 3 = variable |
 | destinationObject | Text, Variable | &#8594;  | Name of the set, or Name of the named selection, or Variable |
 | destinationPtr | Pointer | &#8594;  | Pointer to local variable if destinationType=3 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

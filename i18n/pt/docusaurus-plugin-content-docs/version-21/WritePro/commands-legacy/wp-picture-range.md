@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Picture range.Syntax-->**WP Picture range** ( *faixaObj* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Picture range.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | faixaObj | Object | &#8594;  | Faixa do Objeto (range) do qual pegar as imagens |
 | Resultado | Object | &#8592; | Faixa de objeto contendo apenas imagens |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

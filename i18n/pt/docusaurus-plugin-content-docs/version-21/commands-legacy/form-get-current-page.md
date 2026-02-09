@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.FORM Get current page.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Retorna o número da página de subformulário atual |
 | Resultado | Integer | &#8592; | Número da página de formulário exibida atualmente |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

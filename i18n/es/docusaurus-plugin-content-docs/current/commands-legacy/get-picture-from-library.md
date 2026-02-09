@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( refImag | nomImag ; *imagen* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refImag &#124; nomImag | Entero largo, Cadena | &#8594; | Número de referencia o nombre de una imagen de la librería de imágenes |
 | imagen | Picture | &#8592; | Imagen de la librería de imágenes |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

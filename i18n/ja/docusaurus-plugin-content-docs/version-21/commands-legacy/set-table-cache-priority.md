@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | セッション中の優先度を設定するスカラーデータのテーブル |
 | priority | Integer | &#8594;  | テーブル内のスカラー値に対するキャッシュ優先度値 |
-
+</div>
 <!-- END REF-->
 
 ## 上級者向け 

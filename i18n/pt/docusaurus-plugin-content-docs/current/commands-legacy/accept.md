@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCEPT.Syntax-->**ACCEPT**<!-- END REF-->
 <!--REF #_command_.ACCEPT.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
@@ -24,7 +26,7 @@ O comando ACCEPT é utilizado em métodos de objeto ou de formulário (ou em sub
 
 ACCEPT é executado com frequência como resultado da seleção de um comando de menu. ACCEPT é igualmente utilizado no método de objeto de um botão “sem ação”.
 
-Este comando também pode ser utilizado no método de caixa de fechamento opcional de uma janela criada pelo comando [Open window](open-window.md "Open window"). Se houver uma caixa de controle de menu numa janela, se puder chamar a ACCEPT ou [CANCEL](cancel.md "CANCEL"), no método a executar, quando fizer duplo clique sobre a caixa de controle de menu ou for selecionado o comando de menu **Fechar**.
+Este comando também pode ser utilizado no método de caixa de fechamento opcional de uma janela criada pelo comando [Open window](../commands/open-window.md "Open window"). Se houver uma caixa de controle de menu numa janela, se puder chamar a ACCEPT ou [CANCEL](cancel.md "CANCEL"), no método a executar, quando fizer duplo clique sobre a caixa de controle de menu ou for selecionado o comando de menu **Fechar**.
 
 Não é possível concatenar vários ACCEPT. A execução consecutiva de dois comandos ACCEPT em um método terá o mesmo resultado que a execução de um só comando. 
 

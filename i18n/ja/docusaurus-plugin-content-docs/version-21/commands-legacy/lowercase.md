@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *aString* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aString | Text | &#8594;  | 英小文字に変換する文字列 |
 | * | 演算子 | &#8594;  | 渡した場合アクセントを保持 |
 | 戻り値 | Text | &#8592; | 英小文字の文字列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

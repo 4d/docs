@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table name.Syntax-->**Table name** ( numTable | ptrTable ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable &#124; ptrTable | Entier long, Pointeur | &#8594;  | Numéro de table ou pointeur de table |
 | Résultat | Text | &#8592; | Nom de la table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *object* : any ) : Integer<br/>**OBJECT Get font style** ( *object* : any ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font style.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Integer | &#8592; | Font style |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE SET.Syntax-->**USE SET** ( *set* )<!-- END REF-->
 <!--REF #_command_.USE SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | set | Text | &#8594;  | Name of the set to use |
-
+</div>
 <!-- END REF-->
 
 ## Description 

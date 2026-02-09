@@ -5,18 +5,22 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text, Object {; *archiveFolder* : Text {; *curPassPhrase* : Text, Object {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newDataKey* : Text, Object {; *archiveFolder* : Text {; *curDataKey* : Text, Object {; *methodName* : Text}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text {; *archiveFolder* : Text {; *curPassPhrase* : Text {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newDataKey* : Object {; *archiveFolder* : Text {; *curDataKey* : Object {; *methodName* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | structurePath | Text | &#8594;  | Pathname of structure file |
 | dataPath | Text | &#8594;  | Pathname of data file to encrypt |
-| newPassPhrase &#124; newDataKey | Text, Object | &#8594;  | In case of replacement: new passPhrase (text) or new encryption key (object) |
+| newPassPhrase | Text | &#8594;  | In case of replacement: new passPhrase |
+| newDataKey | Object | &#8594;  | In case of replacement: new encryption key (object) |
 | archiveFolder | Text | &#8594;  | Pathname of folder where original files will be stored |
-| curPassPhrase &#124; curDataKey | Text, Object | &#8594;  | Current passPhrase (text) or current encryption key (object) |
+| curPassPhrase | Text | &#8594;  | Current passPhrase |
+| curDataKey | Object | &#8594;  | Current encryption key |
 | methodName | Text | &#8594;  | Name of 4D callback method |
 | Function result | Text | &#8592; | Full pathname of folder where original files have been stored |
-
+</div>
 <!-- END REF-->
 
 ## Description 

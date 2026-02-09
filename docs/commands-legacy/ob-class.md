@@ -5,13 +5,15 @@ slug: /commands/ob-class
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *object* : Object ) : any<!-- END REF-->
+<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *object* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.OB Class.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object | &#8594;  | Object whose class is to be returned |
-| Function result | Null, Object | &#8592; | Class of object |
-
+| Function result | Object | &#8592; | Class of object (null if object does not exist)|
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,14 +5,16 @@ slug: /commands/object-set-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( * ; *object* : Text ; *radius* : Integer )<br/>**OBJECT SET CORNER RADIUS** ( *object* : Field, Variable ; *radius* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( * ; *object* : Text ; *radius* : Integer )<br/>**OBJECT SET CORNER RADIUS** ( *object* : Variable, Field ; *radius* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &#8594;  | Object name (if * is specified) or Field or variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | radius | Integer | &#8594;  | New radius of rounded corners (in pixels) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

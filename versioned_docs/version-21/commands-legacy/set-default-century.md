@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *century* {; *pivotYear*} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | century | Integer | &#8594;  | Default century (minus one) for entry of date with two-digit year |
 | pivotYear | Integer | &#8594;  | Pivot year for entry of date with two-digit year |
-
+</div>
 <!-- END REF-->
 
 ## Description 

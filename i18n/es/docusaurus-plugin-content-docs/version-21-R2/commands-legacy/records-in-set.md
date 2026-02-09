@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | conjunto | Text | &#8594; | Nombre del conjunto a probar |
 | Resultado | Integer | &#8592; | Número de registros en prueba |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

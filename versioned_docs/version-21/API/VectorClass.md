@@ -50,10 +50,13 @@ Vector objects are shared, immutable, and streamable.
 <!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |parameter|Collection of reals|->|Collection of real numbers representing a vector|
 |Result|4D.Vector|<-|New Vector object|
+</div>
 <!-- END REF -->
 
 
@@ -87,10 +90,13 @@ var $collection := $vector.toCollection()
 
 
 <!--REF #VectorClass.cosineSimilarity().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |vector|4D.Vector|->|Vector to compare with|
 |Result|Real|<-|Distance between vectors|
+</div>
 <!-- END REF -->
 
 
@@ -167,10 +173,13 @@ End if
 
 
 <!--REF #VectorClass.dotSimilarity().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |vector|4D.Vector|->|Vector to compare with|
 |Result|Real|<-|Distance between vectors|
+</div>
 <!-- END REF -->
 
 
@@ -243,10 +252,13 @@ ALERT("Best answer: "+$documents[0].text)
 
 
 <!--REF #VectorClass.euclideanDistance().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |vector|4D.Vector|->|Vector to compare with|
 |Result|Real|<-|Distance between vectors|
+</div>
 <!-- END REF -->
 
 
@@ -311,9 +323,12 @@ The `.length` property contains <!-- REF #VectorClass.length.Summary -->the numb
 
 
 <!--REF #VectorClass.toCollection().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Collection|<-|Collection of real numbers representing the vector components|
+</div>
 <!-- END REF -->
 
 The `.toCollection()` function <!-- REF #VectorClass.toCollection().Summary -->returns the vector components as a collection of reals<!-- END REF -->. 

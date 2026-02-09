@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objeto* : Text ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *objeto* : Field, Variable ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | colorPrimerPlano | Text, Integer | &#8594; | Valor del color RGB del primer plano |
 | colorFondo | Text, Integer | &#8594; | Valor del color RGB del fondo |
 | colorFondoAlt | Text, Integer | &#8594; | Valor del color RGB del fondo alterno |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

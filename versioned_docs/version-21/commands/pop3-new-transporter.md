@@ -7,11 +7,13 @@ displayed_sidebar: docs
 <!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!--REF #_command_.POP3 New transporter.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | server | Object | &#8594;  | Mail server information |
 | Function result | 4D.POP3Transporter | &#8592; | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

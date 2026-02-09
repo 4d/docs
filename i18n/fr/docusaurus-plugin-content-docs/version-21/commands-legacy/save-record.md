@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.SAVE RECORD.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de l'enregistrement à stocker ou Table par défaut si ce paramètre est omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

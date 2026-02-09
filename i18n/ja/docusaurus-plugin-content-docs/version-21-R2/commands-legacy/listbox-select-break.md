@@ -5,8 +5,10 @@ slug: /commands/listbox-select-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( * ; *object* : Text ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT BREAK** ( *object* : Field, Variable ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( * ; *object* : Text ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT BREAK** ( *object* : Variable ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | row | Integer | &#8594; | ブレーク行の番号 |
 | column | Integer | &#8594; | ブレーク列の番号 |
 | action | Integer | &#8594; | 選択アクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

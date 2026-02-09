@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Change string.Syntax-->**Change string** ( *fonte* : Text ; *novo* : Text ; *posiçao* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | fonte | Text | &#8594; | Cadeia original |
 | novo | Text | &#8594; | Novos caracteres |
 | posiçao | Integer | &#8594; | Onde começar as mudanças |
 | Resultado | Text | &#8592; | Cadeia resultado |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,9 +7,12 @@ displayed_sidebar: docs
 <!-- REF #_command_.Web Form.Syntax -->**Web Form** : 4D.WebForm<!-- END REF -->
 
 <!-- REF #_command_.Web Form.Params -->
+<div class="no-index">
+
 |Parameter|Type| |Description|
 |---------|--- |:---:|------|
 |Result|4D.WebForm|&#8592;|New `Web Form` proxy object|
+</div>
 <!-- END REF -->
 
 ## Description

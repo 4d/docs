@@ -31,7 +31,7 @@ title: WebForm
 
 #### 説明
 
-The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
+Web ページのコンポーネント (構成要素) とは、これらの Web ページの<!-- REF WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF -->。
 
 返されるオブジェクトは、[`4D.WebFormItem`](WebFormItemClass.md) クラスのものです。 これらのオブジェクトは、コンポーネントを動的に管理するために使用できる関数を持っています。
 

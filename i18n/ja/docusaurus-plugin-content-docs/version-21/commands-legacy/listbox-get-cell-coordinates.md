@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *object* ; *column* ; *row* ; *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -17,7 +19,7 @@ displayed_sidebar: docs
 | top | Integer | &#8592; | オブジェクトの上の座標 |
 | right | Integer | &#8592; | オブジェクトの右座標 |
 | bottom | Integer | &#8592; | オブジェクトの左座標 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

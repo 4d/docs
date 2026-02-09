@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* ; *menuItem* ; *methodName* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM METHOD.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu reference or Menu number |
 | menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
 | methodName | Text | &#8594;  | Method name |
 | process | Integer | &#8594;  | Process number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

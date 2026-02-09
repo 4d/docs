@@ -18,10 +18,13 @@ displayed_sidebar: docs
 
 
 <!-- REF #_command_.Formula.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaExp|Expression|&#8594; |Formula to be returned as object|
 |Result|4D.Function|&#8592;|Native function encapsulating the formula|
+</div>
 <!-- END REF -->
 
 

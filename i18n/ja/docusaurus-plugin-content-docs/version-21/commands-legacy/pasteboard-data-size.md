@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *dataType* ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | dataType | Text | &#8594;  | データタイプ |
 | 戻り値 | Integer | &#8592; | ペーストボード中のデータサイズ (バイト) またはエラーコード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

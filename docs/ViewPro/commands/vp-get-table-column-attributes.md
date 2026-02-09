@@ -14,6 +14,7 @@ title: VP Get column attributes
 **VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -21,7 +22,9 @@ title: VP Get column attributes
 |tableName|Text|->|Table name|
 |column|Integer|->|Index of the column in the table|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Object|<-|Attributes of the *column*|<!-- END REF -->
+|Result |Object|<-|Attributes of the *column*|
+</div>
+<!-- END REF -->
 
 
 ## Description

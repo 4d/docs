@@ -182,13 +182,13 @@ End if
 
 > `GOTO OBJECT` はサブフォームから実行されても、親フォーム内にて目的のオブジェクトを検索します。
 
-#### CALL SUBFORM CONTAINER command {#call-subform-container-command}
+#### CALL SUBFORM CONTAINER コマンド {#call-subform-container-command}
 
 `CALL SUBFORM CONTAINER` コマンドを使用すると、サブフォームインスタンスからサブフォームコンテナーオブジェクトに [イベント](../Events/overview.md) を送信できます。 イベントはコンテナーオブジェクトメソッドで受信されます。 (クリックやドラッグ＆ドロップなど) サブフォームにより検知されたすべてのイベントの発生元となりえます。
 
 送信するイベントコードに制限はありません (たとえば 20000 や -100 など)。 既存のイベントに対応するコード (たとえば `On Validate` に対応する 3) を使用することも、カスタムコードを使用することもできます。 前者のケースでは、サブフォームコンテナーのプロパティリストでチェックを入れたイベントのみを使用できます。 後者の場合、使用するコードは既存のフォームイベントに対応してはいけません。 将来の 4Dバージョンで番号が衝突しないようにするために、負数の使用が推奨されます。
 
-Supported events for subforms are:
+サポートされるサブフォームイベントは以下の通りです:
 
 - [On Load](../Events/onLoad.md)
 - [On Validate](../Events/onValidate.md)

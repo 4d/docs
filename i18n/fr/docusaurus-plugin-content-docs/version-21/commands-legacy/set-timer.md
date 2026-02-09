@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tickCount | Integer | &#8594;  | Nombre de ticks ou -1 = Déclenchement dès que possible |
-
+</div>
 <!-- END REF-->
 
 ## Description 

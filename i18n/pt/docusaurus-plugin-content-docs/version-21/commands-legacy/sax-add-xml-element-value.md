@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *documento* ; *dados* {; *} )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Time | &#8594;  | Referência do documento aberto |
 | dados | Text, Variable | &#8594;  | Texto ou variáveis a inserir no documento |
 | * | Operador | &#8594;  | Se passado: criptografa os caracteres especiais; se omitido: não codifica. |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

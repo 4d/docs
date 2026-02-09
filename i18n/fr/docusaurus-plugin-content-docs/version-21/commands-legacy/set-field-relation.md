@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *tableN* ; *aller* ; *retour* )<br/>**SET FIELD RELATION** ( *champN* ; *aller* ; *retour* )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableN &#124; champN | Table, Champ | &#8594;  | Table de départ des liens ou Champ de départ du lien |
 | aller | Integer | &#8594;  | Statut du lien aller partant du champ ou des liens aller partant de la table |
 | retour | Integer | &#8594;  | Statut du lien retour partant du champ ou des liens retour partant de la table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **Trim** command <!--REF #_command_.Trim.Summary--> removes **whitespace** from both ends of the *aString* parameter and returns a new string, without modifying the original one.<!-- END REF--> **Whitespace** incluyen espacios, tabulaciones, LF, CR, etc.
+El comando **Trim** <!--REF #_command_.Trim.Summary--> elimina los **whitespace** de ambos extremos del parámetro *aString* y devuelve una nueva cadena, sin modificar la original.<!-- END REF--> **Whitespace** incluyen espacios, tabulaciones, LF, CR, etc.
 
 Para devolver una nueva cadena con los espacios en blanco recortados de un solo extremo, utilice [`Trim start`](./trim-start.md) o [`Trim end`](./trim-end.md).
 
@@ -35,7 +35,7 @@ El comando devuelve la versión recortada de la cadena *aString*. Si no hay espa
 
 :::note
 
-This command is based upon the [`TrimString` Ecmascript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring).
+Este comando se basa en la especificación [Ecmascript `TrimString`](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring).
 
 :::
 

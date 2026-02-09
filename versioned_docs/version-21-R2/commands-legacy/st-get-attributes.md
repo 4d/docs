@@ -5,8 +5,10 @@ slug: /commands/st-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer, *attribValue* : Variable)} )<br/>**ST GET ATTRIBUTES** ( *object* : Field, Variable ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer, *attribValue* : Variable)} )<!-- END REF-->
+<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer ; *attribValue* : Variable)} )<br/>**ST GET ATTRIBUTES** ( *object* : Variable, Field ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer ; *attribValue* : Variable)} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | endSel | Integer | &#8594;  | End of text selection |
 | attribName | Integer | &#8594;  | Attribute to get |
 | attribValue | Variable | &#8592; | Current value of attribute |
-
+</div>
 <!-- END REF-->
 
 ## Description 

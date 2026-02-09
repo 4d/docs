@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get edited text.Syntax-->**Get edited text**  : Text<!-- END REF-->
 <!--REF #_command_.Get edited text.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | 編集中のテキスト |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

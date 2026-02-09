@@ -8,12 +8,15 @@ title: VP Get active cell
 **VP Get active cell** (  *vpAreaName* : Text { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get active cell.Params -->
+<div class="no-index">
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Range object of single cell|<!-- END REF -->
+|Result  |Object|<-|Range object of single cell|
+</div>
+<!-- END REF -->
 
 ## Description
 

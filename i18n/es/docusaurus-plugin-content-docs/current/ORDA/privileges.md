@@ -19,7 +19,7 @@ Si un usuario intenta ejecutar una acción y no tiene los derechos de acceso ade
 
 :::tip Entradas de blog relacionadas
 
-[**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
+[Filtre el acceso a sus datos con un sistema completo de permisos\*\*](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
 
 :::
 
@@ -29,7 +29,7 @@ Puede asignar acciones de permiso específicas a los siguientes recursos en su p
 
 - el [datastore](../ORDA/dsMapping.md#datastore)
 - las [clases de datos](../ORDA/dsMapping.md#dataclass)
-- [attributes](../ORDA/dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1))
+- los [atributos](../ORDA/dsMapping.md#attribute) (incluidos [calculados](./ordaClasses.md#computed-attributes-1) y [alias](./ordaClasses.md#alias-attributes-1))
 - funciones de las [clases del modelo de datos](../ORDA/ordaClasses.md)
 - funciones [singleton](../REST/$singleton.md)
 
@@ -240,25 +240,25 @@ En versiones anteriores, el archivo `roles.json` no fue creado por defecto. A pa
 
 :::note Qodly Studio
 
-In Qodly Studio for 4D, the login mode can be set using the [**Force login** option](https://developer.4d.com/qodly/4DQodlyPro/force-login) in the Roles and Privileges panel.
+En Qodly Studio for 4D, el modo de conexión se puede definir utilizando la opción [**Forzar inicio de sesión**](https://developer.4d.com/qodly/4DQodlyPro/force-login) en el panel Roles y privilegios.
 
 :::
 
 ## Modos de restricción
 
-The `restrictedByDefault` property configures how every [resource](#resources) are accessed when [no specific permission is defined for it](#permissions):
+La propiedad `restrictedByDefault` configura cómo cada [recurso](#resources) es accedido cuando [ningún permiso específico está definido para el](#permissions):
 
 - **Modo sin restricciones** (`restrictedByDefault`: **false**): los recursos sin permisos definidos son accesibles a todas las peticiones. Este modo es adecuado para entornos de desarrollo donde el acceso se puede restringir gradualmente.
 - **Modo restringido** (`restrictedByDefault`: **true**): los recursos sin permisos definidos están bloqueados por defecto. Este modo se recomienda para entornos de producción donde el acceso debe ser otorgado explícitamente.
 
 :::note Compatibilidad
 
-- Al **crear un nuevo proyecto**, la propiedad `restrictedByDefault` se establece en **false** en el archivo *roles.json* (ver abajo). Tenga en cuenta que esta configuración está hecha a medida para un inicio rápido y un desarrollo fluido. In production environment, [it is recommended to set the `restrictedByDefault` and `forceLogin` properties to **true**](#recommended-configuration).
+- Al **crear un nuevo proyecto**, la propiedad `restrictedByDefault` se establece en **false** en el archivo *roles.json* (ver abajo). Tenga en cuenta que esta configuración está hecha a medida para un inicio rápido y un desarrollo fluido. En un entorno de producción, [se recomienda definir las propiedades `restrictedByDefault` y `forceLogin` en **true**](#recommended-configuration).
 - In **projects converted from previous releases**; when enabling access to Qodly Studio using the [One-click configuration dialog](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), the `restrictedByDefault` property is added with value **true** in the *roles.json* file.
 
 :::
 
-### Recommended Configuration {#recommended-configuration}
+### Configuración recomendada {#recommended-configuration}
 
 Dependiendo de su entorno, los parámetros recomendados son:
 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *homePage* )<!-- END REF-->
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | homePage | Text | &#8594;  | Page name or HTML access path to the page or "" to not send the custom home page |
-
+</div>
 <!-- END REF-->
 
 ## Description 

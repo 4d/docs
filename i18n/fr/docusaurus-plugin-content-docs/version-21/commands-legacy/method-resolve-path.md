@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *chemin* ; *typeMéthode* ; *ptrTable* ; *nomObjet* ; *nomObjetForm* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chemin | Text | &#8594;  | Chemin à résoudre |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nomObjet | Text | &#8592; | Nom de formulaire ou de méthode base |
 | nomObjetForm | Text | &#8592; | Nom d’objet du formulaire |
 | * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -144,7 +144,7 @@ title: ラベル
 - **メソッド**: 印刷時に実行されるメソッドを選択することができます。 例えば、各ラベルが印刷された日付と時間をポストするメソッドを実行することができます。 この機能は専用のテーブルフォームを使用してラベルを印刷するときにも有用です。この場合にはメソッドからの変数を使用することもできます。
   ラベル処理に適用するためにはプロジェクトメソッドは以下の設定に適合している必要があります:
   - メソッドはデータベース内において"許可されている"必要があります(許可されているメソッドは[プロジェクト設定](../settings/security.md#オプション) および [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) コマンドによります)。許可されていない場合には**メソッド**メニュー内には表示されません。
-  - it must have the [Shared by components and host database](../Project/project-method-properties.md#shared-by-components-and-host-database) option.
+  - [コンポーネントとホストデータベース間で共有](../Project/project-method-properties.md#コンポーネントとホストプロジェクト間で共有) オプションがチェックされている必要があります。
     以下の [こちらの例題](#フォームとメソッドを使用したラベルの印刷-例題) も参照して下さい。
 
 :::note
@@ -172,7 +172,7 @@ title: ラベル
  var myVar+=1
 ```
 
-3. Set the project method as ["Shared by components and host database"](../Project/project-method-properties.md#shared-by-components-and-host-database).
+3. プロジェクトメソッドに対して["コンポーネントとホストデータベース間で共有"](../Project/project-method-properties.md#コンポーネントとホストデータベース間で共有) オプションを設定します。
 
 4. ラベルエディターを表示する前に、以下のコードを実行してプロジェクトメソッドが確実に許可されているようにします:
 

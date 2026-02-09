@@ -5,14 +5,16 @@ slug: /commands/object-set-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *object* : Text ; *helpTip* : Text )<br/>**OBJECT SET HELP TIP** ( *object* : Field, Variable ; *helpTip* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *object* : Text ; *helpTip* : Text )<br/>**OBJECT SET HELP TIP** ( *object* : Variable, Field ; *helpTip* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HELP TIP.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | helpTip | Text | &#8594;  | Contents of help message |
-
+</div>
 <!-- END REF-->
 
 ## Description 

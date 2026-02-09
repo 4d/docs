@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pathname | Text | &#8594; | ディレクトリ、フォルダまたはドキュメントへのパス名 |
 | 戻り値 | Integer | &#8592; | 1=パス名は既存のドキュメントを表す 0=パス名は既存のディレクトリまたはフォルダを表す <0=無効のパス名、OSファイルマネージャエラーコード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

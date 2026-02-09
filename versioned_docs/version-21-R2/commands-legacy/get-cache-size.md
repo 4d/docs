@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get cache size.Syntax-->**Get cache size**  : Real<!-- END REF-->
 <!--REF #_command_.Get cache size.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Real | &#8592; | Size of database cache in bytes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

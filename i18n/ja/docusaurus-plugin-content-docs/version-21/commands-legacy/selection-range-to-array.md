@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Syntax-->**SELECTION RANGE TO ARRAY** ( *start* ; *end* {; field | table ; *array*} {; field | table2 ; *array2* ; ... ; field | tableN ; *arrayN*} )<!-- END REF-->
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | start | Integer | &#8594;  | データ取得を開始するレコード位置番号 |
 | end | Integer | &#8594;  | データ取得を終了するレコード位置番号 |
 | field &#124; table | フィールド, テーブル | &#8594;  | データを取得するフィールドまたは レコード番号を取得するテーブル |
 | array | Array | &#8592; | フィールド値またはレコード番号を受け取る配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

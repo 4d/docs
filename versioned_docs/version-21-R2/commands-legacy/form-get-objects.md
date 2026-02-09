@@ -5,15 +5,17 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *formPageOption* : Integer, Operator} )<br/>**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *formPageOption* : Integer } )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectsArray | Text array | &#8592; | Name of form objects |
 | variablesArray | Pointer array | &#8592; | Pointers to variables or fields associated with objects |
 | pagesArray | Integer array | &#8592; | Page number of each object |
-| formPageOption &#124; * | Integer, Operator | &#8594;  | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>If * passed (obsolete) = current page with inherited objects |
-
+| formPageOption | Integer | &#8594;  | 1=Form current page, 2=Form all pages, 4=Form inherited |
+</div>
 <!-- END REF-->
 
 ## Description 

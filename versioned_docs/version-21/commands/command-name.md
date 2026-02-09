@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Command name.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | command | Integer | &#8594;  | Command number |
 | info | Integer | &#8592; | Command property to evaluate |
 | theme | Text | &#8592; | Language theme of command |
 | Function result | Text | &#8592; | Localized command name |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

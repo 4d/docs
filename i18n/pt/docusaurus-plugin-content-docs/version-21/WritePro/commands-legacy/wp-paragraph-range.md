@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Paragraph range.Syntax-->**WP Paragraph range** ( *faixaObj* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Paragraph range.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | faixaObj | Object | &#8594;  | Range or element |
 | Resultado | Object | &#8592; | Faixa de objeto direcionando apenas parágrafos |
-
+</div>
 <!-- END REF-->
 
 

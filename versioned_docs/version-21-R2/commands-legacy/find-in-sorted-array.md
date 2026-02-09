@@ -5,17 +5,19 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *value* : Expression ; > or < {; *posFirst* : Integer {; *posLast* : Integer}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *value* : Expression ; *>_or_<* : Comparator {; *posFirst* : Integer {; *posLast* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array to search |
 | value | Expression | &#8594;  | Value (same type as array) to search for in the array |
-| > or < | Operator | &#8594;  | > if array is sorted in ascending order, < if it is sorted in descending order |
+| >_or_< | Comparator | &#8594;  | > if array is sorted in ascending order, < if it is sorted in descending order |
 | posFirst | Integer | &#8592; | Position of its first occurrence if the value is found; otherwise position where the value should be inserted |
 | posLast | Integer | &#8592; | Position of its last occurrence if the value is found; otherwise same as posFirst |
 | Function result | Boolean | &#8592; | True if at least one element in array matches the value, False otherwise |
-
+</div>
 <!-- END REF-->
 
 ## Description 

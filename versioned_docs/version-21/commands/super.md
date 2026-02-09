@@ -7,10 +7,13 @@ displayed_sidebar: docs
 <!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
 <!-- REF #_command_.Super.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|  
 |---|---|---|---|
 |param|any|->|Parameter(s) to pass to the parent constructor|
 |Result|Object|<-|Object's parent|
+</div>
 <!-- END REF -->
 
 The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.

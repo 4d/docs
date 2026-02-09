@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *refElément* {; *nomElémentEnf* {; *valeurElémentEnf*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get first child XML element.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | refElément | Text | &#8594;  | Référence d’élément XML |
 | nomElémentEnf | Text | &#8592; | Nom de l'élément XML enfant |
 | valeurElémentEnf | Text | &#8592; | Valeur de l'élément XML enfant |
 | Résultat | Text | &#8592; | Référence de l’élément XML enfant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

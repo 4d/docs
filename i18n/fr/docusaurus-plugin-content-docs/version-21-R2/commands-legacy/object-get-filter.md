@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( * ; *objet* : Text ) : Text<br/>**OBJECT Get filter** ( *objet* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get filter.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
 | objet | any | &#8594; | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
 | Résultat | Text | &#8592; | Nom du filtre de saisie |
-
+</div>
 <!-- END REF-->
 
 ## Description 

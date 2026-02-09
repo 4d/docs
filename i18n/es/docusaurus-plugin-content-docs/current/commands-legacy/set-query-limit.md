@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* : Integer )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | limite | Integer | &#8594; | Número límite de registros ó 0 para ilimitado |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

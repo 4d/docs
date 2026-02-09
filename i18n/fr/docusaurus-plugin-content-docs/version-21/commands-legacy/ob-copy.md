@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objet* {; *résoudrePtrs* } )  : Object<br/>**OB Copy** ( *objet* {; *option* {; *grouperAvec*}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objet | Object, Object | &#8594;  | Objet structuré |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | option | Integer | &#8594;  | ck shared: return a shared object,ck resolve pointers: resolve pointers before copying |
 | grouperAvec | Collection, Object | &#8594;  | Collection ou objet partagé(e) à grouper avec l'objet résultant |
 | Résultat | Object | &#8592; | Copie de objet |
-
+</div>
 <!-- END REF-->
 
 ## Description 

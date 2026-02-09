@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | url | Text | &#8594;  | 新しいURL |
 | * | 演算子 | &#8594;  | 指定されている場合 = URLは翻訳されない 省略されている場合 = URLは翻訳される |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

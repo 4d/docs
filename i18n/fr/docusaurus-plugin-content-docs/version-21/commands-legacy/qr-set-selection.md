@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *zone* ; *gauche* ; *haut* {; *droite* {; *bas*}} )<!-- END REF-->
 <!--REF #_command_.QR SET SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | zone | Integer | &#8594;  | Référence de la zone |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | haut | Integer | &#8594;  | Limite supérieure |
 | droite | Integer | &#8594;  | Limite droite |
 | bas | Integer | &#8594;  | Limite inférieure |
-
+</div>
 <!-- END REF-->
 
 ## Description 

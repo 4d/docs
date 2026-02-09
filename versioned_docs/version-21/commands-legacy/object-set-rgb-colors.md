@@ -7,14 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( {* ;} *object* ; *foregroundColor* {; *backgroundColor* {; *altBackgrndColor*}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or <br/>Variable or field (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object Name (if * is specified), or <br/>Variable or field (if * is omitted) |
 | foregroundColor | Text, Integer | &#8594;  | RGB color value for foreground |
 | backgroundColor | Text, Integer | &#8594;  | RGB color value for background |
 | altBackgrndColor | Text, Integer | &#8594;  | RGB color value for alternating background |
-
+</div>
 <!-- END REF-->
 
 ## Description 

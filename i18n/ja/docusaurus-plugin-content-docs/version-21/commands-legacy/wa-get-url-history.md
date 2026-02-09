@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( {* ;} *object* ; *urlsArr* {; *direction* {; *titlesArr*}} )<!-- END REF-->
 <!--REF #_command_.WA GET URL HISTORY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | urlsArr | Text array | &#8592; | 訪問したURLの配列 |
 | direction | Integer | &#8594;  | 0または省略=前のURL配列, 1=次のURL配列 |
 | titlesArr | Text array | &#8592; | ウィンドウタイトルの配列 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

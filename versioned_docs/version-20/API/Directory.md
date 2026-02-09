@@ -400,12 +400,16 @@ This property is **read-only**.
 
 
 <!-- REF #directory.copyTo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |destinationFolder |4D.Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.Folder|<-|Copied file or folder|<!-- END REF -->
+|Result|4D.Folder|<-|Copied file or folder|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -453,10 +457,14 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.File|<-|`File` object (null if invalid path)|<!-- END REF -->
+|Result|4D.File|<-|`File` object (null if invalid path)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -493,10 +501,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |options|Integer|->|File list options|
-|Result|Collection|<-|Collection of children file objects|<!-- END REF -->
+|Result|Collection|<-|Collection of children file objects|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -555,10 +567,14 @@ You want to get all files that are not invisible in the Documents folder:
 
 
 <!-- REF #directory.folder().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|<!-- END REF -->
+|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -595,10 +611,14 @@ A `Folder` object or null if *path* is invalid.
 
 
 <!-- REF #directory.folders().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |options|Integer|->|Folder list options|
-|Result|Collection|<-|Collection of children folder objects|<!-- END REF -->
+|Result|Collection|<-|Collection of children folder objects|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -642,10 +662,14 @@ You want the collection of all folders and subfolders of the database folder:
 
 
 <!-- REF #directory.getIcon().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|<!-- END REF -->
+|Result|Picture|<-|Icon|
+</div>
+<!-- END REF -->
 
 #### Description
 

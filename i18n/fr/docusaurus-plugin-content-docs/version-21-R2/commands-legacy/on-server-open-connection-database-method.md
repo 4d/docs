@@ -5,15 +5,17 @@ slug: /commands/on-server-open-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Open Connection database method.Syntax-->On Server Open Connection($user : Integer ; $id : Integer ; $toIgnore : Integer) -> $status : Boolean<!-- END REF-->
+<!--REF #_command_.On Server Open Connection database method.Syntax-->On Server Open Connection($user : Integer ; $id : Integer ; $toIgnore : Integer) -> $status : Integer<!-- END REF-->
 <!--REF #_command_.On Server Open Connection database method.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | $user | Integer | &#8592; | Numéro d'utilisateur utilisé en interne par 4D Server pour identifier les utilisateurs |
 | $id | Integer | &#8592; | Numéro de connexion utilisé en interne par 4D Server pour identifier une connexion |
 | $toIgnore | Integer | &#8592; | Obsolète : Retourne toujours 0 (mais doit être déclaré) |
 | $status | Integer | &#8592; | 0 ou omis = connexion acceptée, autre valeur = connexion refusée |
-
+</div>
 <!-- END REF-->
 
 ## Quand la Méthode base Sur ouverture connexion serveur est-elle appelée ? 

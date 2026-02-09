@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *object* ; *jsCode* {; *type*} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | jsCode | Text | &#8594;  | JavaScriptコード |
 | type | Integer | &#8594;  | 戻り値に指定する型 |
 | 戻り値 | Object, Text, Pointer, Real, Date, Time | &#8592; | 実行結果 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

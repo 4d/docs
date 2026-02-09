@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Discover data key.Syntax-->**Discover data key**  : Boolean<!-- END REF-->
 <!--REF #_command_.Discover data key.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Boolean | &#8592; | True if a valid encryption key for the currently open data file has been found, else False |
-
+</div>
 <!-- END REF-->
 
 ## Description 

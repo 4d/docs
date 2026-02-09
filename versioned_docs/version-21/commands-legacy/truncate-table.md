@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** {( *aTable* )}<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table where all records will be deleted or Default table if this parameter is omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

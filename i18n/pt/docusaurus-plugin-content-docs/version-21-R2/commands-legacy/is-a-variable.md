@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *umPonteiro* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a variable.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | umPointer | Pointer | &#8594; | Ponteiro a ser testado |
 | Resultado | Boolean | &#8592; | TRUE= Ponteiro aponta a variável FALSE = Ponteiro não aponta a variável |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET LINK.Syntax-->**WP SET LINK** ( *objRango* ; *objEnlace* )<!-- END REF-->
 <!--REF #_command_.WP SET LINK.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objRango | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
 | objEnlace | Object | &#8594;  | Valor enlace |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *viaArquivo* : Text {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | viaArquivo | Text | &#8594; | Rota do arquivo |
 | * | Operador | &#8594; | Validar os dados |
 | Resultado | Boolean | &#8592; | True = rotaArquivo indica um arquivo de imagem; de outro modo, False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

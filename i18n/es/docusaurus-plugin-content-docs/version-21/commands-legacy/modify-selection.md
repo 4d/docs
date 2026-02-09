@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*tabla*}{; *modoSelección*}{; *entradaList*}{; *}{; *} )<!-- END REF-->
 <!--REF #_command_.MODIFY SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla a mostrar y modificar o Tabla por defecto, si se omite |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | entradaList | Boolean | &#8594;  | Autorizar entrada en lista |
 | * | Operator |  &#8594;  | Utilizar formulario de salida para un sólo registro y ocultar las barras de desplazamiento en el formulario de     entrada |
 | * | Operator |  &#8594;  | Mostrar las barras de desplazamiento en el formulario de entrada (anula la segunda opción del primer parámetro *) |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

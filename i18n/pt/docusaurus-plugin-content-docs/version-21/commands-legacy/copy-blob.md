@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *oriBLOB*  ; *dstBLOB* ; *oriOffset*  ; *dstOffset* ; *tamanho* )<!-- END REF-->
 <!--REF #_command_.COPY BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | oriBlob | Blob | &#8594;  | BLOB origem |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | oriOffset | Integer | &#8594;  | Posição da fonte para a cópia |
 | dstOffset | Integer | &#8594;  | Posição de destino para a cópia |
 | tamanho | Integer | &#8594;  | Número de bytes a copiar |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

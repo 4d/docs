@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
 <!--REF #_command_.Num.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Text, Boolean, Integer | &#8594;  | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
 | separator | Text | &#8594;  | Decimal separator |
 | base | Integer | &#8594;  | Value between 2 and 36 that represents the radix |
 | Function result | Real | &#8592; | Numeric form of the expression parameter |
-
+</div>
 <!-- END REF-->
 
 

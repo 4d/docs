@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* : Integer, Text ; *ligneMenu* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594; | Numéro de menu ou Référence de menu |
 | ligneMenu | Integer | &#8594; | Numéro de la ligne de menu ou -1 pour la dernière ligne ajoutée |
 | process | Integer | &#8594; | Numéro de référence de process |
 | Résultat | Integer | &#8592; | Code de caractère de de la touche de raccourci standard associée à la ligne de menu |
-
+</div>
 <!-- END REF-->
 
 ## Description 

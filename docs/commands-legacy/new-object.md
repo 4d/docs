@@ -5,23 +5,25 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** ( *property* : Text ; *value* : any {; ...(*property* : Text, *value* : any)} ) : Object<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** ( { ...(*property* : Text ; *value* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | property | Text | &#8594;  | Name of property to create |
 | value | any | &#8594;  | Value of property |
 | Function result | Object | &#8592; | New language object |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
 <!--REF #_command_.New object.Summary-->The **New object** command creates a new empty or prefilled object and returns its reference.<!-- END REF-->
 
-If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D oject variable or a 4D object field.
+If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D object variable or a 4D object field.
 
-**Note:** `var : Object` declares a variable of the [Object](# "Data structured as a native 4D object") type but does not create any object.
+**Note:** `var : Object` declares a variable of the [Object type](../Concepts/dt_object.md) but does not create any object.
 
 Optionnally, you can prefill the new object by passing one or several *property*/*value* pairs as parameters:
 

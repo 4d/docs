@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** {( *ventana* )}<!-- END REF-->
 <!--REF #_command_.ERASE WINDOW.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ventana | Integer | &#8594;  | Número de referencia de ventana o Ventana del primer plano del proceso actual, si se omite |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

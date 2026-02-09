@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Asserted.Syntax-->**Asserted** ( *expressaoBool* {; *mensagemTexto*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | expressaoBool | Boolean | &#8594;  | Expressão Booleana |
 | mensagemText | Text | &#8594;  | texto da mensagem de erro |
 | Resultado | Boolean | &#8592; | Resultado da avaliação de expressaoBool |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

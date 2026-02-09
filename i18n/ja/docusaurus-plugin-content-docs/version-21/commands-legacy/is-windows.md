@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is Windows.Syntax-->**Is Windows** : Boolean<!-- END REF-->
 <!--REF #_command_.Is Windows.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | OS = Windows ならTrue、そうでなければFalse |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

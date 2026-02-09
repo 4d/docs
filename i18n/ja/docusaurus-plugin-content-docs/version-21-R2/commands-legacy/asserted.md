@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* : Boolean {; *messageText* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | boolExpression | Boolean | &#8594; | ブール式 |
 | messageText | Text | &#8594; | エラーメッセージテキスト |
 | 戻り値 | Boolean | &#8592; | boolExpressionの評価結果 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

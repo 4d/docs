@@ -5,14 +5,16 @@ slug: /commands/object-set-visible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( * ; *object* : Text ; *visible* : Boolean )<br/>**OBJECT SET VISIBLE** ( *object* : Field, Variable ; *visible* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( * ; *object* : Text ; *visible* : Boolean )<br/>**OBJECT SET VISIBLE** ( *object* : Variable, Field ; *visible* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VISIBLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object parameter is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
 | visible | Boolean | &#8594;  | True for visible, False for invisible |
-
+</div>
 <!-- END REF-->
 
 ## Description 

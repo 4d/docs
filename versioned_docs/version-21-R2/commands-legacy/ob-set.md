@@ -5,14 +5,16 @@ slug: /commands/ob-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *object* : Object, Object ; *property* : Text ; *value* : Expression {; ...(*property* : Text, *value* : Expression)} )<!-- END REF-->
+<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *object* : Object ; *property* : Text ; *value* : Expression {; ...(*property* : Text ; *value* : Expression)} )<!-- END REF-->
 <!--REF #_command_.OB SET.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object, Object | &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to set |
 | value | Expression | &#8594;  | New value of property |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -26,7 +28,7 @@ Note that the *property* parameter is case sensitive.
 In the *value* parameter, pass the value you want to set for the property. Several data types are supported. Note that:
 
 * if you pass a pointer, it is kept as is; it is evaluated using the [JSON Stringify](json-stringify.md) command.
-* if you pass a date, it will be stored with date type or as text in ISO format depending on your current database date settings. For more information, please refer to the "Use date type instead of ISO date format in objects" option in the *Compatibility page*.
+* if you pass a date, it will be stored with date type or as text in ISO format depending on your current [database date settings](./set-database-parameter.md#dates-inside-objects-85). 
 * if you pass a time, it is stored as a number of seconds (Real) in *object*.
 * if you pass a language object or a collection, the command uses a reference and not a copy. Any modification applied to the object or collection will be reported to all references.
 * starting with 4D v16 R4, you can pass a picture of any supported type (see *Native Formats Supported* ).

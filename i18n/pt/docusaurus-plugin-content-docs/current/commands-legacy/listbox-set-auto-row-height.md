@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Syntax-->**LISTBOX SET AUTO ROW HEIGHT** ( * ; *objeto* : Text ; *seletor* : Integer ; *valor* : Integer ; *unidade* : Integer )<br/>**LISTBOX SET AUTO ROW HEIGHT** ( *objeto* : Field, Variable ; *seletor* : Integer ; *valor* : Integer ; *unidade* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, o objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | seletor | Integer | &#8594; | Valor de altura a estabelecer: lk row min heigh ou lk row max heigh |
 | valor | Integer | &#8594; | Valor máximo ou mínimo de altura de linha |
 | unidade | Integer | &#8594; | Unidade de valor da altura: 0=pixels, 1=linhas |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

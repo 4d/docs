@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *privKey* : Blob ; *pubKey* : Blob {; *length* : Integer} )<!-- END REF-->
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | privKey | Blob | &#8592; | 秘密鍵を受け取るBLOB |
 | pubKey | Blob | &#8592; | 公開鍵を受け取るBLOB |
 | length | Integer | &#8594; | キー長 (ビット) [512...2048] デフォルト値 = 512 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

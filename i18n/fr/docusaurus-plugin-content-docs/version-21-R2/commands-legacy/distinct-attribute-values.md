@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *champObjet* : Field ; *cheminAttribut* : Text ; *tabValeurs* : Array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | champObjet | Field | &#8594; | Champ objet à utiliser |
 | cheminAttribut | Text | &#8594; | Nom ou chemin de l'attribut dont vous voulez obtenir les valeurs distinctes |
 | tabValeurs | Array | &#8592; | Tableau des valeurs distinctes dans l'attribut |
-
+</div>
 <!-- END REF-->
 
 ## Description 

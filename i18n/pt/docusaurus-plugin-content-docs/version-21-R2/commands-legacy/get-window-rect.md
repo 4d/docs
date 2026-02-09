@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer {; *janela* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | esquerda | Integer | &#8592; | Coordenada esquerda da área de conteúdo da janela |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | direita | Integer | &#8592; | Coordenada direita da área de conteúdo da janela |
 | inferior | Integer | &#8592; | Coordenada inferior da área de conteúdo da janela |
 | janela | Integer | &#8594; | Número de referência de janela; ou janela do primeiro plano do processo atual, se omitido; ou janela MDI se for -1 (Windows) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* ; *menuItem* ; *param* )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu reference or Menu number |
 | menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
 | param | Text | &#8594;  | String to associate as parameter |
-
+</div>
 <!-- END REF-->
 
 ## Description 

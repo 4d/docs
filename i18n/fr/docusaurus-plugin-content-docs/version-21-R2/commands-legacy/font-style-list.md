@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *famillePolice* : Text ; *listeStylesPolice* : Text array ; *listeNomsPolice* : Text array )<!-- END REF-->
 <!--REF #_command_.FONT STYLE LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | famillePolice | Text | &#8594; | Nom de la famille de police |
 | listeStylesPolice | Text array | &#8592; | Liste des styles pris en charge par la famille de police |
 | listeNomsPolice | Text array | &#8592; | Liste des noms complets pris en charge par la famille de police |
-
+</div>
 <!-- END REF-->
 
 ## Description 

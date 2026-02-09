@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Close Connection database method.Syntax-->$1, $2, $3 -> On Server Close Connectionデータベースメソッド<!-- END REF-->
 <!--REF #_command_.On Server Close Connection database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $1 | 倍長整数 | &#8592; | ユーザーを識別するために4D Serverが内部的に使用するユーザーID |
 | $2 | 倍長整数 | &#8592; | 接続を識別するために4D Serverが内部的に使用する接続ID |
 | $3 | 倍長整数 | &#8592; | 廃止: 常に0が返されますが、宣言はしなくてはなりません。 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

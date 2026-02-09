@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graph* ; *xmin* ; *xmax* ; *ymin* ; *ymax* ; *xprop* ; *xgrid* ; *ygrid* ; *title* {; *title2* ; ... ; *titleN*} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | graph | Picture | &#8594;  | グラフエリアまたはピクチャ変数 |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | xgrid | Boolean | &#8594;  | TRUE: X軸グリッド; FALSE: X軸グリッドなし (xprop=TRUEの場合のみ) |
 | ygrid | Boolean | &#8594;  | TRUE: Y軸グリッド; FALSE:Y軸グリッドなし |
 | title | Text | &#8594;  | 凡例 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

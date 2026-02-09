@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *aPointer* : Pointer ; *varName* : Text ; *tableNum* : Integer ; *fieldNum* : Integer )<!-- END REF-->
 <!--REF #_command_.RESOLVE POINTER.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aPointer | Pointer | &#8594;  | Pointer for which to retrieve the referenced object |
 | varName | Text | &#8592; | Name of referenced variable or empty string |
 | tableNum | Integer | &#8592; | Number of referenced table or array element or 0 or -1 |
 | fieldNum | Integer | &#8592; | Number of referenced field or 0 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

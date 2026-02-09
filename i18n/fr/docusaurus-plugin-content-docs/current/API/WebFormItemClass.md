@@ -30,14 +30,17 @@ Par exemple, `WebFormObject.myImage` fait référence au composant image avec `m
 
 ### .addCSSClass()
 
-<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : string)<!-- END REF -->
+<!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : Text)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
+
+<div class="no-index">
 
 | Paramètres | Type |     | Description                                 |
 | ---------- | ---- | :-: | ------------------------------------------- |
 | className  | Text |  -> | Nom de la classe CSS à ajouter au composant |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -50,10 +53,13 @@ La fonction `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->a
 
 <!-- REF #WebFormItemClass.hide().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -82,14 +88,17 @@ exposed Function isHidden()
 
 ### .removeCSSClass()
 
-<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: string)<!-- END REF -->
+<!-- REF #WebFormItemClass.removeCSSClass().Syntax -->**.removeCSSClass**(*className*: Text)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
+
+<div class="no-index">
 
 | Paramètres | Type |     | Description                                   |
 | ---------- | ---- | :-: | --------------------------------------------- |
 | className  | Text |  -> | Nom de la classe CSS à supprimer du composant |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -102,10 +111,13 @@ La fonction `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summ
 
 <!-- REF #WebFormItemClass.show().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description

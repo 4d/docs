@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *tabla* ; *arrReg* {; *seleccion*} )<!-- END REF-->
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla de la selección actual |
 | arrReg | Integer array | &#8592; | Array de números de registros |
 | seleccion | Text | &#8594;  | Nombre de la selección temporal o de la selección actual si este parámetro es omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

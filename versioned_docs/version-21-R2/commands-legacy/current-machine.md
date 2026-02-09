@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current machine.Syntax-->**Current machine**  : Text<!-- END REF-->
 <!--REF #_command_.Current machine.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Network name of the machine |
-
+</div>
 <!-- END REF-->
 
 ## Description 

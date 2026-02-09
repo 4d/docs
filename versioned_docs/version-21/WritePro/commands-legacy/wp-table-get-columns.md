@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get columns.Syntax-->**WP Table get columns** ( *targetObj* ) | ( *tableRef* ; *startCol* {; *numCols*} )  : Object<!-- END REF-->
 <!--REF #_command_.WP Table get columns.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | startCol | Integer | &#8594;  | Position of first column |
 | numCols | Integer | &#8594;  | Number of columns to get |
 | Function result | Object | &#8592; | New table range containing selected columns |
-
+</div>
 <!-- END REF-->
 
 ## Description 

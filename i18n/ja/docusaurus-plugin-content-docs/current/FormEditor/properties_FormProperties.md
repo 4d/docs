@@ -7,8 +7,8 @@ title: フォームプロパティ
 
 ## カラースキーム
 
-> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
-> ).
+> カラースキームプロパティは、macOS および [Fluent UI テーマの Windows](../settings/interface.md#windows-上でfluent-ui-を使用) に対してのみ適用されます
+> 。
 
 このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/get-application-color-scheme.md) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
@@ -45,7 +45,7 @@ title: フォームプロパティ
 
 フォームにクラスを割り当てることで、以下のような利点があります:
 
-- [フォームエディター](../FormEditor/formEditor.md) を使用する際、割り当てられたクラスは[式](../Concepts/quick-tour.md#expressions) をサポートする[プロパティリスト](../FormEditor/formEditor.md#property-list) の全てのエリア(例: **変数または式**、**フォントカラー式**...)において、`Form.myProperty` のような式に対する正確なシンタックスチェックを行うのに使用されます。  エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
+- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression*...*). エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
@@ -79,19 +79,19 @@ title: フォームプロパティ
 
 ---
 
-## Form Theme on Windows
+## Windowsでのフォームテーマ
 
-This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+このプロパティを使用することで、フォームがWindows 上で実行された際にどのインターフェーステーマを使用してするかを明示的に選択することができます。 デフォルトでは、この設定は [グローバルなプロジェクトテーマ設定](../settings/interface.md) を継承しますが、この設定をフォームごとに上書きすることができます。
 
 使用可能な値:
 
-- **Inherited** (default): inherits from the project theme
-- **Classic**: use the Windows classic interface theme
-- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+- **継承済み** (デフォルト): プロジェクトのテーマを継承します
+- **Classic**: Windows のクラシックなインターフェーステーマを使用します
+- **Fluent UI**: [Fluent UI](../FormEditor/forms.md#fluent-ui-レンダリング) インターフェーステーマを使用します([利用可能であれば](../FormEditor/forms.md#要件))。
 
 :::note
 
-This property is ignored on macOS.
+このプロパティはmacOS では無視されます。
 
 :::
 
@@ -101,7 +101,7 @@ This property is ignored on macOS.
 | -------- | ------- | ----------- |
 | fluentUI | boolean | true, false |
 
-If the property is not defined, the "inherited" option is selected.
+プロパティが定義されていない場合には、 "inherited" オプションが選択されます。
 
 ---
 

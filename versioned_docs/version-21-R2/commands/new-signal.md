@@ -7,11 +7,13 @@ displayed_sidebar: docs
 <!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!--REF #_command_.New signal.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | description | Text | &#8594;  | Description for the signal |
 | Function result | 4D.Signal | &#8592; | Native object encapsulating the signal |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

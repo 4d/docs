@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get cells.Syntax-->**WP Table get cells** ( *objTarget* : Object ) | ( *refTabla* : Object ; *colIni* : Integer ; *filaIni* : Integer {; *NumCol* : Integer{; *numFilas* : Integer}} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table get cells.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | NumCol | Integer | &#8594;  | Número de columnas a obtener |
 | numFilas | Integer | &#8594;  | Número de filas a obtener |
 | Resultado | Object | &#8592; | Nuevo rango que contiene celdas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

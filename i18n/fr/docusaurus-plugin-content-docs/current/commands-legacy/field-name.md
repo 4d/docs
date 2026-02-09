@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Field name.Syntax-->**Field name** ( *numTable* : Pointeur, Entier long ; *numChamp* : Integer ) : Text<br/>**Field name** ( *ptrChamp* : Pointeur, Entier long ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChamp &#124; numTable | Pointeur, Entier long | &#8594; | Pointeur vers un champ ou Numéro de table |
 | numChamp | Integer | &#8594; | Numéro de champ si un numéro de table est passé en premier paramètre |
 | Résultat | Text | &#8592; | Nom du champ |
-
+</div>
 <!-- END REF-->
 
 ## Description 

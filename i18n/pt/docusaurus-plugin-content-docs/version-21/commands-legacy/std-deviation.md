@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Dados para os quais se retorna o desvio padrão |
 | Resultado | Real | &#8592; | Desvio padrão da série |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

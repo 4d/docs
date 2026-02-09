@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *objeto* : Text ; *largOpt* : Integer ; *altOpt* : Integer {; *anchoMax* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *objeto* : Field, Variable ; *largOpt* : Integer ; *altOpt* : Integer {; *anchoMax* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es una variable |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | largOpt | Integer | &#8592; | Largo óptimo del objeto |
 | altOpt | Integer | &#8592; | Alto óptimo del objeto |
 | anchoMax | Integer | &#8594; | Largo máximo del objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

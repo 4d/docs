@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* ; *taille* {; *remplisseur*} )<!-- END REF-->
 <!--REF #_command_.SET BLOB SIZE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | blob | Blob | &#8594;  | Champ ou variable de type BLOB |
 | taille | Integer | &#8594;  | Nouvelle taille de BLOB |
 | remplisseur | Integer | &#8594;  | Code du caractère de remplissage |
-
+</div>
 <!-- END REF-->
 
 ## Description 

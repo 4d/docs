@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SOAP Request.Syntax-->**SOAP request**  : Boolean<!-- END REF-->
 <!--REF #_command_.SOAP Request.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Boolean | &#8592; | True si la petición es SOAP; de lo contrario, False |
-
+</div>
 <!-- END REF-->
 
 #### Descripción 

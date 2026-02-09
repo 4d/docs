@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CANCEL TRANSACTION.Syntax-->**CANCEL TRANSACTION**<!-- END REF-->
 <!--REF #_command_.CANCEL TRANSACTION.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

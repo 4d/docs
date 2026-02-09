@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *texte* ; *blob* {; *formatTexte* {; offset }} )<br/>**TEXT TO BLOB** ( *texte* ; *blob* {; *formatTexte* {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO BLOB.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | texte | Text | &#8594;  | Texte à écrire dans blob |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | formatTexte | Integer | &#8594;  | Format et jeu de caractères du texte |
 | offset &#124; * | Variable, Opérateur | &#8596; | Offset (en octets) dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
 | || | Nouvel offset après l'écriture si * omis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

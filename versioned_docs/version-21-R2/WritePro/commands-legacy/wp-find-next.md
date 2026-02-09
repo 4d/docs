@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find next.Syntax-->**WP Find next** ( *targetObj* : Object ; *searchAfter* : Object ; *searchValue* : Text ; *searchCondition* : Integer {; *replaceValue* : Text} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Find next.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | searchCondition | Integer | &#8594;  | Search rule(s) |
 | replaceValue | Text | &#8594;  | Replacement string |
 | Function result | Object | &#8592; | Range of the found/replaced value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

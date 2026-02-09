@@ -7,18 +7,20 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjet* ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomObjet | Text | &#8594;  | Nom de l'objet |
 | Résultat | any | &#8592; | Valeur courante des sources de données de l'objet de formulaire |
-
+</div>
 <!-- END REF-->
 
 ## Description 
 
 <!--REF #_command_.OBJECT Get value.Summary-->La commande **OBJECT Get value** retourne la valeur courante des sources de données des objets formulaire désignés par le paramètre nomObjet.<!-- END REF-->
 
-Dans le paramètre nomObjet, passez le nom d'un objet formulaire (chaine). Si vous utilisez un caractère générique (“@”) pour de multiples objets, seule la valeur des sources de données du premier objet de formulaire est retourné.
+Dans le paramètre *nomObjet*, passez le nom d'un objet formulaire (chaine). Si vous utilisez un caractère générique (“@”) pour de multiples objets, seule la valeur des sources de données du premier objet de formulaire est retourné.
 
 **Note**: **OBJECT Get value** n'est pas disponible dans les objets colonnes de list box..
 

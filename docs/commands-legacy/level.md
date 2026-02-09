@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Level.Syntax-->**Level**  : Integer<!-- END REF-->
 <!--REF #_command_.Level.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Integer | &#8592; | Current break or header level |
-
+</div>
 <!-- END REF-->
 
 ## Description 

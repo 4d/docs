@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( {* ;} *object* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | horizontal | Boolean, Integer | &#8594;  | Visibility of horizontal scrollbar |
 | vertical | Boolean, Integer | &#8594;  | Visibility of vertical scrollbar |
-
+</div>
 <!-- END REF-->
 
 ## Description 

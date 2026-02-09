@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *refUsuario* ; *nombre* ; *inicio* ; *contraseña* ; *nbLogin* ; *ultimoLogin* {; *membrecias* {; *grupoPropietario*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refUsuario | Integer | &#8594;  | Número de referencia único de cuenta de usuario, -1 para añadir un usuario |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | membrecias | Integer array | &#8594;  | Números de referencia de los grupos a los que pertenece el usuario |
 | grupoPropietario | Integer | &#8594;  | Número de referencia del grupo propietario del usuario |
 | Resultado | Integer | &#8592; | Número de referencia único del nuevo usuario |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

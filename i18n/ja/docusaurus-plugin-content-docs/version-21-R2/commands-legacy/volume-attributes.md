@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* : Text ; *size* : Real ; *used* : Real ; *free* : Real )<!-- END REF-->
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | volume | Text | &#8594; | ボリュームの名前 |
 | size | Real | &#8592; | ボリュームのサイズ(バイト単位) |
 | used | Real | &#8592; | 使用サイズ(バイト単位) |
 | free | Real | &#8592; | 空きサイズ(バイト単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

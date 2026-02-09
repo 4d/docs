@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ( *errorObj* : Object )<!-- END REF-->
 <!--REF #_command_.throw.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | errorCode | Integer | &#8594;  | A long integer representing the error code. |
 | description | Text | &#8594;  | A text providing a description of the error. |
 | errorObj | Object | &#8594;  | An object containing properties to build the error |
-
+</div>
 <!-- END REF-->
 
 ## Description 

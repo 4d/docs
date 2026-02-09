@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *height* : Integer {; *width* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | height | Integer | &#8592; | 印刷可能領域の高さ |
 | width | Integer | &#8592; | 印刷可能領域の幅 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

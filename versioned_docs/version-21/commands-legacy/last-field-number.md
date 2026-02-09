@@ -7,11 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last field number.Syntax-->**Last field number** ( *tableNum* ) : Integer<br/>**Last field number** ( *tablePtr* ) : Integer<!-- END REF-->
 <!--REF #_command_.Last field number.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Integer, Pointer | &#8594;  | Table number or Pointer to table |
+| tableNum | Integer | &#8594;  | Table number |
+| tablePtr | Pointer | &#8594;  | Pointer to table |
 | Function result | Integer | &#8592; | Highest field number in table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *left* ; *top* ; *right* ; *bottom* {; *window*}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | left | Integer | &#8594;  | Global left coordinate of window's contents area |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | bottom | Integer | &#8594;  | Global bottom coordinate of window's contents area |
 | window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
 | * | Operator | &#8594;  | If omitted (default) = change window to foreground<br/>If passed = do not change the level of the window |
-
+</div>
 <!-- END REF-->
 
 ## Description 

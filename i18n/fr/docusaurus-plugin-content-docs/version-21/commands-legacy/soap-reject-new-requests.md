@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *statutRejet* )<!-- END REF-->
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | statutRejet | Boolean | &#8594;  | Vrai si rejet de nouvelles requêtes, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

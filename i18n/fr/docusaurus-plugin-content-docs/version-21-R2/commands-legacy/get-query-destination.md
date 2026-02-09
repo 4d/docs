@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinationType* : Integer ; *destinationObjet* : Text ; *destinationPtr* : Pointer )<!-- END REF-->
 <!--REF #_command_.GET QUERY DESTINATION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | destinationType | Integer | &#8592; | 0 = sélection courante, 1 = ensemble, 2 = sélection temporaire, 3 = variable |
 | destinationObjet | Text | &#8592; | Nom de l'ensemble ou Nom de la sélection temporaire ou Chaîne vide |
 | destinationPtr | Pointer | &#8592; | Pointeur vers variable locale si destinationType = 3 |
-
+</div>
 <!-- END REF-->
 
 ## Description 

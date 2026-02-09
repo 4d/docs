@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *sélecteur* ; *info1* ; *info2* )<!-- END REF-->
 <!--REF #_command_.BACKUP INFO.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sélecteur | Integer | &#8594;  | Type d’information à récupérer |
 | info1 | Integer, Date | &#8592; | Valeur 1 du sélecteur |
 | info2 | Time, Text | &#8592; | Valeur 2 du sélecteur |
-
+</div>
 <!-- END REF-->
 
 ## Description 

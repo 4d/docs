@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *part* : Integer ; *contents* : Blob, Text ; *name* : Text ; *mimeType* : Text ; *fileName* : Text )<!-- END REF-->
 <!--REF #_command_.WEB GET BODY PART.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | part | Integer | &#8594;  | Part number |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | name | Text | &#8592; | Name of "input" variable |
 | mimeType | Text | &#8592; | Mime type of submitted file |
 | fileName | Text | &#8592; | Name of submitted file |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *inteiro* ; *BLOB* ; *byteOrdem* {; offset | *} )<!-- END REF-->
 <!--REF #_command_.INTEGER TO BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | inteiro | Integer | &#8594;  | Valor inteiro a escrever no BLOB |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | byteOrdem | Integer | &#8594;  | 0 Ordem de bytes em modo nativo 1 Ordem dos bytes Macintosh 2 Ordem dos bytes PC |
 | offset &#124; * | Variável, Operador | &#8596; | Offset expressado em bytes no BLOB ou * para adicionar o valor |
 |||| Novo offset depois de escrita se * for omitido |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,17 +7,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | window | Integer | &#8594; | ウィンドウ参照番号, または 省略した場合、カレントプロセスの最前面ウィンドウ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 
 
-<!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW はカレントプロセスで[Open window](open-window.md "Open window") や [Open form window](open-form-window.md "Open form window") コマンドで開かれたアクティブウィンドウを閉じます。<!-- END REF-->カスタムウィンドウが開かれていない場合、CLOSE WINDOWは効果を持ちません (システムウィンドウは閉じられません)。CLOSE WINDOW はウィンドウ中でフォームがアクティブであるときに呼び出されても効力を持ちません。CLOSE WINDOWは[Open window](open-window.md "Open window") や [Open form window](open-form-window.md "Open form window") で開いたウィンドウの利用が終了したときに呼び出します。
+<!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW はカレントプロセスで[Open window](../commands/open-window.md "Open window") や [Open form window](../commands/open-form-window.md "Open form window") コマンドで開かれたアクティブウィンドウを閉じます。<!-- END REF-->カスタムウィンドウが開かれていない場合、CLOSE WINDOWは効果を持ちません (システムウィンドウは閉じられません)。CLOSE WINDOW はウィンドウ中でフォームがアクティブであるときに呼び出されても効力を持ちません。CLOSE WINDOWは[Open window](../commands/open-window.md "Open window") や [Open form window](../commands/open-form-window.md "Open form window") で開いたウィンドウの利用が終了したときに呼び出します。
 
-[Open window](open-window.md "Open window")や[Open form window](open-form-window.md "Open form window")で事前に開いたウィンドウを閉じる際には、CLOSE WINDOWにウィンドウ参照番号を渡す必要はありません。CLOSE WINDOWは常にこれらのコマンドで開いた最後のウィンドウを閉じます。
+[Open window](../commands/open-window.md "Open window")や[Open form window](../commands/open-form-window.md "Open form window")で事前に開いたウィンドウを閉じる際には、CLOSE WINDOWにウィンドウ参照番号を渡す必要はありません。CLOSE WINDOWは常にこれらのコマンドで開いた最後のウィンドウを閉じます。
 
 *WinRef*には外部ウィンドウ参照番号を渡すことができます。この引数を渡すと指定した外部ウィンドウが閉じられます。外部ウィンドウに関する詳細は*Open external window*を参照してください。
 
@@ -36,8 +38,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Open form window](open-form-window.md)  
-[Open window](open-window.md)  
+[Open form window](../commands/open-form-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## プロパティ
 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *tabCodecs* {; *tabNoms*}{; *} )<!-- END REF-->
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabCodecs | Text array | &#8592; | Identifiants des codecs d’images disponibles |
 | tabNoms | Text array | &#8592; | Noms des codecs d’images |
 | * | Opérateur | &#8594;  | Retourner la liste des codecs de lecture |
-
+</div>
 <!-- END REF-->
 
 ## Description 

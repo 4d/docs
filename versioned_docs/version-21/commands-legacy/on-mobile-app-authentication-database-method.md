@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Mobile App Authentication database method.Syntax-->**On Mobile App Authentication database method** ( *mobileInfo* ; *status* )<!-- END REF-->
 <!--REF #_command_.On Mobile App Authentication database method.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | mobileInfo | Object | &#8594;  | Information passed by the mobile application |
 | status | Object | &#8592; | Authentication status |
-
+</div>
 <!-- END REF-->
 
 ## Description 

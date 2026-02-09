@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET FRAME.Syntax-->**WP SET FRAME** ( {* ;} *wpArea* ; *frameSelector* {; *idTextBox*} )<!-- END REF-->
 <!--REF #_command_.WP SET FRAME.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, wpArea é um nome de objeto de formulário (string). Se omitido, wpArea e um campo ou variável objeto |
 | wpArea | Text | &#8594;  | nome objeto Form (se * especificado) ou variável objeto 4D Write Pro ou campo (se * for omitido) |
 | frameSelector | Integer | &#8594;  | Frame/quadro onde o cursor é estabelecido |
 | idTextBox | Text | &#8594;  | id da caixa de texto onde o cursor deve ser estabelecido |
-
+</div>
 <!-- END REF-->
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*

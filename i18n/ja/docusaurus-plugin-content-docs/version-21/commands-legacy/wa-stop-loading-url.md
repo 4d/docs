@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA STOP LOADING URL.Syntax-->**WA STOP LOADING URL** ( {* ;} *object* )<!-- END REF-->
 <!--REF #_command_.WA STOP LOADING URL.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
 | object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

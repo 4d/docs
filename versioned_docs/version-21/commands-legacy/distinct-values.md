@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *aField* ; *array* {; *countArray*} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Indexable field to use for data |
 | array | Array | &#8592; | Array to receive field data |
 | countArray | Array integer, Real array | &#8592; | Array to receive count of each value |
-
+</div>
 <!-- END REF-->
 
 ## Description 

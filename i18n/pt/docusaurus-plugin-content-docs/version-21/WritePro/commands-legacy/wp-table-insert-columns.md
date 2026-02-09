@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( objTarget | {*refTabela* ; *numCol*} {; *numColunas*} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table insert columns.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Range ou elemento ou documento 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numCol | Integer | &#8594;  | Número da coluna |
 | numColunas | Integer | &#8594;  | Número de colunas a inserir (valor predefinido = 1) |
 | Resultado | Object | &#8592; | Range/seleção de colunas da tabela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

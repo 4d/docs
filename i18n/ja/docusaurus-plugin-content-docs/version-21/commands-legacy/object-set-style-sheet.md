@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Syntax-->**OBJECT SET STYLE SHEET** ( {* ;} *object* ; *styleSheetName* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET STYLE SHEET.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
 | object | any | &#8594;  | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
 | styleSheetName | Text | &#8594;  | スタイルシート名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

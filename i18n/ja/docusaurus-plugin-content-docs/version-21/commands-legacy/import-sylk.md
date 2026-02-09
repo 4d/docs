@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*aTable* ;} *document* )<!-- END REF-->
 <!--REF #_command_.IMPORT SYLK.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | データを読み込むテーブル, または 省略した場合, デフォルトテーブル |
 | document | Text | &#8594;  | データを読み込むSYLKドキュメント |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

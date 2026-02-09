@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Picture range.Syntax-->**WP Picture range** ( *objCible* : Object ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Picture range.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objCible | Object | &#8594;  | Plage ou élément |
 | Résultat | Object | &#8592; | Plage contenant uniquement les images |
-
+</div>
 <!-- END REF-->
 
 ## Description 

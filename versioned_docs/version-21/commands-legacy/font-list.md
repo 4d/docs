@@ -7,11 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fonts* {; *listType* } )<br/>**FONT LIST** ( *fonts* {; *} )<!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fonts | Text array | &#8592; | Array of font names |
-| listType &#124; * | Integer, Operator | &#8594;  | Font type list to return or * to return font names under macOS |
-
+| listType | Integer | &#8594;  | Font type list to return |
+| * | Operator | &#8594;  | Return font names under macOS |
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *windows* : Array {; *} )<!-- END REF-->
 <!--REF #_command_.WINDOW LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | windows | Array | &#8592; | Array of window reference numbers |
 | * | Operator | &#8594;  | If specified, take floating windows into account If omitted, ignore floating windows |
-
+</div>
 <!-- END REF-->
 
 ## Description 

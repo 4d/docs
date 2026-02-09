@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *targetPath* ; *aliasPath* )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetPath | Text | &#8594;  | Name or access path of the alias/shortcut target |
 | aliasPath | Text | &#8594;  | Name or full pathname for the alias or shortcut |
-
+</div>
 <!-- END REF-->
 
 ## Description 

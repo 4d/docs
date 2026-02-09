@@ -3,6 +3,16 @@ id: updates
 title: リリースノート
 ---
 
+## 4D 21 R3
+
+#### ハイライト
+
+- [`JSON Validate`](../commands/json-validate.md) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
+
+#### 動作の変更
+
+- [`JSON Validate`](../commands/json-validate.md) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
+
 ## 4D 21 R2
 
 [**4D 21 R2 の新機能**](https://blog.4d.com/whats-new-in-4d-21-r2/): 4D 21 R2 の新機能と拡張機能をすべてリストアップしたブログ記事です。

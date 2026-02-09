@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Syntax-->**Process number** ( *name* {; *} ) : Integer<br/>**Process number** ( *id* {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Process number.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | name | Text | &#8594;  | Name of process for which to retrieve the process number |
 | id | Text | &#8594;  | ID of process for which to retrieve the process number |
 | * | Operator |  &#8594;  | Return the process number from the server |
 | Function result | Integer | &#8592; | Process number |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

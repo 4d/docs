@@ -91,9 +91,12 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 
 <!--REF #FolderClass.create().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Boolean|<-|True if the folder was created successfully, false otherwise|
+</div>
 <!-- END REF -->
 
 
@@ -146,12 +149,15 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
 |Result|4D.File|<-|Alias or shortcut reference|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -201,9 +207,12 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |option |Integer|->|Folder deletion option|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -277,11 +286,14 @@ macOS: -45 (The file is locked or the pathname is not correct)
 
 
 <!--REF #FolderClass.moveTo().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|----|---|---|
 |destinationFolder|4D.Folder|->|Destination folder|
 |newName|Text|->|Full name for the moved folder|
 |Result|4D.Folder|<-|Moved folder|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -332,10 +344,13 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the folder|
 |Result|4D.Folder|<-|Renamed folder|
+</div>
 <!-- END REF -->
 
 #### Description

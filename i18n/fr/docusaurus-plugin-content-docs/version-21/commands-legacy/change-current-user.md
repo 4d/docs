@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** {( *utilisateur* ; *motDePasse* )}<!-- END REF-->
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | utilisateur | Text, Integer | &#8594;  | Nom ou Numéro de référence unique de l’utilisateur |
 | motDePasse | Text | &#8594;  | Mot de passe (non crypté) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

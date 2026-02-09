@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *aTable* ; *folderPath* {; *numFiles* {; *fileLimitSize* {; *fieldLimitSize*}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | セレクションを書き出すテーブル |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | numFiles | Integer | &#8594;  | フォルダーごとの最大ファイル数 |
 | fileLimitSize | Integer | &#8594;  | Export.sql ファイルの最大サイズ (KB) |
 | fieldLimitSize | Integer | &#8594;  | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

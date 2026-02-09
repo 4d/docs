@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Day number.Syntax-->**Day number** ( *data* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | data | Date | &#8594; | Data para a qual devolver o número do dia |
 | Resultado | Integer | &#8592; | Número que representa o dia da semana que corresponde a data |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

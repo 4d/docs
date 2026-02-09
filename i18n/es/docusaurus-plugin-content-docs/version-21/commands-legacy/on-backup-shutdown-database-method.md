@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Backup Shutdown database method.Syntax-->$1 -> Método base On Backup Shutdown<!-- END REF-->
 <!--REF #_command_.On Backup Shutdown database method.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $1 | Entero largo | &#8592; | 0 = backup ejecutado correctamente; otro valor = error, interrumpido por el usuario o código devuelto por On Backup Startup |
-
+</div>
 <!-- END REF-->
 
 ## 

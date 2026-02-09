@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Windows Alt down.Syntax-->**Windows Alt down**  : Boolean<!-- END REF-->
 <!--REF #_command_.Windows Alt down.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Boolean | &#8592; | WindowsのAltキーのステータス ( Macintoshの場合は、optionキー) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

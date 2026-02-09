@@ -158,9 +158,12 @@ This property is **read-only**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 
@@ -189,10 +192,13 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 
 <!-- REF #SignalClass.wait().Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |timeout|Real|->|Maximum wait time in seconds|
 |Result|Boolean|<-|State of the `.signaled` property|
+</div>
 <!-- END REF -->
 
 

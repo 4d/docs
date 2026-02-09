@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESUME TRANSACTION.Syntax-->**RESUME TRANSACTION**<!-- END REF-->
 <!--REF #_command_.RESUME TRANSACTION.Params-->
+<div class="no-index">
+
 | Does not require any parameters |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Description 

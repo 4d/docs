@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Time string.Syntax-->**Time string** ( *seconds* : Integer, Time ) : Text<!-- END REF-->
 <!--REF #_command_.Time string.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | seconds | Integer, Time | &#8594;  | Seconds from midnight |
 | Function result | Text | &#8592; | Time as a string in 24-hour format |
-
+</div>
 <!-- END REF-->
 
 ## Description 

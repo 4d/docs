@@ -7,17 +7,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *mensaje* : Text )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | mensaje | Text | &#8594; | Mensaje a mostrar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 
 
-<!--REF #_command_.MESSAGE.Summary-->El comando MESSAGE generalmente se utiliza para informar al usuario sobre alguna actividad.<!-- END REF--> Muestra *mensaje* en la pantalla en una ventana de mensaje especial que se abre y cierra cada vez que usted llama a MESSAGE, a menos que usted trabaje con una ventana que abrió previamente utilizando [Open window](open-window.md) (ver los siguientes detalles). El mensaje es temporal y se borra tan pronto como se muestre un formulario o se detenga la ejecución del método. Si se ejecuta otro comando MESSAGE, el mensaje anterior se borra.
+<!--REF #_command_.MESSAGE.Summary-->El comando MESSAGE generalmente se utiliza para informar al usuario sobre alguna actividad.<!-- END REF--> Muestra *mensaje* en la pantalla en una ventana de mensaje especial que se abre y cierra cada vez que usted llama a MESSAGE, a menos que usted trabaje con una ventana que abrió previamente utilizando [Open window](../commands/open-window.md) (ver los siguientes detalles). El mensaje es temporal y se borra tan pronto como se muestre un formulario o se detenga la ejecución del método. Si se ejecuta otro comando MESSAGE, el mensaje anterior se borra.
 
-Si se abre una ventana con [Open window](open-window.md "Open window"), todas las llamadas posteriores al comando MESSAGE muestran los mensajes en esa ventana. La ventana se comporta como un terminal:
+Si se abre una ventana con [Open window](../commands/open-window.md "Open window"), todas las llamadas posteriores al comando MESSAGE muestran los mensajes en esa ventana. La ventana se comporta como un terminal:
 
 * Los mensajes sucesivos no borran los mensajes anteriores cuando se muestran en la ventana, se concadenan en mensajes existentes.
 * Si un mensaje es más largo que la ventana, 4D inserta automáticamente un retorno a la línea.
@@ -28,7 +30,7 @@ Si se abre una ventana con [Open window](open-window.md "Open window"), todas la
 * La ventana es sólo una ventana de salida y su contenido no puede ser rediseñado cuando otras ventanas se colocan sobre ella.
 * Puede modificar la fuente y el tamaño de los caracteres mostrados en la ventana a través de la página "Interfaz" en las Propiedades de la base.
 
-**Nota:** **MESSAGE** es compatible con el comando [Open form window](open-form-window.md); sin embargo, en este contexto, el segundo parámetro *\** de [Open form window](open-form-window.md), que guarda el tamaño y la posición de la ventana, no es compatible.
+**Nota:** **MESSAGE** es compatible con el comando [Open form window](../commands/open-form-window.md); sin embargo, en este contexto, el segundo parámetro *\** de [Open form window](../commands/open-form-window.md), que guarda el tamaño y la posición de la ventana, no es compatible.
 
 ## Ejemplo 1 
 
@@ -48,7 +50,7 @@ La siguiente ventana aparece y desaparece cada vez que se llama MESSAGE:
 
 ## Ejemplo 2 
 
-Con el fin de evitar la ventana "titilante", puede mostrar los mensajes en una ventana abierta utilizando [Open window](open-window.md "Open window"), como en este ejemplo:
+Con el fin de evitar la ventana "titilante", puede mostrar los mensajes en una ventana abierta utilizando [Open window](../commands/open-window.md "Open window"), como en este ejemplo:
 
 ```4d
  Open window(50;50;500;250;5;"Operación en progreso")
@@ -111,7 +113,7 @@ El resultado es el siguiente (en Windows):
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## Propiedades
 

@@ -9,12 +9,17 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                           |                  |
-| ---------- | ------- | --------------------------- | --------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro          |                  |
-| name       | Text    | ->                          | Nome do intervalo nomeado                           |                  |
-| scope      | Integer | ->                          | Âmbito alvo (padrão=folha atual) |                  |
-| Resultados | Object  | <- | Definição da fórmula nomeada ou intervalo nomeado   | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                           |
+| ---------- | ------- | --------------------------- | --------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro          |
+| name       | Text    | ->                          | Nome do intervalo nomeado                           |
+| scope      | Integer | ->                          | Âmbito alvo (padrão=folha atual) |
+| Resultados | Object  | <- | Definição da fórmula nomeada ou intervalo nomeado   |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

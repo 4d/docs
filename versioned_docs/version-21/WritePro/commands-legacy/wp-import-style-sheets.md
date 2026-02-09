@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Syntax-->**WP IMPORT STYLE SHEETS** ( *targetDoc* ; *sourceDoc* )<!-- END REF-->
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetDoc | Object | &#8594;  | 4D Write Pro document to receive style sheets |
 | sourceDoc | Object | &#8594;  | 4D Write Pro document to get style sheets from |
-
+</div>
 <!-- END REF-->
 
 ## Description 

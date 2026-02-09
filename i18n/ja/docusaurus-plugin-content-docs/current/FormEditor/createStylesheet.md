@@ -206,20 +206,20 @@ text[text|=Hello]
 
 ### メディアクエリ
 
-Media queries allow you to apply styles based on specific conditions. 4D supports media queries for **color schemes** and **platform themes**.
+メディアクエリを使用すると、特定の条件に基づいてスタイルを適用することができるようになります。 4D では、**カラースキーム**と**プラットフォームテーマ**に対してメディアクエリをサポートしています。
 
 メディアクエリは、メディア特性と値によって構成されます (例: `<media feature>:<value>` )。
 
-Available media features and values:
+利用可能なメディア機能と値:
 
-| Media features         | 値                                              | 説明                                                                                                                                                                       |
-| ---------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                      |
-| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Platform theme to use (Windows). For more information on **fluent-ui** theme, refer to [this section](./forms.md#fluent-ui-rendering) |
+| メディア機能                 | 値                                              | 説明                                                                                                                                  |
+| ---------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | 使用するカラースキーム                                                                                                                         |
+| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | 使用するプラットフォームテーマ(Windows のみ)。 **fluent-ui** テーマについてのより詳細な情報については、 [こちらの章](./forms.md#fluent-ui-レンダリング) を参照してください。 |
 
 :::note
 
-Color schemes are not supported with **win-classic** platform theme.
+カラースキームは **win-classic** プラットフォームテーマではサポートされていません。
 
 :::
 
@@ -246,19 +246,19 @@ Color schemes are not supported with **win-classic** platform theme.
 ##### 例題 2
 
 ```css
-/* Default style (all themes and modes) */
+/* デフォルトのスタイル (全てのテーマとモード) */
 .textLabel {
     fontFamily: "Segoe UI";
 }
  
-/* Fluent UI theme*/
+/* Fluent UI テーマ*/
 @media (form-theme: fluent-ui) {
     .textLabel {
         stroke: #2A2A2A;
         fontSize: 14px;
     }
  
-    /* dark mode */
+    /* ダークモード */
     @media (prefers-color-scheme: dark) {
         .textLabel {
             stroke: #E0E0E0;
@@ -266,7 +266,7 @@ Color schemes are not supported with **win-classic** platform theme.
     }
 }
  
-/* Windows classic theme */
+/* Windows classic テーマ */
 @media (form-theme: win-classic) {
     .textLabel {
         stroke: #000000;
@@ -389,7 +389,7 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 ファイルパスは相対パスと絶対パスが使えます。
 
 - 相対パスの基準は JSON フォームファイルです。
-- For security reasons, only [filesystem paths](../Concepts/paths.md#filesystem-pathnames) are accepted for absolute paths (*e.g.*, "/RESOURCES", "/DATA").
+- セキュリティ上の理由から、絶対パスとして受け入れ可能なのは[filesystem パス](../Concepts/paths.md#ファイルシステムパス名) (*例:* "/RESOURCES"、 "/DATA" など)だけです。
 
 :::
 

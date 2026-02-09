@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTable* : Table ; *jsonArray* : Text )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | 4D table into which elements are copied |
 | jsonArray | Text | &#8594;  | Array of objects in JSON |
-
+</div>
 <!-- END REF-->
 
 ## Description 

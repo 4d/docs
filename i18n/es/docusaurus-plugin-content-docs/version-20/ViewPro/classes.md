@@ -266,7 +266,7 @@ La propiedad `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn.S
 **.theme**: [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme**: Text<!-- END REF -->
 
 
-La propiedad `.theme` <!-- REF #TableTheme.theme.Summary -->define el tema de una tabla<!-- END REF -->. If Text: name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+La propiedad `.theme` <!-- REF #TableTheme.theme.Summary -->define el tema de una tabla<!-- END REF -->. Si Text: nombre de un [tema SpreadJS nativo](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 

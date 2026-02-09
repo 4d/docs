@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomeObj* : Text array {; *numPagina* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomeObj | Text array | &#8594; | Array de nomes de objeto na sua ordem de entrada esperada |
 | numPagina | Integer | &#8594; | Números de página para estabelecer a ordem de entrada (página atual se omitido) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

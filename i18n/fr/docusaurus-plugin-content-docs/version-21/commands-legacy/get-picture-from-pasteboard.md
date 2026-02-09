@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *image* )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | image | Picture | &#8592; | Image extraite du conteneur de données |
-
+</div>
 <!-- END REF-->
 
 ## Description 

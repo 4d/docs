@@ -9,7 +9,7 @@ A tout moment dans vos projets 4D, vous pouvez être amené à formater des vale
 
 - la commande [`String`](../commands/string.md),
 - les commandes [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) et [`OBJECT Get format`](../commands-legacy/object-get-format.md),
-- les propriétés de format de date et d'heure pour les objets de formulaire, disponibles dans la liste des propriétés ou dans les propriétés JSON [`dateFormat`](../FormObjects/properties_Display.md/#date-format) et [`timeFormat`](../FormObjects/properties_Display.md/#time-format).
+- les propriétés de format de date et d'heure pour les objets de formulaire, disponibles dans la liste des propriétés ou dans les propriétés JSON [`dateFormat`](../FormObjects/properties_Display.md#date-format) et [`timeFormat`](../FormObjects/properties_Display.md#time-format).
 
 ## Liste des motifs
 

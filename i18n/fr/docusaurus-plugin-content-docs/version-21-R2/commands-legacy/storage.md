@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Storage.Syntax-->**Storage**  : Object<!-- END REF-->
 <!--REF #_command_.Storage.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Object | &#8592; | Catalogue des objets et collections partagé(e)s enregistré(e)s dans Storage |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,15 +5,17 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table ;}{; ...(*aField* : Field {; >,<}) } {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table ;}{; ...(*aField* : Field {; *> or <*}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | セレクションをソートするテーブル, または 省略した場合、デフォルトテーブル |
 | aField | Field | &#8594; | 各レベルのソートするフィールド |
 | > または < | 演算子 | &#8594; | 各レベルのソート方向: >: 昇順, または <: 降順 |
 | * | 演算子 | &#8594; | ソート継続フラグ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

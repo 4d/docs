@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) : Object<!-- END REF-->
 <!--REF #_command_.Session storage.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | id | Text | &#8594;  | Unique identifier (UUID) of the session  |
 | Function result | Object | &#8592; | Storage object of the session |
-
+</div>
 <!-- END REF-->
 
 <details><summary>History</summary>

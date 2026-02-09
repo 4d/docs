@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | printSettings | Blob | &#8592; | 現在のプリント設定 |
 | 戻り値 | Integer | &#8592; | 1 = 処理に成功, 0 = カレントのプリンターがない |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

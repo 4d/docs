@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET TEXT.Syntax-->**WP SET TEXT** ( *targetObj* ; *newText* ; *textPosition* {; *rangeUpdate*} )<!-- END REF-->
 <!--REF #_command_.WP SET TEXT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | newText | Text | &#8594;  | Text to insert |
 | textPosition | Number | &#8594;  | Insertion position (replace, before, after) |
 | rangeUpdate | Number | &#8594;  | Includes or excludes the inserted content within the range |
-
+</div>
 <!-- END REF-->
 
 ## Description 

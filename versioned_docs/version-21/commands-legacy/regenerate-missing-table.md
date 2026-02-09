@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *tableName* )<!-- END REF-->
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableName | Text | &#8594;  | Name of missing table to be regenerated |
-
+</div>
 <!-- END REF-->
 
 ## Description 

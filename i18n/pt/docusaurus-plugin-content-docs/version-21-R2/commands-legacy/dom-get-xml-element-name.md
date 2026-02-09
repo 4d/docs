@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Syntax-->**DOM GET XML ELEMENT NAME** ( *refElemento* : Text ; *nomeElemento* : Variable )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refElemento | Text | &#8594; | Referência de elemento XML |
 | nomeElemento | Variable | &#8592; | Nome do elemento |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

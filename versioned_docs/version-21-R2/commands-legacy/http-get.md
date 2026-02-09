@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | url | Text | &#8594;  | URL to which to send the request |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | headerValues | Text array | &#8596;  | *in:* Header values of the request<br/> *out:* Returned header values  |
 | * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
 | Function result | Integer | &#8592; | HTTP status code |
-
+</div>
 <!-- END REF-->
 
 :::info Compatibility

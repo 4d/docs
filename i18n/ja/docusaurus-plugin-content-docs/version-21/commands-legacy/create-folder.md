@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *folderPath* {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | folderPath | Text | &#8594;  | 作成する新しいフォルダーのパス名 |
 | * | 演算子 | &#8594;  | パス中に存在しないフォルダーを作成する |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

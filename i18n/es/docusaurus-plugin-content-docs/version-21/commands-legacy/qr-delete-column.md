@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* ; *numColumna* )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Referencia del área |
 | numColumna | Integer | &#8594;  | Número de columna |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

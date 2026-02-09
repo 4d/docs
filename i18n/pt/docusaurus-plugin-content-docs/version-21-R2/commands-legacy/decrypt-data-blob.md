@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobDecriptografar* : Blob ; objetoChave / passefrase ; *salt* : Integer ; *BLOBdecriptografado* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | blobDecriptografar | Blob | &#8594; | Blob que vai ser decriptografado |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | salt | Integer | &#8594; | Salt (ou sal/dados aleatórios) para o algoritmo de criptografia |
 | Blobdecriptografado | Blob | &#8592; | BLOB que foi decriptografado |
 | Resultado | Boolean | &#8592; | True se a descrição tiver sido realizada corretamente. Senão False |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

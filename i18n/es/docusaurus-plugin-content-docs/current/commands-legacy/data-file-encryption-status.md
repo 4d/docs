@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( rutaEstruct , rutaDatos ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaEstruct | Text | &#8594; | Nombre de ruta del archivo de estructura 4D a verificar |
 | rutaDatos | Text | &#8594; | Nombre de ruta del archivo de datos 4D a verificar |
 | Resultado | Object | &#8592; | Información sobre el cifrado del archivo de datos y de cada tabla |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

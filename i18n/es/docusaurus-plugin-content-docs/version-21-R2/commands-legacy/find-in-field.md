@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in field.Syntax-->**Find in field** ( *campoObjetivo* : Field ; *valor* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in field.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campoObjetivo | Field | &#8594; | Campo objetivo en el cual ejecutar la búsqueda. |
 | valor | Field, Variable | &#8596; | *in:* Value to search<br/>*out:* Value found |
 | Resultado | Integer | &#8592; | Número del registro encontrado o -1 si no se encontró ningún registro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

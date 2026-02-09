@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *sqlStatement* : Text {; *...boundObj* : Variable, Field} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | sqlStatement | Text | &#8594;  | SQL command to execute |
 | boundObj | Variable, Field | &#8592; | Receives result (if necessary) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -5,13 +5,16 @@ slug: /commands/table-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table name.Syntax-->**Table name** ( *tableNum* : Integer, Pointer ) : Text<br/>**Table name** ( *tablePtr* : Integer, Pointer ) : Text<!-- END REF-->
+<!--REF #_command_.Table name.Syntax-->**Table name** ( *tableNum* : Integer ) : Text<br/>**Table name** ( *tablePtr* : Pointer ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; tablePtr | Integer, Pointer | &#8594;  | Table number or Table pointer |
+| tableNum | Integer | &#8594;  | Table number |
+| tablePtr | Pointer | &#8594;  | Table pointer |
 | Function result | Text | &#8592; | Name of the table |
-
+</div>
 <!-- END REF-->
 
 ## Description 

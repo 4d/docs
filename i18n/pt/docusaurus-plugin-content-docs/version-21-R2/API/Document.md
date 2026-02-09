@@ -599,9 +599,9 @@ Em *breakMode*, você pode passar um número indicando o processamento a aplicar
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Não processado                                                                                                                                                                                                                                           |
 | `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operacional: CR (retorno de carro) sob macOS, CRLF (retorno do carro + salto de linha) em Windows |
-| `Documento com CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                                        |
-| `Documento com CR`            | 3     | Quebras de linha são convertidas para o formato macOS: CR (retorno de carro)                                                                                                                                          |
-| `Documento com LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                                  |
+| `Document with CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                                        |
+| `Document with CR`            | 3     | Quebras de linha são convertidas para o formato macOS: CR (retorno de carro)                                                                                                                                          |
+| `Document with LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                                  |
 
 Por padrão, ao omitir o parâmetro *breakMode*, as quebras de linha são processadas no modo nativo (1).
 

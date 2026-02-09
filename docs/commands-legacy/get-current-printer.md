@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get current printer.Syntax-->**Get current printer**  : Text<!-- END REF-->
 <!--REF #_command_.Get current printer.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Name of the current printer |
-
+</div>
 <!-- END REF-->
 
 ## Description 

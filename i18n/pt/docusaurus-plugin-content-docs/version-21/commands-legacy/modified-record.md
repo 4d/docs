@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Modified record.Syntax-->**Modified record** {( *tabela* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabela | Table | &#8594;  | Tabela a testar se registro atual foi modificada ou tabela padrão, se omitido |
 | Resultado | Boolean | &#8592; | Registro foi modificado (True) ou Registro não foi modificado (False) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

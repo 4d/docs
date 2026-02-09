@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* {; *array2* ; ... ; *arrayN*}{; > or <} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Arrays to sort |
-| > or < | Operator | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
-
+| > or < | Comparator | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
+</div>
 <!-- END REF-->
 
 ## Description 

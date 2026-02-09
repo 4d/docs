@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( {* ;} *objeto* ; *nuevTexto* {; *inicioSel* {; *finSel*}} )<!-- END REF-->
 <!--REF #_command_.ST SET TEXT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nuevText | Text | &#8594;  | Texto a insertar |
 | inicioSel | Integer | &#8594;  | Inicio de la selección |
 | finSel | Integer | &#8594;  | Fin de la selección |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

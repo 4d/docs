@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* : Text ; *size* : Real ; *used* : Real ; *free* : Real )<!-- END REF-->
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | volume | Text | &#8594;  | Volume name |
 | size | Real | &#8592; | Volume size expressed in bytes |
 | used | Real | &#8592; | Used space expressed in bytes |
 | free | Real | &#8592; | Free space expressed in bytes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *pictureObject* ; element_ID ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | attribName | Text | &#8594;  | Attribute to be specified |
 | attribValue | Text, Integer | &#8594;  | New value of attribute |
 | * | Operator | &#8594;  | If passed = modify SVG image itself |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -42,36 +44,38 @@ Note that for technical reasons, the attributes of certain elements as well as c
 
 **Elements whose attributes can be modified**   
 
-| svg                                                                                              | Restrictions :                                                                                                           |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| \- "width" and "height" cannot be modified(1)                                                    |                                                                                                                          |
-| \- "viewBox" can only be modified if "width" and "height" are specified in the original document |                                                                                                                          |
-| g                                                                                                |                                                                                                                          |
-| defs                                                                                             |                                                                                                                          |
-| use                                                                                              |                                                                                                                          |
-| filter                                                                                           | Restriction: fe\_xxx child elements cannot be modified                                                                   |
-| circle                                                                                           |                                                                                                                          |
-| ellipse                                                                                          |                                                                                                                          |
-| line                                                                                             |                                                                                                                          |
-| polyline                                                                                         |                                                                                                                          |
-| polygon                                                                                          |                                                                                                                          |
-| path                                                                                             |                                                                                                                          |
-| rect                                                                                             |                                                                                                                          |
-| text, tspan, textArea                                                                            | The specific "4d-text" attribute is used to modify the text of a "text", "tspan" or "textArea" element (see the example) |
-| Image                                                                                            |                                                                                                                          |
+|Elements|Comments|
+|---|----|
+| svg   | Restrictions: <ul><li>"width" and "height" cannot be modified(1)</li><li>"viewBox" can only be modified if "width" and "height" are specified in the original document </li></ul>| |
+| g |  |
+|defs |  |
+| use| |
+| filter  | Restriction: fe\_xxx child elements cannot be modified |
+| circle  |  |
+|ellipse  | |
+| line   | |
+| polyline ||
+| polygon  |  |
+| path |  |
+| rect | |
+| text, tspan, textArea  | The specific "4d-text" attribute is used to modify the text of a "text", "tspan" or "textArea" element (see the example) |
+| Image  |                                                                                                                          |
 
 **Elements whose attributes cannot be modified**   
 
+|Elements|Comments|
+|---|----|
 | linearGradient, radialGradient, Stop, solidColor, marker, symbol, clipPath, filter et les éléments commençant par fe, style, pattern | This group designates all the elements that can be referenced or contained in an element that can be referenced. This means that it is not possible, for example, to redefine the attributes of a gradient (but it is possible to change the gradient used). Similarly, to change a black color marker to a red marker, it is necessary to define both markers in the SVG document (one black and one red) and to select one of them. It is not possible either for example to modify the color of a rectangle if its parent is a symbol or marker element |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 
 **Attributes that cannot be modified**  
 
-| id or xml:id       |                                                      |
-| ------------------ | ---------------------------------------------------- |
-| lang or xml:lang   |                                                      |
-| class or xml:class |                                                      |
-| width, height      | Concerns the attributes of the 'svg' element only(1) |
+|Attributes|Comments|
+|---|----|
+| id or xml:id | |
+| lang or xml:lang   |   |
+| class or xml:class |  |
+| width, height   | Concerns the attributes of the 'svg' element only(1) |
 
 (1) These attributes cannot be modified because they define and structure the resulting image. The *width* and *height* attributes of the *svg* element are used to define the initial dimensions of the picture in 4D and these dimensions must remain constant after the picture is created (it is however possible to modify the dimensions of the resulting picture with the [TRANSFORM PICTURE](transform-picture.md) command of 4D).
 

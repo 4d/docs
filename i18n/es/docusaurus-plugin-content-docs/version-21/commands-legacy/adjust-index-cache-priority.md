@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Syntax-->**ADJUST INDEX CACHE PRIORITY** ( *campo* ; *prioridad* )<!-- END REF-->
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campo | Field | &#8594;  | Campo cuyo valor de prioridad de índice(s) debe ajustarse |
 | prioridad | Integer | &#8594;  | Valor de prioridad de la caché para los índices de campo |
-
+</div>
 <!-- END REF-->
 
 ## Modo experto 

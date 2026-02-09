@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Backup Startup database method.Syntax-->**Método base On Backup Startup** : Integer<!-- END REF-->
 <!--REF #_command_.On Backup Startup database method.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | 0 = backup autorizado; valor diferente de 0 = backup no autorizado |
-
+</div>
 <!-- END REF-->
 
 ## 

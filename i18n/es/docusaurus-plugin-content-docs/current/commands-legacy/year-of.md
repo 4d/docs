@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Year of.Syntax-->**Year of** ( *fecha* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Year of.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | fecha | Date | &#8594; | Fecha para la cual devolver el año |
 | Resultado | Integer | &#8592; | Número indicando el año de la fecha |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

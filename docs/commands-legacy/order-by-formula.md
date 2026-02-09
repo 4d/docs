@@ -5,14 +5,16 @@ slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY FORMULA.Syntax-->***ORDER BY FORMULA** ( *aTable* : Table ; *formula* : Expression {; >,<} {; ...(*formula* : Expression {; >,<})} )<!-- END REF-->
+<!--REF #_command_.ORDER BY FORMULA.Syntax-->***ORDER BY FORMULA** ( *aTable* : Table ; *formula* : Expression {; *>_or_<* : Comparator} {; ...(*formula* : Expression {; *>_or_<* : Comparator})} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records |
 | formula | Expression | &#8594;  | Expression on which to set the order for each level (can be of type Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean) |
-| > or < | Operator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
-
+| >_or_< | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+</div>
 <!-- END REF-->
 
 ## Description 

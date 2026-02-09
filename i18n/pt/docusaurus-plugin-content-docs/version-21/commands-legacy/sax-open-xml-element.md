@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *documento* ; *etiqueta* {; *nomeAtrib* ; *valorAtributo*} {; *nomeAtrib2* ; *valorAtributo2* ; ... ; *nomeAtribN* ; *valorAtributoN*} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Time | &#8594;  | Referência do documento aberto |
 | etiqueta | Text | &#8594;  | Nome do elemento a abrir |
 | nomeAtrib | Text | &#8594;  | Nome de atributo |
 | valorAtributo | Text | &#8594;  | Valor do atributo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

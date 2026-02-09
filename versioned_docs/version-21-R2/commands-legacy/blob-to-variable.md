@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB TO VARIABLE.Syntax-->**BLOB TO VARIABLE** ( *blob* : Blob ; *variable* : Variable {; *offset* : Integer} )<!-- END REF-->
 <!--REF #_command_.BLOB TO VARIABLE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB containing 4D variables |
 | variable | Variable | &#8592; | Variable to write with BLOB contents |
 | offset | Integer | &#8596;  | Position of variable within BLOB |
 | ||| Position of following variable within BLOB |
-
+</div>
 <!-- END REF-->
 
 ## Description 

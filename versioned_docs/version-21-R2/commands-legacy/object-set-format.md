@@ -5,14 +5,16 @@ slug: /commands/object-set-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *object* : Text ; *displayFormat* : Text )<br/>**OBJECT SET FORMAT** ( *object* : Field, Variable ; *displayFormat* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *object* : Text ; *displayFormat* : Text )<br/>**OBJECT SET FORMAT** ( *object* : Variable, Field ; *displayFormat* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | any | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| object | Text, Field, Variable | &#8594;  | Object Name (if * is specified), or Field or Variable (if * is omitted) |
 | displayFormat | Text | &#8594;  | New display format for the object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

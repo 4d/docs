@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *laTable* ; *formule* )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table dans laquelle appliquer la formule |
 | formule | Expression | &#8594;  | Ligne de code ou méthode |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trigger event.Syntax-->**Trigger event**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger event.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | 0=Hors de tout événement de trigger, 1=Sauvegarde d'un nouvel enregistrement, 2=Sauvegarde d'un enregistrement existant, 3=Suppression d'un enregistrement |
-
+</div>
 <!-- END REF-->
 
 ## Description 

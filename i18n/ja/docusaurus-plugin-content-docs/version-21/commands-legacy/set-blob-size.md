@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *BLOB* ; *size* {; *filler*} )<!-- END REF-->
 <!--REF #_command_.SET BLOB SIZE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOBフィールドまたは変数 |
 | size | Integer | &#8594;  | BLOBの新しいサイズ |
 | filler | Integer | &#8594;  | 埋め込み文字のASCIIコード |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

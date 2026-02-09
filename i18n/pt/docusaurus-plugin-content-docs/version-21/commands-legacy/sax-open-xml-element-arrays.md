@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax-->**SAX OPEN XML ELEMENT ARRAYS** ( *documento* ; *etiqueta* {; *atribNomesArray* ; *attribValuesArray*} {; *atribNomesArray2* ; *attribValuesArray2* ; ... ; *atribNomesArrayN* ; *attribValuesArrayN*} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | documento | Time | &#8594;  | Referência do documento aberto |
 | etiqueta | Text | &#8594;  | Nome do elemento a abrir |
 | atribNomesArray | Text array | &#8594;  | Array de nomes de atributo |
 | attribValuesArray | Text array, Integer array, Date array, Real array, Picture array, Boolean array | &#8594;  | Array of attribute values |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

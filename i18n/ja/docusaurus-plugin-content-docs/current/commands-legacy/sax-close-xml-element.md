@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Syntax-->**SAX CLOSE XML ELEMENT** ( *document* : Time )<!-- END REF-->
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | document | Time | &#8594; | 開かれたドキュメントの参照 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

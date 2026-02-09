@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* : Integer, Text ; *itemPos* : 演算子, 倍長整数 ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**GET LIST ITEM** ( {* ;} *list* : Integer, Text ; * ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | itemText | Text | &#8592; | リスト項目テキスト |
 | sublist | Integer | &#8592; | サブリストリスト参照番号 (サブリストがある場合) |
 | expanded | Boolean | &#8592; | サブリストが添付されている場合: TRUE = サブリストは現在展開されている FALSE = サブリストは折りたたまれている |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

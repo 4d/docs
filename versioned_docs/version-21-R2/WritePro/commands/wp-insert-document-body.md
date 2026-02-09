@@ -6,6 +6,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert document body.Syntax-->**WP Insert document body** ( *targetObj* : Object ; *wpDoc* : Object ; *mode* : Integer {; *rangeUpdate* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Insert document body.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -13,7 +15,7 @@ displayed_sidebar: docs
 | mode | Integer | &#8594;  | Insertion mode |
 | rangeUpdate | Integer | &#8594;  | Range update mode |
 | Function result | Object | &#8592; | Text range object referencing the inserted document body |
-
+</div>
 <!-- END REF-->
 
 ## Description 

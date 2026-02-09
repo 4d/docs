@@ -7,13 +7,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( {* ;} *object* ; *tableNum* {; *highlightName*} )<br/>**LISTBOX SET TABLE SOURCE** ( {* ;} *object* ; *selName* {; *highlightName*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
-| tableNum &#124; selName | Integer, Text | &#8594;  | Number of table whose current selection is to be used or Named selection to be used |
+| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
+| tableNum | Text | &#8594;  | Number of table whose current selection is to be used |
+| selName | Integer | &#8594;  | Named selection to be used |
 | highlightName | Text | &#8594;  | Name of highlight set |
-
+</div>
 <!-- END REF-->
 
 ## Description 

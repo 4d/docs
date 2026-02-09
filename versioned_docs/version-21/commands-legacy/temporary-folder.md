@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Temporary folder.Syntax-->**Temporary folder**  : Text<!-- END REF-->
 <!--REF #_command_.Temporary folder.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Function result | Text | &#8592; | Pathname to temporary folder |
-
+</div>
 <!-- END REF-->
 
 ## Description 

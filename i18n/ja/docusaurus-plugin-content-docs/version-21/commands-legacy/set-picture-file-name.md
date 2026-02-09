@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *picture* ; *fileName* )<!-- END REF-->
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | picture | Picture | &#8594;  | デフォルト名を設定するピクチャー |
 | fileName | Text | &#8594;  | デフォルトピクチャー名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

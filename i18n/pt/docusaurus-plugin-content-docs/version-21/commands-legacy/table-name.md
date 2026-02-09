@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabela* ) : Text<br/>**Table name** ( *pontTabela* ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#8594;  | Número da tabela ou ponteiro a tabela |
 | Resultado | Text | &#8592; | Nome da tabela |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

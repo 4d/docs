@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** ({ *cursor* : Integer })<!-- END REF-->
 <!--REF #_command_.SET CURSOR.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | cursor | Integer | &#8594; | Número de resource de cursor |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get body.Syntax-->**WP Get body** ( *wpDoc* : Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get body.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
 | Resultado | Object | &#8592; | Cuerpo 4D Write Pro |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

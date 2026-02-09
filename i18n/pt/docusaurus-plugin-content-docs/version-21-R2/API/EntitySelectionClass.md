@@ -354,7 +354,7 @@ Se quisermos ter uma seleção de empregados chamados "Jones" que morem em Nova 
 | Parâmetro  | Tipo                       |                             | Descrição                     |
 | ---------- | -------------------------- | :-------------------------: | ----------------------------- |
 | index      | Integer                    |              ->             | Índice da entidade a devolver |
-| Resultados | 4D. Entity | <- | A entidade nesse índice       |
+| Resultados | 4D. Entity | <- | The entity at that index      |
 
 <!-- END REF -->
 
@@ -396,10 +396,10 @@ $emp2:=$employees.at(-3) //começando do final, 3ª entidade
 
 <!-- REF #EntitySelectionClass.average().Params -->
 
-| Parâmetro     | Tipo |                             | Descrição                                                                                                                                                |
-| ------------- | ---- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributePath | Text |              ->             | Rota do atributo que se utilizará para o cálculo                                                                                                         |
-| Resultados    | Real | <- | Media aritmética (média) dos valores das entidades para o atributo (Não se define para uma entity selection vazia) |
+| Parâmetro     | Tipo |                             | Descrição                                                                                                                        |
+| ------------- | ---- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------- |
+| attributePath | Text |              ->             | Rota do atributo que se utilizará para o cálculo                                                                                 |
+| Resultados    | Real | <- | Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection) |
 
 <!-- END REF -->
 
@@ -501,10 +501,10 @@ $sel2:=$sel.clean()
 
 <!-- REF #EntitySelectionClass.contains().Params -->
 
-| Parâmetro  | Tipo                       |                             | Descrição                                                     |
-| ---------- | -------------------------- | :-------------------------: | ------------------------------------------------------------- |
-| entity     | 4D. Entity |              ->             | Entidade a ser avaliada                                       |
-| Resultados | Parâmetros                 | <- | Truse se a entidade pertencer à entity selection, senão False |
+| Parâmetro  | Tipo                       |                             | Descrição                                                      |
+| ---------- | -------------------------- | :-------------------------: | -------------------------------------------------------------- |
+| entity     | 4D. Entity |              ->             | Entidade a ser avaliada                                        |
+| Resultados | Parâmetros                 | <- | True if the entity belongs to the entity selection, else False |
 
 <!-- END REF -->
 
@@ -601,7 +601,7 @@ Se quisermos encontrar o número total de empregados para uma empresa sem contar
 | Parâmetro  | Tipo                                |                             | Descrição                                                                   |
 | ---------- | ----------------------------------- | :-------------------------: | --------------------------------------------------------------------------- |
 | option     | Integer                             |              ->             | `ck shared`: retorna uma seleção de entidade compartilhável |
-| Resultados | 4D. EntitySelection | <- | Cópia da entity selection                                                   |
+| Resultados | 4D. EntitySelection | <- | Copy of the entity selection                                                |
 
 <!-- END REF -->
 
@@ -668,7 +668,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 | ------------- | ---------- | :-------------------------: | ----------------------------------------- |
 | attributePath | Text       |              ->             | Rota do atributo cujos valores quer obter |
 | options       | Integer    |              ->             | `dk diacritical`, `dk count values`       |
-| Resultados    | Collection | <- | Coleção apenas com valores distintos      |
+| Resultados    | Collection | <- | Collection with only distinct values      |
 
 <!-- END REF -->
 
@@ -752,7 +752,7 @@ $jobs:=ds. Employee.all().distinct("jobName";dk count values)
 | Parâmetro  | Tipo       |                             | Descrição                                                 |
 | ---------- | ---------- | :-------------------------: | --------------------------------------------------------- |
 | atributo   | Text       |              ->             | Nome do atributo do objecto cujos caminhos pretende obter |
-| Resultados | Collection | <- | Nova colecção com caminhos distintos                      |
+| Resultados | Collection | <- | New collection with distinct paths                        |
 
 <!-- END REF -->
 
@@ -1076,7 +1076,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -1351,7 +1351,7 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 | Parâmetro     | Tipo |                             | Descrição                                        |
 | ------------- | ---- | :-------------------------: | ------------------------------------------------ |
 | attributePath | Text |              ->             | Rota do atributo que se utilizará para o cálculo |
-| Resultados    | any  | <- | Menor valor do atributo                          |
+| Resultados    | any  | <- | Lowest value of attribute                        |
 
 <!-- END REF -->
 
@@ -1547,7 +1547,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 | ----------- | ----------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
 | pathString  | Text                                |              ->             | Rota(s) de atributos e instruções de classificação para a entity selection |
 | pathObjects | Collection                          |              ->             | Coleção de objetos criterio                                                                   |
-| Resultados  | 4D. EntitySelection | <- | Nova entity selection na ordem especificada                                                   |
+| Resultados  | 4D. EntitySelection | <- | New entity selection in the specified order                                                   |
 
 <!-- END REF -->
 
@@ -2119,7 +2119,7 @@ $sum:=$sel.sum("salary")
 | options      | Integer    |              ->             | `dk with primary key`: adiciona a chave primária<br/>`dk with stamp`: adiciona o marcador |
 | begin        | Integer    |              ->             | Designa o índice inicial                                                                                                  |
 | howMany      | Integer    |              ->             | Número de entidades a extrair                                                                                             |
-| Resultados   | Collection | <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                                |
+| Resultados   | Collection | <- | Collection of objects containing attributes and values of entity selection                                                |
 
 <!-- END REF -->
 

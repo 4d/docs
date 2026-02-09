@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Before selection.Syntax-->**Before selection** {( *aTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | レコードポインタがセレクションの先頭より前に あるかをテストするテーブル, または 省略時、デフォルトテーブル |
 | 戻り値 | Boolean | &#8592; | Yes (TRUE) または No (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

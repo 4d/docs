@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET DATA CONTEXT.Syntax-->**WP SET DATA CONTEXT** ( *wpDoc* : Object ; *datosContext* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET DATA CONTEXT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
 | datosContext | Object | &#8594;  | Datos para poner en el contexto |
-
+</div>
 <!-- END REF-->
 
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*

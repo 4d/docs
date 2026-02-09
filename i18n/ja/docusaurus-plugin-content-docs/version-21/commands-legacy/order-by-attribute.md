@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* ;} *objectField* ; *attributePath* ; > or < {; *objectField2* ; *attributePath2* ; > or <2 ; ... ; *objectFieldN* ; *attributePathN* ; > or <N} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | セレクションをソートするテーブル (省略時はデフォルトテーブル) |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | attributePath | Text | &#8594;  | ソートの基準とする属性の名前またはパス |
 | > or < | 演算子 | &#8594;  | ソート方向: >: 昇順, または <: 降順 |
 | * | 演算子 | &#8594;  | ソート継続フラグ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *liste* : Integer {; > ou <} )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | liste | Integer | &#8594; | Numéro de référence de liste |
 | > ou < | Opérateur | &#8594; | Ordre de tri : > pour trier la liste dans l'ordre croissant ou < pour trier la liste dans l'ordre décroissant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

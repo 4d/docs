@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** ( *selector* : Integer {; *objectName* : Text {; *subformName* : Text}}) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | selector | Integer | &#8594;  | Object category |
 | objectName | Text | &#8594;  | Object name |
 | subformName | Text | &#8594;  | Subform object name |
 | Function result | Pointer | &#8592; | Pointer to object variable |
-
+</div>
 <!-- END REF-->
 
 ## Description 

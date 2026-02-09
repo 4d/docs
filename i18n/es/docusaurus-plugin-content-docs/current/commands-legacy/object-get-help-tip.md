@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get help tip** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get help tip.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | Resultado | Text | &#8592; | Mensaje de ayuda del objeto |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

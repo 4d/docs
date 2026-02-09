@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get resource name.Syntax-->**Get resource name** ( *resType* ; *resNum* {; *resFichier*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get resource name.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | resType | Text | &#8594;  | Type de ressource (4 caractères) |
 | resNum | Integer | &#8594;  | Numéro de référence de ressource (ID) |
 | resFichier | Time | &#8594;  | Numéro de référence du fichier de ressource ou Tous les fichiers de ressources ouverts si omis |
 | Résultat | Text | &#8592; | Nom de la ressource |
-
+</div>
 <!-- END REF-->
 
 ## Description 

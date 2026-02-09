@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *area* : Integer ; *colNum* : Integer ; *title* : Text ; *object* : Text ; *hide* : Integer ; *size* : Integer ; *repeatedValue* : Integer ; *displayFormat* : Text {; *resultVar* : Text} )<!-- END REF-->
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | area | Integer | &#8594; | エリア参照 |
@@ -18,7 +20,7 @@ displayed_sidebar: docs
 | repeatedValue | Integer | &#8592; | 0 = 繰り返ししない, 1 = 繰り返す |
 | displayFormat | Text | &#8592; | データの表示フォーマット |
 | resultVar | Text | &#8592; | フォーミュラ変数名 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

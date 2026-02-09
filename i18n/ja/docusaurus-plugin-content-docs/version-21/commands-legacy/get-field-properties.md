@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* ; *fieldNum* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#8594;  | テーブル番号、またはフィールドポインタ |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | indexed | Boolean | &#8592; | True = インデックス付き、False = インデックスなし |
 | unique | Boolean | &#8592; | True = 重複不可、 False = 重複あり |
 | invisible | Boolean | &#8592; | True = 非表示、 False = 表示 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

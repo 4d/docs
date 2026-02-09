@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *objeto* : any ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font style.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou um campo. |
 | objeto | any | &#8594; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * é omitido) |
 | Resultado | Integer | &#8592; | Estilo de fonte |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

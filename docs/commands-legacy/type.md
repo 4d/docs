@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Type.Syntax-->**Type** ( *fieldVar* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldVar | Field, Variable | &#8594;  | field or variable to be tested |
 | Function result | Integer | &#8592; | Data type number |
-
+</div>
 <!-- END REF-->
 
 ## Description 

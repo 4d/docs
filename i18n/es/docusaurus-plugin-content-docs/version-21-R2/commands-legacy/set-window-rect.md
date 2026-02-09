@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *izquierda* : Integer ; *superior* : Integer ; *derecha* : Integer ; *inferior* : Integer {; *ventana* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | izquierda | Integer | &#8594; | Coordenada global izquierda del interior de la ventana |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | inferior | Integer | &#8594; | Coordenada global inferior del interior de la ventana |
 | ventana | Integer | &#8594; | Número de referencia de la ventana o ventana del primer plano del proceso si se omite este parámetro |
 | * | Operador | &#8594; | Si se omite (por defecto) = cambiar ventana al fondo<br/>Si se pasa = no cambiar el nivel de la ventana |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

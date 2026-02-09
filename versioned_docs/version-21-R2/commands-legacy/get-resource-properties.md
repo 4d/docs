@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* : Text ; *resID* : Integer {; *resFile* : Time} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resType | Text | &#8594;  | 4-character resource type |
 | resID | Integer | &#8594;  | Resource ID number |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
 | Function result | Integer | &#8592; | Resource attributes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

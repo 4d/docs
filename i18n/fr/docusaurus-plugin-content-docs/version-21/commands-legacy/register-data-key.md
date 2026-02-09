@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Register data key.Syntax-->**Register data key** ( phraseSecrèteCour ) : Boolean<br/>**Register data key** ( cléDonnéesCour ) : Boolean<!-- END REF-->
 <!--REF #_command_.Register data key.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594;  | Phrase secrète courante (texte) ou clé de chiffrement des données courante (objet) |
 | Résultat | Boolean | &#8592; | Vrai si la clé de chiffrement des données a été ajoutée avec succès au trousseau 4D. Faux si elle était déjà dans le trousseau 4D. |
-
+</div>
 <!-- END REF-->
 
 ## Description 

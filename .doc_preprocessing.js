@@ -18,6 +18,14 @@ module.exports = {
                 to: "->"
             },
             {
+                from: "<div class=\"no-index\">",
+                to: ""
+            },
+            {
+                from: "</div>",
+                to: ""
+            },
+            {
                 from: "&larr;",
                 to: "<-"
             },

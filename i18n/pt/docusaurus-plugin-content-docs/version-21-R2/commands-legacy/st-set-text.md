@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( * ; *objeto* : Text ; *novoTexto* {; *inicioSel* : Integer {; *fimSel* : Integer}} )<br/>**ST SET TEXT** ( *objeto* : Field, Variable ; *novoTexto* {; *inicioSel* : Integer {; *fimSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET TEXT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | novoText | Text | &#8594; | Texto a inserir |
 | inicioSel | Integer | &#8594; | Início da seleção |
 | fimSel | Integer | &#8594; | Final da seleção |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

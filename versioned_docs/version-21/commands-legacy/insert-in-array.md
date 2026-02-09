@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *array* ; *where* {; *howMany*} )<!-- END REF-->
 <!--REF #_command_.INSERT IN ARRAY.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Name of the array |
 | where | Integer | &#8594;  | Where to insert the elements |
 | howMany | Integer | &#8594;  | Number of elements to be inserted, or 1 element if omitted |
-
+</div>
 <!-- END REF-->
 
 ## Description 

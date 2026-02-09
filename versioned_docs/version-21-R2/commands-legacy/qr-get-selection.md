@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *area* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer {; *bottom* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR GET SELECTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | top | Integer | &#8592; | Top boundary |
 | right | Integer | &#8592; | Right boundary |
 | bottom | Integer | &#8592; | Bottom boundary |
-
+</div>
 <!-- END REF-->
 
 ## Description 

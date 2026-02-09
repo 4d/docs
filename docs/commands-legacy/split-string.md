@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Split string.Syntax-->**Split string** ( *stringToSplit* : Text ; *separator* : Text {; *options* : Integer} ) : Collection<!-- END REF-->
 <!--REF #_command_.Split string.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | stringToSplit | Text | &#8594;  | String value |
 | separator | Text | &#8594;  | String at which stringToSplit splits. If empty string (""), each character of stringToSplit is a substring |
 | options | Integer | &#8594;  | Option(s) regarding empty strings and spaces |
 | Function result | Collection | &#8592; | Collection of substrings |
-
+</div>
 <!-- END REF-->
 
 ## Description 

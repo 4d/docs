@@ -47,3 +47,33 @@ Una fecha null es especificada por *!00-00-00!*.
 |                   |                                       |          | !2017-01-01!>=!2017-01-20!                                           | False        |
 | Menor o igual que | Date <= Date | Boolean  | !2017-01-20! - !2017-01-01! <= !2017-01-20! | True         |
 |                   |                                       |          | !2017-01-20! <= !2017-01-01!                | False        |
+
+## Conversion of dates from JavaScript
+
+Como las fechas en JavaScript son objetos, se envían a 4D como texto que contiene su forma JSON como cualquier otro objeto. Este principio se aplica en particular cuando se utilizan [comandos JSON](../commands/theme/JSON.md) o [Áreas Web](../FormObjects/webArea_overview.md).
+
+The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Hay dos soluciones disponibles:
+
+Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
+
+```4d
+ var $dateIso : Texto // recepción de una fecha en formato ISO
+ var $date4D : Date 
+ $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
+```
+
+Utilizando el comando [`Date`](../commands-legacy/date.md):
+
+```4d
+ var $dateIso : Text // recepción de una fecha en formato ISO
+ var $date4D : Date 
+ $date4D:=Date($dateIso)
+```
+
+Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversion using the [`Date`](../commands-legacy/date.md) command always takes the local time zone into account.
+
+:::note
+
+When the current date storage setting is [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands-legacy/json-parse.md) and [`Date`](../commands-legacy/date.md) commands.
+
+:::

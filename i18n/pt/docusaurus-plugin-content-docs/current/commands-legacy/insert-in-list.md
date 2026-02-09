@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *lista* : Integer, Text ; antesElem | *  ; *textoElem* : Text ; *refElem* : Integer {; *sublista* : Integer ; *expandida* : Boolean} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | refElem | Integer | &#8594; | Número de referencia único do novo elemento |
 | sublista | Integer | &#8594; | Sub-lista opcional para associar ao novo elemento |
 | expandida | Boolean | &#8594; | Indica se a sub-lista será expandida ou contraída |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

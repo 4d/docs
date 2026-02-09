@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*aTable* : Table ;} *sqlFormula* : Text )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table in which to return a selection of records or Default table if this parameter is omitted |
 | sqlFormula | Text | &#8594;  | Valid SQL search formula representing the WHERE clause of the SELECT query |
-
+</div>
 <!-- END REF-->
 
 ## Description 

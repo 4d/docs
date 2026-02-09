@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *laTable* ; *cheminDossier* {; *nbFichiers* {; *tailleLimiteFichiers* {; *tailleLimiteChamps*}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle exporter la sélection |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | nbFichiers | Integer | &#8594;  | Nombre maximum de fichiers par dossier |
 | tailleLimiteFichiers | Integer | &#8594;  | Valeur de limite de taille des fichiers d’export (en Ko) |
 | tailleLimiteChamps | Integer | &#8594;  | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

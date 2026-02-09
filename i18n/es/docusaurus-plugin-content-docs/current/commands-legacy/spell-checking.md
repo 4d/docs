@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SPELL CHECKING.Syntax-->**SPELL CHECKING**<!-- END REF-->
 <!--REF #_command_.SPELL CHECKING.Params-->
+<div class="no-index">
+
 | Este comando no requiere parámetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

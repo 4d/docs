@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *lista* ; refElem | * ) : Integer<!-- END REF-->
 <!--REF #_command_.List item parent.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
 | lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
 | refElem &#124; * | Operador, Inteiro longo | &#8594;  | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
 | Resultado | Integer | &#8592; | Número de referência do elemento pai ou 0 se não há |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *cheminDossier* {; *erreursDiscrètes*} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous macOS) contenant l’application mise à jour |
 | erreursDiscrètes | Boolean | &#8594;  | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

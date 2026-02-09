@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *image* : Picture ; *nomMeta* : Text ; *contenuMeta* : Variable {; ...(*nomMeta* : Text, *contenuMeta* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PICTURE METADATA.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | image | Picture | &#8594; | Image dont vous souhaitez écrire les métadonnées |
 | nomMeta | Text | &#8594; | Nom ou chemin du bloc à écrire |
 | contenuMeta | Variable | &#8594; | Contenu de la métadonnée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

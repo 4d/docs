@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( {* ;} *object* ; *urlText* ; *urlAddress* {; *startSel* {; *endSel*}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT URL.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | urlAddress | Text | &#8594;  | URL address |
 | startSel | Integer | &#8594;  | Start of selection |
 | endSel | Integer | &#8594;  | End of selection |
-
+</div>
 <!-- END REF-->
 
 ## Description 

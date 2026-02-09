@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : Text<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | menu | Text, Integer, Text | &#8594;  | Referencia del menú o Número o nombre de barra de menús |
 | Resultado | Text | &#8592; | Referencia del menú |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

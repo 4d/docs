@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *laTable* ; *titresChamps* ; *numChamps* {; *} )<!-- END REF-->
 <!--REF #_command_.SET FIELD TITLES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table dont vous voulez redéfinir les titres des champs |
 | titresChamps | Text array | &#8594;  | Nouveaux titres des champs |
 | numChamps | Integer array | &#8594;  | Numéros des champs |
 | * | Operator |  &#8594;  | Utiliser les noms personnalisés dans l’éditeur de formules |
-
+</div>
 <!-- END REF-->
 
 ## Description 

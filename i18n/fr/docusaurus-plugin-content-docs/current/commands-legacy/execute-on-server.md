@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procédure* : Text ; *pile* : Integer {; *nom* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Execute on server.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | procédure | Text | &#8594; | Procédure à exécuter dans le process |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | param | Expression | &#8594; | Paramètre(s) de la procédure |
 | * | Opérateur | &#8594; | Process unique |
 | Résultat | Integer | &#8592; | Numéro du process pour un process nouvellement créé ou un process déjà en cours d'exécution |
-
+</div>
 <!-- END REF-->
 
 ## Description 

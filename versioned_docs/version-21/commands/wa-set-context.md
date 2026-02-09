@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( {* ;} *object* ; *contextObj* )<!-- END REF-->
 <!--REF #_command_.WA SET CONTEXT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
+| object | Text, Variable | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
 | contextObj | Object | &#8594;  | Object containing the functions that can be called with `$4d`. |
-
+</div>
 <!-- END REF-->
 
 ### Description 

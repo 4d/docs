@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New list.Syntax-->**New list**  : Integer<!-- END REF-->
 <!--REF #_command_.New list.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de referência de lista |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

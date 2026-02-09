@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *firmas4D* : Text array ; *tiposNativos* : Text array {; *nombresFormatos* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | firmas4D | Text array | &#8592; | Firmas 4D de tipos de datos |
 | tiposNativos | Text array | &#8592; | Tipos de datos nativos |
 | nombresFormatos | Text array | &#8592; | Nombres de los formatos |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

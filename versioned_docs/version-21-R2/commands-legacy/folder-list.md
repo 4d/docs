@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *pathname* : Text ; *directories* : Text array )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pathname | Text | &#8594;  | Pathname to volume, directory or folder |
 | directories | Text array | &#8592; | Names of the directories present at this location |
-
+</div>
 <!-- END REF-->
 
 ## Description 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* ; *hits* ; *usage* )<!-- END REF-->
 <!--REF #_command_.WEB GET STATISTICS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | pages | Text array | &#8592; | Noms des pages les plus consultées |
 | hits | Integer array | &#8592; | Nombre de hits pour chaque page |
 | usage | Integer | &#8592; | Pourcentages du cache utilisé |
-
+</div>
 <!-- END REF-->
 
 ## Description 

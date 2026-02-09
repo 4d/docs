@@ -115,9 +115,13 @@ Available classes are accessible from their class stores. Two class stores are a
 
 
 <!-- REF #_command_.cs.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|User class store for the project or component|<!-- END REF -->
+|classStore|Object|&#8592;|User class store for the project or component|
+</div>
+<!-- END REF -->
 
 The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
@@ -134,9 +138,13 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
 <!-- REF #_command_.4D.Params -->
+<div class="no-index">
+
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|4D class store|<!-- END REF -->
+|classStore|Object|&#8592;|4D class store|
+</div>
+<!-- END REF -->
 
 The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 

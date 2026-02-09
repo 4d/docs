@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( {* ;} *object* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get auto spellcheck.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable or field |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable or field (if * is omitted) |
 | Function result | Boolean | &#8592; | True = automatic spell-checking, False = no automatic spell-checking |
-
+</div>
 <!-- END REF-->
 
 ## Description 

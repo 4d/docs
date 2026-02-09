@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*laTable* : Table ;} *ensemble* : Text )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594; | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 | ensemble | Text | &#8594; | Nom de l'ensemble auquel ajouter l'enregistrement courant |
-
+</div>
 <!-- END REF-->
 
 ## Description 

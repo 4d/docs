@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resName | Text | &#8594;  | Name of resname attribute |
 | Function result | Text | &#8592; | Value of string designated by resName in current language |
-
+</div>
 <!-- END REF-->
 
 ## Description 

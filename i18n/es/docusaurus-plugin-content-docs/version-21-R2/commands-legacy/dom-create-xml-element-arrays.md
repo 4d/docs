@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *refElement* : Text ; *xRuta* : Text {; *arrayNomsAtrib* : Text array ; *arrayValoresAtrib* : Text array} {; ...(*arrayNomsAtrib* : Text array, *arrayValoresAtrib* : Text array)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refElement | Text | &#8594; | Referencia del elemento XML raíz |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | arrayNomsAtrib | Text array | &#8594; | Array de nombres de atributos |
 | arrayValoresAtrib | Text array | &#8594; | Array de valores de atributos |
 | Resultado | Text | &#8592; | Referencia del elemento XML creado |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

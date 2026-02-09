@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *metodoEvento* {; *nomeProcesso*} )<!-- END REF-->
 <!--REF #_command_.ON EVENT CALL.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | metodoEvento | Text | &#8594;  | Método evento a ser invocado, ou cadeia vazia para parar eventos interceptados |
 | nomeProcesso | Text | &#8594;  | Nome do processo |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

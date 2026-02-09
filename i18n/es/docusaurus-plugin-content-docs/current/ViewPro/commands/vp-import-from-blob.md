@@ -9,11 +9,16 @@ title: VP IMPORT FROM BLOB
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
 
-| Parámetros | Tipo                    |    | Descripción                                   |                  |
-| ---------- | ----------------------- | -- | --------------------------------------------- | ---------------- |
-| vpAreaName | Text                    | -> | Nombre de objeto formulario área 4D View Pro  |                  |
-| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro |                  |
-| paramObj   | Object                  | -> | Opciones de importación                       | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo                    |    | Descripción                                   |
+| ---------- | ----------------------- | -- | --------------------------------------------- |
+| vpAreaName | Text                    | -> | Nombre de objeto formulario área 4D View Pro  |
+| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro |
+| paramObj   | Object                  | -> | Opciones de importación                       |
+
+</div>
+<!-- END REF -->
 
 <details><summary>Historia</summary>
 
@@ -54,7 +59,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 :::note
 
-La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. De este modo se garantiza que los procesos dependientes, como las modificaciones o exportaciones de documentos, solo se realicen una vez que se hayan resuelto por completo todos los cálculos basados en fórmulas.
 
 ::::
 

@@ -7,16 +7,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* : Integer ; *y* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | x | Integer | &#8594; | posição x (horizontal) do cursor |
 | y | Integer | &#8594; | posição y (vertical) do cursor |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 
 
-<!--REF #_command_.GOTO XY.Summary-->O comando GOTO XY se utiliza conjuntamente com o comando [MESSAGE](message.md "MESSAGE") quando mostra mensagens em uma janela aberta pelo comando [Open window](open-window.md "Open window").<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->O comando GOTO XY se utiliza conjuntamente com o comando [MESSAGE](message.md "MESSAGE") quando mostra mensagens em uma janela aberta pelo comando [Open window](../commands/open-window.md "Open window").<!-- END REF-->  
   
 GOTO XY determina a posição do cursor de inserção de caracteres (um cursor invisível) para definir a localização da seguinte mensagem na janela. 
 

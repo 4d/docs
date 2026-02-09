@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Abs.Syntax-->**Abs** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Abs.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nombre | Real | &#8594; | Nombre dont vous voulez obtenir la valeur absolue |
 | Résultat | Real | &#8592; | Valeur absolue de nombre |
-
+</div>
 <!-- END REF-->
 
 ## Description 

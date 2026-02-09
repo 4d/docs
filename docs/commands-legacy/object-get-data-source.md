@@ -5,14 +5,16 @@ slug: /commands/object-get-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( * ; *object* : Text ) : Pointer<br/>**OBJECT Get data source** ( *object* : Field, Variable ) : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( * ; *object* : Text ) : Pointer<br/>**OBJECT Get data source** ( *object* : Variable, Field ) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | Function result | Pointer | &#8592; | Pointer to current data source of object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

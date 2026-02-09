@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *rutaEstructura* : Text ; *rutaDatos* : Text ; *objetos* : Integer ; *opciones* : Integer ; *metodo* : Text {; *arrayTablas* : Integer array {; *arrayCampos* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaEstructura | Text | &#8594; | Ruta de acceso al archivo de estructura de la base a verificar |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | metodo | Text | &#8594; | Nombre del método 4D de retrollamada |
 | arrayTablas | Integer array | &#8594; | Números de las tablas a verificar |
 | arrayCampos | Integer array | &#8594; | Números de los índices a verificar |
-
+</div>
 <!-- END REF-->
 
 ## Descripción

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTable* : Table ;} *arrPaths* : Text array {; *filter* : Text}{; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table reference |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | filter | Text | &#8594;  | Name filter |
 | stamp | Real | &#8596;  | *in:* Minimum value of stamp<br/>*out:* New current value |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

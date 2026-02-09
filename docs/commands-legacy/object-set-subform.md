@@ -5,16 +5,18 @@ slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *object* : Text {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *object* : Field, Variable {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *object* : Text {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *object* : Variable, Field {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#8594;  | Object Name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | aTable | Table | &#8594;  | Table of form (if table form) |
 | detailSubform | Text, Object | &#8594;  | Name (text) of the detail form, or a POSIX path (text) to a .json file describing the detail form, or an object describing the detail form of the subform |
 | listSubform | Text, Object | &#8594;  | Name (text) of the list form, ora POSIX path (text) to a .json file describing the list form, or an object describing the list form of the subform (table form) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

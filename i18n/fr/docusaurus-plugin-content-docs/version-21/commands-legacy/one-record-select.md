@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle réduire la sélection à un enregistrement |
-
+</div>
 <!-- END REF-->
 
 ## Description 

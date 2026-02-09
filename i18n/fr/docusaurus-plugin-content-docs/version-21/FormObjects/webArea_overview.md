@@ -11,15 +11,15 @@ Plusieurs [actions standard](#standard-actions), de nombreuses [commandes du lan
 
 ## Affichage des pages Qodly
 
-Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) and provide 4D desktop application users with modern, CSS-based web interface.
+Les zones Web peuvent être utilisées pour afficher des [pages Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) et fournir aux utilisateurs d'applications desktop 4D une interface Web moderne basée sur les CSS.
 
-You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+Vous pouvez intégrer une page Qodly dans une zone Web et mettre à jour les [sources Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) à partir de 4D en appelant [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
 
-In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses for a high level of security.
+In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security.
 
 :::tip Article(s) de blog sur le sujet
 
-[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
+[Améliorez l'interface de votre application de bureau avec des widgets Web en utilisant 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 
@@ -348,7 +348,7 @@ Le fichier 4DCEFParameters.json par défaut contient les commutateurs suivants :
 
 :::tip Article(s) de blog sur le sujet
 
-[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
+[Paramètres personnalisés pour l'initialisation des zones Web intégrées](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
 
 :::
 

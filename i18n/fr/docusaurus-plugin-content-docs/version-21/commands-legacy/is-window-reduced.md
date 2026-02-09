@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window reduced.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | window | Integer | &#8594;  | Numéro de référence de la fenêtre |
 | Résultat | Boolean | &#8592; | Vrai si la fenêtre est réduite dans la barre des tâches ou dans le dock, sinon Faux |
-
+</div>
 <!-- END REF-->
 
 ## Description 

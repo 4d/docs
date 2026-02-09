@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Open Connection database method.Syntax-->$1, $2, $3 -> On Server Open Connectionデータベースメソッド -> $0<!-- END REF-->
 <!--REF #_command_.On Server Open Connection database method.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | $user | 倍長整数 | &#8592; | ユーザーを識別するために4D Serverが内部的に使用するユーザーID |
 | $id | 倍長整数 | &#8592; | 接続を識別するために4D Serverが内部的に使用する接続ID |
 | $toIgnore | 倍長整数 | &#8592; | 廃止: 常に0が返されますが、宣言はしなくてはなりません。 |
 | $status | 倍長整数 | &#8592; | 0または省略時 = 接続を受け入れる、0以外 = 接続を拒否する |
-
+</div>
 <!-- END REF-->
 
 ## On Server Open Connection データベースメソッドはいつ呼び出されるか 

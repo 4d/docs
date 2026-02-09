@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is in set.Syntax-->**Is in set** ( *conjunto* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is in set.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | conjunto | Text | &#8594;  | Nome do conjunto a testar |
 | Resultado | Boolean | &#8592; | Registro atual está no conjunto (TRUE) ou Registro atual não está no conjunto (FALSE) |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

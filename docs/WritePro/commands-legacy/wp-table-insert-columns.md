@@ -5,8 +5,10 @@ slug: /WritePro/commands/wp-table-insert-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( *targetObj* : Object {; *numColumns* : Integer }) : Object<br/>**WP Table insert columns** ( *tableRef* : Object ; *colNumber* : Integer {; *numColumns* : Integer} )<!-- END REF-->
+<!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( *targetObj* : Object {; *numColumns* : Integer }) : Object<br/>**WP Table insert columns** ( *tableRef* : Object ; *colNumber* : Integer {; *numColumns* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Table insert columns.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | colNumber | Integer | &#8594;  | Column number |
 | numColumns | Integer | &#8594;  | Number of columns to insert (default value = 1) |
 | Function result | Object | &#8592; | Range of table columns |
-
+</div>
 <!-- END REF-->
 
 ## Description 

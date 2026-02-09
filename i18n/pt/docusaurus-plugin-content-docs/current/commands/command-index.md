@@ -521,7 +521,7 @@ title: Commands by name
 [`JSON Stringify`](../commands-legacy/json-stringify.md)<br/>
 [`JSON Stringify array`](../commands-legacy/json-stringify-array.md)<br/>
 [`JSON TO SELECTION`](../commands-legacy/json-to-selection.md)<br/>
-[`JSON Validate`](../commands-legacy/json-validate.md)<br/>
+[`JSON Validate`](json-validate.md)<br/>
 
 <a id="K"><b>K</b></a>
 
@@ -826,14 +826,14 @@ title: Commands by name
 [`Open datastore`](open-datastore.md)<br/>
 [`Open document`](../commands-legacy/open-document.md)<br/>
 [`OPEN FONT PICKER`](../commands-legacy/open-font-picker.md)<br/>
-[`Open form window`](../commands-legacy/open-form-window.md)<br/>
+[`Open form window`](open-form-window.md)<br/>
 [`OPEN PRINTING JOB`](../commands-legacy/open-printing-job.md)<br/>
 [`Open resource file`](../commands-legacy/open-resource-file.md)<br/>
 [`OPEN RUNTIME EXPLORER`](../commands-legacy/open-runtime-explorer.md)<br/>
 [`OPEN SECURITY CENTER`](../commands-legacy/open-security-center.md)<br/>
 [`OPEN SETTINGS WINDOW`](../commands-legacy/open-settings-window.md)<br/>
 [`OPEN URL`](../commands-legacy/open-url.md)<br/>
-[`Open window`](../commands-legacy/open-window.md)<br/>
+[`Open window`](open-window.md)<br/>
 [`ORDER BY`](../commands-legacy/order-by.md)<br/>
 [`ORDER BY ATTRIBUTE`](../commands-legacy/order-by-attribute.md)<br/>
 [`ORDER BY FORMULA`](../commands-legacy/order-by-formula.md)<br/>

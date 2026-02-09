@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *folder* {; *options*} {; *})} : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folder | Integer | &#8594;  | Folder type (if omitted = active 4D folder) |
 | options | Object | &#8594;  | 4D Client database folder path configuration |
 | * | Operator | &#8594;  | Return folder of host database |
 | Function result | Text | &#8592; | Pathname to 4D Folder |
-
+</div>
 <!-- END REF-->
 
 ## Description 

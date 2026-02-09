@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object, providing a means to work with and effectively emulates the Page's properties and functions<!-- END REF -->.
+El comando `Web Form` <!-- REF #_command_.Web Form.Summary --> devuelve un objeto proxy `4D.WebForm`, ofreciendo un medio para trabajar con las propiedades y las funciones de la página y emularlas eficazmente<!-- END REF -->.
 
 :::info
 

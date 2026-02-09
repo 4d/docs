@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *laTable* {;* })<br/>**PRINT SELECTION** ( *laTable* {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table à laquelle appartient la sélection à imprimer ou Table par défaut si ce paramètre est omis |
 | * &#124; > | Opérateur | &#8594;  | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
-
+</div>
 <!-- END REF-->
 
 ## Description 

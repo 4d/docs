@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE PICTURE.Syntax-->**WP DELETE PICTURE** ( *objImage* : Object )<!-- END REF-->
 <!--REF #_command_.WP DELETE PICTURE.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objImage | Object | &#8594;  | Objet image (en ligne ou ancrée) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

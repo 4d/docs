@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Load list.Syntax-->**Load list** ( *nomListe* ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomListe | Text | &#8594;  | Nom de liste créée dans l'éditeur d'énumérations |
 | Résultat | Integer | &#8592; | Numéro de référence de la liste nouvellement créée |
-
+</div>
 <!-- END REF-->
 
 ## Description 

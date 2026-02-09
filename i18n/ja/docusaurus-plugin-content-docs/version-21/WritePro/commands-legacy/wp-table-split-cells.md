@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Syntax-->**WP TABLE SPLIT CELLS** ( *targetObj* ) | ( *tableRef* ; *startColumn* ; *startRow* {; *columnCount*{; *rowCount*}} )<!-- END REF-->
 <!--REF #_command_.WP TABLE SPLIT CELLS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | レンジまたは要素または4D Write Proドキュメント |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | startRow | Integer | &#8594;  | 最初のセル行の位置 |
 | columnCount | Integer | &#8594;  | 結合解除する列の数 |
 | rowCount | Integer | &#8594;  | 結合解除する行の数 |
-
+</div>
 <!-- END REF-->
 
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*

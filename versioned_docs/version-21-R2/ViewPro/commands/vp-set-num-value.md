@@ -7,12 +7,15 @@ title: VP SET NUM VALUE
 **VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
+<div class="no-index">
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |numberValue |Number|->|Number value to set|
-|formatPattern |Text|->|Format of value|<!-- END REF -->
+|formatPattern |Text|->|Format of value|
+</div>
+<!-- END REF -->
 
 ## Description
 

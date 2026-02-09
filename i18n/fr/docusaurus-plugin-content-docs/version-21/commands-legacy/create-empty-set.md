@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*laTable* ;} *ensemble* )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table pour laquelle créer un ensemble vide ou Table par défaut si ce paramètre est omis |
 | ensemble | Text | &#8594;  | Nom du nouvel ensemble vide |
-
+</div>
 <!-- END REF-->
 
 ## Description 

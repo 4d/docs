@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *list* ; *blob* {; *} )<!-- END REF-->
 <!--REF #_command_.LIST TO BLOB.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | Hierarchical list to store in the BLOB |
 | Blob | Blob | &#8594;  | BLOB to receive the Hierarchical list |
 | * | Operator | &#8594;  | * to append the value |
-
+</div>
 <!-- END REF-->
 
 ## Description 
@@ -33,7 +35,7 @@ After the call, if the list has been successfully stored, the OK variable is set
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
 
 ## Example 
 

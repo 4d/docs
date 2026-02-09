@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* : Object ; *paramType* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object | &#8594; | 使用する4Dオブジェクト (変数、配列、フィールド) |
 | paramType | Integer | &#8594; | 引数タイプ |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

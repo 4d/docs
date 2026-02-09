@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trigger level.Syntax-->**Trigger level**  : Integer<!-- END REF-->
 <!--REF #_command_.Trigger level.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | Résultat | Integer | &#8592; | Niveau d'exécution du trigger (0 si hors du cycle d'exécution du trigger) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

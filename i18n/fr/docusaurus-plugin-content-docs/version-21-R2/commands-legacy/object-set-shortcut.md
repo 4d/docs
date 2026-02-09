@@ -7,13 +7,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( * ; *objet* : Text ; *touche* : Text {; *modifiers* : Integer} )<br/>**OBJECT SET SHORTCUT** ( *objet* : Field, Variable ; *touche* : Text {; *modifiers* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
 | objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
 | touche | Text | &#8594; | Touche à associer à l’objet |
 | modifiers | Integer | &#8594; | Masque ou combinaison de masques de touche(s) de modification |
-
+</div>
 <!-- END REF-->
 
 ## Description 

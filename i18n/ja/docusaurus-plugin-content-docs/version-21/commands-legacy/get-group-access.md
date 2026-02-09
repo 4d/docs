@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get group access.Syntax-->**Get group access** : Collection<!-- END REF-->
 <!--REF #_command_.Get group access.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Collection | &#8592; | ユーザーが所属するグループ名のコレクション |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

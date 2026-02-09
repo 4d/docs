@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ALERT.Syntax-->**ALERT** ( *mensagem* {; *okBotaoTitulo*} )<!-- END REF-->
 <!--REF #_command_.ALERT.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | mensagem | Text | &#8594;  | Mensagem a exibir na caixa de diálogo de alerta |
 | okBotaoTitulo | Text | &#8594;  | Título do botão OK |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

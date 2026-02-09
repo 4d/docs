@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Menu bar screen.Syntax-->**Menu bar screen**  : Integer<!-- END REF-->
 <!--REF #_command_.Menu bar screen.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Resultado | Integer | &#8592; | Número de la pantalla que contiene la barra de menús |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *objTarget* : Object ) | ( *refTabla* : Object ; *lineaIni* : Integer, Text {; *numLíneas* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | objTarget | Object | &#8594;  | Rango o elemento o documento 4D Write Pro |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | lineaIni | Integer, Text | &#8594;  | Posición de la primera línea |
 | numLíneas | Integer | &#8594;  | Número de líneas a obtener |
 | Resultado | Object | &#8592; | Nuevo rango de líneas que contiene las filas seleccionadas |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

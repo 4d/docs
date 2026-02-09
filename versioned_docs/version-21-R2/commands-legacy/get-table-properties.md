@@ -5,17 +5,20 @@ slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *tablePtr* : Pointer, Integer ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<br/>**GET TABLE PROPERTIES** ( *tableNum* : Pointer, Integer ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<!-- END REF-->
+<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *tablePtr* : Pointer ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<br/>**GET TABLE PROPERTIES** ( *tableNum* : Integer ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tablePtr&#124;tableNum | Pointer, Integer | &#8594;  | Table pointer or Table number |
+| tablePtr | Pointer | &#8594;  | Table pointer |
+| tableNum | Integer | &#8594;  | Table number |
 | invisible | Boolean | &#8592; | True = Invisible, False = Visible |
 | trigSaveNew | Boolean | &#8592; | True = Trigger “On saving new record” activated; otherwise, False |
 | trigSaveRec | Boolean | &#8592; | True = Trigger “On saving an existing record” activated; otherwise, False |
 | trigDelRec | Boolean | &#8592; | True = Trigger “On deleting a record” activated; otherwise, False |
 | trigLoadRec | Boolean | &#8592; | *** Do not use (obsolete) *** |
-
+</div>
 <!-- END REF-->
 
 ## Description 

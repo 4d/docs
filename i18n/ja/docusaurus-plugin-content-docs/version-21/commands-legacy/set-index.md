@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *aField* ; *index* {; *} )<!-- END REF-->
 <!--REF #_command_.SET INDEX.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | インデックスを作成または削除するフィールド |
 | index | Boolean, Integer | &#8594;  | True=作成、False=削除、または インデックスを作成: -1=キーワード、 0=デフォルト、1=標準B-Tree、3=クラスタB-Tree |
 | * | Operator |  &#8594;  | *を渡すと非同期にインデックスを作成 |
-
+</div>
 <!-- END REF-->
 
 ## 互換性に関する注意 

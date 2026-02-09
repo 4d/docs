@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *doc* )<!-- END REF-->
 <!--REF #_command_.DELETE DOCUMENT.Params-->
+<div class="no-index">
+
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | doc | Text | &#8594;  | Nombre del documento o Ruta de acceso completa al documento |
-
+</div>
 <!-- END REF-->
 
 ## Descripción 

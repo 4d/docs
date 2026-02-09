@@ -5,8 +5,10 @@ slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**OBJECT GET COORDINATES** ( *object* : Field, Variable ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**OBJECT GET COORDINATES** ( *object* : Variable, Field ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified = object is the name of the object (string) If omitted = object is a variable |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | top | Integer | &#8592; | Top coordinate of the object |
 | right | Integer | &#8592; | Right coordinate of the object |
 | bottom | Integer | &#8592; | Bottom coordinate of the object |
-
+</div>
 <!-- END REF-->
 
 ## Description 

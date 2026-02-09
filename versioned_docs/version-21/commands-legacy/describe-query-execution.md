@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *status* )<!-- END REF-->
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | status | Boolean | &#8594;  | True=Enable internal query analysis, False=Disable internal query analysis |
-
+</div>
 <!-- END REF-->
 
 ## Description 

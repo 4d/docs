@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAccès* ; *soapAction* ; *nomMéthode* ; *nameSpace* {; *typeComposé* {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | urlAccès | Text | &#8594;  | URL d’accès au Web Service |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | nameSpace | Text | &#8594;  | Espace de nommage |
 | typeComposé | Integer | &#8594;  | Configuration de types composés (types simples si omis) |
 | * | Opérateur | &#8594;  | Ne pas fermer la connexion |
-
+</div>
 <!-- END REF-->
 
 ## Description 

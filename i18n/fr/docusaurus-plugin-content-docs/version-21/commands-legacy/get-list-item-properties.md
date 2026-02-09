@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *liste* ; *refElément* ; *saisissable* {; *style* {; *icône* {; *couleur*}}} )<br/>**GET LIST ITEM PROPERTIES** ( * ; *liste* ; * ; *saisissable* {; *style* {; *icône* {; *couleur*}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | style | Integer | &#8592; | Style de police de l'élément |
 | icône | Text, Integer | &#8592; | 131072 + numéro de référence d'image |
 | couleur | Integer | &#8592; | Valeur de couleur RVB |
-
+</div>
 <!-- END REF-->
 
 ## Description 

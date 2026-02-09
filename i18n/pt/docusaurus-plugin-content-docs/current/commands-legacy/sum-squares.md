@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Sum squares.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594; | Dados para os quais se retorna a soma de quadrados. |
 | Resultado | Real | &#8592; | Soma dos quadrados dos valores da série |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

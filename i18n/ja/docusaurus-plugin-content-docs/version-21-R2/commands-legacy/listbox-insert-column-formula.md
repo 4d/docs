@@ -5,8 +5,10 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVariable* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *object* : Field, Variable ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVariable* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVariable* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *object* : Variable ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVariable* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
@@ -19,7 +21,7 @@ displayed_sidebar: docs
 | headerVariable | Integer, Pointer | &#8594; | 列ヘッダー変数 |
 | footerName | Text | &#8594; | 列フッターオブジェクト名 |
 | footerVar | Variable, Pointer | &#8594; | 列フッター変数 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *path* ; *methodType* ; *ptrTable* ; *objectName* ; *formObjectName* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text | &#8594;  | Path to resolve |
@@ -15,7 +17,7 @@ displayed_sidebar: docs
 | objectName | Text | &#8592; | Name of form or database method |
 | formObjectName | Text | &#8592; | Name of form object |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
-
+</div>
 <!-- END REF-->
 
 ## Description 

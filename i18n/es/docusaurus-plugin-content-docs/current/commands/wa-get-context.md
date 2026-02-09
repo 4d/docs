@@ -4,15 +4,15 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> *contextObj* : Object<br/>**WA Get context** ( *object* : Field, Variable ) -> *contextObj* : Object<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
 
 <!--REF #_command_.WA Get context.Params-->
 
-| Parámetros | Tipo     |                             | Descripción                                                                                                                                           |
-| ---------- | -------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador | &#8594; | Si se especifica, *object* es un nombre de objeto (cadena). Si se omite, *object* es una variable. |
-| object     | any      | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*).                            |
-| contextObj | Object   | &#8592; | Objeto contexto si se ha definido previamente, en caso contrario `null`.                                                              |
+| Parámetros | Tipo           |                             | Descripción                                                                                                                                           |
+| ---------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador       | &#8594; | Si se especifica, *object* es un nombre de objeto (cadena). Si se omite, *object* es una variable. |
+| object     | Text, Variable | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*).                            |
+| Resultado  | Object         | &#8592; | Objeto contexto si se ha definido previamente, en caso contrario `null`.                                                              |
 
 <!-- END REF-->
 

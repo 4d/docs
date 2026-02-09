@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *list* : Integer ; *appearance* : Integer {; *icon* : Integer {; *lineHeight* : Integer {; *doubleClick* : Integer {; *multiSelections* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | doubleClick | Integer | &#8592; | Expand/Collapse sublist on double-click? 0 = Yes, 1= No |
 | multiSelections | Integer | &#8592; | Multiple selections: 0 = No, 1 = Yes |
 | editable | Integer | &#8592; | List editable by user: 0 = No, 1 = Yes |
-
+</div>
 <!-- END REF-->
 
 ## Description 

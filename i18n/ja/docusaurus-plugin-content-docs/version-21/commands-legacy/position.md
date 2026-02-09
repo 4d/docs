@@ -8,6 +8,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Syntax-->**Position** ( *find* ; *aString* {; *start* {; *lengthFound*}}{; *} ) -> 戻り値 <br/>
 **Position** ( *find* ; *aString* ; *start* ; *lengthFound* ; *options* ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.Position.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | find | Text | &#8594;  | 見つける文字列 |
@@ -24,7 +26,7 @@ displayed_sidebar: docs
 | lengthFound | Integer | &#8594;  | 見つかった文字列の長さ |
 | options | Integer | &#8594;  | 検索条件 |
 | 戻り値 | Integer | &#8592; | 最初に見つかった位置 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

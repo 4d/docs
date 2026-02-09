@@ -7,10 +7,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *users* )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | users | Blob | &#8594;  | データベース管理者によって作成・保存されたデータベースユーザーアカウントを格納している、暗号化された BLOB |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

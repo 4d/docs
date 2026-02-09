@@ -5,15 +5,17 @@ slug: /commands/wa-set-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *object* : Text ; *content* : Text ; *baseURL* : Text )<br/>**WA SET PAGE CONTENT** ( *object* : Field, Variable ; *content* : Text ; *baseURL* : Text )<!-- END REF-->
+<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *object* : Text ; *content* : Text ; *baseURL* : Text )<br/>**WA SET PAGE CONTENT** ( *object* : Variable, Field ; *content* : Text ; *baseURL* : Text )<!-- END REF-->
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
+<div class="no-index">
+
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
+| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
 | content | Text | &#8594;  | HTML source code |
 | baseURL | Text | &#8594;  | URL for relative references (macOS) |
-
+</div>
 <!-- END REF-->
 
 ## Compatibility Note 

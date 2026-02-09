@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 このコマンドは、フォームを基にした、カスタマイズされた高度なユーザーインターフェースで動作するように設計されています。 これを使用してデータベースや他の場所からの情報を表示したり、あるいはデータ入力機能を提供することができます。 [ADD RECORD](../commands-legacy/add-record.md) や [MODIFY RECORD](../commands-legacy/modify-record.md) とは異なり、**DIALOG** コマンドは、フォームとそのコンテンツ、内容、評価ボタンなどに対して、完全にコントロールすることができます。
 
-このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](../commands-legacy/open-form-window.md) コマンドと一緒に呼び出されます:
+このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](open-form-window.md) コマンドと一緒に呼び出されます:
 
 ![](../assets/en/commands/pict3541609.en.png)
 
@@ -171,7 +171,7 @@ displayed_sidebar: docs
 [CALL FORM](../commands-legacy/call-form.md)\
 [CANCEL](../commands-legacy/cancel.md)\
 [Form](form.md)\
-[Open window](../commands-legacy/open-window.md)
+[Open window](open-window.md)
 
 ## プロパティ
 

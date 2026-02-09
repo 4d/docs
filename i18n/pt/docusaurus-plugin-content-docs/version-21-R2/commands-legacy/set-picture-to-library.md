@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *imagem* : Picture ; *refImag* : Integer ; *nomeImagem* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagem | Picture | &#8594; | Nova Imagem |
 | refImag | Integer | &#8594; | Número de referência da Biblioteca de Imagens |
 | nomeImagem | Text | &#8594; | Novo nome da imagem |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,12 +7,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sum.Syntax-->**Sum** ( *series* {; *atributoRota*} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
+<div class="no-index">
+
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Dados para os quais se retorna a Soma |
 | atributoRota | Text | &#8594;  | Rota do atributo para o qual vai retornar a soma |
 | Resultado | Real | &#8592; | Soma para a série |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

@@ -7,6 +7,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *ptrChp* : Pointeur, Entier long |; *champType* : Integer {; *champLong* : Integer {; *indexé* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *numTable* : Pointeur, Entier long ; *numChamp* : Integer ; *champType* : Integer {; *champLong* : Integer {; *indexé* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChp &#124; numTable | Pointeur, Entier long | &#8594; | Pointeur de champ ou Numéro de table |
@@ -16,7 +18,7 @@ displayed_sidebar: docs
 | indexé | Boolean | &#8592; | Vrai = Indexé, Faux = Non indexé |
 | unique | Boolean | &#8592; | Vrai = Unique, Faux = Non unique |
 | invisible | Boolean | &#8592; | Vrai = Invisible, Faux = Visible |
-
+</div>
 <!-- END REF-->
 
 ## Description 

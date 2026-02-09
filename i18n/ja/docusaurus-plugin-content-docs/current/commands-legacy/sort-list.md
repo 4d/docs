@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* : Integer {; > または <} )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | list | Integer | &#8594; | リスト参照番号 |
 | > または < | 演算子 | &#8594; | 並び順: > 昇順, または < 降順 |
-
+</div>
 <!-- END REF-->
 
 ## 説明 

@@ -7,11 +7,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *image* : Picture ; *tabCodecs* : Text array )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
+<div class="no-index">
+
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | image | Picture | &#8594; | champ ou variable Image à analyser |
 | tabCodecs | Text array | &#8592; | Liste des codecs de l'image |
-
+</div>
 <!-- END REF-->
 
 ## Description 

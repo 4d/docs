@@ -7,9 +7,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM NEXT PAGE.Syntax-->**NEXT PAGE**<!-- END REF-->
 <!--REF #_command_.FORM NEXT PAGE.Params-->
+<div class="no-index">
+
 | Este comando não requer parâmetros |  |
 | --- | --- |
-
+</div>
 <!-- END REF-->
 
 ## Descrição 

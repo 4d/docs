@@ -5,8 +5,10 @@ slug: /commands/text-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; offset}} )<br/>**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; offset : Variable }} )<br/>**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO BLOB.Params-->
+<div class="no-index">
+
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | text | Text | &#8594; | BLOBに書き込むテキスト |
@@ -14,7 +16,7 @@ displayed_sidebar: docs
 | textFormat | Integer | &#8594; | テキストのフォーマットと文字セット |
 | offset &#124; * | 変数, 演算子 | &#8596; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
 |  |  |  | *でない場合、書き込み後の新しいオフセット |
-
+</div>
 <!-- END REF-->
 
 ## 説明 
