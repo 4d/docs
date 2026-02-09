@@ -241,15 +241,15 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 :::note Qodly Studio
 
-In Qodly Studio for 4D, the login mode can be set using the [**Force login** option](https://developer.4d.com/qodly/4DQodlyPro/force-login) in the Roles and Privileges panel.
+Qodly Studio for 4D においては、ログインモードはRoles and Privileges パネルの [**Force login** オプション](https://developer.4d.com/qodly/4DQodlyPro/force-login) を使用することで設定することが可能です。
 
 :::
 
 ## 制限モード
 
-The `restrictedByDefault` property configures how every [resource](#resources) are accessed when [no specific permission is defined for it](#permissions):
+`restrictedByDefault` プロパティは、[リソース](#resources) に対して[特定のパーミッションが定義されていない時](#パーミッション) にどのようにしてそれにアクセスできるかを設定します:
 
-- **Unrestricted mode** (`restrictedByDefault`: **false**): Resources without defined permissions are accessible to all requests. This mode is suitable for development environments where access can be gradually restricted.
+- **無制限モード** (`restrictedByDefault`: **false**): リソースに対して定義されたパーミッションがなくても、全てのリクエストがそれにアクセス可能です。 This mode is suitable for development environments where access can be gradually restricted.
 - **Restricted mode** (`restrictedByDefault`: **true**): Resources without defined permissions are blocked by default. This mode is recommended for production environments where access must be explicitly granted.
 
 :::note 互換性

@@ -4,33 +4,36 @@ title: New collection
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New collection.Syntax -->**New collection** {( ...*value* : any )} : Collection<!-- END REF -->
+<!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New collection.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type       |                             | Description                                |
 | ---------- | ---------- | --------------------------- | ------------------------------------------ |
 | value      | any        | &#8594; | Valeur(s) de collection |
 | Résultat   | Collection | &#8592; | New collection                             |
 
+</div>
 <!-- END REF-->
 
 ## Description
 
 La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être manipulées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
 
-Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
+Prise en charge des formules
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
 > N'oubliez pas que l'instruction `var : Collection` déclare une variable de type `Collection` mais ne crée pas de collection.
 
-Optionnellement, vous pouvez préremplir la nouvelle collection en passant une ou plusieurs *value*(s) comme paramètre(s).
+Condition Not appliquée à une assertion
 
 Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple :
 
 ```4d
- myCol[10]:="Mon nouvel élément"
+Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 ```
 
 Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires reçoivent la valeur **null**.
@@ -39,8 +42,8 @@ Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris 
 
 Vous devez prêter attention aux problèmes de conversion suivants :
 
-- Si vous passez un pointeur, il est conservé "tel quel" ; il est évalué à l'aide de la commande `JSON Stringify`
-- Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Vous pouvez modifier ce comportement en utilisant le sélecteur `Dates inside objects` de la commande `SET DATABASE PARAMETER`.
+- La nouvelle collection partagée
+- Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Indice de fin (non inclus)
 - Si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (Réel).
 
 ## Exemple 1

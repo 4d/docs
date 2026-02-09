@@ -171,7 +171,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; *...params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
 

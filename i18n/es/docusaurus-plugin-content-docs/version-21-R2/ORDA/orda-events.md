@@ -351,14 +351,14 @@ No se recomienda actualizar la entidad dentro de esta función (utilizando `This
 En este ejemplo, no se permite guardar un producto con un margen inferior al 50%. En caso de que el atributo precio no sea válido, devuelve un objeto error y, por tanto, detiene la acción de guardar.
 
 ```4d
-// ProductsEntity class
+// Clase ProductsEntity
 //
-// validateSave event at attribute level
+// evento validateSave a nivel atributo
 Function event validateSave margin($event : Object) : Object
 	
 var $result : Object
 	
-//The user can't create a product whose margin is < 50%
+//El usuario no puede crear un producto cuyo margen sea < 50%
 If (This.margin<50)
 	$result:={errCode: 1; message: "The validation of this product failed"; \
 	extraDescription: {info: "The margin of this product ("+String(This.margin)+") is lower than 50%"}; seriousError: False}
@@ -406,8 +406,8 @@ Para detener la acción, el código de la función debe devolver un [objeto erro
 Cuando se guarda un archivo en el disco, por ejemplo, se capturan errores relacionados con el espacio de disco.
 
 ```4d
-// ProductsEntity class
-// saving event at attribute level
+// Clase ProductsEntity
+// Evento saver a nivel del atributo
 Function event saving userManualPath($event : Object) : Object
 	
 var $result : Object
@@ -417,17 +417,17 @@ var $fileCreated : Boolean
 If (This.userManualPath#"")
 	$userManualFile:=File(This.userManualPath)
 				
-	// The user manual document file is created on the disk
-	// This may fail if no more space is available
+	// El archivo del manual de usuario se crea en el disco
+	// Esto puede fallar si no hay más espacio disponible
 	Try
-        // The file content has been generated and stored in a map in Storage.docMap previously
+        // El contenido del archivo se ha generado y almacenado en un mapa en Storage.docMap anteriormente
 	    $docInfo:=Storage.docMap.query("name = :1"; This.name).first()
         $userManualFile.setContent($docInfo.content)
 	Catch
-		// No more room on disk for example
+		// No hay más espacio en disco por ejemplo
 		$result:={/
-            errCode: 1; message: "Error during the save action for this product"; /
-            extraDescription: {info: "There is no available space on disk to store the user manual"}/
+            errCode: 1; message: "Error durante la acción de guardar para este producto"; /
+            extraDescription: {info: "No hay espacio disponible en disco para almacenar el manual de usuario"}/
         }
 	End try
 End if 
@@ -457,7 +457,7 @@ Este evento es útil después de guardar datos para propagar la acción de guard
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
-- To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. Se producirá un error.
+- Para evitar los bucles infinitos, llamar a [`save()`](../API/EntityClass.md#save) en la entidad actual (a través de `This`) en esta función **no está permitido**. Se producirá un error.
 - Arrojar un [objeto error](#error-object) **no es soportado** por esta función.
 
 #### Ejemplo
@@ -465,14 +465,14 @@ La función recibe un [objeto *event*](#event-parameter) como parámetro.
 Si se produce un error en el evento de guardado anterior, el valor del atributo se restablece en consecuencia en el evento `afterSave`:
 
 ```4d
-// ProductsEntity class
-Function event afterSave($event : Object)
+// Clase ProductsEntity
+Function evento afterSave($event : Object)
 	
 If (($event.status.success=False) && ($event.status.errors=Null))  
-    // $event.status.errors is filled if the error comes from the validateSave event
+    // $event.status.errors se llena si el error proviene del evento validateSave
 		
-	// The userManualPath attribute has not been properly saved
-	// Its value is reset
+	// El atributo userManualPath no se ha guardado correctamente
+	// Su valor se restablece
 	If ($event.savedAttributes.indexOf("userManualPath")=-1)
 		This.userManualPath:=""
 		This.status:="KO"
@@ -502,7 +502,7 @@ Este evento se activa con las siguientes funcionalidades:
 
 - [`entity.drop()`](../API/EntityClass.md#drop)
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
-- [deletion control rules](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) that can be defined at the database structure level.
+- [reglas de control de eliminación](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) que pueden definirse a nivel de la estructura de la base de datos.
 
 Este evento se activa **antes** de que la entidad sea realmente eliminada, permitiéndole comprobar la consistencia de los datos y, si es necesario, detener la acción de eliminación.
 
@@ -510,7 +510,7 @@ Para detener la acción, el código de la función debe devolver un [objeto erro
 
 #### Ejemplo
 
-En este ejemplo, no está permitido eliminar un producto que no esté etiquetado como "TO DELETE". In this case, you return an error object and thus, stop the drop action.
+En este ejemplo, no está permitido eliminar un producto que no esté etiquetado como "TO DELETE". En este caso, devuelve un objeto de error y, por lo tanto, detiene la acción de soltar.
 
 ```4d
 // Clase ProductsEntity
@@ -549,9 +549,9 @@ Este evento se activa con las siguientes funcionalidades:
 
 - [`entity.drop()`](../API/EntityClass.md#drop)
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
-- [deletion control rules](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) that can be defined at the database structure level.
+- [reglas de control de eliminación](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) que pueden definirse a nivel de la estructura de la base de datos.
 
-This event is triggered **while** the entity is actually dropped. If a [`validateDrop()`](#function-event-validatedrop) event function was defined, the `dropping()` event function is called if no error was triggered by `validateDrop()`.
+Este evento se activa **mientras** la entidad es realmente suprimida. If a [`validateDrop()`](#function-event-validatedrop) event function was defined, the `dropping()` event function is called if no error was triggered by `validateDrop()`.
 
 :::note
 

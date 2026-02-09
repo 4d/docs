@@ -4,15 +4,18 @@ title: New collection
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New collection.Syntax -->**New collection** {( ...*value* : any )} : Collection<!-- END REF -->
+<!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New collection.Params-->
+
+<div class="no-index">
 
 | 引数    | 型          |                             | 説明             |
 | ----- | ---------- | --------------------------- | -------------- |
 | value | any        | &#8594; | コレクションの値       |
 | 戻り値   | Collection | &#8592; | New collection |
 
+</div>
 <!-- END REF-->
 
 ## 説明

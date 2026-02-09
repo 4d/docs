@@ -898,7 +898,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 </details>
 
-<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( ...*attributePath* : Text ; ...*targetPath* : Text ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *...attributePath* : Text ; *...targetPath* : Text ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.extract().Params -->
 
@@ -1823,7 +1823,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 </details>
 
-<!-- REF #EntitySelectionClass.query().Syntax -->**.query**( *queryString* : Text { ; ...*value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.query().Params -->
 

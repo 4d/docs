@@ -50,7 +50,7 @@ shared singleton Class constructor()
 
 :::info
 
-While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. Puede interactuar con las propiedades y funciones del objeto `webForm` subyacente a través de `myForm`. For example, you can dynamically manipulate page components or transmit messages to web pages using specialized functions like `myForm.setMessage()`.
+While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. Puede interactuar con las propiedades y funciones del objeto `webForm` subyacente a través de `myForm`. Por ejemplo, puede manipular dinámicamente los componentes de la página o transmitir mensajes a las páginas web utilizando funciones especializadas como `myForm.setMessage()`.
 
 :::
 

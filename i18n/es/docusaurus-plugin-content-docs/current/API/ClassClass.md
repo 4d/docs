@@ -141,7 +141,7 @@ Esta propiedad es de **solo lectura**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**( { ...*param* : any } ) : 4D.Object<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Object<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
 

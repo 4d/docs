@@ -899,7 +899,7 @@ Quando criada, a seleção de entidades não contém nenhuma entidade (`mySelect
 
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; ...*value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
+<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
 

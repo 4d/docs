@@ -283,7 +283,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; ...*valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 
@@ -926,7 +926,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 
 </details>
 
-<!-- REF #collection.filter().Syntax -->**.filter**( *formula* : 4D.Function { ; ...*param* : any } ) : Collection<br/>**.filter**( *methodName* : Text { ; ...*param* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.filter().Syntax -->**.filter**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.filter().Params -->
 
@@ -1015,7 +1015,7 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 
 </details>
 
-<!-- REF #collection.find().Syntax -->**.find**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; ...*param* : any } ) : any<br/>**.find**( { *startFrom* : Integer ; }  *methodName* : Text { ; ...*param* : any } ) : any<!-- END REF -->
+<!-- REF #collection.find().Syntax -->**.find**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : any<br/>**.find**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
 
 <!-- REF #collection.find().Params -->
 
@@ -1106,7 +1106,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 </details>
 
-<!-- REF #collection.findIndex().Syntax -->**.findIndex**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; ...*param* : any } ) : Integer<br/>**.findIndex**( { *startFrom* : Integer ; }  *methodName* : Text { ; ...*param* : any } ) : Integer<!-- END REF -->
+<!-- REF #collection.findIndex().Syntax -->**.findIndex**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : Integer<br/>**.findIndex**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
 
 <!-- REF #collection.findIndex().Params -->
 
@@ -1289,7 +1289,7 @@ $col.flat(MAXLONG)
 
 </details>
 
-<!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; ...*param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; ...*param* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
 
@@ -1511,7 +1511,7 @@ Exemple 2
 
 </details>
 
-<!-- REF #collection.indices().Syntax -->**.indices**(  *queryString* : Text { ; ...*value* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.indices().Syntax -->**.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.indices().Params -->
 
@@ -1797,7 +1797,7 @@ Nom de méthode
 
 </details>
 
-<!-- REF #collection.map().Syntax -->**.map**( *formula* : 4D.Function { ; ...*param* : any } ) : Collection<br/>**.map**( *methodName* : Text { ; ...*param* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.map().Syntax -->**.map**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.map().Params -->
 
@@ -2249,7 +2249,7 @@ Tri avec un chemin de propriété :
 
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
+<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; *...extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; *...extraParam* : expression } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.orderByMethod().Params -->
 
@@ -2451,7 +2451,7 @@ Vous souhaitez trier la collection obtenue :
 
 </details>
 
-<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ) : Collection<br/>**.query**( *queryString* : Text ; ...*value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ) : Collection<br/>**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 <!-- REF #collection.query().Params -->
 
@@ -2734,7 +2734,7 @@ Vous trouverez d'autres exemples de requêtes dans la page `dataClass.query()`. 
 
 </details>
 
-<!-- REF #collection.reduce().Syntax -->**.reduce**( *formula* : 4D.Function { ; *initValue* : any { ; ...*param* : expression }} ) : any<br/>**.reduce**( *methodName* : Text { ; *initValue* : any { ; ...*param* : expression }} ) : any <!-- END REF -->
+<!-- REF #collection.reduce().Syntax -->**.reduce**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduce**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
 
 <!-- REF #collection.reduce().Params -->
 
@@ -2822,7 +2822,7 @@ Avec la méthode ***Flatten*** suivante :
 
 </details>
 
-<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; ...*param* : expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; ...*param* : expression }} ) : any <!-- END REF -->
+<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
 
 <!-- REF #collection.reduceRight().Params -->
 
@@ -3169,7 +3169,7 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 </details>
 
-<!-- REF #collection.some().Syntax -->**.some**( { *startFrom* : Integer ; } *formula* : 4D.Function { ; ...*param* : any } ) : Boolean<br/>**.some**( { *startFrom* : Integer ; } *methodName* : Text { ; ...*param* : any } ) : Boolean<!-- END REF -->
+<!-- REF #collection.some().Syntax -->**.some**( { *startFrom* : Integer ; } *formula* : 4D.Function { ; *...param* : any } ) : Boolean<br/>**.some**( { *startFrom* : Integer ; } *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.some().Params -->
 
@@ -3252,7 +3252,7 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *ascOrDesc* : Integer ) : Collection <br/>**.sort**( *formula* : 4D.Function { ; ...*extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; ...*extraParam* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *ascOrDesc* : Integer ) : Collection <br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.sort().Params -->
 

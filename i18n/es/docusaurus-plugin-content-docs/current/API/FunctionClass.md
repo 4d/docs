@@ -171,7 +171,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; *...params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
 

@@ -4,15 +4,18 @@ title: New shared collection
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( ...*value* : any )} : Collection<!-- END REF -->
+<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New shared collection.Params-->
 
-| 引数    | 型          |                             | 説明         |
-| ----- | ---------- | --------------------------- | ---------- |
-| value | any        | &#8594; | 共有コレクションの値 |
-| 戻り値   | Collection | &#8592; | 新規共有コレクション |
+<div class="no-index">
 
+| 引数    | 型          |                             | 説明                    |
+| ----- | ---------- | --------------------------- | --------------------- |
+| value | any        | &#8594; | 共有コレクションの値            |
+| 戻り値   | Collection | &#8592; | New shared collection |
+
+</div>
 <!-- END REF-->
 
 ## 説明
@@ -41,8 +44,8 @@ displayed_sidebar: docs
 
 - 数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
 - text
-- ブール
-- 日付
+- boolean
+- date
 - 時間 (ミリ秒の数 (実数) として保存されます)。
 - null
 - 共有オブジェクト

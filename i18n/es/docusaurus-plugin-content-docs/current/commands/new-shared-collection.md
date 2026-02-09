@@ -4,15 +4,18 @@ title: New shared collection
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( ...*value* : any )} : Collection<!-- END REF -->
+<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New shared collection.Params-->
+
+<div class="no-index">
 
 | Parámetros | Tipo       |                             | Descripción                                              |
 | ---------- | ---------- | --------------------------- | -------------------------------------------------------- |
 | value      | any        | &#8594; | Valor(es) de la collection compartida |
 | Resultado  | Collection | &#8592; | New shared collection                                    |
 
+</div>
 <!-- END REF-->
 
 ## Descripción
