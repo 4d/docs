@@ -251,10 +251,10 @@ Contrairement aux collections standard (non partagées), les collections partag�
 <!-- REF #collection.at().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|index|Integer|->|Index of element to return|
-|Result|any |<-|The element at that index|
+|index|Integer|->|Indice de l'élément à renvoyer|
+|Résultat|any |<-|The element at that index|
 </div>
 <!-- END REF -->
 
@@ -786,11 +786,11 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 <!-- REF #collection.distinct().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Path of attribute whose distinct values you want to get|
+|propertyPath|Text|->|Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes|
 |options|Integer|->|`ck diacritical`, `ck count values`|
-|Result|Collection|<-|New collection with only distinct values|
+|Résultat|Collection|<-|New collection with only distinct values|
 </div>
 <!-- END REF -->
 
@@ -920,13 +920,13 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 <!-- REF #collection.every().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|startFrom|Integer|->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Boolean|<-|True if all elements successfully passed the test|
+|startFrom|Integer|->|Indice de départ du test|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text|->Nom d'une méthode|
+|param|Mixed|->|Paramètre(s) à passer à *formula* ou *methodName*|
+|Résultat|Boolean|<-|True if all elements successfully passed the test|
 </div>
 <!-- END REF -->
 
@@ -1159,12 +1159,12 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 <!-- REF #collection.filter().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection|<-|New collection containing filtered elements (shallow copy)|
+|formula|4D.Function|->|Objet Formule|
+|methodName|Text|->|Nom d'une méthode|
+|param|any|->|Paramètre(s) à passer à *formula* ou *methodName*|
+|Résultat|Collection|<-|New collection containing filtered elements (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -1250,13 +1250,13 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 <!-- REF #collection.find().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|startFrom|Integer|->|Index to start the search at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|any |<-|First value found, or Undefined if not found|
+|startFrom|Integer|->|Indice de départ de la recherche|
+|formula|4D.Function|->|Objet Formule|
+|methodName|Text|->|Nom d'une méthode|
+|param|any|->->Paramètre(s) à passer à *formula* ou *methodName*|
+|Résultat|any|<-|First value found, or Undefined if not found|
 </div>
 <!-- END REF -->
 
@@ -1344,12 +1344,12 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 <!-- REF #collection.findIndex().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|startFrom|Integer|->|Index to start the search at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
+|startFrom|Integer|->|Indice de départ de la recherche|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text->|Nom d'une méthode|
+|param|any|->|Paramètre(s) à passer à *formula* ou *methodName*|
 |Result|Integer |<-|Index of first value found, or -1 if not found|
 </div>
 <!-- END REF -->
@@ -1471,10 +1471,10 @@ $first:=$emptyCol.first() // retourne Undefined
 <!-- REF #collection.flat().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|depth|Integer |->|How deep a nested collection structure should be flattened. Default=1|
-|Result|Collection |<-|Flattened collection|
+|depth|Integer |->La profondeur à laquelle une structure de collection imbriquée doit être aplatie. Défaut=1|
+|Résultat|Collection |<-|Flattened collection|
 </div>
 <!-- END REF -->
 
@@ -1528,12 +1528,12 @@ $col.flat(MAXLONG)
 <!-- REF #collection.flatMap().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection |<-|Collection of transformed values and flattened by a depth of 1|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text|->|Nom d'une méthode|
+|param|any|->|Paramètre(s) à passer à *formula* ou *methodName*|
+|Resultat|Collection |<-|Collection of transformed values and flattened by a depth of 1|
 </div>
 <!-- END REF -->
 
@@ -1625,11 +1625,11 @@ $c2:=$c.flatMap($f; $c.sum())
 <!-- REF #collection.includes().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|toSearch|expression|->|Expression to search in the collection|
-|startFrom|Integer|->|Index to start the search at|
-|Result|Boolean |<-|True if *toSearch* is found in the collection|
+|toSearch|expression|->|Expression à rechercher dans la collection|
+|startFrom|Integer|->|Indice à partir duquel commencer la recherche|
+|Résultat|Boolean|<-|True if *toSearch* is found in the collection|
 </div>
 <!-- END REF -->
 
@@ -2072,12 +2072,12 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 <!-- REF #collection.map().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection |<-|Collection of transformed values|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text|->|Nom d'une méthode|
+|param|any|->|Paramètre(s) à passer à *formula* ou *methodName*|
+|Resultat|Collection |<-|Collection of transformed values|
 </div>
 <!-- END REF -->
 
@@ -2398,12 +2398,12 @@ Tri avec un chemin de propriété :
 <!-- REF #collection.orderByMethod().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|extraParam|any|->|Parameter(s) to pass |
-|Result|Collection |<-|Sorted copy of the collection (shallow copy)|
+|formula|4D.Function|->|Objet formula|
+|methodName|Text|->|Nom d'une méthode|
+|extraParam|any|->|Paramètre(s) à transmettre|
+|Result|Collection|<-|Sorted copy of the collection (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -2466,13 +2466,13 @@ Vous souhaitez trier une collection par code de caractère ou par langage :
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+//Utilisation du code de caractère :
 $strings2:=$strings1.orderByMethod(Formula(sortCollection);sk char codes)
-// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// résultat : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+//Utilisation du langage :
 $strings2:=$strings1.orderByMethod(Formula(sortCollection);sk strict)
-// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+// résultat : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 La méthode ***sortCollection*** :
@@ -2735,13 +2735,13 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 <!-- REF #collection.reduce().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
-|param |expression|->|Parameter(s) to pass|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text|->Nom d'une méthode|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->Valeur à utiliser comme premier argument au premier appel de *formula* ou *methodName*|
+|param |expression|->|Paramètre(s) à passer|
+|Résultat|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
 </div>
 <!-- END REF -->
 
@@ -2829,13 +2829,13 @@ Avec la méthode ***Flatten*** suivante :
 <!-- REF #collection.reduceRight().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
-|param |expression|->|Parameter(s) to pass|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text|->Nom d'une méthode|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->Valeur à utiliser comme premier argument au premier appel de *formula* ou *methodName*|
+|param |expression|->|Paramètre(s) à passer|
+|Résultat|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
 </div>
 <!-- END REF -->
 
@@ -3207,13 +3207,13 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 <!-- REF #collection.some().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |Mixed |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+|startFrom |Integer |->|Indice de départ du test|
+|formula|4D.Function|->|Objet Formule|
+|methodName|Text|->|Nom d'une méthode|
+|param |Mixed |->|Paramètre(s) à passer|
+|Résultat|Boolean|<-|True if at least one element successfully passed the test|
 </div>
 <!-- END REF -->
 
@@ -3295,13 +3295,13 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 <!-- REF #collection.sort().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|extraParam |any |->|Parameter(s) for the method|
-|Result|Collection|<-|Original collection sorted|
+|ascOrDesc|Integer|->|`ck ascendant` ou `ck descendant` (valeurs scalaires)|
+|formula|4D.Function|->|Objet formule|
+|methodName|Text|->Nom d'une méthode|
+|extraParam |any |->|Paramètre(s) de la méthode|
+|Résultat|Collection|<-|Original collection sorted|
 </div>
 <!-- END REF -->
 

@@ -249,22 +249,22 @@ Qodly Studio for 4D においては、ログインモードはRoles and Privileg
 
 `restrictedByDefault` プロパティは、[リソース](#resources) に対して[特定のパーミッションが定義されていない時](#パーミッション) にどのようにしてそれにアクセスできるかを設定します:
 
-- **無制限モード** (`restrictedByDefault`: **false**): リソースに対して定義されたパーミッションがなくても、全てのリクエストがそれにアクセス可能です。 This mode is suitable for development environments where access can be gradually restricted.
-- **Restricted mode** (`restrictedByDefault`: **true**): Resources without defined permissions are blocked by default. This mode is recommended for production environments where access must be explicitly granted.
+- **無制限モード** (`restrictedByDefault`: **false**): リソースに対して定義されたパーミッションがなくても、全てのリクエストがそれにアクセス可能です。 このモードは例えば、アクセスを徐々に制限していけばいいような開発環境に適しています。
+- **制限モード** (`restrictedByDefault`: **true**): 定義されたパーミッションがないリソースは、デフォルトでブロックされます。 このモードは例えば、アクセス権が明示的に与えられなければならないような、プロダクション環境に対して推奨されます。
 
 :::note 互換性
 
-- When **creating a new project**, the `restrictedByDefault` property is set to **false** in the *roles.json* file (see below). Keep in mind that this configuration is tailored for quick start and smooth development. In production environment, [it is recommended to set the `restrictedByDefault` and `forceLogin` properties to **true**](#recommended-configuration).
-- In **projects converted from previous releases**; when enabling access to Qodly Studio using the [One-click configuration dialog](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), the `restrictedByDefault` property is added with value **true** in the *roles.json* file.
+- **新規プロジェクト作成時**、この `restrictedByDefault` プロパティは*roles.json* ファイルの中で**false** に設定されています(以下参照)。 この設定は、すぐに、かつスムーズに開発を始められるようにすることが目的であることに注意して下さい。 プロダクション環境においては、[`restrictedByDefault` および `forceLogin` プロパティを **true** に設定することが推奨されます](#recommended-configuration)。
+- **以前のリリースから変換されたプロジェクトの場合**、 Qodly Studio へのアクセスを[ワンクリック設定ダイアログ](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration) を使用して有効化した場合、 `restrictedByDefault` プロパティは、 *roles.json* ファイル内に値が **true** の状態で追加されます。
 
 :::
 
-### Recommended Configuration {#recommended-configuration}
+### 推奨される設定{#recommended-configuration}
 
-Depending on your environment, the recommended settings are:
+環境によって、推奨される設定は以下のようになります:
 
-- **Production**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **true**. This ensures maximum security by requiring user authentication and explicitly defined permissions for resource access.
-- **Development**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **false**. This allows easier access during development and debugging, with the possibility to gradually apply restrictions.
+- **プロダクション環境**: `restrictedByDefault` および [`forceLogin`](../REST/authUsers.md#force-login-mode) を両方とも **true** に設定する。 この設定によりリソースへのアクセスにはユーザー認証と明示的に定義されたパーミッションが必要になり、最大限のセキュリティを保証します。
+- **開発環境**: `restrictedByDefault` および [`forceLogin`](../REST/authUsers.md#force-login-mode) を両方とも **false** に設定する。 この設定により、開発およびデバッグ中は簡単にアクセスすることができ、それでいて後から徐々に制限を厳しくしていくという方法が可能になります。
 
 ### `Roles_Errors.json` ファイル
 
