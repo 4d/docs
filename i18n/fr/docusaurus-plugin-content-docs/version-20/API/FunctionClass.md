@@ -122,10 +122,10 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 <!-- REF #_command_.Formula.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formulaExp|Expression|->|Formula to be returned as object|
-|Result|4D.Function|<-|Native function encapsulating the formula|
+|formulaExp|Expression|->|Formule à renvoyer en tant qu'objet|
+|Résultat|4D.Function|<-|Native function encapsulating the formula|
 </div>
 <!-- END REF -->
 
@@ -262,10 +262,10 @@ Appeler une formule à l'aide de la notation objet :
 <!-- REF #_command_.Formula from string.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|formulaString|Text|->|Text formula to be returned as object|
-|Result|4D.Function|<-|Native object encapsulating the formula|
+|formulaExp|Expression|->|Formule de texte à renvoyer en tant qu'objet|
+|Résultat|4D.Function|<-|Native object encapsulating the formula|
 </div>
 <!-- END REF -->
 
@@ -322,11 +322,11 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 <!-- REF #FunctionClass.apply().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|thisObj|Object|->|Object to be returned by the This command in the formula|
-|formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
-|Result|any|<-|Value from formula execution|
+|thisObj|Object|->|Objet à renvoyer par la commande This dans la formule|
+|formulaParams |Collection|->|Collection de valeurs à transmettre en tant que $1...$n lorsque `formula` est exécutée|
+|Résultat|any|<-|Value from formula execution|
 </div>
 <!-- END REF -->
 
@@ -388,11 +388,11 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 <!-- REF #FunctionClass.call().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|thisObj|Object|->|Object to be returned by the This command in the formula|
-|params |any|->|Value(s) to be passed as $1...$n when formula is executed|
-|Result|any|<-|Value from formula execution|
+|Paramètre|Type||Description|
+|---|---||---|
+|thisObj|Object|->|Objet à renvoyer par la commande This dans la formule|
+|params |any|->|Valeur(s) à transmettre comme $1...$n lors de l'exécution de la formule|
+|Résultat|any|<-|Value from formula execution|
 </div>
 <!-- END REF -->
 

@@ -164,7 +164,7 @@ La [propiedad de formulario JSON](./properties_JSONref.md) correspondiente es `f
 
 #### CSS
 
-The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows you to configure several styles depending on the used theme.
+El [media query CSS **form-theme**](./createStylesheet.md#media-queries) permite configurar varios estilos en función del tema utilizado.
 
 ### Comportamientos específicos
 

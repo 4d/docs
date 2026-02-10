@@ -551,7 +551,7 @@ Este evento se activa con las siguientes funcionalidades:
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
 - [reglas de control de eliminación](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) que pueden definirse a nivel de la estructura de la base de datos.
 
-Este evento se activa **mientras** la entidad es realmente suprimida. If a [`validateDrop()`](#function-event-validatedrop) event function was defined, the `dropping()` event function is called if no error was triggered by `validateDrop()`.
+Este evento se activa **mientras** la entidad es realmente suprimida. Si se ha definido una función de evento [`validateDrop()`](#function-event-validatedrop), se llama a la función de evento `dropping()` si no se ha producido ningún error con `validateDrop()`.
 
 :::note
 
@@ -563,10 +563,10 @@ Para detener la acción, el código de la función debe devolver un [objeto erro
 
 #### Ejemplo
 
-Estes es un ejemplo del evento `dropping` a nivel de entidad:
+Este es un ejemplo del evento `dropping` a nivel de entidad:
 
 ```4d
-// ProductsEntity class
+// Clase ProductsEntity
 Function event dropping($event : Object) : Object
 
 var $result : Object
@@ -574,14 +574,14 @@ var $userManualFile : 4D.File
 
 $userManualFile:=File(This.userManualPath)
 
-    // When dropping a product, its user manual is also deleted on the disk
-    // This action may fail
+    // Al soltar un producto, también se borra su manual de usuario en el disco
+    // Esta acción puede fallar
 Try
     If ($userManualFile.exists)
         $userManualFile.delete()
     End if 
 Catch
-    // Dropping the user manual failed
+    // Falló al soltar el manual de usuario
     $result:={errCode: 1; message: "Drop failed"; extraDescription: {info: "The user manual can't be dropped"}}
 End try
 
@@ -603,7 +603,7 @@ Este evento es útil después de soltar datos para propagar la acción de soltar
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
-- To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. Se producirá un error.
+- Para evitar los bucles infinitos, llamar a [`drop()`](../API/EntityClass.md#drop) en la entidad actual (a través de `This`) en esta función **no está permitido**. Se producirá un error.
 - Arrojar un [objeto error](#error-object) **no es soportado** por esta función.
 
 :::note
@@ -622,8 +622,8 @@ Function event afterDrop($event : Object)
 var $status : Object
 
 If (($event.status.success=False) && ($event.status.errors=Null)) 
-        //$event.status.errors is filled 
-        //if the error comes from the validateDrop event
+        //$event.status.errors se llena 
+        //si el error proviene del evento validateDrop
     This.status:="Check this product - Drop action failed"
     $status:=This.save()
 End if 
