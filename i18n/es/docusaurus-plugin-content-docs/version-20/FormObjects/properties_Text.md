@@ -157,7 +157,7 @@ El color puede ser especificado por:
 
 - un nombre de color - como "red"
 - un valor HEX - como "# ff0000"
-- un valor RVB - como "rgb (255,0,0)"
+- un valor RVA - como "rgb (255,0,0)"
 
 También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
 

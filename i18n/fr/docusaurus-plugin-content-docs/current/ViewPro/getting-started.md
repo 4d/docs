@@ -11,7 +11,7 @@ Une tableur est une application contenant une grille de cellules dans lesquelles
 
 :::note
 
-Go to the [Library table](../Notes/updates.md#library-table) to know the SpreadJS version integrated in your 4D release.
+Rendez-vous dans le [tableau Bibliothèque](../Notes/updates.md#library-table) pour connaître la version de SpreadJS intégrée à votre version 4D.
 
 :::
 
