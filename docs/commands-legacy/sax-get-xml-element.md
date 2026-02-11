@@ -35,10 +35,10 @@ The command also fills the *attrValues* array with the values of attributes of t
 
 Let's look at the following piece of XML code:
 
-```4d
- 
- MyText
- 
+```xml
+<RootElement>
+   <Child Att1="111" Att2="222" Att3="333">MyText</Child>
+</RootElement>
 ```
 
 Once the following statement has been executed: 
