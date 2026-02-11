@@ -137,7 +137,7 @@ $element:=$col.at(10) // undefined
 | Paramètres   | Type            |                             | Description                                                     |
 | ------------ | --------------- | :-------------------------: | --------------------------------------------------------------- |
 | propertyPath | Text            |              ->             | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
-| Résultat     | Real, Undefined | <- | où :                                            |
+| Résultat     | Real, Undefined | <- | Moyenne arithmétique des valeurs de la collection               |
 
 </div>
 <!-- END REF -->
@@ -2319,13 +2319,13 @@ Vous souhaitez trier une collection par code de caractère ou par langage :
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+//Utilisation du code de caractère :
 $strings2:=$strings1.orderByMethod(Formula(sortCollection);sk char codes)
-// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// résultat : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+//Utilisation du langage :
 $strings2:=$strings1.orderByMethod(Formula(sortCollection);sk strict)
-// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+// résultat : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 booléens

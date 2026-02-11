@@ -157,7 +157,7 @@ La propriété `.backColor` est la <!-- REF #TableStyle.backColor.Summary -->[co
 
 **.foreColor** : Text<!-- END REF -->
 
-The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propriété `.foreColor` est la <!-- REF #TableStyle.foreColor.Summary -->[couleur au premier plan](configuring.md#background--foreground) du tableau<!-- END REF -->.
 
 ### .font
 
@@ -205,7 +205,7 @@ La propriété `.borderBottom` est la <!-- REF #TableStyle.borderBottom.Summary 
 
 **.borderTop** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderTop` property is the <!-- REF #TableStyle.borderTop.Summary -->top border line of the table <!-- END REF -->.
+La propriété `.borderTop` est la <!-- REF #TableStyle.borderTop.Summary -->ligne de bordure supérieure du tableau <!-- END REF -->.
 
 ### .borderhorizontale
 
