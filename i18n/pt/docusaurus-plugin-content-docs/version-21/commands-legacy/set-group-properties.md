@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties permite modificar e atualizar as propriedades de um grupo existente cujo número de referência único se passa em *refGrupo*, ou para adicionar um novo grupo

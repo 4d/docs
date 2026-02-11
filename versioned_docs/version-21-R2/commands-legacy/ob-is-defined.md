@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|15|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF-->can be an object varialble or a 4D object field.

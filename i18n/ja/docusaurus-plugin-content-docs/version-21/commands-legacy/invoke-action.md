@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->**INVOKE ACTION**コマンドは*action* 引数で定義された標準アクションを、任意の*target* 引数で指定したコンテキストでトリガーします。<!-- END REF-->

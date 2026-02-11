@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 
 
 <!--REF #_command_.On Drop database method.Summary-->**On Dropデータベースメソッド**はローカルおよびリモートモードの4Dで使用できます。<!-- END REF-->

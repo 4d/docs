@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.8.1|Criado por|
+|12|Renomear|
+|13|Renomear|
+|15 R4|Modificado|
+|20|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->O comando **OBJECT SET HORIZONTAL ALIGNMENT** permite determinar o tipo de alinhamento aplicado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\**.<!-- END REF-->

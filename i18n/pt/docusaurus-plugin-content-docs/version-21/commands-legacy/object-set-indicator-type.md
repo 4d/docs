@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->O comando **OBJECT SET INDICATOR TYPE** modifica o tipo de indicador de progressão do(s) termômetro(s) designado(s) pelos parâmetros *objeto* e *\** no processo atual.<!-- END REF-->  

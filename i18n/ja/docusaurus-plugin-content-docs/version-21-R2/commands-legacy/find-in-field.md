@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Find in field.Summary-->Find in field コマンドは、*targetField*フィールドの値が*value*に等しい最初のレコードのレコード番号を返します。<!-- END REF-->何もレコードが見つからなければ、は-1を返します。

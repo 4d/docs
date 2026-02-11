@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Menu selected.Summary-->**Menu selected** is used only when forms are displayed.<!-- END REF--> It detects which menu command has been chosen from a menu and, in the case of a hierarchical submenu, returns the reference of the submenu.

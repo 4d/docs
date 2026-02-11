@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BLOB to list.Summary-->BLOB to list コマンドは*blob*中、*offset*で指定されたバイトオフセット（ゼロから開始）に格納されているデータを使用して新しい階層リストを作成し、このリストのリスト参照番号を返します。<!-- END REF-->

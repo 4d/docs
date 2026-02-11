@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Summary-->**SOAP REJECT NEW REQUESTS** コマンドはWeb サービスが新規SOAP リクエストを受け入れるかどうかを指定します。<!-- END REF-->引数には、**True** を渡すと新規SOAP リクエストを拒否します。**False** を渡すと、新規SOAP リクエストを受け入れることを指定します。  

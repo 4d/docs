@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->El comando **FORM GET NAMES** llena el array *arrayNoms* con los nombres de los formularios de la aplicación.<!-- END REF--> 

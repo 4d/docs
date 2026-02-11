@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->La commande **GET REGISTERED CLIENTS** remplit deux tableaux <!-- END REF-->:

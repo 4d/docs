@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->The **GET DOCUMENT PROPERTIES** command returns information about the document whose name or pathname you pass in *document*.<!-- END REF-->

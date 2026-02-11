@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Is shared.Summary-->The **OB Is shared** command returns **True** if the *toCheck* object or collection is shared, and **False** otherwise (see [Shared objects and shared collections](../Concepts/shared.md)).<!-- END REF-->

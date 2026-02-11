@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->O novo comando **LISTBOX Get footer calculation** devolve o tipo de cálculo associado à área de rodapé de página do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  

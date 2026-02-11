@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6.5.3|Modifié|
+|13|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.COMPRESS BLOB.Summary-->**COMPRESS BLOB** compresse le BLOB *blob* à l'aide d'un algorithme de compression.<!-- END REF-->

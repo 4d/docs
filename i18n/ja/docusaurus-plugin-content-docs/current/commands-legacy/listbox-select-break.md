@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R2|変更|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->**LISTBOX SELECT BREAK** を使用して *object*と*\**で指定したリストボックス中でブレーク行を選択できます。<!-- END REF-->リストボックスは階層モードで表示されていなければなりません。

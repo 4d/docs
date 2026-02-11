@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.JSON Validate.Summary-->O comando **JSON Validate** verifica a conformidade do conteúdo JSON *vJson* com as regras definidas no esquema JSON *vSchema*.<!-- END REF--> Se o JSON não for válido, o comando devolve uma descrição detalhada dos erros.

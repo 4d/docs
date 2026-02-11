@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->The **MOBILE APP REFRESH SESSIONS** command checks all mobile application session files located in the MobileApps folder of the server, and updates existing session contents in memory for any edited files.<!-- END REF-->

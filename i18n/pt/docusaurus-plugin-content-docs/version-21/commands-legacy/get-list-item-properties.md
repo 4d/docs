@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R6|Modificado|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->O comando **GET LIST ITEM PROPERTIES** retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *refElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF-->

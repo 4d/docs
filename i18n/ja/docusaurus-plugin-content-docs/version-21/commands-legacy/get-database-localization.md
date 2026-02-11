@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|変更|
+|12|名称変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get database localization.Summary-->**Get database localization**コマンドは、データベースのデフォルトランゲージ、または*languageType*で指定されたデータベースの言語を、RFC 3066で定義された標準で返します。<!-- END REF-->例えばコマンドは英語の場合“en”を、日本語の場合“ja”を返します。この標準およびコマンドから返される値の情報については、*Design Reference*マニュアルの*付録 B: XLIFFアーキテクチャー*を参照してください。

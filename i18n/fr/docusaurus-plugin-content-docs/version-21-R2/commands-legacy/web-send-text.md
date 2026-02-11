@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+|13|Renommé|
+|14|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SEND TEXT.Summary-->La commande **WEB SEND TEXT** permet d’envoyer directement des données texte formatées en HTML.<!-- END REF-->

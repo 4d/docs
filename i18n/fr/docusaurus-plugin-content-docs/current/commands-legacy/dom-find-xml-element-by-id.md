@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Find XML element by ID.Summary-->La commande **DOM Find XML element by ID** vous permet de rechercher, à l'intérieur d'un document XML, l'élément dont l'attribut id est égal à la valeur passée dans le paramètre *id*.<!-- END REF-->

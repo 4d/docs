@@ -23,6 +23,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Encrypt data file.Summary-->The **Encrypt data file** command is used to encrypt or re-encrypt the data file designated by the *dataPath* parameter associated to the *structurePath* parameter.<!-- END REF--> It can also be used to remove encryption from the database. The command does not modify the original files, it returns the full path name of the folder created to backup the original data file.

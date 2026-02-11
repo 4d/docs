@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->El comando DELETE FROM LIST borra el elemento designado por el parámetro *refElem* de la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->

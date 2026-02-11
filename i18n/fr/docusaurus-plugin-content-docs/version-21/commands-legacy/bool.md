@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Bool.Summary-->La commande **Bool** retourne l'expression que vous avez passée dans *expression* sous une forme booléenne.<!-- END REF-->

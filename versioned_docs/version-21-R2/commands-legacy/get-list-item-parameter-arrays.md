@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->The **GET LIST ITEM PARAMETER ARRAYS** command lets you retrieve all the parameters in a single call (as well as, optionally, their values) that are associated with the *itemRef* item in the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->

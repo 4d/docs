@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 3|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX GET XML CDATA.Summary-->**SAX GET XML CDATA**コマンドを使用して、*document* 引数で参照されるXMLドキュメント中に存在するXML要素のCDATA *value* を取得できます。<!-- END REF-->このコマンドはXML CDATA SAX イベント内で呼び出さなければなりません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md)コマンドの説明を参照してください。

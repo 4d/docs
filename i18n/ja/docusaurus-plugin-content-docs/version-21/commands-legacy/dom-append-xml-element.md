@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Append XML element.Summary-->DOM Append XML element コマンドは*targetElementRef* 引数に渡した参照を持つXML要素の子要素を新しいXML要素に追加します。<!-- END REF-->引数には追加する要素の参照を渡します。この要素はDOMツリー上に既に存在するXML要素の参照として渡さなければなりません。これは*targetElementRef* の子要中最後の既存の要素の後に追加されます。

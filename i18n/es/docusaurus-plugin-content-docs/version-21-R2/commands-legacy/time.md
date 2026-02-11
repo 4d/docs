@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|14|Modificado|
+|16 R5|Modificado|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.Time.Summary-->El comando Time devuelve una expresión de tipo Hora equivalente a la hora especificada en el parámetro *valHora*.<!-- END REF-->

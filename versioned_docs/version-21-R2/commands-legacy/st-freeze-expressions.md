@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|16 R5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->The **ST FREEZE EXPRESSIONS** command "freezes" the contents of expressions found in the multi-style text or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> This action converts dynamic expressions into static text or (4D Write Pro areas only) images and removes the associated references from the *object*. 

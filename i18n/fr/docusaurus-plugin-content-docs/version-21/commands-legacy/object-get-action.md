@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get action.Summary-->La commande **OBJECT Get action** retourne le nom et (s'il existe), le paramètre de l'action standard associée à l'objet désigné par les paramètres *objet* et *\**.<!-- END REF-->

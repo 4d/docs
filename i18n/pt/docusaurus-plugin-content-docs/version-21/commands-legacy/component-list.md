@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.COMPONENT LIST.Summary-->O comando COMPONENT LIST dimensiona e preenche a matriz *arrayComponentes* com os nomes dos componentes carregados pela aplicação 4D para o banco de dados atual.<!-- END REF--> 

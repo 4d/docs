@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|16 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Undefined.Summary-->Undefined returns True if the result of the evaluation of *expression* is not a defined value, and False otherwise.<!-- END REF-->

@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Modificado|
+|13|Renombrar|
+|13|Modificado|
+|12|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->El comando **OPEN SETTINGS WINDOW** abre la caja de diálogo de Preferencias 4D o las Propiedades de la base actual y muestra los parámetros o la página correspondiente a la llave pasada en el parámetro *selector*.<!-- END REF-->

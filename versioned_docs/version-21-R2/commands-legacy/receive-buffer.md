@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6.8.3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->RECEIVE BUFFER reads the serial port that was previously opened with [SET CHANNEL](set-channel.md).<!-- END REF--> The serial port has a buffer that fills with characters until a command reads from the buffer. RECEIVE BUFFER gets the characters from the serial buffer, put them into *receiveVar* then clears the buffer. If there are no characters in the buffer, then *receiveVar* will contain nothing.

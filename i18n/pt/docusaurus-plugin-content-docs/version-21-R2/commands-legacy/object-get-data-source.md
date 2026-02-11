@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->O comando **OBJECT Get data source** devolve a fonte de dados atual dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  

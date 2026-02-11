@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|13|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB STOP SERVER.Summary-->O comando WEB STOP SERVER para o servidor web da aplicação 4D no qual foi executado (4D ou 4D Server).<!-- END REF--> Se for iniciado o servidor web, todas as conexões web são interrompidas e todos os processos web terminam.  

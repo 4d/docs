@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->OBJECT GET SCROLL POSITION devuelve, en los parámetros *posicionLinea* y *posicionH*, información relacionada con la posición de las barras de desplazamiento del objeto de formulario designado por los parámetros *\** y *objeto*.<!-- END REF-->

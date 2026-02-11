@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->The **OBJECT Is styled text** command returns **True** when the "Multi-style" option is checked for the object(s) designated by the *object* and *\** parameters.<!-- END REF-->

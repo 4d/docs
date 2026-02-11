@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->El comando **OBJECT SET PLACEHOLDER** asocia un texto de ejemplo al objeto o a los objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  

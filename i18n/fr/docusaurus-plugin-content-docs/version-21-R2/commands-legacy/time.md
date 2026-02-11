@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|14|Modifié|
+|16 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Time.Summary-->La fonction **Time** retourne, sous la forme d'une expression de type Heure, l'heure définie dans le paramètre *valHeure*.<!-- END REF-->

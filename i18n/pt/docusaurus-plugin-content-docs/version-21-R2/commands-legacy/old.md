@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 1|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Old.Summary-->O comando Old devolve o valor armazenado em *campo* antes de que se tenha atribuído um valor por programação ou modificado durante a entrada de dados.<!-- END REF--> 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.Structure file.Summary-->El comando **Structure file** devuelve la ruta de acceso del archivo de estructura de la base en la cual está trabajando actualmente.<!-- END REF-->

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.End SQL.Summary-->**End SQL** est un mot-clé indiquant dans l'éditeur de méthodes la fin d'une séquence de commandes SQL.<!-- END REF--> 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.Is picture file.Summary-->La commande **Is picture file** teste le fichier désigné par le paramètre *cheminFichier* et retourne Vrai s’il s’agit d’un fichier image valide.<!-- END REF--> La commande retourne Faux si le fichier n’est pas de type image ou s’il n’a pas été trouvé. 

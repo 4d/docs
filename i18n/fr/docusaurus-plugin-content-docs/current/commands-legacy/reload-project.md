@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RELOAD PROJECT.Summary-->La commande **RELOAD PROJECT** recharge les définitions du fichier source (méthodes, formulaires, etc.) à partir du disque, pour exécuter le projet dans l'environnement 4D courant.<!-- END REF--> Elle peut être utilisée uniquement avec des projets 4D exécutés en **mode** **interprété**. L'exécution de la commande est asynchrone. 

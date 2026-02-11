@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST GET URL.Summary-->**ST GET URL**コマンドは、 *object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内で見つかった最初のURL の表示テキストとアドレスを返します。<!-- END REF-->

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL Release 2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA GET LAST URL ERROR.Summary-->El comando WA GET LAST URL ERROR permite recuperar varios elementos de información relacionados con el último error ocurrido en el área Web designada por los parámetros *\** y *objeto*.<!-- END REF-->

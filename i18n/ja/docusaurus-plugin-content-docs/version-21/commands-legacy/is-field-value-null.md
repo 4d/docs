@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is field value Null.Summary-->Is field value Null コマンドは*aField*引数 によって指定されたフィールドがNULL値を含む場合[True](true.md "True")を返します。<!-- END REF-->その他の場合[False](false.md "False")を返します。 

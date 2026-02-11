@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+|14 R2|変更|
+|19|変更|
+|19 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->WA GET PREFERENCE コマンドを使用して、*\** と *object* によって指定されたWebエリアの環境設定の現在値を取得します。<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Pasteboard data size.Summary-->Pasteboard data size コマンドを使用して、*dataType* に渡したデータがペーストボード内に存在するかどうかを調べることができます。<!-- END REF--> 

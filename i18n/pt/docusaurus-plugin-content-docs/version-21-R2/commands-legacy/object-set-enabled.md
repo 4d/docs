@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->O comando OBJECT SET ENABLED utilizado para ativar ou desativar o objeto ou grupo de objetos especificado por *objeto no* formulário atual.<!-- END REF-->   

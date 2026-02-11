@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->O comando **LISTBOX GET GRID** devolve o estado visível/oculto das linhas horizontais e verticais que compõem a grade do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

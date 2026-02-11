@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|15 R5|Modificado|
+|16|Modificado|
+|20|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->El comando **GET PRINT OPTION** devuelve los valores actuales de una opción de impresión.<!-- END REF-->

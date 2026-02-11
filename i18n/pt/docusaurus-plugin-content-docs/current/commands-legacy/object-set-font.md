@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Modificado|
+|12|Renomear|
+|6|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT mostra *objeto* utilizando a fonte especificada no parâmetro *fonte*.<!-- END REF--> O parâmetro *fonte* deve conter um nome de fonte válido.

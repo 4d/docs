@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.ARRAY TO SELECTION.Summary-->El comando **ARRAY TO SELECTION** copia uno o más arrays en una selección de registros.<!-- END REF--> Todos los campos listados deben pertenecer a la misma tabla.

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** spécifie le nombre de niveaux de rupture dans un état créé à l'aide de la commande [PRINT SELECTION](print-selection.md).<!-- END REF-->

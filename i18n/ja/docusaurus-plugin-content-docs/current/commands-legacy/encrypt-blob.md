@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ENCRYPT BLOB.Summary-->ENCRYPT BLOB コマンドは、*toEncrypt* BLOBの内容を送信者の秘密鍵*sendPrivKey*を使用して暗号化します。<!-- END REF-->オプションとして、同時に受信者の公開鍵*recipPubKey*も使用できます。これらの鍵は、[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) （セキュアプロトコルテーマ）を使用して生成します。 

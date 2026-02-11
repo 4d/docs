@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get cache size.Summary-->O comando **Get cache size** devolve, em bytes, o tamanho atual da cache do banco de dados.<!-- END REF-->este comando só funciona em modo local (4D Server e 4D); não deve ser utilizado com 4D em modo remoto.

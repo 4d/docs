@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->La commande **OBJECT GET BEST SIZE** retourne dans les paramètres *largeurOpti* et *hauteurOpti* la largeur et la hauteur “optimales” de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF--> Ces valeurs sont exprimées en pixels. Cette commande est particulièrement utile dans le cadre de l’affichage ou de l’impression d’états complexes, associée à la commande [OBJECT MOVE](object-move.md). 

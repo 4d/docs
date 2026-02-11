@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.RESUME INDEXES.Summary-->El comando **RESUME INDEXES** reactiva todos los índices de la *tabla* cuando se han detenido anteriormente utilizando el comando [PAUSE INDEXES](pause-indexes.md).<!-- END REF--> Si los índices de *tabla* no se han detenido, el comando no hace nada.  

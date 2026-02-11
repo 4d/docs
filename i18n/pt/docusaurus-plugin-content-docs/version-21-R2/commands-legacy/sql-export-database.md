@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+|12.1|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->O comando SQL EXPORT DATABASE exporta ao formato SQL todos os registros de todas as tabelas do banco.<!-- END REF--> Em SQL, esta operação de exportação global é chamada "Dump".

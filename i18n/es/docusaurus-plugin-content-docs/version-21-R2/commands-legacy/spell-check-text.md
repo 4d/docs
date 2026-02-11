@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->El comando **SPELL CHECK TEXT** verifica el contenido del parámetro *texto* a partir del carácter *posVerif* y devuelve la posición de la primera palabra desconocida encontrada (si la hay).<!-- END REF-->

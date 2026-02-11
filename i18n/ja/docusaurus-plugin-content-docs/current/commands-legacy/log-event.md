@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R6|変更|
+|13|変更|
+|11 SQL Release 2|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LOG EVENT.Summary-->**LOG EVENT**コマンドを使用して、アプリケーションの使用中に発生した内部イベントを記録するためのカスタマイズされたシステムを設定します。<!-- END REF-->

@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LDAP Search.Summary-->The **LDAP Search** command searches in the target LDAP server for the first occurrence matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](ldap-login.md); otherwise a 1003 error is returned.

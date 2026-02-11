@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET CACHE SIZE.Summary-->**SET CACHE SIZE**コマンドは、データベースキャッシュのサイズを動的に設定し、またオプションとして、メモリを解放する際の最小バイト数を設定します。<!-- END REF-->このコマンドはローカルモード(4D Serverおよび4D)用です。リモートモードの4Dでは使用できません。

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB Get current session ID.Summary-->**WEB Get current session ID**コマンドはカレントのWebリクエストのセッションIDを返します。<!-- END REF-->このIDは4Dが自動で生成します。 

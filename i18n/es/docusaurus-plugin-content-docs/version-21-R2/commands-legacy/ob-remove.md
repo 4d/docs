@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+|15|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OB REMOVE.Summary-->El comando **OB REMOVE** elimina la *propiedad* del objeto de lenguaje designado por el parámetro *objeto*.<!-- END REF--> Este comando elimina la propiedad, así como su valor actual.  

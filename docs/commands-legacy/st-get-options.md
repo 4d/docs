@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->The **ST GET OPTIONS** command gets the current value of one or more operating options for the styled text field or variable designated by the *object* parameter.<!-- END REF-->

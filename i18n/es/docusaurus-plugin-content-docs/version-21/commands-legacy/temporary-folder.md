@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Temporary folder.Summary-->El comando Temporary folder devuelve la ruta de acceso a la carpeta temporal actual definida por su sistema.<!-- END REF-->

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Count XML elements.Summary-->O comando DOM Count XML elements devolve o número de elementos “filho” dependentes do elemento pai *refElemento* e chamado *nomeElemento*.<!-- END REF-->como padrão, **DOM Count XML elements** diferencia maiúsculas de minúsculas relativas ao parâmetro *nomeElemento* (regras xml). Pode controlar se o comando diferencia maiúsculas de minúsculas usando o seletor XML DOM case sensitivity ou o comando [XML SET OPTIONS](xml-set-options.md).

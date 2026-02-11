@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R8|Modificado|
+|15 R5|Modificado|
+|12|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ON ERR CALL.Summary-->O comando **ON ERR CALL** instala o método de projeto, cujo nome se passa em *metodoErro*, como método de tratamento de ocorrências ou método de gestão de erros.<!-- END REF-->

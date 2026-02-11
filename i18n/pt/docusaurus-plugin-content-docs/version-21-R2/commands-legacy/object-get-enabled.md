@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->O comando OBJECT Get enabled devolve True se o objeto ou grupo de objetos designado por objeto está ativo no formulário e False se não está ativo.<!-- END REF-->   

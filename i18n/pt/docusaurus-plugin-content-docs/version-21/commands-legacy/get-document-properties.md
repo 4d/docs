@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->O comando GET DOCUMENT PROPERTIES retorna informação sobre o documento cujo nome ou rota se passa em *documento*.<!-- END REF-->  

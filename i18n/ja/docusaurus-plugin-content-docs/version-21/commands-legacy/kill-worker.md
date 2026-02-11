@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.KILL WORKER.Summary-->**KILL WORKER** コマンドは *process* に指定した番号、または名称のワーカープロセスにメッセージを送信し、現在の処理が完了次第、未処理のメッセージすべて無視して実行を終了するよう命令します。<!-- END REF-->

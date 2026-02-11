@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|変更|
+|12|名称変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->**SAX SET XML DECLARATION** コマンドは*document* で参照されるXMLドキュメントを、引数のエンコーディングを使用して初期化します。<!-- END REF-->オプションとして、*standalone* 引数を使用してスタンドアロン属性を設定することができます。

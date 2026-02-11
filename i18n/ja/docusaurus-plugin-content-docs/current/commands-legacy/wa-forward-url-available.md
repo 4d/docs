@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA Forward URL available.Summary-->WA Forward URL available コマンドは、*\** と *object* 引数で指定したWebエリアに開かれた一連のURLで、次のURLが利用できるかどうかを知るために使用します。<!-- END REF--> 

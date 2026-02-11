@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|変更|
+|12|名称変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->**FORM SET INPUT** コマンドは、*aTable*のカレント入力フォームを*form*または*userForm*に設定します。<!-- END REF-->フォームは*aTable*に属していなければなりません。

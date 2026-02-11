@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB Is shared.Summary-->**OB Is shared** コマンドは*toCheck* 引数のオブジェクトまたはコレクションが共有の場合には**True** を返します。<!-- END REF-->それ以外の場合には**False** を返します(*共有オブジェクトと共有コレクション*参照)。

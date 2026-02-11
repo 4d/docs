@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET BLOB SIZE.Summary-->SET BLOB SIZE コマンドは、*size*引数に渡された値に従って、BLOB *blob*のサイズを変更します。<!-- END REF-->

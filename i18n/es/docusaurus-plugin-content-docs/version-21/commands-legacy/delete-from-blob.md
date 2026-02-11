@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DELETE FROM BLOB.Summary-->El comando DELETE FROM BLOB borra el número de bytes especificado por *numero* del BLOB *blob* a partir de la posición especificada por *offset* (expresada de manera relativa al comienzo del BLOB).<!-- END REF--> El tamaño del BLOB se reduce en *numero* de bytes.

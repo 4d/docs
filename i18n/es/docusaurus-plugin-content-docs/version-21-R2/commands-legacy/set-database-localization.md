@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->El comando SET DATABASE LOCALIZATION utilizado para modificar el lenguaje actual de la base para la sesión actual.<!-- END REF-->  

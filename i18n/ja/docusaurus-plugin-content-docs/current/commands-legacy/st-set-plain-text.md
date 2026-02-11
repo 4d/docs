@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|名称変更|
+|12.1|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->**ST SET PLAIN TEXT**コマンドは*object*引数で指定されたマルチスタイルテキストや変数に、*newText*引数に渡されたテキストを挿入します。<!-- END REF-->このコマンドは*object*引数のプレーンテキストにのみ適用され、そこに含まれるスタイルタグを変更しません。 

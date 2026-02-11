@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->O comando **OBJECT Get indicator type** devolve o tipo do indicador atual atribuído ao termômetro(s) designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

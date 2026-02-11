@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LDAP Search.Summary-->El comando **LDAP Search** busca la primera ocurrencia que coincida con los criterios definidos en el servidor LDAP objetivo.<!-- END REF--> Este comando debe ser ejecutado dentro de una conexión a un servidor LDAP abierta con *RuntimeVLIncludeIt*; de lo contrario se devuelve un error 1003.

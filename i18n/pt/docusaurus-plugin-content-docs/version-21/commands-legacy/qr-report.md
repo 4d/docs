@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR REPORT.Summary-->QR REPORT imprime um relatório para *tabela*, criado com o editor de relatórios rápidos .<!-- END REF--> O editor de relatórios rápidos permite aos usuários criar seus próprios relatórios. Para maior informação sobre a criação de relatórios rápidos com a ajuda do editor de relatórios rápidos, consulte *Relatórios rápidos* ou *Relatórios rápidos* no Manual de Desenho de 4D.  

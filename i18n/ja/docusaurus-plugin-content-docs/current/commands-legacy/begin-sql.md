@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Begin SQL.Summary-->**Begin SQL**はメソッドエディタで使用するキーワードで、プロセスのカレントデータソース (4Dの統合SQLエンジン、または[SQL LOGIN](sql-login.md)コマンドで特定されたソース) により解釈されるべき一連のコマンドの始まりを宣言します。<!-- END REF--> 

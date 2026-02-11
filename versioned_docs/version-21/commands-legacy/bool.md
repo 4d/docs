@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Bool.Summary-->The **Bool** command returns the boolean form of the expression you passed in *expression*.<!-- END REF--> 

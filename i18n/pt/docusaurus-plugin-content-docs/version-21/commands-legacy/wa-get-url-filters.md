@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->O comando WA GET URL FILTERS retorna nos arrays *arrFiltro* e *permitirArrRecusar*, os filtros ativos na área web designada pelos parâmetros *\** e *objeto* .<!-- END REF--> Se nenhum filtro estiver ativo, os arrays são retornados vazios.  

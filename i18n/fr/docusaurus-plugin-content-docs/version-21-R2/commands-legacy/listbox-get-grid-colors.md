@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+|17 R6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->La commande **LISTBOX GET GRID COLORS** retourne la couleur des lignes horizontales et verticales composant la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->

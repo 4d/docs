@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R2|Modifié|
+|15|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->La commande **QUERY BY ATTRIBUTE** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) à l'aide des paramètres *champObjet*, *cheminAttribut*, *opRech* et *valeur* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant. Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 

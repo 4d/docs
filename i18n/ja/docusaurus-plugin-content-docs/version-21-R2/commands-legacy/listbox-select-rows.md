@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->**LISTBOX SELECT ROWS** コマンドはエンティティセレクション型リストボックス/コレクション型リストボックスにおいて、*selection* 引数で指定したエンティティまたはオブジェクトに対応する行を選択します。<!-- END REF-->

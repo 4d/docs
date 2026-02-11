@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PUSH RECORD.Summary-->PUSH RECORDは、*aTable*のカレントレコード (それに付随するサブレコードも含めて) を、そのテーブルのレコードスタックにプッシュします。<!-- END REF-->PUSH RECORDは、レコードがディスクに保存される前でも実行することができます。

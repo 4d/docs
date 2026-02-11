@@ -24,6 +24,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->La commande **REGISTER CLIENT** “inscrit” un poste client 4D sous le nom *nomClient* auprès de 4D Server, afin de permettre que d’autres clients ou éventuellement 4D Server (par l’intermédiaire de procédures stockées) puissent y exécuter des méthodes à l’aide de la commande [`EXECUTE ON CLIENT`](execute-on-client.md).<!-- END REF--> Une fois inscrit, un client 4D peut donc exécuter une ou plusieurs méthodes pour le compte d’autres clients.

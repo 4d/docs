@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->The **OBJECT SET AUTO SPELLCHECK** command sets or dynamically modifies the status of the **Auto spellcheck** option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> This option enables or disables the automatic spellcheck when data is entered for the object.

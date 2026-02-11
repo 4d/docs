@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Find XML element.Summary-->DOM Find XML element コマンドはXMLストラクチャ中で特定のXML要素を検索するために使用します。<!-- END REF-->検索は*elementRef* 引数で指定された要素から開始されます。

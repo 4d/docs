@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Modified|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET QUERY DESTINATION.Summary-->**SET QUERY DESTINATION** enables you to tell 4D where to put the result of any subsequent query for the current process.<!-- END REF-->

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get menu title.Summary-->Get menu title コマンドは、*menu*に渡されたメニュー番号または参照を持つメニューのタイトルを返します。<!-- END REF-->  

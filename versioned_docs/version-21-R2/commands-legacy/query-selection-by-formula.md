@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 2|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->**QUERY SELECTION BY FORMULA** looks for records in *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. 

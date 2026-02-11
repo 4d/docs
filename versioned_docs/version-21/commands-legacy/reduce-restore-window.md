@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->The **REDUCE RESTORE WINDOW** command reduces/expands the window whose reference number was passed in *window* to/from the taskbar on Windows or the dock on macOS.<!-- END REF--> 

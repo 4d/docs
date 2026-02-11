@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+|18 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current method name.Summary-->La commande **Current method name** retourne le nom de la méthode dans laquelle elle est appelée.<!-- END REF--> Cette commande est utile dans le cadre du débogage de méthodes génériques.

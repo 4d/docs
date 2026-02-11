@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|名称変更|
+|13|変更|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->**LISTBOX DELETE ROWS**コマンドは、*object*引数および *\** で指定されたリストボックスから、*rowPosition* から始まるひとつ以上の行（表示または非表示）を削除します。<!-- END REF--> 

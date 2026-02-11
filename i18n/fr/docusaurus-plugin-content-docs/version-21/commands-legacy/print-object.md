@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Print object.Summary-->La commande **Print object** vous permet d’imprimer le ou les objet(s) de formulaire désigné(s) par les paramètres *objet* et *\**, à l’emplacement défini par les paramètres *posX* et *posY*.<!-- END REF-->

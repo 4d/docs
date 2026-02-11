@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->La commande **SAX OPEN XML ELEMENT ARRAYS** permet d’ajouter un nouvel élément dans le document XML référencé par *document* ainsi que, facultativement, des attributs et leurs valeurs sous forme de tableaux.<!-- END REF--> 

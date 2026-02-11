@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R5|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->PRINT SETTINGS muestra una caja de diálogo de impresión.<!-- END REF--> Este comando debe llamarse antes de una serie de comandos [Print form](../commands/print-form.md) o el comando [OPEN PRINTING JOB](open-printing-job.md).

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Window process.Summary-->Window process コマンドは*window*に渡されたウィンドウが実行されているプロセスの番号を返します。<!-- END REF-->ウィンドウが存在しない場合0が返されます。

@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->O comando GET RELATION PROPERTIES retorna as propriedades da relação (se houver) que começa do campo fonte definido por *numTabela* e *numCamp*o ou por *pontCampo*.<!-- END REF-->

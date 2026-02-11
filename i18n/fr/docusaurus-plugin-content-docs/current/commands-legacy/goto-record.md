@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GOTO RECORD.Summary-->**GOTO RECORD** sélectionne l'enregistrement courant de *table*.<!-- END REF--> Le paramètre *enregistrement* est le numéro renvoyé par la fonction [Record number](record-number.md). Après l'exécution de cette commande, l'enregistrement est le seul de la sélection courante.

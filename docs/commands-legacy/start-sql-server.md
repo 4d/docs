@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.START SQL SERVER.Summary-->The START SQL SERVER command launches the integrated SQL server in the 4D application where it has been executed.<!-- END REF--> Once launched, the SQL server can respond to external SQL queries.

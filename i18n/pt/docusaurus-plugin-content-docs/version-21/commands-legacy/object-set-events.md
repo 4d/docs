@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->O comando **OBJECT SET EVENTS** modifica, para o processo atual, a configuração dos eventos formulário do formulário, dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->

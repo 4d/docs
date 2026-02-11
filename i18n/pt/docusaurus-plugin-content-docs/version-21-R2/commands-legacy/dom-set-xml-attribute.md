@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Summary-->O comando DOM SET XML ATTRIBUTE permite adicionar uno ou vários atributos ao elemento XML cuja referência se passa no parâmetro *refElemento*.<!-- END REF--> Também permite definir o valor de cada atributo definido.  

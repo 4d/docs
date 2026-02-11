@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|12|Renomear|
+|14 R2|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->O comando FORM GET OBJECTS retorna em forma de array(s) a lista de todos os objetos presentes no formulário atual da tabela atual.<!-- END REF--> Esta lista pode estar restrita à página atual do formulário. O comando pode ser utilizado com os formulários de entrada e de saída.

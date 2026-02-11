@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8.1|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->La commande **SET PRINTABLE MARGIN** permet de fixer les valeurs des différentes marges d’impression lors de l’utilisation des commandes [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).<!-- END REF-->

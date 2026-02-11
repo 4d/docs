@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOCUMENT LIST.Summary-->El comando **DOCUMENT LIST** llena el array de tipo Texto *documentos* con los nombres del los documentos ubicados en la ubicación pasada en *rutaAcceso*.<!-- END REF-->el parámetro *rutaAcceso* sólo acepta rutas de acceso absolutas. 

@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->COMBINE PICTURES コマンドは*pict1*と*pict2* ピクチャを、*operator*モードで結合させ、3つめの*resultingPict*ピクチャを得るために使用します。<!-- END REF-->結果のピクチャは複合型で、ソースピクチャのすべての特性を保持します。

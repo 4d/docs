@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELAY PROCESS.Summary-->**DELAY PROCESS** permet d'endormir un *process* pour un certain nombre de ticks (1 tick = 1/60ème de seconde).<!-- END REF--> Pendant cette période, le process endormi n'utilise pas de temps machine. Il reste cependant toujours en mémoire.

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Summary-->**REJECT NEW REMOTE CONNECTIONS** コマンドは、アプリケーションサーバーが新規リモートユーザー接続を受け入れるかどうかを指定します。<!-- END REF-->引数には、リモート接続を拒否するためには**true** を渡します。**false** を渡した場合、新規リモート接続を許可することを指定します。

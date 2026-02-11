@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->O comando **LDAP SEARCH ALL** encontra todas as ocorrências que correspondem aos critérios definidos no servidor LDAP objetivo.<!-- END REF--> Este comando deve ser executado dentro de uma conexão com um servidor LDAP aberto com *LDAP LOGIN*; caso contrário, um erro 1003 é retornado.  

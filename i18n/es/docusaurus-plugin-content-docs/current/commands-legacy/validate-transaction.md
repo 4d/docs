@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.VALIDATE TRANSACTION.Summary-->VALIDATE TRANSACTION acepta la transacción abierta por el comando [START TRANSACTION](start-transaction.md "START TRANSACTION") del nivel correspondiente en el proceso actual.<!-- END REF--> VALIDATE TRANSACTION guarda todas las modificaciones efectuadas a los datos de la base que ocurrieron durante la transacción. 

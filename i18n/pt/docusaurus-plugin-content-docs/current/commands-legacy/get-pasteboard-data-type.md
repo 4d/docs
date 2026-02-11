@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->O comando GET PASTEBOARD DATA TYPE permite obter a lista dos tipos de dados presentes na área de transferência.<!-- END REF--> Este comando geralmente deve ser utilizado no contexto de uma operação arrastar e soltar, nos eventos de formulário On Drop ou On Drag Over do objeto de destino. Mais particularmente, permite verificar a presença de um tipo de dados específico na área de transferência. 

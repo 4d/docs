@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Find in list.Summary-->O comando Find in list retorna a posição ou referência do primeiro elemento da *lista* que é equivalente à cadeia passada em *valor*.<!-- END REF--> Se são encontrados vários elementos, a função também pode preencher um array *arrayElem* com a posição ou a referência de cada elemento. 

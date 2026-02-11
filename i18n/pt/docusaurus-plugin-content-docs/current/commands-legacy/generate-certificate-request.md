@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->O comando GENERATE CERTIFICATE REQUEST gera uma pedido de certificação ao formato PKCS o qual pode ser utilizado diretamente pelas autoridades de certificação tal como Verisign(R).<!-- END REF--> O certificado é uma parte importante no protocolo seguro SSL. O certificado é enviado a cada navegador que se conecta em modo SSL e contém a “carteira de identidade” do sitio web (com a informação introduzida no comando), além de sua chave pública permitindo aos navegadores decifrar a informação recebida. Além disso, o certificado contém diferente informação adicionada pela autoridade de certificação a qual garante sua integridade.

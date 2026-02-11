@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->**FONT STYLE LIST**コマンドは*fontFamily*引数で定義されたフォントファミリーによってサポートされているフォントスタイルの一覧と、サポートされているフォント名の完全な一覧を返します。<!-- END REF-->このコマンドを使用すると、特に4D Write Proエリアのコンテキストにおいて、フォントとフォントスタイルを管理するインターフェースをデザインする事ができます(*4D Write Proリファレンス*)。

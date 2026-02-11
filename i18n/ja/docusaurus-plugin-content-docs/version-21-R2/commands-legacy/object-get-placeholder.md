@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->**OBJECT Get placeholder**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたプレースホルダーテキストを返します。<!-- END REF-->オブジェクトにプレースホルダーテキストが何も関連付けられていない場合は、空の文字列を返します。

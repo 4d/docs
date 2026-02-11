@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Convert path POSIX to system.Summary-->La commande **Convert path POSIX to system** convertit un chemin d’accès exprimé avec la syntaxe POSIX (Unix) en chemin d’accès exprimé avec la syntaxe système.<!-- END REF--> 

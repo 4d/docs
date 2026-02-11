@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 1|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Old.Summary-->The **Old** command returns the value held in *aField* before the field was programmatically assigned a value or modified in data entry.<!-- END REF-->

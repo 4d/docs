@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|11 SQL Release 4|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->The VERIFY CURRENT DATA FILE command carries out a structural check of the objects found in the data file currently opened by 4D.<!-- END REF-->

@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+|12|名称変更|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->**LISTBOX SET TABLE SOURCE**コマンドは、*\** と *object* 引数で指定されるリストボックスに表示されるデータのソースを変更するために使用します。<!-- END REF-->

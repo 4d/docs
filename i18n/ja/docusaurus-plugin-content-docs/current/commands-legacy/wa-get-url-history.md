@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R5|変更|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA GET URL HISTORY.Summary-->WA GET URL HISTORY コマンドは、*\** と *object* 引数で指定したWebエリアのセッション中に訪問したURLを含む1つまたは2つの配列を返します。<!-- END REF-->このコマンドを使用して、カスタムのナビゲーションシステムを作成できます。

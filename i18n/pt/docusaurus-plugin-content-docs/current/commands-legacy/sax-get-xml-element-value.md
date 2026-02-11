@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Summary-->O comando SAX GET XML ELEMENT VALUE permite recuperar o valor de um elemento XML existente no documento XML referenciado por *documento*.<!-- END REF--> Este comando deve ser chamado no contexto de um evento XML DATA SAX. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md) .  

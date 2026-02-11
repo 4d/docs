@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Validate password.Summary-->Validate password devuelve True si la cadena pasada en *contraseña* es la contraseña para la cuenta de usuario cuyo número de referencia se pasa en *refUsuario*.<!-- END REF-->

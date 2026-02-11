@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R4|Modified|
+|14|Modified|
+|12.1|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FONT LIST.Summary-->The **FONT LIST** command populates the *fonts* text array with the names of scalable fonts available on your system.<!-- END REF-->

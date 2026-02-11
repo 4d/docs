@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R3|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB Instance of.Summary-->O comando **OB Instance of** devolve true se *objeto* pertencer à *classe* ou uma de suas classes filho, e em caso contrário false.<!-- END REF-->

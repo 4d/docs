@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->**SPELL CHECK TEXT**コマンドは*text*引数の内容を、*checkPos*の位置からチェックし、最初に見つかった未知の単語の位置を返します。<!-- END REF-->

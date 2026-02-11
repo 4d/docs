@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->The QUERY BY SQL command can be used to take advantage of the SQL kernel integrated into 4D.<!-- END REF--> It can execute a simple SELECT query that can be written as follows:

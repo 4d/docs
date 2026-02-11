@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+|12.1|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->El comando SQL EXPORT SELECTION exporta al formato SQL los registros de la selección actual de la tabla 4D designada por el parámetro *Tabla*.<!-- END REF-->   

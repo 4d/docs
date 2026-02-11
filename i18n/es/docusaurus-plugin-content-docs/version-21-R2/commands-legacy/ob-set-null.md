@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+|15|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OB SET NULL.Summary-->El comando **OB SET NULL** almacena el valor **null** en el objeto de lenguaje designado por el parámetro *objeto* .<!-- END REF-->debe haber sido definido utilizando el comando *C\_OBJECT* o designar un campo objeto 4D.  

@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->**APPEND TO LIST** コマンドは、*list*に渡した参照番号を持つ階層リストに新規項目を追加します。<!-- END REF-->

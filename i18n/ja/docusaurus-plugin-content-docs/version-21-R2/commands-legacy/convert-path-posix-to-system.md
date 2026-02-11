@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Convert path POSIX to system.Summary-->Convert path POSIX to system コマンドはPOSIX (Unix) シンタックスで表現されたパス名をシステムシンタックスで表現されたパス名に変換します。<!-- END REF-->

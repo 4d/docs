@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->LISTBOX GET PRINT INFORMATION コマンドは *object*と*\**で指定したリストボックスオブジェクトの印刷に関連する現在の情報を返します。<!-- END REF-->このコマンドを使用してリストボックスの内容の印刷を制御します。

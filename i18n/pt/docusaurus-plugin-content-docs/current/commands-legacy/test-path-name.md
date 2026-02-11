@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Test path name.Summary-->A função Test path name verifica se um documento ou pasta cujo nome ou via de acesso se passa em *viaAcesso* está presente no disco.<!-- END REF--> Pode passar uma via de acesso relativa ou absoluta, expressada na sintaxes do sistema atual. 

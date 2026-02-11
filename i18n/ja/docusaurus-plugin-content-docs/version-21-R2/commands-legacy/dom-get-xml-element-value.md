@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Summary-->**DOM GET XML ELEMENT VALUE** コマンドは *elementRef*に指定したXML要素の値を*elementValue* 引数に返します。<!-- END REF-->4Dは取得した値を渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。

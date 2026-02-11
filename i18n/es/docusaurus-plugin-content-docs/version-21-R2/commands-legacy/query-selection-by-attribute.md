@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+|16 R2|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** trabaja y realiza las mismas acciones que [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> La diferencia entre estos dos comandos es el alcance de la búsqueda:

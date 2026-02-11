@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Pasteboard data size.Summary-->**Pasteboard data size** vous permet de savoir s'il y a des données du type *typeDonnées* dans le conteneur de données.<!-- END REF--> 

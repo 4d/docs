@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->**OLD RELATED ONE** operates the same way as [RELATE ONE](relate-one.md) does, except that **OLD RELATED ONE** uses the old value of *aField* to establish the relation.<!-- END REF-->

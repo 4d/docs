@@ -27,6 +27,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Match regex.Summary-->La commande **Match regex** permet de tester la conformité d’une chaîne de caractères par rapport à un ensemble de règles synthétisé au moyen d’un méta-langage appelé “expression régulière” ou “expression rationnelle”.<!-- END REF--> L’abrévation regex est communément employée pour désigner ces familles de notations. 

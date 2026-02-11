@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|12|Renamed|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get database localization.Summary-->The Get database localization command returns the database default language or the language specified by the *languageType*, expressed in the standard defined by the RFC 3066\.<!-- END REF--> Typically, the command returns “en” for English, “es” for Spanish, etc. For more information about this standard and the values returned by this command, please refer to *Appendix B: XLIFF architecture* in the *Design Reference* manual.

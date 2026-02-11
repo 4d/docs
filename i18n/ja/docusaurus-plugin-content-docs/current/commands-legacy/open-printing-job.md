@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->**OPEN PRINTING JOB** コマンドはプリントジョブを開き、[CLOSE PRINTING JOB](close-printing-job.md) コマンドが呼ばれるまで、続くすべてのプリント命令をスタックします。<!-- END REF-->このコマンドはプリントジョブのコントロールを可能にし、特に印刷中に他のプリントジョブが予期せず挿入されないようにします。

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->La commande **OBJECT Get help tip** retourne le message d’aide associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** dans le process courant.<!-- END REF--> 

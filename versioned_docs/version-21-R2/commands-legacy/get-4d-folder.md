@@ -18,6 +18,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 2|Modified|
+|13|Modified|
+|16|Modified|
+|17 R2|Modified|
+|20|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get 4D folder.Summary-->The **Get 4D folder** command returns the pathname to the active 4D folder of the current application, or to the 4D environment folder specified by the *folder* and *options* parameters, if passed.<!-- END REF--> This command allows you to get the actual pathname of the folders used by the 4D application. By using this command, you ensure that your code will work on any platform running any localized system.

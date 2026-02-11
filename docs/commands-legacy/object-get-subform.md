@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Modified|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->The **OBJECT GET SUBFORM** command gets the name(s) of the form(s) associated with the subform object designated by the *object* and *\** parameters.<!-- END REF-->

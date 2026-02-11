@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get list item font.Summary-->O comando Get list item font retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *RefElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF--> 

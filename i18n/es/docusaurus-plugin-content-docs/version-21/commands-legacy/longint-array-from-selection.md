@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.7|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->El comando LONGINT ARRAY FROM SELECTION llena el array *arrReg* con los números (absolutos) de los registros que están en *seleccion*.<!-- END REF-->

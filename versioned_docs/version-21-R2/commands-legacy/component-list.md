@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.COMPONENT LIST.Summary-->The COMPONENT LIST command sizes and fills the *componentsArray* array with the names of the components loaded by the 4D application for the current host database.<!-- END REF-->

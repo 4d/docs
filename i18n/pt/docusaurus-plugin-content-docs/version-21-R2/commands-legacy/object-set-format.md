@@ -17,6 +17,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|12|Renomear|
+|12|Modificado|
+|15 R5|Modificado|
+|20|Modificado|
+|20 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->OBJECT SET FORMAT substitui o formato de saída para os objetos especificados por *objeto* pelo formato que passa em *formatSaída*.<!-- END REF--> O novo formato é utilizado unicamente para a visualização atual, não se guarda com o formulário.

@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R2|Modifié|
+|12|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->La commande **LISTBOX SELECT ROW** provoque la sélection de la ligne de numéro *positionLigne* dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->

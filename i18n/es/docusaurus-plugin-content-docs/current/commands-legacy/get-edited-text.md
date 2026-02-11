@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get edited text.Summary-->El comando **Get edited text** se utiliza principalmente con el evento formulario On After Edit para recuperar el texto a medida que es introducido.<!-- END REF--> También puede utilizarse con los eventos formulario On Before Keystroke y On After Keystroke. Para mayor información sobre estos eventos formulario, por favor consulte la descripción del comando [Form event code](../commands/form-event-code.md).

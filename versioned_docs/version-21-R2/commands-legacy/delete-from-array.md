@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->The DELETE FROM ARRAY command deletes one or more elements from *array*.<!-- END REF--> Elements are deleted starting at the element specified by *where*.

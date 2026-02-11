@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->O comando OBJECT Get font style devolve o estilo atual da fonte utilizada pelo objeto de formulário designado por *objeto*.<!-- END REF--> 

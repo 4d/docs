@@ -19,6 +19,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|13|Modified|
+|14|Modified|
+|15 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GRAPH.Summary-->**GRAPH** draws a graph for a picture variable on the basis of values coming from arrays.<!-- END REF--> 

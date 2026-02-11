@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|16 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Count XML elements.Summary-->The DOM Count XML elements command returns the number of “child” elements dependent on the *elementRef* parent element and named *elementName*.<!-- END REF-->By default, **DOM Count XML elements** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](xml-set-options.md) command. 

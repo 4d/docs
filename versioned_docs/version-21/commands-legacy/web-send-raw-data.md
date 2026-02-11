@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Renamed|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SEND RAW DATA.Summary-->The **WEB SEND RAW DATA** command lets the 4D Web server send “raw” HTTP data, which can be chunked.<!-- END REF--> . 

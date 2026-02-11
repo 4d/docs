@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Window kind.Summary-->O comando Window kind devolve o tipo de janela 4D cujo número de referência for passado no parâmetro *janela*.<!-- END REF--> Se a janela não existir, Window kind devolve *0 (zero)*.  

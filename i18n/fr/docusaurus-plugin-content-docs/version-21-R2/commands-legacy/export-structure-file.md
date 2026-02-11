@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R3|Créé|
+|17 R5|Modifié|
+|18|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Export structure file.Summary-->La commande **Export structure file** décompose la structure de la base de données 4D courante en un ensemble de fichiers de type texte ou de fichiers natifs de type image et les stocke dans le *cheminDossier* spécifié.<!-- END REF--> Par défaut, la structure de la base (méthodes, formulaires, catalogues, etc.) est intégralement exportée. Vous pouvez filtrer les contenus à exporter à l'aide du paramètre *options* (voir ci-dessous).

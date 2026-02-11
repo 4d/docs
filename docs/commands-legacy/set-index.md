@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Compatibility Note 
 
 <!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, although a legacy command, is still fully supported and can remain in your application -- there is no need to rewrite existing code.<!-- END REF--> However, it would be better to use [CREATE INDEX](create-index.md) and [DELETE INDEX](delete-index.md) to manage indexes because they provide more features. 

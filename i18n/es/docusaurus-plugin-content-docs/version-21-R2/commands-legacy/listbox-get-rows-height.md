@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|12|Renombrar|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->El comando **LISTBOX Get rows height** devuelve la altura actual (en píxeles o en líneas) de las líneas del objeto list box designado utilizando los parámetros *objeto* y *\**.<!-- END REF-->El valor devuelto corresponde a la altura de una sola línea.

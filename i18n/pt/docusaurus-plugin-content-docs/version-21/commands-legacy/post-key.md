@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.POST KEY.Summary-->O comando POST KEY simula uma tecla.<!-- END REF--> Esse efeito funciona como se o usuário tivesse entrado um caractere no teclado.  

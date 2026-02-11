@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SEND RECORD.Summary-->**SEND RECORD** envoie l'enregistrement courant de *laTable* vers le port série ou vers un document ouvert par la commande [SET CHANNEL](set-channel.md).<!-- END REF--> L'enregistrement est envoyé dans un format interne particulier ne pouvant être interprété que par la commande [RECEIVE RECORD](receive-record.md). S'il n'y a pas d'enregistrement courant, **SEND RECORD** ne fait rien.

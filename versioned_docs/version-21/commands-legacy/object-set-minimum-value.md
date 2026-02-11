@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Summary-->The **OBJECT SET MINIMUM VALUE** command modifies the minimum value of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> 

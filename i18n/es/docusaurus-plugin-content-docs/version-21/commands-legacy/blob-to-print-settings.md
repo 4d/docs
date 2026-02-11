@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.BLOB to print settings.Summary-->El comando **BLOB to print settings** reemplaza los parámetros de impresión actuales de 4D por los parámetros almacenados en el BLOB *confImpr*.<!-- END REF--> Este BLOB debe haber sido generado por el comando [Print settings to BLOB](print-settings-to-blob.md).

@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|15|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->O comando GET FIELD PROPERTIES retorna informação sobre o campo designado por *pontCampo* ou por *numTabela* e *campoNum*.<!-- END REF-->  

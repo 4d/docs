@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAVE LIST.Summary-->SAVE LIST コマンドは、デザインモードのリストエディタに、*list* 引数に渡した参照番号を持つリストを*listName* 引数に渡した名前で保存します。<!-- END REF-->

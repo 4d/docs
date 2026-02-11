@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.JSON PARSE ARRAY.Summary-->The **JSON PARSE ARRAY** command parses the contents of a JSON-formatted string and puts the data extracted into the *array* parameter.<!-- END REF--> This command deserializes the JSON data; it performs the opposite action of the [JSON Stringify array](json-stringify-array.md) command.

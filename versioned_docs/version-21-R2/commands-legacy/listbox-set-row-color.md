@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|17 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->

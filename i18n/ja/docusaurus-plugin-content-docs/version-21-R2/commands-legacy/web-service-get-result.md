@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->**WEB SERVICE GET RESULT**コマンドは、行われた処理の結果としてWebサービスから返された結果を取得するために使用します。<!-- END REF-->このコマンドは[WEB SERVICE CALL](web-service-call.md)コマンドの後に使用しなければなりません。 

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+|15 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->O comando **OBJECT SET STYLE SHEET** modifica, para o processo atual, a folha de estilo associada ao objeto(s) designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF--> Uma folha de estilo modifica a fonte, o tamanho de fonte e o estilo de fonte.

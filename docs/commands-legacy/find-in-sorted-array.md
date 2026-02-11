@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Find in sorted array.Summary-->The **Find in sorted array** command returns **true** if at least one element in the sorted *array* matches the *value*, and optionally returns position(s) of matched element(s).<!-- END REF--> Unlike [Find in array](find-in-array.md), **Find in sorted array** only works with a sorted *array* and provides information about the position of occurrences, which allows you to insert elements if necessary.

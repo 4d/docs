@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R3|変更|
+|11 SQL Release 4|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->**INSERT MENU ITEM** コマンドは、*menu*に渡されたメニュー番号または参照を持つメニューにおいて、*afterItem*に渡された番号の既存のメニュー項目の後ろに新しいメニュー項目を挿入します。<!-- END REF-->

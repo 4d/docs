@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R3|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is license available.Summary-->Is license available コマンドを使用して、プラグインの有効性を確認することができます。<!-- END REF-->例えば、プラグインが必要な機能を表示または非表示にする際に有効です。

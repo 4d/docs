@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R5|Modificado|
+|19|Modificado|
+|14 R2|Modificado|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->O comando WA GET PREFERENCE permite obter o valor atual de uma preferência na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> 

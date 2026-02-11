@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Macintosh control down.Summary-->**Macintosh control down** returns TRUE if the Macintosh Control key is pressed.<!-- END REF-->When called on a Windows platform, **Macintosh control down** always return FALSE. This Macintosh key has no equivalent on Windows.

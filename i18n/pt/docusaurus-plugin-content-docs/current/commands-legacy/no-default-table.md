@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.NO DEFAULT TABLE.Summary-->O comando NO DEFAULT TABLE permite cancelar o efeito do comando [DEFAULT TABLE](default-table.md).<!-- END REF--> Depois da execução deste comando, não há tabela padrão definida para o processo.  

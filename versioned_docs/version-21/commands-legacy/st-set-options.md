@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->The **ST SET OPTIONS** command modifies one or more operating options for the styled text field or variable designated by the *object* parameter.<!-- END REF-->

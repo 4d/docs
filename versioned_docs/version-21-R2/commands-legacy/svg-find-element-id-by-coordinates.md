@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SVG Find element ID by coordinates.Summary-->The **SVG Find element ID by coordinates** command returns the ID ("id" or "xml:id" attribute) of the XML element found at the location set by the coordinates (x,y) in the SVG picture designated by the *pictureObject* parameter.<!-- END REF--> This command can be used more particularly to create interactive graphic interfaces using SVG objects.

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET FIELD VALUE NULL.Summary-->La commande **SET FIELD VALUE NULL** attribue la valeur NULL au champ désigné par le paramètre *leChamp*.<!-- END REF-->

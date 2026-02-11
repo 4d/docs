@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 2|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->La commande **QUERY SELECTION BY FORMULA** vous permet de rechercher des enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 

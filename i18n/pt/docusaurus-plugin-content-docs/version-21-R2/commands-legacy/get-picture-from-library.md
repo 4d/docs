@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6.7|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->O comando GET PICTURE FROM LIBRARY devolve no parâmetro *imagem* a imagem da biblioteca de imagens cujo número de referência se passa em *refImag* ou cujo nome se passa em *nomImag*.<!-- END REF-->

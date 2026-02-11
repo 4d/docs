@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|16 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->**ST INSERT EXPRESSION**コマンドは、*object* 引数で指定したスタイル付テキストフィールドまたはテキスト変数内に、4D 式への参照を挿入します。<!-- END REF-->

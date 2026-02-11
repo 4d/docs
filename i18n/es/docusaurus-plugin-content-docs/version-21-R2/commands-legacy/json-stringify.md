@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+|16 R4|Modificado|
+|16 R6|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.JSON Stringify.Summary-->El comando **JSON Stringify** convierte el parámetro *valor* en una cadena JSON.<!-- END REF--> Este comando realiza la acción opuesta del comando [JSON Parse](json-parse.md).  

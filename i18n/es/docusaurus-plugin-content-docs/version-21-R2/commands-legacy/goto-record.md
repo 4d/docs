@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GOTO RECORD.Summary-->GOTO RECORD selecciona el registro actual de *tabla*.<!-- END REF--> El parámetro *registro* es el número devuelto por la función [Record Number](record-number.md "Record Number"). Después de ejecutar este comando, el registro es el único registro en la selección. 

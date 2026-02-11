@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->O comando **METHOD SET COMMENTS** substitui os comentários dos métodos designados pelo parâmtero *rota* pelos definidos no parâmetro *comentarios*.<!-- END REF-->

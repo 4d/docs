@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->The **FORM Get color scheme** command returns the name of the actual color scheme of the currently displayed form.<!-- END REF--> If there is no current form, the command returns an empty string.

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.COMPONENT LIST.Summary-->La commande **COMPONENT LIST** dimensionne et remplit le tableau *tabComposants* avec les noms des composants chargés par l’application 4D pour la base hôte courante.<!-- END REF-->

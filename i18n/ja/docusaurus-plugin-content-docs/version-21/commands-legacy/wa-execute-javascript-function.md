@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|変更|
+|14|変更|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->WA EXECUTE JAVASCRIPT FUNCTION コマンドは、*\** と *object* で指定したWebエリアで、*jsFunction*に渡したJavaScript関数を実行し、*result* 引数に結果を返します (オプション)。<!-- END REF-->

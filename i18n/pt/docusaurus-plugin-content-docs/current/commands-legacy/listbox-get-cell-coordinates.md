@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->O comando LISTBOX GET CELL COORDINATES devolve nas variáveis ou campos *esq*, *sup*, *dir* e *inf* as coordenadas (em pontos) da célula designada pelos parâmetros *coluna* e *linha*, no list box definido por *\** e *objeto*.<!-- END REF-->

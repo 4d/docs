@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.List item position.Summary-->The **List item position** command returns the position of the item whose item reference number is passed in *itemRef*, within the list whose list reference number or object name is passed in *list*.<!-- END REF--> 

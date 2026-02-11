@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Decrypt data BLOB.Summary-->**Decrypt data BLOB** コマンドは、*blobToDecrypt* 引数のBLOB を、4D がデータの復号化に使用するのと同じアルゴリズム(AES-256) を使用して復号化し、その結果を*decryptedBLOB* 引数に返します

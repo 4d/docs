@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Renamed|
+|11 SQL Release 2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Trigger event.Summary-->Called from within a trigger, the **Trigger event** command returns a numeric value that denotes the type of the database event, in other words, the reason why the trigger has been invoked.<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RESUME INDEXES.Summary-->**RESUME INDEXES** コマンドは、 [PAUSE INDEXES](pause-indexes.md) コマンドを使用して停止させた *aTable* のインデックスを全て再起動させます。<!-- END REF-->のインデックスが停止されていない場合、コマンドは何もしません。

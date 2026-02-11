@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST Get expression.Summary-->La commande **ST Get expression** retourne la première expression présente dans la sélection courante du champ ou de la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 

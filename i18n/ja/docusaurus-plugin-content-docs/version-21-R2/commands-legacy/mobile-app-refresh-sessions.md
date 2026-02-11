@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->**MOBILE APP REFRESH SESSIONS** コマンドは、サーバーのMobileApps フォルダ内にある全てのモバイルアプリセッションファイルをチェックし、編集されたファイルに対してメモリ内にある既存のセッションのコンテンツを更新します。<!-- END REF-->

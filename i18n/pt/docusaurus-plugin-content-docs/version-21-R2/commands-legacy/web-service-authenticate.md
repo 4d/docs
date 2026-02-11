@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 3|Modificado|
+|13|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Summary-->O comando **WEB SERVICE AUTHENTICATE** permite utilizar os serviços web que necessitem da autenticação da aplicação cliente (autenticação simples).<!-- END REF--> Os métodos BASIC e DIGEST são compatíveis, assim como a presença de um proxy.  

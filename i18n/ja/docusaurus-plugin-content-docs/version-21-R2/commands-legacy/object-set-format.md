@@ -17,6 +17,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|12|名称変更|
+|12|変更|
+|15 R5|変更|
+|20|変更|
+|20 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** は、*object*で指定したオブジェクトの表示フォーマットを*displayFormat*で渡したフォーマットに設定します。<!-- END REF-->新しいフォーマットは現在の表示にのみ有効です。フォームには保存されません。

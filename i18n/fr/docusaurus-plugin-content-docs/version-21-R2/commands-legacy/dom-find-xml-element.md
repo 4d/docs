@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Find XML element.Summary-->La commande **DOM Find XML element** vous permet de rechercher des éléments XML spécifiques dans une structure XML.<!-- END REF--> La recherche débute à l’élément désigné par le paramètre *refElément*.

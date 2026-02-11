@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|13|Modifié|
+|14|Modifié|
+|15 R4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GRAPH.Summary-->La commande **GRAPH** crée un graphe dans une variable image à partir de valeurs provenant de tableaux.<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MACRO PARAMETER.Summary-->The **SET MACRO PARAMETER** command inserts the *paramText* text into the method from which it has been called.<!-- END REF-->

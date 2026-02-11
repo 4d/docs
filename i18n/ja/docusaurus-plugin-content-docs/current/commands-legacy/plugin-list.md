@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PLUGIN LIST.Summary-->PLUGIN LIST コマンドは*numbersArray*配列と*namesArray*配列に、4Dアプリケーションにロードされ、利用可能なプラグインの番号と名前を返します。<!-- END REF-->これら2つの配列は、コマンドによりサイズが調整され、同期されます。

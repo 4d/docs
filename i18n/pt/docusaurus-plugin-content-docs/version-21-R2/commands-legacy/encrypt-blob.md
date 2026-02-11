@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ENCRYPT BLOB.Summary-->O comando ENCRYPT BLOB criptograma o conteúdo do BLOB *toEncrypt* com a chave privada do remetente *sendPrivKey*, bem como, opcionalmente, a chave pública do destinatário *recipPubKey*.<!-- END REF--> Estas chaves devem ser geradas pelo comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) (no âmbito do tema "Protocolo Seguro").

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|20 R2|Criado por|
+|20 R5|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.throw.Summary-->O comando **throw** cria um erro que será lançado inmediatamente ou quando o método que o chamar o devolva a seu chamador (modo diferido).<!-- END REF-->

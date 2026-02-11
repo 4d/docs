@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->O comando PRINTERS LIST preenche os arrays passados como parâmetros com os nomes e opcionalmente com a localização os nomes personalizados e os modelos de impressão disponíveis para a máquina.<!-- END REF-->

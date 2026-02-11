@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Current process name.Summary-->**Current process name** コマンドは、このコマンドを呼び出したプロセスのプロセス名を返します。<!-- END REF-->

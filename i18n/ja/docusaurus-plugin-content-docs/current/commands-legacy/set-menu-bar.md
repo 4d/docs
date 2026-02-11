@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET MENU BAR.Summary-->SET MENU BAR はカレントプロセスのみのメニューバーを*menuBar*で指定したメニューバーで置き換えます。<!-- END REF-->*menuBar* 引数には、新しいメニューバーの番号または名前を渡します。またメニューID ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") 型, 16文字の文字列) を渡すこともできます。参照を使用する場合、メニューをメニューバーとして、あるいはその逆として使用できます (の節を参照)。

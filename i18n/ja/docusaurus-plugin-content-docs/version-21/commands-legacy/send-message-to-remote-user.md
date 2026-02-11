@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->**SEND MESSAGE TO REMOTE USER** コマンドは、全てのリモートユーザー、あるいは特定のリモートユーザーに対して、メッセージを送信します。<!-- END REF-->引数には、表示されるメッセージのテキストを渡します。これはセッションユーザーのスクリーン上に、アラート画面あるいは通知として表示されます。

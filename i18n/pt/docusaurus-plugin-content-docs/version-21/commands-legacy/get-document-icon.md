@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET DOCUMENT ICON.Summary-->O comando GET DOCUMENT ICON retorna no campo ou a variável imagem 4D ícone, o ícone do documento cujo nome ou rota de acesso se passa em *rotaDoc.<!-- END REF--> rotaDoc* pode especificar um arquivo de todo tipo (executável, documento, atalho ou alias, etc.) ou uma pasta.  

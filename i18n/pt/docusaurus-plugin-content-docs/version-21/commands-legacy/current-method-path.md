@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Current method path.Summary-->O comando **Current method path** devolve o caminho de acesso interna do método base, trigger, método de projeto, método formulário ou método objeto em execução.<!-- END REF-->no contexto dos macro comandos 4D, a etiqueta *<method\_path>* é substituída pelo caminho de acesso completa do código em execução.

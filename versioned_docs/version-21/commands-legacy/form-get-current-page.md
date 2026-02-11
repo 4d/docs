@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Modified|
+|12|Renamed|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM Get current page.Summary-->The **FORM Get current page** command returns the number of the currently displayed form page or of the current form loaded by the [FORM LOAD](../commands/form-load.md) command.<!-- END REF--> 

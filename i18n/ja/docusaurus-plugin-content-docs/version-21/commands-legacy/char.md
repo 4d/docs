@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Char.Summary-->**Char** コマンド は文字コードが*charCode*である文字を返します。<!-- END REF-->にはUTF-16値(1から65535の間) を渡します。

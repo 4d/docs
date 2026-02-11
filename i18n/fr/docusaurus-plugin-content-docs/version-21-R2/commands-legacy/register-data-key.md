@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Register data key.Summary-->La commande **Register data key** ajoute au trousseau 4D la clé de chiffrement de données qui a été passée dans le paramètre.<!-- END REF-->

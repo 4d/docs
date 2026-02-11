@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+|16 R4|Modificado|
+|16 R5|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET HELP TIP.Summary-->El comando **OBJECT SET HELP TIP** permite definir o modificar dinámicamente el mensaje de ayuda asociado al objeto o los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  

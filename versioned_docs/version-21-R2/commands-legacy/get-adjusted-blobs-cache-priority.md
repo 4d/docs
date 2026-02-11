@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get adjusted blobs cache priority.Summary-->The **Get adjusted blobs cache priority** command returns the current adjusted cache priority value applied in cache by the cache manager for the *aTable* "blobs" data.<!-- END REF--> This command is only needed for debugging purposes. 

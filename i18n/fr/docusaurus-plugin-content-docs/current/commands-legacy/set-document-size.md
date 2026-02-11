@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET DOCUMENT SIZE.Summary-->La commande **SET DOCUMENT SIZE** fixe la taille d'un document au nombre d'octets que vous avez passé dans *taille*.<!-- END REF--> 

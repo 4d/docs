@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8|Créé|
+|13|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE DATA FILE.Summary-->La commande **CREATE DATA FILE** permet de créer un nouveau fichier de données sur disque et de remplacer à la volée le fichier de données ouvert par l’application 4D.<!-- END REF--> 

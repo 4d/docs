@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Active transaction.Summary-->**Active transaction**コマンドは、カレントプロセスがトランザクション中であり、かつそのトランザクションが停止されていない場合に**True**を返します。<!-- END REF-->カレントトランザクションがない場合、あるいはカレントトランザクションが停止されている場合には**False**を返します。トランザクションは [SUSPEND TRANSACTION](suspend-transaction.md) コマンドによって一時停止することができます。

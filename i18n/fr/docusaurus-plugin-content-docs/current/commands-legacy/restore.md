@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESTORE.Summary-->La commande **RESTORE** permet restituer le ou les fichier(s) inclus dans une archive 4D.<!-- END REF--> Cette commande est utile dans le cadre d’interfaces personnalisées pour la gestion des sauvegardes. 

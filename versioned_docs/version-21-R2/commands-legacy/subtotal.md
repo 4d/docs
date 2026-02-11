@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Subtotal.Summary-->**Subtotal** returns the subtotal for *data* for the current or last break level.<!-- END REF--> **Subtotal** works only when a sorted selection is being printed with [PRINT SELECTION](print-selection.md) or when printing using Print in the Design environment. The *data* parameter must be of type real, integer, or long integer. Assign the result of the **Subtotal** function to a variable placed in the Break area of the form.

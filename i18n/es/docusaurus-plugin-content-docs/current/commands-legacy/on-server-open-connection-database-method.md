@@ -18,6 +18,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## ¿Cuándo se llama el método base On Server Open Connection? 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->El **Método base On Server Open Connection** se llama una vez en el equipo servidor cada vez que un equipo 4D remoto inicia un proceso de conexión.<!-- END REF--> El **Método base On Server Open Connection** NO se invoca por otro entorno 4D diferente de 4D Server.

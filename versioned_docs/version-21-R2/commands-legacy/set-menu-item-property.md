@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+|16 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->The **SET MENU ITEM PROPERTY** command sets the *value* of the *property* for the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->

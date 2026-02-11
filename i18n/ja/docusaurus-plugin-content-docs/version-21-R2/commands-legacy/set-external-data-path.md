@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+|15|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->**SET EXTERNAL DATA PATH**コマンドは*aField*引数に渡したフィールドの、カレントレコードの、外部ストレージの場所を設定あるいは変更します。<!-- END REF-->

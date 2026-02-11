@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+|14 R3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->MAXIMIZE WINDOW コマンドは、*window*に渡された参照番号のウィンドウを最大化します。<!-- END REF-->この引数が省略されると、同じ効果がカレントプロセスのすべての最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (macOS) に適用されます。 

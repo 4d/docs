@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SPELL Get current dictionary.Summary-->La commande **SPELL Get current dictionary** retourne le numéro d’ID du dictionnaire en cours d’utilisation.<!-- END REF--> 

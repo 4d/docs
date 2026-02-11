@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB Is empty.Summary-->**OB Is empty**コマンドは、*object* が未定義か空である場合にはTrueを返し、*object* が定義済み(初期化済み)で少なくとも一つのプロパティを内包している場合にはFalseを返します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->**SET PICTURE TO PASTEBOARD** place dans le conteneur de données une copie de l'image que vous avez passée dans *image*.<!-- END REF--> Les données éventuellement présentes dans le conteneur sont préalablement effacées. 

@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.MESSAGES ON.Summary-->[MESSAGES OFF](messages-off.md "MESSAGES OFF") コマンドの説明を参照してください。<!-- END REF-->

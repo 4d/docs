@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET QUERY DESTINATION.Summary-->El comando **SET QUERY DESTINATION** permite indicar a 4D donde ubicar el resultado de todas las búsquedas posteriores a la llamada a este comando en el proceso actual.<!-- END REF-->

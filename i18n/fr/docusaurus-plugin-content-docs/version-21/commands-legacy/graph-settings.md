@@ -23,6 +23,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R4|Modifié|
+|14 R5|Modifié|
+|14|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->La commande **GRAPH SETTINGS** permet de paramétrer les échelles et les grilles d'un graphe placé dans un formulaire.<!-- END REF--> Le graphe doit déjà avoir été défini à l'aide de la commande [GRAPH](graph.md). **GRAPH SETTINGS** ne fait rien s'il s'agit d'un graphe de type secteurs. Cette commande doit impérativement être appelée dans le même process que le formulaire.

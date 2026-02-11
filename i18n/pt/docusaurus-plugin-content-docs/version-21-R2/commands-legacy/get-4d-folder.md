@@ -18,6 +18,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 2|Modificado|
+|13|Modificado|
+|16|Modificado|
+|17 R2|Modificado|
+|20|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get 4D folder.Summary-->O comando **Get 4D folder** retorna o caminho para a pasta 4D ativa do aplicativo atual, ou para a pasta do ambiente 4D especificado pelo parâmetro *pasta*, se fornecido.<!-- END REF-->

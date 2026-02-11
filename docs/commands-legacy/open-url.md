@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R3|Renamed|
+|14 R3|Modified|
+|11 SQL Release 2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OPEN URL.Summary-->The **OPEN URL** command opens the file or URL passed in the *path* parameter with the application indicated in *appName* (if any).<!-- END REF--> 

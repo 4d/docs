@@ -18,6 +18,23 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|20 R6|Modificado|
+|19 R5|Modificado|
+|16 R4|Modificado|
+|13|Modificado|
+|12|Modificado|
+|11 SQL Release 5|Modificado|
+|11 SQL Release 4|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get database parameter.Summary-->O comando **Get database parameter** permite obter o valor atual de um parâmetro do banco 4D.<!-- END REF--> Quando o valor do parâmetro é uma cadeia de caracteres, é retornado o o parâmetro *valorAlfa*.

@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+|13|Modificado|
+|15 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Compact data file.Summary-->O comando **Compact data file** \[# descv\] compacta o arquivo de dados designado pelo parâmetro *endereçoDados* associado com o arquivo de estrutura *endereçoEstrutura*.<!-- END REF--> \[#/ descv\] Para mais informações sobre compactação, consulte o manual de Design. 

@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->The **CONVERT COORDINATES** command converts the (x;y) coordinates of a point from one coordinate system to another.<!-- END REF--> The input and output coordinate systems supported are forms (and subforms), windows, and the screen. For example, you can use this command to get the coordinates in the main form of an object belonging to a subform. This makes it easy to create a context menu at any custom position. 

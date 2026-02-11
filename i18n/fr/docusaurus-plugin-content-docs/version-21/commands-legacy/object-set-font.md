@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Modifié|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->**OBJECT SET FONT** affiche *objet* avec la police définie dans le paramètre *police*.<!-- END REF--> Le paramètre *police* doit contenir un nom de police valide.

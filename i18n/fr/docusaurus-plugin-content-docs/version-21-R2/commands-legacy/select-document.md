@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|13|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Select document.Summary-->La commande **Select document** affiche une boîte de dialogue standard d’ouverture de documents, permettant à l’utilisateur de désigner un ou plusieurs fichier(s), et retourne le nom et/ou le chemin d’accès complet du ou des fichier(s) sélectionné(s).<!-- END REF-->

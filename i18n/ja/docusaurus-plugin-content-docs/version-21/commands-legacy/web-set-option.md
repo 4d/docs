@@ -16,6 +16,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R4|変更|
+|17|変更|
+|15 R2|変更|
+|15|変更|
+|14 R3|変更|
+|13.2|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SET OPTION.Summary-->**WEB SET OPTION**コマンドは4D Webサーバーの機能に関する様々なオプションのカレントの値を変更します。<!-- END REF-->

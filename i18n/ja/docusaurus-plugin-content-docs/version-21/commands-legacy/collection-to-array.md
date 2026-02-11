@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.COLLECTION TO ARRAY.Summary-->**COLLECTION TO ARRAY** コマンドは、*collection* 引数のコレクションの要素あるいは*propertyName* 引数で指定したプロパティの値を、*array* 引数で指定した一つまたはそれ以上の配列へと渡します。<!-- END REF-->

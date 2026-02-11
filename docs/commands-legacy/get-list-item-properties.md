@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Modified|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->The **GET LIST ITEM PROPERTIES** command returns the properties of the item designated by the *itemRef* parameterwithin the list whose list reference number or object name is passed in *list*.<!-- END REF-->

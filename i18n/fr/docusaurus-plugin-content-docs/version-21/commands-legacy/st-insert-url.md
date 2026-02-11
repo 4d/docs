@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST INSERT URL.Summary-->La commande **ST INSERT URL** insère un lien URL dans le champ ou la variable de texte stylé désigné(e) par le paramètre *objet*.<!-- END REF--> 

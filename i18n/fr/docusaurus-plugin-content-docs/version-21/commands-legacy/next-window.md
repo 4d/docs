@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Next window.Summary-->La commande **Next window** retourne le numéro de référence de la fenêtre située “derrière” la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* (en fonction de l'ordre des fenêtres).<!-- END REF-->

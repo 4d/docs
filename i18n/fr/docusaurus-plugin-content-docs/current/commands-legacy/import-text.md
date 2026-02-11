@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->La commande **IMPORT TEXT** lit les données de *document* (document texte Windows ou Mac OS) et les écrit dans la table *laTable* en créant de nouveaux enregistrements.<!-- END REF-->

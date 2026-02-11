@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|15 R4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->**DISTINCT VALUES** crée et remplit le tableau *tableau* avec toutes les valeurs distinctes provenant du champ *leChamp* pour la sélection courante de la table du champ et, optionnellement, retourne dans *tabNbVal* le nombre d'occurrences de chaque valeur.<!-- END REF-->

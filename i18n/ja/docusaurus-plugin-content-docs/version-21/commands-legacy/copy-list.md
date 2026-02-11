@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Copy list.Summary-->Copy list コマンドは*list*に渡されたリスト参照番号を持つリストの複製を作成し、新しいリストのリスト参照番号を返します。<!-- END REF-->

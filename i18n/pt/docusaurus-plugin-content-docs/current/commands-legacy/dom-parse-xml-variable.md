@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Parse XML variable.Summary-->O comando DOM Parse XML variable analisa uma variável de tipo BLOB ou Texto que contenha uma estrutura XML e retorna uma referência para esta variável.<!-- END REF--> O comando pode validar ou não a estrutura através de um DTD ou de um esquema XML (XML Schema Definition (XSD) document).  

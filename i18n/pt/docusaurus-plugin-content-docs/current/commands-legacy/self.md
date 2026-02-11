@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Nota de compatibilidade 
 
 <!--REF #_command_.Self.Summary-->Este comando só é conservada por razões de compatibilidade.<!-- END REF--> A partir da versão 12 de 4D, é recomendado utilizar o comando OBJECT Get pointer.

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Renomear|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB SERVICE Get info.Summary-->O comando **WEB SERVICE Get info** retorna informação de todo erro achado durante a execução da última petição SOAP enviada até um serviço web remoto.<!-- END REF-->. Geralmente, este comando deve ser chamado em um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md).  

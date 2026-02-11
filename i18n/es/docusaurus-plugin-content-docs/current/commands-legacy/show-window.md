@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->El comando SHOW WINDOW permite mostrar la ventana cuyo número se pasó en *ventana*.<!-- END REF--> Si se omite este parámetro, se mostrará la ventana del primer plano del proceso actual.

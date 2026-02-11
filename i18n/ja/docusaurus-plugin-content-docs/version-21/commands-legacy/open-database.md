@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R3|初出|
+
+</details>
+</div>
+
 ## 注 
 
 <!--REF #_command_.OPEN DATABASE.Summary-->**OPEN DATABASE** コマンドは、現在開いている4Dデータベースを閉じ、*filePath* で定義されたデータベースを即座に開きます。<!-- END REF-->このコマンドは自動的にテストをする目的や、コンパイル後にデータベースを自動的に開いたり、組み込み 4Dリモートアプリケーションに接続するデータベースサーバーを選択させたりするのに有用です。

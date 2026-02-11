@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R8|Modifié|
+|16 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->La commande **LISTBOX Get auto row height** retourne la limite minimum ou maximum de hauteur de ligne automatique définie pour l'objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->

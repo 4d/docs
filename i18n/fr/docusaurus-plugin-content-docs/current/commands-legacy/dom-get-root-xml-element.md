@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Get root XML element.Summary-->La commande **DOM Get root XML element** retourne une référence vers l’élément racine du document auquel appartient l’élément XML passé dans le paramètre *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d'analyse XML.

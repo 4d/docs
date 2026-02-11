@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Asserted.Summary-->El comando **Asserted** tiene un funcionamiento similar al del comando [ASSERT](assert.md), con la diferencia de que devuelve un valor que es el resultado de la evaluación del parámetro *expresionBool*.<!-- END REF--> Permite utilizar una aserción durante la evaluación de una condición (ver el ejemplo). Para mayor información sobre el funcionamiento de las aserciones y los parámetros de este comando, consulte la descripción del comando [ASSERT](assert.md).

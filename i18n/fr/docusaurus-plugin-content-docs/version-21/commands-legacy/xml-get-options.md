@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->La commande **XML GET OPTIONS** permet de lire la valeur d’un ou plusieurs paramètre(s) XML définis pour la session courante et l’utilisateur courant.<!-- END REF--> 

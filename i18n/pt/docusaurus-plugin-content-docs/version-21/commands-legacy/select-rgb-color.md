@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Select RGB color.Summary-->O comando Select RGB color mostra a janela sistema de seleção de cor e devolve o valor RGB da cor selecionada pelo usuário.<!-- END REF--> 

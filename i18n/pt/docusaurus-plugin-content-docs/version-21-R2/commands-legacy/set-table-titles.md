@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->SET TABLE TITLES permite ocultar, renomear e reordenar as tabelas de seu banco quando aparecem nos editores padrão de 4D em modo Aplicação (quando os editores se chamam via os comandos da linguagem 4D).<!-- END REF--> Por exemplo, este comando pode modificar a visualização de tabelas e no editor pesquisas em modo Aplicação.  

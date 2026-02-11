@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|14|Modificado|
+|16|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->O comando QR ON COMMAND executa o método de projeto 4D passado no parâmetro *nomMetodo* quando um comando do editor de relatórios rápidos for chamado pelo usuário, selecionando um comando de menu ou clicando em um botão.<!-- END REF-->

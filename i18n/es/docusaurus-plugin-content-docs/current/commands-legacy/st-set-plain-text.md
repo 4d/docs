@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Renombrar|
+|12.1|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->El comando ST SET PLAIN TEXT inserta el texto pasado en el parámetro *nuevTexto* en el campo o la variable de texto con estilo designado por el parámetro *objeto* .<!-- END REF--> Este comando aplica únicamente al texto plano del parámetro *objeto*, sin modificar las posibles etiquetas de estilo que contiene. 

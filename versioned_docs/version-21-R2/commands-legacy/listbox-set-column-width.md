@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+|12|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->The **LISTBOX SET COLUMN WIDTH** command allows you to modify through programming the width of one or all column(s) of the object (list box, column or header) set using the *object* and *\** parameters.<!-- END REF-->

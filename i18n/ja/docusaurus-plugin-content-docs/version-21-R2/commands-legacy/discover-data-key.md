@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Discover data key.Summary-->**Discover data key** コマンドは、現在開かれているデータファイルに対応する有効な暗号化キーを、接続されている全てのデバイスのルートレベルで検索し、それに成功した場合には**True** を返します。<!-- END REF-->

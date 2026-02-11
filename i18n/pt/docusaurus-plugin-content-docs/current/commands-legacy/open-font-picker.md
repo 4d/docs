@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->O comando **OPEN FONT PICKER** mostra a caixa de diálogo de seleção de fonte do sistema .<!-- END REF-->  

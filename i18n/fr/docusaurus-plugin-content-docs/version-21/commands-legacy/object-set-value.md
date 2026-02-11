@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R4|Créé|
+
+</details>
+</div>
+
 ## Exemple 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** fixe la *valeur* des sources de données courantes pour le ou les objet(s) de formulaire désigné(s) par le paramètre *nomObjet*.<!-- END REF-->

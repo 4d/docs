@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.8.1|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Right click.Summary-->El comando Right click devuelve [True](true.md "True") si se hace clic en el botón derecho del ratón.<!-- END REF-->

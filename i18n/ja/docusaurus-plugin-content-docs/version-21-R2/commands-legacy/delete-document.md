@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6.7.1|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DELETE DOCUMENT.Summary-->**DELETE DOCUMENT** コマンドを使用して、*document*に渡したドキュメント名を持つドキュメントを削除します。<!-- END REF-->

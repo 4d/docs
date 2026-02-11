@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->O comando **OBJECT Is styled text** devolve **True** se a opção "Multiestilo" está selecionada para o(s) objeto(s) designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->

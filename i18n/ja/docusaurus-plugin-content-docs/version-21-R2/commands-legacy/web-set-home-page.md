@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.5|初出|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SET HOME PAGE.Summary-->**WEB SET HOME PAGE**コマンドを使用して、現在のWebプロセス用のカスタムホームページを変更します。<!-- END REF-->

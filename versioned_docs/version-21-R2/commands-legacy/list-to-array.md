@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|14|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->The LIST TO ARRAY command creates or overrides the array *array* with the first level items of the list or choice list designated by *list*.<!-- END REF--> 

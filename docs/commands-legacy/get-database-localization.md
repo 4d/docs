@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|12|Renamed|
+|11 SQL|Created|
+
+</details>
+</div>
+
 <h2 data-noindex>Description</h2>
 
 

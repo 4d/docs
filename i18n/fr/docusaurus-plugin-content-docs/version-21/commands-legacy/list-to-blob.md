@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->La commande **LIST TO BLOB** stocke la liste hiérarchique *liste* dans le BLOB *blob*.<!-- END REF-->

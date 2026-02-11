@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+|19|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->The **METHOD OPEN PATH** command opens, in the 4D Method editor, the method whose internal pathname is passed in the *path* parameter.<!-- END REF-->

@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+|14 R2|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.TRANSFORM PICTURE.Summary-->O comando TRANSFORM PICTURE permite aplicar uma transformação de tipo *operador* à imagem passada no parâmetro *imagem*.<!-- END REF-->este comando estende as funcionalidades oferecidas pelos operadores convencionais de transformação de imagens (+/, etc., ver a seção ). Estes operadores permanecem totalmente utilizáveis em 4D.  

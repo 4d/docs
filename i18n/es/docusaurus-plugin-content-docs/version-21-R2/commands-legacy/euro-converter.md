@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.7|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Euro converter.Summary-->El comando Euro converter permite efectuar todo tipo de conversión de valores entre las diferentes monedas de países que pertenecen a la “Zona Euro” y al Euro mismo.<!-- END REF-->

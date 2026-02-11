@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R5|Renomear|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->O comando WA ZOOM OUT reduz o tamanho do texto mostrado no área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> 

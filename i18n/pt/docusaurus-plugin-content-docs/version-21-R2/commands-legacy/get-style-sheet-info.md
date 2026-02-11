@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+|15 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->O comando **GET STYLE SHEET INFO** devolve a configuração atual da folha de estilo *nomeFolhaEstilo* .<!-- END REF--> 

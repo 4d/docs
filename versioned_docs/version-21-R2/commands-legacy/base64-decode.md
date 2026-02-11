@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+|12|Modified|
+|18 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BASE64 DECODE.Summary-->The **BASE64 DECODE** command decodes the text or blob value coded in Base64 or Base64URL format passed in the *toDecode* parameter.<!-- END REF--> For more information on Base64 and Base64URL formats, please refer to the [BASE64 ENCODE](base64-encode.md) command description. 

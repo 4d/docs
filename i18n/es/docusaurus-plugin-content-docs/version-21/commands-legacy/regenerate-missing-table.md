@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->El comando REGENERATE MISSING TABLE reconstruye la tabla faltante cuyo nombre se pasa en el parámetro *nomTabla*.<!-- END REF--> Cuando se reconstruye una tabla faltante, se vuelve visible en el editor de estructura y sus datos son accesibles nuevamente.

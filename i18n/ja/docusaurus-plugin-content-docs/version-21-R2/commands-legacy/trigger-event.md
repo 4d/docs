@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Trigger event.Summary-->**Trigger event**コマンドがトリガー内で呼び出されると、データベースイベントのタイプ、つまりそのトリガーが起動された理由を示す数値を返します。<!-- END REF-->

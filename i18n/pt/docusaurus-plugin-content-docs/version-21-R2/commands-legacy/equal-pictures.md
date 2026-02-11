@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Equal pictures.Summary-->O comando **Equal pictures** compara precisamente dois imagens, tanto a nível de suas dimensões como de seu conteúdo.<!-- END REF-->  

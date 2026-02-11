@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current machine.Summary-->La commande   **Current machine** retourne le nom de la machine tel qu'il a été défini dans les paramètres réseau du système d'exploitation.<!-- END REF-->

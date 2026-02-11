@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->La commande **SVG EXPORT TO PICTURE** permet de sauvegarder dans la variable ou le champ image désigné(e) par le paramètre *vVarImage* une image au format SVG contenue dans un arbre XML.<!-- END REF-->Pour plus d'informations sur le format SVG, reportez-vous à la section *Présentation des commandes XML génériques*. 

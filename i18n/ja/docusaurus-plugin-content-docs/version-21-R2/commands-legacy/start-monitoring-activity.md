@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.START MONITORING ACTIVITY.Summary-->**START MONITORING ACTIVITY** コマンドは*duration* 引数で指定した時間を超えるオペレーションをメモリ内に記録します。<!-- END REF-->4D リモート、4D Server、スタンドアロン版4D から呼び出しまたは実行が可能です(ただしスタンドアロン版は*source* 引数のソースがネットワークアクティビティでない場合)。記録されたアクティビティは[Monitored activity](monitored-activity.md) コマンドを使用することで取得可能です。アクティビティの記録を停止したい場合には[STOP MONITORING ACTIVITY](stop-monitoring-activity.md) を呼び出してください。

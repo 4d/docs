@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ENCRYPT BLOB.Summary-->La commande **ENCRYPT BLOB** permet de crypter le contenu du BLOB *aCrypter* à l’aide de la clé privée de l’émetteur *cléPrivEmetteur* ainsi que, optionnellement, de la clé publique du récepteur *cléPubRécepteur*.<!-- END REF--> Pour obtenir une paire de clés de cryptage (clé publique et clé privée), utilisez la routine [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md), placée dans le thème “Protocole sécurisé”.

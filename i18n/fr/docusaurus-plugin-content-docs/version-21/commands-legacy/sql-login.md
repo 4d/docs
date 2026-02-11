@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R4|Modifié|
+|12|Modifié|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL LOGIN.Summary-->La commande **SQL LOGIN** vous permet d’ouvrir une connexion avec une source de données SQL, définie dans le paramètre *source*.<!-- END REF--> Elle désigne la cible des requêtes SQL exécutées ultérieurement dans le process courant : 

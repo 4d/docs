@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+|12.1|Modified|
+|14|Modified|
+|14|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST Get plain text.Summary-->The ST Get plain text command removes any style tags from the text variable or field designated by the *\** and *object* parameters and returns the plain text.<!-- END REF--> 

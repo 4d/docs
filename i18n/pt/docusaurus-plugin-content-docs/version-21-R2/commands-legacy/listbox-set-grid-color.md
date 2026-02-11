@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|12|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->O comando **LISTBOX SET GRID COLOR** lhe permite modificar a cor da grade do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

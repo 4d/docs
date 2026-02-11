@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 3|Modifié|
+|13|Modifié|
+|16|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Sum.Summary-->**Sum** retourne la somme (c'est-à-dire le total de toutes les valeurs) de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul.

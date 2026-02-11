@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DUPLICATE RECORD.Summary-->**DUPLICATE RECORD** duplique l'enregistrement courant de *laTable*.<!-- END REF--> Ce nouvel enregistrement devient l'enregistrement courant. S'il n'y a pas d'enregistrement courant, **DUPLICATE RECORD** ne fait rien. Appelez la commande [SAVE RECORD](save-record.md) pour sauvegarder le nouvel enregistrement.

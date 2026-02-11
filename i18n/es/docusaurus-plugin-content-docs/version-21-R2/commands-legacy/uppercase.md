@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Uppercase.Summary-->Uppercase devuelve una cadena de caracteres igual a *laCadena* con todos los caracteres alfabéticos convertidos en mayúsculas.<!-- END REF-->

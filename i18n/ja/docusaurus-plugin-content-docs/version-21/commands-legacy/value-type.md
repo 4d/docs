@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Value type.Summary-->Value type コマンドは*expression* 引数に渡した式の評価の結果の値の型を返します。<!-- END REF-->

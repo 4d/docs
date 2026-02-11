@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Load list.Summary-->Load list は、*listName*で指定した名前のリストのコピーを作成し、そのリスト参照番号を返します。<!-- END REF--> 

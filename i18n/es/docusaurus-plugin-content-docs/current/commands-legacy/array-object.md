@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.ARRAY OBJECT.Summary-->El comando **ARRAY OBJECT** crea y/o redimensiona un array de elementos de tipo Objeto de lenguaje en memoria.<!-- END REF-->

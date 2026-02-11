@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->**GET GROUP PROPERTIES** retourne les propriétés du groupe dont le numéro de référence est passé dans *réfGroupe*.<!-- END REF--> Vous passez le numéro de référence du groupe retourné par la commande [GET GROUP LIST](get-group-list.md). 

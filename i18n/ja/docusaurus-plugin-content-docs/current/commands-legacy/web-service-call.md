@@ -20,6 +20,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|変更|
+|13|名称変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->**WEB SERVICE CALL**コマンドは、HTTPリクエストを送ることでWebサービスを呼び出すために使用します。<!-- END REF-->このリクエストには、事前に[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)コマンドを使用して作成したSOAPメッセージが含まれています。

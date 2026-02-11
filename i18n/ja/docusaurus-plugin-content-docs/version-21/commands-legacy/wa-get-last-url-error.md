@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA GET LAST URL ERROR.Summary-->WA GET LAST URL ERROR コマンドを使用して、*\** と *object* 引数で指定したWebエリアで発生した最後のエラーに関する情報のいくつかの項目を取得できます。<!-- END REF-->

@@ -16,6 +16,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R4|変更|
+|17|変更|
+|15 R2|変更|
+|15|変更|
+|14 R3|変更|
+|13.2|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB GET OPTION.Summary-->**WEB GET OPTION** コマンドは4D Webサーバー処理に関するオプションの現在の設定値を取得するために使用します。<!-- END REF-->引数には取得するWebオプションを指定する値を渡します。*Web Server*テーマの以下の定数を使用できます:

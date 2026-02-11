@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 4|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU ITEM.Summary-->The SET MENU ITEM command changes the text of the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*, to the text passed in *itemText*.<!-- END REF--> You can pass -1 in *menuItem* in order to designate the last item added to the *menu*.

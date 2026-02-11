@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->O comando GET LIST ITEM ICON retorna, em *ícone*, o ícone associado ao elemento cujo número de referencia se passa em *refElem* da lista cujo número de referencia o nome de objeto passa em *lista*.<!-- END REF-->  

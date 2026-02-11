@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.8.1|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get printed height.Summary-->O comando Get printed height devolve a altura global (em píxels) da seção impressa pelo comando [Print form](../commands/print-form.md).<!-- END REF-->

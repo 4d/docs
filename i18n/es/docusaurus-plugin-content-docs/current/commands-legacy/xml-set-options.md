@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|19 R3|Modificado|
+|16 R4|Modificado|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.XML SET OPTIONS.Summary-->El comando XML SET OPTIONS se utiliza para modificar el valor de uno o más parámetros XML para estructura pasada en el primer parámetro.<!-- END REF--> 

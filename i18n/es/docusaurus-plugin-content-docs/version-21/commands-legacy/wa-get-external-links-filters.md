@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL Release 2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->El comando WA GET EXTERNAL FILTERS LINKS devuelve en los arrays *arrFiltros* y *arrAutorizRechazar*, los filtros de enlaces externos del área web designada por los parámetros *\** y *objeto*.<!-- END REF--> Si ningún filtro está activo, los arrays se devuelven vacíos. 

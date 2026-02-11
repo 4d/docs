@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->The **LISTBOX SET LOCKED COLUMNS** command locks *numColumns* columns (starting from the first on the left) in the list box designated by the *object* and *\** parameters.<!-- END REF-->

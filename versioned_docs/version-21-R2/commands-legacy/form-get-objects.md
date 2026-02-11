@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+|14 R2|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->The FORM GET OBJECTS command returns the list of all objects present in the current form in the form of (an) array(s).<!-- END REF--> This list can be restricted to the current form page and can exclude objects of inherited forms. The command can be used with both input and output forms.

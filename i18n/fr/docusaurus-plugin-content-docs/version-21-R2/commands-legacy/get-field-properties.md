@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|15|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->La commande **GET FIELD PROPERTIES** retourne des informations sur le champ désigné par *numTable* et *numChamp* ou par *ptrChp*.<!-- END REF-->

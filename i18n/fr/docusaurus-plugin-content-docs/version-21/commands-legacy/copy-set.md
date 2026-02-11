@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.COPY SET.Summary-->La commande **COPY SET** copie le contenu de l'ensemble *srcEns* dans l'ensemble *dstEns*.<!-- END REF-->

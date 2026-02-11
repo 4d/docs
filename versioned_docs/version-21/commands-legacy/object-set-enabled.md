@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->The **OBJECT SET ENABLED** command can be used to enable or disable the object or group of objects specified by *object* in the current form.<!-- END REF--> An enabled object reacts to mouse clicks and to keyboard shortcuts.

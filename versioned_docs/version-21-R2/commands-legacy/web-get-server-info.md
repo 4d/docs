@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R5|Created|
+|17|Modified|
+|18 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB Get server info.Summary-->The **WEB Get server info** command returns an object containing detailed runtine information on the 4D Web server current session.<!-- END REF--> Returned information include the SOAP server.

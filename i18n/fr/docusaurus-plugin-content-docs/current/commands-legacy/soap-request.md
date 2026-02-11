@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SOAP Request.Summary-->La commande **SOAP Request** retourne Vrai si le code en cours d’exécution fait partie d’une requête SOAP.<!-- END REF--> 

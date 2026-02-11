@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get adjusted blobs cache priority.Summary-->**Get adjusted blobs cache priority** コマンドは*aTable* 引数で指定されたテーブルの"blob"データにキャッシュマネージャーによって適用されたカレントの調整済みキャッシュ優先度値を返します。<!-- END REF-->このコマンドはローカルモード(4D Server と4D)でのみ動作します。リモートモードの4Dでは使用できません。

@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Renombrar|
+|14|Modificado|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->El comando OBJECT Get list name devuelve el nombre de la lista asociada al objeto o a un grupo de objetos designados por *objeto*.<!-- END REF--> 4D le permite asociar una lista de opciones (creada con el editor de la listas en modo Diseño) a los objetos de formulario utilizando el editor de formularios o el comando [OBJECT SET LIST BY NAME](object-set-list-by-name.md).  

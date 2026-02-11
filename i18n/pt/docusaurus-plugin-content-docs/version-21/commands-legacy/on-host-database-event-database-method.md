@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->O **On Host Database Event database method** permite aos recipientes 4D executar código quando se abre e fecha a base local.<!-- END REF-->  

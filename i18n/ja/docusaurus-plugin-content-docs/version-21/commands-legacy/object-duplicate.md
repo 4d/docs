@@ -24,6 +24,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->**OBJECT DUPLICATE**コマンドを使用して、*object*引数で指定したオブジェクトのコピーを作成できます。<!-- END REF-->コピーはアプリケーションモードで実行されているフォームのコンテキストで生成されます。デザインモードのソースフォームは変更されません。

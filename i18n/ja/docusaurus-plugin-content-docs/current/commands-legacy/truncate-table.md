@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 3|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->TRUNCATE TABLE コマンドは*aTable*のすべてのレコードを素早く削除します。<!-- END REF-->*aTable*が既に空の場合、TRUNCATE TABLEは何も行いません。コマンドの呼出し後、カレントセレクションやカレントレコードはありません。

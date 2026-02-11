@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET PICTURE METADATA.Summary-->**GET PICTURE METADATA**コマンドを使用して *picture* で指定したピクチャ (4Dのピクチャフィールドや変数) 内のメタデータ (またはメタタグ) の内容を読みだすことができます。<!-- END REF--> メタデータに関する詳細は[SET PICTURE METADATA](set-picture-metadata.md)コマンドの説明を参照してください。

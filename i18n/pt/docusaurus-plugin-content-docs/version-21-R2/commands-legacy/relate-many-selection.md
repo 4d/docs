@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RELATE MANY SELECTION.Summary-->O comando RELATE MANY SELECTION cria uma seleção de registros na tabela Muitos, baseada na seleção atual da tabela Um.<!-- END REF-->  

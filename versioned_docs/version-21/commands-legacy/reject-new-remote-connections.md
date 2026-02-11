@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Summary-->The **REJECT NEW REMOTE CONNECTIONS** command specifies whether or not the application server accepts new remote user connections.<!-- END REF--> 

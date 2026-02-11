@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R4|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->El comando **DISTINCT VALUES** crea y llena el array *array* con todos valores distintos (únicos) del campo *campo* para la selección actual de la tabla del campo y, opcionalmente, devuelve en *contArray* el número de ocurrencias de cada valor.<!-- END REF-->

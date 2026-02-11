@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RESOLVE ALIAS.Summary-->O comando RESOLVE ALIAS retorna a rota completa do arquivo ou pasta objetivo de um alias (chamado atalho em Windows).<!-- END REF-->  

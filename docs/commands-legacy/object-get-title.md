@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get title.Summary-->The OBJECT Get title command returns the title (label) of the form object(s) designated by *object*.<!-- END REF--> You can use this command with all types of simple objects that contain a label:

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14 R3|Modificado|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->El comando MAXIMIZE WINDOW provoca el zoom de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si se omite este parámetro, el efecto es el mismo pero se aplica a todas las ventanas de la aplicación (Windows) o de la ventana del primer plano del proceso actual (macOS). 

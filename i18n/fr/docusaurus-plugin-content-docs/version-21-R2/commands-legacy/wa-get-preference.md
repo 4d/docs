@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 2|Créé|
+|14 R2|Modifié|
+|19|Modifié|
+|19 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->La commande **WA GET PREFERENCE** permet de lire la valeur courante d’une préférence dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 

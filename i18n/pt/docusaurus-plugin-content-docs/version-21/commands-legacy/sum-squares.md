@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Sum squares.Summary-->**Sum squares** devolve a soma de quadrados de *series*.<!-- END REF--> Se *series* for um campo indexado, o índice é utilizado para calcular a soma de quadrados. Só pode utilizar um campo com esta função quando imprime um relatório.  

@@ -23,6 +23,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R3|Modifié|
+|13|Modifié|
+|12|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->La commande **LISTBOX INSERT COLUMN** insère une colonne dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 

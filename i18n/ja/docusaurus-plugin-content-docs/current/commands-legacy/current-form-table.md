@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Current form table.Summary-->Current form tableコマンドは、カレントプロセスで表示または印刷されているフォームが属するテーブルのポインタを返します。<!-- END REF-->

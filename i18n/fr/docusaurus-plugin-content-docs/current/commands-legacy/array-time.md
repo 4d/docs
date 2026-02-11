@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY TIME.Summary-->La commande **ARRAY TIME** crée et/ou redimensionne un tableau d’éléments de type Heure en mémoire.<!-- END REF-->Dans 4D, les heures peuvent être traitées en tant que valeurs numériques. Dans les versions de 4D antérieures à la v14, il était nécessaire de combiner un tableau d’entiers longs et un format d’affichage pour gérer un tableau d’heures. 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.COLLECTION TO ARRAY.Summary-->La commande **COLLECTION TO ARRAY** remplit un ou plusieurs *tableau*(x) avec les éléments ou les valeurs *nomPropriété* de la *collection* dans le ou les *tableau*(x).<!-- END REF-->

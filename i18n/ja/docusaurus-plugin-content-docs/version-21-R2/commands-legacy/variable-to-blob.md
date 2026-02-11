@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+|14|変更|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.VARIABLE TO BLOB.Summary-->**VARIABLE TO BLOB**コマンドは、*variable*を*blob*に格納します。<!-- END REF-->

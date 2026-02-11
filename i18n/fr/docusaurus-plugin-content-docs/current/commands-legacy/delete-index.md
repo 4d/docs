@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE INDEX.Summary-->La commande **DELETE INDEX** permet de supprimer un ou plusieurs index existant dans la base.<!-- END REF--> Vous pouvez passer en paramètre soit un pointeur vers un champ, soit un nom d’index :

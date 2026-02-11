@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R6|名称変更|
+|15 R4|名称変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 互換性に関する注意 
 
 <!--REF #_command_.On Web Legacy Close Session database method.Summary-->このデータベースメソッドは**旧式Web セッション**でのみ使用可能であり、このセッションモードは4D v18 R6 以前のバージョンから変換されたデータベースでのみ利用可能です。<!-- END REF-->**スケーラブルWeb セッション**モード(4D v18 R6 以降での推奨設定)が有効化されていた場合にはこのメソッドは呼び出されません。詳細な情報については、*Webセッション管理(旧式)* の章を参照してください。

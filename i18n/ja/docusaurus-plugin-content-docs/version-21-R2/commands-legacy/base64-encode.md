@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|変更|
+|12|名称変更|
+|18 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BASE64 ENCODE.Summary-->**BASE64 ENCODE** コマンドは、*toEncode* 引数に渡されたテキストまたはBlob値を、Base64 またはBase64URL フォーマットにエンコードします。<!-- END REF--> 

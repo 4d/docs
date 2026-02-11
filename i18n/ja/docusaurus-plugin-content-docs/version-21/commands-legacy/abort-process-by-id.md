@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ABORT PROCESS BY ID.Summary-->**ABORT PROCESS BY ID** コマンドは4D Server 上の特定のプロセスを中止します。<!-- END REF-->引数には、サーバー上で実行中で中止したいプロセスの固有IDを渡します。プロセスIDは、[Process activity](../commands/process-activity.md) あるいは [Process info](../commands/process-info.md) コマンドを使用することで取得できます。

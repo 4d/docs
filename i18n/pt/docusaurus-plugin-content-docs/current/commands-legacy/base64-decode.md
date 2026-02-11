@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R4|Modificado|
+|12|Modificado|
+|12|Renomear|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BASE64 DECODE.Summary-->O comando **BASE64 DECODE** permite decodificar o texto ou valor de BLOB codificado em formato base64 ou Base64URL passado no parâmetro *aDecodificar*.<!-- END REF--> . Para sasber mais sobre os formatos Base64 e Base64URL, consule a descriçao do comando [BASE64 ENCODE](base64-encode.md)

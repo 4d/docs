@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+|15 R5|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->O comando **DELETE FOLDER** apaga a pasta cujo nome ou rota completa for passada em *pasta*.<!-- END REF--> 

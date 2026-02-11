@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get resource properties.Summary-->O comando **Get resource properties** retorna os atributos do recurso cujo tipo se passa em *resTipo* e cujo número de identificação se passa em *resNum*.<!-- END REF-->  

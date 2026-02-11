@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->**CONVERT COORDINATES**コマンドは、ある点の(x;y)座標を一つの座標系から別の座標系へと変換します。<!-- END REF-->サポートされる入力・出力座標系はフォーム(およびサブフォーム)、ウィンド、そしてスクリーンです。例えば、このコマンドを使用して、メインフォーム内にある、サブフォームに属しているオブジェクトの座標を取得する事ができます。これにより、どんなカスタムオプションに対してもコンテキストメニューを作成する事が容易になります。

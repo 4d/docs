@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CONFIRM.Summary-->CONFIRM コマンドは、注意アイコンとメッセージ、OKボタン、キャンセルボタンで構成される確認ダイアログボックスを表示します。<!-- END REF-->引数には表示するメッセージを渡します。

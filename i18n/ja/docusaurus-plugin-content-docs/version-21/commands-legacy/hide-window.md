@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->HIDE WINDOWコマンドは、*window*で指定したウィンドウ参照番号を持つウィンドウまたはこの引数省略時はカレントプロセスの最前面ウィンドウを、隠すために使用します。<!-- END REF-->例えばこのコマンドを使用して、複数のプロセスで構成されるアプリケーションで、アクティブなプロセスのウィンドウだけを表示できます。 

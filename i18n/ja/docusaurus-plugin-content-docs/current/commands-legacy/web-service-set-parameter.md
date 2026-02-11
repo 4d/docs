@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R2|変更|
+|13|名称変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Summary-->**WEB SERVICE SET PARAMETER**コマンドはクライアントのSOAPリクエストで引数の定義を行います。<!-- END REF-->リクエスト中の引数毎にこのコマンドを呼び出します (このコマンドの呼び出し回数は引数の数に応じます)。

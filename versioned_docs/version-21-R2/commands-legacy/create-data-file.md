@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.8|Created|
+|13|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE DATA FILE.Summary-->The **CREATE DATA FILE** command creates a new data file to disk and replaces the data file opened by the 4D application on-the-fly.<!-- END REF-->

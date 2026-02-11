@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOCUMENT LIST.Summary-->**DOCUMENT LIST**コマンド は、*pathname*に渡すパス名にあるドキュメントの名前を要素とするテキスト配列*documents*を生成します。<!-- END REF-->引数*pathname* は絶対パス名だけを受け入れます。 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+|13|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->O comando **WEB GET HTTP HEADER** retorna uma string ou dois arrays, que contém o cabeçalho HTTP utilizado na petição em processo.<!-- END REF-->

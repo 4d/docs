@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Copy parameters.Summary-->La commande Copy parameters retourne une nouvelle collection contenant tous les paramètres passés à une méthode ou à une fonction.<!-- END REF--> Cette commande est utile lorsque vous devez transférer un certain nombre de paramètres d'une méthode ou d'une fonction à une autre méthode ou fonction. 

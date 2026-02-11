@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+|12.1|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->**SQL EXPORT DATABASE**コマンドはデータベースのすべてのテーブルのすべてのレコードをSQLフォーマットで書き出します。<!-- END REF-->SQLではこのグローバルな書き出し処理は"ダンプ"と呼ばれます。  

@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+|12.1|Modifié|
+|14|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->La commande **ST GET ATTRIBUTES** permet de récupérer la valeur courante d’un attribut de style dans une sélection de texte du ou des objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 

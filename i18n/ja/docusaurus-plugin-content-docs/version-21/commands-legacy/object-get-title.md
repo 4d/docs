@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get title.Summary-->OBJECT Get titleコマンドは *object*で指定されたフォームオブジェクトのタイトル (ラベル) を返します。<!-- END REF-->このコマンドはラベルを表示するすべてのタイプのシンプルオブジェクトに使用できます:

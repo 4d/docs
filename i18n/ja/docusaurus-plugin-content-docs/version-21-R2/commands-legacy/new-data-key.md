@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.New data key.Summary-->**New data key** コマントは、*passPhrase* 引数に渡されたパスフレーズのテキストからバイナリーデータの暗号化キーを生成します。<!-- END REF-->

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->The **OBJECT Get text orientation** command returns the current orientation value applied to the text of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 

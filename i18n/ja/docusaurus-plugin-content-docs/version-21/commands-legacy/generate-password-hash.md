@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Generate password hash.Summary-->**Generate password hash** ファンクションは*password* 引数のパスワードから暗号化ハッシュアルゴリズムによって生成された、安全なパスワードハッシュを返します。<!-- END REF-->引数には、文字列を渡します。**Generate password hash** はパスワードのハッシュ化された文字列を返します。同じパスワードを複数回渡した場合、ハッシュ化された文字列は毎回異なる結果が返されます。

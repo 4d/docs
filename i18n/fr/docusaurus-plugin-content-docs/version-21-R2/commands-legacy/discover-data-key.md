@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Discover data key.Summary-->La commande **Discover data key** recherche, à la racine de tous les appareils connectés, une clé de chiffrement valide correspondant au fichier de données courant et retourne **Vrai** si l'opération est réussie.<!-- END REF--> 

@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|13|Renamed|
+|13|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SOAP Get info.Summary-->The **SOAP Get info** command retrieves, in the form of a character string, the different types of information concerning a SOAP request.<!-- END REF--> 

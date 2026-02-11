@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->**OBJECT SET SUBFORM CONTAINER VALUE** コマンドは、オヤフォーム内に表示されたサブフォームコンテナにバインドされたデータソースのカレント値を設定します。<!-- END REF-->

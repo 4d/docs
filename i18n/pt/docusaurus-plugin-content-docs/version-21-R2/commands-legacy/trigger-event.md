@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 2|Modificado|
+|13|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Trigger event.Summary-->Quando chamado de dentro de um trigger, o comando **[Trigger event](trigger-event.md)** retorna um valor numérico que indica o tipo do evento do banco, em outras palavras, a razão pela qual é chamado o trigger.<!-- END REF-->  

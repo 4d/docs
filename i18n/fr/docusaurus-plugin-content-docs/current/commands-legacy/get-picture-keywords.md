@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Summary-->La commande **GET PICTURE KEYWORDS** retourne dans le tableau *tabMotsclés* la liste des mots-clés associés à l’image passée en paramètre.<!-- END REF--> 

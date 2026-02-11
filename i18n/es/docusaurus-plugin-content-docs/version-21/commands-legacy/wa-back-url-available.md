@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL Release 2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA Back URL available.Summary-->El comando WA Back URL available se utiliza para saber si existe un URL precedente disponible en la secuencia de URLs abiertos en el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->

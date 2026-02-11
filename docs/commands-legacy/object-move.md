@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Renamed|
+|6.7|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->The OBJECT MOVE command allows you to move the object(s) in the current form, defined by the *\** and *object* parameters *moveH* pixels horizontally and *moveV* pixels vertically.<!-- END REF--> 

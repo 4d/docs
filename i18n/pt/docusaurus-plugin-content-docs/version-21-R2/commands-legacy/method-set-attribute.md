@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->O comando **METHOD SET ATTRIBUTE** permite definir o valor do atributo tipoAtrib para o método projeto designado pelo parâmetro *rota*.<!-- END REF--> Este comando somente funciona com métodos projeto. Se passar uma rota não válida, um erro é gerado.

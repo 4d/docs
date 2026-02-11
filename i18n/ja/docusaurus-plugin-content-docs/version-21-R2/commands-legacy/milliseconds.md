@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Milliseconds.Summary-->Milliseconds は、マシンが起動されてから経過したミリ秒 (1/1000秒) 数を返します。<!-- END REF-->

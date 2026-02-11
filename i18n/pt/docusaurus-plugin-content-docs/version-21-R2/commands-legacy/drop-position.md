@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|12|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Drop position.Summary-->O comando Drop position pode ser utilizado para descobrir a localização, em um objeto de destino “complexo”, onde um objeto foi (arrastado e) soltado.<!-- END REF-->

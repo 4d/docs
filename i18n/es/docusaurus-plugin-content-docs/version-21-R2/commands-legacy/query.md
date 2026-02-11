@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QUERY.Summary-->El comando QUERY busca los registros que corresponden al criterio especificado en *criterioBusqueda* y devuelve una selección de registros de *tabla*.<!-- END REF--> QUERY modifica la selección actual de *tabla* para el proceso actual y vuelve el primer registro de la nueva selección el registro actual.

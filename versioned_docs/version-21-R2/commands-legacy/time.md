@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|14|Modified|
+|16 R5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Time.Summary-->The Time command returns a time expression equivalent to the time specified in the *timeValue* parameter.<!-- END REF-->

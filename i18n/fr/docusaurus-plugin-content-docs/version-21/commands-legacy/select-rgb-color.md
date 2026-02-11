@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Select RGB color.Summary-->La commande **Select RGB color** affiche la fenêtre système de sélection de couleur et retourne la valeur RVB de la couleur sélectionnée par l’utilisateur.<!-- END REF-->

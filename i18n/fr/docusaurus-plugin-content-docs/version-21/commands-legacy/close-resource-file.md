@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->La commande **CLOSE RESOURCE FILE** referme le fichier de ressources dont vous avez passé le numéro de référence dans *resFichier*.<!-- END REF-->

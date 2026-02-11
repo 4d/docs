@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+|14 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->The MAXIMIZE WINDOW command triggers the expansion of the window whose reference number was passed in *window*.<!-- END REF--> If this parameter is omitted, the effect is the same but is applied to all the frontmost windows of the current process (Windows) or to the frontmost window of the current process (macOS). 

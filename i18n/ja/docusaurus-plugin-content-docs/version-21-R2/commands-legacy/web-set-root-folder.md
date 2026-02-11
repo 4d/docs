@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SET ROOT FOLDER.Summary-->**WEB SET ROOT FOLDER**コマンドを使用して、デフォルトのルートフォルダを変更します。<!-- END REF-->そのなかで4DはWebサーバがリクエストしたHTMLを探します。

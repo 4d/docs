@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is picture file.Summary-->Is picture file コマンドは*filePath*引数で指定されたファイルをテストし、有効なピクチャファイルであればTrueを返します。<!-- END REF-->ファイルがピクチャファイルでないか、ファイルが見つからない場合はFalseを返します。

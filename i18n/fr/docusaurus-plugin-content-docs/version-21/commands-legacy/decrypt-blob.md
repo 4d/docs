@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->La commande **DECRYPT BLOB** permet de décrypter le contenu du BLOB *aDécrypter* à l’aide de la clé publique de l’émetteur *cléPubEmetteur* ainsi que, optionnellement, de la clé privée du récepteur *cléPrivRécepteur*.<!-- END REF-->

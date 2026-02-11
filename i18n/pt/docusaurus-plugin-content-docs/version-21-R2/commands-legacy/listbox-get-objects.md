@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->O comando **LISTBOX GET OBJECTS** devolve um array que contém os nomes de todos os objetos que compõem o list box designado pelos parâmetros *objeto* e *\** .<!-- END REF-->  

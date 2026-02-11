@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->El comando SET LIST ITEM ICON permite modificar el icono asociado al elemento especificado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista* 

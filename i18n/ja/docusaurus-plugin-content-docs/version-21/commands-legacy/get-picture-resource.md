@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->GET PICTURE RESOURCE コマンドは、*resID*のIDを持つピクチャ ("PICT") リソースに格納されているピクチャを*resData*のピクチャフィールドまたは変数に返します。<!-- END REF-->

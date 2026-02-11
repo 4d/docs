@@ -20,6 +20,15 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->La commande **COMBINE PICTURES** permet de combiner les images *image1* et *image2* en mode *opérateur* pour en produire une troisième, *imageRésultat*.<!-- END REF--> L’image résultat est de type composé et conserve toutes les caractéristiques des images sources.
 

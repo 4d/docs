@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+|14|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->**METHOD SET ATTRIBUTE**コマンドは*path*引数で指定されたプロジェクトメソッドの*attribType*属性の値を設定します。<!-- END REF-->このコマンドはプロジェクトメソッドに対してのみ動作します。無効な *path*を渡すとエラーが生成されます。

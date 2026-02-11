@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+|18 R2|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->El comando SCREEN COORDINATES devuelve en los parámetros *izquierda*, *arriba*, *derecha,* y *abajo* las coordenadas de la pantalla especificada por *IDpantalla*.<!-- END REF-->

@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|変更|
+|15|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB GET PROPERTY NAMES.Summary-->**OB GET PROPERTY NAMES**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に含まれているプロパティの名前を、 *arrProperties* という名前のテキスト配列に入れて返します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。

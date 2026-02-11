@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->SVG EXPORT TO PICTURE コマンドはXMLツリーのSVGフォーマットのピクチャを、*pictVar* 引数で指定したピクチャフィードや変数に保存するために使用できます。<!-- END REF-->SVGフォーマットに関する詳細はの節を参照してください。

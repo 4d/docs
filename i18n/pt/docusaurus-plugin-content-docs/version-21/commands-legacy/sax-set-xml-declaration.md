@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Modificado|
+|12|Renomear|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->O comando **SAX SET XML DECLARATION** inicializa o documento XML referenciado por *documento* utilizando a codificação especificada.<!-- END REF--> Opcionalmente, pode estabelecer o atributo standalone/autônomo.

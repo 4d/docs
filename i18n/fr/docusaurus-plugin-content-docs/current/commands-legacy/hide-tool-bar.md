@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R5|Modifié|
+|14|Modifié|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.HIDE TOOL BAR.Summary-->La commande **HIDE TOOL BAR** permet de gérer l'affichage des barres d'outils personnalisées créées par la commande [Open form window](../commands/open-form-window.md) pour le process courant.<!-- END REF-->

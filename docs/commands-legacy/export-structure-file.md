@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18|Modified|
+|17 R5|Modified|
+|17 R3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Export structure file.Summary-->The **Export structure file** command breaks down the current 4D database structure into a set of text-based files or native picture files and stores them in the specified *folderPath*.<!-- END REF--> By default, the entirety of the database structure (methods, forms, catalog, etc.) is exported. You can filter the contents to export using the *options* parameter (see below).

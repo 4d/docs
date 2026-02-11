@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->WA SET EXTERNAL LINKS FILTERS コマンドを使用して、*\** と *object* 引数で指定したWebエリアの外部リンクフィルタを設定できます。<!-- END REF-->外部リンクフィルタは、リンクを使用して現在のページに関連付けられているURLをWebエリアで開くか、マシンのデフォルトWebブラウザで開くかどうか決定するために使用されます。

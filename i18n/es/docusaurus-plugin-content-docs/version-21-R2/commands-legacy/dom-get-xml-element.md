@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM Get XML element.Summary-->El comando DOM Get XML element devuelve una referencia XML al elemento “hijo” dependiente de los parámetros *nomElement* e *index*.<!-- END REF--> 

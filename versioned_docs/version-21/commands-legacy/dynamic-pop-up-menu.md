@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R3|Modified|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->The **Dynamic pop up menu** causes a hierarchical pop-up menu to appear at the current location of the mouse or at the location set by the optional *xCoord* and *yCoord* parameters.<!-- END REF-->

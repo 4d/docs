@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|18 R2|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->The SCREEN COORDINATES command returns in *left*, *top*, *right,* and *bottom* the global coordinates of the screen specified by *screenID*.<!-- END REF-->

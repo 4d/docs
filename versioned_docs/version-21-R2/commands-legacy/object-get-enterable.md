@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->The OBJECT Get enterable command returns True if the object or group of objects designated by *object* has the **enterable** attribute; otherwise, it returns False.<!-- END REF--> 

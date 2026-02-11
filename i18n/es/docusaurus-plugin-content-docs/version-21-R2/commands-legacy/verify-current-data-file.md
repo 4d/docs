@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 4|Modificado|
+|15 R3|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->El comando VERIFY CURRENT DATA FILE efectúa una verificación estructural de los objetos encontrados en el archivo de datos abierto actualmente por 4D.<!-- END REF--> 

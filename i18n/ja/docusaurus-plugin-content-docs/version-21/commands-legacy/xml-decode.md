@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.XML DECODE.Summary-->XML DECODE コマンドはXML文字列に格納されている値を4D型の値に変換します。<!-- END REF--> 変換は以下のルールに基づいて自動で行われます: 

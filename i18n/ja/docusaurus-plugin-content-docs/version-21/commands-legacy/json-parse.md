@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|変更|
+|16 R4|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.JSON Parse.Summary-->**JSON Parse**コマンドは、JSONフォーマットの文字列の中身を解析し、4Dのフィールドまた は変数へと保存可能な値を取り出します。<!-- END REF-->このコマンドはJSONデータをデシリアライズします。つまり [JSON Stringify](json-stringify.md)コマンドと逆の挙動をします。

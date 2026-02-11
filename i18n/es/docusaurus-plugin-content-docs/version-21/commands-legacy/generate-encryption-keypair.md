@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.7|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->El comando GENERATE ENCRYPTION KEYPAIR genera un nuevo par de llaves RSA.<!-- END REF--> Estas llaves permiten funcionalidades de encripción asimétricas en 4D, generalmente necesarias cuando necesita asegurar intercambios de datos seguros en la red (es decir, utilizando el servidor web 4D y el protocolo TSL). 

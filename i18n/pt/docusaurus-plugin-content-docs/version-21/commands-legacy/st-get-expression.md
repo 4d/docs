@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ST Get expression.Summary-->O comando **ST Get expression** devolve a primeira expressão que se encontra na seleção atual do campo ou da variável de texto com estilo designada pelo parâmetro *objeto*.<!-- END REF--> 

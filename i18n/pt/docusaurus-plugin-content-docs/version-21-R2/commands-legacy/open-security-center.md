@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->O comando OPEN SECURITY CENTERmostra a janela do Centro de segurança e manutenção (CSM).<!-- END REF--> Para saber mais veja a página *Centro de segurança e manutenção*.   

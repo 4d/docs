@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->**CREATE SELECTION FROM ARRAY** コマンドは、以下の方法で*selectionName*<!-- END REF--> 命名セレクションを作成します:

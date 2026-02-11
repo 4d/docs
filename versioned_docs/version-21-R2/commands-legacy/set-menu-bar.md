@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU BAR.Summary-->**SET MENU BAR** replaces the current menu bar with the one specified by *menuBar* for the current process only.<!-- END REF--> In the *menuBar* parameter, you can pass either the number or name of the new menu bar. You can also pass a menu ID ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type, 16-character string). When you work with references, the menus can be used as menu bars and vice versa (see the *Managing Menus* section).

@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|12|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Select folder.Summary-->O comando Select folder mostra uma caixa de diálogo que lhe permite selecionar manualmente uma pasta e depois recuperar a rota de acesso completa a essa pasta.<!-- END REF--> O parâmetro opcional *rotaPadrao* pode ser utilizado para designar a localização de uma pasta que inicialmente será mostrada na caixa de diálogo de seleção da pasta.  

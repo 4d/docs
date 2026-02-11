@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get text resource.Summary-->O comando Get text resource retorna o texto guardado no recurso texto (“TEXT”) cujo número de identificação é passado em *resNum*.<!-- END REF-->  

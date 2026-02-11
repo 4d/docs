@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get adjusted table cache priority.Summary-->El comando **Get adjusted table cache priority** devuelve el valor de prioridad de la caché ajustada aplicado en caché para los datos escalares *tabla*.<!-- END REF-->. Este comando sólo es necesario para propósitos de depuración.

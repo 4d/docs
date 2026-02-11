@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Macintosh command down.Summary-->Macintosh command down devuelve TRUE si la tecla Comando Macintosh está presionada.<!-- END REF-->cuando se llama bajo Windows, Macintosh command down devuelve TRUE si la tecla Ctrl Windows está presionada.

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.POST CLICK.Summary-->O comando POST CLICK simula um clique do mouse.<!-- END REF--> Tem o mesmo efeito que quando o usuário clicar no botão do mouse 

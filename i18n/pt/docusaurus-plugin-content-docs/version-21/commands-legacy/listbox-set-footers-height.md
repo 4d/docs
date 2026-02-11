@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Summary-->O comando **LISTBOX SET FOOTERS HEIGHT** modifica por programação a altura da linha de rodapé do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  

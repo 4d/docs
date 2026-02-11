@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+|15|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->El comando **SET EXTERNAL DATA PATH** define o modifica, para el registro actual, la ubicación de almacenamiento externo del campo *aCampo* pasado como parámetro.<!-- END REF-->

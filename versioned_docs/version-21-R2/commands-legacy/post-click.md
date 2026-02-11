@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.POST CLICK.Summary-->The POST CLICK command simulates a mouse click.<!-- END REF--> Its effect as if the user actually clicked the mouse button.

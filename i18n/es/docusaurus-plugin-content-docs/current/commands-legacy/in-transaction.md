@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.In transaction.Summary-->El comando In transaction devuelve [True](true.md "True") si el proceso actual está en transacción, de lo contrario devuelve [False](false.md "False").<!-- END REF-->

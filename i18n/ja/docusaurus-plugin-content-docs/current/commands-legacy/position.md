@@ -22,6 +22,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R6|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Position.Summary-->**Position** コマンドは、*aString* の中で*find* が最初に現われる位置を返します。<!-- END REF-->の中に*find* が見つからない場合は、Positionはゼロ(0) を返します。

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DROP REMOTE USER.Summary-->O comando **DROP REMOTE USER** desconecta a um usuário específico conectado remotamente ao servidor 4D.<!-- END REF--> 

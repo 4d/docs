@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->**HIGHLIGHT TEXT**コマンドは、*object* 内にあるテキストの一部を反転表示します。<!-- END REF-->

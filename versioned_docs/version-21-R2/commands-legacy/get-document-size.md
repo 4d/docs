@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get document size.Summary-->The Get document size command returns the size, expressed in bytes, of a document.<!-- END REF-->

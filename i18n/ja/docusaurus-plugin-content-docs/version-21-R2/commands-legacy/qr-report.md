@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|14|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT**はクイックレポートエディターを用いて作成された、*aTable*のレポートを印刷します。<!-- END REF-->このエディターを使用するとユーザーは独自のレポートを作成できるようになります。クイックレポートエディターを使用してレポートを作成する事については、4D*デザインリファレンス*マニュアルの*クイックレポート* の章を参照して下さい。

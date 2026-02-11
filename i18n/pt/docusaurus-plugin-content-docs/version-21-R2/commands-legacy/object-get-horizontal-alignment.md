@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.8.1|Criado por|
+|12|Renomear|
+|13|Renomear|
+|15 R4|Modificado|
+|20|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->O comando **OBJECT Get horizontal alignment** devolve um código indicando o tipo de alinhamento aplicado ao objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

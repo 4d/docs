@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.KILL WORKER.Summary-->O comando **KILL WORKER** envia uma mensagem ao processo worker cujo nome ou número que passa em *processo*, pedindo ignorar as mensagens pendentes e por fim a sua execução logo que terminem as tarefas atuais.<!-- END REF-->

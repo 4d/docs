@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VOLUME LIST.Summary-->**VOLUME LIST** remplit le tableau *volumes*, de type texte, avec les noms des volumes définis (Windows) ou montés (macOS) sur votre machine.<!-- END REF-->

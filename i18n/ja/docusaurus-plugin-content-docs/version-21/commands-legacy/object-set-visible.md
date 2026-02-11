@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|名称変更|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->OBJECT SET VISIBLE コマンドは、*object*によって指定されるオブジェクトを表示、あるいは非表示にします。<!-- END REF--> 

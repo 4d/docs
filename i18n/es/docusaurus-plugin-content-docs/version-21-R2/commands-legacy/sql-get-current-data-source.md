@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+|19 R5|Renombrar|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SQL Get current data source.Summary-->El comando *Get current data source* devuelve el nombre de la fuente de datos actual de la aplicación.<!-- END REF--> La fuente de datos actual recibe las búsquedas SQL ejecutadas dentro de las estructuras [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL"). 

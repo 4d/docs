@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->O comando  SET MENU ITEM SHORTCUT  modifica o atalho Ctrl (Windows) ou comando (Macintosh) para o comando de menu cujos números de menu e de elemento são passados em *menu* e *menuItem,* pelo caracter cujo caractere de código ou texto se passa em *itemKey*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado ao menu. Esta tecla se combinará automaticamente com a tecla **Ctrl** (Windows) ou **Comando** (Macintosh) para definir o novo atalho de teclado.

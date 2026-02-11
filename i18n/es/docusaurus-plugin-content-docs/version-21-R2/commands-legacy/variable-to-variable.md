@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->El comando VARIABLE TO VARIABLE escribe las variables proceso *dstVar* (*dstVar2*, etc.) del proceso de destino cuyo número se pasa en *proceso* utilizando los valores de las variables *srcVar1* *srcVar2*, etc.<!-- END REF-->

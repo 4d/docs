@@ -14,6 +14,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Descrição 
 
 <!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE modifica a página atual de um formulário para mostrar a última página do formulário.<!-- END REF--> Se não é mostrado nenhum formulário ou carregado pelo comando [FORM LOAD](../commands/form-load.md), ou se já é mostrada ultima página do formulário, LAST PAGE não faz nada.

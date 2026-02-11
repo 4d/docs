@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET MENU ITEM.Summary-->El comando SET MENU ITEM cambia el texto de la línea de menú cuyo número o referencia de menú se pasa en *menu* y cuyo número de elemento se pasa en *menuItem*, para el texto que pasó en *itemText*.<!-- END REF--> Puede pasar -1 en *menuItem* para designar el último elemento añadido a *menu*.

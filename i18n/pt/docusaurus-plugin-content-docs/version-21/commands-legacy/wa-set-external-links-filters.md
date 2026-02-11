@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->O comando WA SET EXTERNAL LINKS FILTERS permite estabelecer um ou mais filtros de links externos para a zona web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> Os filtros de links externos determinam se um URL associado a página atual através um link deve ser aberto na área web ou no navegador web por padrão da máquina.

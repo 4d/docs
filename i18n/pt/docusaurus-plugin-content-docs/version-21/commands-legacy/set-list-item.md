@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->O comando SET LIST ITEM modifica o elemento designado pelo parâmetro *refElem* na lista cujo número de referência ou nome de objeto se passa em *lista*.<!-- END REF--> 

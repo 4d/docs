@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+|13|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB Validate digest.Summary-->The **WEB Validate digest** command checks the validity of the identifying information (name and password) provided by a user connecting to the Web server.<!-- END REF--> This command must be used in the *On Web Authentication Database Method* in the context of Web authentication in Digest mode (see the *Connection Security* section). 

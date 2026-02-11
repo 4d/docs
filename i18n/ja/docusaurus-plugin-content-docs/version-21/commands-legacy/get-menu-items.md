@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->GET MENU ITEMS コマンドは、*menu*引数で指定したメニューまたはメニューバーのタイトルとIDを*menuTitlesArray* と *menuRefsArray* 配列に返します。<!-- END REF-->

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->El comando SELECT LIST ITEMS BY POSITION selecciona el(los) elemento(s) cuya posición se pasa en *posicionElem* y opcionalmente en *posicionArray* en la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF-->

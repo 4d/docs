@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|15 R5|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->PRINT SELECTION imprime a seleção atual de tabela.<!-- END REF--> Os registros se imprimem no formulário de salida atual da tabela do processo atual. PRINT SELECTION realiza a mesma ação que o comando Imprimir do ambiente Usuário. Se a seleção está vazia, PRINT SELECTION não faz nada.  

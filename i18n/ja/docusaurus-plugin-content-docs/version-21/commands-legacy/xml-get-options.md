@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->**XML GET OPTIONS** コマンドは、カレントセッションおよびカレントユーザで使用されている1つ以上のXMLパラメタの現在値を取得するために使用します。<!-- END REF-->引数に返されます:

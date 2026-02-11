@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R5|Creado por|
+|17|Modificado|
+|18 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WEB Get server info.Summary-->El comando **WEB Get server info** devuelve un objeto que contiene información del tiempo de ejecución detallada en la sesión actual del servidor web 4D.<!-- END REF--> La información devuelta incluye el servidor SOAP.

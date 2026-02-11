@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->The **WA GET EXTERNAL LINKS FILTERS** command returns, in the *filtersArr* and *allowDenyArr* arrays, the external link filters of the Web area designated by the *\** and *object* parameters.<!-- END REF--> If no filter is active, the arrays are returned empty. 

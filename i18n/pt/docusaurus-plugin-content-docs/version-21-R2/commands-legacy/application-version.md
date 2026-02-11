@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+|11 SQL Release 5|Modificado|
+|14 R2|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Application version.Summary-->O comando Application version retorna uma cadeia codificada que dá o número da versão do ambiente 4D que está sendo utilizado.<!-- END REF--> 

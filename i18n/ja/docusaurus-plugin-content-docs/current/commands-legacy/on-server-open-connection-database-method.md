@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## On Server Open Connection データベースメソッドはいつ呼び出されるか 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->**On Server Open Connectionデータベースメソッド**は、4Dリモートワークステーションが接続プロセスを開始するたびに、サーバーマシン上で一度、呼び出されます。<!-- END REF-->4D Server 以外の4D 環境では**On Server Open Connectionデータベースメソッド**が起動されることはありません。 

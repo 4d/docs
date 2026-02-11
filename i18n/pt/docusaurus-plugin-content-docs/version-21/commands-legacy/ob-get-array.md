@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15|Modificado|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB GET ARRAY.Summary-->O comando **OB GET ARRAY** recupera em *array*, o array de valores armazenados na *propriedade* do objeto de linguagem designado pelo parâmetro *objeto*.<!-- END REF-->deve ter sido definido com o comando *C\_OBJECT* ou designar um campo objeto 4D.  

@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.ST GET URL.Summary-->El comando **ST GET URL** devuelve la etiqueta y la dirección de la primera URL detectada en el campo o la variable de texto multiestilo designado por el parámetro *objeto*.<!-- END REF--> 

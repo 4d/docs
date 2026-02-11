@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->RESOURCE LIST コマンドは、*resType*に渡したタイプのリソースIDとリソース名から、*resIDs*と*resNames*の配列を作成します。<!-- END REF-->

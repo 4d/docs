@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|20 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is window reduced.Summary-->El comando **Is window reduced** devuelve **True** si la ventana cuyo número de referencia se pasa en *ventana* está actualmente reducida en la barra de tareas (Windows) o en el dock (macOS), y **False** en caso contrario.<!-- END REF-->

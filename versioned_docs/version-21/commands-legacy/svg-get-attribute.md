@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->The SVG GET ATTRIBUTE command is used to get the current value of the *attribName* attribute in an object or an SVG picture.<!-- END REF--> 

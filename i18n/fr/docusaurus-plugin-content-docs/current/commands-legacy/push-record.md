@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** "empile" une copie de l'enregistrement courant de *laTable* dans la pile d'enregistrements de la table.<!-- END REF-->peut être exécuté avant qu'un enregistrement soit sauvegardé.

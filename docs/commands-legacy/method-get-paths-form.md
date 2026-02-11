@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->The **METHOD GET PATHS FORM** command fills the *arrPaths* array with the internal pathnames and names of the methods for all form objects as well as form methods.<!-- END REF--> Form methods are labeled {formMethod}.

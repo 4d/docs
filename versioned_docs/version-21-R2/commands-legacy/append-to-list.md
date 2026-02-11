@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|16 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->The **APPEND TO LIST** command appends a new item to the hierarchical list whose list reference number you pass in *list*.<!-- END REF-->

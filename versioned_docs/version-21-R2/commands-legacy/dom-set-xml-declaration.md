@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Modified|
+|12|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->The **DOM SET XML DECLARATION** command allows you to define various options that are useful in creating the XML tree set using *elementRef*.<!-- END REF--> These options concern the encoding and the standalone property of the tree:

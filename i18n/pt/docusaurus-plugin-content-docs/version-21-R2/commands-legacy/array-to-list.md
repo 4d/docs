@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->O comando ARRAY TO LIST cria ou substitui a lista hierárquica ou a lista de escolha (criada no editor LIsta) que é especificada em *lista* usando os elementos do *array* *.<!-- END REF-->*

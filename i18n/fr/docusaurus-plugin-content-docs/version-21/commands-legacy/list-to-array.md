@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->La commande **LIST TO ARRAY** crée ou remplace le tableau *tableau* avec les éléments du premier niveau de la liste ou de l'énumération *liste*.<!-- END REF-->

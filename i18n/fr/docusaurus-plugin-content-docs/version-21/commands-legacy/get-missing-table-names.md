@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Summary-->La commande **GET MISSING TABLE NAMES** retourne dans le tableau *tabManquantes* les noms de toutes les tables manquantes de la base courante.<!-- END REF-->

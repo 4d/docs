@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R5|Renamed|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->The **SQL GET DATA SOURCE LIST** command returns, in the *sourceNamesArr* and *driversArr* arrays, the names and drivers of the *sourceType* type data sources defined in the ODBC manager of the operating system.<!-- END REF-->

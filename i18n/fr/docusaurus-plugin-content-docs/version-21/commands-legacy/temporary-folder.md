@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Temporary folder.Summary-->La fonction **Temporary folder** retourne le chemin d'accès au dossier temporaire courant tel que défini par votre système d'exploitation.<!-- END REF-->

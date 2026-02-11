@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET CURSOR.Summary-->La commande **SET CURSOR** remplace le pointeur (graphique) de la souris par le pointeur système dont vous avez passé le numéro d'ID dans le paramètre *curseur*.<!-- END REF-->

@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** は*statement*をコードとして実行します。<!-- END REF-->このコマンドはユーザーがビルド・変更可能な式を評価する場合に使用することを想定して設計されています。  

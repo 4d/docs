@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is a list.Summary-->El comando Is a list devuelve TRUE si el valor pasado en *lista* es una referencia válida a una lista jerárquica.<!-- END REF--> De lo contrario, devuelve FALSE.

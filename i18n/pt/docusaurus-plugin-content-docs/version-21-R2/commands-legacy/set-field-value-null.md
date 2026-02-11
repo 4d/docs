@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET FIELD VALUE NULL.Summary-->O comando SET FIELD VALUE NULL atribui o valor NULL ao campo designado pelo parâmetro *campo*.<!-- END REF-->  

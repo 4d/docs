@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|12|Renombrar|
+|13|Modificado|
+|13|Renombrar|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->El comando **LISTBOX INSERT ROWS** inserta una o varias nuevas líneas en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->

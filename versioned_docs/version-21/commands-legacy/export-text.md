@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->The EXPORT TEXT command writes data from the records of the current selection of *aTable* in the current process.<!-- END REF--> The data is written to *document*, a Windows or Macintosh text document on the disk.

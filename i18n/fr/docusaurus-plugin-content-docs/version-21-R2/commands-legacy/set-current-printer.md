@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Modifié|
+|15 R5|Modifié|
+|20|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->La commande **SET CURRENT PRINTER** permet de désigner l’imprimante à utiliser pour les impressions avec l’application 4D courante.<!-- END REF-->

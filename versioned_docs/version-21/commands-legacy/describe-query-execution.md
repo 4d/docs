@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 1|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->The **DESCRIBE QUERY EXECUTION** command enables or disables the query analysis mode for the current process.<!-- END REF--> The command only works in the context of 4D language query commands such as [QUERY](query.md). 

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->The **OPEN PRINTING JOB** command opens a print job and stacks all the subsequent printing orders there until the [CLOSE PRINTING JOB](close-printing-job.md) command is called.<!-- END REF--> This command lets you control the print jobs and, more particularly, ensure that no other unexpected print job can be inserted into a printing sequence.

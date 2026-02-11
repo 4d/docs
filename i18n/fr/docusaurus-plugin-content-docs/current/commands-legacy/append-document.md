@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Append document.Summary-->La commande **Append document** "fait la même chose" que la commande [Open document](open-document.md) : elle vous permet d'ouvrir un document sur disque et de se placer à la fin du document.<!-- END REF--> 

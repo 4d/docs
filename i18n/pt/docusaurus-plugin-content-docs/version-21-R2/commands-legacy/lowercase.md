@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Lowercase.Summary-->**Lowercase** devolve uma *cadeia* de caracteres igual ao parâmetro *cadeia* com todos os caracteres alfabéticos convertidos para minúsculas.<!-- END REF-->  

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->**SET REAL COMPARISON LEVEL** コマンドは、実数値と式の同等性を比較するために4Dが使用するイプシロン値を設定します。<!-- END REF-->

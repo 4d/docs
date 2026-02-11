@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Create menu.Summary-->O comando **Create menu** permite criar um novo menu em memória.<!-- END REF--> Este menu só existirá em memória e não será adicionado ao editor de menu no ambiente Desenho. Toda modificação realizada a este menu durante a sessão repercutirá imediatamente em todas as instâncias deste menu e em todos os processos do banco. 

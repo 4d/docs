@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12.2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->The FORM SCREENSHOT command returns a form as a picture.<!-- END REF--> This command accepts two different syntaxes: depending on the syntax used, you get either a picture of an executed form, or a picture of the form in the Form editor.

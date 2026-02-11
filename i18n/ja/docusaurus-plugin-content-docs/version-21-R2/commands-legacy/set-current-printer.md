@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|変更|
+|15 R5|変更|
+|20|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->**SET CURRENT PRINTER** コマンドは現行の4Dアプリケーションでの印刷に使用するプリンターを指定するために使用します。<!-- END REF-->

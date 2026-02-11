@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PICTURE METADATA.Summary-->O comando SET PICTURE METADATA permite escrever ou modificar o conteúdo dos metadados (ou meta-etiquetas) presentes em *imagem* (campo ou variável imagem 4D).<!-- END REF--> 

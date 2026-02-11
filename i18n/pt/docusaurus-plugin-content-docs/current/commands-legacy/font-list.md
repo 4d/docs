@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R4|Modificado|
+|14|Modificado|
+|12.1|Modificado|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FONT LIST.Summary-->O comando FONT LIST enche o array *fontes*, de tipo alfa ou texto, com os nomes das fontes disponíveis em seu sistema.<!-- END REF-->

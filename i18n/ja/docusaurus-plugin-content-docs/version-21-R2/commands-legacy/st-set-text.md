@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+|12.1|変更|
+|14|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST SET TEXT.Summary-->**ST SET TEXT** コマンドは*object*引数で指定されたスタイル付きのフィールドや変数に、 *newText*引数で渡されたテキストを挿入します。<!-- END REF--> このコマンドは*object*引数のプレーンテキストにのみ適用され、含まれるスタイルタグは更新しません。このコマンドはスクリーンに表示されているスタ イル付きテキストをプログラムで変更するために使用できます。 

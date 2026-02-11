@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->SVG SHOW ELEMENT コマンドは、*id*引数で指定した"id"属性を持つ要素を表示するように、*pictureObject* SVGドキュメントを移動します。<!-- END REF-->. 

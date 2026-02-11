@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get menu bar reference.Summary-->El comando **Get menu bar reference** devuelve la identificación única de la barra de menús actual o de la barra de menús de un proceso específico.<!-- END REF-->

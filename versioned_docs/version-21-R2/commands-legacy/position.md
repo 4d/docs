@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|18 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Position.Summary-->**Position** returns the position of the first occurrence of *find* in *aString*.<!-- END REF--> 

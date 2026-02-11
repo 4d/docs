@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->El comando **LISTBOX SET HEADERS HEIGHT** modifica por programación la altura de la línea de encabezado del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Font file.Summary-->**Font file** コマンドは、*fontFamily* 引数で指定したフォントファミリーに対応するOS 内にあるフォントファイルの詳細を格納したオブジェクトを返します。<!-- END REF-->また、*fontStyle* 引数で取得するフォントスタイルを指定することもできます。

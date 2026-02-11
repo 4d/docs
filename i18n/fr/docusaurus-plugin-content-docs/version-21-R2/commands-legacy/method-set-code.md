@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+|14|Modifié|
+|15|Modifié|
+|18 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->La commande **METHOD SET CODE** modifie le code de la ou des méthode(s) désignée(s) par le paramètre *chemin* avec le contenu passé dans le paramètre *code*.<!-- END REF--> 

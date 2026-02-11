@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8.1|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->SET PRINTABLE MARGIN コマンドを使用すると、[Print form](../commands/print-form.md)、[PRINT SELECTION](print-selection.md)または [PRINT RECORD](print-record.md) コマンドの使用時に、各種印刷マージンの値を設定することができます。<!-- END REF-->

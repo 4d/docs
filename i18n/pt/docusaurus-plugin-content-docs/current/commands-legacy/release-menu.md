@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RELEASE MENU.Summary-->O comando RELEASE MENU apaga da memória o menu cuja referência se passa em *menu*.<!-- END REF-->. A regra é a seguinte: a cada [Create menu](create-menu.md) deve corresponder um [RELEASE MENU](release-menu.md). 

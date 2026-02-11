@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM UNLOAD.Summary-->La commande **FORM UNLOAD** permet de décharger de la mémoire le formulaire courant désigné via la commande [FORM LOAD](../commands/form-load.md).<!-- END REF-->

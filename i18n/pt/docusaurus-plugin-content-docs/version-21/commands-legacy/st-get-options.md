@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->O comando **ST GET OPTIONS** obtém o valor atual de uma ou várias opções de funcionamento do campo ou da variável de texto com estilo designada pelo parâmetro *objeto*.<!-- END REF-->

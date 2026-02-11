@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->La commande **LISTBOX EXPAND** vous permet de provoquer le déploiement des lignes de rupture de l’objet list box affiché en mode hiérarchique désigné par les paramètres *objet* et *\**.<!-- END REF-->

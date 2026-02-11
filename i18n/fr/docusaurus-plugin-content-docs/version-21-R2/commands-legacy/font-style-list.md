@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->La commande **FONT STYLE LIST** retourne la liste des styles et la liste des noms complets pris en charge par la famille de police désignée par le paramètre *famillePolice*.<!-- END REF--> Cette commande vous permet de concevoir des interfaces manipulant les familles de polices et les styles de police, en particulier dans le contexte des zones *4D Write Pro*. 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB は、*document*の内容全体を*blob*にロードします。<!-- END REF-->開かれていない既存のドキュメントを渡さなければなりません。そうでなければエラーが生成されます。ドキュメントをユーザが選択できるようにするには、[Open document](open-document.md) およびプロセス変数*document* を使用します(例題を参照)。

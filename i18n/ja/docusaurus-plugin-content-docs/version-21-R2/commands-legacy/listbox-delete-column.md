@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->LISTBOX DELETE COLUMN コマンドは、引数*object*および *\** で指定されたリストボックスから1つ以上の列 (表示または非表示) を取り除きます。<!-- END REF-->

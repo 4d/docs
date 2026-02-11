@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ASSERT.Summary-->O comando **ASSERT** avalia a expressão *boolExpression* passa no parâmetro e, se retornar falso, para a execução do código com uma mensagem de erro .<!-- END REF-->O comando funciona em modo interpretado e compilado.

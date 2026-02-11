@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6|変更|
+|12|名称変更|
+|14|変更|
+|14|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->**OBJECT SET LIST BY NAME**コマンドは、*object*引数で指定されたオブジェクトあるいはオブジェクトグループの選択リストを、*list*に渡したリスト (デザインモードのリストエディタで定義) に設定あるいは置き換えます。<!-- END REF--> *list* 引数に名前を渡すリストは、リストエディターまたはデザインモードを使用して予め作成されている必要があります。

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->El comando **LISTBOX MOVE COLUMN** mueve por programación la columna designada por los parámetros *objeto* y *\** en el contexto del formulario en ejecución (modo Aplicación).<!-- END REF--> El formulario original, generado en modo Diseño, no se modifica.  

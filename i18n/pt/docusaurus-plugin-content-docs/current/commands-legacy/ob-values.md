@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R3|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB Values.Summary-->O comando **OB Values** retorna uma coleção de variantes contendo todas os valores de propriedade enumeráveis de *objeto*.<!-- END REF--> 

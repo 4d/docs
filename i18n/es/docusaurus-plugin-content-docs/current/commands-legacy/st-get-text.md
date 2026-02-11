@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Renombrar|
+|12.1|Modificado|
+|12|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.ST Get text.Summary-->El comando ST Get text devuelve el texto con estilo encontrado en el campo o variable de texto designado por el parámetro *objeto*.<!-- END REF--> 

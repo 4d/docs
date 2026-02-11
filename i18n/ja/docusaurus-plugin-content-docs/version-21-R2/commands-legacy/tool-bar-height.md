@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+|14 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Tool bar height.Summary-->Tool bar height コマンドはカレントの表示されているツールバーの高さを、ピクセル単位で返します。<!-- END REF-->コンテキストに応じて、4Dデザイ ンモードツールバーの場合と、[Open form window](open-form-window.md) コマンドを使用して作成されたカスタムのツールバーの場合があります(デザインモードのツールバーはカスタムのツールバーが表示されている場合には自動的 に非表示になります)。

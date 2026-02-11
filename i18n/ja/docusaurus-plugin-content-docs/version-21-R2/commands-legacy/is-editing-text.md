@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is editing text.Summary-->**Is editing text** は、ユーザーが入力フォームオブジェクトに値を入力中であれば**True** を、それ以外の場合には**False** を返します。<!-- END REF-->

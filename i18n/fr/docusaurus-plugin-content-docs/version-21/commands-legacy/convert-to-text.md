@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Modifié|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Convert to text.Summary-->La commande **Convert to text** convertit le texte contenu dans le paramètre *blob* et le retourne en texte exprimé dans le jeu de caractères de 4D.<!-- END REF--> 4D utilise le jeu de caractères UTF-16 par défaut. 

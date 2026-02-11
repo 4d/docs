@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->O comando Get menu item modifiers devolve os modificadores adicionais associados aos atalhos de teclado padrão da linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF-->

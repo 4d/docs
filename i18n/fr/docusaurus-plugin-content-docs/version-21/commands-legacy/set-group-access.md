@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->La commande **SET GROUP ACCESS** modifie l'adhésion du compte utilisateur pour la session courante.<!-- END REF--> Elle redéfinit les groupes précédents et définit les nouvelles adhésions dans les *groupes* listés. 

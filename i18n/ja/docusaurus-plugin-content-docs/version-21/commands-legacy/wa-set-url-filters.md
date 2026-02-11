@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->WA SET URL FILTERS コマンドは、*\** と *object* 引数で指定したWebエリアで、1 つ以上のフィルタを設定するために使用します。<!-- END REF--> 

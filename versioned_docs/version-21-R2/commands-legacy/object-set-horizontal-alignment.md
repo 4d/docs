@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.8.1|Created|
+|12|Renamed|
+|13|Renamed|
+|15 R4|Modified|
+|20|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->The **OBJECT SET HORIZONTAL ALIGNMENT** command allows you to set the type of horizontal alignment applied to the object(s) designated by the *object* and *\** parameters.<!-- END REF-->

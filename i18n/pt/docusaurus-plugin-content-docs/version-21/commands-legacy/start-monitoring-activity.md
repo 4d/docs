@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R3|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.START MONITORING ACTIVITY.Summary-->**O comando START MONITORING ACTIVITY**grava operações que excedem uma *duração* especifica na memória.<!-- END REF--> Pode ser chamada e executada em 4D remote, 4D Server e aplicações standalone 4D (se *fonte* não for uma atividade de rede). Atividade registradas podem ser recuperadas usando o comando [Monitored activity](monitored-activity.md). Chame [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) quando quiser parar a atividade de monitoração.

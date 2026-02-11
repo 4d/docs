@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.INSERT IN ARRAY.Summary-->O comando INSERT IN ARRAY insere um ou mais elementos no *array*.<!-- END REF--> Os novos elementos são inseridos antes do elemento especificado por *onde*, e são inicializados no valor vacio do tipo de array. Todos os elementos além de *onde* são movidos consequentemente no array por um valor de um ou pelo valor especificado em *quantos*.

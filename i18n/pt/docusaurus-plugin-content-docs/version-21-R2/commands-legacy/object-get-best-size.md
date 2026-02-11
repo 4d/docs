@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|12|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->O comando **OBJECT GET BEST SIZE** devolve nos parâmetros *largOpt* e *altOpt*, a largo e alto “ótimo” do objeto de formulário designado pelos parâmetros *\** e *objeto*.<!-- END REF--> Estes valores se expressan em píxeles. Este comando é particularmente útil para a visualização ou impressão de relatórios complexos, associados ao comando [OBJECT MOVE](object-move.md).

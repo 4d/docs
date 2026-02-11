@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->OLD RELATED ONEは、リレーションを実行する際に*aField*の古い値を使用することを除き、[RELATE ONE](relate-one.md "RELATE ONE")と同じ処理を行います。<!-- END REF-->

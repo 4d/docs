@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Renomear|
+|12|Modificado|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->O comando OBJECT SET SCROLL POSITION permite deslocar o conteúdo de vários tipos de objetos: linhas de um subformulário, de um formulário listado mostrado utilizando os comandos [MODIFY SELECTION](modify-selection.md), [DISPLAY SELECTION](display-selection.md) ou de uma lista hierárquica, linhas e colunas de um list box ou inclusive os píxels de uma imagem.<!-- END REF-->  

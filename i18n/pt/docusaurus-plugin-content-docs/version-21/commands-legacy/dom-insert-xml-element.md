@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Insert XML element.Summary-->O comando DOM Insert XML element se utiliza para inserir um novo elemento XML entre os filhos do elemento XML cuja referência for passada no parâmetro refElementTarget.<!-- END REF-->  

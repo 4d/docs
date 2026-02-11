@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->The **LISTBOX GET PRINT INFORMATION** command returns the current information relative to the printing of the list box object designated by the *object* and *\** parameters.<!-- END REF--> This command can be used to control the printing of the list box contents.

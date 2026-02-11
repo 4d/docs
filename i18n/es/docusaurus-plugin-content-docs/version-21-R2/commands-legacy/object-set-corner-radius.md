@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14 R4|Creado por|
+|19 R7|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->El comando **OBJECT SET CORNER RADIUS** modifica el *radio* de las esquinas de los objetos pasados en el parámetro *objeto*.<!-- END REF--> El nuevo radio sólo se define para el proceso y no se guarda en el formulario. 

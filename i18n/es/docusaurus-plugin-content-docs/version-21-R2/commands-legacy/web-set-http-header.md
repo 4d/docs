@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.8|Modificado|
+|13|Renombrar|
+|14 R3|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WEB SET HTTP HEADER.Summary-->El comando **WEB SET HTTP HEADER** permite definir los campos del encabezado HTTP de la respuesta enviada al navegador web por 4D.<!-- END REF--> Sólo tiene efecto en un proceso web.  

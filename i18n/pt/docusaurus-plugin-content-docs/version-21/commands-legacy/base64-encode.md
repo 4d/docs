@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R4|Modificado|
+|12|Renomear|
+|12|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BASE64 ENCODE.Summary-->O comando **BASE64 ENCODE** codifica o texto ou BLOB passado no parâmetro em *aDecodificar* em formato base64 ou Base64URL.<!-- END REF-->

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R3|変更|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Current method name.Summary-->**Current method name**コマンドは、このコマンドを呼び出したメソッド名を返します。<!-- END REF-->このコマンドは汎用メソッドをデバッグするときに有効です

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+|12.1|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->The SQL EXPORT DATABASE command exports in SQL format all the records of all the tables in the database.<!-- END REF--> In SQL, this global export operation is called "Dump".

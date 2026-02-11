@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Quando é chamado o método base On Server Open Connection? 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->O **On Server Open Connection database method** é chamado uma vez no equipo servidor cada vez que um equipo remoto 4D inicia um processo de conexão.<!-- END REF--> O **On Server Open Connection database method** NÃO é invocado por outro entorno 4D diferente de 4D Server.

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Is record loaded.Summary-->O comando **Is record loaded** devolve [True](true.md "True") se o registro atual de *tabela* é carregado no processo atual.<!-- END REF-->  

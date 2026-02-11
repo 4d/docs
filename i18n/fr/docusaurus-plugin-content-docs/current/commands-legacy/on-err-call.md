@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R8|Modifié|
+|15 R5|Modifié|
+|12|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ON ERR CALL.Summary-->**ON ERR CALL** installe la méthode projet dont le nom est passé dans *méthodErreur* comme méthode d'interception des erreurs pour le contexte d'exécution défini dans le projet courant.<!-- END REF--> Cette méthode est aussi appelée méthode de gestion des erreurs. 

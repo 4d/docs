@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R5|初出|
+|19 R8|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->**LISTBOX SET AUTO ROW HEIGHT** コマンドは、*object* 引数および *\** 引数を使用して指定したリストボックスオブジェクトの行の高さの最小値あるいは最大値を、*value* 引数で設定します。<!-- END REF-->

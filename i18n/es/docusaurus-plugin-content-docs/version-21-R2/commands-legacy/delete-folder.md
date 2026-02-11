@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.7|Creado por|
+|15 R5|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->El comando **DELETE FOLDER**borra la carpeta cuyo nombre o ruta completa se pasa en *carpeta*.<!-- END REF--> 

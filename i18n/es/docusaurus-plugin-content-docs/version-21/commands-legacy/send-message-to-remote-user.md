@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|17 R4|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->El comando **SEND MESSAGE TO REMOTE USER** envía un mensaje a todos los usuarios remotos o a un usuario remoto específico.<!-- END REF--> 

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Summary-->**OBJECT SET RESIZING OPTIONS**コマンドは*object*と*\** で指定したオブジェクトのリサイズオプションをカレントプロセス内で動的に変更します。<!-- END REF-->これらのオプションを使用して、フォームウィンドウのサイズが変更されたときにオブジェクトをどのように表示するかを指定できます。

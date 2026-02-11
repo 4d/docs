@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->El comando **METHOD RESOLVE PATH** analiza la ruta de acceso interna pasada en el parámetro *ruta* y devuelve sus diferentes componentes en los parámetros *tipoMetodo*, *ptrTabla*, *nomObjeto* y *nomObjetoForm*.<!-- END REF-->  

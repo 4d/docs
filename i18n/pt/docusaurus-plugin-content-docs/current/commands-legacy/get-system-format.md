@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET SYSTEM FORMAT.Summary-->O comando GET SYSTEM FORMAT devolve o valor atual de vários parâmetros regionais definidos no sistema operativo.<!-- END REF--> Este comando pode utilizar-se para criar formatos personalizados “automáticos” baseados nas preferências do sistema. 

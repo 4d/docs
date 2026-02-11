@@ -14,6 +14,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## 
 
 <!--REF #_command_.On Drop database method.Summary-->El Método base On Drop está disponible en aplicaciones 4D locales o remotas.<!-- END REF-->

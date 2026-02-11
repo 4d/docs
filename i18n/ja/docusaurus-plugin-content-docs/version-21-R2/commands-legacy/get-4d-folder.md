@@ -18,6 +18,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+|13|変更|
+|16|変更|
+|17 R2|変更|
+|20|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get 4D folder.Summary-->**Get 4D folder**コマンドは、カレントアプリケーションのアクティブな4Dフォルダー、または*folder* 引数と*options* 引数で指定された4D環境フォルダーへのパス名を返します。<!-- END REF-->このコマンドを使用して、4Dアプリケーションで使用されるフォルダーの実際のパス名を取得できます。このコマンドを使用すれば、記述したコードがローカライズされたどのシステムのプラットフォームでも動作することが保障されます。

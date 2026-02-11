@@ -21,6 +21,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|17 R6|変更|
+|18 R6|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->**SET LIST ITEM PROPERTIES** コマンドは、引数*list*に渡された参照番号またはオブジェクト名のリスト内で、*itemRef*によって指定された項目を変更します。<!-- END REF-->

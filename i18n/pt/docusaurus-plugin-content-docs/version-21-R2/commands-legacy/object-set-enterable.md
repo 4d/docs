@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|12|Renomear|
+|19 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->O comando **OBJECT SET ENTERABLE** torna editáveis ou não editáveis os objetos de formulário especificados por *objeto* e podem estabelecer o atributo *focável* 

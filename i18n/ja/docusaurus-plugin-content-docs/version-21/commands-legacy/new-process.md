@@ -29,6 +29,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.New process.Summary-->New process コマンドは、(同じマシン上で) 新しいプロセスを開始し、そのプロセス参照番号を返します。<!-- END REF-->

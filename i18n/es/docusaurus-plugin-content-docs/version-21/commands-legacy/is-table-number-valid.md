@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is table number valid.Summary-->El comando Is table number valid devuelve True si la tabla cuyo número se pasa en el parámetro *numTabla* existe en la base, de lo contrario False.<!-- END REF--> Recuerde que el comando devuelve False si la tabla está en la Papelera del Explorador. 

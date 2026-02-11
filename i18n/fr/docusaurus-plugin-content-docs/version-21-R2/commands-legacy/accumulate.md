@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** désigne les champ(s) ou variable(s) à cumuler dans un état créé à l'aide de la commande [PRINT SELECTION](print-selection.md).<!-- END REF-->

@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Renamed|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE changes the currently displayed form page to the last form page.<!-- END REF--> If a form is not being displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if the last form page is already displayed, FORM LAST PAGE does nothing.

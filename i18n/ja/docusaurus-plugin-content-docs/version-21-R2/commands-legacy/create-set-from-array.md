@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6.7|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->CREATE SET FROM ARRAY コマンドは、セット*setName*<!-- END REF-->を下記の情報から作成します:

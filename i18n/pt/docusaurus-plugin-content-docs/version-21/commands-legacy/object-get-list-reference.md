@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->O comando **OBJECT Get list reference** devolve o número de referência (*RefList*) da lista hierárquica associada ao objeto ou grupo de objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  

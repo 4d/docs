@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->La commande **WA SET URL FILTERS** permet de mettre en place un ou plusieurs filtre(s) pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+|15 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->DELETE FOLDER コマンドは*folder* に渡したフルパスまたは名前を持つフォルダーを削除します。<!-- END REF-->パラメーターを省略した場合のデフォルトでは、安全のため **DELETE FOLDER** は空のフォルダーのみ削除します。空でないフォルダーを削除するには *deleteOption* を使います。*deleteOption* には "*System Documents*" テーマの次の定数を受け渡すことができます:

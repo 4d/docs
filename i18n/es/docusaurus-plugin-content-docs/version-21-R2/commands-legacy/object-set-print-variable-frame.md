@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->El comando **OBJECT SET PRINT VARIABLE FRAME** modifica la propiedad de marco de impresión variable del objeto o de los objetos designados por los parámetros *objeto* y *\**.<!-- END REF-->

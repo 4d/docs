@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.8|Criado por|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OPEN DATA FILE.Summary-->O comando **OPEN DATA FILE** permite alterar os dados do arquivo aberto pela aplicação 4D on-the-fly.<!-- END REF-->

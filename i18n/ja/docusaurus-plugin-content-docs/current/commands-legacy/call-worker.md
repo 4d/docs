@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R6|変更|
+|16 R4|変更|
+|15 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CALL WORKER.Summary-->**CALL WORKER** コマンドは、*process* に受け渡した名称または ID のワーカープロセスを作成、または呼び出して、任意の *param* パラメーターを使って *formula* 引数で指定されたコードの実行をそのコンテキスト内において要求します。<!-- END REF-->コマンドは *params* をカプセル化し、メッセージの形でワーカーが持つメッセージボックスに受け渡します。ワーカープロセスについての詳細は*ワーカーについて* を参照ください。

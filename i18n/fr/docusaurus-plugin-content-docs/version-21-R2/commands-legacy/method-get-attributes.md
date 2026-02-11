@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15|Créé|
+|15 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->La commande **METHOD GET ATTRIBUTES** retourne, dans le paramètre *attributs*, la valeur courante de tous les attributs de la ou des méthode(s) spécifiée(s) dans le paramètre *chemin*.<!-- END REF-->

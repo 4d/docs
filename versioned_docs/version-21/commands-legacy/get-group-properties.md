@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES returns the properties of the group whose unique group ID number you pass in *groupID*.<!-- END REF--> You must pass a valid group ID number returned by the command [GET GROUP LIST](get-group-list.md). 

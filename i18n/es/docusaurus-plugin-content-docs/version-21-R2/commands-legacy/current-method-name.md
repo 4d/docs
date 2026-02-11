@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.7|Creado por|
+|18 R3|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Current method name.Summary-->El comando Current method name devuelve el nombre del método en el cual se llama.<!-- END REF--> Este comando es útil para depuración de métodos genéricos.

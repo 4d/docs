@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|名称変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->**OBJECT GET BEST SIZE** コマンドは、引数 *\** と *object*で指定されたフォームオブジェクトの“最適な”幅と高さを、引数*bestWidth* と *bestHeight*に返します。<!-- END REF-->これらの値はピクセルで表わされます。このコマンドは複雑なレポートの表示や印刷に役立ち、[OBJECT MOVE](object-move.md) コマンドとともに使用します。  

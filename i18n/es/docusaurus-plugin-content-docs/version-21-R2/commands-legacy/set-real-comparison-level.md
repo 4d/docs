@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->El comando **SET REAL COMPARISON LEVEL** define el valor epsilon utilizado por 4D para hacer comparaciones de igualdad de valores y expresiones de tipo real.<!-- END REF-->

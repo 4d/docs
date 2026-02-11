@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LOG FILE TO JSON.Summary-->The **LOG FILE TO JSON** command saves the current log file, or any specified log file, in JSON format.<!-- END REF-->

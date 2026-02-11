@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R8|Modified|
+|16 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->The **LISTBOX Get auto row height** command returns the current minimum or maximum row height value set for the list box object designated using the *object* and *\** parameters.<!-- END REF-->

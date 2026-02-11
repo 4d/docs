@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->**OBJECT Get auto spellcheck**コマンドは*object*と*\** 引数で指定したオブジェクトのカレントプロセスの自動スペルチェックオプションに関する設定値を返します。<!-- END REF-->

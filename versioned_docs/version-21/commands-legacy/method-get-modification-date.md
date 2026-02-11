@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->The **METHOD GET MODIFICATION DATE** command returns, in the *modDate* and *modTime* parameters, the dates and times of the last modification of the method(s) designated by the *path* parameter.<!-- END REF-->

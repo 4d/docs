@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Count list items.Summary-->**Count list items** コマンドは、*list*に渡した参照番号またはオブジェクト名のリスト上で現在表示中または項目総数を返します。<!-- END REF-->

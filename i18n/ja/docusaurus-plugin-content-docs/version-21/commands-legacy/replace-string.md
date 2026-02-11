@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R3|変更|
+|11 SQL Release 1|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Replace string.Summary-->Replace stringは、*source*に存在するすべての*oldString*を*newString*で*howMany*回数だけ置き換えます。<!-- END REF-->

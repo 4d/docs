@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->BOOLEAN ARRAY FROM SETコマンドは、テーブル内の各レコードが指定されたセットに含まれるか含まれないかを示すブール配列を作成します。<!-- END REF-->

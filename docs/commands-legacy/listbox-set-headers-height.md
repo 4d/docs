@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->The **LISTBOX SET HEADERS HEIGHT** command modifies by programming the height of the header row in the list box designated by the *object* and *\** parameters.<!-- END REF-->

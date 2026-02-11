@@ -15,6 +15,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Description 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->El **Método base On Host Database Event** permite a los componentes 4D ejecutar código cuando se abre y cierra la base local.<!-- END REF-->  

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 4|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get menu item parameter.Summary-->The **Get menu item parameter** command returns the custom character string associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This string must have been set beforehand using the [SET MENU ITEM PARAMETER](set-menu-item-parameter.md) command.

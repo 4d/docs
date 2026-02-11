@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+|12.1|Modificado|
+|14|Renombrar|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->El comando ST GET ATTRIBUTES se utiliza para recuperar el valor actual de un atributo de estilo en una selección de texto del objeto de formulario designado por *objeto*.<!-- END REF-->

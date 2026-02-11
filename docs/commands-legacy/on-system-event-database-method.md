@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.On System Event database method.Summary-->The **On System Event database method** is called each time a system event occurs.<!-- END REF--> This concerns all 4D environments: 4D (all modes) and 4D Server, as well as 4D applications that are compiled and merged with 4D Volume Desktop.

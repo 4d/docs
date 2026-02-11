@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.8.1|Creado por|
+|19 R8|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Method called on error.Summary-->El comando **Method called on error** devuelve el nombre del método instalado por el comando [ON ERR CALL](on-err-call.md) para el proceso actual o el *alcance* definido.<!-- END REF-->

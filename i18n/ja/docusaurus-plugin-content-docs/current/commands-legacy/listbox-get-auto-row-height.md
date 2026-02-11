@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R8|変更|
+|16 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->**LISTBOX Get auto row height** コマンドは、*object* 引数および *\** 引数を使用して指定したリストボックスオブジェクトの行の高さのカレンとの最小値あるいは最大値を返します。<!-- END REF-->

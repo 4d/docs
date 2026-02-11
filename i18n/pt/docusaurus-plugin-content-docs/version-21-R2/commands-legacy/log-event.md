@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 2|Modificado|
+|13|Modificado|
+|17 R6|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LOG EVENT.Summary-->O comando **LOG EVENT** permite configurar um sistema personalizado de registro de eventos internos que ocorrem durante o uso de sua aplicação.<!-- END REF-->

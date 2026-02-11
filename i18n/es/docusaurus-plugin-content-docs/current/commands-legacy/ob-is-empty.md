@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15|Modificado|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OB Is empty.Summary-->El comando **OB Is empty** devuelve **True** si *objeto* no está definido o está vacío, y **False** si *objeto* está definido (inicializado) y contiene al menos una propiedad.<!-- END REF-->debe haber sido creado con el comando *C\_OBJECT* o designar un campo objeto 4D.

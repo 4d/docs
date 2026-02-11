@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8.1|初出|
+|12|名称変更|
+|13|名称変更|
+|15 R4|変更|
+|20|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->**OBJECT SET HORIZONTAL ALIGNMENT**コマンドは、引数*object* および *\** で指定したオブジェクトを整列します。<!-- END REF-->

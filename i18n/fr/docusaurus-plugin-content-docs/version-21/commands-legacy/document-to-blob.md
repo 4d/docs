@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOCUMENT TO BLOB.Summary-->**DOCUMENT TO BLOB** charge le contenu de *document* dans *blob*.<!-- END REF--> Vous devez passer un nom de document valide, c'est-à-dire qui désigne un document existant qui n'est pas déjà ouvert, sinon une erreur sera générée. Si vous voulez que l'utilisateur choisisse le document, utilisez la routine [Open document](open-document.md) et la variable système Document (cf. l'exemple ci-dessous). 

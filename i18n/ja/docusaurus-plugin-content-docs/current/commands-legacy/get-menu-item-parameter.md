@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 4|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get menu item parameter.Summary-->Get menu item parameter コマンドは、*menu*と*menuItem*引数で指定されるメニュー項目に割り当てられたカスタム文字列を返します。<!-- END REF-->この文字列は事前に[SET MENU ITEM PARAMETER](set-menu-item-parameter.md "SET MENU ITEM PARAMETER")コマンドで指定されていなければなりません。

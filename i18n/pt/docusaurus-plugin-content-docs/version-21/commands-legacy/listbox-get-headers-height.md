@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX Get headers height.Summary-->O comando **LISTBOX Get headers height** devolve a altura da linha horizontais de cabeçalho do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

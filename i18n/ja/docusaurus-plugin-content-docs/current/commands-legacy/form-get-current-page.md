@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|変更|
+|12|名称変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM Get current page.Summary-->**FORM Get current page**コマンドは、現在表示されているフォームページ、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされたカレントフォームの番号を返します。<!-- END REF-->

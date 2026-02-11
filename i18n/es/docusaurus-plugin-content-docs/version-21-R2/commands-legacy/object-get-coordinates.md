@@ -20,6 +20,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.7|Modificado|
+|12|Renombrar|
+|14 R5|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->El comando **OBJECT GET COORDINATES**devuelve las coordenadas *izquierda*, *superior*, *derecha* e *inferior* (en puntos) en las variables o campos de los objetos del formulario actual definido por los parámetros *\** y *objeto*.<!-- END REF-->

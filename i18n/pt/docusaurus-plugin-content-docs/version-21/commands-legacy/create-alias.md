@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->O comando CREATE ALIAS cria um alias (chamado “atalho” em Windows) do arquivo ou pasta objetivo passado em *rotaObjetivo*.<!-- END REF--> O nome e a localização são definidos pelo parâmetro *rotaAlias*.  

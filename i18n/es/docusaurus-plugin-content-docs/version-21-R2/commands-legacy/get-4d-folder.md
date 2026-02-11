@@ -18,6 +18,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 2|Modificado|
+|13|Modificado|
+|16|Modificado|
+|17 R2|Modificado|
+|20|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get 4D folder.Summary-->El comando **Get 4D folder** devuelve la ruta de acceso a la carpeta 4D activa de la aplicación actual o de la carpeta del entorno 4D especificada por los parámetros *opciones* y *carpeta*, si se pasa.<!-- END REF--> Este comando le permite obtener la ruta de acceso actual a las carpetas utilizadas por la aplicación 4D. Utilizando este comando, asegura que su código funcionará correctamente en todas las plataformas que se ejecuten en un sistema localizado.

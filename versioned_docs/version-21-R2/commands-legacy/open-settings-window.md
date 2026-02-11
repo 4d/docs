@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|12|Modified|
+|13|Modified|
+|13|Renamed|
+|16|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->The **OPEN SETTINGS WINDOW** command opens the Preferences dialog box of 4D or the Database Settings of the current 4D application and displays the parameters or the page corresponding to the key passed in *selector*.<!-- END REF-->

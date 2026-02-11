@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->The **METHOD SET COMMENTS** command replaces the documentation of the method(s) designated by the *path* parameter by those specified in the *comments* parameter.<!-- END REF-->

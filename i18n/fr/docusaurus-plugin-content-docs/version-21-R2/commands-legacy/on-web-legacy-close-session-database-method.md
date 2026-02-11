@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+|15 R4|Renommé|
+|18 R6|Renommé|
+
+</details>
+</div>
+
 ## Note de compatibilité 
 
 <!--REF #_command_.On Web Legacy Close Session database method.Summary-->Cette méthode base peut être utilisée uniquement avec d'**anciennes sessions Web**, disponibles dans les bases de données converties à partir de versions antérieures à 4D v18 R6\.<!-- END REF--> Elle n'est jamais appelée lorsque le mode **sessions Web extensibles** est activé (recommandé sous 4D v18 R6 et versions plus récentes). Pour plus d'informations, reportez-vous à la section *Gestion des sessions Web*.

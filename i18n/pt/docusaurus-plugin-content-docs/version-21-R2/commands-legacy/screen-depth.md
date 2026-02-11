@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->O comando SCREEN DEPTH devolve nos parâmetros *profundidade* e *cor* a informação sobre o monitor.<!-- END REF--> 

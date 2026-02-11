@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+|12|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->SET FILE TO PASTEBOARD コマンドは*filePath* 引数に渡した完全パス名を追加します。<!-- END REF-->このコマンドは例えば、4Dオブジェクトをデスクトップ上のファイルにドラッグ＆ドロップさせるインタフェースのセットアップに使用できます。

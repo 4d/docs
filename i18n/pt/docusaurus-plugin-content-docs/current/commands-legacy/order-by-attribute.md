@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->O comando **ORDER BY ATTRIBUTE** ordena (reordena) os registros da seleção atual de *tabela* para o processo atual baseado no conteúdo de *rotaAtrib* de *campoObjeto*.<!-- END REF--> Depois de terminada a ordenação, o novo primeiro registro da seleçãol se converte no registro atual. 

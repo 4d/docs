@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|名称変更|
+|15 R5|変更|
+|20|変更|
+|20 R4|変更|
+|20 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get format.Summary-->**OBJECT Get format** コマンドは、*object*引数で指定されたオブジェクトに適用された現在の表示フォーマットを返します。<!-- END REF-->

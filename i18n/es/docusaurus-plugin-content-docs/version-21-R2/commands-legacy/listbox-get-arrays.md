@@ -24,6 +24,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 2|Modificado|
+|12|Renombrar|
+|13|Modificado|
+|15 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Summary-->El comando **LISTBOX GET ARRAYS** devuelve un conjunto de arrays sincronizados ofreciendo información sobre cada columna (visible o invisible) del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->

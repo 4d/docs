@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+|14 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->O comando MAXIMIZE WINDOW provoca a expansão da janela cujo número de referência se passa em *janela*.<!-- END REF--> Se for omitido este parâmetro, o efeito é o mesmo mas é aplicado a todas as janelas da aplicação (Windows) ou a janela do primeiro plano do processo atual (macOS).  

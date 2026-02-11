@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET TABLE PROPERTIES.Summary-->La commande **GET TABLE PROPERTIES** retourne les propriétés de la table désignée par *ptrTable* ou *numTable*.<!-- END REF--> Vous pouvez passer dans le premier paramètre soit un pointeur vers la table, soit le numéro de la table. 

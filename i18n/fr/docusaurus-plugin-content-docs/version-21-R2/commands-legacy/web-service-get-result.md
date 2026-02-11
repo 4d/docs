@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|13|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->La commande **WEB SERVICE GET RESULT** permet de récupérer une valeur renvoyée par le Web Service à l’issue du traitement effectué.<!-- END REF-->Cette commande doit être utilisée uniquement après la commande [WEB SERVICE CALL](web-service-call.md).

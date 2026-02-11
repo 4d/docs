@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16|Modificado|
+|13|Modificado|
+|11 SQL Release 3|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Average.Summary-->**Average** retorna a média aritmética de *series*.<!-- END REF--> Se *series* for um campo indexado, o índice é utilizado para calcular a média. 

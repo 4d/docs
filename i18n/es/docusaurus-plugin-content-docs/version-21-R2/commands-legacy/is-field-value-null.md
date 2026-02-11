@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is field value Null.Summary-->El comando Is field value Nulldevuelve **True** si el campo designado por el parámetro *unCampo* contiene el valor NULL y de lo contrario **False**.<!-- END REF-->

@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R8|Modifié|
+|13|Modifié|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.System folder.Summary-->La fonction **System folder** retourne le chemin d'accès du dossier Système Windows ou macOS actif, ou le chemin d’accès d’un dossier particulier du système d'exploitation.<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Menu selected.Summary-->Menu selected é utilizado só quando são mostrados formulários.<!-- END REF--> Esta função detecta o comando de menu escolhido no menu no caso de um submenu hierárquico, retorna a referência do submenu. 

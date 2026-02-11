@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Renombrar|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->El comando **WEB GET VARIABLES** llena los arrays texto *arrayNoms* y *arrayValores* con los nombres y los valores de las variables contenidas en el formulario web “enviado” al servidor web.<!-- END REF--> 

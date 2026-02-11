@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get group access.Summary-->O comando **Get group access** devolve às filiações da conta de usuário 4D para a sessão atual.<!-- END REF--> Se o usuário não pertencer a nenhum grupo na sessão, se devolver uma coleção vazia.

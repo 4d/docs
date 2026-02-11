@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LOG FILE TO JSON.Summary-->O comando **LOG FILE TO JSON** salva em formato JSON o arquivo de histórico atual ou todo arquivo de histórico especificado.<!-- END REF-->

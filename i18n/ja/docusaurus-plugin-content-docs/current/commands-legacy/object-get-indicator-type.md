@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->**OBJECT Get indicator type**コマンドは、引数 *object* と *\** で指定したサーモメーターに割り当てられた、カレントのインジケーターの型を返します。<!-- END REF-->

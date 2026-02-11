@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->La commande **ORDER BY ATTRIBUTE** trie (réorganise) les enregistrements de la sélection courante de *laTable* pour le process courant, basé sur les contenus des *cheminAttribut* des *champObjet*.<!-- END REF--> Après réorganisation des enregistrements, le nouveau premier enregistrement de la sélection courante devient l'enregistrement courant.

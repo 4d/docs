@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->O comando **GET QUERY DESTINATION** devolve o destino atual dos resultados das pesquisas para o processo em curso.<!-- END REF--> Por defeito, os resultados das pesquisas modificam a seleção atual, mas pode modificar este funcionamento com a ajuda do comando [SET QUERY DESTINATION](set-query-destination.md).

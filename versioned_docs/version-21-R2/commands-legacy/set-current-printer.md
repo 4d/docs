@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Modified|
+|15 R5|Modified|
+|20|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->The **SET CURRENT PRINTER** command designates the printer to be used for printing with the current 4D application.<!-- END REF-->

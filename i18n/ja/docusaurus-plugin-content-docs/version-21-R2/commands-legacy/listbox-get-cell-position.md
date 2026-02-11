@@ -21,6 +21,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+|12|名称変更|
+|16 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->**LISTBOX GET CELL POSITION** コマンドは、*object*および *\** で指定されたリストボックスの最後にクリックされた位置に対応する位置、あるいはキーボードアクションで選択されたセルの位置、あるいはマウスの水平・垂直座標を*column* と*row* 引数に返します。<!-- END REF-->

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LONGINT TO BLOB.Summary-->The LONGINT TO BLOB command writes the 4-byte Long Integer value *integer* into the BLOB *blob*.<!-- END REF-->

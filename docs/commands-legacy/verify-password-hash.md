@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Verify password hash.Summary-->The **Verify password hash** function verifies that the given *hash* matches the given *password*.<!-- END REF-->

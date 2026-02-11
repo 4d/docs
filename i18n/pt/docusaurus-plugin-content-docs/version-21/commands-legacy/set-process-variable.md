@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->O comando SET PROCESS VARIABLE escreve as variáveis processo *dstVar* (*dstVar2*, etc.) do processo de destino cujo número se passa em *processo* utilizando os valores passados em *expr1* (*expr2*, etc.).<!-- END REF-->  

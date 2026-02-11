@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->El comando **OBJECT GET EVENTS** permite obtener la configuración actual de los eventos formulario del formulario, del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF--> 

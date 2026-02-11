@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Cache info.Summary-->El comando **Cache info** devuelve un objeto que contiene la información detallada sobre el contenido actual de la caché (memoria utilizada, tablas e índices cargados, etc.)<!-- END REF-->.

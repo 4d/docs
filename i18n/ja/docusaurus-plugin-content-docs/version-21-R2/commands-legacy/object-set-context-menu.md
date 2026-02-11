@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->**OBJECT SET CONTEXT MENU**コマンドは、引数 *object* と *\** で指定したオブジェクトのデフォルトでのコンテキストメニューの関連付けを、カレントプロセスにおいて有効化または無効化します。<!-- END REF-->

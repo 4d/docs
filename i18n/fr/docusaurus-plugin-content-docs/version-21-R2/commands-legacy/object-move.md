@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6.7|Modifié|
+|12|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->La commande **OBJECT MOVE** permet de déplacer le ou les objet(s) du formulaire courant, défini(s) par les paramètres *\** et *objet*, de *dépH* pixels horizontalement et de *dépV* pixels verticalement.<!-- END REF--> Il est également possible (optionnellement) de redimensionner le ou les objet(s) de *redimH* pixels horizontalement et de *redimV* pixels verticalement. 

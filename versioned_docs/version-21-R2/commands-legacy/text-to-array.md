@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->The **TEXT TO ARRAY** command transforms a text variable into a text array.<!-- END REF--> The original varText text (styled or not) is divided and each part becomes an element of the *arrText* array that is returned by the command. This command can be used for example to fill pages or columns with text of a set size.

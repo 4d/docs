@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Instance of.Summary-->La commande **OB Instance of** retourne vrai si *objet* appartient à *classe* ou à l'une de ses classes enfant.<!-- END REF--> Sinon, elle retourne faux.

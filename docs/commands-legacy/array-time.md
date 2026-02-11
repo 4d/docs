@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY TIME.Summary-->The **ARRAY TIME** command creates and/or resizes an array of Time type elements in memory.<!-- END REF-->In 4D, times can be processed as numeric values. In 4D versions prior to v14, you had to combine a longint array with a display format in order to manage an array of times. 

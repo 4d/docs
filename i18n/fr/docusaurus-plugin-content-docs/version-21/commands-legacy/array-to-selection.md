@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY TO SELECTION.Summary-->La commande **ARRAY TO SELECTION** copie un ou plusieurs tableau(x) vers une sélection d'enregistrements.<!-- END REF--> Tous les champs listés doivent appartenir à la même table.

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+|14|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->**SPELL GET DICTIONARY LIST**コマンドはマシンにインストールされたハンスペル辞書ファイルのID、ファイル名、言語名をそれぞれ*langID*、*langFiles*そして*langNames*配列に返します。<!-- END REF-->

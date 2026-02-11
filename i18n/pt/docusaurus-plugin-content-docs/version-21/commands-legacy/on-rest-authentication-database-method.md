@@ -19,6 +19,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Descrição 
 
 <!--REF #_command_.On REST Authentication database method.Summary-->**On REST Authentication database method** está obsoleto em projetos desde 4D 20 R6.<!-- END REF-->

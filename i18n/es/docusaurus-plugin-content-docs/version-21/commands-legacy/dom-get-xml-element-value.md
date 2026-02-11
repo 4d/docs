@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Summary-->El comando **DOM GET XML ELEMENT VALUE** devuelve en el parámetro *valorElement*, el valor del elemento XML designado por *refElement*.<!-- END REF--> 4D intentará convertir el valor obtenido en el tipo de variable pasada como parámetro. Si el tipo de variable no está definido, el valor es devuelto en el tipo texto por defecto. 

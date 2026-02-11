@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->El comando CLEAR PASTEBOARD borra el contenido del portapapeles.<!-- END REF--> Si el portapapeles contiene múltiples instancias de los mismos datos, todas las instancias se borran. Después de llamar a CLEAR PASTEBOARD, el portapapeles queda vacío.

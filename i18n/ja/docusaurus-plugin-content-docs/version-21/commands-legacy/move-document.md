@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.MOVE DOCUMENT.Summary-->MOVE DOCUMENTコマンドを使用して、ドキュメントを移動、ドキュメント名を変更します。<!-- END REF-->に既存ドキュメントへの完全なパス名、*dstPathname*に新しい名前と位置を指定します。

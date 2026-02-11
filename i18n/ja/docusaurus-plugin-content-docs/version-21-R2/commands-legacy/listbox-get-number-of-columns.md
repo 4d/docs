@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX Get number of columns.Summary-->LISTBOX Get number of columns コマンドは、*object*引数および *\** で指定されたリストボックスに存在する列（表示または非表示）の合計数を返します。<!-- END REF-->

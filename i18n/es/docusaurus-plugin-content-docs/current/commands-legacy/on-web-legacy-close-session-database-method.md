@@ -14,6 +14,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Nota de compatibilidad 
 
 <!--REF #_command_.On Web Legacy Close Session database method.Summary-->Este método base de datos sólo puede utilizarse con **sesiones web heredadas**, disponibles en bases de datos convertidas a partir de versiones anteriores a la 4D v18 R6\.<!-- END REF--> Nunca se llama cuando se habilita el modo de **sesiones web escalables** (recomendado en 4D v18 R6 y superiores). Para obtener más información, consulte la sección *Gestión de las sesiones web (heredado)*.

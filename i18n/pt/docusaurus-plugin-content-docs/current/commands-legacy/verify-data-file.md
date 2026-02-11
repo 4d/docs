@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R3|Modificado|
+|11 SQL Release 3|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->O comando VERIFY DATA FILE\[#descv\] realiza uma verificação estrutural dos objetos contidos no arquivo de dados 4D criado por *endereçoEstrutura* e *endereçoDados*.<!-- END REF-->\[#descv\]

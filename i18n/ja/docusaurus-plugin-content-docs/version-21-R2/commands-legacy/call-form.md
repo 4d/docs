@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R5|初出|
+|16 R4|変更|
+|19 R6|変更|
+
+</details>
+</div>
+
 ## 説明
 
 <!--REF #_command_.CALL FORM.Summary-->**CALL FORM** コマンドは、*window* に指定したウィンドウに表示されているフォームのコンテキストにおいて、*formula* 引数のフォーミュラで指定された4D コードを、任意の *param* パラメーターを使って実行します。<!-- END REF-->どのプロセスがそのフォームを持っているかは、問題になりません。
