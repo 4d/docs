@@ -5,7 +5,7 @@ slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ( * ) : Integer<!-- END REF-->
+<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ({ * }) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
 <div class="no-index">
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Frontmost window.Summary-->The Frontmost window command returns the window reference number of the frontmost window.<!-- END REF-->
+<!--REF #_command_.Frontmost window.Summary-->The **Frontmost window** command returns the window reference number of the frontmost window.<!-- END REF-->
 
 ## See also 
 
