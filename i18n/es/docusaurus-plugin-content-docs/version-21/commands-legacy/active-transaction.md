@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R4|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Active transaction.Summary-->El comando **Active transaction** devuelve **True** si el proceso actual está en transacción y si esta transacción no se suspende.<!-- END REF--> Devuelve **False** si no hay una transacción en curso, o si se suspende la transacción actual. Una transacción puede ser suspendida utilizando el comando *SUSPEND TRANSACTION*. 

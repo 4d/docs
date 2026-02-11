@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->The **GET PASTEBOARD DATA** command returns, in the BLOB field or in the *data* variable, the data present in the pasteboard and whose type you pass in *dataType*.<!-- END REF--> (If the pasteboard contains text copied within 4D, then the BLOB’s character set is likely to be UTF-16.)

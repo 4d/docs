@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15|Criado por|
+|15 R5|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->O novo comando **METHOD SET ATTRIBUTES** permite que você defina os valores dos *atributos* para os métodos especificados no parâmetro *caminho*.<!-- END REF-->

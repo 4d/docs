@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET MENU ITEM MARK.Summary-->El comando SET MENU ITEM MARK cambia la marca del elemento de menú cuyo número o referencia de menú se pasa en *menu* y cuyo número de línea se pasa en *menuItem* al primer carácter de la cadena pasada en *marca*.<!-- END REF--> Puede pasar -1 en *menuItem* para designar la última línea añadida al menú.

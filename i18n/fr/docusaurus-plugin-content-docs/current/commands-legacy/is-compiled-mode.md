@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is compiled mode.Summary-->La fonction **Is compiled mode** teste si la base tourne en mode compilé (Vrai) ou en mode interprété (Faux).<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Test path name.Summary-->The **Test path name** function checks if a document or folder whose name or pathname you pass in *pathname* is present on the disk.<!-- END REF--> You can pass either a relative or absolute pathname, expressed in the syntax of the current system.

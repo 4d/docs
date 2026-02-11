@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+|13|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->La commande **WEB GET HTTP HEADER** retourne, soit sous forme de chaîne, soit sous forme de deux tableaux, l’en-tête HTTP de la requête en cours de traitement.<!-- END REF-->

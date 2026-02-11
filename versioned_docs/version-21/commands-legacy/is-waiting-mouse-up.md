@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->The **Is waiting mouse up** command returns **True** if the current object has been clicked and the mouse button has not been released, while the parent window has the focus.<!-- END REF--> Otherwise, it returns **False**, in particular if the parent window has lost the focus before the mouse button was released. 

@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Modified|
+|12|Renamed|
+|18 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BASE64 ENCODE.Summary-->The **BASE64 ENCODE** command encodes the text or blob value passed in the *toEncode* parameter in Base64 or Base64URL format.<!-- END REF--> 

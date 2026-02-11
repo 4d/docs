@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+|12.1|Modifié|
+|14|Modifié|
+|14|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST Get plain text.Summary-->La commande **ST Get plain text** supprime toute balise de style du champ ou de la variable texte désigné(e) par les paramètres *\** et *objet*, et retourne le texte brut.<!-- END REF--> 

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Current form name.Summary-->**Current form name**コマンドは、プロセスのために定義されたカレントのフォームの名前を返します。<!-- END REF-->カレントフォームはプロジェクトフォームでもテーブルフォームでも可能です。

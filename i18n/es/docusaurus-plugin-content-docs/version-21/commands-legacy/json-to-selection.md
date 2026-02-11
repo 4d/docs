@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.JSON TO SELECTION.Summary-->El comando **JSON TO SELECTION** copia el contenido del array de objetos JSON *jsonArray* en la selección de registros de *laTabla*.<!-- END REF--> 

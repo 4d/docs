@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Renomear|
+|6.5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB SEND BLOB.Summary-->O comando **WEB SEND BLOB** permite enviar o BLOB *blob* ao navegador.<!-- END REF-->  

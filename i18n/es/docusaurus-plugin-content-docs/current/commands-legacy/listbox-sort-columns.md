@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Renombrar|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->El comando LISTBOX SORT COLUMNS aplica una ordenación estándar a las líneas del list box definido por el objeto y los parámetros \* en función de los valores de una o varias columnas.<!-- END REF-->

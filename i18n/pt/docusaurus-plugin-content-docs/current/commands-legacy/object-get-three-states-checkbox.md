@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get three states checkbox.Summary-->O comando **OBJECT Get three states checkbox** devolve o estado atual da propriedade "Três estados" da(s) caixa(s) de seleção designada(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->

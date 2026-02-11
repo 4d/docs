@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Renommé|
+|13|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->La commande **LISTBOX SET GRID** permet d’afficher ou de masquer les traits horizontaux et/ou verticaux composant la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> 

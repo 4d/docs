@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** définit la taille de la police du ou des objet(s) de formulaire spécifié(s) par *objet*.<!-- END REF--> 

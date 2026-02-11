@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->La commande **Get file from pasteboard** retourne le chemin d’accès absolu d’un fichier inclus dans une opération de glisser-déposer.<!-- END REF--> Plusieurs fichiers pouvant être sélectionnés et déplacés simulanément, le paramètre *indiceN* permet de désigner un fichier parmi l’ensemble des fichiers sélectionnés.

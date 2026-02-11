@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->O comandoINSERT IN LIST insere o elemento designado pelo parâmetro *refElem* na lista cujo número de referência é passado em *lista*.<!-- END REF-->

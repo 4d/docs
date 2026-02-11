@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PLAY.Summary-->**PLAY**コマンドを使用してサウンドやマルチメディアファイルを再生できます。<!-- END REF-->再生したいファイルの完全なパス名を *objectName* に渡します。OS Xでは、コマンドを使用してシステムサウンドを再生することもできます。 

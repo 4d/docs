@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->The **WEB GET BODY PART** command, when called in the context of a Web process, parses the "body" part of a multi-part request.<!-- END REF-->

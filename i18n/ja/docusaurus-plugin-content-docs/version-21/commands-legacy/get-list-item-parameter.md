@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->**GET LIST ITEM PARAMETER** コマンドは、*list* 引数にリスト参照やオブジェクト名で指定したリストの、*itemRef* 項目の、*selector* パラメタに対応する現在値を取得するために使用します。<!-- END REF-->

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->GET PICTURE FROM PASTEBOARD devuelve la imagen presente en el portapapeles en el campo o variable imagen *imagen*.<!-- END REF-->

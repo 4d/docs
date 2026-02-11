@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+|13|Modified|
+|13|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->The **LISTBOX DELETE ROWS** command deletes one or several row(s) starting at *rowPosition* row (visible or not) from the list box set in the *object* and *\** parameters.<!-- END REF-->

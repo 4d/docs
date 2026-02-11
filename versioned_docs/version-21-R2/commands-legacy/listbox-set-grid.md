@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+|13|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->The **LISTBOX SET GRID** command allows you to display or hide the horizontal and/or vertical grid lines that make up the grid in the list box object set using the *object* and *\** parameters.<!-- END REF--> 

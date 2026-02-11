@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 2|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** sorts (reorders) the records of the current selection of *aTable* for the current process.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record. **Note**: you must specify *aTable*. You cannot use a default table.

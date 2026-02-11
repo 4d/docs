@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->El comando **OBJECT SET LIST BY REFERENCE** define o remplaza la lista asociada con el objeto u objetos definidos por los parámetros *objeto* y *\**, con la lista jerárquica definida en el parámetro *lista*.<!-- END REF-->

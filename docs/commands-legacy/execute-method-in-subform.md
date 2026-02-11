@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R6|Modified|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->The EXECUTE METHOD IN SUBFORM command can be used to execute the code designated by *formula* in the context of the *subformObject* subform object.<!-- END REF--> 

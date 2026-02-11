@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Renamed|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->The **OBJECT SET VISIBLE** command shows or hides the objects specified by *object*.<!-- END REF-->

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->La commande **DOM SET XML ELEMENT VALUE** permet de modifier la valeur de l’élément désigné par *refElément*.<!-- END REF-->

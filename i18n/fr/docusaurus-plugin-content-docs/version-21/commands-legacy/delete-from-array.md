@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->La commande **DELETE FROM ARRAY** supprime un ou plusieurs élément(s) de *tableau*.<!-- END REF--> Les éléments sont supprimés à partir de l'élément spécifié par *positionDépart*.

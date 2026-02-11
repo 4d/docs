@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->La commande **GET PASTEBOARD DATA TYPE** permet d’obtenir la liste des types de données présents dans le conteneur.<!-- END REF--> Cette commande doit généralement être utilisée dans le contexte d'un glisser-déposer, dans le cadre des événements formulaire On Drop ou On Drag Over de l’objet de destination. Elle permet notamment de vérifier la présence d’un type de données spécifique dans le conteneur.

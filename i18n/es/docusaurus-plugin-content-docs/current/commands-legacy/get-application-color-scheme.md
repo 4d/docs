@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|19|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get Application color scheme.Summary-->El comando **Get Application color scheme** devuelve el nombre del esquema de color real en uso en el nivel de la aplicación.<!-- END REF--> 

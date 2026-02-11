@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->El comando **PAUSE INDEXES** desactiva temporalmente todos los índices de *laTabla*, excepto el índice de la llave primaria .<!-- END REF-->  

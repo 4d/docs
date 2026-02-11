@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Semaphore.Summary-->Un semáforo es una bandera compartida entre estaciones de trabajo o entre procesos en la misma estación de trabajo.<!-- END REF--> Un semáforo simplemente existe o no existe. Los métodos que cada usuario ejecuta pueden probar la existencia de un semáforo. Un semáforo sólo puede ser eliminado por la estación de trabajo cliente o proceso que lo creó. Creando y probando semáforos, los métodos pueden comunicarse entre estaciones de trabajo. No utilice semáforos para proteger el acceso a los registros. Esto lo hace automáticamente 4D y 4D Server. Utilice los semáforos para evitar que varios usuarios realice la misma operación al mismo tiempo.

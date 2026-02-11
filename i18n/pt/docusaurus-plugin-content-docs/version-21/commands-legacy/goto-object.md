@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Modificado|
+|12|Renomear|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->O comando GOTO OBJECT é utilizado para selecionar o objeto editável *objeto* como a área ativa do formulário.<!-- END REF--> É equivalente a um clique do usuário na área ou de utilizar a tecla Tab para selecionar o campo ou a variável. 

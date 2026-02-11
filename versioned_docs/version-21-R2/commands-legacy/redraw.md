@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6.5|Modified|
+|11 SQL Release 5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REDRAW.Summary-->When you use a method to change the value of a field displayed in a subform, you must execute REDRAW to ensure that the form is updated.<!-- END REF--> 

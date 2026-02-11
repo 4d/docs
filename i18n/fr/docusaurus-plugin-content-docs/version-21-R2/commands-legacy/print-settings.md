@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|15 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->La commande **PRINT SETTINGS** provoque l'affichage d'une boîte de dialogue d'impression.<!-- END REF--> Cette commande doit être appelée avant une série de commandes [Print form](../commands/print-form.md) ou la commande [OPEN PRINTING JOB](open-printing-job.md).

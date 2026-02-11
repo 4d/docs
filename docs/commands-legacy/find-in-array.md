@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R6|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Find in array.Summary-->The Find in array command returns the number of the first element in *array* that matches *value*.<!-- END REF--> 

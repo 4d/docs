@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+|12|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->The SET FILE TO PASTEBOARD command adds the complete pathname of the file passed in the *file* parameter.<!-- END REF--> This command can be used to set up interfaces allowing the drag and drop of 4D objects to files on the desktop for example.

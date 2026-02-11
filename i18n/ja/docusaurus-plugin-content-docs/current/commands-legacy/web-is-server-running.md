@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB Is server running.Summary-->新しい**WEB Is server running** コマンド("*Webサーバ*"テーマ)は、4DがビルトインされているWebサーバーが動作中である場合にはTrueを、Webサーバーがオフである場合にはFalseを返します。<!-- END REF-->

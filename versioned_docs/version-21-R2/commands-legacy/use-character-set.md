@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.USE CHARACTER SET.Summary-->**USE CHARACTER SET** modifies the character set used by 4D during data transfer between the database and a document or a serial port for the current process.<!-- END REF--> Transfer operations include the import and export of text, DIF, and SYLK files. A character map also works on data transferred with [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (for text type packets) and [RECEIVE BUFFER](receive-buffer.md). It has no effect on transfers of data done with [SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (for BLOB type packets) and [RECEIVE VARIABLE](receive-variable.md). 

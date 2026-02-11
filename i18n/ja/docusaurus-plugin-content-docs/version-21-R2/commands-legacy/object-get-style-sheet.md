@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|15 R3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->**OBJECT Get style sheet**コマンドは、引数 *object* と *\** で指定したオブジェクトに関連付けられたスタイルシートの名前を返します。<!-- END REF-->

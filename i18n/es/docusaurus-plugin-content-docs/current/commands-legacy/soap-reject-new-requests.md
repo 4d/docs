@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|17 R4|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Summary-->El comando **SOAP REJECT NEW REQUESTS** especifica si el servidor de servicios web acepta o no nuevas solicitudes SOAP.<!-- END REF--> 

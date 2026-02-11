@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R5|Modificado|
+|14|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->El comando **ST FREEZE EXPRESSIONS** "congela" el contenido de las expresiones encontradas en un campo o variable ya sea 4D Write Pro o multiestilo designado por el parámetro *objeto*.<!-- END REF--> Esta acción convierte expresiones dinámicas en texto estático o imágenes (áreas 4D Write Pro únicamente) y elimina las referencias asociadas al *objeto*. 

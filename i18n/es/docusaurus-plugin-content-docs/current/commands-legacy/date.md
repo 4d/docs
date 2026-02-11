@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R6|Modificado|
+|16 R5|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Date.Summary-->El comando Date evalúa *expresion* y devuelve una fecha.<!-- END REF-->

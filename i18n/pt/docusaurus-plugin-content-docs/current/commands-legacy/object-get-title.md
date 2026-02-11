@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get title.Summary-->O comando OBJECT Get title devolve o título (etiqueta) do objeto de formulário designado por *objeto* .<!-- END REF--> Você pode usar esse comando com todos os objetos simples que tenham uma etiqueta:   

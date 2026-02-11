@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|変更|
+|13|変更|
+|11 SQL Release 3|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Average.Summary-->**Average**は、*series*の平均値を返します。<!-- END REF-->*series*がインデックスフィ－ルドの場合には、平均値を求めるためにインデックスが使用されます。

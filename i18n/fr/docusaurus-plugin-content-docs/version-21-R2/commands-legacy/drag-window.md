@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6.8|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->La commande **DRAG WINDOW** permet de faire glisser la fenêtre dans laquelle l'utilisateur a cliqué puis de la déplacer en fonction des mouvements de la souris.<!-- END REF--> Généralement, cette commande est appelée depuis la méthode d'un objet capable de répondre instantanément aux clics souris (par exemple un bouton invisible).

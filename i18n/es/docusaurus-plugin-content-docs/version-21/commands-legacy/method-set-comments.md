@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->El comando **METHOD SET COMMENTS** remplaza la documentación del(os) método(s) designados por el parámetro *ruta* por los definidos en el parámetro *comentarios*.<!-- END REF-->

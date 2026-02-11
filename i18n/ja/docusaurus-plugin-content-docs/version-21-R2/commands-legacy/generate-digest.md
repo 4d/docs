@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+|14|変更|
+|16 R5|変更|
+|18 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Generate digest.Summary-->**Generate digest**コマンドはBLOBやテキストのDigestキーを指定したアルゴリズムで生成して返します。<!-- END REF-->引数にはテキストまたはBLOBフィールドや変数を渡します。**Generate digest**コマンドはダイジェストキーを文字列として返します。

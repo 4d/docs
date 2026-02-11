@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Nota de compatibilidade 
 
 <!--REF #_command_.WA SET PAGE CONTENT.Summary-->Este comando não é mais útil.<!-- END REF--> Como a segurança em navegadores ficou cada vez mais forte, há mais e mais restrições para modificar o conteúdo de páginas "a qualquer momento". Uma abordagem mais adequada é criar um arquivo local (por exemplo na pasta temporária) e usar [WA OPEN URL](wa-open-url.md) para carregá-la. Para limpar o conteúdo, chame **WA OPEN URL**(myArea;”about:blank”).

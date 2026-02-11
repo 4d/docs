@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+|15|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB GET ARRAY.Summary-->La commande **OB GET ARRAY** récupère dans *tableau* le tableau de valeurs stocké dans la *propriété* de l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.

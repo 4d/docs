@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+|16 R4|変更|
+|16 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET HELP TIP.Summary-->**OBJECT SET HELP TIP**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたヘルプをカレントプロセス内で動的に変更します。<!-- END REF-->

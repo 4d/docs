@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Compare strings.Summary-->The **Compare strings** command returns a negative, zero, or positive value depending on if *aString* is evaluated as lower, equal, or higher than *bString*.<!-- END REF--> 

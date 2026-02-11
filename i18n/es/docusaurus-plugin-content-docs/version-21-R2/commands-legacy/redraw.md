@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.5|Modificado|
+|11 SQL Release 5|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.REDRAW.Summary-->Cuando utiliza un método para modificar el contenido de un campo o subcampo mostrado en un subformulario, debe ejecutar REDRAW para asegurar que el formulario esté correctamente actualizado.<!-- END REF--> .

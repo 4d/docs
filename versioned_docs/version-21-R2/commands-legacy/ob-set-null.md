@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|15|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB SET NULL.Summary-->The **OB SET NULL** command stores the **null** value in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.

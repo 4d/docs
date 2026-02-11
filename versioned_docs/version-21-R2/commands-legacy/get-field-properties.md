@@ -22,6 +22,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|15|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->The **GET FIELD PROPERTIES** command returns information about the field specified by *fieldPtr* or by *tableNum* and *fieldNum*.<!-- END REF-->

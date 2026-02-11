@@ -21,6 +21,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+|17 R6|Modificado|
+|18 R6|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->El comando **SET LIST ITEM PROPERTIES** modifica el elemento designado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF-->

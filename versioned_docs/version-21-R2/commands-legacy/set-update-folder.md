@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->The **SET UPDATE FOLDER** command specifies the folder containing the update of the current merged 4D application.<!-- END REF--> This information is stored in the 4D session until the [RESTART 4D](restart-4d.md) method is called. If the application is exited manually, this information is not kept.

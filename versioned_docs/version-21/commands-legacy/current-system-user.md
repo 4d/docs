@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17|Renamed|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current system user.Summary-->The **Current system user** command returns the owner name of your machine, as set in the current user account on the machine.<!-- END REF-->

@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Create XML element.Summary-->The **DOM Create XML element** command creates a new element in the XML element *elementRef* in the path set by the *xPath* parameter and adds attributes to it if necessary.<!-- END REF--> 

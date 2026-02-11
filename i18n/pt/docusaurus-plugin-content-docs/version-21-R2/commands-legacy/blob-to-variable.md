@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+|14|Modificado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB TO VARIABLE.Summary-->O comando BLOB TO VARIABLE  reescreve a variável *variável* com os dados armazenados dentro do BLOB *blob* no deslocamento de byte (a partir de zero) especificada pelo *offset*.<!-- END REF-->

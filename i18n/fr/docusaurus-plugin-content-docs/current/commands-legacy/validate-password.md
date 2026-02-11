@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Validate password.Summary-->La commande **Validate password** retourne Vrai si la chaîne passée dans *motDePasse* est le mot de passe du compte utilisateur dont le n° de référence ou le nom est passé dans *utilisateur*.<!-- END REF-->

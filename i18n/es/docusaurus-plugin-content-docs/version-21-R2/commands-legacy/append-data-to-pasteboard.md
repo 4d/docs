@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->El comando APPEND DATA TO PASTEBOARD añade en el portapapeles los datos del tipo especificado en *tipoDatos* en el BLOB *datos*.<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ASSERT.Summary-->**ASSERT** コマンドは*boolExpression* 引数に渡されたアサーションを評価し、Falseを返す場合にはコードの実行を中止するとともにエラーメッセージを出します。<!-- END REF-->このコマンドはインタープリタモードでもコンパイル済みモードでも動作します。

@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Renamed|
+|14|Modified|
+|12|Renamed|
+|6|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->The OBJECT SET LIST BY NAME command sets, replaces or disassociates the *list* associated with the object or group of objects specified by *object*.<!-- END REF--> The list whose name is passed in the *list* parameter must have been created using the List Editor in the Design environment.

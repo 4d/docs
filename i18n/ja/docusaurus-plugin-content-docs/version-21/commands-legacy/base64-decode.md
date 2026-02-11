@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R4|変更|
+|12|変更|
+|12|名称変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BASE64 DECODE.Summary-->**BASE64 DECODE** コマンドは、*toDecode* 引数に渡された、Base64 または Base64URL フォーマットにエンコードされたテキストまたはBlob をデコードします。<!-- END REF-->Base64 およびBase64URL フォーマットについての詳細な情報については、[BASE64 ENCODE](base64-encode.md) コマンドの詳細を参照してください。

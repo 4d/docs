@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get external data path.Summary-->**Get external data path**コマンドはカレントレコードの、*aField*引数に渡したフィールドデータの外部ストレージファイルのフルパス名を返します。<!-- END REF-->*aField*引数にはテキスト、BLOB、またはピクチャー型のフィールドを渡さなくてはなりません。コマンドは、ファイルが存在しない、またはアクセス不能の場合でも、ストレージファイルのパス名を返します。  

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->OBJECT SET ENABLED コマンドは*object*で指定されたカレントフォーム中のオブジェクトあるいはオブジェクトグループを、有効または無効にするために使用します。<!-- END REF-->有効なオブジェクトはマウスクリックやキーボードショートカットに反応します。

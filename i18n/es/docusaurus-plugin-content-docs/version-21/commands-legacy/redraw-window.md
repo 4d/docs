@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->El comando REDRAW WINDOW provoca una actualización del contenido de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> 

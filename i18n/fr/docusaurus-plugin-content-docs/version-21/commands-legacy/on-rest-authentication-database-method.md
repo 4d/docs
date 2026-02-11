@@ -19,6 +19,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|20 R6|Modifié|
+|18|Renommé|
+|18|Modifié|
+|14 R3|Renommé|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.On REST Authentication database method.Summary-->La **On REST Authentication database method** est obsolète dans les projets à partir de 4D 20 R6.<!-- END REF-->

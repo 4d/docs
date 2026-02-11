@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET MENU BAR.Summary-->MENU BAR reemplaza la barra de menús actual con la especificada por *barra* en el proceso actual únicamente.<!-- END REF--> En el parámetro *barra*, puede pasar el número o nombre de la nueva barra. Igualmente puede pasar una referencia única de menú (tipo [MenuRef](# "Unique ID (16-character alphanumeric) of a menu"), cadena de 16 caracteres). Cuando trabaja con referencias, los menús pueden ser utilizados como barras de menú y viceversa (ver la sección *Gestión de menús*). 

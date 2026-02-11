@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.REMOVE FROM SET.Summary-->REMOVE FROM SET elimina o registro atual de *tabela* de *conjunto*.<!-- END REF--> O conjunto já deve existir; se não existir, ocorre um erro. Se não existir um registro atual para Tabela, REMOVE FROM SET não tem efeito.

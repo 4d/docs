@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->The **FONT STYLE LIST** command returns the list of font styles and the list of complete font names supported by the font family defined in the *fontFamily* parameter.<!-- END REF--> This command allows you to design interfaces handling fonts and font styles, particularly in the context of 4D Write Pro areas (see *4D Write Pro Reference*).

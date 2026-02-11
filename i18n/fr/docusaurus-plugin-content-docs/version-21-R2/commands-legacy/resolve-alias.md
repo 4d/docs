@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESOLVE ALIAS.Summary-->La commande **RESOLVE ALIAS** retourne le chemin d’accès complet du fichier ou dossier cible d’un alias (appelé “raccourci” sous Windows).<!-- END REF--> 

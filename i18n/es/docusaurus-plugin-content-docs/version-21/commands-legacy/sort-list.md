@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SORT LIST.Summary-->El comando SORT LIST ordena la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->

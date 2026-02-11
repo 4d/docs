@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Font file.Summary-->La commande **Font file** retourne un objet décrivant le fichier de polices de votre système d'exploitation correspondant à *famillePolice* et, éventuellement, à *stylePolice* que vous avez passé dans le paramètre.<!-- END REF-->

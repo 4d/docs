@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->El comando **LISTBOX SET FOOTER CALCULATION** permite definir el cálculo automático asociado al área de pie del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

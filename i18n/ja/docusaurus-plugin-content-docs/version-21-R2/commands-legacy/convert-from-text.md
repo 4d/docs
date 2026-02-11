@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CONVERT FROM TEXT.Summary-->CONVERT FROM TEXTコマンドは、現在の4Dの文字セットで記述されているテキストを、他の文字セットで記述されているテキストへ変換するために使用できます。<!-- END REF-->引数には変換するテキストを渡します。このテキストは、4Dが使用する文字セットで記述されています。4Dのバージョン11では、デフォルトでUnicode 文字セットが使用されています。

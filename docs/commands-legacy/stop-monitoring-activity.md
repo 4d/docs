@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.STOP MONITORING ACTIVITY.Summary-->The **STOP MONITORING ACTIVITY** command stops tracking activity started with the [START MONITORING ACTIVITY](start-monitoring-activity.md) command.<!-- END REF--> After the execution of this command, any activity record in memory is emptied.

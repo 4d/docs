@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get menu item.Summary-->La commande **Get menu item** retourne le libellé de la commande de menu dont le numéro ou la référence de menu et le numéro de commande ont été passés dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 

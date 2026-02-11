@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R7|Modifié|
+|14 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->La commande **OBJECT Get corner radius** retourne la valeur courante du rayon d'angles pour l'objet désigné par le paramètre *objet*.<!-- END REF--> Cette valeur peut avoir été définie au niveau du formulaire en utilisant la propriété (cf. *Rayon d'arrondi (rectangles)*), ou via la commande [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) pour le process courant.

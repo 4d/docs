@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->The **OBJECT SET MULTILINE** command modifies the "Multiline" property of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->

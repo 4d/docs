@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM PREVIOUS PAGE.Summary-->**FORM PREVIOUS PAGE** change la page courante d'un formulaire pour afficher la page précédente.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la page affichée est la première page du formulaire, **FORM PREVIOUS PAGE** ne fait rien.

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|14|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->The ARRAY TO LIST command creates or replaces the hierarchical list or the choice list (created in the List editor) that is specified in *list* using the elements of the array *array.<!-- END REF-->*

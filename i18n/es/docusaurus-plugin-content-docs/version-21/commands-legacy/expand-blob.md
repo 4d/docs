@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5.3|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.EXPAND BLOB.Summary-->El comando EXPAND BLOB descomprime el BLOB *blob* que fue previamente comprimido utilizando el comando COMPRESS BLOB.<!-- END REF-->  

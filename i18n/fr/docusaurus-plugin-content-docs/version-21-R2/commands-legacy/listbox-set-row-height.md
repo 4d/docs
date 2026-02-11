@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->La commande **LISTBOX SET ROW HEIGHT** permet de modifier la hauteur de la ligne spécifiée dans le paramètre *ligne* dans la List box désignée par les paramètres *objet* et éventuellement *\**.<!-- END REF-->

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R4|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.RESUME TRANSACTION.Summary-->El comando **RESUME TRANSACTION** reactiva la transacción que se suspendió utilizando *ServerSpecialBuild*  en el nivel correspondiente en el proceso actual.<!-- END REF--> Todas las operaciones que se ejecutan después de este comando se llevan a cabo bajo el control de transacciones (excepto cuando varias transacciones suspendidas están anidadas).

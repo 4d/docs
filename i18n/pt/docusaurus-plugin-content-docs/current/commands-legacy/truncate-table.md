@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 3|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->O comando TRUNCATE TABLE \[#descv\]apaga rapidamente todos os registros de *tabela*.<!-- END REF--> Depois de chamar o comando, não há uma seleção atual nem um registro atual.  

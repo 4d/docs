@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+|19 R5|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WA ZOOM IN.Summary-->O comando WA ZOOM IN aumenta o tamanho do texto mostrado na área web designada pelos parâmetros \* e *objeto*.<!-- END REF--> 

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.RELOAD EXTERNAL DATA.Summary-->El comando **RELOAD EXTERNAL DATA** permite recargar en memoria el contenido en memoria de un archivo de almacenamiento externo asociado a un campo de tipo BLOB, Imagen o Texto.<!-- END REF-->  

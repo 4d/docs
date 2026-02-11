@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+|16 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->La commande **ST INSERT EXPRESSION** insère une référence à l’*expression* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 

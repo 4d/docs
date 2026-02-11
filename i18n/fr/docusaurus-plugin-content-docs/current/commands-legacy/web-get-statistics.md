@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|6.5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET STATISTICS.Summary-->La commande **WEB GET STATISTICS** vous permet d’obtenir des informations sur les pages les plus consultées, chargées dans le cache du serveur Web.<!-- END REF--> Par conséquent, ces statistiques concernent uniquement les pages statiques, les images GIF, les images JPEG <100 ko et les feuilles de style (.css). 

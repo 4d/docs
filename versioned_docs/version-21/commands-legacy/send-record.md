@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SEND RECORD.Summary-->**SEND RECORD** sends the current record of *aTable* to the serial port or document opened by the [SET CHANNEL](set-channel.md) command.<!-- END REF--> The record is sent with a special internal format that can be read only by [RECEIVE RECORD](receive-record.md). If no current record exists, SEND RECORD has no effect.

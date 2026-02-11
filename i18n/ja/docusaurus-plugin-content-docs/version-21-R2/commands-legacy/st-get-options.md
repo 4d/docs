@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->**ST GET OPTIONS**コマンドは、 *object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内で動作中のオプションのカレントの値を取得します。<!-- END REF-->

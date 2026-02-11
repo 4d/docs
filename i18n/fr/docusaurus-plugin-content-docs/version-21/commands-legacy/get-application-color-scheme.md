@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get Application color scheme.Summary-->La commande **Get Application color scheme** retourne le nom du schéma de couleur utilisé dans l'application.<!-- END REF--> 

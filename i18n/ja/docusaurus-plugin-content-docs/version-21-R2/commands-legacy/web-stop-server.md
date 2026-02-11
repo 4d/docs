@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB STOP SERVER.Summary-->**WEB STOP SERVER**コマンドは、実行中の4Dアプリケーション上で、Webサーバを停止します 。<!-- END REF-->Webサーバが既に起動している場合、すべてのWeb接続は停止し、すべてのWebプロセスが終了します。   

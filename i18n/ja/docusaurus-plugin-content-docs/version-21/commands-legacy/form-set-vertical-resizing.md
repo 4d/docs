@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|名称変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Summary-->FORM SET VERTICAL RESIZINGコマンドを使用すると、プログラムからカレントフォームの垂直リサイズプロパティを変更することができます。<!-- END REF-->デフォルトで、これらのプロパティはデザインモードのフォームエディタにおいて設定することができます。新しいプロパティはカレントプロセスに対して設定され、フォームと一緒に保存されません。

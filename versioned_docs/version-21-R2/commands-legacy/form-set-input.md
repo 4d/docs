@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|12|Renamed|
+|16 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->The **FORM SET INPUT** command sets the current input form for *aTable* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET DOCUMENT ICON.Summary-->The GET DOCUMENT ICON command returns, in the 4D picture variable or field *icon*, the icon of the document whose name or complete pathname is passed in *docPath*.<!-- END REF-->can specify a file of any type (executable, document, shortcut or alias, etc.) or a folder. 

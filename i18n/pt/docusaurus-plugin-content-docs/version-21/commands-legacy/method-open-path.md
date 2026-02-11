@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19|Modificado|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->O comando **METHOD OPEN PATH** abre, no editor de métodos de 4D, o método cuja rota de acesso interna é passada no parâmetro *rota*.<!-- END REF-->

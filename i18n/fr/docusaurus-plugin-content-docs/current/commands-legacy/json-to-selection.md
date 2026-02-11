@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.JSON TO SELECTION.Summary-->La commande **JSON TO SELECTION** copie le contenu du tableau d'objets JSON *jsonTab* vers la sélection d’enregistrements de *laTable*.<!-- END REF--> 

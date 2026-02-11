@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|14|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->LIST TO ARRAY コマンドは、*list* で指定したリストまたは選択リストの第一レベルの項目で、配列*array*を作成または上書きします。<!-- END REF-->

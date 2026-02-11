@@ -23,6 +23,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+|14|Modificado|
+|14 R5|Modificado|
+|15 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite cambiar los parámetros de los gráficos mostrados en un formulario.<!-- END REF--> El gráfico debe haber sido definido con el comando [GRAPH](graph.md). GRAPH SETTINGS no tiene efecto en un gráfico de tipo sectores. Este comando debe llamarse obligatoriamente en el mismo proceso que el formulario.

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** busca registros en *tabla*.<!-- END REF-->El comando **QUERY SELECTION** cambia la selección actual de *tabla* para el proceso actual y hace que el primer registro de la nueva selección sea el registro actual. 

@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18|Modificado|
+|17 R5|Modificado|
+|17 R3|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Export structure file.Summary-->O comando **Export structure file** divide a estrutura atual do banco de dados 4D em um conjunto de arquivos de texto ou arquivos de imagem nativos e os armazena na *rotaPastta* especificada.<!-- END REF--> Como padrão, se exporta a totalidade da estrutura do banco de dados (métodos, formulários, catálogo, etc.). Pode filtrar os conteúdos a exportar utilizando o parâmetro *opções* (ver abaixo).

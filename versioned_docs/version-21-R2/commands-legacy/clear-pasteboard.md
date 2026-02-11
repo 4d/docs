@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->The CLEAR PASTEBOARD command clears the pasteboard of all its contents.<!-- END REF--> If the pasteboard contains multiple instances of the same data, all instances are cleared. After a call to CLEAR PASTEBOARD, the pasteboard is empty.

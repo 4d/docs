@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->La commande **GET TEXT KEYWORDS** découpe la totalité du *texte* en mots et crée, pour chaque mot obtenu, un élément dans le tableau texte *tabMotsClés*.<!-- END REF--> 

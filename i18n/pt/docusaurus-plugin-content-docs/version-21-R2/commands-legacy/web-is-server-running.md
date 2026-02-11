@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14 R2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB Is server running.Summary-->O comando **WEB Is server running** devolve **True** se o servidor web integrado 4D está executando e **False** se o servidor web está desligado.<!-- END REF-->

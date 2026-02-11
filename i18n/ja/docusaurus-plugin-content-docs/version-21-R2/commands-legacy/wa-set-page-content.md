@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 互換性に関する注意 
 
 <!--REF #_command_.WA SET PAGE CONTENT.Summary-->この歴史的なコマンドは現実的にはもはや実用的とは言えません。<!-- END REF-->現代的なブラウザにおいてはセキュリティが厳格化されているため、ページコンテンツを"オンザフライ"で変更することに対しては制約が増える一方です。より信頼性のある方法としてはローカルなファイルを(例: 一時フォルダ内などに)作成し、[WA OPEN URL](wa-open-url.md) を使用してロードすることです。コンテンツを消去するためには、**WA OPEN URL**(myArea;”about:blank”) を呼び出してください。

@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Renomear|
+|12.1|Modificado|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ST Get text.Summary-->O comando *OBJECT Get styled text* devolve o texto com estilo encontrado no campo ou variável de texto designado pelo parâmetro *objeto*.<!-- END REF-->   

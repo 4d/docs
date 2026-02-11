@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+|14|Modified|
+|17 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->The **OBJECT SET RGB COLORS** command changes the foreground and background colors of the objects specified by the *object* parameter and the optional *\** parameter.<!-- END REF--> When the command is applied to a list box object, an additional parameter lets you modify the alternating color of the rows.

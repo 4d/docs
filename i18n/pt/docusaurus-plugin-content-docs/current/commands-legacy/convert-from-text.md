@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CONVERT FROM TEXT.Summary-->O comando CONVERT FROM TEXT permite converter um texto expresso no conjunto de caracteres atual de 4D em um texto expresso em outro conjunto de caracteres.<!-- END REF--> 

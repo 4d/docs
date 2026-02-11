@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R4|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->El comando **SET GROUP ACCESS** modifica las membresías de la cuenta de usuario 4D para la sesión actual.<!-- END REF--> Restablece toda membresía a un grupo anterior y define las nuevas membresías a los *grupos* listados.

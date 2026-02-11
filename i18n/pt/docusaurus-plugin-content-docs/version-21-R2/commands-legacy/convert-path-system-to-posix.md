@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Convert path system to POSIX.Summary-->O comando Convert path system to POSIX converte uma rota expressa com a sintaxe sistema em uma rota expressa com a sintaxe POSIX (Unix).<!-- END REF-->  

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->The **GET PASTEBOARD DATA TYPE** command gets the list of data types present in the pasteboard.<!-- END REF--> This command should generally be used in the context of a drag and drop operation, within the On Drop or On Drag Over form events of the destination object. More particularly, it allows the pasteboard to be checked for the presence of a specific type of data.

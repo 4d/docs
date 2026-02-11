@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM UNLOAD.Summary-->The **FORM UNLOAD** command releases from memory the current form designated using the [FORM LOAD](../commands/form-load.md) command.<!-- END REF-->

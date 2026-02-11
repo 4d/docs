@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->The **SET WINDOW TITLE** command changes the title of the window whose reference number is passed in *window* to the text passed in *title* (max. length 80 characters).<!-- END REF-->

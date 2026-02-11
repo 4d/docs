@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|14 R3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->QR SET TEXT PROPERTY コマンドを使用し、*colNum* と *rowNum* で指定されたセルのテキスト属性を設定できます。<!-- END REF--> 

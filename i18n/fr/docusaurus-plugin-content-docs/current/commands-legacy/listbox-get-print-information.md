@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->La commande [LISTBOX GET PRINT INFORMATION](listbox-get-print-information.md) retourne des informations courantes relatives à l’impression de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> Cette commande permet de contrôler l’impression du contenu de la list box.

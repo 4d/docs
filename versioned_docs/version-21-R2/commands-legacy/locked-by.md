@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 2|Modified|
+|14 R3|Renamed|
+|19 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LOCKED BY.Summary-->LOCKED BY returns information about the user and process that have locked a record.<!-- END REF--> The process number(\*), the user name in the 4D application and in the system as well as the process name are returned in the *process*, *4Duser*, *sessionUser*, and *processName* variables. You can use this information in a custom dialog box to warn the user when a record is locked.

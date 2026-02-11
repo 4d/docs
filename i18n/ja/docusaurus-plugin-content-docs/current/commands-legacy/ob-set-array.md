@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|変更|
+|15|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB SET ARRAY.Summary-->**OB SET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中の *property* と関連付ける配列 *array* を定義します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。

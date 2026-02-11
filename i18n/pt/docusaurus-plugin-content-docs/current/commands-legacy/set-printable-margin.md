@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.8.1|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->O comando SET PRINTABLE MARGIN\[#descv\]permite atribuir os valores de varias margens de impressão utilizando os comandos [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) e [PRINT RECORD](print-record.md).<!-- END REF--> 

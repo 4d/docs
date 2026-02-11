@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R3|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB Entries.Summary-->O comando **OB Entries** retorna uma coleção de objetos contendo os conteúdos de *objeto* como pares de propriedade key/value.<!-- END REF--> 

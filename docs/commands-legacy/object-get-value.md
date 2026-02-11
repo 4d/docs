@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get value.Summary-->The **OBJECT Get value** command returns the current value of the data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->

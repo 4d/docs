@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SEND RECORD.Summary-->SEND RECORD は、*aTable*のカレントレコードを[SET CHANNEL](set-channel.md "SET CHANNEL")コマンドで開いたシリアルポートまたはドキュメントに送信します。<!-- END REF-->レコードは特別な内部フォーマットで送信され、[RECEIVE RECORD](receive-record.md "RECEIVE RECORD")でのみ読み込むことができます。カレントレコードが存在しなければ、SEND RECORDは何も行いません。

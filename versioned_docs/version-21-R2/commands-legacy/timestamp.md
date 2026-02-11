@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Timestamp.Summary-->**Timestamp** returns the current UTC time in ISO format with milliseconds, i.<!-- END REF-->e. yyyy-MM-ddTHH:mm:ss.SSSZ. Note that the "Z" character indicates the GMT time zone. 

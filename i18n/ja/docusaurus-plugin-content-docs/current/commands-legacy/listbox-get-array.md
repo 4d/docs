@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|変更|
+|15 R4|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->

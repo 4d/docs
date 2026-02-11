@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->GET PROCESS VARIABLE コマンドは、*process*引数に渡した番号のソースプロセスから*srcVar* (*srvVar2*等) プロセス変数を読み込み、その現在の値をカレントプロセスの*dstVar* (*dstVar2*等) 変数に返します。<!-- END REF-->

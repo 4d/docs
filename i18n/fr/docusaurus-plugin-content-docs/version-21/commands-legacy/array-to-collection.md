@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY TO COLLECTION.Summary-->La commande **ARRAY TO COLLECTION** copie un ou plusieurs *tableau*(x) dans les éléments ou les valeurs *nomPropriété* de *collection*.<!-- END REF-->

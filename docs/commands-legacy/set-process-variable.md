@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->The **SET PROCESS VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values passed in *expr1* (*expr2*, etc.).<!-- END REF-->

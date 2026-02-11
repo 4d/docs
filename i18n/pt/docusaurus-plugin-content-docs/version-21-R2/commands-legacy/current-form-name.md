@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Current form name.Summary-->O comando **Current form name** retorna o nome do formulário atual definido para o processo.<!-- END REF--> O formulário atual pode ser um formulário de projeto ou formulário de tabela. 

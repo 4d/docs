@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.8.1|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Method called on event.Summary-->O comando Method called on event devolve o nome do método instalado pelo comando [ON EVENT CALL](on-event-call.md "ON EVENT CALL").<!-- END REF--> 

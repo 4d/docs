@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Macintosh option down.Summary-->**Macintosh option down** retourne Vrai si la touche **Option** Macintosh est enfoncée.<!-- END REF-->Lorsqu'elle est appelée sous Windows, la fonction **Macintosh option down** retourne Vrai si la touche **Alt** Windows est enfoncée.

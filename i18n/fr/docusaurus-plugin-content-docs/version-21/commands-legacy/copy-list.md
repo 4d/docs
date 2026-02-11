@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Copy list.Summary-->La commande **Copy list** duplique la liste dont vous passez le numéro de référence dans le paramètre *liste* et retourne le numéro de référence de la nouvelle liste.<!-- END REF-->

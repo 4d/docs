@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+|16 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->O comando SET MENU ITEM PROPERTY permite fixar o *valor* da *propriedade* para a linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF-->

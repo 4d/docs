@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Tickcount.Summary-->Tickcount はマシンが起動されてから経過したTick (1/60秒) 数を返します。<!-- END REF-->Tickcount は倍長整数型の値を返します。

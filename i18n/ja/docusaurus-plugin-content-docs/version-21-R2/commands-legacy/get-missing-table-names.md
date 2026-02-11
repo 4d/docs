@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Summary-->GET MISSING TABLE NAMES コマンドは カレントデータベース中ですべての失われたテーブルの名前を*missingTables*配列に返します。<!-- END REF-->

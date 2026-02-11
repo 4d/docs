@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SELECTION TO ARRAY.Summary-->O comando **SELECTION TO ARRAY** cria um ou mais arrays e copia os dados nos campos ou números de registros da seleção atual para os arrays.<!-- END REF-->

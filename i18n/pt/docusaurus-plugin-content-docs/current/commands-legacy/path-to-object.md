@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Path to object.Summary-->O comando **Path to object**  devolve um objeto que contenha as propriedades específicas da *rota* que passou no parâmetro.<!-- END REF--> 

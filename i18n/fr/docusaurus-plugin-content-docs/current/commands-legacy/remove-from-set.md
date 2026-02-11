@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REMOVE FROM SET.Summary-->**REMOVE FROM SET** supprime l'enregistrement courant de *laTable* de l'ensemble *ensemble*.<!-- END REF--> L'ensemble doit déjà exister ; s'il n'existe pas, une erreur est générée. S'il n'y a pas d'enregistrement courant dans *laTable*, **REMOVE FROM SET** ne fait rien.

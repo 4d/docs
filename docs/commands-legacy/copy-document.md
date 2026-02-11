@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|13|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->The **COPY DOCUMENT** command copies the file or folder specified by *sourceName* to the location specified by *destinationName* and, optionally, renames it.<!-- END REF--> 

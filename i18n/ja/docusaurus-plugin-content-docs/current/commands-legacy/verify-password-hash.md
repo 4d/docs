@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Verify password hash.Summary-->**Verify password hash** ファンクションは、*hash* 引数で渡されたハッシュ値が、*password* 引数のパスワードと合致するかどうかを検証します。<!-- END REF-->

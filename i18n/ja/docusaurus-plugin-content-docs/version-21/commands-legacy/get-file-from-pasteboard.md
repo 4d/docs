@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->Get file from pasteboard コマンドは、ドラッグ＆ドロップ処理に含まれるファイルの完全パス名を返します。<!-- END REF-->複数のファイルを同時に選択し、移動することができます。*xIndex* 引数を使用して選択したファイル中でファイルを指定することができます。

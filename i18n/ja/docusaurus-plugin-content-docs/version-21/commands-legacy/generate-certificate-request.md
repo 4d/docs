@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->**GENERATE CERTIFICATE REQUEST** コマンドは、Verisign(R)等の認証局で使用されているPKCSフォーマットで証明書リクエストを生成します。<!-- END REF-->証明書はSSL暗号化プロトコルの重要な役割を持ちます。これはSSLモードで接続している各ブラウザに送信され、Webサイトの“IDカード” (このコマンドに指定した情報をもとに作成) とともに、ブラウザが受信情報の解読に使用できる公開鍵も納められています。さらにこの証明書には、整合性を保証する認証局により加えられた各種情報も納められます。

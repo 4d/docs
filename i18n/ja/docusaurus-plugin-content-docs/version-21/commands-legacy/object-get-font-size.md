@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get font size.Summary-->OBJECT Get font size コマンドは*object*で指定されたフォームオブジェクトで使用されている文字フォントのサイズをポイント単位で返します。<!-- END REF--> . 

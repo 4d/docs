@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|名称変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB Validate digest.Summary-->**WEB Validate digest**コマンドを使用して、Webサーバに接続しているユーザのID情報 (名前とパスワード) の有効性をチェックします。<!-- END REF-->必ずダイジェストモードのWeb認証のコンテキストで、 *On Web Authenticationデータベースメソッド* でこのコマンドを使用します (*接続セキュリティ* を参照)。

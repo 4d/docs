@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+|15 R4|Modificado|
+|16|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**Nota:** este comando sólo funciona con los list box de tipo array.<!-- END REF-->

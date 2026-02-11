@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->O comando UNREGISTER CLIENT cancela o registro de uma máquina 4D Client.<!-- END REF--> O cliente deverá ter sido registrado pelo comando [REGISTER CLIENT](register-client.md).

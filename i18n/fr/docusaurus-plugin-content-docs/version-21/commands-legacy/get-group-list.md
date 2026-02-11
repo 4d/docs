@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->**GET GROUP LIST** remplit les tableaux *nomsGroupes* et *numérosGroupes* avec les noms et les numéros de référence uniques des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe.<!-- END REF-->

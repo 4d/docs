@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.EXECUTE METHOD.Summary-->O comando EXECUTE METHOD provoca a execução do método de projeto *nomeMetodo* passando os parâmetros em *param1.<!-- END REF-->..paramN*. Pode passar o nome de um método que pode ser chamado desde o banco ou o componente que executa o comando.

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SEND PACKET.Summary-->SEND PACKET は、シリアルポートやドキュメントにパケットを送ります。<!-- END REF-->*docRef*を指定した場合、パケットは*docRef*で参照されるドキュメントに書き込まれます。*docRef*を指定しない場合、あらかじめ [SET CHANNEL](set-channel.md) コマンドで開かれたシリアルポートまたはドキュメントにパケットを書き込みます。 

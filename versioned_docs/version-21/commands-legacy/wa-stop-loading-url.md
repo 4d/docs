@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA STOP LOADING URL.Summary-->The WA STOP LOADING URL command stops loading the resources of the current URL of the Web area designated by the *\** and *object* parameters.<!-- END REF-->

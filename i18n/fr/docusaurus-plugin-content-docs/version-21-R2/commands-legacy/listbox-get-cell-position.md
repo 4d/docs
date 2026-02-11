@@ -21,6 +21,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 2|Modifié|
+|12|Renommé|
+|16 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->La commande **LISTBOX GET CELL POSITION** retourne les numéros de la *colonne* et de la *ligne* correspondant à l’emplacement du dernier clic, de la dernière action de sélection effectuée ou des coordonnées horizontale et verticale de la souris dans la list box désignée par *\** et objet.<!-- END REF-->   

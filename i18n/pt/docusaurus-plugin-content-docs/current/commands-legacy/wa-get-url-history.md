@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R5|Modificado|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WA GET URL HISTORY.Summary-->O comando WA GET URL HISTORY retorna um ou dois arrays que contenhamm as URLs visitadas durante a sessão na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> Permite construir uma interface de navegação personalizada.

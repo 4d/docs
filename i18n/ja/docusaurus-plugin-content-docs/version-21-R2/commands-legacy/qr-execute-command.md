@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|16|変更|
+|17 R6|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->**QR EXECUTE COMMAND** コマンドは、*command*に渡された参照番号のツールバーボタンコマンドを実行します。<!-- END REF-->このコマンドの最も一般的な使い方は、[QR ON COMMAND](qr-on-command.md) コマンド経由でコード内で受け取った、ユーザーが選択したコマンドを実行することです。

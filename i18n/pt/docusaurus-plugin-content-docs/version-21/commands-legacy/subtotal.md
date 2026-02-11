@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Subtotal.Summary-->Subtotal devolve o subtotal de valores para o nível de quebra atual ou anterior.<!-- END REF--> Subtotal só funciona quando uma seleção ordenada é impressa com [PRINT SELECTION](print-selection.md) ou utilizando Imprimir no ambiente Desenho. O parâmetro *valores* deve ser de tipo real, inteiro, ou inteiro longo. Você deve atribuir o resultado da função Subtotal a uma variável localizada na área de quebra do formulário.  

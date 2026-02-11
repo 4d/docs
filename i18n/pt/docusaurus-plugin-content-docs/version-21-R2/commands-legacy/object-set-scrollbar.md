@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|12|Renomear|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->O comando OBJECT SET SCROLLBAR lhe permite mostrar ou ocultar as barras de rolagem horizontal ou vertical no objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

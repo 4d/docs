@@ -17,6 +17,29 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 4|変更|
+|11 SQL Release 5|変更|
+|12|変更|
+|13|変更|
+|14|変更|
+|15 R4|変更|
+|16 R4|変更|
+|16 R5|変更|
+|17|変更|
+|17 R5|変更|
+|19 R5|変更|
+|20 R3|変更|
+|20 R6|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->**SET DATABASE PARAMETER**コマンドを使用して、4Dデータベース内部の様々なパラメーターを変更することができます。<!-- END REF-->

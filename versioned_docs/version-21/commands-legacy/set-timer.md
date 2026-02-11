@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET TIMER.Summary-->The **SET TIMER** command activates the On Timer form event and sets, for the current form and process, the number of ticks elapsed between each On Timer form event.<!-- END REF--> 

@@ -18,6 +18,23 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|20 R6|変更|
+|19 R5|変更|
+|16 R4|変更|
+|13|変更|
+|12|変更|
+|11 SQL Release 5|変更|
+|11 SQL Release 4|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get database parameter.Summary-->**Get database parameter**コマンドを使用して、現在の4Dデータベースパラメーターの値を知ることができます。<!-- END REF-->パラメーター値が文字列の場合、それは*stringValue* 引数に返されます。

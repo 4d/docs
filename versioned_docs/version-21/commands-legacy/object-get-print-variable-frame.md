@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->The **OBJECT GET PRINT VARIABLE FRAME** command gets the current configuration of the variable frame print options for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 

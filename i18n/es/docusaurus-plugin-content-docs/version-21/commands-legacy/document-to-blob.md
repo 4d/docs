@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOCUMENT TO BLOB.Summary-->**DOCUMENT TO BLOB** carga el contenido de *documento* en *blob*.<!-- END REF--> Debe pasar el nombre de un documento existente que no esté abierto, de lo contrario se generará un error. Para dejar que el usuario seleccione el documento a cargar en el BLOB, utilice el comando [Open document](open-document.md) y la variable sistema *document* (ver ejemplo).

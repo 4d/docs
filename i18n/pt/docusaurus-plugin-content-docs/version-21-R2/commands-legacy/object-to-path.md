@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Object to path.Summary-->O comando **Object to path** devolve um nome de rota (string) em função da informação de rota que passou no parâmetro *objRota*.<!-- END REF--> As rotas abaixo são suportadas:

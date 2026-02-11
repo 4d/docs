@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->The **OBJECT SET VERTICAL ALIGNMENT** command modifies the type of vertical alignment applied to the object(s) designated by the *object* and *\** parameters.<!-- END REF-->

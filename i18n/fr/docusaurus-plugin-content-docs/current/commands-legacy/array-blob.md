@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY BLOB.Summary-->La commande **ARRAY BLOB** crée ou redimensionne un tableau d’éléments de type Blob en mémoire.<!-- END REF-->

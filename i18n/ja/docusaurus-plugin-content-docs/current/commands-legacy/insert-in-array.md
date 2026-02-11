@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.INSERT IN ARRAY.Summary-->INSERT IN ARRAYコマンドは、*array*に1つまたは複数の要素を挿入します。<!-- END REF-->引数*where*で指定した要素の前に新しい要素を挿入します。新しく挿入された要素には、配列タイプに応じた空の値が代入されます。*where*より後ろの要素は、*howMany*で指定した数だけ後ろに移動します。

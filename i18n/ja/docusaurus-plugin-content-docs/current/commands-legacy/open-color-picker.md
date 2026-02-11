@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->**OPEN COLOR PICKER**コマンドは、システムのカラーピッカーダイアログボックスを表示させます。<!-- END REF-->

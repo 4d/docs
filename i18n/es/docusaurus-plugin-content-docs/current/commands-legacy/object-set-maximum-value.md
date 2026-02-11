@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Summary-->El comando **OBJECT SET MAXIMUM VALUE** modifica el valor máximo del objeto o de los objetos designado(s) por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  

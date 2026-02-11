@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->O comando RESOURCE TYPE LIST preenche o array *resTipos* com os tipos de recursos presentes no(os) arquivo(s) de recursos aberto(s).<!-- END REF-->  

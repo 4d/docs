@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|12|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->O comando FORM SET HORIZONTAL RESIZING permite modificar por programação as propriedades de redimensionamento horizontal do formulário atual.<!-- END REF--> Automaticamente, estas propriedades são definidas no editor de formulários no ambiente Desenho. As novas propriedades são definidas para o processo atual; não são armazenadas com o formulário. 

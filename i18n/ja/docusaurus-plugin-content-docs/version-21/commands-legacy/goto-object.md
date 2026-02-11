@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|変更|
+|12|名称変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->GOTO OBJECTコマンドは、フォームのアクティブエリアとしてデータ入力オブジェクト*object* を選択するために使用します。<!-- END REF-->これはユーザがフィールドや変数をクリックしたりタブでフォーカスを移動したりするのと同じです。

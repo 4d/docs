@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.List item parent.Summary-->List item parent コマンドは、親項目の項目参照番号を返します。<!-- END REF-->

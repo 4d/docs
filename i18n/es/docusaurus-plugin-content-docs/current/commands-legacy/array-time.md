@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.ARRAY TIME.Summary-->El comando **ARRAY TIME** crea o redimensiona una array de tipo tiempo en memoria.<!-- END REF-->en 4D, las horas pueden ser procesados ​​como valores numéricos . En las versiones de 4D anteriores a v14, había que combinar un array entero largo con un formato de visualización para gestionar una array de horas.  

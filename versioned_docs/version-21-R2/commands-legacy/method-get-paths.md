@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+|18 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->The **METHOD GET PATHS** command fills the *arrPaths* array with the internal pathnames and names of methods in the application that are of the type specified by the *methodType* parameter.<!-- END REF-->

@@ -24,6 +24,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|14|Modified|
+|13|Created|
+
+</details>
+</div>
+
 :::info Compatibility
 
 This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->La commande **STRING LIST TO ARRAY** remplit le tableau *chaînes*<!-- END REF--> avec : 

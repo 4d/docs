@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->La commande **LIST OF CHOICE LISTS** retourne dans les tableaux synchronisés *tabNums* et *tabNoms* les numéros et les noms des énumérations définies dans l’éditeur d’énumérations en mode Développement.<!-- END REF--> 

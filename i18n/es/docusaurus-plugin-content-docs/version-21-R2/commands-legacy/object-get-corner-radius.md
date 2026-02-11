@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14 R4|Creado por|
+|19 R7|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->El comando **OBJECT Get corner radius** devuelve el valor actual del radio de la esquina para el objeto designado por el parámetro *objeto*.<!-- END REF--> Este valor puede haber sido definido a nivel del formulario utilizando la *propiedad radio de esquina* o para el proceso actual con el comando [OBJECT SET CORNER RADIUS](object-set-corner-radius.md).

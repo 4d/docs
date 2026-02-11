@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Summary-->La commande **REJECT NEW REMOTE CONNECTIONS** permet d'indiquer si le serveur d'application accepte ou non de nouvelles connexions depuis des 4D distants.<!-- END REF--> 

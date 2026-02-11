@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Summary-->SET DOCUMENT PROPERTIESコマンドは、引数*document* に渡した名前またはパス名を持つドキュメントについての情報を変更します。<!-- END REF-->

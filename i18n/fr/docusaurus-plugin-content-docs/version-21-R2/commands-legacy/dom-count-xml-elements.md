@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|16 R4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Count XML elements.Summary-->La commande **DOM Count XML elements** retourne le nombre d’éléments “enfants” dépendants de l’élément parent *refElément* et nommés *nomElément*.<!-- END REF-->Par défaut, **DOM Count XML elements** tient compte de la casse des caractères lors de l'évaluation du paramètre *nomElément* (par conformité avec le xml). Vous pouvez contrôler la sensibilité à la casse de cette commande à l'aide du sélecteur XML DOM case sensitivity de la commande [XML SET OPTIONS](xml-set-options.md).

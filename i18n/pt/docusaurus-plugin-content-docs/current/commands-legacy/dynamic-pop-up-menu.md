@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R3|Modificado|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->O comando Dynamic pop up menu faz aparecer um menu suspenso hierárquico na localização atual do mouse ou na localização definida pelos parâmetros opcionais *Coordx* e *Coordy*.<!-- END REF-->

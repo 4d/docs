@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get footers height.Summary-->La commande **LISTBOX Get footers height** retourne la hauteur de la ligne de pied de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->

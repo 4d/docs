@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Summary-->O comando VOLUME ATTRIBUTES retorna em bytes o tamanho, o espaço utilizado e o espaço livre do volume cujo nome se passa em *volume*.<!-- END REF-->indica um volume remoto não montado, a variável OK toma o valor 0 e os três parâmetros retornam -1.

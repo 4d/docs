@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->The **Get menu item modifiers** command returns any additional modifier(s) associated with the standard shortcut of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->

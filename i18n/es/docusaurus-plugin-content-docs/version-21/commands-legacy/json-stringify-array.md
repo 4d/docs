@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.JSON Stringify array.Summary-->El comando **JSON Stringify array** convierte el array *array* 4D en un array JSON serializado.<!-- END REF--> Este comando realiza la acción inversa del comando [JSON PARSE ARRAY](json-parse-array.md).  

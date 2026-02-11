@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Renomear|
+|11 SQL Release 2|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Summary-->O comando LISTBOX MOVED ROW NUMBER devolve dois números em *antPosição* e *novPosição* indicando respectivamente a posição anterior e a nova posição da fila movida no list box, especificados pelos parâmetros *objeto* e *\**.<!-- END REF-->

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->O comando **OBJECT SET THREE STATES CHECKBOX**  modifica para o processo atual, a propriedade de "Três Estados" da(s) caixa(s) de seleção designada(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  

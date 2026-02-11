@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get type.Summary-->La commande **OBJECT Get type** retourne le type de l’objet désigné par le(s) paramètre(s) *objet* et *\** dans le formulaire courant.<!-- END REF--> 

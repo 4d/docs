@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->La commande **DISTINCT ATTRIBUTE VALUES** crée et remplit le tableau *tabValeurs* avec les valeurs uniques présentes dans l'attribut *cheminAttribut* du champ objet *champObjet* et ce, pour la sélection courante de la table à laquelle appartient le champ.<!-- END REF--> Notez que le champ *champObjet* doit être type Objet, sinon une erreur est retournée. La commande peut être utilisée avec des champs indexés ou non indexés. 

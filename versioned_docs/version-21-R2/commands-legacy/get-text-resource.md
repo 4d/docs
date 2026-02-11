@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get text resource.Summary-->The **Get text resource** command returns the text stored in the text (“TEXT”) resource whose ID is passed in *resID*.<!-- END REF-->

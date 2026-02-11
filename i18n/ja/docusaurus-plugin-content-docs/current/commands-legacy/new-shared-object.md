@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.New shared object.Summary-->**New shared object** コマンドは新しい空の、あるいは値が入れられた共有オブジェクトを作成し、その参照を返します。<!-- END REF-->このオブジェクトにプロパティを追加、あるいはプロパティを編集する際には必ず*Use...End use* 構造でくくる必要があり、そうでない場合にはエラーが生成されます。ただし、属性の読み出しは*Use...End use* 構造の外側でも可能です。

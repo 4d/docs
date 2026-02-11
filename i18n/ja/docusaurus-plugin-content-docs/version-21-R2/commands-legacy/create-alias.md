@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->CREATE ALIASコマンドを使用して、*targetPath*に渡した目的のファイルまたはフォルダのエイリアス(Windowsでは"ショートカット" と呼ばれる) を作成します。<!-- END REF-->名前と場所は、引数*targetPath*によって決定されます。

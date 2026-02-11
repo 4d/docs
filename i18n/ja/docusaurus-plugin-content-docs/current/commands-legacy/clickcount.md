@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Clickcount.Summary-->**Clickcount** コマンドは、マウスクリックイベントのコンテキストにおいて、ユーザー同じマウスボタンを素早く連続でクリックした回数を返します。<!-- END REF-->通常、このコマンドはダブルクリックを意味する2を返します。

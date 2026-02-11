@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->NOTIFY RESOURCES FOLDER MODIFICATION コマンドを使用して、接続されたすべての4D マシンに、**Resources**フォルダが更新された旨の通知の送信を、4D Server に強制することができます。<!-- END REF-->この結果、リモートの4Dマシンはローカル**Resources**フォルダを同期できます。

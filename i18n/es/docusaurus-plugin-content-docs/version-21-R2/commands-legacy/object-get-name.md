@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get name.Summary-->El comando OBJECT Get name devuelve el nombre de un objeto de formulario.<!-- END REF--> 

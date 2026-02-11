@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->La commande **SQL SET OPTION** permet de modifier la *valeur* de l’option passée dans le paramètre *option*.<!-- END REF--> 

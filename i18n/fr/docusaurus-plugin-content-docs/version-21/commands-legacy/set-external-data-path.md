@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15|Modifié|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->La commande **SET EXTERNAL DATA PATH** permet de définir ou de modifier, pour l’enregistrement courant, l’emplacement de stockage externe du champ *leChamp* passé en paramètre.<!-- END REF-->

@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->The LISTBOX COLLAPSE command is used to collapse the break rows of the list box object designated by the *object* and *\** parameters.<!-- END REF-->

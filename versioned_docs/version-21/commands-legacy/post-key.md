@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.POST KEY.Summary-->The **POST KEY** command simulates a keystroke.<!-- END REF--> Its effect is as if the user actually entered a character on the keyboard.

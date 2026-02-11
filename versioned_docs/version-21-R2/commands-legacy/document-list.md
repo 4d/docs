@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+|13|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOCUMENT LIST.Summary-->The **DOCUMENT LIST** command populates the Text array *documents* with the names of the documents located at the location you pass in *pathname*.<!-- END REF-->You must pass an absolute pathname in the *pathname* parameter. 

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB TO PICTURE.Summary-->O comando BLOB TO PICTURE insere uma imagem armazenada em um BLOB em um campo ou variável imagem 4D, sem importar seu formato original.<!-- END REF-->

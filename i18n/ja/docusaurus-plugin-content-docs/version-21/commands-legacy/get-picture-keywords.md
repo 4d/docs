@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Summary-->**GET PICTURE KEYWORDS**コマンドは引数に渡したピクチャーに割り当てられたキーワードのリストを*arrKeywords*配列に返します。<!-- END REF-->メタデータを使用して設定されたキーワードだけが返されます。他のタイプのメタデータはこのコマンドから無視されます。このコマンドは、このタイプのメタデータをサポートするピクチャー (JPEG, TIFF, 等) に対してのみ動作します。

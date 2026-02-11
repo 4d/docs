@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->REGENERATE MISSING TABLE コマンドは tableName引数に渡された名前の失われたテーブルを再構築します。<!-- END REF-->失われたテーブルが再構築されると、ストラクチャエディタにそれらが現れ、データに再びアクセスできるようになります。

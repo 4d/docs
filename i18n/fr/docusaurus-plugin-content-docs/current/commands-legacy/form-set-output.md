@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R6|Modifié|
+|12|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->**FORM SET OUTPUT** vous permet de définir *formulaire* ou *formUtilisateur* comme formulaire sortie courant de *laTable* pour le process courant.<!-- END REF--> *formulaire* doit appartenir à *laTable*.

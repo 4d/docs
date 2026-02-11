@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+|14|Modified|
+|15|Modified|
+|15 R4|Modified|
+|18 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->The **METHOD GET CODE** command returns, in the *code* parameter, the contents of the method(s) designated by the *path* parameter.<!-- END REF--> This command can return the code of all types of methods: database methods, class definitions, triggers, project methods, form methods and object methods.

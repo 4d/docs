@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->The STOP SQL SERVER command stops the integrated SQL server in the 4D application where it has been executed.<!-- END REF-->

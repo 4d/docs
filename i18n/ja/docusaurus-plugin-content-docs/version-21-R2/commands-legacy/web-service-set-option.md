@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 3|変更|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 予備的なお知らせ 
 
 <!--REF #_command_.WEB SERVICE SET OPTION.Summary-->このコマンドは上級Webサービスユーザのためにデザインされています。<!-- END REF-->使用するかどうかは任意です。

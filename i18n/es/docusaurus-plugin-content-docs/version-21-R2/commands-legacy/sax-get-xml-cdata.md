@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 3|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SAX GET XML CDATA.Summary-->El comando **SAX GET XML CDATA**permite recuperar el *valor* CDATA de un elemento XML existente en el documento XML referenciado por *documento*.<!-- END REF--> Este comando debe llamarse con el evento SAX XML CDATA. Para mayor información sobre eventos SAX, consulte la descripción del comando [SAX Get XML node](sax-get-xml-node.md). 

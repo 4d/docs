@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->The **DISTINCT ATTRIBUTE VALUES** command creates and populates the *valuesArray* with non-repeated (unique) values coming from the *path* attribute in the *objectField* field for the current selection of the table to which this field belongs.<!-- END REF--> Note that *objectField* must be of the Object type, otherwise an error is returned. The command can be used with indexed or non-indexed fields. 

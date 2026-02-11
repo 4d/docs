@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SEND RAW DATA.Summary-->**WEB SEND RAW DATA**コマンドを使用すると、4D Webサーバはチャンクが可能な"生"HTTPデータを送ります。<!-- END REF-->

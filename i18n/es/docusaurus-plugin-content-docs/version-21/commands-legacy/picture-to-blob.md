@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.PICTURE TO BLOB.Summary-->El comando PICTURE TO BLOB convierte una imagen almacenada en una variable o en un campo 4D en otro formato y ubica la imagen resultante en un BLOB.<!-- END REF-->

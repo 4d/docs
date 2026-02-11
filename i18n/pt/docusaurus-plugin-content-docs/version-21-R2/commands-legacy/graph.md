@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|13|Modificado|
+|14|Modificado|
+|15 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GRAPH.Summary-->O comando **GRAPH** cria um gráfico em uma área de gráfico ou uma variável imagem localizada em um formulário a partir dos valores provenientes dos arrays.<!-- END REF-->

@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|14 R5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST Get content type.Summary-->The **ST Get content type** command returns the type of content found in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 

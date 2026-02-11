@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Renommé|
+|15 R5|Modifié|
+|20|Modifié|
+|20 R4|Modifié|
+|20 R4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get format.Summary-->La commande **OBJECT Get format** retourne le format d’affichage courant appliqué à l’objet spécifié par le paramètre *objet*.<!-- END REF-->

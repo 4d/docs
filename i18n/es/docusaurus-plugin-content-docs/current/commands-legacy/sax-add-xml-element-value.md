@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->El comando **SAX ADD XML ELEMENT VALUE** añade directamente en el documento XML referenciado por *documento* los *datos* sin convertirlos.<!-- END REF--> Este comando es equivalente, por ejemplo, a insertar un archivo adjunto en el cuerpo de un e-mail.

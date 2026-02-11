@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Split string.Summary-->La commande **Split string** retourne une collection de chaînes, créée à partir du découpage de *chaîneASéparer* en sous-chaînes aux limites définies par le paramètre *séparateur*.<!-- END REF--> Les sous-chaînes dans la collection retournée n'incluent pas le *séparateur* lui-même.

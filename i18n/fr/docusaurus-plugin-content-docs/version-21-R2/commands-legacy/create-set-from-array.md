@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6.7|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->La commande **CREATE SET FROM ARRAY** crée l’ensemble *nomEnsemble*<!-- END REF--> à partir :

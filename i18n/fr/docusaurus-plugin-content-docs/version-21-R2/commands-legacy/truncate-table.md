@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->La commande **TRUNCATE TABLE** supprime tous les enregistrements de *laTable* de façon très rapide.<!-- END REF--> Après l’appel de la commande, il n’y a plus de sélection courante ni d’enregistrement courant.

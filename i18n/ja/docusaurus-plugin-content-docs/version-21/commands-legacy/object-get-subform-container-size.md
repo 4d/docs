@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->**OBJECT GET SUBFORM CONTAINER SIZE**コマンドは親フォーム中に表示されているカレントサブフォームオブジェクトの幅と高さをピクセル単位で返します。<!-- END REF-->

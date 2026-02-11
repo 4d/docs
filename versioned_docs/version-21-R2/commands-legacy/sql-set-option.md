@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->The **SQL SET OPTION** command modifies the *value* of the option passed in *option*.<!-- END REF--> 

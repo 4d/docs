@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get visible.Summary-->O comando OBJECT Get visible devolve True se o objeto ou grupo de objetos designado por *objeto* tem o atributo visível e do contrário False.<!-- END REF-->  

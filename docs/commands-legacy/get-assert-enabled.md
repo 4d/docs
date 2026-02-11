@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get assert enabled.Summary-->The **Get assert enabled** command returns True or False according to whether or not assertions are enabled in the current process.<!-- END REF--> For more information about assertions, please refer to the description of the [ASSERT](assert.md) command. 

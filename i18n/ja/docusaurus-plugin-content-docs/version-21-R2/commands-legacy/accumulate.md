@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ACCUMULATE.Summary-->ACCUMULATEは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってプリントするフォームレポート中で累計するフィールドまたは変数を指定します。<!-- END REF-->

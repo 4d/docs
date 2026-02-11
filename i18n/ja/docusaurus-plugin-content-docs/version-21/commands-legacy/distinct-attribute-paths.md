@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->**DISTINCT ATTRIBUTE PATHS** コマンドは、*objectField* に受け渡したインデックスがついているオブジェクトフィールドが所属するテーブルのカレントセレクションについて、同オブジェクトフィールドから検出される、重複しないパスのリストを返します。<!-- END REF-->に受け渡すオブジェクトフィールドはインデックスされている必要があり、そうでない場合にはエラーが返されます。

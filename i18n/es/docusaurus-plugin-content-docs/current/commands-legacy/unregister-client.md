@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->El comando UNREGISTER CLIENT da de baja un registro de un equipo 4D Client.<!-- END REF--> El cliente debe haber sido registrado por el comando REGISTER CLIENT. 

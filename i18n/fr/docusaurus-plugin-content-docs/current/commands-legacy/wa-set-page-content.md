@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 2|Créé|
+
+</details>
+</div>
+
 ## Note de compatibilité 
 
 <!--REF #_command_.WA SET PAGE CONTENT.Summary-->Cette commande historique n'est plus vraiment utile.<!-- END REF--> Avec le renforcement de la sécurité dans les navigateurs modernes, il existe de plus en plus de restrictions sur la modification du contenu des pages "à la volée". Une approche plus fiable consiste à créer un fichier local (par exemple dans le dossier temporaire) et à utiliser [WA OPEN URL](wa-open-url.md) pour le charger. Pour effacer le contenu, il suffit d'appeler **WA OPEN URL**(myArea;”about:blank”).

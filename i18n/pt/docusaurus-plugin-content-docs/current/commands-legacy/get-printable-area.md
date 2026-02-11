@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.8.1|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->O comando GET PRINTABLE AREA devolve o tamanho em píxels da área de impressão nos parâmetros *altura* e *largura* ou tamanho.<!-- END REF--> Este tamanho depende dos parâmetros de impressão atuais, a orientação do papel, etc. 

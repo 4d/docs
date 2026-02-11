@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Nota de compatibilidade 
 
 <!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, apesar de ser um comando herdado, ainda é compatível e pode permanecer em sua aplicação, não é necessário voltar a escrever o código existente.<!-- END REF--> Entretanto, é melhor usar [CREATE INDEX](create-index.md) y [DELETE INDEX](delete-index.md) para administrar os índices porque oferecem mais funcionalidades.

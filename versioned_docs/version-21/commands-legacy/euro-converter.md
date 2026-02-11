@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Euro converter.Summary-->The **Euro converter** command converts any value from and to the different currencies belonging to “Euroland” and the Euro currency itself.<!-- END REF-->

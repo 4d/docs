@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Data file.Summary-->La fonction **Data file** retourne le nom long (c'est-à-dire le chemin d'accès complet au fichier, y compris son nom) du fichier de données de la base avec laquelle vous êtes en train de travailler.<!-- END REF-->

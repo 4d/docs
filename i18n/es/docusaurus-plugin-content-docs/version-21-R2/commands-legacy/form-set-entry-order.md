@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R4|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->El comando **FORM SET ENTRY ORDER** permite definir dinámicamente el orden de entrada del formulario actual para el proceso actual basado en el array *nomObjetos*.<!-- END REF--> 

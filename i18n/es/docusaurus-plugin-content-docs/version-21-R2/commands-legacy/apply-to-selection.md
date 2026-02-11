@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** aplica *sentencia* a cada registro de la selección actual de *tabla*.<!-- END REF--> La *sentencia* puede ser una línea de instrucciones o un método. Si *sentencia* modifica un registro de *tabla*, el registro modificado se guarda. Si *sentencia* no modifica un registro, el registro no se guarda. Si la selección actual está vacía, **APPLY TO SELECTION** no tiene efecto. Si la relación es automática, la *sentencia* puede contener un campo de una tabla relacionada.

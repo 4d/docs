@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INSERT IN BLOB.Summary-->**INSERT IN BLOB** insère le nombre d'octets spécifié par *nombre* dans le BLOB *blob* à la position spécifiée par *décalage*.<!-- END REF--> La taille du BLOB est augmentée de *nombre* d'octets.

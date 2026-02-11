@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->GET RELATION PROPERTIESコマンドは、*tableNum*および*fieldNum*、または*fieldPtr*で指定した元のフィールドを起点とするリレート（存在する場合）のプロパティを返します。<!-- END REF-->

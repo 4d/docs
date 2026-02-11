@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->O comando OPEN ADMINISTRATION WINDOW exibe a janela de administração do servidor no equipo que executa.<!-- END REF--> A janela de administração 4D Server pode ser usada para visualizar os parâmetros atuais e realizar diversas operações de manutenção (veja a Guia de Referência 4D Server). Começando com a versão 11 do 4D Server, essa janela pode ser exibida a partir de uma máquina cliente: 

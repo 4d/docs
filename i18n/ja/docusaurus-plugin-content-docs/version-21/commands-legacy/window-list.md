@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WINDOW LIST.Summary-->WINDOW LIST コマンドは配列 *windows* を生成し、実行中のすべての (カーネルおよびユーザ) プロセスで開かれているウィンドウの参照番号を返します。<!-- END REF-->"可視状態"のウィンドウ(非表示になっていないウィンドウ)のみが返されます。

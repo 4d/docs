@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get font.Summary-->The OBJECT Get font command returns the name of the character font used by the form object(s) designated by *object*.<!-- END REF-->

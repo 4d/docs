@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Summary-->O comando DOM REMOVE XML ATTRIBUTE remove, se existir, o atributo designado por *nomAtrib* do elemento XML cuja referência é passada no parâmetro *refElement*.<!-- END REF-->   

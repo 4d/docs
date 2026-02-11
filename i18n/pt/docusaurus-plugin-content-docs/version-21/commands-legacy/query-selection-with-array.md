@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->O comando QUERY SELECTION WITH ARRAY busca na tabela do campo passado como primeiro parâmetro os registros para os quais o valor de *campoAlvo* for igual a ao menos um dos valores dos elementos no *array*.<!-- END REF--> Os registros encontrados constituem a nova seleção atual. 

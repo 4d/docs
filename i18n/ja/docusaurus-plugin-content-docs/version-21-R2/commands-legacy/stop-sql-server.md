@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->STOP SQL SERVERコマンドは、実行済み4Dアプリケーションの統合SQLサーバを停止します。<!-- END REF-->

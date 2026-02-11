@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+|12.1|変更|
+|14|変更|
+|14|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST Get plain text.Summary-->**ST Get plain text** コマンドは*\**と*object*引数で指定したテキスト変数やフィールドからスタイルタグを取り除き、プレーンテキストを返します。<!-- END REF-->

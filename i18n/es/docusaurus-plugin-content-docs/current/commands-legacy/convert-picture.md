@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Modificado|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CONVERT PICTURE.Summary-->El comando CONVERT PICTURE convierte *imagen* en un nuevo tipo.<!-- END REF--> 

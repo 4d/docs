@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->**APPEND DATA TO PASTEBOARD** ajoute dans le conteneur les données du type spécifié dans *typeDonnées* présentes dans le BLOB *données*.<!-- END REF-->

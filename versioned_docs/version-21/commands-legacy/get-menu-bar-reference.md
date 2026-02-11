@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get menu bar reference.Summary-->The **Get menu bar reference** command returns the ID of the current menu bar or the menu bar of a specific process.<!-- END REF-->

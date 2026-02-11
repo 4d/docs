@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESUME INDEXES.Summary-->The **RESUME INDEXES** command reactivates all the indexes of *aTable* when they have been paused previously using the [PAUSE INDEXES](pause-indexes.md) command.<!-- END REF--> If the indexes of *aTable* have not been paused, this command does nothing. 

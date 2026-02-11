@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+|16 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->The **OBJECT SET SUBFORM** command dynamically modifies the detail form as well as, optionally, the screen list form associated with the subform object designated by the *\**, *object* parameters.<!-- END REF-->

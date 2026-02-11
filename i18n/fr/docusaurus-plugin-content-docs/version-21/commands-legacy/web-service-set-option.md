@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Note préliminaire 
 
 <!--REF #_command_.WEB SERVICE SET OPTION.Summary-->Cette commande est destinée aux utilisateurs avancés des Web Services.<!-- END REF--> Son emploi est facultatif. 

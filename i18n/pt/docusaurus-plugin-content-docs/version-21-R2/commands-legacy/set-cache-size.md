@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET CACHE SIZE.Summary-->O comando SET CACHE SIZE define dinâmicamente o tamanho da cache do banco de dados e, opcionalmente, permite definir o tamanho minino em bytes a partir do qual começa a liberar memória.<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get window title.Summary-->Get window title コマンドは、*window*に渡されたウィンドウ参照番号を持つウィンドウのタイトルを返します。<!-- END REF-->ウィンドウが存在しない場合、空の文字列が返されます。 

@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R3|Modificado|
+|15 R4|Modificado|
+|15|Modificado|
+|14|Modificado|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->O comando **METHOD GET CODE** devolve no parâmetro *codigo*, o conteúdo dos métodos designados pelo parâmetro *rota*.<!-- END REF--> Este comando pode devolver o código de todos os tipos de métodos: métodos base, triggers, métodos projeto, métodos formulário e métodos objeto.  

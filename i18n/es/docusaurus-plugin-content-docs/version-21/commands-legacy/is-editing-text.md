@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is editing text.Summary-->El comando **Is editing text** devuelve **True** si el usuario está ingresando valores en un objeto de formulario de entrada, y **False** en todos los demás casos.<!-- END REF-->

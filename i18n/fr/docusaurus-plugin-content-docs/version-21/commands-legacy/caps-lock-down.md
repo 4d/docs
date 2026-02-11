@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Caps lock down.Summary-->**Caps lock down** retourne Vrai si la touche **Verrouillage Majuscule** est enfoncée.<!-- END REF-->

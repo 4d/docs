@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA Get page title.Summary-->WA Get page title コマンドは、*\** と *object* 引数で指定したWebエリアの現在のページまたは表示されているページのタイトルを返します。<!-- END REF-->タイトルはHTMLのtitleタグに対応します。

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R3|Créé|
+
+</details>
+</div>
+
 ## Note 
 
 <!--REF #_command_.OPEN DATABASE.Summary-->La commande **OPEN DATABASE** referme la base de données 4D courante et ouvre à la volée la base désignée par le paramètre *cheminFichier*.<!-- END REF--> Cette commande est utile dans le cadre de tests automatiques, pour rouvrir une base après compilation, ou pour permettre à une application 4D fusionnée de sélectionner le serveur de la base auquel se connecter.

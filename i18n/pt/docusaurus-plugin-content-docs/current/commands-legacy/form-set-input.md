@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R6|Modificado|
+|12|Renomear|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->O comando FORM SET INPUT define o formulario de entrada atual de *tabela* para *form* ou *userForm*.<!-- END REF--> O formulario deve pertencer a *tabela*.

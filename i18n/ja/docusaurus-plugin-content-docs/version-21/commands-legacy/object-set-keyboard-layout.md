@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->**OBJECT SET KEYBOARD LAYOUT**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたキーボードレイアウトをカレントプロセス内で動的に変更します。<!-- END REF-->

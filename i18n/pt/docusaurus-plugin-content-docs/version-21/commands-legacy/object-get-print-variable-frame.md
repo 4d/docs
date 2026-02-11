@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->O comando **OBJECT GET PRINT VARIABLE FRAME** obtém a configuração atual das opções de impressão em tamanho variável do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  

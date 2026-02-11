@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get group access.Summary-->La commande **Get group access** retourne l'adhésion du compte utilisateur 4D à la session courante.<!-- END REF--> Si l'utilisateur n'appartient à aucun groupe de la session, une collection vide est retournée.

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL Release 3|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->El comando TRUNCATE TABLE borra rápidamente todos los registros de tabla.<!-- END REF--> Si tabla ya está vacía, TRUNCATE TABLE no hace nada. Después de llamar el comando, no hay una selección actual ni un registro actual. 

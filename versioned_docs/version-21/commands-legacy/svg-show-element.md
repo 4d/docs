@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->The SVG SHOW ELEMENT command moves the *pictureObject* SVG document in order to show the element whose "id" attribute is specified by the *id* parameter.<!-- END REF--> 

@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|変更|
+|16 R5|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Date.Summary-->**Date**コマンドは、*expression* を解釈し、日付を返します。<!-- END REF-->引数は、ISO日付フォーマットかシステムレベルで設定される地域設定に従わなければなりません。

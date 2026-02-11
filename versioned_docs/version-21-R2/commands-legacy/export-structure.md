@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R4|Created|
+|20 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->The **EXPORT STRUCTURE** command exports the structure definition of the current 4D database in *exportedStructure*.<!-- END REF-->

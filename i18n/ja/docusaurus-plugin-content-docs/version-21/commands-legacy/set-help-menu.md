@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|20|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET HELP MENU.Summary-->**SET HELP MENU** コマンドを使用すると、アプリケーションモードにおいてデフォルトの4D **ヘルプ**メニューの内容を、 *menuCol* 引数に渡したコレクションで置き換えることができます。<!-- END REF-->

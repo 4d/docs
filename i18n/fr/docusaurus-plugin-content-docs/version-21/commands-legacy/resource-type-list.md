@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->La commande **RESOURCE TYPE LIST** remplit le tableau *resTypes* avec les types des ressources présentes dans le(s) fichier(s) de resources ouvert(s).<!-- END REF-->

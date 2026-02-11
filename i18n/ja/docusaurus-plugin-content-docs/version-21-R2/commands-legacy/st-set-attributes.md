@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+|12.1|変更|
+|14|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->**ST SET ATTRIBUTES** コマンドを使用して、 *object*で指定したフォームオブジェクト中の1つ以上のスタイル属性を変更できます。<!-- END REF--> 

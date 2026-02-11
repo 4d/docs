@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Modificado|
+|6.5.3|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.COMPRESS BLOB.Summary-->O comando COMPRESS BLOB comprime o BLOB blob usando o algoritmo de compressão interno de 4D.<!-- END REF--> Este comando só comprime o BLOB cujo tamanho é superior a 255 bytes.

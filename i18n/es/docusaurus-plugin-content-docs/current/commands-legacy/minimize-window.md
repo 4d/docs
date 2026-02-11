@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->El comando MINIMIZE WINDOW define el tamaño de la ventana, cuyo número se pasó en *ventana*, del tamaño que tenía antes de ser maximizada.<!-- END REF--> Si se omite *ventana*, el comando aplica a cada ventana de la aplicación (Windows) o a la ventana del primer plano del proceso actual (en Mac OS). 

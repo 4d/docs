@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get group access.Summary-->The **Get group access** command returns the memberships of the 4D user account for the current session.<!-- END REF--> If the user does not belong to any group in the session, an empty collection is returned. 

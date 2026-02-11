@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15|Modifié|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Is defined.Summary-->La commande **OB Is defined** retourne **Vrai** si *objet* ou *propriété* est défini, et **Faux** sinon.<!-- END REF-->doit avoir été créé via la commande *C\_OBJECT* ou désigner un champ objet 4D.

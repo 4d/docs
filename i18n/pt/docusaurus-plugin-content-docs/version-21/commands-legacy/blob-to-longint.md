@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB to longint.Summary-->O comando BLOB to longint retorna um valor de tipo Inteiro longo (4 bytes) lido do BLOB *blob*.<!-- END REF-->

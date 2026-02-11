@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get value.Summary-->**OBJECT Get value** コマンドは、*objectName* 引数で指定されたフォームオブジェクトのデータソースのカレント値を返します。<!-- END REF-->

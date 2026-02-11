@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get type.Summary-->The **OBJECT Get type** command returns the type of the object designated by the *object* and *\** parameters in the current form.<!-- END REF--> 

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISABLE MENU ITEM.Summary-->The DISABLE MENU ITEM command disables the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF-->You can pass -1 in *menuItem* in order to designate the last item added to the *menu*.

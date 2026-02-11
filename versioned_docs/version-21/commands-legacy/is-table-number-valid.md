@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is table number valid.Summary-->The Is table number valid command returns True if the table whose number is passed in the *tableNum* parameter exists in the database and False otherwise.<!-- END REF--> Keep in mind that the command returns False if the table is in the Trash of the Explorer.

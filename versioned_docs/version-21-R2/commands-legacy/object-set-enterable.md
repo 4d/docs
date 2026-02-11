@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+|19 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->The **OBJECT SET ENTERABLE** command makes the form objects specified by *object* either enterable or non-enterable and can set the *focusable* attribute.<!-- END REF-->

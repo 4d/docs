@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Modified|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->The OBJECT GET RGB COLORS command returns the foreground and background colors of the object or group of objects designated by *object*.<!-- END REF-->

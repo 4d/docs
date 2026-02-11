@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Null.Summary-->**Null** devolve o valor **null** de tipo *null*.<!-- END REF-->

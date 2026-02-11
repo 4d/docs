@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.BLOB to text.Summary-->El comando BLOB to text devuelve un valor de tipo Texto leído del BLOB *blob*.<!-- END REF-->

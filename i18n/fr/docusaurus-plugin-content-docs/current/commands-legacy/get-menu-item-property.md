@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R3|Modifié|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->La commande **GET MENU ITEM PROPERTY** retourne dans le paramètre *valeur* la valeur courante de la propriété de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6.8.3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->**RECEIVE BUFFER** は、[SET CHANNEL](set-channel.md)コマンドで前もって開いたシリアルポートからデータを読み込みます。<!-- END REF-->シリアルポートは、コマンドで読み込まれるまで内容を保持するバッファを持ちます。**RECEIVE BUFFER**はシリアルバッファから文字を読み込み、*receiveVar*に格納して、バッファを消去します。バッファ中に文字が存在しなければ、*receiveVar*は何も含みません。

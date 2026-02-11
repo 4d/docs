@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PICTURE CODEC LIST.Summary-->La commande **PICTURE CODEC LIST** remplit le tableau *tabCodecs* avec la liste des identifiants des codecs d’images disponibles sur la machine où elle est exécutée.<!-- END REF--> Cette liste comporte les codecs des formats d’images gérés en natif par 4D.

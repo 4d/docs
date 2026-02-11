@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Summary-->VOLUME ATTRIBUTESコマンドは、引数*volume*に渡した名前を持つボリュームのサイズ、使用サイズおよび空きサイズをバイト単位で表わして返します。<!-- END REF-->*volume*がマウントされていないリモートボリュームを示す場合、OK変数に0が代入され、3つの引数は-1を返します。

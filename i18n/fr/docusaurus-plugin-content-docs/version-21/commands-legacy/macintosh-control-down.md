@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Macintosh control down.Summary-->**Macintosh control down** retourne Vrai si la touche **Control** du Macintosh est enfoncée.<!-- END REF-->Lorsqu'elle est appelée sous Windows, la fonction **Macintosh control down** retourne toujours Faux. Cette touche Macintosh n'a pas d'équivalent sous Windows.

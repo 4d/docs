@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Nota de compatibilidad 
 
 <!--REF #_command_.Focus object.Summary-->Este comando sólo se conserva por razones de compatibilidad.<!-- END REF--> A partir de la versión 12 de 4D, se recomienda utilizar el comando [OBJECT Get pointer](object-get-pointer.md "OBJECT Get pointer").

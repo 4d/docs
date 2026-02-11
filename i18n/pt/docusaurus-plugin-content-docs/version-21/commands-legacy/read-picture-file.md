@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.READ PICTURE FILE.Summary-->O comando READ PICTURE FILE  permite abrir a imagem guardada no arquivo do disco *nomeArquivo* e carregá-la no campo ou variável 4D *imagem*.<!-- END REF-->

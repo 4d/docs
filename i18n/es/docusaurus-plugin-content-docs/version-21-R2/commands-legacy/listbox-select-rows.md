@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R3|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->El comando **LISTBOX SELECT ROWS** selecciona las líneas de un list box selección de entidad o un list box colección que corresponde a las entidades u objetos contenidos en el parámetro de *seleccion*.<!-- END REF-->

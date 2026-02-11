@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE USER.Summary-->The **DELETE USER** command deletes the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command. 

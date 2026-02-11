@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Displayed line number.Summary-->La commande **Displayed line number** fonctionne uniquement dans le contexte de l’événement formulaire On Display Detail.<!-- END REF--> Elle retourne le numéro de la ligne en cours de traitement durant l’affichage à l’écran d’une liste d’enregistrements ou des lignes d'une list box. Si **Displayed line number** est appelée en-dehors de l’affichage d’une liste ou d'une listbox, elle retourne 0.

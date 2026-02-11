@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET RESOURCE.Summary-->o comando GET RESOURCE retorna no campo o a variável BLOB *resDados* o conteúdo do recurso cujo tipo e número se passa em *resTipo* e *resNum*.<!-- END REF-->  

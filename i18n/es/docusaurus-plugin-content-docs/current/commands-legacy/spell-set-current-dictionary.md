@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Modificado|
+|13|Renombrar|
+|13|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->El comando **SPELL SET CURRENT DICTIONARY** reemplaza el diccionario actual por el especificado en el parámetro *diccionario*.<!-- END REF--> El diccionario actual se utiliza para la corrección ortográfica integrada de 4D (para mayor información, consulte el *Manual de Diseño*) como también de 4D Write Pro. La modificación del diccionario actual repercute inmediatamente en todos los procesos de la base para la sesión, así como también en las áreas 4D Write Pro.   

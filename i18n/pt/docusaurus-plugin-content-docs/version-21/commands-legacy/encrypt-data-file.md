@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Encrypt data file.Summary-->O comando **Encrypt data file** se utiliza para cifrar ou cifrar novamente o arquivo de dados designado pelo parâmetro *rotaDados* associado ao parâmetro *rotaEstrutura*.<!-- END REF--> Também pode ser utilizado para eliminar o cifrado do banco de dados. O comando não modifica os arquivos originais, devolve o nome de rota completo da pasta criada para respaldar o arquivo de dados original.

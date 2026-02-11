@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|14|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->ARRAY TO LIST コマンドは、配列*array*の要素を使用して、(デザインモードのリストエディタで作成される)階層リストまたは選択リスト*list*リストを作成または置き換えます。<!-- END REF-->

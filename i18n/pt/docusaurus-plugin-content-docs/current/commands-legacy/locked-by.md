@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R4|Modificado|
+|14 R3|Renomear|
+|11 SQL Release 2|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LOCKED BY.Summary-->LOCKED BY devolve a informação sobre o usuário e o processo que tem bloqueado um registro.<!-- END REF--> O número do processo(\*), o nome de usuário, o nome do equipo assim como o nome do processo são devolvidos nas variáveis *processo, usuario4D, usuarioSessao*, e *nomeProcesso*. Pode utilizar esta informação em uma caixa de diálogo personalizada para advertir al usuário quando um registro está bloqueado.  

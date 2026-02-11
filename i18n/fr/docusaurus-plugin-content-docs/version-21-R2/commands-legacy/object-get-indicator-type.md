@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->La commande **OBJECT Get indicator type** retourne le type d’indicateur courant affecté au(x) thermomètre(s) désigné(s) par le(s) paramètre(s) *objet* et *\**.<!-- END REF-->

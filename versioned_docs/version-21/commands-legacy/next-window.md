@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Next window.Summary-->The Next window command returns the window reference number of the window “behind” the window you pass in *window* (based on the front-to-back order of the windows).<!-- END REF-->

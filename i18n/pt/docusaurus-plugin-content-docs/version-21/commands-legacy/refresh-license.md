@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Refresh license.Summary-->O comando **Refresh license** atualiza a licença atual de servidor 4D.<!-- END REF--> Conecta o servidor com o banco de dados de clientes 4D e ativa automaticamente qualquer licença nova ou atualizada (por exemplo, clientes comprados adicionais) relacionada com a licença atual.

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->El comando **OBJECT Get keyboard layout** devuelve la configuración del teclado actual asociada a los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  

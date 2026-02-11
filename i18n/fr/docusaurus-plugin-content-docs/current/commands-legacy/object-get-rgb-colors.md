@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R6|Modifié|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->La commande **OBJECT GET RGB COLORS** retourne les couleurs d’avant-plan et d’arrière-plan de l'objet ou du groupe d'objets désigné(s) par *objet*.<!-- END REF-->

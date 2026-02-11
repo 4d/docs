@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.TRIGGER PROPERTIES.Summary-->O comando TRIGGER PROPERTIES retorna a informação sobre o nível de execução do trigger que se passa em *nivelTrigger*.<!-- END REF--> Pode utilizar [Trigger level](trigger-level.md) junto com Trigger level para realizar diferentes ações em função da cascada do trigger. Para maior informação, consulte .  

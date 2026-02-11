@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->GET LIST ITEM ICON コマンドは、*list*に参照番号またはオブジェクト名を渡したリスト内の、*itemRef*項目参照の項目に割り当てられたアイコンを*icon*に返します。<!-- END REF-->  

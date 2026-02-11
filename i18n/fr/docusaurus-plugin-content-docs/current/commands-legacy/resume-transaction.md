@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESUME TRANSACTION.Summary-->La commande **RESUME TRANSACTION** réactive la transaction qui a été suspendue à l'aide de la commande [SUSPEND TRANSACTION](suspend-transaction.md) au niveau correspondant dans le process courant.<!-- END REF--> Toute opération effectuée après l'appel de cette commande retourne sous le contrôle de la transaction (hormis si plusieurs transactions suspendues sont imbriquées). 

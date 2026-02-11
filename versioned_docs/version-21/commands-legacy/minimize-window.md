@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->The MINIMIZE WINDOW command sets the size of the window whose number is passed as *window* to the size it was before being maximized.<!-- END REF--> If *window* is omitted, the command applies to each window of the application (Windows) or to the frontmost window of the process (on Mac OS).

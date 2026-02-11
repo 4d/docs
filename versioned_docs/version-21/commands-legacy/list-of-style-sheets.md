@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->The **LIST OF STYLE SHEETS** command returns the list of application style sheets in the *arrStyleSheets* array.<!-- END REF-->

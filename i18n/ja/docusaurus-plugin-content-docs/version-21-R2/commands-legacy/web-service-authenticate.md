@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 3|変更|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Summary-->**WEB SERVICE AUTHENTICATE**コマンドは、クライアントアプリケーションの認証を必要とするWeb サービスの使用を可能にします (シンプルな認証) 。<!-- END REF-->BASICとDIGEST メソッド、そしてプロキシの存在がサポートされています。

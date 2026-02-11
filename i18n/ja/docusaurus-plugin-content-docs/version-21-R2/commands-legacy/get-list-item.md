@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->GET LIST ITEM コマンドは、リスト参照番号またはオブジェクト名が*list*であるリスト中、*itemPos*で指定した項目に関する情報を返します。<!-- END REF-->

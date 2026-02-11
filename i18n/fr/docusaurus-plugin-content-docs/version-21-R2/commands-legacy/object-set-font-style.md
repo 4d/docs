@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6|Modifié|
+|12|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->**OBJECT SET FONT STYLE** assigne le style de police *style* à ou aux objet(s) de formulaire désigné(s) par *objet*.<!-- END REF-->   

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->**PAUSE INDEXES**コマンドは、*aTable* のインデックスを、プライマリーキーのインデックスを除き一時的に無効にします。<!-- END REF-->.

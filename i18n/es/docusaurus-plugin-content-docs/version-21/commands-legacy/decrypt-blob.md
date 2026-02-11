@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.7|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->El comando DECRYPT BLOB descifra el contenido del BLOB aDescrifrar utilizando la llave pública del emisor *enviarLlavePub* y opcionalmente la llave privada del receptor *recepLlavePriv*.<!-- END REF-->

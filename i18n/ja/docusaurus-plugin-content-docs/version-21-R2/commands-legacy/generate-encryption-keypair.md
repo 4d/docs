@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->GENERATE ENCRYPTION KEYPAIR コマンドは新しく1対のRSA鍵を生成します。<!-- END REF-->4Dの非対称暗号化機能はこの鍵を元にしていて、一般的にこれはネットワーク越しに安全なデータ交換を行う際(例: 4D Web サーバーとTLSプロトコルを使用する)に必要となります。

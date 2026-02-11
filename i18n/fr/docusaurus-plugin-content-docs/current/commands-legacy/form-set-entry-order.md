@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->La commande **FORM SET ENTRY ORDER** permet de fixer dynamiquement l'ordre de saisie du formulaire courant pour le process en cours, basé sur le tableau *nomsObjets*.<!-- END REF--> 

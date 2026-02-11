@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.New shared object.Summary-->The **New shared object** command creates a new empty or prefilled shared object and returns its reference.<!-- END REF--> Adding or editing a property to this object must be surrounded by the *Use...End use* structure, otherwise an error is generated. Reading a property without a *Use...End use* structure is, however, possible. 

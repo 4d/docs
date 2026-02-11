@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Windows Ctrl down.Summary-->**Windows Ctrl down** retourne Vrai si la touche **Ctrl** Windows est enfoncée.<!-- END REF-->Lorsqu'elle est appelée sous Mac OS, **Windows Ctrl down** retourne Vrai si la touche Macintosh **Commande** est enfoncée.

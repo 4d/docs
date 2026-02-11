@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12.2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->La commande **FORM SCREENSHOT** retourne un formulaire sous forme d'image.<!-- END REF--> Cette commande admet deux syntaxes différentes : en fonction de la syntaxe utilisée, vous pouvez obtenir soit l'image d'un formulaire exécuté, soit l'image du formulaire dans l'éditeur de formulaires.

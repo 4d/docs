@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ABORT PROCESS BY ID.Summary-->O comando **ABORT PROCESS BY ID** detém um processo específico no servidor 4D.<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->The **CREATE FOLDER** command creates a folder according to the pathname you pass in *folderPath*.<!-- END REF-->

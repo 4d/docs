@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Timestamp.Summary-->La commande **Timestamp** retourne l'heure UTC courante au format ISO avec millisecondes, i.<!-- END REF-->e. aaaa-MM-jjTHH:mm:ss.SSSZ. Notez que le caractère "Z" indique le fuseau horaire GMT.

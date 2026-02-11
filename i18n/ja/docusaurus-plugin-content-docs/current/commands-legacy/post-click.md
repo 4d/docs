@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.POST CLICK.Summary-->POST CLICK コマンドはマウスクリックをシミュレートします。<!-- END REF-->これは、ユーザが実際にマウスボタンをクリックした場合と同様の結果を生じます。

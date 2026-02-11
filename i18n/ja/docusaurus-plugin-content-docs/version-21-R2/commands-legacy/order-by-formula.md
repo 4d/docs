@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA**は、カレントプロセスの*aTable*のカレントレコードセレクションをソートします。<!-- END REF-->ソートが終了すると、セレクションの先頭レコードがカレントレコードとなります。**注:** 引数*aTable* でテーブルを必ず指定しなければならない点に注意してください。デフォルトテーブルを使用することはできません。

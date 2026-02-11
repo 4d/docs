@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 :::info Compatibilidad
 
 Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).

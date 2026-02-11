@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->La commande **OBJECT GET MAXIMUM VALUE** retourne dans la variable *valeurMaxi* la valeur maximum actuelle de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 

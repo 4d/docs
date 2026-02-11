@@ -18,6 +18,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|20|Modifié|
+|17 R2|Modifié|
+|16|Modifié|
+|13|Modifié|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get 4D folder.Summary-->La commande **Get 4D folder** renvoie le chemin d'accès du dossier 4D actif de l'application courante, ou du dossier de l'environnement 4D spécifié par les paramètres *dossier* et *options*, s'ils sont passés.<!-- END REF-->  

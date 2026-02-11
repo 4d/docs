@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ARRAY TIME.Summary-->**ARRAY TIME**コマンドは、メモリ上に時間型の要素の配列を作成・リサイズします。<!-- END REF-->4Dでは時間は数の値として処理されるということに注意して下さい。以前のバージョンの4Dでは、時間の配列を管理するためには倍長整数配列と表示フォーマットを組み合わせる必要がありました。

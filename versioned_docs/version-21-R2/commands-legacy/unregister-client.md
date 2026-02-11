@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->The **UNREGISTER CLIENT** command “unregisters” a 4D client station.<!-- END REF--> The client must have already been registered by the [REGISTER CLIENT](register-client.md) command. 

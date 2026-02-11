@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->Get menu item modifiers コマンドは、*menu*と*menuItem*引数で指定したメニュー項目の、標準ショートカットに割り当てられた追加のモディファイアキーを返します。<!-- END REF-->  

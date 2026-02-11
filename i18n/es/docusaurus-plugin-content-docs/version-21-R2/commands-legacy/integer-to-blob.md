@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.INTEGER TO BLOB.Summary-->El comando INTEGER TO BLOB escribe el valor entero (2 bytes) *entero* en el BLOB *blob*.<!-- END REF-->

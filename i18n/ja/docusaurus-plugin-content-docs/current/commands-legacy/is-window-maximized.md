@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|20 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is window maximized.Summary-->**Is window maximized** コマンドは*window* 引数に参照を渡したウィンドウが現在最大化されていれば **True** を、それ以外の場合には**False** を返します。<!-- END REF-->

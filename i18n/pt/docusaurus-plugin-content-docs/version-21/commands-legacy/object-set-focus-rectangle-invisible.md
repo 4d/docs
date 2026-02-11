@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Summary-->O comando **OBJECT SET FOCUS RECTANGLE INVISIBLE** permite definir ou modificar dinamicamente a opção invisibilidade do retângulo de foco do objeto designado para os parâmetros *objeto* e *\** para o processo atual.<!-- END REF--> Esta configuração corresponde à opção **Ocultar retângulo de foco** disponível para os objetos editados na Lista de propriedades em modo Desenho.   

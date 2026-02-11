@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESOLVE ALIAS.Summary-->The RESOLVE ALIAS command returns the full path to the target file or folder of the alias (named shortcut under Windows).<!-- END REF-->

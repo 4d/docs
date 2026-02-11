@@ -20,6 +20,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Modifié|
+|13|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->La commande **WEB SERVICE CALL** permet d’invoquer un Web Service en envoyant une requête HTTP.<!-- END REF--> Cette requête contient le message SOAP préalablement construit à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 

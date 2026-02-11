@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->La commande **FORM SET SIZE** permet de modifier par programmation la taille du formulaire courant.<!-- END REF--> La nouvelle taille est définie pour le process courant, elle n’est pas stockée avec le formulaire.  

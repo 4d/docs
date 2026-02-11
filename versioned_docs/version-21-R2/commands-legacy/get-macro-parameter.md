@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET MACRO PARAMETER.Summary-->The **GET MACRO PARAMETER** command returns, in the *paramText* parameter, all or part of the text of the method from which it was called.<!-- END REF-->

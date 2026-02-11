@@ -19,6 +19,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|20 R6|変更|
+|18|名称変更|
+|18|変更|
+|14 R3|名称変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.On REST Authentication database method.Summary-->**On REST Authentication データベースメソッド** は4D 20 R6 以降は廃止予定となります。<!-- END REF-->

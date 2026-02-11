@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Semaphore.Summary-->Un sémaphore est un drapeau visible par chaque poste client ou chaque process sur un même poste.<!-- END REF--> Un sémaphore a simplement pour rôle d'exister ou de ne pas exister. Chaque méthode exécutée par un utilisateur peut tester la présence d'un sémaphore. Un sémaphore ne peut être effacé que par le poste client ou le process qui l'a créé. En créant et en testant des sémaphores, vous permettez aux méthodes de communiquer entre les postes clients et les process. Les sémaphores ne servent pas à protéger l'accès aux enregistrements — cette gestion est effectuée automatiquement par 4D et 4D Server. Les sémaphores ont pour but d'éviter que plusieurs utilisateurs ou process effectuent la même opération en même temps. 

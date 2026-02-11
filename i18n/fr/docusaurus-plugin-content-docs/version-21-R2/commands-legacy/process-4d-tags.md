@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|12|Modifié|
+|13|Renommé|
+|14 R4|Modifié|
+|16 R4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PROCESS 4D TAGS.Summary-->La commande **PROCESS 4D TAGS** provoque le traitement des balises de transformation 4D contenues dans le paramètre *templateEntrée* en leur injectant optionnellement des valeurs via le(s) paramètre(s) *param* et retourne le résultat dans *résultatSortie*.<!-- END REF--> Pour une description complète de ces balises, veuillez vous reporter à la section [**Balises de transformation**](../Tags/transformation-tags.md).

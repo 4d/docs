@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET CURSOR.Summary-->SET CURSOR コマンド はマウスカーソルを、*cursor* 引数に渡したID番号のシステムカーソルへと変更します。<!-- END REF-->

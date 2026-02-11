@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 2|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QUERY BY FORMULA.Summary-->QUERY BY FORMULA busca registros en *tabla*.<!-- END REF--> QUERY BY FORMULA modifica la selección actual de *tabla* para el proceso actual y hace del primer registro el nuevo registro actual. 

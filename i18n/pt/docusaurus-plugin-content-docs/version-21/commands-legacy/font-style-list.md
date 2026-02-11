@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->O comando **FONT STYLE LIST** devolve a lista de estilos e a lista de nomes completos suportados pela familia de fonte designada pelo parámetro *familiaFonte*.<!-- END REF--> Este comando lhe permite criar interfaces de manejo de fontes e estilos, em particular no contexto das áreas 4D Write Pro (ver *Referência 4D Write Pro*).

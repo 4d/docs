@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->OBJECT Get font style コマンドは、*object*で指定されたフォームオブジェクトで使用されている文字フォントの現在のスタイルを返します。<!-- END REF-->. 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|15 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PRINT RECORD.Summary-->Cette commande provoque l'impression de l'enregistrement courant de *laTable*, sans modifier la sélection courante.<!-- END REF--> Le formulaire sortie courant est utilisé pour l'impression. S’il n’y a pas d’enregistrement courant dans *laTable*, **PRINT RECORD** ne fait rien.

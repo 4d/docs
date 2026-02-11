@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+|12|Renomear|
+|12|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get database localization.Summary-->O comando Get database localization \[#descv\] retorna o idioma padrão ou a linguagem do banco de dados especificado pelo *tipoLinguagem*, expresso no padrão definido pela RFC 3066\.<!-- END REF--> \[#descv\] Normalmente, o comando retorna "en" para Inglês, "es" para o espanhol, etc Para mais informações sobre esta norma e os valores retornados por este comando, consulte o manual de referência de design.  

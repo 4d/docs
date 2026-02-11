@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET USER ALIAS.Summary-->**SET USER ALIAS** コマンドは、カレントのセッションの間、カレントの4D ユーザーアカウント名の代わりに使用できるもう一つのカスタムの名前を定義します。<!-- END REF-->この代わりの名前は、メモリに残されますが、カレントユーザーに対してのみ適用されます。

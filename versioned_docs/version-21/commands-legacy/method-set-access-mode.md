@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Summary-->The **METHOD SET ACCESS MODE** command sets the behavior for 4D when you attempt to write access an object already loaded for modification by another user or process.<!-- END REF--> The scope of this command is the current session.

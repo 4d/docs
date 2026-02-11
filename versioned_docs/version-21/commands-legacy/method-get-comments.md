@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->The **METHOD GET COMMENTS** command returns, in the *comments* parameter, the documentation of the method(s) designated by the *path* parameter.<!-- END REF-->

@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->The **OBJECT SET DRAG AND DROP OPTIONS** command sets or dynamically modifies the drag and drop options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->

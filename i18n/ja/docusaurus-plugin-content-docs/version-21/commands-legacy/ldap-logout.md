@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LDAP LOGOUT.Summary-->**LDAP LOGOUT** コマンドカレントプロセスにおいて、LDAPサーバーとの接続を(開いていた場合)閉じます。<!-- END REF-->接続がなかった場合、1003エラーが返されて、ログインしていないことが警告されます。

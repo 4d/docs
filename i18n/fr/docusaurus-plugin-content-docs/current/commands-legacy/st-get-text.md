@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Renommé|
+|12.1|Modifié|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST Get text.Summary-->La commande **ST Get text** retourne le texte multistyle présent dans le champ ou la variable de texte désigné(e) par le paramètre *objet*.<!-- END REF--> 

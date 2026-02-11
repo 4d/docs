@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|16 R5|Modificado|
+|16 R6|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Date.Summary-->O comando Date avalia *dataCadeia* e retorna uma data.<!-- END REF-->

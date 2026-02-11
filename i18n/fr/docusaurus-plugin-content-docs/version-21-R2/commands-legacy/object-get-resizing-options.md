@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->La commande **OBJECT GET RESIZING OPTIONS** retourne les options de redimensionnement courantes de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 

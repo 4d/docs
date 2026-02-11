@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R4|Modificado|
+|14|Modificado|
+|13|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GRAPH.Summary-->El comando **GRAPH** crea un gráfico en una variable imagen, a partir de los valores provenientes de los arrays.<!-- END REF--> El comando GRAPH debe ser ubicado en el método formulario o en un método objeto perteneciente al formulario, o en un método proyecto llamado por uno de estos dos métodos.

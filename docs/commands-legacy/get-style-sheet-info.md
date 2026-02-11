@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|14|Created|
+
+</details>
+</div>
+
 <details><summary>History</summary>
 
 |Release|Changes|

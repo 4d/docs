@@ -15,6 +15,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 #### Descripción 
 
 <!--REF #_command_.SOAP Request.Summary-->El comando **SOAP request** devuelve [True](true.md "True") si el código en ejecución hace parte de una petición SOAP.<!-- END REF--> 

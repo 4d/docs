@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->El comando EXPORT TEXT escribe datos de los registros de la selección actual de la *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento de texto Windows o Macintosh en el disco.

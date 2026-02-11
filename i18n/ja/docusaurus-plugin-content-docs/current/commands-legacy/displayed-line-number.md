@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Displayed line number.Summary-->Displayed line number コマンドはOn Display Detailフォームイベントでのみ機能します。<!-- END REF-->このコマンドはレコードリストまたはリストボックスで画面に行が表示される際、処理中の行の番号を返します。Displayed line numberがリストまたはリストボックス表示以外の場面で呼び出されると、0を返します。

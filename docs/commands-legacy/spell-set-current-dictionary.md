@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|13|Renamed|
+|13|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->The **SPELL SET CURRENT DICTIONARY** command causes the replacement of the current dictionary with the one specified by the *dictionary* parameter.<!-- END REF--> The current dictionary is used for the built-in spell-check feature in 4D (for more information, refer to the 4D *Design Reference* manual) as well as the one in the 4D Write Pro. The modification of the current dictionary is reflected immediately in all the processes of the database for the session, as well as in the 4D Write Pro areas. 

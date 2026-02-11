@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET MENU ITEM STYLE.Summary-->O comando SET MENU ITEM STYLE cambia o estilo da fonte da linha de menu cujo número ou referência de menu se passa em *menu* e cujo número de elemento se passa em *menuItem* de acordo ao estilo de fonte passado em *itemEstilo*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu*.

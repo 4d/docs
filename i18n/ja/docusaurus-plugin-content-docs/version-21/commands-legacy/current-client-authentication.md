@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Current client authentication.Summary-->新しい **Current client authentication** コマンドは Windows の Active Directory サーバーにクライアントの認証を要求し、成功した場合には同クライアントの Windows ログイン名 (セッション ID) を返します。<!-- END REF-->認証に失敗した場合は、空の文字列が返されます。

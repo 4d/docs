@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->The **OBJECT SET TEXT ORIENTATION** command modifies the orientation of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->

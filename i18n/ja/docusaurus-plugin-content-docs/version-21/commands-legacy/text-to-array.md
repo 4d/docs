@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->**TEXT TO ARRAY**コマンドはテキスト変数をテキスト配列変換します。<!-- END REF-->元の*varText*テキストは (スタイル付きであってもなくても) 分割され、*arrText*配列の要素となり、コマンドから返されます。このコマンドを使用して例えば適切な位置でテキストが分割されたメール本文を作成することができます。

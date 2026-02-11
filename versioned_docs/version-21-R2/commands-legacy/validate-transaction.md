@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepts the [transaction](../Develop-legacy/transactions.md) that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF--> The command saves the changes to the data of the database that occurred during the transaction.

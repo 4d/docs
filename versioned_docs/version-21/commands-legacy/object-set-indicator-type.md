@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->The **OBJECT SET INDICATOR TYPE** command modifies the type of progress indicator for the thermometer(s) designated by the *object* and *\** parameters in the current process.<!-- END REF--> 

@@ -18,6 +18,23 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 4|Modifié|
+|11 SQL Release 5|Modifié|
+|12|Modifié|
+|13|Modifié|
+|16 R4|Modifié|
+|19 R5|Modifié|
+|20 R6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get database parameter.Summary-->La commande **Get database parameter** permet de lire la valeur courante d'un paramètre de la base 4D.<!-- END REF--> Lorsque la valeur du paramètre est une chaîne de caractères, elle est retournée dans le paramètre *valeurAlpha*.

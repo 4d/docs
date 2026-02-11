@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|13|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF-->s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :

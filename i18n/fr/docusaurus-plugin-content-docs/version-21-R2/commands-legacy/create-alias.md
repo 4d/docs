@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->La commande **CREATE ALIAS** crée un alias (appelé “raccourci” sous Windows) du fichier ou dossier cible désigné par le paramètre *cheminCible*, avec le nom et l’emplacement définis dans le paramètre *cheminAlias*.<!-- END REF--> 

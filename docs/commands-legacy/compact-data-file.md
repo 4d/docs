@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|13|Modified|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Compact data file.Summary-->The **Compact data file** command compacts the data file designated by the *dataPath* parameter associated with the *structurePath* structure file.<!-- END REF--> For more information about compacting, refer to the Design Reference manual.

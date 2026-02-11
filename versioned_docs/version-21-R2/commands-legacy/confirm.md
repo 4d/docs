@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CONFIRM.Summary-->The CONFIRM command displays a confirm dialog box composed of a note icon, a message, an OK button, and a Cancel Button.<!-- END REF-->

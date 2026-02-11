@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->The **OBJECT SET LIST BY REFERENCE** command defines or replaces the list associated with the object(s) designated by the *object* and *\** parameters, with the hierarchical list referenced in the *list* parameter.<!-- END REF-->

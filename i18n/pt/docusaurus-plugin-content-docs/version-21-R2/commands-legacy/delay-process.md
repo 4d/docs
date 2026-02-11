@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|14 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DELAY PROCESS.Summary-->DELAY PROCESS permite atrasar um *processo* por um número de ticks (1 tick = 1/60 de segundo).<!-- END REF--> Durante este período, o *processo* atrasado não utiliza tempo de processamento. Ainda que a execução de um processo pode ser retardada, ainda está em memória.

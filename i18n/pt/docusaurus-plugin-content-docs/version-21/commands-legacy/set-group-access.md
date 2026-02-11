@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->O comando **SET GROUP ACCESS** modifica o nível de filiação da conte de usuário 4D para a sesão atual.<!-- END REF--> Restabelece toda filiação a um grupo anterior e define as novas filiações aos *grupos* listados.

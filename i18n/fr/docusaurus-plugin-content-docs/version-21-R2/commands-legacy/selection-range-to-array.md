@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|13|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** crée un ou plusieurs tableau(x) et y copie des données en provenance des champs de la sélection courante ou les numéros des enregistrements de la sélection courante.<!-- END REF--> 

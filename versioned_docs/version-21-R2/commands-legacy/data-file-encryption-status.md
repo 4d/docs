@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Data file encryption status.Summary-->The **Data file encryption status** command returns an object providing the encryption status for the data file designated by the *structurePath* and *dataPath* parameters.<!-- END REF--> The status for each table is also provided.

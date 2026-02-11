@@ -24,6 +24,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->O comando OBJECT DUPLICATE permite criar uma cópia do objeto designado pelo parâmetro *objeto* no contexto do formulário que está sendo executado (modo Aplicação).<!-- END REF--> O formulário de origem, gerado em modo Desenho, não se modifica. 

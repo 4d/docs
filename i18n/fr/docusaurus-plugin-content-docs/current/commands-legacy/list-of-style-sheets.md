@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->La commande **LIST OF STYLE SHEETS** retourne la liste des feuilles de style de l’application dans le tableau *tabFeuillesStyle*.<!-- END REF--> 

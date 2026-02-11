@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|変更|
+|11 SQL Release 3|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->MESSAGES OFF および [MESSAGES ON](messages-on.md) コマンドは、時間のかかる処理を行っている際に4Dが表示する進捗インジケータの表示/非表示を切り替えます。<!-- END REF-->デフォルトでは、メッセージは表示されます。

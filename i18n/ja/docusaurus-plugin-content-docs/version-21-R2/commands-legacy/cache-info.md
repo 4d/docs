@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Cache info.Summary-->**Cache info** コマンドは、カレントキャッシュの中身についての詳細な情報を格納したオブジェクトを返します (使用メモリ、読み込まれたテーブルやインデックス、等)<!-- END REF-->

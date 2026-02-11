@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+|18 R6|Renommé|
+
+</details>
+</div>
+
 ## Note de compatibilité 
 
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Summary-->Cette commande peut être utilisée uniquement avec les **anciennes sessions Web**, disponibles dans les bases de données converties à partir de versions antérieures à 4D v18 R6\.<!-- END REF--> Elle retourne des valeurs null, date et heure lorsque le mode **sessions Web extensibles** est activé (recommandé sous 4D v18 R6 et versions plus récentes). Pour plus d'informations, reportez-vous à la section *Gestion des sessions Web*.

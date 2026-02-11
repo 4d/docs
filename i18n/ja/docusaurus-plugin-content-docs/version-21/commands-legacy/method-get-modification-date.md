@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->**METHOD GET MODIFICATION DATE**コマンドは*path*引数で指定されたメソッドの更新日と時刻をそれぞれ*modDate*と*modTime*引数に返します。<!-- END REF-->

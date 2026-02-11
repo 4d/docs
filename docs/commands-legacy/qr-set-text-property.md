@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->The **QR SET TEXT PROPERTY** command sets the text attributes for the cell determined by *colNum* and *rowNum*.<!-- END REF-->

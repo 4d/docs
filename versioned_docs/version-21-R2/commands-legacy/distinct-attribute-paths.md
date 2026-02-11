@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->The **DISTINCT ATTRIBUTE PATHS** command returns the list of distinct paths found in the indexed object field you passed in *objectField* for the current selection of the table to which this field belongs.<!-- END REF-->

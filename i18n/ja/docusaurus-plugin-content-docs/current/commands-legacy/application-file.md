@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Application file.Summary-->Application fileコマンドは、 現在使用している4D実行形式のファイルまたはアプリケーションのパス名を返します。<!-- END REF-->

@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R3|名称変更|
+|14 R3|変更|
+|11 SQL Release 2|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OPEN URL.Summary-->**OPEN URL** コマンドは、*appName* で指定したアプリケーションを使用して、*path* 引数に渡したファイルやURLを開きます。<!-- END REF-->引数には標準のURLまたはファイルのパス名のどちらかを渡す事ができます。コマンドは、OS X環境下ではコロン (':')、Windows環境下ではスラッシュ('\\')、またはfile://で始まるPosix URLを受け取る事ができます。

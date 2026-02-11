@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET ASSERT ENABLED.Summary-->O comando SET ASSERT ENABLED é utilizado para desativar ou reativar as asserções inseridas no código 4D da aplicação.<!-- END REF--> Para maior informação sobre asserções, consulte a descrição do comando [ASSERT](assert.md). 

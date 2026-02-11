@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|名称変更|
+|19 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->**OBJECT SET ENTERABLE** コマンドは、*object* で指定したフォームオブジェクトを入力可または入力不可に設定するとともに、*フォーカス可能* 属性も設定します。<!-- END REF-->

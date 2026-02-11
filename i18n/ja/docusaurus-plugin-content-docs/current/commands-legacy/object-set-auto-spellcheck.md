@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->**OBJECT SET AUTO SPELLCHECK**コマンドは*object*と*\**引数で指定されたオブジェクトの自動スペルチェックオプションをカレントプロセス内で動的に設定します。<!-- END REF-->このオプションを使用して、オブジェクト (テキスト型オブジェクトのみ) にデータが入力される際の自動スペルチェックを有効/無効にできます。

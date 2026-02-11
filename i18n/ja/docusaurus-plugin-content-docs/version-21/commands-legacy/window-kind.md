@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Window kind.Summary-->Window kind コマンドは*window*に渡した参照番号のウィンドウのタイプを返します。<!-- END REF-->ウィンドウが存在しない場合、 Window kind には *0* が返されます。

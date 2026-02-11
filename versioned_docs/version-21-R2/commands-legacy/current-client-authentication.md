@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current client authentication.Summary-->The **Current client authentication** command asks the Windows Active Directory server to authenticate the current client and, if successful, returns the Windows login name for this client (session identifier).<!-- END REF--> If the authentication failed, an empty string is returned. 

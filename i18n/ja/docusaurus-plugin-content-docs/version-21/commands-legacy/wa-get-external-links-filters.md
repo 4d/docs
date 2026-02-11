@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->WA GET EXTERNAL LINKS FILTERS コマンドは*filtersArr* と *allowDenyArr*配列に、*\** と *object* 引数で指定したWebエリアの外部リンクフィルタを返します。<!-- END REF-->フィルタが有効でない場合、空の配列が返されます。

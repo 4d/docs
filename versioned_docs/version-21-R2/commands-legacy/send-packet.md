@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SEND PACKET.Summary-->**SEND PACKET** sends a packet to a serial port or to a document.<!-- END REF--> If *docRef* is specified, the packet is written to the document referenced by *docRef*. If *docRef* is not specified, the packet is written to the serial port or document previously opened by the [SET CHANNEL](set-channel.md) command. 

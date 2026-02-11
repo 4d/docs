@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->La commande **SET DRAG ICON** vous permet d’associer l’image *icône* au curseur lors des glisser-déposer gérés par programmation.<!-- END REF-->

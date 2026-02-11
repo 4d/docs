@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RELOAD PROJECT.Summary-->O comando **RELOAD PROJECT** recarrega as definições do arquivo fonte (métodos, formulários, etc.) do disco para o projeto executando no ambiente atual 4D.<!-- END REF--> Só pode ser usado com projetos 4D executados em **modo interpretado**. A execução de comando é assíncrona. 

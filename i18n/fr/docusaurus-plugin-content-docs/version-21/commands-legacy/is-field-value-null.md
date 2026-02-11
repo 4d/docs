@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is field value Null.Summary-->La commande **Is field value Null** retourne Vrai si le champ désigné par le paramètre *leChamp* contient la valeur NULL, et Faux sinon.<!-- END REF-->

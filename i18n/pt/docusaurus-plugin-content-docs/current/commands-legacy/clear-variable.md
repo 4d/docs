@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CLEAR VARIABLE.Summary-->CLEAR VARIABLE reinicia *variavel* no valor por padrão de seu tipo (por exemplo, cadeia vazia para os tipos Alfa e Texto, *0* para as variáveis numéricas, nenhum elemento para um array, etc.).<!-- END REF--> A variável continua existindo em memória.

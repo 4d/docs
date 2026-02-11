@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET ASSERT ENABLED.Summary-->**SET ASSERT ENABLED** コマンドを使用してアプリケーションの4Dコードに挿入されたアサーションを無効にしたり、再度有効にしたりできます。<!-- END REF-->アサーションに関する詳細は[ASSERT](assert.md)コマンドの説明を参照してください。

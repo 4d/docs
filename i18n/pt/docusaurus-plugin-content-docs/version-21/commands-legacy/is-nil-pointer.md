@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R4|Renomear|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Is nil pointer.Summary-->O comando **Is nil pointer** devolve True se o ponteiro que você passa em *umPonteiro* é Nulo (*\->\[\]*).<!-- END REF--> Devolve False em todos os outros casos (ponteiro a um campo, tabela ou variável).

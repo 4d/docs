@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Get XML element.Summary-->The DOM Get XML element command returns a reference to the “child” element dependent on the *elementName* and *index* parameters.<!-- END REF-->

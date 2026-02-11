@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6|Modificado|
+|12|Renombrar|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** define los objetos formulario especificados por *objeto* para mostrarse utilizando el tamaño de fuente que se pasa en *tamaño*.<!-- END REF-->

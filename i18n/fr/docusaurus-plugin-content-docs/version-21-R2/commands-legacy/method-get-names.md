@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->La commande **METHOD GET NAMES** remplit le tableau *tabNoms* avec les noms des méthodes projet créées dans l’application.<!-- END REF--> 

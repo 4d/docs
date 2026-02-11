@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Modificado|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->El comando SET FILE TO PASTEBOARD añade al portapapeles la ruta de acceso completa del archivo pasada en el parámetro *archivo*.<!-- END REF--> Este comando permite crear interfaces permitiendo arrastrar y soltar objetos 4D a los archivos en el escritorio por ejemplo.  

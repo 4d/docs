@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->**ORDER BY ATTRIBUTE** コマンドは、カレントプロセスにおいて *aTable* のカレントレコードセレクションを *objectField* の *attributePath* を基準にソートします。<!-- END REF-->ソートが終了すると、セレクションの先頭レコードがカレントレコードとなります。 

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.UNREGISTER CLIENT.Summary-->La commande **UNREGISTER CLIENT** “désinscrit” le client 4D de 4D Server.<!-- END REF--> Il doit avoir été préalablement inscrit à l’aide de la commande [REGISTER CLIENT](register-client.md). 

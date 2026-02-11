@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->**SET MENU ITEM SHORTCUT** コマンドは、あるメニュー項目に新しいショートカットを割り当てます。<!-- END REF-->

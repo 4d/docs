@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Keystroke.Summary-->**Keystroke** retourne le caractère tapé par l'utilisateur dans un champ ou une zone saisissable.<!-- END REF--> 

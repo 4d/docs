@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CANCEL TRANSACTION.Summary-->CANCEL TRANSACTION cancela a transação que foi aberta pelo comando [START TRANSACTION](start-transaction.md) do nível correspondente no processo atual.<!-- END REF--> CANCEL TRANSACTION cancela todas as operações executadas nos dados durante a transação.

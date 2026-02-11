@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|15 R3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->**GET STYLE SHEET INFO**コマンドは、*styleSheetName*パラメーターで指定したスタイルシートの現在の構成を返します。<!-- END REF--> 

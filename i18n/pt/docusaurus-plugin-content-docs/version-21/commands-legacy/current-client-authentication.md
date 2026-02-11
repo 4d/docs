@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Current client authentication.Summary-->O comando **Current client authentication** pede ao servidor Active Directory de Windows autenticar o cliente atual e se tiver êxito, devolve o nome de início de sessão de Windows para este cliente (identificador de sessão).<!-- END REF--> Se a autenticação falhar, se devolve uma string vazia. 

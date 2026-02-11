@@ -20,6 +20,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|13|Renamed|
+|14|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->The **WEB SERVICE CALL** command calls a Web Service by sending an HTTP request.<!-- END REF--> This request contains the SOAP message created previously using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command. 

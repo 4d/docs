@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R8|Modifié|
+|16 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->La commande **LISTBOX SET AUTO ROW HEIGHT** vous permet de définir une *valeur* de hauteur minimum ou maximum dans l'objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->

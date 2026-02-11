@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Current user.Summary-->Current user コマンドは、カレントユーザのエイリアス、またはユーザ名を返します。<!-- END REF-->引数が省略されていた場合、デフォルトで、セッション中に[SET USER ALIAS](set-user-alias.md) コマンドでユーザーに対してエイリアスが定義されていた場合には、コマンドはユーザーエイリアスを返します。そうでない場合、コマンドは4D ユーザーアカウント名を返します。

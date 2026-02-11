@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|12|Renombrar|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->El comando LISTBOX DELETE COLUMN borra una o más columnas (visibles o no) en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->

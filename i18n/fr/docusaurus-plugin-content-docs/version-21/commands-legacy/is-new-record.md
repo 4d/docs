@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.5|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.Is new record.Summary-->La commande **Is new record** retourne Vrai lorsque l’enregistrement courant de *laTable* est en cours de création et n’a pas encore été sauvegardé dans le process courant.<!-- END REF-->Il est possible d’obtenir la même information avec la commande existante [Record number](record-number.md), en testant si elle retourne -3\. Toutefois, il est vivement conseillé d’utiliser dans ce cas **Is new record** plutôt que [Record number](record-number.md). En effet, la commande **Is new record** assure une meilleure compatibilité avec les futures versions de 4D.

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Type.Summary-->**Type** retourne une valeur numérique qui indique le type du champ ou de la variable que vous avez passé(e) dans le paramètre *champVar*.<!-- END REF-->

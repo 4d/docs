@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get font size.Summary-->La commande **OBJECT Get font size** retourne la taille (en points) de la police de caractères utilisée par le ou les objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 

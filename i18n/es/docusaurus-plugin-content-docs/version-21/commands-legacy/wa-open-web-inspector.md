@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R3|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->El comando **WA OPEN WEB INSPECTOR** abre un inspector web para el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->

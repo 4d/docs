@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|12|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->RECEIVE PACKET コマンドは、シリアルポートまたはドキュメントから文字を読み込みます。<!-- END REF--> 

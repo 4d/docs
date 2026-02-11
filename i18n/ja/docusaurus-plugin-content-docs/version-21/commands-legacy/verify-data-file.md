@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R3|変更|
+|11 SQL Release 3|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->**VERIFY DATA FILE**コマンドは、*structurePath*と*dataPath*で指定したデータファイル中にあるオブジェクトの構造的な検証を行います。<!-- END REF-->データ検証に関する詳細は、Design Referenceマニュアルを参照してください。

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get print preview.Summary-->La commande **Get print preview** retourne Vrai si l’instruction [SET PRINT PREVIEW](set-print-preview.md) a été appelée avec la valeur **Vrai** dans le process courant.<!-- END REF-->

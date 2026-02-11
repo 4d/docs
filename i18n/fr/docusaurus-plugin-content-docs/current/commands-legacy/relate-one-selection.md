@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RELATE ONE SELECTION.Summary-->La commande **RELATE ONE SELECTION** crée une nouvelle sélection d'enregistrements dans *table1* à partir de la sélection d'enregistrements de la *tableN* qui lui est liée et charge le premier enregistrement de la nouvelle sélection en tant qu'enregistrement courant.<!-- END REF--> 

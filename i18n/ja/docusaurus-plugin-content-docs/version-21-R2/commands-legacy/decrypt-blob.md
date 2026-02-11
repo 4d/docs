@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->DECRYPT BLOB コマンドは、BLOB *toDecrypt*の内容を送信者の公開鍵*sendPubKey*を使用して解読します。<!-- END REF-->オプションとして、受信者の秘密鍵*recipPrivKey*も使用します。

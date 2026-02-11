@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM GET XML CHILD NODES.Summary-->The **DOM GET XML CHILD NODES** command returns the types and references or values of all the child nodes of the XML element designated by *elementRef*.<!-- END REF-->

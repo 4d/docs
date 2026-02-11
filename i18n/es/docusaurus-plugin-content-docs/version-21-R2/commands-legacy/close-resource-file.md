@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->El comando **CLOSE RESOURCE FILE** cierra el archivo de recursos cuyo número de referencia se pasa en *resArchivo*.<!-- END REF--> 

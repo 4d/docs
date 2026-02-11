@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Get XML document ref.Summary-->DOM Get XML document ref コマンドを使用して*elementRef*に渡したDOMツリーの"ドキュメント"参照を取得できます。<!-- END REF-->ドキュメント要素はDOMツリーの最初の要素であり、ルート要素の親です。

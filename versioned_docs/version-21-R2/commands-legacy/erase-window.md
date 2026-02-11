@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->The **ERASE WINDOW** command clears the contents of the window whose reference number is passed in *window*.<!-- END REF--> 

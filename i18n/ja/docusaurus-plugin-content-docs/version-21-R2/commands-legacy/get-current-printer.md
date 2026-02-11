@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|15 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get current printer.Summary-->**Get current printer** コマンドは、4Dアプリケーションに定義されたカレントプリンター名を返します。<!-- END REF-->デフォルトで4Dの起動時には、システムで定義されたプリンターがカレントプリンターとなります。

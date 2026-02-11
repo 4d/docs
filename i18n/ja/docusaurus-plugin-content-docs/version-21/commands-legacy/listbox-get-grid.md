@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->**LISTBOX GET GRID**コマンドは*object* と *\** 引数で指定したリストボックスオブジェクトの縦横グリッド線の表示/非表示状態をそれぞれ返します。<!-- END REF-->

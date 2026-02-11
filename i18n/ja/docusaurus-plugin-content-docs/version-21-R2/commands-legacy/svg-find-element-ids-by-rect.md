@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->SVG Find element IDs by rect コマンドは、 バインドされた四角が選択領域に交差するXML要素のID ("id"または"xml:id"属性) をテキストまたは文字配列の*arrIDs*配列に返します。<!-- END REF-->選択領域は*x*および*y*引数で指定されます。

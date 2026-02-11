@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get title.Summary-->La commande **OBJECT Get title** retourne le titre (libellé) du ou des objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is table number valid.Summary-->La commande **Is table number valid** retourne Vrai si la table dont le numéro est passé dans *numTable* existe dans la base et Faux sinon.<!-- END REF--> A noter que la commande retourne Faux si la table se trouve dans la Corbeille de l’Explorateur.

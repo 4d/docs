@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->El comando **Print settings to BLOB** guarda los ajustes de impresión 4D actuales en el BLOB *confImp*.<!-- END REF--> El parámetro *confImp* almacena todos los valores utilizados para la impresión:

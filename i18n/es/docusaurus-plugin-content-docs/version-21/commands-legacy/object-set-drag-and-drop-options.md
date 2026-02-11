@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->El comando **OBJECT SET DRAG AND DROP OPTIONS** define o modifica dinámicamente las opciones de arrastrar y soltar para el objeto o los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->

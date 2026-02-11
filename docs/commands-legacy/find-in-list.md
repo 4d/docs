@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Find in list.Summary-->The **Find in list** command returns the position or reference of the first item of the *list* that is equivalent to the string passed in *value*.<!-- END REF--> If several items are found, the function can also fill an *itemsArray* array with the position or reference of each item.

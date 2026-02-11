@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->LISTBOX EXPAND コマンドは*object*と*\**で指定したリストボックスオブジェクトのブレーク行を展開するために使用します。<!-- END REF-->

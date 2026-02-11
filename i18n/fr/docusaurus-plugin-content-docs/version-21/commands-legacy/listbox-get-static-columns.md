@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->La commande **LISTBOX Get static columns** retourne le nombre de colonnes statiques dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 

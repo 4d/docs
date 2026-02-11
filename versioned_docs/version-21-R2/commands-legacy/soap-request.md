@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|13|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SOAP Request.Summary-->The **SOAP Request** command returns **[True](true.md "True")** if the code being executed is part of a SOAP request.<!-- END REF--> 

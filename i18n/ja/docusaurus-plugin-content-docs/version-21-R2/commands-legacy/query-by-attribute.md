@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|初出|
+|16 R2|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** は*objectField*、*attributePath*、*queryOp* そして *value* 引数を使用して定義されたクエリ文字列に合致するレコードを検索し、*aTable* に対しレコードのセレクションを返します。<!-- END REF-->はカレントプロセスにおいて*aTable* で指定されたテーブルのカレントセレクションを変更し、新しいセレクションの第一レコードをカレントレコードとします。*aTable* 引数が省略されていた場合、コマンドはデフォルトのテーブルへと適用されます。デフォルトテーブルが設定されていない場合、エラーが発生します。

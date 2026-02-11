@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R5|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->**ST FREEZE EXPRESSIONS**コマンドは、*object* 引数で指定されたマルチスタイルテキストあるいは4D Write Proのフィールドまたは変数内の4D 式の内容を固定化します。<!-- END REF-->これにより、ダイナミックな4D式はスタティックなテキストあるいは画像(4D Write Pro エリアのみ)へと変換され、*object* に関連付けられた参照は解除されます。

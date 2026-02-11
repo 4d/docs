@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RELEASE MENU.Summary-->La commande **RELEASE MENU** efface de la mémoire le menu dont vous avez passé l’identifiant dans *menu*.<!-- END REF--> Ce menu doit avoir été créé par la commande [Create menu](create-menu.md). La règle est la suivante : à chaque [Create menu](create-menu.md) doit correspondre un [RELEASE MENU](release-menu.md). 

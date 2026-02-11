@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET QUERY LIMIT.Summary-->SET QUERY LIMITは、カレントプロセスの以降の検索を対象に、*limit*に渡した数のレコードが見つかったら検索を中止するよう4Dに指示します。<!-- END REF-->

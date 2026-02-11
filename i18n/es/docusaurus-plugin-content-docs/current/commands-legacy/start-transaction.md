@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.START TRANSACTION.Summary-->START TRANSACTION inicia una transacción en el proceso actual.<!-- END REF--> Todos los cambios a los datos (registros) de la base dentro de la transacción se almacenan temporalmente hasta que la transacción sea validada o cancelada.

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->La commande **EXECUTE ON CLIENT** provoque l’exécution de la méthode *nomMéthode*, avec, éventuellement, le(s) paramètre(s) *param1.<!-- END REF-->.. paramN*, sur le ou les 4D Client inscrit(s) sous le nom *nomClient*. Le nom d’inscription du ou des 4D Client est défini par la commande [REGISTER CLIENT](register-client.md). 

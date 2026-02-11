@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+|14|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->La commande **METHOD SET ATTRIBUTE** permet de définir la valeur d'un ou plusieurs attribut(s) *typeAttribut* pour la méthode projet désignée par le paramètre *chemin*.<!-- END REF--> Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée. 

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R6|Modifié|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->La commande **GET MENU ITEM ICON** retourne dans la variable *refIcône* la référence de l’icône éventuellement associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> Cette référence est le chemin d'accès ou le numéro de l’image.

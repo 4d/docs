@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Summary-->The **GET PICTURE KEYWORDS** command returns, in the *arrKeywords* array, the list of keywords associated with the picture passed as parameter.<!-- END REF-->

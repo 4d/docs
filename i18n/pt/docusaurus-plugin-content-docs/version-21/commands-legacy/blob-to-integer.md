@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB to integer.Summary-->O comando BLOB to integer retorna um valor inteiro de 2 bytes inteiro lido do BLOB *blob*.<!-- END REF-->

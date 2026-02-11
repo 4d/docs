@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get column formula.Summary-->The **LISTBOX Get column formula** command returns the formula associated with the list box column designated by the *object* and *\** parameters.<!-- END REF--> Formulas can only be used when the “Data Source” property of the list box is either **Current Selection**, **Named Selection**, or **Collection or Entity Selection**. If no formula is associated with the column, the command returns an empty string. 

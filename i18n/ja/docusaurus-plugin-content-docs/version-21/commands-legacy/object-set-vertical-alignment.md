@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->**OBJECT SET VERTICAL ALIGNMENT**コマンドは*object* と*\** 引数で指定されたオブジェクトに適用される行揃えのタイプを変更します。<!-- END REF-->

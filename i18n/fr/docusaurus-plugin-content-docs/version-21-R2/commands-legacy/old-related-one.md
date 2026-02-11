@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->**OLD RELATED ONE** fonctionne de la même manière que [RELATE ONE](relate-one.md), à la différence près que **OLD RELATED ONE** utilise la valeur précédente de *leChamp* pour établir la relation.<!-- END REF--> 

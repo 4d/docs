@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 GOTO RECORD seleciona o registro atual de *tabela*. O parâmetro registro é o número devolvido pela função [Record Number](record-number.md "Record Number"). Depois de executar este comando, o registro é o único registro na seleção.  

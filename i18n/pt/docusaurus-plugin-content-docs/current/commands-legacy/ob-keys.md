@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R3|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB Keys.Summary-->O comando **OB Keys** retorna uma coleção de strings contendo todos os nomes de propriedade enumeráveis do *objeto*.<!-- END REF--> 

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->El comando DOM Create XML element arrays se utiliza para añadir un nuevo elemento en el elemento XML de *refElement*, como también opcionalmente, atributos y sus valores en forma de arrays.<!-- END REF-->

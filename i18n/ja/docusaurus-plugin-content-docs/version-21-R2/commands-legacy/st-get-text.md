@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+|12.1|変更|
+|14|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST Get text.Summary-->**ST Get text** コマンドは *object* 引数で指定されたフィールドや変数中のスタイル付きテキストを返します。<!-- END REF-->

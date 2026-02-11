@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Modifié|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->La commande **FORM GET NAMES** remplit le tableau *tabNoms* avec les noms des formulaires de l’application.<!-- END REF--> 

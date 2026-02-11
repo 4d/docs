@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->La commande **QUERY BY SQL** permet de tirer directement parti du moteur SQL intégré de 4D.<!-- END REF--> Elle exécute une requête SELECT simple qui peut être écrite ainsi :

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->La commande **DISTINCT ATTRIBUTE PATHS** retourne la liste des chemins d'attributs différents présents dans le champ objet indexé passé dans *champObjet* et ce, pour la sélection courante de la table à laquelle le champ appartient.<!-- END REF-->

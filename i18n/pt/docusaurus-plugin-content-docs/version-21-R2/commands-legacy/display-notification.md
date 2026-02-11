@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->O comando DISPLAY NOTIFICATION mostra uma mensagem na área de notificação ao usuário:

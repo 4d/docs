@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->La commande **Is waiting mouse up** retourne **Vrai** si l'objet courant a été cliqué et que le bouton de la souris n'a pas été relâché, alors que la fenêtre contenant l'objet a le focus.<!-- END REF--> Sinon la commande retourne **Faux**, en particulier si la fenêtre contenant l'objet a perdu le focus avant que le bouton soit relâché. 

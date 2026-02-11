@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Modified|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->The **LISTBOX GET GRID COLORS** command returns the color of the horizontal and vertical lines making up the grid of the list box object designated by the *object* and *\** parameters.<!-- END REF-->

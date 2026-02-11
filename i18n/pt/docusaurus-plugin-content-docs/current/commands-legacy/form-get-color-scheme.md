@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->O comando **FORM Get color scheme** retorna o nome do esquema atual de cores do formulário atualmente sendo exibido .<!-- END REF--> Se não houver formulário atual, o comando retorna uma string vazia.

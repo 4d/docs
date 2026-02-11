@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ARRAY OBJECT.Summary-->**ARRAY OBJECT**コマンドは、メモリ上にランゲージオブジェクト型の要素の配列を作成・リサイズします。<!-- END REF-->引数には配列の名前を渡します。4Dのルールに則った名前であればどんな名前でも使用することができます。

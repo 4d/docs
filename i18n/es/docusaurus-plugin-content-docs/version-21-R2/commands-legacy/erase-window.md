@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->El comando ERASE WINDOW borra el contenido de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> 

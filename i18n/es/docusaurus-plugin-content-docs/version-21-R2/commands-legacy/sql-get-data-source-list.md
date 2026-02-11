@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+|19 R5|Renombrar|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->El comando *GET DATA SOURCE LIST* devuelve en los arrays *arrayNomsFuentes* y *arrayDrivers*, los nombres y drivers de las fuentes de datos de tipo *tipoFuente* definidas en el administrador ODBC del sistema operativo.<!-- END REF--> 

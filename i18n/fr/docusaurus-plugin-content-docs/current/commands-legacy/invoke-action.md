@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->La commande **INVOKE ACTION** déclenche l'action standard définie par le paramètre *action*, optionnellement dans le contexte de la *cible*.<!-- END REF-->

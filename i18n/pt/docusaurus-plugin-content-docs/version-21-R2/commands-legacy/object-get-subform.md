@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+|16 R6|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->O comando **OBJECT GET SUBFORM** obtém os nomes dele ou dos formulário(s) associado(s) ao objeto sub-formulário designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+|15 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Nota preliminar:** este comando sólo funciona con 4D Server.<!-- END REF--> Únicamente puede ejecutarse vía el comando [Execute on server](execute-on-server.md) o en un procedimiento almacenado.

@@ -21,6 +21,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R6|Modifié|
+|16 R4|Modifié|
+|14 R5|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Open form window.Summary-->La commande **Open form window** crée une nouvelle fenêtre utilisant les propriétés de taille et de redimensionnement du formulaire *nomForm*, passé en paramètre.<!-- END REF-->

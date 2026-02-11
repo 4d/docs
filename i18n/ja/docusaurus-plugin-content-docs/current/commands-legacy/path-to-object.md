@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Path to object.Summary-->**Path to object** コマンドは*path* 引数に渡したパスの特定のプロパティを含んだオブジェクトを返します。<!-- END REF-->引数を省略した場合、コマンドはデフォルトで*path* 引数にはシステムセパレータ(Windows では"\\"、macOS では":" )を含んだシステムパスが渡されたものとみなします。Posix セパレータを含んだPosixパスを*path* 引数に渡した場合、あるいはパスのタイプを指定したい場合には、以下の定数のどれか一つを*pathType* 引数に渡します:

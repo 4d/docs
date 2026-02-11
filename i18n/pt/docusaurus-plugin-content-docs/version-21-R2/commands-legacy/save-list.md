@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAVE LIST.Summary-->O comando SAVE LIST guarda a lista cujo número de referência passou em *lista*, no editor de listas no ambiente Desenho, sob o nome que passou em *nomeLista*.<!-- END REF-->

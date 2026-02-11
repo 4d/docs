@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->The **LISTBOX SET HIERARCHY** command lets you configure the list box object designated by the *object* and *\** parameters in hierarchical or non-hierarchical mode.<!-- END REF--> 

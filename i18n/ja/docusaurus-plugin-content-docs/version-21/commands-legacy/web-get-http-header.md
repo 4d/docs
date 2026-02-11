@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|名称変更|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->**WEB GET HTTP HEADER**コマンドは、 現在処理されているリクエストのHTTPヘッダーを含む2つの配列、または文字列のいずれかを返します。<!-- END REF--> 

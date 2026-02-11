@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|12|名称変更|
+|14|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->OBJECT SET SCROLLBARコマンドは、引数*object* と *\** で指定したオブジェクトの水平/垂直スクロールバーの表示/非表示を設定します。<!-- END REF--> 

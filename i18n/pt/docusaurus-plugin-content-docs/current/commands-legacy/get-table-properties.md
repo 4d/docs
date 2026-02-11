@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET TABLE PROPERTIES.Summary-->O comando GET TABLE PROPERTIES retorna as propriedades da tabela passada por *pontTabela* ou *numTabela*.<!-- END REF--> Pode passar no primeiro parâmetro o número de tabela ou ponteiro da tabela.  

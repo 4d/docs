@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->La commande **METHOD Get attribute** retourne la valeur de l’attribut *typeAttribut* pour la méthode projet désignée par le paramètre *chemin*.<!-- END REF--> Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée. 

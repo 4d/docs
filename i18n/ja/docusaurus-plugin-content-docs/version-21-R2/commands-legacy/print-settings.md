@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|15 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** は印刷設定ダイアログボックスを表示します。<!-- END REF-->このコマンドを使用する場合、[Print form](../commands/print-form.md) や [OPEN PRINTING JOB](open-printing-job.md) コマンドよりも前に呼び出されなければなりません。

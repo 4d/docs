@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Renomear|
+|12.1|Modificado|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->O comando ST SET ATTRIBUTES permite modificar um ou mais atributos de estilo no(s) objeto(s) de formulário designado(s) por *objeto*.<!-- END REF-->   

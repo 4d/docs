@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R4|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Undefined.Summary-->La commande **Undefined** retourne Vrai si le résultat de l'évaluation d'*expression* n'est pas une valeur définie, sinon elle retourne Faux si *expression* a été définie.<!-- END REF-->retourne Faux pour toutes les variables.

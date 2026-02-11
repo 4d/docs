@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Windows Alt down.Summary-->Windows Alt down はWindowsのAlt キーが押されていると[True](true.md "True")を返します。<!-- END REF-->Macintoshのプラットフォーム上で呼び出された場合は、Macintoshのoptionキーが押されていると、 Windows Alt down は[True](true.md "True")を返します。

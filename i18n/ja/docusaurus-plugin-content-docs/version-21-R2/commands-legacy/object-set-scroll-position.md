@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|12|変更|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->**OBJECT SET SCROLL POSITION**コマンドを使用して、 ([MODIFY SELECTION](modify-selection.md)または[DISPLAY SELECTION](display-selection.md)コマンドを用いて表示される) リストフォーム、サブフォーム、階層リストなどの行、あるいはリストボックスの列や行、そしてさらにピクチャのピクセルをスクロールすることができます。<!-- END REF--> 

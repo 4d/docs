@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Modifié|
+|12|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** change la page courante du formulaire pour afficher la page désignée par *numéroPage*.<!-- END REF-->

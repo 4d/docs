@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Register data key.Summary-->O comando **Register data key** agrega a chave de cifrado de dados passada no parâmetro ao chaveiro 4D.<!-- END REF-->

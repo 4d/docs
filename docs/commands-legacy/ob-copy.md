@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R5|Modified|
+|18 R3|Modified|
+|15|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Copy.Summary-->The **OB Copy** command returns an object containing a complete (deep) copy of the properties, sub-objects and values for the *object*.<!-- END REF-->

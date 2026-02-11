@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|20|変更|
+|16|変更|
+|15 R5|変更|
+|12.2|変更|
+|12|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->**SET PRINT OPTION** コマンドを使用し、プログラムから印刷オプションの値を変更することができます。<!-- END REF-->プリントパラメーターを変更する他のコマンド ([PRINT SETTINGS](print-settings.md)、*\>* 引数を使用しない [PRINT SELECTION](print-selection.md)) が呼び出されない限り、このコマンドを使用して定義された各オプションは、[カレントの 4D 印刷設定](../settings/compatibility.md) に対して適用されます。印刷ジョブが(例えば[OPEN PRINTING JOB](open-printing-job.md) などによって)開かれている間は、ジョブが終わるまではこのオプションを変更することはできません(ただしOrientation option を除く、以下参照)。

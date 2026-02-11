@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->The Get file from pasteboard command returns the absolute pathname of a file included in a drag and drop operation.<!-- END REF--> Several files can be selected and moved simultaneously. The *xIndex* parameter is used to designate a file from among the set of files selected.

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 4|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->The **SET MENU ITEM PARAMETER** command associates a custom character string with a menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->

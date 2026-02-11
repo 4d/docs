@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CONVERT FROM TEXT.Summary-->The CONVERT FROM TEXT command can be used to convert a text expressed in the current character set of 4D to a text expressed in another character set.<!-- END REF-->

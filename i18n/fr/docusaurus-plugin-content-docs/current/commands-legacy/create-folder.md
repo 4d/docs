@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Modifié|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->La commande **CREATE FOLDER** crée un dossier en fonction du chemin d'accès que vous passez dans le paramètre *cheminAccès*.<!-- END REF-->

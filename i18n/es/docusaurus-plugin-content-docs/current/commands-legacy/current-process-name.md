@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Current process name.Summary-->El comando **Current process name** devuelve el nombre del proceso en el que este comando se llama.<!-- END REF-->

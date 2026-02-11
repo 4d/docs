@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BLOB TO PICTURE.Summary-->BLOB TO PICTURE コマンドは、元のフォーマットに関わらず、BLOBに格納されたピクチャを4Dのピクチャ変数やフィールドに挿入します。<!-- END REF-->

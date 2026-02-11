@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->The APPEND DATA TO PASTEBOARD command appends to the pasteboard the data contained in the BLOB *data* under the data type specified in *dataType*.<!-- END REF-->

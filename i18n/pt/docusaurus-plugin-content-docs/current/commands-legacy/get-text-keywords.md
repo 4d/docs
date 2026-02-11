@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->O comando **GET TEXT KEYWORDS** divide todo o *texto* em palavras individuais e cria, para cada palavra obtida, um elemento no array texto *arrPalavrasChaves* para cada palavra.<!-- END REF-->  

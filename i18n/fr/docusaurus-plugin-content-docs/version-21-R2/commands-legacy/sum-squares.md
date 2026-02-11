@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|13|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Sum squares.Summary-->**Sum squares** retourne la somme des carrés de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul. 

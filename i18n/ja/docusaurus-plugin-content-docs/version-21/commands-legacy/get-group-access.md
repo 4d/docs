@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get group access.Summary-->**Get group access** コマンドはカレントセッションにおける4D ユーザーアカウントの所属情報を返します。<!-- END REF-->ユーザーがセッション内においてどのグループにも所属していない場合、空のコレクションが返されます。

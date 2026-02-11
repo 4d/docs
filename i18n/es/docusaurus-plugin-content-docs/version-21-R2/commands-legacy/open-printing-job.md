@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->El comando **OPEN PRINTING JOB** abre una tarea de impresión y apila todas las órdenes de impresión ejecutadas hasta que se llame el comando [CLOSE PRINTING JOB](close-printing-job.md).<!-- END REF--> Este comando le permite controlar los trabajos de impresión y, más particularmente, asegurar que ninguna tarea de impresión inesperada pueda ser insertada en una secuencia de impresión.

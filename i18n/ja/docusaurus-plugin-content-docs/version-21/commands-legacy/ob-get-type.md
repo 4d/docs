@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|変更|
+|16 R4|変更|
+|15|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB Get type.Summary-->**OB Get type**コマンドは、*object* で指定したランゲージオブジェクトの *property* に関連付けられた値の型を返します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。

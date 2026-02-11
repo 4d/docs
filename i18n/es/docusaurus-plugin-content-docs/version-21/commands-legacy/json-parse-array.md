@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R4|Modificado|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.JSON PARSE ARRAY.Summary-->El comando **JSON PARSE ARRAY** analiza el contenido de una cadena con formato JSON y ubica los datos extraídos en el parámetro *array*.<!-- END REF--> Este comando deserializa los datos JSON, realiza la acción inversa del comando [JSON Stringify array](json-stringify-array.md).  

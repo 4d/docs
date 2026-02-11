@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->**LISTBOX SET LOCKED COLUMNS**コマンドは*object* と*\** 引数で指定したリストボックスで左端からはじめて*numColumns*列をロックします。<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->IMPORT TEXT コマンドは、WindowsまたはMacintoshの標準的なテキスト形式のドキュメント*document*から *aTable* にデータを読み込み、新しいレコードを作成します。<!-- END REF-->

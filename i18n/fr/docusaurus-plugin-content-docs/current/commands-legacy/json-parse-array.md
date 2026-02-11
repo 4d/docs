@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R4|Modifié|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.JSON PARSE ARRAY.Summary-->La commande **JSON PARSE ARRAY** analyse (*parse*) le contenu d’une chaîne formatée en JSON et place les données extraites dans le tableau *tab*.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify array](json-stringify-array.md).

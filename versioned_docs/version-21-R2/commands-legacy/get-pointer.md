@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|15|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get pointer.Summary-->The **Get pointer** command returns a pointer to the process or interprocess variable whose name you pass in *varName*.<!-- END REF-->

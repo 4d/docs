@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.INSERT IN BLOB.Summary-->O comando INSERT IN BLOB insere o número de bytes especificado por *len* no BLOB *blob* na posição especificada pelo deslocamento.<!-- END REF--> O BLOB, então torna-se *len* bytes maior.

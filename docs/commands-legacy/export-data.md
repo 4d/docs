@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXPORT DATA.Summary-->The **EXPORT DATA** command exports data in the *fileName* file.<!-- END REF-->4D can export data in the following formats: Text, Fixed length text, XML, SYLK, DIF, DBF (dBase), and 4D. 

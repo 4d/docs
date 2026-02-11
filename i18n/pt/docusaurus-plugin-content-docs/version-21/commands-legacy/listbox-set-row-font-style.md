@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Nota:** Este comando só funciona com os list boxes de tipo array.<!-- END REF-->  

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|変更|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RESOLVE POINTER.Summary-->RESOLVE POINTER コマンドは、*pointer*式によって参照されるオブジェクトの情報を取得し、引数*varName*、*tableNum*、*fieldNum*に返します。<!-- END REF-->

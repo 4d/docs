@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Renomear|
+|6|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** substitui o filtro de entrada para os objetos especificados por *objeto* por *filtroEntrada*.<!-- END REF--> 

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET RESOURCE.Summary-->GET RESOURCE コマンドは、*resType*と*resID*に渡されるタイプとIDを持つリソースの内容を、BLOBフィールドまたはBLOB変数の*resData*に返します。<!-- END REF-->

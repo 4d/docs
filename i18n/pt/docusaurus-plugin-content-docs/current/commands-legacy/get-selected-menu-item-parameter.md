@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 4|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get selected menu item parameter.Summary-->O comando Get selected menu item parameter devolve a cadeia de caracteres personalizada associada a linha de menu selecionada.<!-- END REF--> Este parâmetro deve ter sido definido antecipadamente utilizando o comando [SET MENU ITEM PARAMETER](set-menu-item-parameter.md "SET MENU ITEM PARAMETER").  

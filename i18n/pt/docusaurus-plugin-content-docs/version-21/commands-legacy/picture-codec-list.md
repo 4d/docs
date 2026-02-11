@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PICTURE CODEC LIST.Summary-->O comando PICTURE CODEC LIST preenche o array *arrayCodec* com a lista dos identificadores dos codecs de imagens que estão disponíveis na máquina onde se executa.<!-- END REF--> Esta lista inclui os codecs dos formatos de imagens que são geridos nativamente por 4D.  

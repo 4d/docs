@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Modified|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->The GET MENU ITEM ICON command returns, in the *iconRef* variable, the reference of any icon that is associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This reference is the pathname or number of the picture.

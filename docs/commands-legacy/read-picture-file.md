@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.READ PICTURE FILE.Summary-->The **READ PICTURE FILE** command opens the picture saved in the *fileName* disk file and loads it in the *picture* 4D field or variable.<!-- END REF-->

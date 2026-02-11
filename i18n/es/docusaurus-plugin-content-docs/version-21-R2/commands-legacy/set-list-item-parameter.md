@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->El comando SET LIST ITEM PARAMETER permite modificar el parámetro *selector* para el elemento *refElem* de la lista jerárquica cuya referencia o nombre de objeto se pasa en el parámetro *lista*.<!-- END REF-->

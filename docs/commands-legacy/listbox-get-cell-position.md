@@ -21,6 +21,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R5|Modified|
+|12|Renamed|
+|11 SQL Release 2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->The **LISTBOX GET CELL POSITION** command returns the numbers of the *column* and the *row* that correspond to the location in the listbox (designated by *\** and *object*) of the last mouse click, last selection made via the keyboard, or the horizontal and vertical coordinates of the mouse.<!-- END REF-->

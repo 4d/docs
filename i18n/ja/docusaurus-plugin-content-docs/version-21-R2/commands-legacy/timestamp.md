@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Timestamp.Summary-->**Timestamp** はカレントのUTC時刻をISOフォーマット、ミリ秒付きで返します。<!-- END REF-->具体的には yyyy-MM-ddTHH:mm:ss.SSSZ という形式です。最後の"Z"文字はGMTタイムゾーンを意味するという点に注意してください。

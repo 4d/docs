@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|20 R6|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Find in array.Summary-->Find in array コマンドは、*array*から引数*value*と同じものを検索し、最初に発見された要素の番号を返します。<!-- END REF-->

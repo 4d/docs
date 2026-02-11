@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|13|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->The **WEB SERVICE GET RESULT** command retrieves a value sent back by the Web Service as a result of the processing performed.<!-- END REF-->This command must be used only after the [WEB SERVICE CALL](web-service-call.md) command. 

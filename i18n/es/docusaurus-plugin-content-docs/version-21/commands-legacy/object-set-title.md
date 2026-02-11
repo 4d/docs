@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Renombrar|
+|6|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->El comando OBJECT SET TITLE cambia el título de los objetos especificados por *objeto* y lo reemplaza por el valor pasado en *titulo* *.<!-- END REF-->*  

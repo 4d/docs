@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.START SQL SERVER.Summary-->El comando START SQL SERVER lanza el servidor SQL integrado de la aplicación 4D en la que se ejecuta.<!-- END REF--> Una vez lanzado, el servidor SQL puede responder a las búsquedas SQL externas. 

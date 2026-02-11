@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R2|Modified|
+|11 SQL Release 5|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Application version.Summary-->The Application version command returns an encoded string value that expresses the version number of the 4D environment you are running.<!-- END REF-->

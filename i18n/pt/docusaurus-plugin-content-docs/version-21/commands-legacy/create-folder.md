@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Modificado|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->O comando CREATE FOLDER cria uma pasta de acordo com a rota de acesso que é passada em *rotaPasta*.<!-- END REF-->  

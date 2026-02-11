@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.XML GET ERROR.Summary-->La commande **XML GET ERROR** retourne dans le paramètre *texteErreur* la description de l’erreur rencontrée lors du traitement de l’élément XML désigné par le paramètre *refElément*.<!-- END REF--> Les informations retournées sont fournies par la librairie Xerces.dll. 

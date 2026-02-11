@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->SQL EXECUTE SCRIPTコマンドを使用して、*scriptPath*で指定されたスクリプトファイルに書かれた一連のSQLステートメントを実行できます。<!-- END REF-->このコマンドはローカルマシン (ローカルの4Dまたは4D Server上のストアドプロシージャ) でのみ実行できます。またこのコマンドはカレントデータベース (内部あるいはエクスターナルデータベース) に対して動作します。

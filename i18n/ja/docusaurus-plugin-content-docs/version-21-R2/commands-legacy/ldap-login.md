@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LDAP LOGIN.Summary-->**LDAP LOGIN** コマンドは*url* 引数で指定したLDAPサーバーに対し、*login* 引数と *password* 引数に渡された識別子をもって読み込み専用の接続を開きます。<!-- END REF-->サーバーに受け入れられた場合、[LDAP LOGOUT](ldap-logout.md) コマンドが実行されるまで(あるいはプロセスが閉じられるまで)、カレントプロセスにおいてその後に実行される全てのLDAP検索にはこの接続が使用されます。

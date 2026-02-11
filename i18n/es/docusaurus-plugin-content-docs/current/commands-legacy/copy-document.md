@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Modificado|
+|13|Modificado|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->El comando **COPY DOCUMENT** copia el documento especificado por *nomFuente* en la ubicación especificada por *nomDest*.<!-- END REF--> 

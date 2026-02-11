@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Renomear|
+|6.5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB SET HOME PAGE.Summary-->O comando WEB SET HOME PAGE lhe permite modificar a página de início personalizada para o processo web atual.<!-- END REF-->  

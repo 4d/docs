@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->O comando**METHOD Get attribute**retorna o valor do atributo *tipoAtributo* para o método projeto designado pelo parâmetro *rota*.<!-- END REF-->

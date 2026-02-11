@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->La commande **SVG Find element IDs by rect** remplit le tableau texte *tabIds* avec les IDs (attribut "id" ou "xml:id") des éléments XML dont le rectangle englobant est en intersection avec le rectangle de sélection à l’emplacement défini par les paramètres *x* et *y*.<!-- END REF-->

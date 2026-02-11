@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LDAP Search.Summary-->O comando **LDAP Search** encontra a primeira ocorrência que corresponde aos critérios definidos no servidor LDAP alvo.<!-- END REF--> Este comando deve ser executado em uma conexão com um servidor LDAP aberta com [LDAP LOGIN](ldap-login.md); caso contrário, é devolvido um erro 1003.  

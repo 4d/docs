@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->**METHOD GET NAMES**コマンドはアプリケーション中のプロジェクトメソッドの名前を*arrNames*配列に返します。<!-- END REF-->

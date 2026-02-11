@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RELATE MANY SELECTION.Summary-->The RELATE MANY SELECTION command generates a selection of records in the Many table, based on a selection of records in the One table, and loads the first record of the Many table as the current record.<!-- END REF-->RELATE MANY SELECTION changes the current record for the One table.

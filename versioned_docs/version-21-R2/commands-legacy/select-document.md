@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|13|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Select document.Summary-->The **Select document** command displays a standard open document dialog box which allows the user to set one or more files and returns the name and/or full access path of the selected file(s).<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Data file.Summary-->El comando Data file devuelve el nombre largo del archivo de datos o del primer segmento de la base en la cual está trabajando actualmente.<!-- END REF-->

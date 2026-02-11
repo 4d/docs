@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Summary-->O comando **GET PICTURE KEYWORDS** devolve no array *arrayPalavrasChaves*, a lista de palavras-chaves associadas à imagem passada como parâmetro.<!-- END REF-->  

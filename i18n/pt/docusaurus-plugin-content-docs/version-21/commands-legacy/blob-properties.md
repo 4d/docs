@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Modificado|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB PROPERTIES.Summary-->O comando **BLOB PROPERTIES** retorna informações sobre o *blob* BLOB.<!-- END REF-->diz se o BLOB é comprimido ou não, e retorna um dos seguintes valores.

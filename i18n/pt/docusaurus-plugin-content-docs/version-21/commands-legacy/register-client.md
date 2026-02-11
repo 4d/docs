@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 3|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->O comando REGISTER CLIENT “registra” uma máquina cliente com o nome especificado em *nomeCliente* no 4D Server, a fim de permitir outros clientes ou eventualmente 4D server (utilizando métodos armazenados) executar métodos fazendo uso do comando [EXECUTE ON CLIENT](execute-on-client.md).<!-- END REF--> Uma vez registrado, um cliente 4D pode executar um ou vários métodos para outros clientes.

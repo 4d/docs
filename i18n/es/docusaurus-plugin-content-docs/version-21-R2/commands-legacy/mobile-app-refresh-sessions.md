@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|17 R2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->El comando **MOBILE APP REFRESH SESSIONS** comprueba todos los archivos de sesión de la aplicación móvil ubicados en la carpeta MobileApps del servidor y actualiza el contenido de sesión existente en la memoria para todo archivo editado.<!-- END REF-->

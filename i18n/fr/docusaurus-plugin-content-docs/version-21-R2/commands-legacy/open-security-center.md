@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->La commande **OPEN SECURITY CENTER** provoque l’affichage de la fenêtre du Centre de sécurité et de maintenance (CSM).<!-- END REF--> Pour plus d'informations, veuillez consulter la page *Centre de Sécurité et de Maintenance*.

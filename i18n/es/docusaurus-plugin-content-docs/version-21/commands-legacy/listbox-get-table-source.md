@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Modificado|
+|12|Renombrar|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->El comando LISTBOX GET TABLE SOURCE permite conocer la fuente actual de datos mostrados en el list box designado por los parámetros *\** y *objeto*.<!-- END REF-->

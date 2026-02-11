@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|名称変更|
+|6.5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB GET STATISTICS.Summary-->**WEB GET STATISTICS**コマンドを使用すると、Webサーバのキャッシュに読み込まれた最も閲覧されたページに関する情報を取得 することができます。<!-- END REF-->そのため、これらの統計は、静止画、GIFピクチャ、JPEGピクチャ (100KB未満) とスタイルシート (.css) のみに適用されます。

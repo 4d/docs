@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET ASSERT ENABLED.Summary-->The **SET ASSERT ENABLED** command can be used to disable or re-enable any assertions inserted into the 4D code of the application.<!-- END REF--> For more information about assertions, please refer to the description of the [ASSERT](assert.md) command. 

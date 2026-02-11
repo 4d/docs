@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R6|Renamed|
+|15 R4|Renamed|
+|13|Created|
+
+</details>
+</div>
+
 ## Compatibility Note 
 
 <!--REF #_command_.On Web Legacy Close Session database method.Summary-->This database method can only be used with **legacy web sessions**, available in databases converted from versions prior to 4D v18 R6\.<!-- END REF--> It is never called when **scalable web sessions** mode is enabled (recommended in 4D v18 R6 and higher). For more information, please refer to the *Web Sessions Management (Legacy)* section.

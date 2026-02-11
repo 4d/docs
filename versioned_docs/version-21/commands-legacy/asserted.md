@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Asserted.Summary-->The **Asserted** command has an operation similar to that of the [ASSERT](assert.md) command, with one difference in that it returns a value which is the result of the evaluation of the *boolExpression* parameter.<!-- END REF--> It therefore allows the use of an assertion during the evaluation of a condition (see the example). For more information about the operation of assertions and the parameters of this command, please refer to the description of the [ASSERT](assert.md) command.

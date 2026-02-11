@@ -23,6 +23,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|変更|
+|14 R5|変更|
+|14|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS はフォームに表示されるグラフの設定を変更します。<!-- END REF-->グラフは [GRAPH](graph.md) コマンドで定義済みでなければなりません。 GRAPH SETTINGS は円グラフには効果ありません。このコマンドはフォームと同じプロセスで呼び出されていなければなりません。

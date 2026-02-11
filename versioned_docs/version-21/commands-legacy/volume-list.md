@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VOLUME LIST.Summary-->The VOLUME LIST command populates the text array *volumes* with the names of the volumes currently defined (Windows) or mounted (Macintosh) on your machine.<!-- END REF-->

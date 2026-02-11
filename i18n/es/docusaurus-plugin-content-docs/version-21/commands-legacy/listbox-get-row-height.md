@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX Get row height.Summary-->El comando **LISTBOX Get row height**  devuelve la altura de la *fila* especificada en el objeto list box designado utilizando el *objeto* y los parámetros *\**.<!-- END REF-->

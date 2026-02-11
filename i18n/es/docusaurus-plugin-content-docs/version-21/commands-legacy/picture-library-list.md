@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->El comando PICTURE LIBRARY LIST devuelve los números de referencia y los nombres de las imágenes almacenadas en la librería de imágenes de la base de datos.<!-- END REF--> 

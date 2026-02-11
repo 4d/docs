@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CLEAR LIST.Summary-->El comando CLEAR LIST borra de la memoria la lista jerárquica cuyo número de referencia se pasa en *lista*.<!-- END REF-->

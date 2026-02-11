@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+|12|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Select folder.Summary-->El comando **Select folder** muestra una caja de diálogo que le permite seleccionar manualmente una carpeta y luego recuperar la ruta de acceso completa a esa carpeta.<!-- END REF--> El parámetro opcional *rutaDefecto* puede utilizarse para designar la ubicación de una carpeta que inicialmente será mostrada en la caja de diálogo de selección de la carpeta.

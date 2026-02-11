@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->**SET DRAG ICON**コマンドは、指定したアイコンを、ドラッグ＆ドロップ中のカーソルと関連付けます。<!-- END REF-->

@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+|16 R6|Modificado|
+|17 R5|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get 4D file.Summary-->El comando **Get 4D file** devuelve la ruta de acceso al archivo del entorno 4D especificado por el parámetro *archivo*.<!-- END REF--> La ruta se devuelve utilizando la sintaxis sistema.

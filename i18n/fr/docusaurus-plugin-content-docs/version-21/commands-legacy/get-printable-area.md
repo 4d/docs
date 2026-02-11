@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8.1|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->La commande **GET PRINTABLE AREA** retourne dans les paramètres *hauteur* et *largeur* la taille en pixels de la zone d’impression.<!-- END REF--> Cette taille dépend des paramètres d’impression courants, de l’orientation du papier, etc. 

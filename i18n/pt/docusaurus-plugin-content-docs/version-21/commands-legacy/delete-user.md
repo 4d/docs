@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DELETE USER.Summary-->O comando [ON ERR CALL](on-err-call.md) apaga o usuário cujo número se passa em *refUsuario*.<!-- END REF--> Deve passar um número válido de usuário retornado pelo comando [GET USER LIST](get-user-list.md).   

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get window title.Summary-->O comando Get window title devolve o título da janela cujo número de referência se passa em *janela*.<!-- END REF--> Se a janela não existir, se devolve uma cadeia vazia.  

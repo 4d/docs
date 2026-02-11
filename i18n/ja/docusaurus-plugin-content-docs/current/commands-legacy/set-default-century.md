@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET DEFAULT CENTURY.Summary-->SET DEFAULT CENTURY コマンドは、2桁の年で日付を入力した際に4Dが使用する、デフォルトの世紀と区切り年を指定するために使用します。<!-- END REF-->

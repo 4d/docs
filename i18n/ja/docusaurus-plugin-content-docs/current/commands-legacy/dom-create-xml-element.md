@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Create XML element.Summary-->**DOM Create XML element** コマンドは、*elementRef* で参照されるXML中の*xPath* 引数で指定された位置に新しい要素を作成し、また必要であれば属性を追加します。<!-- END REF-->にはルートの要素参照 (例えば[DOM Create XML Ref](dom-create-xml-ref.md) コマンドで作成された) を渡します。

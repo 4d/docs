@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WINDOW LIST.Summary-->O comando WINDOW LIST preenche o array *janelas* com os números de referência das janelas abertas atualmente em todos os processos (processos kernel ou usuário).<!-- END REF--> Apenas janelas "visíveis" (ou seja, não ocultadas) são retornadas. 

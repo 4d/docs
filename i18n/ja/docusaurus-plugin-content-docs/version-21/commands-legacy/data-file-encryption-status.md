@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Data file encryption status.Summary-->**Data file encryption status** コマンドは、*structurePath* および *dataPath* 引数で指定したデータファイルの、暗号化ステータスをあらわすオブジェクトを返します。<!-- END REF-->それぞれのテーブルについてのステータスも同時に提供されます。

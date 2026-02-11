@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 2|Modificado|
+|12|Renomear|
+|16 R2|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->O comando  LISTBOX SELECT ROW seleciona a fila cujo número é passado em *posição* no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

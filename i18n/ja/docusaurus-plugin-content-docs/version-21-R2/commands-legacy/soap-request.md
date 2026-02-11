@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SOAP Request.Summary-->**SOAP request**コマンドは実行されているコードがSOAPリクエストの一部であれば[True](true.md "True")を返します。<!-- END REF--> 

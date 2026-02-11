@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|13|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB START SERVER.Summary-->The **WEB START SERVER** command starts the Web server of the 4D application on which it has been executed (4D or 4D Server).<!-- END REF--> The database is therefore published on your Intranet network or on the Internet.

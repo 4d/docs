@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->The INSERT IN LIST command inserts the item designated by the *itemRef* parameter in the list whose reference number or object name you pass in *list*.<!-- END REF-->

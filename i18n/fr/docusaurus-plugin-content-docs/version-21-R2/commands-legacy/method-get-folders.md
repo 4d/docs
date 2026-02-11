@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->La commande **METHOD GET FOLDERS** retourne dans le tableau *tabNoms* les noms des dossiers créés dans la page Démarrage de l’Explorateur de 4D <!-- END REF-->:

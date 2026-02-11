@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->The **GET LIST ITEM** command returns information about the item specified by *itemPos* of the list whose reference number or object name is passed in *list*.<!-- END REF--> 

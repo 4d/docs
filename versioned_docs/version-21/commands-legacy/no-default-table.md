@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.NO DEFAULT TABLE.Summary-->The **NO DEFAULT TABLE** command is used to cancel the effect of the [DEFAULT TABLE](default-table.md) command.<!-- END REF--> After this command is executed, there is no longer any default table defined for the process.   

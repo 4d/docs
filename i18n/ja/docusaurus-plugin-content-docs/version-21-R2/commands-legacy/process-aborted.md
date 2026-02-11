@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Process aborted.Summary-->**Process aborted**コマンドは、このコマンドを呼び出したプロセスが不意に中断されようとしている場合**True**を返します。<!-- END REF-->これはコマンドの実行が正常に完了できないことを意味します。

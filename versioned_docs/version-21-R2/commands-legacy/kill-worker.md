@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.KILL WORKER.Summary-->The **KILL WORKER** command posts a message to the worker process whose name or number you passed in *process*, asking it to ignore any pending messages and to terminate its execution as soon as the current task ends.<!-- END REF-->

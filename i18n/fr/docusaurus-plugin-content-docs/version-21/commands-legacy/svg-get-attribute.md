@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->La commande **SVG GET ATTRIBUTE** permet de lire la valeur courante de l’attribut *nomAttribut* dans un objet ou une image SVG.<!-- END REF--> 

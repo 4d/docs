@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->La commande **WEB GET VARIABLES** remplit les tableaux texte *tabNoms* et *tabValeurs* avec, respectivement, les noms et les valeurs des variables contenues dans un formulaire Web “soumis” (c’est-à-dire envoyé) au serveur Web.<!-- END REF-->   

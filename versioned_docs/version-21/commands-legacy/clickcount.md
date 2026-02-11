@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Clickcount.Summary-->The **Clickcount** command returns, in the context of a mouse click event, the number of times the user has clicked in rapid succession with the same mouse button.<!-- END REF--> Typically, this command returns 2 for a double-click. 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->**QR MOVE COLUMN**コマンドは、*column* 変数の位置にあるカラムを*newPos* 変数で指定した位置へと移動させます。<!-- END REF-->

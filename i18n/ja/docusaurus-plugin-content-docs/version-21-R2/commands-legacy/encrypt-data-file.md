@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Encrypt data file.Summary-->**Encrypt data file** コマンドはを使用数と、*structurePath* 引数で指定されたストラクチャーに割り当てられている、*dataPath* 引数で指定されたデータファイルを暗号化または再暗号化することができます。<!-- END REF-->またこれを使用してデータベースから暗号化を取り除くこともできます。このコマンドは元のファイルに対する編集は行わず、元のデータファイルのバックアップを取るために作成された完全なパス名を返します。

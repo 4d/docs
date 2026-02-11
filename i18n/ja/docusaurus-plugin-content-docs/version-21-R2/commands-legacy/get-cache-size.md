@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get cache size.Summary-->**Get cache size**コマンドは、カレントデータベースのキャッシュサイズをバイト単位で返します。<!-- END REF-->このコマンドはローカルモード (4D Server および 4D) でのみ正しい情報を返します。リモートモードの4Dでの使用は想定されていないことに注意してください。

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->**SET GROUP ACCESS** コマンドはカレントセッションにおいて4D ユーザーアカウントの所属情報を変更します。<!-- END REF-->それまでの所属情報は全てリセットされ、*groups* 引数で指定されたグループへの新しい所属が設定されます。

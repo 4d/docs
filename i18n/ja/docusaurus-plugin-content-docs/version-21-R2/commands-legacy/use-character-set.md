@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.USE CHARACTER SET.Summary-->**USE CHARACTER SET**は、データベースとドキュメントまたはシリアルポート間のデータ交換の際、4Dが 使用する文字セットを変更するために使用できます。<!-- END REF-->このコマンドはカレントプロセスに有効です。交換操作にはテキスト, DIF, そして SYLK ファイルの読み込み/書き出しが含まれます。文字マップはまた[SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (テキスト型パケット) そして[RECEIVE BUFFER](receive-buffer.md)によるデータ交換にも使用されます。[SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (BLOB型パケット) そして [RECEIVE VARIABLE](receive-variable.md) によるデータ交換には影響しません。

@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R8|変更|
+|13|変更|
+|11 SQL Release 4|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.System folder.Summary-->**System folder**コマンドは、アクティブなWindows またはmacOS システムフォルダにあるシステムフォルダへのパス名、あるいはアクティブなWindows またはmacOS システムフォルダ自体へのパス名を返します。<!-- END REF-->

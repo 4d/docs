@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+|18 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->O comando **METHOD GET PATHS** enche o array *arrRotas* com as rotas de acesso internas e os nomes dos métodos da aplicação do tipo definido pelo parâmetro *tipoMetodo*.<!-- END REF-->  

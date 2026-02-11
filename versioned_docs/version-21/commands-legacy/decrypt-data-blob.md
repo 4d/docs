@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Decrypt data BLOB.Summary-->The **Decrypt data BLOB** command decrypts the *blobToDecrypt* parameter with the same algorithm as 4D uses to decrypt data (AES-256) and returns the result in *decryptedBLOB*.<!-- END REF-->

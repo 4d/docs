@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is window maximized.Summary-->The **Is window maximized** command returns **True** if the window whose reference number is passed in *window* is currently maximized, and **False** otherwise.<!-- END REF--> 

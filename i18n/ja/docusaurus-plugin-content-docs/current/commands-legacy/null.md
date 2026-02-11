@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Null.Summary-->**Null** は、Null 型の値**null** を返します。<!-- END REF-->

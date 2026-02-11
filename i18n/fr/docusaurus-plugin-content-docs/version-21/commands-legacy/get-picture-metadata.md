@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PICTURE METADATA.Summary-->La commande **GET PICTURE METADATA** permet de lire le contenu de métadonnées (ou méta-balises) présentes dans *image* (champ ou une variable image 4D).<!-- END REF--> Pour plus d’informations sur les métadonnées, reportez-vous à la description de la commande [SET PICTURE METADATA](set-picture-metadata.md).

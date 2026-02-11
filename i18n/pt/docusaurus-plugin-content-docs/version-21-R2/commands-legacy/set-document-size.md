@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET DOCUMENT SIZE.Summary-->O comando SET DOCUMENT SIZE define o tamanho de um documento para o número de bytes que são passados em *tamanho*.<!-- END REF-->  

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.IMPORT DATA.Summary-->**IMPORT DATA**コマンドはデータを*fileName*ファイルから読み込みます。<!-- END REF-->4Dは以下のフォーマットのデータ読み込みを行えます: テキスト、固定長テキスト、XML、SYLK、DIF、DBF（dBase）および4Dフォーマット

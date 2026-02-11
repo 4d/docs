@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|15 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** は *aTable*のカレントレコードを、カレントセレクションを変更せずに印刷します。<!-- END REF-->カレント出力フォームが印刷に用いられます。*aTable*にカレントレコードが存在しない場合、**PRINT RECORD**は何も行いません。

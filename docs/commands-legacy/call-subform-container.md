@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->The CALL SUBFORM CONTAINER command lets a subform instance send the *event* to the subform object that contains it.<!-- END REF--> The subform object can then process the *event* in the context of the parent form. 

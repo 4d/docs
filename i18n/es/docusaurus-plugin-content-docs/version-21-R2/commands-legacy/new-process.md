@@ -29,6 +29,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.New process.Summary-->El comando New process inicia un nuevo proceso (en el mismo equipo) y devuelve el número de este proceso.<!-- END REF-->

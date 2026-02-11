@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Load list.Summary-->Load list crea una lista jerárquica cuyo contenido se copia de la lista pasada en *nomLista*.<!-- END REF--> Luego devuelve el número de referencia de la lista creada recientemente. 

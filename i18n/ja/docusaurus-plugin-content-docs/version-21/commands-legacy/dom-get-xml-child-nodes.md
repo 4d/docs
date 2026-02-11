@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM GET XML CHILD NODES.Summary-->DOM GET XML CHILD NODES コマンドは*elementRef*で指定したXML要素のすべての子ノードのタイプと参照または値を返します。<!-- END REF-->

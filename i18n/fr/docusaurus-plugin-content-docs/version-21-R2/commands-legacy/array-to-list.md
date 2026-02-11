@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|14|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->La commande **ARRAY TO LIST** crée ou remplace la liste hiérarchique ou l'énumération *liste* en utilisant les éléments du tableau *tableau*.<!-- END REF-->

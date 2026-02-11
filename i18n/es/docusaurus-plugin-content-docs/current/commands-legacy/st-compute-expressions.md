@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R5|Modificado|
+|14|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->El comando **ST COMPUTE EXPRESSIONS** actualiza las expresiones dinámicas 4D encontradas en un campo o variable ya sea 4D Write Pro o multiestilo designado por el parámetro *objeto*.<!-- END REF--> 

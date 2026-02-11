@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Is new record.Summary-->O comando Is new record devolve [True](true.md "True") quando o registro atual de *tabela* estiver sendo criado e ainda não foi guardado no processo atual.<!-- END REF-->  

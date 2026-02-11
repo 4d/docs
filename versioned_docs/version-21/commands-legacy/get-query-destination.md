@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->The **GET QUERY DESTINATION** command returns the current destination of query results for the process underway.<!-- END REF--> By default, query results modify the current selection, but you can change this using the [SET QUERY DESTINATION](set-query-destination.md) command.

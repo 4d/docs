@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Storage.Summary-->La commande **Storage** retourne le catalogue des objets partagés et des collections partagées qui ont été enregistré(e)s dans l'objet *Storage* sur la machine ou le composant courant(e).<!-- END REF--> 

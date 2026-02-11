@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|名称変更|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB Is secured connection.Summary-->**WEB Is secured connection**コマンドは、4DのWebサーバ接続が (リクエストが"http:"の代わりに"https:"で始まる) TLS/SSLを通して保護モードで実行されたかを示すブール値を返します 。<!-- END REF-->

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Modified|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->The **SET MENU ITEM ICON** command modifies the icon associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->  

@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R4|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.Undefined.Summary-->Undefined devuelve True si el resultado de la evaluación de *expresion* no es un valor definido, y de lo contrario False.<!-- END REF-->

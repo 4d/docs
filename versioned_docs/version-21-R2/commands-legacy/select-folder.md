@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|12|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Select folder.Summary-->The **Select folder** command displays a dialog box that allows you to manually select a folder and then retrieve the complete access path to that folder.<!-- END REF--> The optional *defaultPath* parameter can be used to designate the location of a folder that will be initially displayed in the folder selection dialog box.

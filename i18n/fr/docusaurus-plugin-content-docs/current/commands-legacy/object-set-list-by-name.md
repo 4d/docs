@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Renommé|
+|14|Modifié|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->La commande **OBJECT SET LIST BY NAME** définit, remplace ou dissocie l'*énumération* associée à l'objet ou au groupe d'objets désigné(s) par *objet*.<!-- END REF--> L'énumération dont le nom est passé dans le paramètre *énumération* doit avoir été créée dans l'éditeur d'énumérations, en mode Développement.

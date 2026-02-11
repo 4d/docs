@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get query limit.Summary-->O comando **Get query limit** devolve o limite do número de registros que uma pesquisa pode encontrar no processo atual.<!-- END REF-->

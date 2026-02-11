@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->O comando HIDE WINDOW permite ocultar a janela cujo número de referência se passa em *janela* ou, se for omitido este parâmetro, a janela do primeiro plano do processo atual.<!-- END REF--> Este comando permite, por exemplo, em um processo com várias janelas, mostrar apenas a janela ativa.  

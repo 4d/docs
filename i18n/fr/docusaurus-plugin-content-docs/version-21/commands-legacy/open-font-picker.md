@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->La commande **OPEN FONT PICKER** affiche la boîte de dialogue de sélection de police du système.<!-- END REF-->

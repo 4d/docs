@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DUPLICATE RECORD.Summary-->**DUPLICATE RECORD** creates a new record for *aTable* that is a duplicate of the current record.<!-- END REF--> The new record becomes the current record. If there is no current record, then **DUPLICATE RECORD** does nothing. You must use [SAVE RECORD](save-record.md) to save the new record.

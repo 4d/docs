@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Modificado|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->O comando OBJECT GET SCROLLBAR se utiliza para mostrar ou ocultar as barras de deslocamento horizontal e/ou vertical no objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->   

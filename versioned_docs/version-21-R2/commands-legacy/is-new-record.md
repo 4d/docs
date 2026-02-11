@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is new record.Summary-->The **Is new record** command returns True when *aTable*’s current record is being created and has not yet been saved in the current process.<!-- END REF-->You can obtain the same information by using the existing [Record number](record-number.md) command, and by testing if it returns -3\.   

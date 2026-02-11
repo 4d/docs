@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DELETE USER.Summary-->El comando DELETE USER borra el usuario cuyo número se pasa en *refUsuario*.<!-- END REF--> Debe pasar un número válido de usuario devuelto por el comando [GET USER LIST](get-user-list.md "GET USER LIST"). 

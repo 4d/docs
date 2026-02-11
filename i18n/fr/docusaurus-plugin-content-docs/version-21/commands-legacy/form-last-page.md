@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM LAST PAGE.Summary-->La commande **FORM LAST PAGE** change la page courante d'un formulaire pour afficher la dernière page du formulaire.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la dernière page du formulaire est déjà affichée, **FORM LAST PAGE** ne fait rien.

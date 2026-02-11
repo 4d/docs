@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|16 R4|Modified|
+|16 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.JSON Parse.Summary-->The **JSON Parse** command parses the contents of a JSON-formatted string and extracts values that you can store in a 4D field or variable.<!-- END REF--> This command deserializes JSON data; it performs the opposite action of the [JSON Stringify](json-stringify.md) command.

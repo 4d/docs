@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->**OPEN ADMINISTRATION WINDOW**コマンドは、コマンドを実行したマシン上でサーバ管理ウィンドウを開きます。<!-- END REF-->4D Serverの管理ウィンドウで現在のパラメタを表示させたり、さまざまなメンテナンス操作を行ったりできます (4D Server Reference Guide参照)。4D Server のバージョン11から、このウィンドウをクライアントマシン上で表示できるようになりました: 

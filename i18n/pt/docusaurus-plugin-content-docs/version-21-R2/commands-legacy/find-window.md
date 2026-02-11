@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Find window.Summary-->O comando Find window devolve (se existe) o número de referência da primeira janela “tocada” pelo ponto cujas coordenadas se passam em *esquerda e superior*.<!-- END REF-->  

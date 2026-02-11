@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->**WA OPEN WEB INSPECTOR** コマンドは、 *\** および *object* 引数で指定されたWeb エリアにおいてWeb インスペクターを開きます。<!-- END REF-->

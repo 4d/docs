@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE コマンドは、現在表示されているフォームページを先頭のフォームページに変更します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされてない場合や、すでに最初のフォームページが表示されている場合、FORM FIRST PAGE コマンドは何も行いません。

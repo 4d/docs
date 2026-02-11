@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.FOLDER LIST.Summary-->El comando FOLDER LIST llena el array de tipo Texto o Alfa *directorios* con los nombres de las carpetas ubicadas en la ruta de acceso que se pasa en *rutaAcceso*.<!-- END REF-->debe pasar una ruta de acceso absoluta en el parámetro *rutaAcceso*. 

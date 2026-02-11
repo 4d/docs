@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6|Modificado|
+|12|Renomear|
+|14|Modificado|
+|14|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->O comando OBJECT SET LIST BY NAME define ou substitui a lista associada ao objeto o grupo de objetos designado por *objeto* A lista cujo nome é passado no parâmetro *lista* deve ter sido criada no editor de listas, em modo Desenho*.<!-- END REF-->*  

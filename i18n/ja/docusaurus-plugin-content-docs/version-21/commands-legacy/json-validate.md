@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.JSON Validate.Summary-->**JSON Validate** コマンドは、*vJson* 引数に渡されたJSON コンテンツを*vSchema* 引数に渡したJSON スキーマで定義されたルールに対しての適合性をチェックします。<!-- END REF-->JSON が無効であった場合、コマンドはエラーの詳細な説明を返します。

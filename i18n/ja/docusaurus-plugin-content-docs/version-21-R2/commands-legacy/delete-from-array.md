@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->**DELETE FROM ARRAY** コマンドは1つまたは複数の要素を*array*から削除します。<!-- END REF-->*where*引数の示す位置から要素の削除を開始します。

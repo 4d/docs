@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->O comando XML GET OPTIONS é utilizado para ler o valor atual de um ou mais dos parâmetros XML definidos para a sessão atual e o usuário atual.<!-- END REF-->

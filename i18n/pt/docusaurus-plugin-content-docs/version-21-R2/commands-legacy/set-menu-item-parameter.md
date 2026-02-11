@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->O comando SET MENU ITEM PARAMETER permite associar uma cadeia de caracteres personalizada com uma linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> 

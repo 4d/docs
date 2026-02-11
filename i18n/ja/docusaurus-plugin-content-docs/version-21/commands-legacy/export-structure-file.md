@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18|変更|
+|17 R5|変更|
+|17 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Export structure file.Summary-->**Export structure file** コマンドは、カレントの4D データベースストラクチャーを、*folderPath* 引数で指定したパスに、テキストベースのファイルやネイティブのピクチャーファイルなどのセットに分解し、書き出し、保存します。<!-- END REF-->デフォルトでは、データベースストラクチャー全体(メソッド、フォーム、カタログ、等)が書き出されます。*options* 引数を使用することで書き出す中身をフィルターすることができます。

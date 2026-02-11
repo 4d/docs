@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR NEW AREA.Summary-->La commande **QR NEW AREA** crée une nouvelle zone d'état rapide et stocke son numéro de référence dans la variable de type Entier long référencée par le pointeur *ptr*.<!-- END REF-->

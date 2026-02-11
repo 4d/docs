@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|15 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** executa *instrução* como uma linha de código e opcionalmente, devolve seu valor resultante em *result*.<!-- END REF--> Este comando está desenhado para ser utilizado quando necessitar avaliar expressões que o usuário possa construir ou modificar. 

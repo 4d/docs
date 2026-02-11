@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 4|Modifié|
+|16 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->La commande **APPEND MENU ITEM**  ajoute une ou plusieurs ligne(s) au menu dont vous avez passé le numéro ou la référence dans *menu.<!-- END REF-->*  

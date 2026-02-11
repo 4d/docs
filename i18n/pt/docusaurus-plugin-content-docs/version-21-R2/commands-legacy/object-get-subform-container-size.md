@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+|18|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->O comando **OBJECT GET SUBFORM CONTAINER SIZE** devolve a *largura* e a *altura* (em pixels) de um objeto sub-formulário "atual", mostrado no formulário pai.<!-- END REF-->  

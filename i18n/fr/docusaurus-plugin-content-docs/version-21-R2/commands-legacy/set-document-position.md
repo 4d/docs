@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET DOCUMENT POSITION.Summary-->Cette commande ne fonctionne qu'avec un document déjà ouvert, dont vous avez passé le numéro de référence dans le paramètre *docRef*.<!-- END REF-->définit la position que vous passez dans *offset* comme étant celle à laquelle la prochaine lecture ([RECEIVE PACKET](receive-packet.md)) ou écriture ([SEND PACKET](send-packet.md)) aura lieu.

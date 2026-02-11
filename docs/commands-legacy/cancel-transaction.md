@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CANCEL TRANSACTION.Summary-->**CANCEL TRANSACTION** cancels the [transaction](../Develop-legacy/transactions.md) that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF-->cancels the operations executed on the data and stored during the transaction.

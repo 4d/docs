@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R4|Modifié|
+|14 R3|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LOCKED BY.Summary-->**LOCKED BY** retourne des informations sur l'utilisateur et le process qui ont verrouillé l'enregistrement.<!-- END REF--> Le numéro du process(\*), le nom de l'utilisateur dans l'application 4D et dans le système ainsi que le nom du process sont retournés dans les variables *process*, *utilisateur4D*, *utilisateurSession* et *nomProcess*. Vous pouvez utiliser ces informations dans une boîte de dialogue pour avertir l'utilisateur lorsqu'un enregistrement est verrouillé.

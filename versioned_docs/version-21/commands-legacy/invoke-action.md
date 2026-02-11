@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->The **INVOKE ACTION** command triggers the standard action defined by the *action* parameter, optionally in the *target* context.<!-- END REF-->

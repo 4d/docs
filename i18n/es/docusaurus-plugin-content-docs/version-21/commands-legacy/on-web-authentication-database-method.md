@@ -21,6 +21,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Descripción 
 
 <!--REF #_command_.On Web Authentication database method.Summary-->El Método base On Web Authenticationestá a cargo de administrar el acceso al motor del servidor web.<!-- END REF--> Es llamado automáticamente por 4D o 4D Server cuando una petición de un navegador web requiere la ejecución de un método 4D en el servidor (llamada de un método vía un URL *4DACTION* o  una etiqueta *4DSCRIPT*, etc.). 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+|14 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->La commande **MAXIMIZE WINDOW** provoque le zoom de la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, de toutes les fenêtres de l'application (sous Windows) ou de la fenêtre de premier plan du process courant (sous Mac OS).<!-- END REF--> 

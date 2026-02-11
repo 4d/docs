@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB Get body part count.Summary-->La commande **WEB Get body part count** retourne le nombre de parties qui composent le body (corps) reçu.<!-- END REF-->

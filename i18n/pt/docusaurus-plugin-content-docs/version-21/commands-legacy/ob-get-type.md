@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R6|Modificado|
+|16 R4|Modificado|
+|15|Modificado|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB Get type.Summary-->O comando **OB Get type** devolve o tipo do valor associado a *propriedade* do *objeto*.<!-- END REF-->deve ter sido definido utilizando o comando *C\_OBJECT* ou designar um campo objeto 4D.

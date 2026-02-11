@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->**FORM GET ENTRY ORDER** コマンドは フォーム上のオブジェクトの名前を、その入力順に並べて *objectNames* に返します。<!-- END REF-->

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.JSON Resolve pointers.Summary-->O comando **JSON Resolve pointers** resolve todos os ponteiros JSON encontrados no objeto, com respeito à configuração de opções (se existir).<!-- END REF-->

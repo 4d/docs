@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R5|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Note de compatibilité 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->Cette commande était nommée **CALL PROCESS** dans les versions précédentes de 4D.<!-- END REF--> 

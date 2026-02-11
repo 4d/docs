@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12.3|Modified|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Summary-->The **SVG SET ATTRIBUTE** command is used to modify the value of an existing attribute in the SVG rendering tree of a displayed image or in the internal DOM tree of an image.<!-- END REF--> 

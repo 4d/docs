@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR NEW AREA.Summary-->**QR NEW AREA** コマンドは新しいクイックレポートエリアを作成し、その参照番号を倍長整数変数に保存します(変数は*ptr*ポインターによって参照されます)。<!-- END REF-->

@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|変更|
+|14|変更|
+|12.1|変更|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FONT LIST.Summary-->**FONT LIST**コマンドは、テキスト配列の*fonts*引数を作成し、システム上で使用可能なスケーラブルなフォントの名前を格納します。<!-- END REF-->引数は取得したいフォントリストの型を指定します。指定するためには、 "*Font Type List*"テーマ内の以下の定数のいづれかを *listType* 引数に渡して下さい:

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA OPEN URL.Summary-->The **WA OPEN URL** command loads the URL passed in the *url* parameter into the Web area designated by the *\** and *object* parameters.<!-- END REF-->

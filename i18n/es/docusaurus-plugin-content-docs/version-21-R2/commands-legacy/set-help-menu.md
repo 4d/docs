@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|20|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET HELP MENU.Summary-->El comando **SET HELP MENU** le permite reemplazar el menú **Ayuda** por defecto de 4D por la colección de elementos del menù *menuCol* del modo aplicación.<!-- END REF-->

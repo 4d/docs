@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|名称変更|
+|12|変更|
+|6.5|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SEND FILE.Summary-->**WEB SEND FILE**コマンドは*htmlFile*に渡すパス名を持つHTMLページやWebファイルをWebブラウザへ送ります。<!-- END REF--> 

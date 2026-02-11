@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->The VERIFY DATA FILE command carries out a structural check of the objects contained in the 4D data file designated by *structurePath* and *dataPath*.<!-- END REF-->For more information about checking data, please refer to the Design Reference manual. *structurePath* designates the structure file (compiled or not) associated with the data file to be checked. This can be the open structure file or any other structure file. You must pass a complete pathname, expressed with the syntax of the operating system. You can also pass an empty string, in this case a standard Open file dialog box appears so that the user can specify the structure file to be used.    

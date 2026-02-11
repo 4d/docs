@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8.1|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get printed height.Summary-->**Get printed height** コマンドは、 [Print form](../commands/print-form.md) コマンドを使って印刷された部分全体の高さ（ピクセル単位）を返します。<!-- END REF-->

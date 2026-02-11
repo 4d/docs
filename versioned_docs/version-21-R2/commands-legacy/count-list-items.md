@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Count list items.Summary-->The Count list items command returns either the number of items currently “visible” or the total number of items in the list whose reference number or object name you pass in *list*.<!-- END REF-->

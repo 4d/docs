@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R4|Modificado|
+|14|Modificado|
+|12.1|Modificado|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.FONT LIST.Summary-->El comando FONT LIST llena el array Texto *fuentes* con los nombres de las fuentes vectoriales disponibles en su sistema.<!-- END REF-->

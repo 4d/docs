@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|15|Modified|
+|16 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB SET ARRAY.Summary-->The **OB SET ARRAY** command defines the *array* to be associated with the *property* in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.

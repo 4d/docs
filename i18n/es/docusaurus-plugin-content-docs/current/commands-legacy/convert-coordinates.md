@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R3|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->El comando **CONVERT COORDINATES**convierte las coordenadas (x,y) de un punto de un sistema de coordenadas a otro.<!-- END REF--> Los sistemas de coordenadas de entrada y salida soportados son los formularios (y subformularios), las ventanas y la pantalla. Por ejemplo, puede utilizar este comando para obtener las coordenadas en el formulario principal de un objeto perteneciente a un subformulario. Este principio facilita la creación de menús contextuales en cualquier posición personalizada.

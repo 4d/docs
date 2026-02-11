@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->**GET TEXT KEYWORDS**コマンドは*text*を個々の単語に分割し、*arrKeywords*配列の要素にして返します。<!-- END REF-->

@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get number of rows.Summary-->La commande **LISTBOX Get number of rows** retourne le nombre de lignes présentes dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->

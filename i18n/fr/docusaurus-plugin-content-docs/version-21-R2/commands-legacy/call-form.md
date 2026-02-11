@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R5|Créé|
+|16 R4|Modifié|
+|19 R6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CALL FORM.Summary-->La commande **CALL FORM** exécute le code 4D désigné dans formule avec un ou plusieurs *param*(s) optionnel(s) dans le contexte d'un formulaire affiché dans la *fenêtre*, indépendamment du process auquel appartient la fenêtre.<!-- END REF-->

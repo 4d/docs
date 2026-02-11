@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|16 R4|変更|
+|16 R6|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.JSON Stringify.Summary-->**JSON Stringify**コマンドは、 *value* 引数を、JSON文字列へと変換します。<!-- END REF-->このコマンドは[JSON Parse](json-parse.md) コマンドと逆の挙動をします。

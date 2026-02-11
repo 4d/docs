@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Summary-->La commande **SET DOCUMENT PROPERTIES** modifie certaines informations du document dont vous avez passé le nom ou le chemin d'accès dans *document*.<!-- END REF-->

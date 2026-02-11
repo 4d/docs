@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->The **IMPORT STRUCTURE** command imports, into the current database, the XML definition of the 4D database structure passed in the *xmlStructure* parameter.<!-- END REF--> 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+|19 R5|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL Get current data source.Summary-->*Get current data source*コマンドはアプリケーションのカレントデータソースの名前を返します。<!-- END REF-->カレントデータソースは、[Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL")内で実行されるSQLクエリを受け取ります。  

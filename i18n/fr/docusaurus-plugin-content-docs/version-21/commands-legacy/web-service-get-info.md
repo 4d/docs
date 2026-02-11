@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SERVICE Get info.Summary-->La commande **WEB SERVICE Get info** retourne des informations relatives à l'erreur éventuellement générée lors de l’exécution de la dernière requête SOAP adressée à un Web Service.<!-- END REF--> Cette commande doit généralement être appelée dans le cadre d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).

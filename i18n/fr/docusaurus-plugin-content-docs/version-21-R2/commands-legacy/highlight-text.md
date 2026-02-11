@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|12|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->La commande **HIGHLIGHT TEXT** sélectionne une partie du texte dans *objet*.<!-- END REF-->

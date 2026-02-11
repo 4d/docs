@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->The **WA GET URL FILTERS** command returns, in the *filtersArr* and *allowDenyArr* arrays, the filters that are active in the Web area designated by the *\** and *object* parameters.<!-- END REF--> If no filter is active, the arrays are returned empty. 

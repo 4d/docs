@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->SELECT LIST ITEMS BY POSITION コマンドは、*list*に渡された参照番号のリストにおいて、*itemPos*ならびにオプションとして*positionsArray*に渡された位置にある項目を選択します。<!-- END REF-->
