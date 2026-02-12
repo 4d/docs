@@ -96,7 +96,7 @@ Na fonte XML abaixo:
 </Maths>
 ```
 
-Queremos escrever o texto “12<18” no elemento *<Postulate>*. Esta cadeia não pode ser escrita em XML porque o caractere “<” não é aceito. Este caractere deve ser transformado então em “<” ou deve ser utilizado a forma CDATA. Se *vElemRef* indica o nodo XML *<Postulate>*:
+Queremos escrever o texto “12<18” no elemento *<Postulate>*. Esta cadeia não pode ser escrita em XML porque o caractere “<” não é aceito. Este caractere deve ser transformado então em “&lt;” ou deve ser utilizado a forma CDATA. Se *vElemRef* indica o nodo XML *<Postulate>*:
 
 ```4d
   // Forma normal
@@ -107,7 +107,7 @@ Obtemos:
 
 ```XML
 <Maths>
-   <Postulate>12 < 18</Postulate>
+   <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
   

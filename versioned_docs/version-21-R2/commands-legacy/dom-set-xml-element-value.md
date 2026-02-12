@@ -93,7 +93,7 @@ In the following XML source:
 </Maths>
 ```
 
-We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “<” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
+We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “&lt;” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
 
 ```4d
   // Normal form
@@ -104,7 +104,7 @@ We get:
 
 ```XML
 <Maths>
-   <Postulate>12 < 18</Postulate>
+   <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
   
