@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; *newPassPhrase* {; *archiveFolder* {; *curPassPhrase* {; *methodName*}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* ; *dataPath* {; *newDataKey* {; *archiveFolder* {; *curDataKey* {; *methodName*}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text {; *archiveFolder* : Text, 4D.Folder {; *curPassPhrase* : Text {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newDataKey* : Object {; *archiveFolder* : Text, 4D.Folder {; *curDataKey* : Object {; *methodName* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 <div class="no-index">
 
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | dataPath | Text | &#8594;  | Pathname of data file to encrypt |
 | newPassPhrase | Text | &#8594;  | In case of replacement: new passPhrase |
 | newDataKey | Object | &#8594;  | In case of replacement: new encryption key (object) |
-| archiveFolder | Text | &#8594;  | Pathname of folder where original files will be stored |
+| archiveFolder | Text, 4D.Folder | &#8594;  | Pathname or object of folder where original files will be stored |
 | curPassPhrase | Text | &#8594;  | Current passPhrase |
 | curDataKey | Object | &#8594;  | Current encryption key |
 | methodName | Text | &#8594;  | Name of 4D callback method |
@@ -65,13 +65,13 @@ If you passed "" in *archiveFolder*, a standard **Open folder** dialog will appe
 
 The *method* parameter is used to set a callback method that will be called regularly during the encryption process. If you pass an empty string or an invalid method name, this parameter is ignored (no method is called). When it is called, this method receives up to 5 parameters depending on the event type originating the call (see below). It is imperative to declare these parameters in the method:
 
-| **Event**           | **$1 (Longint)** | **$2 (Longint)** | **$3 (Text)**                                                                               | **$4 (Longint)**            | **$5 (Longint)** |
-| ------------------- | ---------------- | ---------------- | ------------------------------------------------------------------------------------------- | --------------------------- | ---------------- |
-| Message             | 1                | 0                | Progress message (*e.g.* "Encrypting BLOBs in table Documents")                             | Percentage done (*e.g.* 50) | Reserved         |
-| Encryption finished | 2                | 0                | OK message (*e.g.* "Done")                                                                  | 0                           | Reserved         |
-| Error               | 3                | 0                | Error message (*e.g.* "Problem on the XX data table: Encryption key has not been provided") | 0                           | Reserved         |
-| End of execution    | 4                | 0                | "Done"                                                                                      | 0                           | Reserved         |
-| Warning(\*)         | 5                | Object type      | Text of error                                                                               | Table or index number       | Reserved         |
+| **Event**    | **$messageType (Integer)** | **$objectType (Integer)** | **$messageText (Text)**      | **$table (Integer)**    | **$reserved (Integer)** |
+| ------------- | --------- | ---------------- | ------------------- | --------------------------- | ---------------- |
+| Message        | 1      | 0     | Progress message (*e.g.* "Encrypting BLOBs in table Documents")   | Percentage done (*e.g.* 50) | Reserved     |
+| Encryption finished | 2    | 0      | OK message (*e.g.* "Done")    | 0      | Reserved         |
+| Error              | 3     | 0    | Error message (*e.g.* "Problem on the XX data table: Encryption key has not been provided") | 0  | Reserved      |
+| End of execution   | 4  | 0   | "Done"    | 0         | Reserved         |
+| Warning(\*)    | 5  | Object type   | Text of error   | Table or index number       | Reserved         |
 
 (\*) Warning returned at the verification step (see [VERIFY DATA FILE](verify-data-file.md) command).
 

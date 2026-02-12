@@ -5,15 +5,15 @@ slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* : Text }{;}{ *defaultPath* : Text, Integer {; *options* : Integer}} ) : Text<!-- END REF-->
+<!--REF #_command_.Select folder.Syntax-->**Select folder** : Text<br/>**Select folder** ( *message* : Text {; *defaultPath* : Text, Integer {; *options* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | message | Text | &#8594;  | Title of the window |
-| defaultPath | Text, Integer | &#8594;  | • Default pathname or • Empty string to display the default user folder (“My documents” under Windows, “Documents” under Mac OS), or • Number of memorized pathname |
-| options | Integer | &#8594;  | Selection option(s)under Mac OS |
+| defaultPath | Text, Integer | &#8594;  |<ul><li>Default pathname or</li><li>Empty string to display the default user folder (“My documents” under Windows, “Documents” under macOS), or</li><li>Number of memorized pathname</li></ul> |
+| options | Integer | &#8594;  | Selection option(s) under macOS |
 | Function result | Text | &#8592; | Access path to the selected folder |
 </div>
 <!-- END REF-->
