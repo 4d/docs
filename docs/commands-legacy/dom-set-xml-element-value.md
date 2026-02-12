@@ -5,7 +5,7 @@ slug: /commands/dom-set-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xPath* : Text}; *elementValue* : Text, Variable {; *} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xPath* : Text}; *elementValue* : any {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | xPath | Text | &#8594;  | XPath path of the XML element |
-| elementValue | Text, Variable | &#8594;  | New value of element |
+| elementValue | any | &#8594;  | New value of element |
 | * | Operator | &#8594;  | If passed: set the value in CDATA |
 </div>
 <!-- END REF-->
