@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004.1|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** は、*aTable*の次のシーケンス番号を返します。<!-- END REF-->シーケンス番号は、各テーブルにおいて固有のものです。この番号は、*aTable*に対して新しいレコードが追加されるたびに加算される、決して重複することのない番号です。

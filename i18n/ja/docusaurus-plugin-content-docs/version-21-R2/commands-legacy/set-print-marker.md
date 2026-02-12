@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2003|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->SET PRINT MARKER コマンドを使用し、印刷時にマーカ位置を指定することができます。<!-- END REF-->このコマンドを[Get print marker](get-print-marker.md "Get print marker")、[OBJECT MOVE](object-move.md "OBJECT MOVE")、[Print form](../commands/print-form.md "Print form")コマンドと組み合わせて使用することにより、印刷エリアのサイズを調節することができます。

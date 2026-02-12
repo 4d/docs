@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->The MULTI SORT ARRAY command enables you to carry out a multi-level sort on a set of arrays.<!-- END REF--> 

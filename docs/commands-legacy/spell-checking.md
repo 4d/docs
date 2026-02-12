@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->The **SPELL CHECKING** command triggers the spell check of the field or variable having the focus in the currently displayed form.<!-- END REF--> The object checked must be of the string or text type.

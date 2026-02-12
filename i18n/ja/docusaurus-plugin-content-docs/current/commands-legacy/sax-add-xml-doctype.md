@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX ADD XML DOCTYPE.Summary-->SAX ADD XML DOCTYPE コマンドは、*document*で参照されるXMLドキュメントに*docType* 引数で指定されたDocType文を追加します。<!-- END REF-->

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->GET ALLOWED METHODS コマンドは、フォーミュラの作成に使用できるメソッド名を引数*methodsArray*に返します。<!-- END REF-->これらのメソッドは、エディタ上のコマンドリストの最後に一覧表示されます。 

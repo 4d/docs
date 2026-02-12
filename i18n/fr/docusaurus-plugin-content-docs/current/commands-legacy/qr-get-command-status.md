@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Get command status.Summary-->La commande **QR Get command status** retourne 0 si la commande désignée par le paramètre *numCommande* est inactivée et 1 si elle est activée.<!-- END REF-->

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->La commande **PRINT OPTION VALUES** retourne dans le tableau *tabNoms* la liste des noms de valeurs disponibles pour l’*option* d’impression définie.<!-- END REF--> Facultativement, vous pouvez récupérer des informations sur chaque valeur dans les tableaux *tabInfo1* et *tabInfo2*. 

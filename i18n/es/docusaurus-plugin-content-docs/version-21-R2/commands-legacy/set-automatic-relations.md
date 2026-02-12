@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Summary-->SET AUTOMATIC RELATIONS cambia temporalmente todas las relaciones manuales en relaciones automáticas para toda la base en el proceso actual.<!-- END REF--> Las relaciones permanecen automáticas a menos que se realice una llamada posterior a SET AUTOMATIC RELATIONS.

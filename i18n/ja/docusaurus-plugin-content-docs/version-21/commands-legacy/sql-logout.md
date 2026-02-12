@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->SQL LOGOUT コマンドは、カレントプロセスにおいて開かれているODBCソースとの接続をクローズします(すでに接続されていれば)。<!-- END REF-->ODBC接続が行われていない場合、コマンドは何も行いません。

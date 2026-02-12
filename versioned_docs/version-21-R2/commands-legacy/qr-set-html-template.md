@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->The **QR SET HTML TEMPLATE** command sets the HTML template currently used for the Quick Report *area*.<!-- END REF--> The template will be used when building the report in HTML format. 

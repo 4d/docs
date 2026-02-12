@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->DOM GET XML ELEMENT NAME コマンドは、*elementRef* で指定したXML要素の名前を*elementName* 引数に返します。<!-- END REF-->引数の型が定義されてない場合、デフォルトでテキスト型が使用されます。

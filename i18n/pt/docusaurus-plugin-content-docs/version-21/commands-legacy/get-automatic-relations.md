@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->O comando GET AUTOMATIC RELATIONS lhe permite saber se o estado automático/manual de todas as relações manuais Muitos a Um e Um a Muitos do banco tenham sido modificadas no processo atual.<!-- END REF-->

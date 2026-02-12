@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->La commande **BUILD APPLICATION** lance le processus de génération d’application en prenant en compte les paramètres définis dans le fichier de configuration d’application courant ou le fichier de configuration défini dans le paramètre *buildAppSettings*.<!-- END REF-->

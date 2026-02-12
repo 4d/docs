@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET FIELD RELATION.Summary-->O comando SET FIELD RELATION permite definir separadamente o estado automático/manual de cada relação do banco para o processo atual, sem considerar seu estado inicial definido no ambiente Desenho na janela de propriedades das relações.<!-- END REF-->

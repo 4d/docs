@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->HIGHLIGHT RECORDS コマンドは、出力フォーム内で指定されたレコードをハイライトします。<!-- END REF-->この動作は、クリックまたは**Shift+クリック**、**Ctrl+クリック** (Windows) や**Command+クリック** (macOS) キーコンビネーションを使用し、リストモードでレコードを手動で選択する場合と同じです。カレントセレクションは変更されません。

@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->El comando QR SET HEADER AND FOOTER permite definir el contenido y el tamaño del encabezado y el pie de página de *area*.<!-- END REF-->

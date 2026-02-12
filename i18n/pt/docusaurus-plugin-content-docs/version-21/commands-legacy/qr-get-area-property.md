@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR Get area property.Summary-->O comando **QR Get area property** devolve 0 se não mostra o elemento de interface (barra de ferramentas ou barra de menus) passado em *propriedade*; do contrário, devolve 1\.<!-- END REF--> 

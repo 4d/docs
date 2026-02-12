@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->O comando SQL SET PARAMETER permite o uso do valor de uma variável, array ou campo 4D nas pedidos SQL.<!-- END REF-->

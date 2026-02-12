@@ -27,6 +27,7 @@ displayed_sidebar: docs
 |17 R6|変更|
 |14|変更|
 |12|名称変更|
+|2004|変更|
 |<6|初出|
 
 </details>

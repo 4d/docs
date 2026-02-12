@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->El comando QR GET HEADER AND FOOTER permite recuperar el contenido y el tamaño del encabezado o pie de página.<!-- END REF-->

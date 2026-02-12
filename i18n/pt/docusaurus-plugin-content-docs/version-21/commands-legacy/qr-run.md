@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR RUN.Summary-->O comando QR RUN provoca a execução do relatório rápido designado pelo parâmetro *area*.<!-- END REF--> O relatório é gerado com seus parâmetros atuais, incluindo seu tipo de saída. Pode utilizar o comando [QR SET DESTINATION](qr-set-destination.md) para modificar o tipo de saída.  

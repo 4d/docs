@@ -29,7 +29,7 @@ displayed_sidebar: docs
 |Versão|Alterações|
 |---|---|
 |15 R3|Modificado|
-|<6|Criado|
+|2003|Criado por|
 
 </details>
 </div>

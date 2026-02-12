@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->O comando QR SET DOCUMENT PROPERTY permite mostrar a caixa de diálogo de impressão ou definir a unidade utilizada pelo documento.<!-- END REF-->  

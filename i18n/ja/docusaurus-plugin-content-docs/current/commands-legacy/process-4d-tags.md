@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |13|名称変更|
 |12|変更|
 |11 SQL|変更|
-|<6|初出|
+|2004|初出|
 
 </details>
 </div>

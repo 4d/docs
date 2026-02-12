@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004.5|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->SET PRINT PREVIEW lhe permite selecionar ou desmarcar por programação a opção de pré-visualização em tela.<!-- END REF--> Se passar TRUE em *vistaprevia*, se selecionar Pré-visualização em tela, se passar FALSE, será desmarcado. Este parâmetro é local para um processo e não afeta a impressão de outros processos ou usuários.

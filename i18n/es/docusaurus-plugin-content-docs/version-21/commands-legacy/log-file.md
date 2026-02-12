@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004.3|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Log file.Summary-->El comando Log file devuelve el nombre largo (es decir la ruta de acceso completa del archivo, incluyendo su nombre) del archivo historial actual de la base abierta.<!-- END REF--> 

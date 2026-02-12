@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET FIELD RELATION.Summary-->GET FIELD RELATIONを使用すると、カレントプロセスの、*manyField*から開始するリレートの自動/マニュアルのステータスを調べることができます。<!-- END REF-->ストラクチャウィンドウで設定した自動リレートをはじめとして、あらゆるリレートを調べることができます。

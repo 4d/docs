@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->El comando QR INSERT COLUMN inserta o crea una columna en una posición específica.<!-- END REF--> Las columnas situadas a la derecha de la columna añadida serán desplazadas en consecuencia.

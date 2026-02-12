@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE RECORD.Summary-->**DELETE RECORD** supprime de *laTable* l'enregistrement courant du process en cours.<!-- END REF--> S'il n'y a pas d'enregistrement courant pour *laTable* dans le process, **DELETE RECORD** ne fait rien. Dans un formulaire, vous pouvez créer un bouton 'Supprimer enregistrement' et lui assigner l'action automatique correspondante, plutôt que d'utiliser cette commande.

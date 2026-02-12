@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->O comando PRINT OPTION VALUES \[#descv\]devolve em *nomesArray*,uma lista de nomes de valores disponíveis para a *opçao* de impressão definida.<!-- END REF-->Opcionalmente, pode recuperar a informação para cada valor em *info1Array* e *info2Array*. 

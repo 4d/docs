@@ -23,6 +23,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties permite modificar e atualizar as propriedades de uma conta ativa de usuário existente cujo número de referência se passa no parâmetro *refUsuario* ou para adicionar um novo usuário.<!-- END REF-->

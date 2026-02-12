@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CANCEL.Summary-->No contexto de entrada de dados, **CANCEL** realiza a mesma ação que se o usuário tivesse pressionado a tecla de cancelação (**Esc**).<!-- END REF--> Também é possível colocar no método de caixa de fechamento opcional de uma janela criada pelo comando[Open window](open-window.md)

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DELETE RECORD.Summary-->DELETE RECORD apaga o registro atual de *tabela* no processo.<!-- END REF--> Se não houver registro atual para *tabela* no processo, DELETE RECORD não tem efeito. Em um formulário, pode criar um botão Apagar registro em lugar de utilizar este comando.

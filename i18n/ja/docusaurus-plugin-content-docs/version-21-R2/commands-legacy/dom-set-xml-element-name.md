@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->DOM SET XML ELEMENT NAME コマンドを使用して、*elementRef*で指定した要素の名前を変更します。<!-- END REF-->

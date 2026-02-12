@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->O comando SET PRINT MARKER permite definir a posição de um marcador durante a impressão.<!-- END REF--> Combinado com os comandos [Get print marker](get-print-marker.md "Get print marker"), OBJECT MOVE ou [Print form](../commands/print-form.md "Print form"), este comando lhe permite ajustar o tamanho das áreas de impressão.  

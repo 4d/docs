@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Summary-->O comando DOM REMOVE XML ELEMENT remove o elemento determinado por *refElemento*.<!-- END REF-->

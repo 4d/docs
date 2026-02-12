@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->BLOB TO USERS コマンドは、データベース内で管理者によって作成されたユーザーアカウントとグループを *users* BLOBに格納されたアカウントとグループで上書きします。<!-- END REF--> *users* BLOBは暗号化されており、[USERS TO BLOB](users-to-blob.md) コマンドを使用して作成されていなければなりません。

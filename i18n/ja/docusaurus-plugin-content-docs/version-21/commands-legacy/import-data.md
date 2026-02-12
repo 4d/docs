@@ -24,6 +24,7 @@ displayed_sidebar: docs
 |リリース|内容|
 |---|---|
 |12|変更|
+|2003|変更|
 |<6|初出|
 
 </details>

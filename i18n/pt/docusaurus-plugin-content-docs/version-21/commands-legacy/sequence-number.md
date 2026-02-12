@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004.1|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** devolve o próximo número automático de *tabela*.<!-- END REF--> O número de sequência é único para cada tabela. É um valor que não se repete e é incrementado (\*) para cada novo registro criado pela tabela.  

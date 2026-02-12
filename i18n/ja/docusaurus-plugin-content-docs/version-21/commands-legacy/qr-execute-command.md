@@ -23,7 +23,7 @@ displayed_sidebar: docs
 |---|---|
 |17 R6|変更|
 |16|変更|
-|<6|初出|
+|2003|初出|
 
 </details>
 </div>

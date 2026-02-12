@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Current form window.Summary-->O comando Current form window devolve a referência da janela do formulário atual.<!-- END REF--> Se nenhuma janela tiver sido definida para o formulário atual, o comando devolve 0.  

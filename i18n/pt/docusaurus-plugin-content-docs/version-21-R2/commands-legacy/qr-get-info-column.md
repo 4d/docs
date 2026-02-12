@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
-|<6|Criado|
+|2003|Criado por|
 |15 R3|Modificado|
 
 </details>

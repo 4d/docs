@@ -21,7 +21,7 @@ displayed_sidebar: docs
 |リリース|内容|
 |---|---|
 |15 R5|変更|
-|<6|初出|
+|2003|初出|
 
 </details>
 </div>

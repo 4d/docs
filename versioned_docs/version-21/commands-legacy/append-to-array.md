@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->The APPEND TO ARRAY command adds a new element at the end of *array* and assigns *value* to the element.<!-- END REF--> In interpreted mode, if *array* does not exist, the command creates it with regard to the type of *value*. 

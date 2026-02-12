@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
-|<6|初出|
+|2003|初出|
 |15 R5|変更|
 
 </details>

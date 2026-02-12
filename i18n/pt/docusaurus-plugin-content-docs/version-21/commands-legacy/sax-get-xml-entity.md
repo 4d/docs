@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAX GET XML ENTITY.Summary-->O comando SAX GET XML ENTITY permite recuperar o nome e valor de uma entidade XML presente no documento XML referenciado por *documento*.<!-- END REF--> Este comando deve ser chamado com o evento XML Entity SAX. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md).

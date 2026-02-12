@@ -24,6 +24,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties コマンドは、引数 userID に渡したユニークなユーザーID番号を持つ既存のユーザーアカウントのプロパティを変更・更新するか、新規ユーザーを追加します。<!-- END REF-->また、デザイナーあるいは管理者に関連する新規ユーザを追加することもできます。

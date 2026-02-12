@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR Get HTML template.Summary-->O comando QR Get HTML template devolve o modelo HTML utilizado atualmente pela área do relatório rápido referenciada por área.<!-- END REF--> O valor devolvido de tipo texto e inclui a totalidade do código HTML utilizado como modelo.  

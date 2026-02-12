@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Summary-->O comando SAX GET XML DOCUMENT VALUES extrai informação básica do cabeçalho XML do documento XML referenciado por *documento*.<!-- END REF-->  

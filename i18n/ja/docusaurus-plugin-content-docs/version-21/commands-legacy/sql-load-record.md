@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->SQL LOAD RECORDコマンドは、現在の接続において開かれたODBCソースからのレコードを1件以上4D内に取り込みます。<!-- END REF-->

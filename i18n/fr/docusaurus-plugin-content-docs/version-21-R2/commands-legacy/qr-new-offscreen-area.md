@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR New offscreen area.Summary-->La commande **QR New offscreen area** crée une zone d'Etat rapide hors écran et retourne son numéro de référence.<!-- END REF--> 

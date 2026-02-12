@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->O comando APPEND TO ARRAY adiciona um novo elemento ao fim do array e atribui valor ao elemento.<!-- END REF--> Em modo interpretado, se *array* não existe, o comando o cria com com respeito ao tipo de *valor*. 

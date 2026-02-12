@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX GET XML ELEMENT.Summary-->SAX GET XML ELEMENT コマンドは*document* 引数で参照されるXMLドキュメントに現れる、*name*要素についてのさまざまな情報を返します。<!-- END REF-->このコマンドはXML Start ElementまたはXML End Element SAXイベントで呼び出さなければなりません。XML End Elementの特定のケースでは、属性引数は処理されません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md "SAX Get XML node") コマンドの説明を参照してください。

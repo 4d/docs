@@ -24,6 +24,7 @@ displayed_sidebar: docs
 |リリース|内容|
 |---|---|
 |11 SQL|変更|
+|2004.4|変更|
 |<6|初出|
 
 </details>

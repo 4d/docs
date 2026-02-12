@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->DISPLAY SELECTION mostra a seleção de *tabela*, utilizando o formulário de saída.<!-- END REF--> Os registros se mostram em uma lista pela qual pode ser deslocada similar ao do modo Desenho. Se o usuário fizer duplo clique em um registro, por padrão é mostrado o registro no formulário de entrada atual. A lista é mostrada na janela do primeiro plano.  

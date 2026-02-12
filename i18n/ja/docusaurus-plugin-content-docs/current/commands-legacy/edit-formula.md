@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004.4|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->**EDIT FORMULA**コマンドを使用してフォーミュラーエディターを開き、ユーザーはフォーミュラーを作成したり変更したりできます。<!-- END REF-->次の項目をデフォルトとして表示することができます。

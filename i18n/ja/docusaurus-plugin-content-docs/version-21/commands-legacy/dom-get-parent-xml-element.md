@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004.2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Get parent XML element.Summary-->**DOM Get parent XML element**コマンドは、*elementRef*に参照で渡したXML要素の親要素参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。

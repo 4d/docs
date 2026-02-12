@@ -26,7 +26,7 @@ displayed_sidebar: docs
 |---|---|
 |12|Renombrar|
 |12|Modificado|
-|<6|Creado|
+|2004|Creado por|
 
 </details>
 </div>

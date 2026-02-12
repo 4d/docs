@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Compatibility Note:* This command only works in binary databases.<!-- END REF--> It always returns an empty BLOB in projects.* 

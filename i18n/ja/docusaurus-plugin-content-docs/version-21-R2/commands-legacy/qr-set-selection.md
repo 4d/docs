@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->QR SET SELECTION コマンドを使用するとマウスクリックをした場合と同様に、セルや行、カラム、またはエリア全体を反転表示 (選択) することができます。<!-- END REF-->また、現在選択されている範囲を解除することもできます。

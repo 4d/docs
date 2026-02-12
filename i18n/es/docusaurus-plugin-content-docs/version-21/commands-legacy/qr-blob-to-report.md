@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->El comando QR BLOB TO REPORT coloca el informe contenido en el *blob* en el área de informe rápido pasada en *area*.<!-- END REF--> 

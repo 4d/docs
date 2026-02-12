@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004.2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Get last child XML element.Summary-->O comando DOM Get last child XML element retorna uma referência XML ao último “filho” do elemento XML passado como referência em *refElemento*.<!-- END REF--> Esta referência pode ser utilizado com outros comandos de análise XML.  

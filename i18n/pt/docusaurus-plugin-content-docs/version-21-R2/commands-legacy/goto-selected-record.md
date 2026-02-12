@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GOTO SELECTED RECORD.Summary-->GOTO SELECTED RECORD move o registro especificado na seleção atual de *tabela* o registro atual.<!-- END REF--> A seleção atual de tabela não muda. O parâmetro *registro* não é o mesmo do número retornado por [Record number](record-number.md); Este parâmetro representa a posição do registro na seleção atual. A posição do registro depende da maneira na qual a seleção tenha sido criada e ordenada.  

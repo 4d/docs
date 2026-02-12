@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->SAX ADD PROCESSING INSTRUCTIONコマンドは、*document*で参照されるXMLドキュメントにXML処理命令*statement*を追加します。<!-- END REF--> 

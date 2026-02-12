@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Summary-->SAX CLOSE XML ELEMENT コマンドは、 *document*で参照されるXMLドキュメントに、[SAX OPEN XML ELEMENT](sax-open-xml-element.md "SAX OPEN XML ELEMENT") コマンドを使用して開かれた最後の要素を閉じるのに必要な文を書き込みます。<!-- END REF-->

@@ -25,6 +25,7 @@ displayed_sidebar: docs
 |Versão|Alterações|
 |---|---|
 |<6|Criado|
+|2004|Modificado|
 |12|Renomear|
 |14|Modificado|
 |17 R6|Modificado|

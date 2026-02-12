@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004.4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->O comando **CHECK LOG FILE** mostra a caixa de diálogo de visulização do arquivo de histórico atual da base de dados (acessível também através da janela do Centro de segurança e manutenção) <!-- END REF-->:
