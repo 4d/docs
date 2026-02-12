@@ -35,6 +35,7 @@ displayed_sidebar: docs
 |リリース|内容|
 |---|---|
 |<6|初出|
+|2004.3|変更|
 |16 R4|変更|
 
 </details>

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->The **GET AUTOMATIC RELATIONS** command lets you know if the automatic/manual status of all manual many-to-one and one-to-many relations of the database have been modified in the current process.<!-- END REF-->if a previous calll from the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command made all manual many-to-one relations automatic — for example, **[SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")**(True;False).  

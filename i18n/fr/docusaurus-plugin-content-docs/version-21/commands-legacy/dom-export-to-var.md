@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM EXPORT TO VAR.Summary-->La commande **DOM EXPORT TO VAR** permet de sauvegarder un arbre XML dans une variable texte ou BLOB.<!-- END REF--> 

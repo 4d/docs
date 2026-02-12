@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Count XML attributes.Summary-->The **DOM Count XML attributes** command returns the number of XML attributes present in the XML element designated by *elementRef*.<!-- END REF--> For more information about XML attributes, refer to the *Overview of XML DOM Commands* section. 

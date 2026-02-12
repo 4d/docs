@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->La commande **GET FIELD TITLES** remplit les tableaux *titresChamps* et *numChamps* avec les noms et les numéros des champs de *laTable* désignée.<!-- END REF--> Le contenu des deux tableaux est synchronisé.

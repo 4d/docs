@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->O comando BUILD APPLICATION inicia o processo de geração da aplicação levando em consideração os parâmetros definidos nas configurações do aplicativo atual ou na configuração de aplicação designado no parâmetro *constrAppConfigurações*.<!-- END REF-->   

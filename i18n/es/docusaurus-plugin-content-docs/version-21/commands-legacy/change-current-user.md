@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->CHANGE CURRENT USER permite cambiar la identidad del usuario actual en la base, sin tener que salir.<!-- END REF--> El usuario puede cambiar su identidad utilizando la caja de diálogo de identificación del usuario de la base (cuando el comando se llama sin parámetros) o directamente vía el comando. Cuando un usuario cambia su identidad, el usuario abandona sus privilegios de acceso anteriores para beneficiarse de los del usuario elegido.

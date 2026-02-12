@@ -25,7 +25,7 @@ displayed_sidebar: docs
 |Release|Changes|
 |---|---|
 |12|Renamed|
-|<6|Created|
+|2004|Created|
 
 </details>
 </div>

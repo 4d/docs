@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004.4|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET ABOUT.Summary-->El comando **SET ABOUT** cambia el comando de menú **Acerca de 4D** del menú **Ayuda** (Windows) o del menú **Aplicación** (macOS) por *textoElem*.<!-- END REF-->

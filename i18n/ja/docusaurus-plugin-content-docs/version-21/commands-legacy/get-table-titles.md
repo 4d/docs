@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET TABLE TITLES.Summary-->GET TABLE TITLES コマンドを使用して、ストラクチャウィンドウで、または[SET TABLE TITLES](set-table-titles.md "SET TABLE TITLES") コマンドを用いて定義されたデータベーステーブルの番号と名前を配列 *tableTitles* と *tableNums* に取得します。<!-- END REF-->これら2つの配列の内容は同期化されています。

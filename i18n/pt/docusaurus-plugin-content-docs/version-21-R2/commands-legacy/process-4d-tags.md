@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
-|<6|Criado|
+|2004|Criado por|
 |11 SQL|Modificado|
 |12|Modificado|
 |13|Renomear|

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Open resource file.Summary-->**Open resource file**コマンドは、*resFileName*に渡した名前またはパス名を持つリソースファイルを開きます。<!-- END REF--> 

@@ -23,6 +23,7 @@ displayed_sidebar: docs
 |リリース|内容|
 |---|---|
 |16 R4|変更|
+|2004|変更|
 |<6|初出|
 
 </details>

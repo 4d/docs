@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->La commande **BLOB TO USERS** remplace les comptes utilisateurs et les groupes présents dans le BLOB *utilisateurs* dans la base courante.<!-- END REF--> Le BLOB *utilisateurs* est crypté et doit impérativement avoir été créé par la commande [USERS TO BLOB](users-to-blob.md).

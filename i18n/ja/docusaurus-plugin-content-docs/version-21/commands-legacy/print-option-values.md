@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->**PRINT OPTION VALUES** コマンドは、*option* で定義した印刷オプションに対して利用可能な名前のリストを*namesArray* に返します。<!-- END REF-->またオプションとして、*info1Array* および *info2Array* 内にそれぞれの名前に対する追加の情報を取得することもできます。

@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->**DISPLAY SELECTION** affiche, pour le process en cours, la sélection courante de *laTable* dans le formulaire sortie courant.<!-- END REF--> Les enregistrements sont affichés sous la forme d'une liste que l'on peut faire défiler, semblable à celle du mode Développement. Lorsque l'utilisateur double-clique sur un enregistrement, par défaut celui-ci s'affiche dans le formulaire entrée courant. La liste est placée dans la fenêtre de premier plan.

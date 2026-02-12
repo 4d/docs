@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
-|<6|Criado|
+|2004|Criado por|
 |15 R4|Modificado|
 
 </details>

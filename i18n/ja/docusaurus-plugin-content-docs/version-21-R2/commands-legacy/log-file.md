@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004.3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Log file.Summary-->**Log file**コマンドは、開いているデータベースのカレントログファイルのロング名（ファイル名を含むファイルの完全パス名）を返します。<!-- END REF-->

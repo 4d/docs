@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->La commande **QR SET BORDERS** permet de définir le style d'encadrement d'une cellule spécifique.<!-- END REF--> 

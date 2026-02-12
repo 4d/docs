@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->DISPLAY SELECTION は、出力フォームを使用して、*aTable*の カレントセレクションを表示します。<!-- END REF-->レコードはデザインモードの一覧に類似のスクロール可能な一覧として表示されます。ユーザがレコー ドをダブルクリックすると、デフォルトでそのレコードはカレント入力フォーム上に表示されます。リストは最前面にあるウインドウに表示されます。 

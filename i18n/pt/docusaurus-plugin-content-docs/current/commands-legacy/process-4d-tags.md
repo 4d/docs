@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |13|Renomear|
 |12|Modificado|
 |11 SQL|Modificado|
-|<6|Criado|
+|2004|Criado por|
 
 </details>
 </div>

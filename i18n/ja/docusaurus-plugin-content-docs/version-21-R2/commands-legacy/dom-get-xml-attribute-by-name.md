@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->DOM GET XML ATTRIBUTE BY NAME コマンドを使用して、属性名に対応する属性値を取得できます。<!-- END REF-->に要素参照を、*attribName*には属性値を取得したい属性の名前を渡します。値は*attribValue* 引数に返されます。4Dは取得した値を渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。

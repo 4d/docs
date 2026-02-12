@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->QR GET BORDERS コマンドを使用し、指定したセルの罫線スタイルを取得できます。<!-- END REF-->

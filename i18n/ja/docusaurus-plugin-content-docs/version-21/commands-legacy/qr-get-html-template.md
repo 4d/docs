@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR Get HTML template.Summary-->QR Get HTML template コマンドは、クイックレポート*area*に現在使用されているHTMLテンプレートを返します。<!-- END REF-->戻り値はテキスト値であり、HTMLテンプレートの全内容が納められます。

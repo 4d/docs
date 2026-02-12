@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004.5|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->**SET PRINT PREVIEW** le permite seleccionar o deseleccionar por programación la opción de previsualización en pantalla de la caja de diálogo de impresión.<!-- END REF--> Si pasa TRUE en *vista previa*, se selecciona Previsualización en pantalla, si pasa FALSE, se deseleccionará. Este parámetro es local para un proceso y no afecta la impresión de otros procesos o usuarios.

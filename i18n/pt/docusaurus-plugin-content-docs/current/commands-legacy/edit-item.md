@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.EDIT ITEM.Summary-->O comando **EDIT ITEM** lhe permite editar o elemento atual ou o elemento de número *item* do array ou a lista designada pelo parâmetro *objeto*.<!-- END REF-->

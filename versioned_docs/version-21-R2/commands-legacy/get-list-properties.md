@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->The **GET LIST PROPERTIES** command returns information about the list whose reference number you pass in *list*.<!-- END REF-->

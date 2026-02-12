@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->O comando SQL CANCEL LOAD finaliza a solicitação *SELECT* atual e inicializa os parâmetros.<!-- END REF-->  

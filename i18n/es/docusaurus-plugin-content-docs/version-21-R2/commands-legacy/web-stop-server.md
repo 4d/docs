@@ -20,6 +20,7 @@ displayed_sidebar: docs
 |Versión|Cambios|
 |---|---|
 |<6|Creado|
+|2003|Modificado|
 |13|Renombrar|
 
 </details>

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Nota de compatibilidade*: este comando só funciona em bancos de dados binários.<!-- END REF--> Sempre devolve um BLOB vazio em projetos.*

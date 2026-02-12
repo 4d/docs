@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->The QR SET DOCUMENT PROPERTY command displays the printing dialog or sets the unit used for the document.<!-- END REF-->

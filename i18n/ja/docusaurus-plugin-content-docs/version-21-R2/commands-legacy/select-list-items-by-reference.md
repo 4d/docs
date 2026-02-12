@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->SELECT LIST ITEMS BY REFERENCE コマンドは、*list*に渡された参照番号のリストにおいて、*itemRef*ならびにオプションとして*refArray*に渡された項目参照番号を持つ項目を選択します。<!-- END REF-->

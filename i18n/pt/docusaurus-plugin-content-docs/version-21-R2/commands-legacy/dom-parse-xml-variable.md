@@ -24,6 +24,7 @@ displayed_sidebar: docs
 |Versão|Alterações|
 |---|---|
 |<6|Criado|
+|2004|Modificado|
 |11 SQL|Modificado|
 
 </details>

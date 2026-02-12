@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->The **QR GET DESTINATION** command retrieves the output *type* of the report for the area whose reference was passed in *area*.<!-- END REF--> 

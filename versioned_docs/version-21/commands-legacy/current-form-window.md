@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current form window.Summary-->The **Current form window** command returns the reference of the current form window.<!-- END REF--> If no window has been set for the current form, the command returns 0.

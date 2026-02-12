@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004.4|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->O comando **EDIT FORMULA** mostra o editor de fórmulas com o propósito de permitir ao usuário escrever ou modificar uma fórmula.<!-- END REF--> O editor contém ao abrir:

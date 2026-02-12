@@ -23,6 +23,7 @@ displayed_sidebar: docs
 |Versión|Cambios|
 |---|---|
 |12|Modificado|
+|2004|Modificado|
 |<6|Creado|
 
 </details>

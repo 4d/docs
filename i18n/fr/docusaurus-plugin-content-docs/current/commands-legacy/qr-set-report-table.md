@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->La commande **QR SET REPORT TABLE** désigne via le paramètre *numTable* le numéro de la table courante de l'état rapide dont la référence est passée dans le paramètre *zone*.<!-- END REF--> 

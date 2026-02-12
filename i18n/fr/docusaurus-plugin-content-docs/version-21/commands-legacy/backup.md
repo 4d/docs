@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BACKUP.Summary-->La commande **BACKUP** déclenche la sauvegarde de la base de données avec les paramétrages de sauvegarde courants.<!-- END REF--> Aucune boîte de dialogue de confirmation n’est affichée. Une fenêtre de progression apparaît à l’écran.

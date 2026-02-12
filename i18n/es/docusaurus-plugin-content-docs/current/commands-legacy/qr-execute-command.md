@@ -23,7 +23,7 @@ displayed_sidebar: docs
 |---|---|
 |17 R6|Modificado|
 |16|Modificado|
-|<6|Creado|
+|2003|Creado por|
 
 </details>
 </div>

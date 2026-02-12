@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR RUN.Summary-->The **QR RUN** command executes the report *area* whose reference was passed as parameter with the Quick Report current settings, including the output type.<!-- END REF--> You can use the [QR SET DESTINATION](qr-set-destination.md) command to modify the output type.

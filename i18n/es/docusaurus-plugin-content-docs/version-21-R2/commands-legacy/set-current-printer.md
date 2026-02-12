@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
-|<6|Creado|
+|2003|Creado por|
 |12|Modificado|
 |15 R5|Modificado|
 |20|Modificado|

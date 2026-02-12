@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2003|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:

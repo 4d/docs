@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->El comando **GET WINDOW RECT** devuelve las coordenadas globales de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si la ventana no existe, las variables de los parámetros no cambian. 

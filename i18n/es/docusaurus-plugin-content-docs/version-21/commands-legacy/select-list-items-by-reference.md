@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->El comando SELECT LIST ITEMS BY REFERENCE selecciona el o los elementos cuyo número de referencia se pasa en *refElem* y opcionalmente en *refArray*, en la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->

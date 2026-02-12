@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SQL GET LAST ERROR.Summary-->El comando SQL GET LAST ERROR devuelve la información relacionada con el último error encontrado durante la ejecución de un comando ODBC.<!-- END REF--> El error puede venir de la aplicación 4D, la red, la fuente ODBC, etc. 

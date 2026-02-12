@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->GET SERIAL PORT MAPPING コマンドはマシンのシリアルポート番号とシリアルポート名を、2つの配列*numArray* と *nameArray*に返します。<!-- END REF--> 

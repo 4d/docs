@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->El comando MULTI SORT ARRAY permite efectuar una ordenación multicriterios en un conjunto de arrays.<!-- END REF-->

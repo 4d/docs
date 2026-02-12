@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004.1|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SHOW ON DISK.Summary-->El comando SHOW ON DISK muestra en una ventana estándar del sistema operativo el archivo o la carpeta en la cual la ruta de acceso se pasa en el parámetro *nombreRuta.<!-- END REF-->*  

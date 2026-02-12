@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Get HTML template.Summary-->The QR Get HTML template command returns the HTML template currently used for the Quick Report *area*.<!-- END REF--> The returned value is a text value and includes all the contents of the HTML template.

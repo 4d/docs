@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->O comando SQL GET OPTION retorna o *valor* atual da opção passada no parâmetro *opçao*.<!-- END REF-->  

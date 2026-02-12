@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2003|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get print marker.Summary-->Get print marker コマンドを使用し、印刷中にマーカの現在位置を取得することができます。<!-- END REF-->

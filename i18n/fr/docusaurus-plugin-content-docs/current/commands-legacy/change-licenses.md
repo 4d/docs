@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->La commande **CHANGE LICENSES** affiche la boîte de dialogue du Gestionnaire de licences 4D.<!-- END REF--> 

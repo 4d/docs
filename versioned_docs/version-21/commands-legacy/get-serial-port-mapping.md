@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->The **GET SERIAL PORT MAPPING** command returns two arrays, *numArray* and *nameArray*, containing the serial port numbers and the serial port names of the current machine.<!-- END REF--> 

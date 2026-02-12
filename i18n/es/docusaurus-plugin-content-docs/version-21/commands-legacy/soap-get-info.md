@@ -23,7 +23,7 @@ displayed_sidebar: docs
 |---|---|
 |13|Renombrar|
 |13|Renombrar|
-|<6|Creado|
+|2003|Creado por|
 
 </details>
 </div>

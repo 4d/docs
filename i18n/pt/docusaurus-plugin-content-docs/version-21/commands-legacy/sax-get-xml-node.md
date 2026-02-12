@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAX Get XML node.Summary-->O comando SAX Get XML node devolve um inteiro longo indicando o tipo de evento SAX devolvido durante a análise do documento XML referenciado por *documento*.<!-- END REF--> 

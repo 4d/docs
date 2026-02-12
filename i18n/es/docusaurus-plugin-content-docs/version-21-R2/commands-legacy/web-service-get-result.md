@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
-|<6|Creado|
+|2003|Creado por|
 |13|Renombrar|
 
 </details>

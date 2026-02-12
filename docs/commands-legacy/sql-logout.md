@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->The SQL LOGOUT command closes the connection with an ODBC source that is open in the current process (if applicable).<!-- END REF--> If there is no ODBC connection open, the command does nothing. 

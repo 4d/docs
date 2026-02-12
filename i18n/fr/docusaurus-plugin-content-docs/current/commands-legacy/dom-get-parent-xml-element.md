@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004.2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Get parent XML element.Summary-->La commande **DOM Get parent XML element** retourne une référence XML vers le “parent” de l’élément XML passé en référence dans *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d’analyse XML.

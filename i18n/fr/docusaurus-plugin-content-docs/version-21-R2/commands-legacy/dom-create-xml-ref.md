@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Create XML Ref.Summary-->La commande **DOM Create XML Ref** crée un arbre XML vide en mémoire et retourne sa référence.<!-- END REF-->

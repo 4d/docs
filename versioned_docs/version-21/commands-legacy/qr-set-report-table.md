@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->The QR SET REPORT TABLE command sets the current table for the report area whose reference was passed in *area* to the table whose number was passed in *aTable*.<!-- END REF-->

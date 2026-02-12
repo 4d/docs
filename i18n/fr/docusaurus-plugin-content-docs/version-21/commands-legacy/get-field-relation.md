@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET FIELD RELATION.Summary-->La commande **GET FIELD RELATION** permet de connaître le statut automatique/manuel du lien partant du *champN* pour le process courant.<!-- END REF--> Tous les liens peuvent être consultés, y compris les liens déclarés automatiques dans la fenêtre de Structure.

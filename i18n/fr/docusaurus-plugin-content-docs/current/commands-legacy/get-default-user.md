@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get default user.Summary-->La commande **Get default user** retourne le numéro de référence unique de l’utilisateur désigné comme “Utilisateur par défaut” dans la boîte de dialogue des Propriétés de la base<!-- END REF--> :

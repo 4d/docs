@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get plugin access.Summary-->Get plugin accessコマンドは引数 *plugIn* に渡した番号を持つプラグインの使用を許可されているユーザグループの名前を返します。<!-- END REF-->プラグインに割り当てられているグループが存在しない場合、コマンドは空の文字列 ("") を返します。 

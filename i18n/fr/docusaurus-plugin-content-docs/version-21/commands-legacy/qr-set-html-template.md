@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->La commande **QR SET HTML TEMPLATE** permet de définir le *modèle* HTML à utiliser pour la zone d'état rapide référencée par *zone*.<!-- END REF--> Ce modèle sera utilisé lors de l'exécution des états au format HTML. 

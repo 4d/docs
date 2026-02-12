@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2003|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAK dispara a impressão de dados enviados a la impressora e provocar um salto de página.<!-- END REF--> PAGE BREAK se utiliza conjuntamente com [Print form](../commands/print-form.md) (no contexto do evento de formulário On Printing Detail) para forçar saltos de página e imprimir a última página criada em memória. Não utilize PAGE BREAK com o comando [PRINT SELECTION](print-selection.md). É melhor utilizar [Subtotal](subtotal.md) ou [BREAK LEVEL](break-level.md) com o parâmetro opcional para gerar saltos de página.

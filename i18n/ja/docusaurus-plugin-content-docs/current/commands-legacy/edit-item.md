@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EDIT ITEM.Summary-->**EDIT ITEM** コマンドは*object* 引数で指定された項目、または指定された配列やリスト中*item* で指定された項目を編集状態にします。<!-- END REF-->

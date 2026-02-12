@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->O comando QR REPORT TO BLOB coloca o relatório cuja referência foi passada em *area* em um *BLOB* (variável ou campo).<!-- END REF-->

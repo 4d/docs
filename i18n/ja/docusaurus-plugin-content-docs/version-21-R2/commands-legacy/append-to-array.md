@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->APPEND TO ARRAY コマンドは、*array*の最後に新規要素を追加し、その要素に*value*を代入します。<!-- END REF-->インタプリタモードでは、*array*が存在しない場合、コマンドは*value*の型に対応する配列を作成します。

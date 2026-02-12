@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->SAX GET XML PROCESSING INSTRUCTION コマンドは、*document* 引数で参照されるXMLドキュメント中で処理されるXML命令の名前と値を*name*と*value*に返します。<!-- END REF-->このコマンドはXML Processing Instructionイベントで呼び出されなければなりません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md "SAX Get XML node") コマンドの説明を参照してください。

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX Get XML node.Summary-->SAX Get XML node コマンドは、*document* で参照されるXMLドキュメントが解析されている間、SAXイベントのタイプを示す倍長整数値を返します。<!-- END REF-->

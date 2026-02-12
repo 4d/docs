@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->El comando GET FIELD TITLES llena los arrays *titulosCampos* y *numCampos* con los nombres y los números de los campos de la *tabla*.<!-- END REF--> Los contenidos de estos dos arrays están sincronizados. 

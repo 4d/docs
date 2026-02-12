@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR New offscreen area.Summary-->El comando QR New offscreen area crea un área de informe rápido fuera de pantalla y devuelve su número de referencia.<!-- END REF-->

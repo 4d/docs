@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004.2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Get next sibling XML element.Summary-->The DOM Get next sibling XML element command returns a reference to the next “sibling” of the XML element passed as reference.<!-- END REF--> This reference can be used with other XML parsing commands.

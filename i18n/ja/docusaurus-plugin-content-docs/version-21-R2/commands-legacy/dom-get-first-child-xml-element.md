@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004.2|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Get first child XML element.Summary-->DOM Get first child XML element コマンドは*elementRef*に渡した要素の最初の子要素への参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->**SQL EXECUTE**コマンドを使用してSQLコマンドを実行し、結果を4Dのオブジェクト(配列、変数またはフィールド) にバインドできます。<!-- END REF-->

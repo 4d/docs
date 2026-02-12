@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->El comando **SPELL CHECKING** activa la revisión ortográfica del campo o variable que tiene el foco en el formulario en pantalla.<!-- END REF--> El objeto verificado debe ser de tipo Alfa o Texto.

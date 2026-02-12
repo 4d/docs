@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current form window.Summary-->La commande **Current form window** retourne la référence de la fenêtre du formulaire courant.<!-- END REF--> S’il n’y a pas de fenêtre définie pour le formulaire courant, la commande retourne 0.

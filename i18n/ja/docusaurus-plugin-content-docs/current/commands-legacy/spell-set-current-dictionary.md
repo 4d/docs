@@ -23,6 +23,7 @@ displayed_sidebar: docs
 |14|変更|
 |13|名称変更|
 |13|変更|
+|2004.5|変更|
 |<6|初出|
 
 </details>

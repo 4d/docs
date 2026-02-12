@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is data file locked.Summary-->La commande **Is data file locked** retourne Vrai si le fichier de données de la base ouverte ou l’un de ses segments au moins est verrouillé — c’est-à-dire, protégé en écriture.<!-- END REF--> 

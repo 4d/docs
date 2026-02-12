@@ -21,6 +21,7 @@ displayed_sidebar: docs
 |Versão|Alterações|
 |---|---|
 |<6|Criado|
+|2004.5|Modificado|
 |13|Modificado|
 |13|Renomear|
 |14|Modificado|

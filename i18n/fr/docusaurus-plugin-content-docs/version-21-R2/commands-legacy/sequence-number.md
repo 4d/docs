@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2004.1|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** retourne le prochain numéro automatique de *laTable*.<!-- END REF--> Ce numéro est unique pour chaque table. C'est une valeur qui ne se répète pas et qui est incrémentée à chaque enregistrement nouvellement créé dans la table(\*). 

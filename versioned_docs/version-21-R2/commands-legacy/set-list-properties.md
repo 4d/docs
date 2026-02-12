@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->The **SET LIST PROPERTIES** command sets the line height and selection properties of the hierarchical list whose list reference you pass in *list*.<!-- END REF-->

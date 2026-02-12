@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2004|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->La commande **SET LIST PROPERTIES** définit la hauteur de ligne et le fonctionnement de la liste hiérarchique dont la référence est passée dans le paramètre *liste*.<!-- END REF-->

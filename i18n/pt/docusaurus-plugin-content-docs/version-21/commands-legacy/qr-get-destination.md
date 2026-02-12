@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->O comando QR GET DESTINATION recupera o *tipo* de saída do relatório para a área cuja referência se passou em *area*.<!-- END REF--> 

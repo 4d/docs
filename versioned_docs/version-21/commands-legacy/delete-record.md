@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE RECORD.Summary-->**DELETE RECORD** deletes the current record of *aTable* in the process.<!-- END REF--> If there is no current record for *aTable* in the process, **DELETE RECORD** has no effect. In a form, you can create a Delete Record button instead of using this command.

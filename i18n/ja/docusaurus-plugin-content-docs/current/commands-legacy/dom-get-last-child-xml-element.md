@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004.2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Get last child XML element.Summary-->DOM Get last child XML element コマンドは*elementRef*に渡した要素の最後の子要素への参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。

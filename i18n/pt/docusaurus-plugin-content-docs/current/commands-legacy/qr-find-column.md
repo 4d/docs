@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR Find column.Summary-->O comando QR Find column devolve o número da primeira coluna cujo conteúdo corresponde à *expressao* passada em parâmetro.<!-- END REF-->

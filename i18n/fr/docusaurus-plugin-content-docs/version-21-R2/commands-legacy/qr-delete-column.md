@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->La commande **QR DELETE COLUMN** supprime de la *zone* la colonne dont le numéro a été passé dans *numColonne*.<!-- END REF--> Cette commande ne peut pas être utilisée avec les états en tableau croisé.

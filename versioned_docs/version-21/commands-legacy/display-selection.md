@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->**DISPLAY SELECTION** displays the selection of *aTable*, using the output form.<!-- END REF--> The records are displayed in a scrollable list similar to that of the Design environment. If the user double-clicks a record, by default the record is displayed in the current input form. The list is displayed in the frontmost window.

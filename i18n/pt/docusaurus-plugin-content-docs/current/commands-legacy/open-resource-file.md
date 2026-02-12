@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Open resource file.Summary-->O comando **Open resource file** abre o arquivo de recursos cujo nome ou rota de acesso completa se passa em *resNomArquivo*.<!-- END REF-->  

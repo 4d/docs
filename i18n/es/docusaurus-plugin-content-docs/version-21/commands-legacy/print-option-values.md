@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->El comando **PRINT OPTION VALUES** devuelve en *arrayNoms* una lista de nombres disponibles para la *opcion* de impresión definida.<!-- END REF--> Opcionalmente, puede recuperar la información adicional para cada nombre en *info1Array* y *info2Array*. 
