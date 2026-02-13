@@ -260,8 +260,8 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 |Name|Data Type|Possible Values|
 |:---|---|---|
-|popupPlacement |string |<li>"none"</li><li>"linked"</li><li>"separated"</li> |
+|popupPlacement |string |<ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul> |
 
 #### Objects Supported
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
