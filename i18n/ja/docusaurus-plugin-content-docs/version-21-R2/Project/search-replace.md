@@ -1,54 +1,54 @@
 ---
 id: search-replace
-title: Search and Replace
+title: 検索と置換
 ---
 
-4D provides several search and replace functions for elements in all of the Design environment.
+4D はデザイン環境の全ての要素に対して複数の検索と置換機能を提供しています。
 
-- You can search for a string or a type of object (variable, comment, expression, etc.) in part of or in the entire project on the basis of custom criteria ("starts with", "contains", etc.). You can, for example, search for all the variables containing the string "MyVar", only in methods whose name begins with "HR_".
-- The results are displayed in a results window, where it is possible to perform replacements in the contents. You can also export these results in a text file that can be imported into a spreadsheet.
-- You can detect variables and methods that are not used in your code and then remove them to free up memory.
-- You can rename a project method or a variable throughout the Design environment in a single operation.
+- 文字列またはオブジェクトのタイプ(変数、コメント、式、など)に対して検索を行うことができます。 またカスタム条件("前方一致"、"含む"など)に基づいてプロジェクトの一部または全体に対して検索を行えます。 例えば、"MyVar" という文字列を格納している変数を、名前が"HR_" で始まるメソッド内2位おいてのみ検索する、といったことを行うことができます。
+- 検索した結果は結果ウィンドウ内に表示表示され、ここからコンテンツの置換を行うことができます。 この結果をテキストファイルとして書き出して、それをスプレッドシートなどに読み込ませることもできます。
+- コード内で使用されていない変数やメソッドを検知し、それらを削除することでメモリを解放することもできます。
+- 一回の操作で、デザイン環境内のプロジェクトメソッドや変数を名称変更することができます。
 
 :::note
 
-There are also functions for searching among the methods of your project in the context menu of the Methods Page in the Explorer: **Search Callers** (aussi available in the [Code editor](../code-editor/write-class-method.md#search-callers) and **Search Dependencies**. Both functions display the items found in a [Results window](#results-window).
+またエクスプローラーのメソッドページのコンテキストメニューには、プロジェクトのメソッド内を検索するための機能もあります: **呼び出し元を検索** ([メソッドエディター](../code-editor/write-class-method.md#search-callers) からも利用可能です) および **依存関係を検索** です。 どちらの機能も、[結果ウィンドウ](#結果ウィンドウ) 内に見つかった項目を表示します。
 
 :::
 
-## Search Location
+## 検索する場所
 
-When you search the Design environment, the following elements are searched:
+デザイン環境を検索する場合、以下の要素が検索されます:
 
-- Names of project methods and classes
-- Contents of all methods and classes
-- Names of tables, fields and forms
-- Contents of forms:
-  - object names and titles
-  - names of help tips, pictures, variables, style sheets,
-  - formatting strings
+- プロジェクトメソッドおよびクラスの名前
+- 全てのメソッドとクラスの内容
+- テーブル名、フィールド名、フォーム名
+- フォームの中身:
+  - オブジェクト名とタイトル
+  - ヘルプTips、ピクチャー、変数、スタイルシートの名前
+  - フォーマット文字列
   - 式
-- Menus (names and items) and commands associated with menu items
-- Choice lists (names and items)
-- Help tips (names and content)
-- Formats / filters (names and content)
-- Comments in the Explorer and in the code
+- メニュー(名前と項目)およびメニュー項目に割り当てられたコマンド
+- 選択リスト(名前と項目)
+- ヘルプTips (名前と内容)
+- フォーマット / フィルター (名前と内容)
+- エクスプローラーおよびコード内でのコメント
 
-## Find in Design
+## デザインモードを検索
 
-### Starting a search
+### 検索を開始する
 
-Specify your search criteria in the "Find in design" window:
+"デザインモードを検索"ウィンドウ内で検索条件を指定します:
 
-1. Click on the Search button (![](../assets/en/Project/search-icon.png)) in the 4D toolbar.
-   OR
-   Select the **Find in Design...** command from the **Edit** menu.
+1. 4D ツールバー内の検索ボタン (![](../assets/en/Project/search-icon.png)) をクリックします。
+   または
+   **編集** メニュー内から **デザインモードを検索...** コマンドを選択します。
 
-The "Find in design" window appears:
+"デザインモードを検索" ウィンドウが表示されます:
 
 ![](../assets/en/Project/find-in-design.png)
 
-The areas of the "Find in design" vary dynamically depending on the selections made in the menus. You can expand this window so that all options are visible:
+メニューの選択に応じて、"デザインモードを検索"のエリアは動的に変化します。 ウィンドウを展開することで、全てのオプションを表示することもできます:
 
 ![](../assets/en/Project/find-in-design-expanded.png)
 
@@ -153,7 +153,7 @@ You can select options that can help speed up your searches:
 - **Search in methods**: When this option is deselected, the search is done throughout the project, except in methods.
 - **Case Sensitive**: When this option is selected, the search uses the case of the characters as they have been entered in the Find area.
 
-## Results window
+## 結果ウィンドウ
 
 The Results window lists all elements found that match the search criteria set using different types of searches:
 

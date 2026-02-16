@@ -174,24 +174,30 @@ Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 
-:::note
-
-内部的に、`return x` は `myReturnValue:=x` を実行し、呼び出し元に戻ります。  `return` が式なしで使われた場合、関数またはメソッドは宣言された戻り値の型 (あれば) の null値を返し、それ以外の場合には *undefined* です。
-
-:::
-
-`return`文は、[戻り値](#戻り値) の標準的なシンタックスと併用することができます (戻り値は宣言された型でなくてはなりません)。  ただし、<code>return</code> はコードの実行を直ちに終了させることに注意が必要です。 例:
+`return`文は、[戻り値](#戻り値) の標準的なシンタックスと併用することができます (戻り値は宣言された型でなくてはなりません)。  When you have declared a return parameter (e.g. `myFunction() -> $myReturnValue : Text`), `return $x` implicitely executes `$myReturnValue:=$x`, and returns to the caller. Keep in mind that it ends immediately the code execution. Examine the following examples:
 
 ```4d
 Function getValue -> $v : Integer
 	$v:=10
+	return
+	// function returns 10
+	
+Function getValue -> $v : Integer
+	$v:=10
 	return 20
-	// 20 が返されます
+	// function returns 20
 
 Function getValue -> $v : Integer
 	return 10
-	$v:=20 // 実行されません
-	// 10 が返されます
+	$v:=20 // never executed
+	// function returns 10
+
+Function getValue -> $v : Integer
+	return "Hello" //error
+
+Function returnHello
+	return "Hello"
+	// function returns "Hello"
 ```
 
 ## 引数の間接参照 (${N})
