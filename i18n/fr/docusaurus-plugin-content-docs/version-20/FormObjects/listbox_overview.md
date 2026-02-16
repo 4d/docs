@@ -1120,7 +1120,7 @@ Utilisez "choiceListName" ou "choiceListReference" en fonction de la provenance 
 > * Si vous souhaitez définir des valeurs d'énumération via un simple tableau, vous pouvez utiliser l'attribut "choiceList".
 > * Si la liste contient du texte représentant des valeurs réelles, le séparateur décimal doit être le point ("."), quels que soient les paramètres locaux, ex : "17.6" "1234.456".
 
-Voici un exemple :
+Exemple :
 
 Vous voulez afficher une combo box basée sur une énumération nommée "colors" définie dans la Boîte à outils (contenant les valeurs "bleu", "jaune" et "vert") et afficher "vert" par défaut :
 
@@ -1151,7 +1151,7 @@ Quel que soit son mode de définition, la liste d'unités peut être associée �
 
 L'unité courante est affichée sous la forme d'un bouton qui fait défiler les valeurs "unitList", "unitsListReference" ou "unitsListName" chaque fois qu'il est cliqué (par exemple, "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
-Voici un exemple :
+Exemple :
 
 Vous souhaitez définir une valeur de saisie numérique suivie d'une unité parmi deux possibles : "cm" ou "pixels". La valeur courante est "2" + "cm". Vous utilisez des valeurs définies directement dans l'objet (attribut "unitsList") :
 
@@ -1174,7 +1174,7 @@ Si vous souhaitez ajouter un bouton d'ellipse [...] dans une cellule, il suffit 
 
 Lorsque l'utilisateur clique sur ce bouton, un événement `On Alternative Click` est généré, vous permettant de traiter cette action comme vous le souhaitez (reportez-vous ci-dessous au paragraphe "Gestion des événements" pour plus d'informations).
 
-Voici un exemple :
+Exemple :
 
 ```4d
 C_OBJECT($ob1)
@@ -1191,7 +1191,7 @@ OB SET($ob;"value";$entry)
 
 L'attribut "valueType" de valeur "color" vous permet d'afficher soit une couleur, soit un texte.
 
-*   Si la valeur est un nombre, un rectangle de couleur est dessiné à l'intérieur de la cellule. Voici un exemple :
+*   Si la valeur est un nombre, un rectangle de couleur est dessiné à l'intérieur de la cellule. Exemple :
 
     ````4d
     C_OBJECT($ob4)
@@ -1210,7 +1210,7 @@ L'attribut "valueType" de valeur "event" affiche un bouton qui génère simpleme
 
 Optionnellement, il est possible de passer un attribut "label".
 
-Voici un exemple :
+Exemple :
 
 ````4d
 C_OBJECT($ob)

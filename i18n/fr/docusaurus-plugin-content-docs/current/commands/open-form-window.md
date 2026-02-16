@@ -10,6 +10,8 @@ toc_max_heading_level: 3
 
 <!--REF #_command_.Open form window.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type         |                             | Description                                                                                                                                                                                 |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Table        | &#8594; | Table of the form or Default table, if omitted                                                                                                                                              |
@@ -20,6 +22,7 @@ toc_max_heading_level: 3
 | \*         | Opérateur    | &#8594; | Save current position and size of the window                                                                                                                                                |
 | Résultat   | Integer      | &#8592; | Numéro de référence de la fenêtre                                                                                                                                                           |
 
+</div>
 <!-- END REF-->
 
 ## Description

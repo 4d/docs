@@ -223,4 +223,4 @@ Cada opção especifica a relação entre o botão e o menu pop-up anexado:
 
 #### Objectos suportados
 
-[Botão da barra de ferramentas](button_overview.md#toolbar) - [Botão](button_overview.md#bevel) [chanfrado - Botão chanfrado arredondado](button_overview.md#rounded-bevel) - [Botão de gradiente do OS X](button_overview.md#os-x-gradient) - [Botão texturizado do OS X](button_overview.md#os-x-textured) - [Botão do Office XP](button_overview.md#office-xp) - [Botão de círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)

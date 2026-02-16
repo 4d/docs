@@ -35,7 +35,7 @@ Vous devez affecter la référence retournée à une variable 4D de type Collect
 
 Symbole(s) Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
-Prise en charge des formules
+If the new element index is beyond the last existing element of the shared collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
 
 Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge :
 

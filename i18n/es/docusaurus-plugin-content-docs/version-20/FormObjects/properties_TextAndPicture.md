@@ -256,10 +256,10 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles                                                            |
-|:-------------- | -------------- | --------------------------------------------------------------------------- |
-| popupPlacement | string         | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
+| Nombre         | Tipos de datos | Valores posibles          |
+|:-------------- | -------------- | ------------------------- |
+| popupPlacement | string         | <ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul> |
 
 #### Objetos soportados
 
-[Botón de la barra de herramientas](button_overview.md#toolbar) - [Botón Bisel](button_overview.md#bevel) - [Botón Bisel redondeado](button_overview.md#rounded-bevel) - [Botón Gradiente OS X](button_overview.md#os-x-gradient) - [Botón Texturizado OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Botón Círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)

@@ -248,7 +248,7 @@ Utilisé pour appliquer un style de police personnalisé à chaque ligne de list
 
 Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou variable sera évaluée pour chaque ligne affichée (si elle s'applique à la list box) ou chaque cellule affichée (si elle s'applique à la list box). Vous pouvez utiliser les constantes listées dans la commande [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md).
 
-Voici un exemple :
+Exemple :
 
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
