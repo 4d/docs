@@ -52,53 +52,54 @@ title: 検索と置換
 
 ![](../assets/en/Project/find-in-design-expanded.png)
 
-2. Build your search using the different menus and entry areas of the dialog box and if necessary enter the character string to be searched for. These items are described in the following sections.
+2. 異なるメニューやダイアログボックスの入力エリアを使用して検索をビルドすることができ、また必要であれば検索したい文字列を入力します。 これらの項目については、以下のセクションで説明されています。
 
-3. Set the [searching options](#searching-options) (if necessary).
+3. [検索オプション](#検索オプション) を設定します(必要であれば)。
 
-4. Click **OK** or press the **Enter** key.
-   When the search is finished, the [Results window](#results-window) appears, listing the elements found.
+4. **OK** をクリックするか、または**Enter** キーを押してください。
+   検索が完了すると、 [結果ウィンドウ](#結果ウィンドウ) が表示され、そこに検索で見つかった要素が一覧表示されます。
 
 :::note
 
-You can cancel an extensive search that is underway using the **x** button; this does not close the window or remove any results that were found.
+**x** ボタンを使用することで時間がかかっている進行中の検索をキャンセルすることができます。しかしキャンセルしてもウィンドウが閉じられることやすでに検索で見つかった結果が削除されることはありません。
 
 :::
 
-Once you have executed a search, the value entered in the search area is saved in memory. This value, as well as all the other values entered during the same session, can be selected from the combo box.
+検索を一度実行したら、検索エリアに入力された値はメモリーに保存されます。 この値と、同じセッション中に入力された他の値は、コンボボックスから選択することができます。
 
 ### 検索
 
-You specify the type of element to look for using the **Find** menu. The following choices are available:
+**検索**メニューを使用して検索したい要素のタイプを指定します。 以下の選択肢から選択することが可能です:
 
-- **Text**: In this case, 4D looks for a character string throughout the Design environment. The search is done in plain text mode, without taking the context into account. For example, you can look for the text "ALERT("Error number:"+" or "button27". In this mode, you cannot use the wildcard character because "@" is considered to be a standard character.
-- **Comment**: This search is basically the same as the previous one, but it is restricted to the contents of comments (lines beginning with //) in the code and in the Explorer window. For example, you can search for any comments containing the string "To be verified".
+- **テキスト**: この場合、4D はデザイン環境内においてその文字列を検索します。 この検索はプレーンテキストモードで行われ、コンテキストは考慮されません。 例えば、"ALERT("Error number:"+" or "button27" というテキストを検索したとします。 このモードでは、ワイルドカード文字として "@" を使用することはできません。この場合は標準の文字として認識されるからです。
+- **コメント**: この検索は基本的に前のものと同じですが、コード(// で始まる行)内の中身とエクスプローラーウィンドウ内のみを検索します。 例えば、 "To be verified" という文字列を格納する任意のコメントを検索することができます。
 
 :::note
 
-The end result of both types of searches depends on the [search mode](#search-mode) selected.
+どちらのタイプの検索結果も、選択された[検索モード](#検索モード) に応じて変わります。
 
 :::
 
-- **Language expression**: Used to search for any valid 4D expression; the search is performed in the "contains" search mode. Validity is important because 4D must be able to evaluate an expression to be able to search for it. For example, a search for "[clients" (invalid expression) will not return any result whereas "[clients]" is correct. This option is particularly suitable for searches for value assignments and comparisons. 例:
-  - Search for "myvar:=" (assignment)
-  - Search for "myvar=" (comparison)
-- **Language element**: Used to search for a specific language element by its name. 4D can distinguish between the following elements:
-  - **Any language element**: Any element from the list below.
-  - **Project method or Class**: Name of a project method or class, for example "M_Add" or "EmployeeEntity".
-  - **Form:** Form name, for example "Input". The command searches among project forms and table forms.
-  - **Field or Table**: Name of a table or field, for example "Customers".
-  - **Variable**: Any variable name, such as "$myvar".
-    **4D constant**: Any constant, such as "Is Picture".
-    **String in quotes**: Literal text constant; i.e. any value within quotes in the code editor or inserted into text areas of the Form editor (static text or group boxes). For example, a search for "Martin" will return results if your code contains the line: `ds.Customer.query("name = :1"; "Martin")`
-  - **4D command**: Any 4D command, for example "Alert".
-  - **Plug-in command**: Plug-in command installed in the application.
-  - **Properties**: An object property name (includes ORDA attribute names). For example "lastname" will find "$o.lastname" and "ds.Employee.lastname".
-- **Any object**: This option searches among all the elements in the Design environment. Only the modification date filter is available. Use this option, for example, to search for "anything modified today".
+- **ランゲージ式**: これを使用すると任意の有効な4D 式を検索します。この検索は"含む"モードで実行されます。 この場合式の有効性が重要になります。4D はその式を検索するためにはそれが検証可能でなければならないからです。 例えば、 "[clients" (無効な式) を検索しても何も見つかりませんが、 "[clients]" であれば正しく検索されます。 このオプションは特に値の代入や比較の検索において特に有用です。 例:
+  - "myvar:=" (代入) を検索する
+  - "myvar=" (比較) を検索する
+- **ランゲージ要素**: 特定のランゲージ要素をその名前で検索するのに使用されます。 4D は以下のような要素を識別することができます:
+  - **すべてのランゲージ要素**: 以下のリスト内の全ての要素。
+  - **プロジェクトメソッドまたはクラス**: プロジェクトメソッド名またはクラス名、例えば "M_Add" あるいは "EmployeeEntity" など。
+  - **フォーム:** フォーム名。例 "Input"。 このコマンドはプロジェクトフォームおよびテーブルフォームを検索します。
+  - **フィールまたはテーブル**: テーブル名またはフィールド名。例 "Customers"。
+  - **変数**: 任意の変数名。例 "$myvar"。
+    **4D 定数**: 任意の定数。例 "Is Picture"。
+    **引用符内の文字列**: リテラルなテキストのコンテンツ。例: コードエディター内、またはフォームエディターのテキストエリアに挿入された引用符内の任意の値。 例えば、 "Martin" を検索すると、コード内に以下のような行があった場合には検索結果を返します:
+    `ds.Customer.query("name = :1"; "Martin")`
+  - **4D コマンド**: 任意の4D コマンド。例 "Alert"。
+  - **プラグインコマンド**: アプリケーションにインストールされたプラグインコマンド。
+  - **プロパティ**: オブジェクトのプロパティ名(ORDA 属性名も含みます)。 例えば "lastname" を検索した場合、"$o.lastname" および "ds.Employee.lastname" が返されます。
+- **あらゆるオブジェクト**: このオプションを使用するとデザイン環境内にあるあらゆる要素内を検索します。 ここでは更新日フィルターしか使用できません。 このオプションを使用することで、例えば "今日変更されたもの"というような検索を実行できます。
 
-### Search mode
+### 検索モード
 
-The search mode menu (i.e. "which", "that is" or "whose name") specifies how to search for the value that is entered. The contents of this menu vary according to the type of element to search for as selected in the **Find** dropdown list.
+検索モードメニュー(例えば"完全一致"や"名前"など)は入力された値をどのように検索するかを指定します。 このメニューの中身は、 **タイプ** ドロップダウンリスト内で選択された要素のタイプに応じて変化します。
 
 - Search options for Text or Comment:
   - **contains**: Searches all text in the Design environment for the specified string. Search results for "var" can include "myvar", "variable1" or "aVariable".
