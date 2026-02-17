@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New.Syntax-->**WP New** ( *source* : Text, Blob, Object {; *option* : Integer} ) : Object<!-- END REF-->
+<!--REF #_command_.WP New.Syntax-->**WP New** ( {*source* : Text, Blob, Object {; *option* : Integer}} ) : Object<!-- END REF-->
 <!--REF #_command_.WP New.Params-->
 <div class="no-index">
 
@@ -40,7 +40,7 @@ If the *source* parameter is used, the new 4D Write Pro object will be filled wi
    * a 4D Write Pro document.  
    **WP New** will return a copy of the specified document.
 
-By defaut, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the wk import html expressions as text constant in the *option* parameter, HTML expressions will be imported as raw text within *##htmlBegin##* and *##htmlEnd##* tags -- which will require formatting actions afterwards. For example:
+By defaut, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the `wk import html expressions as text` constant in the *option* parameter, HTML expressions will be imported as raw text within *##htmlBegin##* and *##htmlEnd##* tags -- which will require formatting actions afterwards. For example:
 
 ```RAW
 ##htmlBegin##Imported titlebold##htmlEnd##

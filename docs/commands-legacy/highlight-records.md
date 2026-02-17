@@ -5,7 +5,7 @@ slug: /commands/highlight-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*aTable* : Table }{;}{ *setName* : Text {; *}} )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( *aTable* : Table {; *setName* : Text {; *}} )<br/>**HIGHLIGHT RECORDS** ( *setName* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 <div class="no-index">
 

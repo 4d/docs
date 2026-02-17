@@ -5,7 +5,7 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table ;}{; ...(*aField* : Field {; *> or <*}) } {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( *aTable* : Table {; ...(*aField* : Field {; *>_or_<* : >, <}) } {; *} )<br/>**ORDER BY** ( ...(*aField* : Field {; *>_or_<* : >, <}) {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records, or Default table, if omitted |
 | aField | Field | &#8594;  | Field on which to set the order for each level |
-| >_or_< | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| >_or_< | >, < | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 | * | Operator | &#8594;  | Continue order flag |
 </div>
 <!-- END REF-->
