@@ -5,7 +5,7 @@ slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY FORMULA.Syntax-->***ORDER BY FORMULA** ( *aTable* : Table ; *formula* : Expression {; *>_or_<* : Comparator} {; ...(*formula* : Expression {; *>_or_<* : Comparator})} )<!-- END REF-->
+<!--REF #_command_.ORDER BY FORMULA.Syntax-->***ORDER BY FORMULA** ( *aTable* : Table ; *formula* : Expression {; *order* : >, <} {; ...(*formula* : Expression {; *order* : >, <})} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records |
 | formula | Expression | &#8594;  | Expression on which to set the order for each level (can be of type Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean) |
-| >_or_< | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| order | >, < | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 </div>
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** sorts (reorders) the records of the current selection of *aTable* for the current process.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record. **Note**: you must specify *aTable*. You cannot use a default table.
 
-You can sort the selection on one or several levels. For each sort level, you specify an expression in *formula* and the sorting order in *\> or <*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.
+You can sort the selection on one or several levels. For each sort level, you specify an expression in *formula* and the sorting *order*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.
 
 The *formula* parameter can be of type: Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean.
 
