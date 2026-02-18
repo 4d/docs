@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<br/>**String** ( *expression* ; *base* ) : Text<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* : Expression {; *format* : Integer, Text {; *addTime* : Time}} ) : Text<br/>**String** ( *expression* : Expression ; *base* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 <div class="no-index">
 
@@ -19,15 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |21|Support of *base* parameter|
+|<6|Created|
 
 </details>
-
+</div>
 
 
 

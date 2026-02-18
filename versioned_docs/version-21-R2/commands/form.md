@@ -13,13 +13,17 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | Form data of the current form |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |20 R8|Form class support|
+|16 R6|Created|
 
 </details>
+</div>
 
 ## Description 
 

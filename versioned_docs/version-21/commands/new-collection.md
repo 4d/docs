@@ -11,10 +11,21 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594;  | Collection's value(s) |
+| value | any | &#8594;  | Collection's value(s) |
 | Function result | Collection | &#8592; | New collection |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Created|
+
+</details>
+</div>
+
 
 ## Description 
 

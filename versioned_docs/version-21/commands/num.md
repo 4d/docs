@@ -5,7 +5,7 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Num.Params-->
 <div class="no-index">
 
@@ -18,14 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |21|Support of *base* parameter|
+|<6|Created|
 
 </details>
+</div>
 
 
 ## Description 
