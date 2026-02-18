@@ -4,16 +4,7 @@ title: File
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|19 R4|New `HTTP Client log file` constant|
-|17 R5|Added|
-
-</details>
-
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -24,10 +15,22 @@ displayed_sidebar: docs
 |path|Text|&#8594; |File path|
 |fileConstant|Integer|&#8594;|4D file constant|
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
-|*|operator|&#8594; |* to return file of host database|
+|*|Operator|&#8594; |* to return file of host database|
 |Result|[4D.File](../API/FileClass.md)|&#8592;|New file object|
 </div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R4|New `HTTP Client log file` constant|
+|17 R5|Added|
+
+</details>
+</div>
+
 
 ## Description
 

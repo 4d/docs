@@ -17,13 +17,26 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17|Modified|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
+
 ## Description 
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
 This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](../commands-legacy/add-record.md) or [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons. 
 
-This command is typically called along with the [Open form window](../commands-legacy/open-form-window.md) to display sophisticated forms, as shown in the following example: 
+This command is typically called along with the [Open form window](open-form-window.md) to display sophisticated forms, as shown in the following example: 
 
 ![](../assets/en/commands/pict3541609.en.png)
 
@@ -170,7 +183,7 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [CALL FORM](../commands-legacy/call-form.md)  
 [CANCEL](../commands-legacy/cancel.md)  
 [Form](form.md)  
-[Open window](../commands-legacy/open-window.md)  
+[Open window](open-window.md)  
 
 ## Properties
 

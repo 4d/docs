@@ -17,6 +17,7 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -24,7 +25,7 @@ displayed_sidebar: docs
 |20 R8|Support of `type` "formObjectExpression"|
 
 </details>
-
+</div>
 
 ## Description 
 
