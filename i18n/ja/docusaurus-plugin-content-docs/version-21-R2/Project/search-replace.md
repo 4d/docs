@@ -101,128 +101,128 @@ title: 検索と置換
 
 検索モードメニュー(例えば"完全一致"や"名前"など)は入力された値をどのように検索するかを指定します。 このメニューの中身は、 **タイプ** ドロップダウンリスト内で選択された要素のタイプに応じて変化します。
 
-- Search options for Text or Comment:
-  - **contains**: Searches all text in the Design environment for the specified string. Search results for "var" can include "myvar", "variable1" or "aVariable".
-  - **contains whole word**: Searches all text of the Design environment for the string as a whole word. Search results for "var" only include exact occurrences. They will not include "myvar" but will include, for example, "var:=10" or "ID+var" because the symbols : or + are word separators.
-  - **begins with / ends with**: Searches for the string at the beginning or end of the word (text search) or at the beginning or end of the comment line (comment search). In "Text ends with" mode, searching for "var" will find "myvar".
-- Search options for Language element: The menu offers standard options (matches, contains, begins with, ends with). Note that you can use the search wildcard (@) with the matches option (returns all objects of the type specified).
+- テキストまたはコメントの検索オプション:
+  - **含む**: 指定された文字列をデザイン環境内の全てのテキスト内を検索します。 "var" の検索結果としては、 "myvar"、 "variable1" あるいは "aVariable" などが含まれます。
+  - **語全体を含む**: 文字列を完全な単語としてデザイン環境内の全てのテキスト内を検索します。 "var" を検索した場合には、それと完全に一致した場合のみが結果として返されます。 この結果には "myvar" は含まれませんが、例えば "var:=10" や "ID+var" などは検索結果に含まれます。 何故なら `:` や `+` などの記号は単語の区切り文字だからです。
+  - **前方一致 / 後方一致**: 文字列を単語の最初か最後に一致するか(テキスト検索)、あるいはコメント行の最初か最後に一致するか(コメント検索)を検索します。 "後方一致" モードにおいては、 "var" を検索した場合 "myvar" が検索結果に含まれます。
+- ランゲージ要素に対しての検索オプション: メニューは標準のオプション(等しい、含む、前方一致、後方一致)を提供します。 "等しい"検索オプションにおいては検索ワイルドカード (@) を使用できることに注意してください(指定されたタイプの全てのオブジェクトを返します)。
 
 ### コンポーネント内を検索
 
-When your current project references [editable components](../Extensions/develop-components.md#editing-components), you can designate one or all your components as a target for the search. By default, a search is executed in the host only. To modify the target for a search, deploy the **in the project** menu:
+カレントのプロジェクトが [編集可能なコンポーネント](../Extensions/develop-components.md#editing-components) を参照している場合、コンポーネントの一つまたは全てを検索対象として含めることができます。 デフォルトでは、ホストに対してのみ検索が実行されます。 検索対象を変更するためには、**プロジェクト内** メニューを展開します:
 
 ![](../assets/en/Project/find-components.png)
 
-You can select as target:
+ターゲットとして、以下を選択できます:
 
-- the **host project** (default option, top of the list): the search will only be executed within the host project code and forms, excluding components.
-- the **host project and all its components**: the search will be executed in the host project and in all its loaded components.
-- a **specific component**, among the list of all searchable components: the search will be restricted to this component only, excluding the host and other components.
+- **ホストプロジェクト** (デフォルトオプション、リストのトップ): 検索はホストプロジェクトのコードとフォーム内においてのみ実行され、コンポーネントは検索されません。
+- **ホストプロジェクトとその全てのコンポーネント**: 検索はホストプロジェクトとそこでロードされた全てのコンポーネント内において実行されます。
+- 全ての検索可能なコンポーネントのリスト内の**特定のコンポーネント**: 検索はそのコンポーネント内にのみ制限され、ホストと他のコンポーネントは検索されません。
 
 :::note
 
-When no searchable component is found, no menu is available.
+検索可能なコンポーネントが見つからない場合、このメニューは利用できません。
 
 :::
 
-The **in the folder** menu (see below) is updated when you select a project since the availability of folders depends on the selected search target(s). The menu is hidden when you select the "host project and all its components" option.
+**フォルダ** メニュー(以下参照) はプロジェクト選択した時に更新されます。どのフォルダが利用できるかは選択された検索対象によって変わるからです。 このメニューは "ホストプロジェクトとその全てのコンポーネント" オプションを選択している時には非表示になっています。
 
 ### Folder
 
-The **in the folder** menu restricts the search to a specific folder of the project. By default ("Top Level" option), the search takes place in all the folders.
+**フォルダー** メニューは検索をプロジェクトの特定のフォルダへと制限します。 デフォルト("トップレベル"オプション)では、全てのフォルダ内で検索を実行します。
 
 :::note
 
-Folders are defined on the Home Page of the Explorer.
+フォルダーは、エクスプローラーのホームページで定義されます。
 
 :::
 
-### Modification date of the parent
+### 親オブジェクトの変更日
 
-This menu restricts the search with respect to the creation/modification date of its parent (for example, the method containing the string being searched for). In addition to standard date criteria (is, is before, is after, is not), this menu also contains several options to let you quickly specify a standard search period:
+このメニューは親の作成日/変更日に従って検索(例えば、文字列を含んでいるメソッドの検索など)を制限します。 標準の日付条件(等しい、より以前、より以降、等しくない)に加えて、このメニューは標準の検索期間をより素早く指定するための複数のオプションを格納しています:
 
-- **is today**: Period beginning at midnight (00:00 h) of the current day.
-- **is since yesterday**: Period including the current day and the previous one.
-- **is this week**: Period beginning on Monday of the current week.
-- **is this month**: Period beginning on the 1st day of the current month.
+- **本日**: 現在の日付の真夜中(00:00 時)から始まる期間。
+- **昨日以降**: 現在の日付と昨日の日付を含めた期間。
+- **今週**: 現在の週の月曜日から始まる期間。
+- **今月**: 現在の月の一日から始まる期間。
 
-### Searching options
+### 検索オプション
 
-You can select options that can help speed up your searches:
+検索のスピードを上げるために役立つオプションを選択できます:
 
-- **Search in forms**: When this option is deselected, the search is done throughout the project, except in forms.
-- **Search in methods**: When this option is deselected, the search is done throughout the project, except in methods.
-- **Case Sensitive**: When this option is selected, the search uses the case of the characters as they have been entered in the Find area.
+- **フォーム内を検索**: このオプションの選択が解除されていた場合、検索はプロジェクト内で行われますが、フォーム内は検索されません。
+- **メソッド内を検索**: このオプションの選択が解除されていた場合、検索はプロジェクト内で行われますが、メソッド内は検索されません。
+- **大文字/小文字を区別**: このオプションの選択が解除されていた場合、検索エリアに入力された文字の大文字/小文字を使用して検索が行われます。
 
 ## 結果ウィンドウ
 
-The Results window lists all elements found that match the search criteria set using different types of searches:
+結果ウィンドウはさまざまなタイプの検索を使用して設定された検索条件に合致する全ての要素を一覧表示します:
 
-- [standard search](#starting-a-search)
-- [search for unused elements](#find-unused-methods-and-global-variables)
-- [search for callers](../code-editor/write-class-method.md#search-callers)
-- search for dependencies
-- [renaming of project methods and variables](#renaming-project-methods-and-variables)
+- [標準の検索](#検索を開始する)
+- [未使用の要素を要素を検索する](#未使用のメソッドとグローバル変数を検索)
+- [呼び出し元を検索](../code-editor/write-class-method.md#呼出し元を検索)
+- 依存関係を検索
+- [プロジェクトメソッドと変数の名称変更](#renaming-project-methods-and-variables)
 
-It shows the results as a hierarchical list organized by type of elements found. You can expand or collapse all the hierarchical items in the list using the options menu (found at the bottom left of the window) or in the context menu.
+検索結果は、見つかった要素のタイプごとに並べられた階層リストとして表示されます。 (ウィンドウの左下端にある)オプションメニュー、あるいはコンテキストメニュー内のオプションを使用してリスト内の階層項目を展開または折りたたむことができます。
 
 ![](../assets/en/Project/result-window.png)
 
-You can double-click on a line in this window to view the element in its editor, such as the [code editor](../code-editor/write-class-method.md). If you do several searches, each search opens its own result window, leaving previous result windows open.
+このウィンドウの行をダブルクリックすることでその要素を [メソッドエディター(コードエディター)](../code-editor/write-class-method.md) などのエディター内で閲覧することができます。 複数の検索を実行した場合、それぞれの検索の結果ウィンドウが表示され、以前のウィンドウが開いたままで閉じられることはありません。
 
-When more than one occurrence has been found, the list indicates their **count** next to the element name.
+一つ以上の結果が見つかった場合、リストには要素名のとなりに **個数** が表示されます。
 
-Each line can display a tip that provides additional information, for example the element property that matches the criteria, or the number of the form page that contains the occurrence.
+各行には追加の情報を提供するtip が表示されていることがあります。例えば検索条件に合致した要素のプロパティや、検索結果を格納するフォームのページ番号などです。
 
-When an element found belongs to a component, the **component name** is displayed in parenthesis at the right side of the element name:
+検索の結果見つかった要素がコンポーネントに所属している場合、その要素名の右隣に **コンポーネント名** が表示されます:
 
 ![](../assets/en/Project/find-components-results.png)
 
-Once a search is completed, you can use the ![](../assets/en/Project/result-window-re.png) button to perform the search again with the same criteria and options.
+検索が完了すると、 ![](../assets/en/Project/result-window-re.png) ボタンを使用することで同じ検索条件とオプションを使用した検索をもう一度実行することができます。
 
-### Options menu
+### オプションメニュー
 
-You can perform various actions using the options menu:
+オプションメニューを使用することでさまざまなアクションを実行することができます:
 
 ![](../assets/en/Project/result-window-menu.png)
 
-- **Remove from list**: removes selected item(s) from the results window. More specifically, this lets you keep only items targeted by a replacement operation in the contents or used for drag and drop between applications.
-- **Remove all items from list except selection**: clears everything from the results window except for the selected item(s).
+- **リストから削除**: 選択された要素を結果ウィンドウから削除します。 具体的には、結果のリスト内に置換操作を行いたい要素だけを残すことや、アプリケーション間でドラッグ&ドロップを使用したい要素だけを残すことなどができます。
+- **選択された項目以外を全てリストから削除**: 選択された項目を除いて全てを結果ウィンドウをから消去します。
 - [**Replace in content**](#replace-in-contents): replaces a character string within the selected item(s).
-- **Select >**: selects one type of item (project methods, object names, and so on) from among all the items found in the Results window. The hierarchical sub-menu also provides commands to select (All) or deselect (None) all the items at once.
-- **Collapse all/Expand all**: expands or collapses all the hierarchical items in the list of results.
-- **Export Results**: exports information about the search criteria and elements listed in the Results window. This text file can then be imported into a spreadsheet such as Excel, for example. For each item, the following information is exported as tab-separated values in a text file:
-  - Host project or component name
-  - Type (method, Class, formObject, trigger...)
-  - Path
-  - Property (if accurate): provides the property of the object that matches the criteria. For example, a string could be found in a variable name (variable property) and an object name (name property) within in the same form. This field is empty when the matching element is the object itself.
-  - Contents (if accurate): provides the contents that actually matches the criteria; for example, the code line that contains the requested string.
-  - Line number (for code) or page number (for form objects)
+- **選択 >**: 結果ウィンドウ内の全ての項目から、一つのタイプ(プロジェクトメソッド、オブジェクト名、など)だけを選択します。 階層サブメニューには全ての項目を一度に選択する(すべて)か選択解除する(なし)かを実行するコマンドを提供しています。
+- **全てを折りたたむ/全てを展開する**: 結果の一覧内の全ての階層項目を展開するか折りたたみます。
+- **結果を書き出し**: 検索条件と結果ウィンドウに表示されている要素についての情報を書き出します。 このテキストファイルは例えばExcel などのスプレッドシートに読み込ませることができます。 各項目に対して、以下の情報がタブ区切りの値としてテキストファイル内に書き出されます:
+  - ホストプロジェクトまたはコンポーネント名
+  - タイプ (メソッド、クラス、フォームオブジェクト、トリガー、など)
+  - パス
+  - プロパティ(正確であれば): 検索条件に合致するオブジェクトのプロパティを提供します。 例えば、文字列は同じフォーム内においても変数名(変数 プロパティ)またはオブジェクト名(オブジェクト名 プロパティ)として見つかることがありえます。 このフィールドは、合致する要素がオブジェクト自身である場合には空です。
+  - コンテンツ (正確であれば): 検索条件に実際に合致するコンテンツを提供します。例えば、リクエストした文字列に合致するコード行などです。
+  - 行番号(コードに対して) またはページ番号 (フォームオブジェクト)
 
 ## コンテンツを置換
 
-The Replace in content function allows you to replace one character string with another within the listed objects in the Results window. It is available in the [options menu](#options-menu) of the window.
+内容を置換機能を使用すると、結果ウィンドウにリストされたオブジェクト内の文字列を他の文字列で置き換えることができます。 これはウィンドウの [オプションメニュー](#オプションメニュー) 内にて利用可能です。
 
 :::note
 
-The **Replace in content** menu item is disabled if you work in a read-only database (e.g. in a .4dz file).
+**内容を置換** メニュー項目は、読み出し専用のデータベース(例: .4dz ファイル内)などで作業している場合には無効化されています。
 
 :::
 
-When you select this command, a dialog box appears where you enter the character string that will replace all the occurrences found by the initial search:
+このコマンドを選択した場合、最初の検索で見つかった全てのオカレンスを置き換える文字列を入力するためのダイアログボックスが表示されます:
 
 ![](../assets/en/Project/replace-content.png)
 
-Replacing operations work as follows:
+置換オペレーションは以下のルールに基づいて実行されます:
 
-- Replacing is always carried out among all items found in the list and not just for a selection. However, it is possible to narrow the replacing operation by first reducing the contents of the list using the **Remove from list** or **Remove all items from list except selection** commands in the [options menu](#options-menu) or the contextual menu.
-- If the Results window includes elements from components, the replacing will be done in the component(s) also.
-- Only the occurrences shown in the list will be replaced and only after checking the initial search criteria for cases where objects were modified between the initial search and the replacing operation.
-- Replacing is done in the code, properties of form objects, contents of help messages, entry filters, menu items (item text and method calls), choice lists, comments.
-- For each object modified, 4D checks whether it is already loaded by another machine or in another window. In the case of conflict, a standard dialog box appears indicating that the object is locked. You can close the object and then try again or cancel its replacement. The replacing operation will then continue with the other objects in the list.
-- If a method or form concerned by a "replace in content" operation is currently being edited by the same 4D application, it will be modified directly in the open editor (no warning appears). Forms and methods modified in this way are not saved automatically: you will need to use the **Save** or **Save All** command explicitly to validate the changes.
-- After a replacement is made in a list item, it will appear in italics. A count of replacements made in real time appears at the bottom of the window.
-- Elements are never renamed themselves by the **Replace in content** feature, except for form objects. Hence it is possible that certain items in the list may not be affected by the replacing operation. This can occur when only the item name corresponds to the initial search criteria. In this case, the list items do not necessarily all appear in italics and the final replacement count may be less than the number of occurrences found by the initial search.
+- 置換はリスト内にある全ての項目に対して実行され、選択されている要素だけに止まりません。 しかしながら、 [オプションメニュー](#オプションメニュー) またはコンテキストメニュー内の **リストから削除** あるいは **選択された項目以外を全てリストから削除** を使用してリストの内容を最初に絞り込みすることで、置換オペレーションの対象を狭めることができます。
+- 結果ウィンドウにコンポーネント内の要素が含まれていた場合、置換はコンポーネント内に対しても行われます。
+- リストに表示されている発生箇所のみが置換され、かつ置換操作の前に、最初の検索条件に基づいて、最初の検索と置換操作の間にオブジェクトが変更されたケースを確認した後でのみ置換されます。
+- 置換はコード、フォームオブジェクトのプロパティ、ヘルプメッセージの内容、入力フィルター、メニュー項目(項目のテキストとメソッド呼び出し)、選択リスト、コメント内で実行されます。
+- それぞれのオブジェクトが編集されると、4D は他のマシンあるいは他のウィンドウにおいてすでにロードされているかどうかをチェックします。 コンフリクトがあった場合、オブジェクトがロックされていることを示す標準のダイアログボックスが表示されます。 オブジェクトを閉じてから再試行するか、置換をキャンセルすることができます。 置換操作はリスト内の他のオブジェクトに対して続行されます。
+- もし"内容を置換"操作の対象となっているメソッドまたはフォームが同じ4D アプリケーション内で現在編集中の場合、対象はその開かれているエディター内で直接編集されます(警告は表示されません)。 この方法で編集されたフォームおよびメソッドは自動的には保存されません: 変更を保存するためには **保存** あるいは **すべてを保存** コマンドを明示的に使用する必要があります。
+- リストの項目に対して置換が行われたあとは、それらは斜字体で表示されます。 ウィンドウの下部には行われた置換の回数がリアルタイムで表示されます。
+- フォームオブジェクトを除き、見つかった要素自体の名前が **内容を置換** 機能で名称変更されることはありません。 そのため、リスト内の特定の一部の項目が置換オペレーションの影響を受けないことが有り得ます。 これは項目の名前のみが最初の検索条件に合致した場合などに起こり得ます。 この場合、リスト内の項目が必ずしも全て斜字体で表示されるわけではなく、また最終的な置換カウントが最初の検索で見つかったオカレンス数より少なくなることも有り得ます。
 
 ## Renaming project methods and variables {#renaming-project-methods-and-variables}
 
