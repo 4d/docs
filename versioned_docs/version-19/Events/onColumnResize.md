@@ -5,7 +5,7 @@ title: On Column Resize
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|33|[4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|The width of a column is modified directly by the user or consequently to a form window resize|
+|33|[4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md)|The width of a column is modified directly by the user or consequently to a form window resize|
 
 
 ## Description

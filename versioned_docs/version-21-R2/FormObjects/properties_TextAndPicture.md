@@ -90,7 +90,7 @@ Designates the placement of an icon in relation to the form object.
 
 #### Objects Supported
 
-[List Box Header](listbox_overview.md#list-box-headers)
+[List Box Header](listbox-header-footer.md#headers)
 
 #### Commands
 
@@ -180,7 +180,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Objects Supported
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
 
 #### Commands
 

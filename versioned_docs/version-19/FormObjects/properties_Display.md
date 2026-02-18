@@ -46,7 +46,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 #### Objects Supported
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -86,7 +86,7 @@ The table below shows choices available:
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -247,7 +247,7 @@ The following table shows how different formats affect the display of numbers. T
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Progress Indicators](progressIndicator.md)
 
 ---
 
@@ -307,7 +307,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### Objects Supported
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -341,7 +341,7 @@ The table below shows the Time field display formats and gives examples:
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -350,7 +350,7 @@ The table below shows the Time field display formats and gives examples:
 When a [boolean expression](properties_Object.md#expression-type) is displayed as:
 
 * a text in an [input object](input_overview.md)
-* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox-column.md),
 
 ... you can select the text to display for each value:
 
@@ -365,7 +365,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[List Box Column](listbox-column.md) - [Input](input_overview.md)
 
 ---
 
@@ -385,7 +385,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox-column.md)
 
 ---
 
@@ -433,7 +433,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### Objects Supported
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Check box](checkbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -454,7 +454,7 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox-column.md)
 
 ---
 
@@ -491,7 +491,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -522,7 +522,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -577,4 +577,4 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Objects Supported
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
