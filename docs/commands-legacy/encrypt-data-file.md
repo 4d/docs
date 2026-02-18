@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text {; *archiveFolder* : Text, 4D.Folder {; *curPassPhrase* : Text {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newDataKey* : Object {; *archiveFolder* : Text, 4D.Folder {; *curDataKey* : Object {; *methodName* : Text}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text {; *archiveFolder* : Text, 4D.Folder {; *curPassPhrase* : Text {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newDataKey* : Object {; *archiveFolder* : Text, 4D.Folder {; *curDataKey* : Object {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text {; *archiveFolder* : Text, 4D.Folder {; *curDataKey* : Object {; *methodName* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 <div class="no-index">
 
