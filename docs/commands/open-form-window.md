@@ -36,7 +36,6 @@ toc_max_heading_level: 3
 </details>
 </div>
 
-
 ## Description 
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->

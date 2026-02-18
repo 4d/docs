@@ -27,7 +27,8 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|<6|Added|
+|2004|Modified|
+|<6|Created|
 
 </details>
 </div>
@@ -46,9 +47,9 @@ displayed_sidebar: docs
 If you pass -1 in both *right* and *bottom,* you instruct 4D to automatically size the window under the following conditions:
 
 * You have designed a form and set its Sizing Options in the Design environment Form properties window
-* Before calling **Open window**, you selected the form using the [FORM SET INPUT](../commands-legacy/form-set-input.md) command, to which you passed the optional *\** parameter.
+* Before calling **Open window**, you selected the form using the [FORM SET INPUT](./commands/form-set-input) command, to which you passed the optional *\** parameter.
 
-**Important:** This automatic sizing of the window will occur only if you made a prior call to [FORM SET INPUT](../commands-legacy/form-set-input.md) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](../commands-legacy/form-set-input.md).
+**Important:** This automatic sizing of the window will occur only if you made a prior call to [FORM SET INPUT](./commands/form-set-input) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](./commands/form-set-input).
 
 
 The *type* parameter is optional. It represents the type of window you want to display. If the window type is negative, the window created is a floating window (if supported). If the type is not specified, type 1 is used by default. The following constants of the *Open Window* theme are supported:
@@ -77,7 +78,7 @@ For a description of window types, see [**Window types**](#window-types) below.
 
 If you pass an empty string ("") in *title,* you instruct 4D to use the Window Title set in the Design environment Form Properties window for the form to be displayed.
 
-**Important:** The default form title will be set to the window only if you made a prior call to [FORM SET INPUT](../commands-legacy/form-set-input.md) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](../commands-legacy/form-set-input.md).
+**Important:** The default form title will be set to the window only if you made a prior call to [FORM SET INPUT](./commands/form-set-input) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](./commands/form-set-input).
 
 * The *controlMenuBox* parameter is the optional Control-menu box method for the window. If this parameter is specified, a Control-menu box (Windows) or a Close Box (Macintosh) is added to the window. When the user double-clicks the Control-menu box (Windows) or clicks on the Close Box (Macintosh), the method passed in *controlMenuBox* is called.
 
@@ -325,7 +326,7 @@ The following example opens a window whose size and title come from the properti
  Until(OK=0)
 ```
 
-**Reminder:** In order to have **Open window** automatically use the properties of the form, you must call [FORM SET INPUT](../commands-legacy/form-set-input.md) with the optional *\** parameter, and the properties of the form must have been set accordingly in the Design environment.
+**Reminder:** In order to have **Open window** automatically use the properties of the form, you must call [FORM SET INPUT](./commands/form-set-input) with the optional *\** parameter, and the properties of the form must have been set accordingly in the Design environment.
 
 ## Example 4 
 
