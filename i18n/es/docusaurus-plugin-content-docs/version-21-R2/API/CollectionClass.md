@@ -2832,19 +2832,19 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+La retrollamada toma cada elemento de la colección y realiza toda operación deseada para acumular el resultado en *$1.accumulator*, que se devuelve en *$1.value*.
 
 Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
-- La nueva colección
-- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
-- Esta función modifica la colección original.
+- en *$1.value*: valor del elemento a procesar
+- en *$2: param*
+- en *$N...*: *paramN...*
 
 La retrollamada define los siguientes parámetros:
 
-- Descripción
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
@@ -2920,25 +2920,28 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+La retrollamada toma cada elemento de la colección y realiza toda operación deseada para acumular el resultado en *$1.accumulator*, que se devuelve en *$1.value*.
 
 Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
-- La nueva colección
-- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
-- Esta función modifica la colección original.
+- en *$1.value*: valor del elemento a procesar
+- en *$2: param*
+- en *$N...*: *paramN...*
 
 La retrollamada define los siguientes parámetros:
 
-- Descripción
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
 
 ```4d
-Tipo
+var $c : Collection
+$c:=New collection(5;3;5;1;3;4;4;6;2;2)
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //devuelve 86400
+
 ```
 
 #### Ejemplo 2
@@ -2958,7 +2961,11 @@ Este ejemplo permite reducir varios elementos de la colección a uno solo:
 Con el siguiente método ***Flatten***:
 
 ```4d
-Ejemplo 4
+	//Método proyecto Flatten
+ If($1.accumulator=Null)
+    $1.accumulator:=New collection
+ End if
+ $1.accumulator.combine($1.value)
 ```
 
 <!-- END REF -->
@@ -2996,13 +3003,13 @@ La función `.remove()` <!-- REF #collection.remove().Summary -->elimina uno o m
 
 > Esta función modifica la colección original.
 
-Lanzamiento
+En *index*, pase la posición donde quiere eliminar el elemento de la colección.
 
-> **Atención**: recuerde que los elementos de la colección están numerados desde 0. Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+> **Atención**: recuerde que los elementos de la colección están numerados desde 0. Si *index* es mayor que la longitud de la colección, el índice inicial real se definirá en la longitud de la colección.
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
-- Lanzamiento
-- Ejemplo 1
+- Si el valor calculado < 0, *index* toma el valor 0.
+- Si el valor calculado > la longitud de la colección, *index* toma el valor de la longitud.
 
 En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
@@ -3039,23 +3046,23 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 <div class="no-index">
 
-| Parámetros   | Tipo       |                             | Descripción                                                                                 |
-| ------------ | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------- |
-| size         | Integer    |              ->             | Nuevo tamaño de la colección                                                                |
-| defaultValue | any        |              ->             | Valor por defecto para llenar nuevos elementos                                              |
-| Resultado    | Collection | <- | o *methodName*, el nombre de un método proyecto (texto). |
+| Parámetros   | Tipo       |                             | Descripción                                    |
+| ------------ | ---------- | :-------------------------: | ---------------------------------------------- |
+| size         | Integer    |              ->             | Nuevo tamaño de la colección                   |
+| defaultValue | any        |              ->             | Valor por defecto para llenar nuevos elementos |
+| Resultado    | Collection | <- | Colección original redimensionada              |
 
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-Ejemplo
+La función `.resize()` <!-- REF #collection.resize().Summary -->ajusta la longitud de la colección al nuevo tamaño especificado y devuelve la colección redimensionada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
-- Ejemplo 1
-- Ejemplo 1
+- Si *size* la longitud de la colección, los elementos que exceden se eliminan de la colección.
+- Si *size* > longitud de la colección, *size* es la nueva longitud de la colección.
 
 Por defecto, los nuevos elementos se llenan con valores **null**. Puede especificar el valor a llenar en los elementos añadidos utilizando el parámetro *defaultValue*.
 
@@ -3097,9 +3104,9 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 <div class="no-index">
 
-| Parámetros | Tipo       |                             | Descripción                                                                                                                                                                                                                                         |
-| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Resultado  | Collection | <- | (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si la evaluación del valor del elemento tiene éxito, **false** en caso contrario. |
+| Parámetros | Tipo       |                             | Descripción                     |
+| ---------- | ---------- | :-------------------------: | ------------------------------- |
+| Resultado  | Collection | <- | Copia invertida de la colección |
 
 </div>
 <!-- END REF -->
@@ -3147,7 +3154,7 @@ La función `.reverse()` <!-- REF #collection.reverse().Summary --> devuelve una
 
 #### Descripción
 
-Tipo
+La función `.shift()` <!-- REF #collection.shift().Summary --> elimina el primer elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -3184,11 +3191,11 @@ Si la colección está vacía, este método no hace nada.
 
 <div class="no-index">
 
-| Parámetros | Tipo       |                             | Descripción                                    |
-| ---------- | ---------- | :-------------------------: | ---------------------------------------------- |
-| startFrom  | Integer    |              ->             | Índice de inicio (incluido) |
-| end        | Integer    |              ->             | Índice final (no incluido)  |
-| Resultado  | Collection | <- | Resultado                                      |
+| Parámetros | Tipo       |                             | Descripción                                                                            |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------- |
+| startFrom  | Integer    |              ->             | Índice de inicio (incluido)                                         |
+| end        | Integer    |              ->             | Índice final (no incluido)                                          |
+| Resultado  | Collection | <- | Nueva colección que contiene elementos cortados (copia superficial) |
 
 </div>
 <!-- END REF -->
@@ -3202,9 +3209,9 @@ La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una part
 La colección devuelta contiene el elemento especificado por *startFrom* y todos los elementos subsiguientes hasta, pero sin incluir, el elemento especificado por *end*. Si sólo se especifica el parámetro *startFrom*, la colección devuelta contiene todos los elementos desde *startFrom* hasta el último elemento de la colección original.
 
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
-- Descripción
+- Si el valor calculado < 0, *startFrom* toma el valor 0.
 - Si *end* < 0 , se recalcula como *end:=end+length*.
-- Este ejemplo permite reducir varios elementos de la colección a uno solo:
+- Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 #### Ejemplo
 
@@ -3251,7 +3258,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 #### Descripción
 
-Lanzamiento
+La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si al menos un elemento de la colección ha pasado con éxito una prueba implementada en el código *formula* o *methodName* suministrado<!-- END REF -->.
 
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -3262,28 +3269,28 @@ La retrollamada se llama con los parámetros pasados en *param* (opcional). La r
 
 La retrollamada recibe los siguientes parámetros:
 
-- La nueva colección
-- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
-- Esta función modifica la colección original.
+- en *$1.value*: valor del elemento a procesar
+- en *$2: param*
+- en *$N...*: *paramN...*
 
 Puede definir los siguientes parámetros:
 
-- Expresión a buscar en la colección
+- (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si la evaluación del valor del elemento tiene éxito, **false** en caso contrario.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
-Descripción
+En todo caso, en el momento en que la función `.some()` encuentra el primer elemento de la colección que devuelve true, deja de llamar a la llamada de retorno y devuelve **true**.
 
 Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
-- Tipo
+- Si *startFrom* >= la longitud de la colección, se devuelve **False**, lo que significa que no se prueba la colección.
 
-- Añadidos
+- Si *startFrom* < 0, se considera como el desplazamiento desde el final de la colección.
 
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
 
-Soporte de fórmula
+Quiere saber si al menos un valor de la colección es >0.
 
 ```4d
  var $c : Collection
@@ -3334,7 +3341,7 @@ Soporte de fórmula
 
 #### Descripción
 
-Ejemplo 2
+La función `.sort()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original y además devuelve la colección ordenada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -3367,9 +3374,9 @@ La retrollamada recibe los siguientes parámetros:
   - *$1.value2* (todo tipo): valor del segundo elemento a comparar
 - $2...$N (cualquier tipo): parámetros adicionales
 
-Resultado
+Si utilizó un método, debe definir el siguiente parámetro:
 
-- Elemento a insertar en la colección
+- *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario.
 
 #### Ejemplo 1
 
@@ -3417,23 +3424,23 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 
 <div class="no-index">
 
-| Parámetros   | Tipo |                             | Descripción                                                                                                                                                                           |
-| ------------ | ---- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| propertyPath | Text |              ->             | Ruta de la propiedad del objeto que se utilizará para el cálculo                                                                                                                      |
-| Resultado    | Real | <- | `.pop()`, utilizado junto con [`.push()`](#push), puede utilizarse para implementar una funcionalidad primera entrada última salida de tratamiento de datos apilados: |
+| Parámetros   | Tipo |                             | Descripción                                                      |
+| ------------ | ---- | :-------------------------: | ---------------------------------------------------------------- |
+| propertyPath | Text |              ->             | Ruta de la propiedad del objeto que se utilizará para el cálculo |
+| Resultado    | Real | <- | Suma de los valores de la colección                              |
 
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-Añadidos
+La función `.sum()` <!-- REF #collection.sum().Summary --> devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
 
 Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran otros tipos de elementos).
 
 Si la colección contiene objetos, pasa el parámetro *propertyPath* para indicar la propiedad del objeto a tener en cuenta.
 
-Esta función no modifica la colección original.
+`.sum()` devuelve 0 si:
 
 - la colección está vacía,
 - la colección no contiene elementos numéricos,
@@ -3491,7 +3498,7 @@ Esta función no modifica la colección original.
 
 #### Descripción
 
-Ejemplo
+La función `.unshift()` <!-- REF #collection.unshift().Summary -->inserta el *valor*(es) dado al principio de la colección <!-- END REF -->y devuelve la colección modificada.
 
 > Esta función modifica la colección original.
 

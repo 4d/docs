@@ -4,15 +4,18 @@ title: New signal
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
+<!-- REF #_command_.New signal.Syntax -->**New signal** ({  *description* : Text }) : 4D.Signal<!-- END REF -->
 
 <!--REF #_command_.New signal.Params-->
+
+<div class="no-index">
 
 | Paramètres  | Type                      |                             | Description                  |
 | ----------- | ------------------------- | --------------------------- | ---------------------------- |
 | Description | Text                      | &#8594; | Description du signal        |
 | Résultat    | 4D.Signal | &#8592; | Object encapsulant le signal |
 
+</div>
 <!-- END REF-->
 
 <details><summary>Historique</summary>
