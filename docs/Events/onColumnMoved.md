@@ -5,7 +5,7 @@ title: On Column Moved
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|32|[List Box](../FormObjects/listbox_overview.md) - [List Box Column](../FormObjects/listbox_overview.md#list-box-columns)| A list box column is moved by the user via drag and drop|
+|32|[List Box](../FormObjects/listbox_overview.md) - [List Box Column](../FormObjects/listbox-column.md)| A list box column is moved by the user via drag and drop|
 
 
 ## Description
