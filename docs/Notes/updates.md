@@ -9,6 +9,8 @@ title: Release Notes
 #### Highlights
 
 - The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12. 
+- Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
+
 
 
 #### Behavior changes
