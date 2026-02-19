@@ -4,6 +4,21 @@ title: MAIL Convert from MIME
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
+
+<!-- REF #_command_.MAIL Convert from MIME.Params -->
+
+<div class="no-index">
+
+| 引数   | 型          |                             | 説明           |
+| ---- | ---------- | :-------------------------: | ------------ |
+| mime | Blob, Text | &#8594; | MIME形式のメール   |
+| 戻り値  | Object     | &#8592; | Email オブジェクト |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース | 内容 |
@@ -11,17 +26,7 @@ displayed_sidebar: docs
 | 18   | 追加 |
 
 </details>
-
-<!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
-
-<!-- REF #_command_.MAIL Convert from MIME.Params -->
-
-| 引数   | 型          |                             | 説明           |
-| ---- | ---------- | :-------------------------: | ------------ |
-| mime | Blob, Text | &#8594; | MIME形式のメール   |
-| 戻り値  | Object     | &#8592; | Email オブジェクト |
-
-<!-- END REF -->
+</div>
 
 ## 説明
 

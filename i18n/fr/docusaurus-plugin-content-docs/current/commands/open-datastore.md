@@ -4,6 +4,22 @@ title: Open datastore
 displayed_sidebar: docs
 ---
 
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
+
+<!--REF #_command_.Open datastore.Params-->
+
+<div class="no-index">
+
+| Paramètres     | Type                                       |                             | Description                                                                                          |
+| -------------- | ------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
+| localID        | Text                                       | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat       | 4D.DataStoreImplementation | &#8592; | Objet datastore                                                                                      |
+
+</div>
+<!-- END REF-->
+
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                                          |
@@ -14,18 +30,7 @@ displayed_sidebar: docs
 | 18      | Ajout                                                  |
 
 </details>
-
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
-
-<!--REF #_command_.Open datastore.Params-->
-
-| Paramètres     | Type                                       |                             | Description                                                                                          |
-| -------------- | ------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                                     | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
-| localID        | Text                                       | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat       | 4D.DataStoreImplementation | &#8592; | Objet datastore                                                                                      |
-
-<!-- END REF-->
+</div>
 
 ## Description
 

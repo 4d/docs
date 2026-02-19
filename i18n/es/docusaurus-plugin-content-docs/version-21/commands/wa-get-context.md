@@ -4,17 +4,30 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( {* ;} *object* ) -> *contextObj*<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
 
 <!--REF #_command_.WA Get context.Params-->
 
-| Parámetros | Tipo     |                             | Descripción                                                                                                                                           |
-| ---------- | -------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador | &#8594; | Si se especifica, *object* es un nombre de objeto (cadena). Si se omite, *object* es una variable. |
-| object     | any      | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*).                            |
-| contextObj | Object   | &#8592; | Objeto contexto si se ha definido previamente, en caso contrario `null`.                                                              |
+<div class="no-index">
 
+| Parámetros | Tipo           |                             | Descripción                                                                                                                                           |
+| ---------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador       | &#8594; | Si se especifica, *object* es un nombre de objeto (cadena). Si se omite, *object* es una variable. |
+| object     | Text, Variable | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*).                            |
+| Resultado  | Object         | &#8592; | Objeto contexto si se ha definido previamente, en caso contrario `null`.                                                              |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R9       | Añadidos       |
+
+</details>
+</div>
 
 ### Descripción
 
@@ -22,7 +35,7 @@ El comando `WA Get context`<!--REF #_command_.WA Get context.Summary--> recupera
 
 :::note
 
-The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
+El comando solo es utilizable con un área web integrada en la que los parámetros [**Utilizar el motor de renderizado web integrado**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) y **Acceder a los métodos 4D** estén configurados como `true`.
 
 :::
 

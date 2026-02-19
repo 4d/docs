@@ -8,19 +8,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明                |
 | --- | ------ | --------------------------- | ----------------- |
 | 戻り値 | Object | &#8592; | カレントのフォームのフォームデータ |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容           |
 | ----- | ------------ |
 | 20 R8 | フォームクラスのサポート |
+| 16 R6 | Created      |
 
 </details>
+</div>
 
 ## 説明
 

@@ -8,11 +8,26 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type   |                             | Description                        |
 | ---------- | ------ | --------------------------- | ---------------------------------- |
 | Résultat   | Object | &#8592; | Informations sur la licence active |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                                 |
+| ------- | --------------------------------------------- |
+| 20 R7   | Renamed (Get License info) |
+| 16 R6   | Modifié                                       |
+| 16 R4   | Created                                       |
+
+</details>
+</div>
 
 ## Description
 

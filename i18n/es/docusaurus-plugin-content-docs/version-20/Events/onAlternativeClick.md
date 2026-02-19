@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Puede ser llamado por                                                                                                                                            | Definición                                         |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 38   | [Botón](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna de List Box ](FormObjects/listbox_overview.md#list-box-columns) | <li>Botones: el área "flecha" de un botón se presiona</li><li>List box: en una columna de un array, se hace clic en un botón de selección (atributo "alternateButton")</li> |
+| Code | Puede ser llamado por                                                                                                                     | Definición                                         |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 38   | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | <li>Botones: el área "flecha" de un botón se presiona</li><li>List box: en una columna de un array, se hace clic en un botón de selección (atributo "alternateButton")</li> |
 
 ## Descripción
 
@@ -22,8 +22,8 @@ Algunos estilos de botón pueden ser [vinculados a un menú emergente](FormObjec
 
 ### List box
 
-Este evento se genera en columnas de [list boxes de tipo array de objetos](FormObjects/listbox_overview.md#object-arrays-in-columns), cuando el usuario haga clic en un botón ellipsis del widget (atributo "alternateButton").
+Este evento se genera en columnas de [list boxes de tipo array de objetos](FormObjects/listbox-column.md#object-arrays-in-columns), cuando el usuario haga clic en un botón ellipsis del widget (atributo "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-Ver la [descripción del atributo "alternateButton"](FormObjects/listbox_overview.md#alternatebutton).
+See the [description of the "alternateButton" attribute](FormObjects/listbox-column.md#alternatebutton).

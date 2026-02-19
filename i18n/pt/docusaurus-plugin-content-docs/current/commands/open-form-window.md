@@ -6,7 +6,7 @@ displayed_sidebar: docs
 toc_max_heading_level: 3
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer}}}{; *} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Open form window.Params-->
 
@@ -25,11 +25,25 @@ toc_max_heading_level: 3
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release                     | Mudanças   |
+| --------------------------- | ---------- |
+| 16 R6                       | Modificado |
+| 16 R4                       | Modificado |
+| 14 R5                       | Modificado |
+| 11 SQL                      | Modificado |
+| <6 | Adicionado |
+
+</details>
+</div>
+
 ## Descrição
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
 
-**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](form-get-properties.md) command.
+**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](../commands-legacy/form-get-properties.md) command.
 
 In the *formName* parameter, you can pass:
 
@@ -37,7 +51,7 @@ In the *formName* parameter, you can pass:
 - o caminho (na sintaxe POSIX) para um arquivo .json válido que contém uma descrição do formulário a ser usado. See *Form file path*;
 - um objeto que contém uma descrição do formulário a ser usado.
 
-The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](add-record.md) for example).
+The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](../commands-legacy/add-record.md) for example).
 
 The optional *type* parameter allows you to specify a type for the window. You must pass one of the following predefined constants (integer, placed in the *Open Form Window* theme):
 
@@ -276,7 +290,7 @@ que é exibido:
 
 ## Veja também
 
-[FORM GET PROPERTIES](form-get-properties.md)  
+[FORM GET PROPERTIES](../commands-legacy/form-get-properties.md)  
 [Open window](open-window.md)
 
 ## Propriedades

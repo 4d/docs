@@ -4,16 +4,30 @@ title: SELECT LOG FILE
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
+<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type      |                             | Description                       |
 | ---------- | --------- | --------------------------- | --------------------------------- |
 | logFile    | Text      | &#8594; | Nom du fichier journal            |
 | \*         | Opérateur | &#8594; | Fermer le fichier journal courant |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release                     | Modifications |
+| --------------------------- | ------------- |
+| 11 SQL                      | Modifié       |
+| <6 | Created       |
+
+</details>
+</div>
 
 ## Description
 

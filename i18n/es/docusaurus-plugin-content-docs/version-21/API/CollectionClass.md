@@ -1412,11 +1412,11 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <div class="no-index">
 
-| Parámetros | Tipo      |                             | Descripción                                     |
-| ---------- | --------- | :-------------------------: | ----------------------------------------------- |
-| toSearch   | expresión |              ->             | Expresión a buscar en la colección              |
-| startFrom  | Integer   |              ->             | Índice para iniciar la búsqueda en              |
-| Resultado  | Boolean   | <- | True si *toSearch* se encuentra en la colección |
+| Parámetros | Tipo       |                             | Descripción                                     |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------- |
+| toSearch   | expression |              ->             | Expresión a buscar en la colección              |
+| startFrom  | Integer    |              ->             | Índice para iniciar la búsqueda en              |
+| Resultado  | Boolean    | <- | True si *toSearch* se encuentra en la colección |
 
 </div>
 <!-- END REF -->
@@ -1477,11 +1477,11 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 <div class="no-index">
 
-| Parámetros | Tipo      |                             | Descripción                                                                        |
-| ---------- | --------- | :-------------------------: | ---------------------------------------------------------------------------------- |
-| toSearch   | expresión |              ->             | Expresión a buscar en la colección                                                 |
-| startFrom  | Integer   |              ->             | Índice para iniciar la búsqueda en                                                 |
-| Resultado  | Integer   | <- | Índice de la primera ocurrencia de toSearch en la colección, -1 si no se encuentra |
+| Parámetros | Tipo       |                             | Descripción                                                                        |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------- |
+| toSearch   | expression |              ->             | Expresión a buscar en la colección                                                 |
+| startFrom  | Integer    |              ->             | Índice para iniciar la búsqueda en                                                 |
+| Resultado  | Integer    | <- | Índice de la primera ocurrencia de toSearch en la colección, -1 si no se encuentra |
 
 </div>
 <!-- END REF -->
@@ -1748,11 +1748,11 @@ $last:=$emptyCol.last() // devuelve Indefinido
 
 <div class="no-index">
 
-| Parámetros | Tipo      |                             | Descripción                                                                       |
-| ---------- | --------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| toSearch   | expresión |              ->             | El elemento que se va a buscar dentro de la colección                             |
-| startFrom  | Integer   |              ->             | Índice para iniciar la búsqueda en                                                |
-| Resultado  | Integer   | <- | Índice de la última ocurrencia de toSearch en la colección, -1 si no se encuentra |
+| Parámetros | Tipo       |                             | Descripción                                                                       |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------------------- |
+| toSearch   | expression |              ->             | El elemento que se va a buscar dentro de la colección                             |
+| startFrom  | Integer    |              ->             | Índice para iniciar la búsqueda en                                                |
+| Resultado  | Integer    | <- | Índice de la última ocurrencia de toSearch en la colección, -1 si no se encuentra |
 
 </div>
 <!-- END REF -->
@@ -2815,7 +2815,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 | formula    | 4D.Function                     |              ->             | Objeto fórmula                                                                           |
 | methodName | Text                                            |              ->             | Nombre de un método                                                                      |
 | initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
-| param      | expresión                                       |              ->             | Parámetro(s) a pasar                                                  |
+| param      | expression                                      |              ->             | Parámetro(s) a pasar                                                  |
 | Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | Resultado del valor del acumulador                                                       |
 
 </div>
@@ -2903,7 +2903,7 @@ Con el siguiente método ***Flatten***:
 | formula    | 4D.Function                     |              ->             | Objeto fórmula                                                                           |
 | methodName | Text                                            |              ->             | Nombre de un método                                                                      |
 | initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
-| param      | expresión                                       |              ->             | Parámetro(s) a pasar                                                  |
+| param      | expression                                      |              ->             | Parámetro(s) a pasar                                                  |
 | Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | Resultado del valor del acumulador                                                       |
 
 </div>

@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
+<div class="no-index">
+
 | Parámetros    | Tipo    |                             | Descripción                  |
 | ------------- | ------- | :-------------------------: | ---------------------------- |
 | processNumber | Integer | &#8594; | Process number               |
 | Resultado     | Object  | &#8592; | Información sobre el proceso |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -22,10 +26,11 @@ displayed_sidebar: docs
 | 20 R7       | Añadidos       |
 
 </details>
+</div>
 
 ## Descripción
 
-El comando `Process info` <!-- REF #_command_.Process info.Summary -->devuelve un objeto que da información detallada sobre el proceso cuyo número se pasa en *processNumber*<!-- END REF -->. Si pasa un número de proceso incorrecto, el comando devuelve un objeto null.
+The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. Si pasa un número de proceso incorrecto, el comando devuelve un objeto null.
 
 El objeto devuelto contiene las siguientes propiedades:
 

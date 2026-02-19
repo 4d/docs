@@ -3,9 +3,9 @@ id: onRowMoved
 title: On Row Moved
 ---
 
-| Code | Peut être appelé par                                                                                                                                   | Définition                                                               |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| 34   | [List Box de type tableau](FormObjects/listbox_overview.md#array-list-boxes) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | Une ligne de list box est déplacée par l'utilisateur par glisser-déposer |
+| Code | Peut être appelé par                                                                                                              | Définition                                                               |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| 34   | [List Box of the array type](FormObjects/listbox_overview.md#array-list-boxes) - [List Box Column](FormObjects/listbox-column.md) | Une ligne de list box est déplacée par l'utilisateur par glisser-déposer |
 
 
 ## Description

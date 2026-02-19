@@ -74,7 +74,7 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 #### Objets pris en charge
 
-[Entête de List Box](listbox_overview.md#list-box-headers)
+[Entête de List Box](listbox-header-footer.md#headers)
 
 ---
 
@@ -149,7 +149,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Objets pris en charge
 
-[Bouton](button_overview.md) (tous les styles sauf[Aide](button_overview.md#help)) - [Case à cocher](checkbox_overview.md) - [En-tête List box](listbox_overview.md#list-box-headers)[Bouton radio](listbox_overview.md#list-box-headers)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
 
 ---
 

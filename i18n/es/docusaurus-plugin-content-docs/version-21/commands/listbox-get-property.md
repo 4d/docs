@@ -4,18 +4,33 @@ title: LISTBOX Get property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Variable ; *property* : Integer ) : any<!-- END REF-->
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
-| Parámetros | Tipo          |                             | Descripción                                                                                                                      |
-| ---------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador      | &#8594; | Si se especifica, object es un nombre de objeto (cadena). Si se omite, object es una variable |
-| object     | any           | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*)                        |
-| property   | Integer       | &#8594; | Propiedad cuyo valor desea obtener                                                                                               |
-| Resultado  | Integer, Text | &#8592; | Valor actual                                                                                                                     |
+<div class="no-index">
 
+| Parámetros | Tipo           |                             | Descripción                                                                                                                      |
+| ---------- | -------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador       | &#8594; | Si se especifica, object es un nombre de objeto (cadena). Si se omite, object es una variable |
+| object     | Text, Variable | &#8594; | Nombre del objeto del formulario (si se especifica \*) o Variable (si se omite \*)         |
+| property   | Integer        | &#8594; | Propiedad cuyo valor desea obtener                                                                                               |
+| Resultado  | any            | &#8592; | Current value (Integer, Text)                                                                                 |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento                 | Modificaciones                                       |
+| --------------------------- | ---------------------------------------------------- |
+| 19 R6                       | Modificado                                           |
+| 16 R2                       | Renamed (Get Listbox information) |
+| <6 | Created                                              |
+
+</details>
+</div>
 
 ## Descripción
 

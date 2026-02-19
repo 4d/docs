@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Peut être appelé par                                                                                                                                             | Définition                                         |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 38   | [Bouton](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Boutons : la zone "flèche" d'un bouton est cliquée</li><li>List box : dans une colonne d'un tableau, un bouton de sélection (attribut "alternateButton") est cliqué</li> |
+| Code | Peut être appelé par                                                                                                                      | Définition                                         |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 38   | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | <li>Boutons : la zone "flèche" d'un bouton est cliquée</li><li>List box : dans une colonne d'un tableau, un bouton de sélection (attribut "alternateButton") est cliqué</li> |
 
 ## Description
 
@@ -22,8 +22,8 @@ Certains styles de boutons peuvent être [liés à un menu contextuel](FormObjec
 
 ### List box
 
-Cet événement est généré dans des colonnes de [list box de type tableau objets](../FormObjects/listbox_overview.md#object-arrays-in-columns), lorsque l'utilisateur clique sur un bouton de sélection de widget (attribut "alternateButton").
+Cet événement est généré dans les colonnes de [list box de type tableau objets](../FormObjects/listbox-column.md#object-arrays-in-columns), lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-Voir la [description de l'attribut "alternateButton"](FormObjects/listbox_overview.md#alternatebutton).
+See the [description of the "alternateButton" attribute](FormObjects/listbox-column.md#alternatebutton).

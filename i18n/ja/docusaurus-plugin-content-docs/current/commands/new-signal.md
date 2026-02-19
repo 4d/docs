@@ -18,6 +18,7 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -25,6 +26,7 @@ displayed_sidebar: docs
 | 17 R4 | 追加 |
 
 </details>
+</div>
 
 ## 説明
 
