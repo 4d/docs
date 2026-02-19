@@ -45,7 +45,7 @@ El campo contiene realmente "proportion". 4D acepta y almacena la entrada comple
 
 #### Objetos soportados
 
-[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -83,7 +83,7 @@ La siguiente tabla muestra las opciones disponibles:
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -240,7 +240,7 @@ La siguiente tabla muestra cómo afectan los distintos formatos a la visualizaci
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Progress Indicators](progressIndicator.md)
 
 ---
 
@@ -299,7 +299,7 @@ Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen
 
 #### Objetos soportados
 
-[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
+[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -332,7 +332,7 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 ---
 
@@ -341,7 +341,7 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 Cuando una [expresión booleana](properties_Object.md#expression-type) se muestra como:
 
 * un texto en un [objeto de entrada](input_overview.md)
-* un "popup" [](properties_Display.md#display-type) en una [columna del list box](listbox_overview.md#list-box-columns),
+* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox-column.md),
 
 ... puede seleccionar el texto que se mostrará para cada valor:
 
@@ -356,7 +356,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 #### Objetos soportados
 
-[Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
+[List Box Column](listbox-column.md) - [Input](input_overview.md)
 
 ---
 
@@ -376,7 +376,7 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. En este
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox-column.md)
 
 ---
 
@@ -424,7 +424,7 @@ También en este caso, la propiedad [Título](#title) está disponible para que 
 
 #### Objetos soportados
 
-[Casilla de selección](checkbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[Check box](checkbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -445,7 +445,7 @@ En ese caso, el título de la casilla de verificación puede introducirse utiliz
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox-column.md)
 
 ---
 
@@ -481,7 +481,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objetos soportados
 
-[Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
+[Columna List Box](listbox-column.md) - [Pie List Box](listbox-header-footer.md#footers)
 
 ---
 
@@ -512,7 +512,7 @@ Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo 
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón imagen](pictureButton_overview.md) - [Menú emergente imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de radio](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -567,4 +567,4 @@ Tenga en cuenta que, independientemente del valor de la opción Ajuste de texto,
 
 #### Objetos soportados
 
-[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
+[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)

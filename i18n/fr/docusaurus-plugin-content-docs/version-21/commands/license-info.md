@@ -8,11 +8,26 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type   |                             | Description                        |
 | ---------- | ------ | --------------------------- | ---------------------------------- |
 | Résultat   | Object | &#8592; | Informations sur la licence active |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                                 |
+| ------- | --------------------------------------------- |
+| 20 R7   | Renamed (Get License info) |
+| 16 R6   | Modifié                                       |
+| 16 R4   | Created                                       |
+
+</details>
+</div>
 
 ## Description
 
@@ -24,7 +39,9 @@ Si la commande est exécutée sur une application 4D qui n'utilise pas de licenc
 
 Cette commande recharge les fichiers de licence à partir du disque et met à jour les droits associés s'ils ont été modifiés.
 
-:::L'objet retourné contient les propriétés suivantes :
+:::
+
+L'objet retourné contient les propriétés suivantes :
 
 ```json
 {

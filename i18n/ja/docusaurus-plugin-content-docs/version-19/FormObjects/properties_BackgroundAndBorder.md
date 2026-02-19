@@ -16,7 +16,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -34,7 +34,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
+[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### 参照
 
@@ -59,7 +59,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -195,7 +195,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 

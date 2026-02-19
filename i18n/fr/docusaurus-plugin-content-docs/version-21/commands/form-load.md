@@ -4,9 +4,11 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.FORM LOAD.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type         |                             | Description                                                                                                                                                                                                                              |
 | ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,7 +17,21 @@ displayed_sidebar: docs
 | formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                                                                         |
 | \*         | Opérateur    | &#8594; | Si passé = la commande s'applique à la base de données hôte lorsqu'elle est exécutée à partir d'un composant (paramètre ignoré en dehors de ce contexte)                                                              |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                                   |
+| ------- | ----------------------------------------------- |
+| 20      | Modifié                                         |
+| 16 R6   | Modifié                                         |
+| 14      | Renamed (OPEN PRINTING FORM) |
+| 12      | Created                                         |
+
+</details>
+</div>
 
 ## Description
 

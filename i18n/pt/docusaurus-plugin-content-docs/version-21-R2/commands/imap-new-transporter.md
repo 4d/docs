@@ -4,6 +4,21 @@ title: IMAP New transporter
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+
+<!-- REF #_command_.IMAP New transporter.Params -->
+
+<div class="no-index">
+
+| Parâmetro  | Tipo                               |                             | Descrição                                                                         |
+| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informação de servidor de correio                                                 |
+| Resultados | 4D.IMAPTransporter | &#8592; | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -11,34 +26,24 @@ displayed_sidebar: docs
 | 18 R4   | Adicionado |
 
 </details>
-
-<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF #_command_.IMAP New transporter.Params -->
-
-| Parâmetro  | Tipo                               |                             | Descrição                                                                         |
-| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| server     | Object                             | &#8594; | Informação de servidor de correio                                                 |
-| Resultados | 4D.IMAPTransporter | &#8592; | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
-
-<!-- END REF -->
+</div>
 
 ## Descrição
 
 O comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summary -->configura uma nova conexão IMAP<!-- END REF --> de acordo com o parâmetro *server* e retorna um novo objeto *transporter*. O objeto transporter retornado vai geralmente ser usado para receber emails.
 
-No parâmetro server, passe um objeto contendo as propriedades abaixo:
+No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor padrão (se omitido)                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](../API/IMAPTransporterClass.md#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                  | False                                                             |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Objeto<br/>Cadeia ou objeto token que representa as credenciais de autorização OAuth2. Usado somente com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado, mas `authenticationMode` for omitido, o protocolo OAuth 2 será usado (se permitido pelo servidor). Não retornado no objeto *[IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object)*. | nenhum                                                            |
+| .**accessTokenOAuth2**: Texto<br/>.**accessTokenOAuth2**: Objeto<br/>Cadeia ou objeto token que representa as credenciais de autorização OAuth2. Usado somente com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado, mas `authenticationMode` for omisso, o protocolo OAuth 2 será usado (se permitido pelo servidor). Não retornado no objeto *[IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object)*. | nenhum                                                            |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](../API/IMAPTransporterClass.md#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                    | o modo de autenticação mais seguro disponível no servidor é usado |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](../API/IMAPTransporterClass.md#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                                            | 300                                                               |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/IMAPTransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                       | 30                                                                |
 | [<!-- INCLUDE #transporter.host.Syntax -->](../API/IMAPTransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *mandatory*                                                       |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](../API/IMAPTransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                     | nenhum                                                            |
-| **senha** : Texto<br/>Senha do usuário para autenticação no servidor. Não retornado no objeto *[IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object)*.                                                                                                                                                                                                                                                                                                                                                                  | nenhum                                                            |
+| **password** : texto<br/>Senha do usuário para autenticação no servidor. Não retornado no objeto *[IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object)*.                                                                                                                                                                                                                                                                                                                                                               | nenhum                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](../API/IMAPTransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 993                                                               |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/IMAPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | nenhum                                                            |
 

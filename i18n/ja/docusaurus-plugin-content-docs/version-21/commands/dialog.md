@@ -4,9 +4,11 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.DIALOG.Params-->
+
+<div class="no-index">
 
 | 引数       | 型            |                             | 説明                                                                                                                                                          |
 | -------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,7 +17,20 @@ displayed_sidebar: docs
 | formData | Object       | &#8594; | フォームに関連づけるデータ                                                                                                                                               |
 | \*       | 演算子          | &#8594; | 同じプロセスを使用                                                                                                                                                   |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース                        | 内容      |
+| --------------------------- | ------- |
+| 17                          | 変更      |
+| 11 SQL                      | 変更      |
+| <6 | Created |
+
+</details>
+</div>
 
 ## 説明
 
@@ -23,7 +38,7 @@ displayed_sidebar: docs
 
 このコマンドは、フォームを基にした、カスタマイズされた高度なユーザーインターフェースで動作するように設計されています。 これを使用してデータベースや他の場所からの情報を表示したり、あるいはデータ入力機能を提供することができます。 [ADD RECORD](../commands-legacy/add-record.md) や [MODIFY RECORD](../commands-legacy/modify-record.md) とは異なり、**DIALOG** コマンドは、フォームとそのコンテンツ、内容、評価ボタンなどに対して、完全にコントロールすることができます。
 
-このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](../commands-legacy/open-form-window.md) コマンドと一緒に呼び出されます:
+このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](open-form-window.md) コマンドと一緒に呼び出されます:
 
 ![](../assets/en/commands/pict3541609.en.png)
 
@@ -171,7 +186,7 @@ displayed_sidebar: docs
 [CALL FORM](../commands-legacy/call-form.md)\
 [CANCEL](../commands-legacy/cancel.md)\
 [Form](form.md)\
-[Open window](../commands-legacy/open-window.md)
+[Open window](open-window.md)
 
 ## プロパティ
 

@@ -86,7 +86,7 @@ Designa la ubicación de un icono en relación con el objeto formulario.
 
 #### Objetos soportados
 
-[Encabezado de List Box](listbox_overview.md#list-box-headers)
+[Encabezado de List Box](listbox-header-footer.md#headers)
 
 #### Comandos
 
@@ -171,7 +171,7 @@ El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso 
 
 #### Objetos soportados
 
-[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md)
+[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox-header-footer.md#headers) - [Botón radio](radio_overview.md)
 
 #### Comandos
 

@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type                         |                             | Description                                                                          |
 | ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
 | option     | Integer                      | &#8594; | Serveur Web à référencer (défaut si omis = `Web server database`) |
 | Résultat   | 4D.WebServer | &#8592; | Objet Serveur Web                                                                    |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                                             |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 19      | prise en charge de .sessionCookieSameSite |
 
 </details>
+</div>
 
 ## Description
 
@@ -30,11 +35,11 @@ La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'ob
 
 Par défaut, si le paramètre *option* est omis, la commande renvoie une référence au serveur Web de la base de données, c'est-à-dire le serveur Web par défaut. Pour désigner le serveur Web à renvoyer, vous pouvez passer l'une des constantes suivantes dans le paramètre *option* :
 
-| Constante                      | Valeur | Commentaire                                                                 |
-| ------------------------------ | ------ | --------------------------------------------------------------------------- |
-| `Web server database`          | 1      | Le serveur Web de la base courante (par défaut si omis)  |
-| `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                 |
-| `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
+| Constante                      | Valeur | Commentaire                                                                                           |
+| ------------------------------ | ------ | ----------------------------------------------------------------------------------------------------- |
+| `Web server database`          | 1      | Serveur web du projet à partir duquel la commande est appelée (par défaut si omis) |
+| `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                                           |
+| `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible)                           |
 
 L'objet **Web server retourné** contient les valeurs courantes des [propriétés du serveur Web](../API/WebServerClass.md).
 

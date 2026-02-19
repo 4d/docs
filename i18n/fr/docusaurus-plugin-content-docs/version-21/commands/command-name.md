@@ -5,9 +5,11 @@ slug: /commands/command-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) : Text<!-- END REF-->
+<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* : Integer {; *info* : Integer {; *theme* : Text}} ) : Text<!-- END REF-->
 
 <!--REF #_command_.Command name.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type    |                             | Description                        |
 | ---------- | ------- | --------------------------- | ---------------------------------- |
@@ -16,8 +18,10 @@ displayed_sidebar: docs
 | theme      | Text    | &#8592; | Thème du langage de la commande    |
 | Résultat   | Text    | &#8592; | Nom de la commande                 |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                            |
@@ -25,6 +29,7 @@ displayed_sidebar: docs
 | 20 R9   | Prise en charge de la propriété obsolète |
 
 </details>
+</div>
 
 ## Description
 

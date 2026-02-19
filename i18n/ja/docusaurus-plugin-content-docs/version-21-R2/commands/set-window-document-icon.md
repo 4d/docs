@@ -8,14 +8,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 
+<div class="no-index">
+
 | 引数     | 型                                                  |                             | 説明              |
 | ------ | -------------------------------------------------- | --------------------------- | --------------- |
 | winRef | Integer                                            | &#8594; | ウィンドウ参照番号       |
 | image  | Picture                                            | &#8594; | カスタムアイコン        |
 | file   | 4D.File, 4D.Folder | &#8594; | ファイルパスまたはフォルダパス |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 20 R7 | 追加 |
 
 </details>
+</div>
 
 ## 説明
 

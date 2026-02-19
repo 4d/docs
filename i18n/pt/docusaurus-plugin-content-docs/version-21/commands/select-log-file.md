@@ -4,16 +4,30 @@ title: SELECT LOG FILE
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
+<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
+
+<div class="no-index">
 
 | Parâmetro | Tipo     |                             | Descrição                   |
 | --------- | -------- | --------------------------- | --------------------------- |
 | logFile   | Text     | &#8594; | Nome do arquivo de registro |
 | \*        | Operador | &#8594; | Close the current log file  |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release                     | Mudanças   |
+| --------------------------- | ---------- |
+| 11 SQL                      | Modificado |
+| <6 | Created    |
+
+</details>
+</div>
 
 ## Descrição
 

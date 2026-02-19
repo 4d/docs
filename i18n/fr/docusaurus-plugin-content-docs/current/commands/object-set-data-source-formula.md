@@ -8,13 +8,27 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type                       |                             | Description                                                                                                             |
 | ---------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | \*         | Opérateur                  | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
 | object     | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
 | formula    | 4D.Formula | &#8594; | Formule à assigner comme source de données                                                                              |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                       |
+| ------- | ----------------------------------- |
+| 21      | Prise en charge du paramètre *base* |
+| 20 R10  | Created                             |
+
+</details>
+</div>
 
 ## Description
 

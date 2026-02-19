@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo          |                             | Descrição                                                                                                                                             |
 | --------- | ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | expressão | Expression    | &#8594; | Expression for which to return the string form (can be Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, or Null) |
@@ -17,15 +19,19 @@ displayed_sidebar: docs
 | base      | Integer       | &#8594; | Value between 2 and 36 that represents the radix if expression is a number                                                                            |
 | Resultado | Text          | &#8592; | String form of the expression                                                                                                                         |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
-| Release | Mudanças                    |
-| ------- | --------------------------- |
-| 21      | Support of *base* parameter |
+| Release                     | Mudanças                    |
+| --------------------------- | --------------------------- |
+| 21                          | Support of *base* parameter |
+| <6 | Created                     |
 
 </details>
+</div>
 
 ## Descrição
 

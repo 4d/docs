@@ -4,18 +4,33 @@ title: LISTBOX Get property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Variable ; *property* : Integer ) : any<!-- END REF-->
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
-| Paramètres | Type          |                             | Description                                                                                                                         |
-| ---------- | ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur     | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable |
-| object     | any           | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis)                              |
-| property   | Integer       | &#8594; | Propriété dont vous voulez obtenir la valeur                                                                                        |
-| Résultat   | Integer, Text | &#8592; | Valeur courante                                                                                                                     |
+<div class="no-index">
 
+| Paramètres | Type           |                             | Description                                                                                                                         |
+| ---------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable |
+| object     | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)                          |
+| property   | Integer        | &#8594; | Propriété dont vous voulez obtenir la valeur                                                                                        |
+| Résultat   | any            | &#8592; | Current value (Integer, Text)                                                                                    |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release                     | Modifications                                        |
+| --------------------------- | ---------------------------------------------------- |
+| 19 R6                       | Modifié                                              |
+| 16 R2                       | Renamed (Get Listbox information) |
+| <6 | Created                                              |
+
+</details>
+</div>
 
 ## Description
 

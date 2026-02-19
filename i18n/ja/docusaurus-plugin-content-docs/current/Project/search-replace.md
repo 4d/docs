@@ -199,7 +199,7 @@ title: 検索と置換
   - コンテンツ (正確であれば): 検索条件に実際に合致するコンテンツを提供します。例えば、リクエストした文字列に合致するコード行などです。
   - 行番号(コードに対して) またはページ番号 (フォームオブジェクト)
 
-## 内容を置換 {#replace-in-content}
+## Replace in content{#replace-in-content}
 
 内容を置換機能を使用すると、結果ウィンドウにリストされたオブジェクト内の文字列を他の文字列で置き換えることができます。 これはウィンドウの [オプションメニュー](#オプションメニュー) 内にて利用可能です。
 
@@ -224,23 +224,23 @@ title: 検索と置換
 - リストの項目に対して置換が行われたあとは、それらは斜字体で表示されます。 ウィンドウの下部には行われた置換の回数がリアルタイムで表示されます。
 - フォームオブジェクトを除き、見つかった要素自体の名前が **内容を置換** 機能で名称変更されることはありません。 そのため、リスト内の特定の一部の項目が置換オペレーションの影響を受けないことが有り得ます。 これは項目の名前のみが最初の検索条件に合致した場合などに起こり得ます。 この場合、リスト内の項目が必ずしも全て斜字体で表示されるわけではなく、また最終的な置換カウントが最初の検索で見つかったオカレンス数より少なくなることも有り得ます。
 
-## Renaming project methods and variables {#renaming-project-methods-and-variables}
+## プロジェクトメソッドと変数の名称変更 {#renaming-project-methods-and-variables}
 
-4D provides a dedicated renaming function with distribution throughout the entire project for project methods and variables.
+4D は、プロジェクトメソッドと変数に対して、プロジェクト全体で名称変更を行うための専用の機能を提供しています。
 
-The **Rename...** command is available from the [Code editor] (for project methods and variables) and the Explorer context menu (for project methods).
+**名称変更...** コマンドは、[コードエディター](プロジェクトメソッドと変数用)およびエクスプローラーのコンテキストメニュー(プロジェクトメソッド用)から利用可能です。
 
 ![](../assets/en/Project/rename.png)
 
-When you select this command, a dialog box appears where you enter the new name for the object:
+このコマンドを選択すると、そのオブジェクトの新しい名前を入力するためのダイアログボックスが表示されます。:
 
 ![](../assets/en/Project/rename-dial.png)
 
-The new name must comply with [naming rules](../Concepts/identifiers.md); otherwise a warning appears when you validate the dialog box. For example, you cannot rename a method with a command name such as "Alert".
+新しい名前は [命名規則](../Concepts/identifiers.md)に従っている必要があります。そうでない場合、ダイアログボックスを決定した際に警告が表示されます。 例えば、メソッド名を "Alert" などのコマンド名に変更することはできません。
 
-Depending on the type of object you are renaming (project method or variable), the renaming dialog box may also contain a distribution option:
+名称変更しようとしているオブジェクトのタイプ(プロジェクトメソッドまたは変数)によっては、名称変更ダイアログボックスに追加のオプションが表示される場合があります:
 
-- Project method: The **Update callers in whole database** option renames the method in all the project code that references it. You can also uncheck this option in order, for example, to rename the method only in the Explorer itself.
+- プロジェクトメソッド: **すべての参照箇所でメソッド名を変更** オプションを使用すると、それを参照しているプロジェクト内の全てのコードにおいてメソッド名を変更します。 このオプションを選択解除することで、例えばエクスプローラー内においてのみメソッド名を変更することができます。
 - Process variable: The **Rename variable in whole database** option renames the variable in all the project code that references it. If you uncheck this option, the variable is only renamed in the current method.
 - Local variable: No distribution option for this object; the variable is only renamed in the current method or class.
 

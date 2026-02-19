@@ -74,7 +74,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox_overview.md#リストボックスヘッダー)
+[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox-header-footer.md#headers)
 
 ---
 
@@ -149,7 +149,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
 
 ---
 

@@ -4,6 +4,24 @@ title: Folder
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+
+<!-- REF #_command_.Folder.Params -->
+
+<div class="no-index">
+
+| 引数             | 型                                                  |                             | 説明                                                                |
+| -------------- | -------------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | フォルダーパス                                                           |
+| folderConstant | Integer                                            | &#8594; | 4Dフォルダー定数                                                         |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
+| \*             | 演算子                                                | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
+| 戻り値            | [4D.Folder](../API/FolderClass.md) | &#8592; | 新規フォルダーオブジェクト                                                     |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                     |
@@ -12,20 +30,7 @@ displayed_sidebar: docs
 | 17 R5 | 追加                     |
 
 </details>
-
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
-
-<!-- REF #_command_.Folder.Params -->
-
-| 引数             | 型                                                  |                             | 説明                                                                |
-| -------------- | -------------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
-| path           | Text                                               | &#8594; | フォルダーパス                                                           |
-| folderConstant | Integer                                            | &#8594; | 4Dフォルダー定数                                                         |
-| pathType       | Integer                                            | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
-| \*             | operator                                           | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
-| 戻り値            | [4D.Folder](../API/FolderClass.md) | &#8592; | 新規フォルダーオブジェクト                                                     |
-
-<!-- END REF -->
+</div>
 
 ## 説明
 

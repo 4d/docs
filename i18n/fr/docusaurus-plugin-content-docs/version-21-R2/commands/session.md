@@ -8,12 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type                       |                             | Description   |
 | ---------- | -------------------------- | --------------------------- | ------------- |
 | Résultat   | 4D.Session | &#8592; | Objet session |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                                                             |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 18 R6   | Ajout                                                                     |
 
 </details>
+</div>
 
 ## Description
 

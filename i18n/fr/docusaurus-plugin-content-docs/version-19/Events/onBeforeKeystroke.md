@@ -3,9 +3,9 @@ id: onBeforeKeystroke
 title: On Before Keystroke
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                                  | Définition                                                                                                                                     |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| 17   | [Zone 4D Write Pro](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Formulaire - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) [Colonne de list box](FormObjects/listbox_overview.md#list-box-columns) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` retourne le texte de l'objet, **sans** ce caractère. |
+| Code | Peut être appelé par                                                                                                                                                                                                                                               | Définition                                                                                                                                     |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 17   | [Zone 4D Write Pro](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Formulaire - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) [Colonne de list box](FormObjects/listbox-column.md) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` retourne le texte de l'objet, **sans** ce caractère. |
 
 <details><summary>Historique</summary>
 
@@ -22,7 +22,7 @@ Après avoir sélectionné les événements `On Before Keystroke` et [`On After 
 
 L'événement `On Before Keystroke` n'est pas généré :
 
-- dans une méthode [colonnes de list box](FormObjects/listbox_overview.md#list-box-columns), sauf lorsqu'une cellule est en cours d'édition (cependant elle est générée dans tous les cas dans la méthode de [list box](FormObjects/listbox_overview.md)),
+- in a [List Box Column](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 - lorsque les modifications utilisateur ne sont pas effectuées à l'aide du clavier (coller, glisser-déposer, case à cocher, liste déroulante, combo box). Pour traiter ces événements, vous devez utiliser [`On After Edit`](onAfterEdit.md).
 
 ### Objets non saisissables
