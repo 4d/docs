@@ -1,4 +1,5 @@
 {
   "label": "HTTP",
+  "link": {"type": "doc", "id": "commands/theme/HTTP_theme"},
   "key": "HTTP-key"
 }

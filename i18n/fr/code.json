@@ -875,5 +875,8 @@
   "theme.SearchModal.footer.backToSearchText": {
     "message": "Back to search",
     "description": "The back to search text for footer"
+  },
+  "REST API": {
+    "message": "REST API"
   }
 }

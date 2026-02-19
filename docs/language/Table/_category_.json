@@ -1,4 +1,5 @@
 {
   "label": "Table",
+  "link": {"type": "doc", "id": "commands/theme/Table_theme"},
   "key": "Table-key"
 }

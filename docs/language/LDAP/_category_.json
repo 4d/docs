@@ -1,4 +1,5 @@
 {
   "label": "LDAP",
+  "link": {"type": "doc", "id": "commands/theme/LDAP_theme"},
   "key": "LDAP-key"
 }

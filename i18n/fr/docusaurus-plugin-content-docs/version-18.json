@@ -5,74 +5,74 @@
   },
   "sidebar.docs.category.Getting Started": {
     "message": "Prise en main",
-    "description": "The label for category Getting Started in sidebar docs"
+    "description": "The label for category 'Getting Started' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Language Concepts": {
     "message": "Concepts du langage 4D",
-    "description": "The label for category 4D Language Concepts in sidebar docs"
+    "description": "The label for category '4D Language Concepts' in sidebar 'docs'"
   },
   "sidebar.docs.category.Data Types": {
     "message": "Types de données",
-    "description": "The label for category Data Types in sidebar docs"
+    "description": "The label for category 'Data Types' in sidebar 'docs'"
   },
   "sidebar.docs.category.Control Flow": {
     "message": "Conditions et boucles",
-    "description": "The label for category Control Flow in sidebar docs"
+    "description": "The label for category 'Control Flow' in sidebar 'docs'"
   },
   "sidebar.docs.category.Project Databases": {
     "message": "Bases projets",
-    "description": "The label for category Project Databases in sidebar docs"
+    "description": "The label for category 'Project Databases' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Editor": {
     "message": "Éditeur de formulaires",
-    "description": "The label for category Form Editor in sidebar docs"
+    "description": "The label for category 'Form Editor' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Objects": {
     "message": "Objets de formulaire",
-    "description": "The label for category Form Objects in sidebar docs"
+    "description": "The label for category 'Form Objects' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Object Properties": {
     "message": "Propriétés des objets de formulaire",
-    "description": "The label for category Form Object Properties in sidebar docs"
+    "description": "The label for category 'Form Object Properties' in sidebar 'docs'"
   },
   "sidebar.docs.category.Menus": {
     "message": "Menus",
-    "description": "The label for category Menus in sidebar docs"
+    "description": "The label for category 'Menus' in sidebar 'docs'"
   },
   "sidebar.docs.category.MSC": {
     "message": "CSM",
-    "description": "The label for category MSC in sidebar docs"
+    "description": "The label for category 'MSC' in sidebar 'docs'"
   },
   "sidebar.docs.category.Backup and Restore": {
     "message": "Sauvegarde et restitution",
-    "description": "The label for category Backup and Restore in sidebar docs"
+    "description": "The label for category 'Backup and Restore' in sidebar 'docs'"
   },
   "sidebar.docs.category.Users and Groups": {
     "message": "Utilisateurs et groupes",
-    "description": "The label for category Users and Groups in sidebar docs"
+    "description": "The label for category 'Users and Groups' in sidebar 'docs'"
   },
   "sidebar.docs.category.REST Server": {
     "message": "Serveur REST",
-    "description": "The label for category REST Server in sidebar docs"
+    "description": "The label for category 'REST Server' in sidebar 'docs'"
   },
   "sidebar.docs.category.Guides": {
     "message": "Guides",
-    "description": "The label for category Guides in sidebar docs"
+    "description": "The label for category 'Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.API (general)": {
     "message": "API (général)",
-    "description": "The label for category API (general) in sidebar docs"
+    "description": "The label for category 'API (general)' in sidebar 'docs'"
   },
   "sidebar.docs.category.API (dataClass)": {
     "message": "API (dataClass)",
-    "description": "The label for category API (dataClass) in sidebar docs"
+    "description": "The label for category 'API (dataClass)' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Language Reference": {
     "message": "Manuel Langage 4D",
-    "description": "The label for category 4D Language Reference in sidebar docs"
+    "description": "The label for category '4D Language Reference' in sidebar 'docs'"
   },
   "sidebar.docs.link.4D Language Reference (4D Doc Center)": {
     "message": "Référence du langage 4D (4D Doc Center)",
-    "description": "The label for link 4D Language Reference (4D Doc Center) in sidebar docs, linking to https://doc.4d.com/4Dv18/4D/18.4/4D-Language-Reference.100-5232397.en.html"
+    "description": "The label for link '4D Language Reference (4D Doc Center)' in sidebar 'docs', linking to 'https://doc.4d.com/4Dv18/4D/18.4/4D-Language-Reference.100-5232397.en.html'"
   }
 }
