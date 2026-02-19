@@ -832,7 +832,7 @@
     "description": "The generated-index page title for category BLOB in sidebar docs"
   },
   "sidebar.docs.category.Boolean.link.generated-index.title": {
-    "message": "Boolean",
+    "message": "Booléens",
     "description": "The generated-index page title for category Boolean in sidebar docs"
   },
   "sidebar.docs.category.Cache Management.link.generated-index.title": {
@@ -1308,7 +1308,7 @@
     "description": "The label for category 'BLOB' in sidebar 'docs'"
   },
   "sidebar.docs.category.Boolean-key": {
-    "message": "Boolean",
+    "message": "Booléens",
     "description": "The label for category 'Boolean' in sidebar 'docs'"
   },
   "sidebar.docs.category.Cache-Management-key": {
