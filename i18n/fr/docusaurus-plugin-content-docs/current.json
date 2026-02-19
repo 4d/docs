@@ -528,7 +528,7 @@
     "description": "The label for category 'BLOB' in sidebar 'docs'"
   },
   "sidebar.docs.category.Boolean": {
-    "message": "Boolean",
+    "message": "Booléens",
     "description": "The label for category 'Boolean' in sidebar 'docs'"
   },
   "sidebar.docs.category.Cache Management": {
@@ -564,7 +564,7 @@
     "description": "The label for category 'Date and Time' in sidebar 'docs'"
   },
   "sidebar.docs.category.Design Object Access": {
-    "message": "Accès objets développement",
+    "message": "Définition structure",
     "description": "The label for category 'Design Object Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.Drag and Drop": {
@@ -720,7 +720,7 @@
     "description": "The label for category 'Spell Checker' in sidebar 'docs'"
   },
   "sidebar.docs.category.String": {
-    "message": "String",
+    "message": "Chaines de caractères",
     "description": "The label for category 'String' in sidebar 'docs'"
   },
   "sidebar.docs.category.Structure Access": {
@@ -1300,7 +1300,7 @@
     "description": "The label for category 'Arrays' in sidebar 'docs'"
   },
   "sidebar.docs.category.Backup-key": {
-    "message": "Backup",
+    "message": "Sauvegarde",
     "description": "The label for category 'Backup' in sidebar 'docs'"
   },
   "sidebar.docs.category.BLOB-key": {
@@ -1340,7 +1340,7 @@
     "description": "The label for category 'Date and Time' in sidebar 'docs'"
   },
   "sidebar.docs.category.Design-Object-Access-key": {
-    "message": "Accès aux objets de conception",
+    "message": "Accès objets développement",
     "description": "The label for category 'Design Object Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.Drag-and-Drop-key": {
@@ -1376,7 +1376,7 @@
     "description": "The label for category 'Hierarchical Lists' in sidebar 'docs'"
   },
   "sidebar.docs.category.HTTP-key": {
-    "message": "HTTP",
+    "message": "Client HTTP",
     "description": "The label for category 'HTTP' in sidebar 'docs'"
   },
   "sidebar.docs.category.Import-and-Export-key": {
@@ -1472,11 +1472,11 @@
     "description": "The label for category 'Quick Report' in sidebar 'docs'"
   },
   "sidebar.docs.category.Record-Locking-key": {
-    "message": "Verrouillage des enregistrements",
+    "message": "Enregistrements (verrouillage)",
     "description": "The label for category 'Record Locking' in sidebar 'docs'"
   },
   "sidebar.docs.category.Records-key": {
-    "message": "Enregistrements (verrouillage)",
+    "message": "Enregistrements",
     "description": "The label for category 'Records' in sidebar 'docs'"
   },
   "sidebar.docs.category.Relations-key": {
