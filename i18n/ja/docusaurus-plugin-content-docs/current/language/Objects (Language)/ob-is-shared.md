@@ -1,0 +1,43 @@
+---
+id: ob-is-shared
+title: OB Is shared
+slug: /commands/ob-is-shared
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* : Object, Collection ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is shared.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| toCheck | Object, Collection | &#8594; | チェックするオブジェクトまたはコレクション |
+| 戻り値 | Boolean | &#8592; | オブジェクトまたはコレクションが共有可能であればTrue、編集可能であればFalse |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R5|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.OB Is shared.Summary-->**OB Is shared** コマンドは*toCheck* 引数のオブジェクトまたはコレクションが共有の場合には**True** を返します。<!-- END REF-->それ以外の場合には**False** を返します(*共有オブジェクトと共有コレクション*参照)。
+
+このコマンドは*toCheck* 引数に共有可能なエンティティセレクションを渡した場合には**True** を返します(参照)。
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1759 |
+| スレッドセーフである | yes |
+
+
