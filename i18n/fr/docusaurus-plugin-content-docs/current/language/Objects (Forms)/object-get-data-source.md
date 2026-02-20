@@ -51,7 +51,7 @@ You execute the following code:
 ## See also 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
-[OBJECT Get data source formula](../commands/object-get-data-source-formula.md)  
+[OBJECT Get data source formula](./commands/object-get-data-source-formula)  
 
 ## Properties
 
@@ -59,5 +59,6 @@ You execute the following code:
 | --- | --- |
 | Command number | 1265 |
 | Thread safe | no |
+
 
 

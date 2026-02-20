@@ -63,8 +63,8 @@ We want to duplicate and rename a file in its own folder:
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](../commands/file.md)  
-[Folder](../commands/folder.md)  
+[File](./commands/file)  
+[Folder](./commands/folder)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
@@ -74,5 +74,6 @@ We want to duplicate and rename a file in its own folder:
 | --- | --- |
 | Command number | 1548 |
 | Thread safe | yes |
+
 
 

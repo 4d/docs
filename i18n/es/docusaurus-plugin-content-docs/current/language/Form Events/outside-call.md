@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 Para que se genere el ciclo de ejecución **Outside call**, asegúrese de que la propiedad del evento On Outside call del formulario y/o los objetos se haya seleccionado en el entorno Diseño.
 
-**Nota:** este comando es equivalente a utilizar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Outside call.
+**Nota:** este comando es equivalente a utilizar [Form event code](./commands/form-event-code) y probar si devuelve el evento On Outside call.
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 
 ## Propiedades
@@ -34,5 +34,6 @@ Para que se genere el ciclo de ejecución **Outside call**, asegúrese de que la
 | --- | --- |
 | Número de comando | 328 |
 | Hilo seguro | no |
+
 
 

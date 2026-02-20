@@ -50,7 +50,7 @@ This method, combined with a scrollable area, enables you to change the value of
 
 ## See also 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [Right click](right-click.md)  
 
 ## Properties
@@ -59,5 +59,6 @@ This method, combined with a scrollable area, enables you to change the value of
 | --- | --- |
 | Command number | 713 |
 | Thread safe | no |
+
 
 

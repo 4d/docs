@@ -61,7 +61,7 @@ The following code can be used to manage a mouse tracking feature in a picture o
 
 ## See also 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Properties
 
@@ -69,5 +69,6 @@ The following code can be used to manage a mouse tracking feature in a picture o
 | --- | --- |
 | Command number | 1422 |
 | Thread safe | no |
+
 
 

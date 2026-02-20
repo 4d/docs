@@ -1087,7 +1087,7 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 ## 参照 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
@@ -1097,5 +1097,6 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 | --- | --- |
 | コマンド番号 | 643 |
 | スレッドセーフである | no |
+
 
 

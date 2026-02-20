@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.GOTO XY.Summary-->GOTO XY コマンドは、[Open window](../commands/open-window.md "Open window")で開いたウインドウに[MESSAGE](message.md "MESSAGE")コマンドでメッセージを表示する際に使用できます。<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->GOTO XY コマンドは、[Open window](./commands/open-window.md "Open window")で開いたウインドウに[MESSAGE](message.md "MESSAGE")コマンドでメッセージを表示する際に使用できます。<!-- END REF-->  
   
 GOTO XY は、文字カーソル（見えないカーソル）の位置を指定して、ウインドウに表示される以降のメッセージの位置を設定します。
 
@@ -67,5 +67,6 @@ GOTO XY コマンドでカーソルの位置を指定してから、[MESSAGE](me
 | --- | --- |
 | コマンド番号 | 161 |
 | スレッドセーフである | no |
+
 
 

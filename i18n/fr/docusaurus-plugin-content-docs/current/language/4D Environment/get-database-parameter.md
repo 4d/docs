@@ -1510,7 +1510,7 @@ In the [On Startup database method](on-startup-database-method.md), you write:
 <h2 data-noindex>See also</h2>
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
@@ -1520,5 +1520,6 @@ In the [On Startup database method](on-startup-database-method.md), you write:
 | --- | --- |
 | Command number | 643 |
 | Thread safe | no |
+
 
 

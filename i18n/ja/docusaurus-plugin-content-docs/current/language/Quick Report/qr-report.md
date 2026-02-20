@@ -144,7 +144,7 @@ displayed_sidebar: docs
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+[SET ALLOWED METHODS](./commands/set-allowed-methods)  
 
 ## プロパティ
 
@@ -153,5 +153,6 @@ displayed_sidebar: docs
 | コマンド番号 | 197 |
 | スレッドセーフである | no |
 | システム変数を更新する | OK |
+
 
 

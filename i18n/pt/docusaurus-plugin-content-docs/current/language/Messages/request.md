@@ -40,11 +40,11 @@ Automaticamente, o título do botão **OK** é “Aceitar” e o do botão   **C
 
 O botão **OK** é o botão automático. Se o usuário clicar no botão **OK** ou pressiona **Enter** para aceitar a caixa de diálogo, a variável sistema OK toma o valor 1\. Se o usuário clicar no botão Cancelar para cancelar a caixa de diálogo, a variável sistema OK toma o valor 0\. 
 
-O usuário pode introduzir texto na área de entrada de texto. Para especificar um valor automático, passe o texto no parâmetro *respostaPadrao*. Se o usuário clicar no botão **OK**, **Request**devolve o texto. Se o usuário clique em **Cancel**, **Request** devolve uma cadeia vazia (""). Se a resposta deve ser um valor numérico ou uma data, converta a cadeia devolvida por **Request** ao tipo desejado com a ajuda das funções [Num](../commands/num.md) ou [Date](../commands/date).
+O usuário pode introduzir texto na área de entrada de texto. Para especificar um valor automático, passe o texto no parâmetro *respostaPadrao*. Se o usuário clicar no botão **OK**, **Request**devolve o texto. Se o usuário clique em **Cancel**, **Request** devolve uma cadeia vazia (""). Se a resposta deve ser um valor numérico ou uma data, converta a cadeia devolvida por **Request** ao tipo desejado com a ajuda das funções [Num](./commands/num) ou [Date](./commands/date).
 
 **Nota:** não chame o comando **Request** desde um método de formulário ou de objeto que maneje os eventos de formulário On Activate ou On Deactivate; isto provocará um loop infinito.
 
-**Dica:** se necessita obter várias peças de informação do usuário, crie um formulário e apresente-o com [DIALOG](../commands/dialog.md), ao invés de apresentar uma sucessão de caixas de diálogo de tipo **Request**.
+**Dica:** se necessita obter várias peças de informação do usuário, crie um formulário e apresente-o com [DIALOG](./commands/dialog), ao invés de apresentar uma sucessão de caixas de diálogo de tipo **Request**.
 
 ## Exemplo 1 
 
@@ -99,5 +99,6 @@ Mostrará a seguinte caixa de diálogo (em Windows):
 | Número do comando | 163 |
 | Thread-seguro | yes |
 | Modificar variáveis | OK |
+
 
 

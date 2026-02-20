@@ -37,7 +37,7 @@ Pase un nombre para la hoja de estilo en el parámetro *nomHojaEstilo*. El nombr
 * no debe empezar por "section", que está reservado
 * el carácter "\_" se sustituye por un espacio y se eliminan los espacios finales.
 
-Puede especificar los atributos de la hoja de estilo utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) o la notación de objetos (consulte *Atributos 4D Write Pro*). Para ver la lista de atributos disponibles, consulte la sección *Atributos de hojas de estilo*.
+Puede especificar los atributos de la hoja de estilo utilizando el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) o la notación de objetos (consulte *Atributos 4D Write Pro*). Para ver la lista de atributos disponibles, consulte la sección *Atributos de hojas de estilo*.
 
 **Notas**: 
 
@@ -73,3 +73,4 @@ El siguiente código crea y define una hoja de estilo de párrafo:
 [WP Get style sheet](wp-get-style-sheet.md)  
 [WP Get style sheets](wp-get-style-sheets.md)  
 [WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+

@@ -106,8 +106,8 @@ Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção a
 
 ## Ver também 
 
-[Bool](../commands/bool)  
-[String](../commands/string.md)  
+[Bool](./commands/bool)  
+[String](./commands/string)  
 
 ## Propriedades
 
@@ -115,5 +115,6 @@ Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção a
 | --- | --- |
 | Número do comando | 102 |
 | Thread-seguro | yes |
+
 
 

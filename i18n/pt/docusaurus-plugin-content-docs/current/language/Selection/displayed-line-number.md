@@ -55,7 +55,7 @@ Este exemplo lhe permite aplicar uma cor alternativa em um formulário listado m
 
 ## Ver também 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [Selected record number](selected-record-number.md)  
 
 ## Propriedades
@@ -64,5 +64,6 @@ Este exemplo lhe permite aplicar uma cor alternativa em um formulário listado m
 | --- | --- |
 | Número do comando | 897 |
 | Thread-seguro | no |
+
 
 

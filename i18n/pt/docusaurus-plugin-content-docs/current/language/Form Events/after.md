@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 Para que seja gerado o ciclo de execução **After**, tenha certeza de que o evento On Validate tenha sido selecionado no ambiente Desenho, nas propriedades do formulário ou dos objetos.
 
-**Nota:** este comando é equivalente a usar [Form event code](../commands/form-event-code.md) e provar se devolve o evento On Validate.
+**Nota:** este comando é equivalente a usar [Form event code](./commands/form-event-code) e provar se devolve o evento On Validate.
 
 ## Ver também 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Propriedades
 
@@ -33,5 +33,6 @@ Para que seja gerado o ciclo de execução **After**, tenha certeza de que o eve
 | --- | --- |
 | Número do comando | 31 |
 | Thread-seguro | no |
+
 
 

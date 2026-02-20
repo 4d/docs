@@ -29,7 +29,7 @@ The following rules are applied for any conversions:
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, 
-> - the virtual structure defined through [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
+> - the virtual structure defined through [`SET TABLE TITLES`](./commands/set-table-titles) or [`SET FIELD TITLES`](./commands/set-field-titles),
 > - the "Manual" or "Automatic" property of relations.
 
 
@@ -266,3 +266,4 @@ Unordered entity selections are created in the following cases:
 >*	entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
+

@@ -66,7 +66,7 @@ The [DISPLAY SELECTION](display-selection.md) and [MODIFY SELECTION](modify-sele
 
 The import commands [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) and [IMPORT DIF](import-dif.md) use the current input form for importing records.
 
-The optional *\** parameter is used in conjunction with the form properties you set in the Design environment's Form Properties window and the command [Open window](../commands/open-window.md). Specifying the \* parameter tells 4D to use the form properties to automatically resize the window for the next use of the form (as an input form or as a dialog box). See [Open window](../commands/open-window.md) for more information.
+The optional *\** parameter is used in conjunction with the form properties you set in the Design environment's Form Properties window and the command [Open window](./commands/open-window). Specifying the \* parameter tells 4D to use the form properties to automatically resize the window for the next use of the form (as an input form or as a dialog box). See [Open window](./commands/open-window) for more information.
 
 **Note:** Whether or not you pass the optional *\** parameter, **FORM SET INPUT** changes the input form for the table.
 
@@ -119,7 +119,7 @@ which displays:
 [IMPORT TEXT](import-text.md)  
 [MODIFY RECORD](modify-record.md)  
 [MODIFY SELECTION](modify-selection.md)  
-[Open window](../commands/open-window.md)  
+[Open window](./commands/open-window)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
 ## Properties
@@ -128,5 +128,6 @@ which displays:
 | --- | --- |
 | Command number | 55 |
 | Thread safe | no |
+
 
 

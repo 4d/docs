@@ -36,7 +36,7 @@ The command facilitates debugging by enabling the identification of the method o
 | formula|Text (if any)|  Contents of the current line of code at the current level of the call chain (raw text). Corresponds to the contents of the line referenced by the `line` property in the source file indicated by method. If the source code is not available, `formula` property is omitted (Undefined).|"var $stack:=Call chain"|
 | line         | Integer  | Line number of call to the method  | "line":6    |
 | name         | Text     | Name of the called method | "name":"On Load"   |
-| type         | Text     | Type of the method: <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (when calling a project method with the *Execute on Server attribute*)</li><li> "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) or the evaluation of a formula in a 4D Write Pro document)</li><li>"classFunction"</li><li>"formMethod"</li> | "type":"formMethod"  |
+| type         | Text     | Type of the method: <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (when calling a project method with the *Execute on Server attribute*)</li><li> "executeFormula" (when executing a formula via [PROCESS 4D TAGS](./commands/process-4d-tags) or the evaluation of a formula in a 4D Write Pro document)</li><li>"classFunction"</li><li>"formMethod"</li> | "type":"formMethod"  |
 
 :::note
 
@@ -98,5 +98,6 @@ If a form object method is executed, the call chain could contain (for example):
 | --- | --- |
 | Command number | 1662 |
 | Thread safe | yes |
+
 
 

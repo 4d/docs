@@ -44,7 +44,7 @@ In the *options* object, pass the properties to use when generating the password
 
 ### Error management 
 
-The following errors may be returned. You can review an error with the [Last errors](../commands/last-errors.md)  and [ON ERR CALL](on-err-call.md) commands.  
+The following errors may be returned. You can review an error with the [Last errors](./commands/last-errors)  and [ON ERR CALL](on-err-call.md) commands.  
 
 | **Number** | **Message**                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------ |
@@ -86,5 +86,6 @@ This example generates a password hash using bcrypt with a cost factor 4.
 | --- | --- |
 | Command number | 1533 |
 | Thread safe | yes |
+
 
 

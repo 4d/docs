@@ -55,7 +55,7 @@ Is license available コマンドは次のような3通りの使用が可能で�
 ## 参照 
 
 [CHANGE LICENSES](change-licenses.md)  
-[License info](../commands/license-info.md)  
+[License info](./commands/license-info)  
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
@@ -66,5 +66,6 @@ Is license available コマンドは次のような3通りの使用が可能で�
 | --- | --- |
 | コマンド番号 | 714 |
 | スレッドセーフである | no |
+
 
 

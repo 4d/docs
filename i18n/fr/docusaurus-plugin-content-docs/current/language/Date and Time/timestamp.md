@@ -52,7 +52,7 @@ Result:
 ## See also 
 
 [Milliseconds](milliseconds.md)  
-[String](../commands/string.md)  
+[String](./commands/string)  
 [Time](time.md)  
 
 ## Properties
@@ -61,5 +61,6 @@ Result:
 | --- | --- |
 | Command number | 1445 |
 | Thread safe | yes |
+
 
 

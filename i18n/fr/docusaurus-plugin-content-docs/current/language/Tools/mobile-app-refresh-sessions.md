@@ -34,7 +34,7 @@ The command checks the compliance of each session file in the MobileApps folder 
 
 If a session file is not valid or has been deleted, the corresponding session is removed from memory.
 
-The command can return one of the following errors, that can be handled through [ON ERR CALL](on-err-call.md) and [Last errors](../commands/last-errors.md)  commands:
+The command can return one of the following errors, that can be handled through [ON ERR CALL](on-err-call.md) and [Last errors](./commands/last-errors)  commands:
 
 | **Component name** | **Error code** | **Description**                                                |
 | ------------------ | -------------- | -------------------------------------------------------------- |
@@ -64,5 +64,6 @@ You want to reset all current sessions for all mobile applications:
 | --- | --- |
 | Command number | 1596 |
 | Thread safe | yes |
+
 
 

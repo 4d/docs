@@ -34,7 +34,7 @@ displayed_sidebar: docs
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
 - [`.call()`](../API/FunctionClass.md#call) あるいは [`.apply()`](../API/FunctionClass.md#apply) 関数
-- オブジェクト記法シンタックス ([Formula オブジェクト](../commands/formula.md-object) 参照)
+- オブジェクト記法シンタックス ([Formula オブジェクト](./commands/formula.md-object) 参照)
 
 ```4d
  var $f : 4D.Function
@@ -144,5 +144,6 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1597 |
 | スレッドセーフ | ◯    |
+
 
 

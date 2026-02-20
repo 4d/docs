@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TIMER.Summary-->El comando SET TIMER permite activar el evento de formulario On Timer y fijar, para el proceso y formulario actual, el número de tics (1 tic = 1/60 de segundo) entre cada evento de formulario On Timer.<!-- END REF--> 
 
-**Nota:** para mayor información sobre este evento de formulario, consulte la descripción del comando [Form event](../commands/form-event.md "Form event").
+**Nota:** para mayor información sobre este evento de formulario, consulte la descripción del comando [Form event](./commands/form-event.md "Form event").
 
 Este comando no tendrá efecto si se llama en un contexto en el que no muestra un formulario.
 
@@ -55,7 +55,7 @@ Imaginemos que usted quiere, cuando un formulario aparece en pantalla, que el or
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [REDRAW](redraw.md)  
 
 ## Propiedades
@@ -64,5 +64,6 @@ Imaginemos que usted quiere, cuando un formulario aparece en pantalla, que el or
 | --- | --- |
 | Número de comando | 645 |
 | Hilo seguro | no |
+
 
 

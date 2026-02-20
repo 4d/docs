@@ -106,8 +106,8 @@ Usted desea obtener una fecha de un atributo objeto, sea cual sea la opción de 
 
 ## Ver también 
 
-[Bool](../commands/bool)  
-[String](../commands/string.md)  
+[Bool](./commands/bool)  
+[String](./commands/string)  
 
 ## Propiedades
 
@@ -115,5 +115,6 @@ Usted desea obtener una fecha de un atributo objeto, sea cual sea la opción de 
 | --- | --- |
 | Número de comando | 102 |
 | Hilo seguro | yes |
+
 
 
