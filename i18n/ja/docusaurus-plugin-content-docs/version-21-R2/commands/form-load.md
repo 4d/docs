@@ -38,7 +38,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ### データの印刷
 
-このコマンドを実行するためには、[OPEN PRINTING JOB](./commands/open-printing-job) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](./commands/open-printing-job) は[FORM UNLOAD](./commands/form-unload) を暗示的に呼び出すため、このコンテキストでは改めて **FORM LOAD** コマンドを使用する必要があります。 ロードされた *form* はカレントの印刷フォームとなります。 [Print object](./commands/print-object) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
+このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は[FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて **FORM LOAD** コマンドを使用する必要があります。 ロードされた *form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
 
 **FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレーク は生成されません。 ページブレークは開発者が別途指定する必要があります。
 
@@ -46,17 +46,17 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 フォームのグラフィックな一貫性を保持するために、プラットフォームにかかわらず"印刷"アピアランスプロパティを適用することをお勧めします。
 
-[CLOSE PRINTING JOB](./commands/close-printing-job) コマンドが呼び出されると、カレント印刷フォームは自動で閉じられます。
+[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドが呼び出されると、カレント印刷フォームは自動で閉じられます。
 
 ### フォームコンテンツの解析
 
 データ解析のためにスクリーン外にフォームをロードするには、 印刷ジョブ外のコンテキストで**FORM LOAD** を呼び出します。 この場合、フォームイベントは実行されません。
 
-**FORM LOAD** を [FORM GET OBJECTS](./commands/form-get-objects) や[OBJECT Get type](./commands/object-get-type) コマンドと併用することで、フォームコンテンツを任意に処理することができます。 その後、フォームをメモリから解放するために [FORM UNLOAD](./commands/form-unload) コマンドを呼び出す必要があります。
+**FORM LOAD** を [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) や[OBJECT Get type](../commands-legacy/object-get-type.md) コマンドと併用することで、フォームコンテンツを任意に処理することができます。 その後、フォームをメモリから解放するために [FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。
 
-いずれの場合においても、スクリーン上のフォームはロードされたままであるため(**FORM LOAD** コマンドに影響されない)、[FORM UNLOAD](./commands/form-unload)コマンドを呼び出した後にこれらをリロードする必要はありません。
+いずれの場合においても、スクリーン上のフォームはロードされたままであるため(**FORM LOAD** コマンドに影響されない)、[FORM UNLOAD](../commands-legacy/form-unload.md)コマンドを呼び出した後にこれらをリロードする必要はありません。
 
-**注:** メモリオーバーフローのリスクを回避するため、スクリーン外でフォームを使用した場合には[FORM UNLOAD](./commands/form-unload) を必ずコールしてください。
+**注:** メモリオーバーフローのリスクを回避するため、スクリーン外でフォームを使用した場合には[FORM UNLOAD](../commands-legacy/form-unload.md) を必ずコールしてください。
 
 ## 例題 1
 
@@ -156,11 +156,11 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ## 参照
 
-[Current form name](./commands/current-form-name)\
-[FORM UNLOAD](./commands/form-unload)\
-[LISTBOX GET OBJECTS](./commands/listbox-get-objects)\
-[OBJECT Get type](./commands/object-get-type)\
-[Print object](./commands/print-object)
+[Current form name](../commands-legacy/current-form-name.md)\
+[FORM UNLOAD](../commands-legacy/form-unload.md)\
+[LISTBOX GET OBJECTS](../commands-legacy/listbox-get-objects.md)\
+[OBJECT Get type](../commands-legacy/object-get-type.md)\
+[Print object](../commands-legacy/print-object.md)
 
 ## プロパティ
 
@@ -168,6 +168,5 @@ form data オブジェクトについての詳細な情報については、[`DI
 | ------- | ---- |
 | コマンド番号  | 1103 |
 | スレッドセーフ | ×    |
-
 
 

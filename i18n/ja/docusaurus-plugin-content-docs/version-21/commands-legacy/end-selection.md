@@ -59,7 +59,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Before selection](before-selection.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
@@ -70,6 +70,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 36 |
 | スレッドセーフである | yes |
-
 
 

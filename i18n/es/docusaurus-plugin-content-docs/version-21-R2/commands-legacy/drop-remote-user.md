@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DROP REMOTE USER.Summary-->El comando **DROP REMOTE USER** desconecta a un usuario específico conectado remotamente al servidor 4D.<!-- END REF--> 
 
-En *sesionUsuario*, pase el ID de sesión del usuario que desea desconectar del servidor. Puede recuperar el ID de sesión con el comando [Process activity](./commands/process-activity).
+En *sesionUsuario*, pase el ID de sesión del usuario que desea desconectar del servidor. Puede recuperar el ID de sesión con el comando [Process activity](../commands/process-activity.md).
 
 **Nota:** este comando se ejecuta de forma asíncrona y solo puede ejecutarse en 4D Server. Si el método que llama al comando se ejecuta localmente en 4D remoto o monousuario, **DROP REMOTE USER** no hace nada.
 
@@ -62,6 +62,5 @@ Desea eliminar un usuario remoto específico:
 | --- | --- |
 | Número de comando | 1633 |
 | Hilo seguro | yes |
-
 
 

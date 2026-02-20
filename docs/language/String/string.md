@@ -81,7 +81,7 @@ The format is specified in the same way as it would be for a [number input on a 
 | String(1/0)                        | "INF"                | Positive infinite number        |
 | String(-1/0)                       | "-INF"               | Negative infinite number        |
 
-(\*) The algorithm for converting real values into text is based on 13 significant digits, see [`SET REAL COMPARISON LEVEL`](./commands/set-real-comparison-level).
+(\*) The algorithm for converting real values into text is based on 13 significant digits, see [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
 
 #### String(number;base)
 
@@ -257,11 +257,11 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 
 ## See also 
 
-[Bool](./commands/bool)  
-[Date](./commands/date)  
+[Bool](../commands-legacy/bool.md)  
+[Date](../commands-legacy/date.md)  
 [Num](num.md)  
-[Time string](./commands/time-string)  
-[Timestamp](./commands/timestamp)  
+[Time string](../commands-legacy/time-string.md)  
+[Timestamp](../commands-legacy/timestamp.md)  
 
 ## Properties
 
@@ -269,6 +269,5 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 | --- | --- |
 | Command number | 10 |
 | Thread safe | yes |
-
 
 

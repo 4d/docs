@@ -51,7 +51,7 @@ A variável sistema OK toma o valor 1 se for encontrado o recurso, do contrário
 
 ## Ver também 
 
-[Get indexed string](./commands/get-indexed-string)
+[Get indexed string](../commands/get-indexed-string)
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
@@ -62,6 +62,5 @@ A variável sistema OK toma o valor 1 se for encontrado o recurso, do contrário
 | Número do comando | 506 |
 | Thread-seguro | no |
 | Modificar variáveis | OK |
-
 
 

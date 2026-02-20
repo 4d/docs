@@ -173,7 +173,7 @@ Voici la séquence des appels de callbacks :
 
 :::info
 
-Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](./commands/call-worker), et NON [`New process`](./commands/new-process).
+Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](../commands-legacy/call-worker.md), et NON [`New process`](../commands-legacy/new-process.md).
 
 :::
 
@@ -418,9 +418,8 @@ Si la réponse du serveur est déjà arrivée, la fonction rend la main immédia
 
 :::note
 
-Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](./commands/call-worker) .  Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
+Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](../commands-legacy/call-worker.md) .  Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
 
 :::
 
 <!-- END REF -->
-

@@ -44,7 +44,7 @@ No objeto *opções*, passe as propriedades que se utilizarão ao gerar o hash d
 
 ### Gestão de erros 
 
-The following errors may be returned. You can review an error with the [Last errors](./commands/last-errors)  and [ON ERR CALL](on-err-call.md) commands.  
+The following errors may be returned. You can review an error with the [Last errors](../commands/last-errors.md)  and [ON ERR CALL](on-err-call.md) commands.  
 
 | **Number** | **Message**                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------ |
@@ -86,6 +86,5 @@ Este exemplo gera um hash de senha utilizando bcrypt com um fator de custo 4.
 | --- | --- |
 | Número do comando | 1533 |
 | Thread-seguro | yes |
-
 
 

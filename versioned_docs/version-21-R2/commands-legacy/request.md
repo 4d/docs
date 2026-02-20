@@ -40,11 +40,11 @@ By default, the title of the **OK** button is “OK” and that of the **Cancel*
 
 The **OK** button is the default button. If you click the **OK** button or press **Enter** to accept the dialog box, the OK system variable is set to 1\. If you click the **Cancel** button to cancel the dialog box, the OK system variable is set to 0\. 
 
-The user can enter text into the text input area. To specify a default value, pass the default text in the *defaultResponse* parameter. If the user clicks **OK**, **Request** returns the text. If the user clicks **Cancel**, **Request** returns an empty string (""). If the response should be a numeric or a date value, convert the string returned by **Request** to the proper type with the [Num](./commands/num) or [Date](date.md) functions.
+The user can enter text into the text input area. To specify a default value, pass the default text in the *defaultResponse* parameter. If the user clicks **OK**, **Request** returns the text. If the user clicks **Cancel**, **Request** returns an empty string (""). If the response should be a numeric or a date value, convert the string returned by **Request** to the proper type with the [Num](../commands/num.md) or [Date](date.md) functions.
 
 **Tip:** Do not call the **Request** command from the section of a form or object method that handles the On Activate or On Deactivate form event; this will cause an endless loop.
 
-**Tip:** If you need to get several pieces of information from the user, design a form and present it with [DIALOG](./commands/dialog), rather than presenting a succession of **Request** dialog boxes.
+**Tip:** If you need to get several pieces of information from the user, design a form and present it with [DIALOG](../commands/dialog.md), rather than presenting a succession of **Request** dialog boxes.
 
 ## Example 1 
 
@@ -99,6 +99,5 @@ will display the request dialog box (on Windows) shown here:
 | Command number | 163 |
 | Thread safe | yes |
 | Modifies variables | OK |
-
 
 

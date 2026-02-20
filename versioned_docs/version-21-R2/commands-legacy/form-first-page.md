@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE changes the currently displayed form page to the first form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](./commands/form-load) command, or if the first form page is already displayed, FORM FIRST PAGE does nothing.
+<!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE changes the currently displayed form page to the first form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if the first form page is already displayed, FORM FIRST PAGE does nothing.
 
 ## Example 
 
@@ -51,6 +51,5 @@ The following example is a one-line method called from a menu command. It displa
 | --- | --- |
 | Command number | 250 |
 | Thread safe | no |
-
 
 

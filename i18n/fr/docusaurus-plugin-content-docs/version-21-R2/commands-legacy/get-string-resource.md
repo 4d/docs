@@ -51,7 +51,7 @@ La variable système OK prend la valeur 1 si la ressource est trouvée, sinon el
 
 ## Voir aussi 
 
-[Get indexed string](./commands/get-indexed-string)
+[Get indexed string](../commands/get-indexed-string)
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
@@ -62,6 +62,5 @@ La variable système OK prend la valeur 1 si la ressource est trouvée, sinon el
 | Numéro de commande | 506 |
 | Thread safe | no |
 | Modifie les variables | OK |
-
 
 

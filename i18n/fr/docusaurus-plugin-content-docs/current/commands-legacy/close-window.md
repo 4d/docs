@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** referme la dernière fenêtre créée à l'aide de la commande [Open window](./commands/open-window) ou [Open form window](./commands/open-form-window) dans le process courant.<!-- END REF--> S'il n'y a pas de fenêtre personnalisée ouverte, **CLOSE WINDOW** ne fait rien ; la commande ne ferme pas les fenêtres système. Si **CLOSE WINDOW** est appelée alors qu'un formulaire est actif dans la fenêtre, elle n'a pas d'effet non plus. Vous devez appeler **CLOSE WINDOW** lorsque vous avez fini d'utiliser une fenêtre ouverte avec [Open window](./commands/open-window) ou [Open form window](./commands/open-form-window). 
+<!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** referme la dernière fenêtre créée à l'aide de la commande [Open window](../commands/open-window.md) ou [Open form window](../commands/open-form-window.md) dans le process courant.<!-- END REF--> S'il n'y a pas de fenêtre personnalisée ouverte, **CLOSE WINDOW** ne fait rien ; la commande ne ferme pas les fenêtres système. Si **CLOSE WINDOW** est appelée alors qu'un formulaire est actif dans la fenêtre, elle n'a pas d'effet non plus. Vous devez appeler **CLOSE WINDOW** lorsque vous avez fini d'utiliser une fenêtre ouverte avec [Open window](../commands/open-window.md) ou [Open form window](../commands/open-form-window.md). 
 
-Il est inutile de passer un numéro à **CLOSE WINDOW** lorsque vous l'utilisez pour refermer des fenêtres ouvertes à l'aide de la fonction [Open window](./commands/open-window) ou [Open form window](./commands/open-form-window). En effet, si plusieurs fenêtres ont été ouvertes par une succession d'appels à ces commandes, elles ne pourront être refermées que dans l'ordre inverse de leur création.
+Il est inutile de passer un numéro à **CLOSE WINDOW** lorsque vous l'utilisez pour refermer des fenêtres ouvertes à l'aide de la fonction [Open window](../commands/open-window.md) ou [Open form window](../commands/open-form-window.md). En effet, si plusieurs fenêtres ont été ouvertes par une succession d'appels à ces commandes, elles ne pourront être refermées que dans l'ordre inverse de leur création.
 
 Si vous passez en paramètre la référence d'une zone externe créée à l'aide de la fonction , **CLOSE WINDOW** referme la fenêtre externe. Pour plus d'informations sur les fenêtres externes, reportez-vous à la description de la fonction .
 
@@ -38,8 +38,8 @@ L'exemple suivant ouvre une fenêtre formulaire et crée des enregistrements à 
 
 ## Voir aussi 
 
-[Open form window](./commands/open-form-window)  
-[Open window](./commands/open-window)  
+[Open form window](../commands/open-form-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## Propriétés
 
@@ -47,6 +47,5 @@ L'exemple suivant ouvre une fenêtre formulaire et crée des enregistrements à 
 | --- | --- |
 | Numéro de commande | 154 |
 | Thread safe | no |
-
 
 

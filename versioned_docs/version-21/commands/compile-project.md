@@ -119,8 +119,8 @@ The `code` property in `methods.code` and `errors.code` is an object with the fo
 
 | **Property**   | **Type** | **Description**  |
 | ------------------- | -------- | ---- |
-| type     | Text   | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](./commands/process-4d-tags) or evaluation of a formula in a 4D Write Pro document), "class", "classFunction", "formObjectExpression" (for errors occuring in expressions associated to form objects)|
-| path  | Text   | Method path (same format as [METHOD OPEN PATH](./commands/method-open-path)) |
+| type     | Text   | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) or evaluation of a formula in a 4D Write Pro document), "class", "classFunction", "formObjectExpression" (for errors occuring in expressions associated to form objects)|
+| path  | Text   | Method path (same format as [METHOD OPEN PATH](../commands-legacy/method-open-path.md)) |
 | file | 4D.File  | Method file  |
 ||          |  **Returned depending on the value of the `type` property:**  |
 | methodName  | Text   | Project method  |
@@ -191,7 +191,7 @@ var $result:=Compile project($options)
 
 ## See also 
 
-[BUILD APPLICATION](./commands/build-application)
+[BUILD APPLICATION](../commands-legacy/build-application.md)
 
 ## Properties
 
@@ -199,6 +199,5 @@ var $result:=Compile project($options)
 | --- | --- |
 | Command number | 1760 |
 | Thread safe | no |
-
 
 

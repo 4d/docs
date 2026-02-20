@@ -34,7 +34,7 @@ O comando verifica o cumprimento de cada arquivo de sessão na pasta MobileApps 
 
 Se um arquivo de sessão não for válido ou tiver sido eliminado, a sessão correspondente é eliminada da memória.
 
-O comando pode devolver um dos erros abaixo, que pode ser manejado através dos comandos [ON ERR CALL](on-err-call.md) e [Last errors](./commands/last-errors) :
+O comando pode devolver um dos erros abaixo, que pode ser manejado através dos comandos [ON ERR CALL](on-err-call.md) e [Last errors](../commands/last-errors.md) :
 
 | **Nome do componente** | **Código de erro** | **Descrição**                                               |
 | ---------------------- | ------------------ | ----------------------------------------------------------- |
@@ -64,6 +64,5 @@ Se quiser resetar todas as sessões atuais para todas as aplicações móveis:
 | --- | --- |
 | Número do comando | 1596 |
 | Thread-seguro | yes |
-
 
 

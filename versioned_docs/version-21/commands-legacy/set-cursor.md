@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CURSOR.Summary-->The SET CURSOR command changes the mouse cursor to the system cursor whose ID number you pass in *cursor*.<!-- END REF-->
 
-This command must be called in the context of the On Mouse Move [Form event code](./commands/form-event-code). 
+This command must be called in the context of the On Mouse Move [Form event code](../commands/form-event-code.md). 
 
 To restore the standard mouse cursor, call the command without any parameter.
 
@@ -80,6 +80,5 @@ You want the cursor to be displayed as a ![](../assets/en/commands/pict2478692.e
 | --- | --- |
 | Command number | 469 |
 | Thread safe | no |
-
 
 

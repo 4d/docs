@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current time.Summary-->O comando Current time retorna a hora atual do relógio de sistema.<!-- END REF--> 
 
-A hora atual sempre está entre *00:00:00* e *23:59:59*. Utilize [String](./commands/string.md "String") ou [Time string](./commands/time-string.md "Time string") para converter em cadeia a expressão de tipo hora retornada por Current time.
+A hora atual sempre está entre *00:00:00* e *23:59:59*. Utilize [String](../commands/string.md "String") ou [Time string](../commands/time-string.md "Time string") para converter em cadeia a expressão de tipo hora retornada por Current time.
 
 **4D Server:** se utilizar o parâmetro (\*) quando executa esta função em uma máquina 4D Client, a função devolve a hora atual do servidor.
 
@@ -49,7 +49,7 @@ O exemplo a seguir extrai as horas, minutos e segundos da hora atual:
 ## Ver também 
 
 [Milliseconds](milliseconds.md)  
-[String](./commands/string)  
+[String](../commands/string.md)  
 [Tickcount](tickcount.md)  
 
 ## Propriedades
@@ -58,7 +58,5 @@ O exemplo a seguir extrai as horas, minutos e segundos da hora atual:
 | --- | --- |
 | Número do comando | 178 |
 | Thread-seguro | yes |
-
-
 
 

@@ -51,7 +51,7 @@ Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramenta
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns eventos formulário padrão fornecem informações ampliadas no objeto retornado pelo comando [`FORM Event`](./commands/form-event) quando são gerados para áreas 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns eventos formulário padrão fornecem informações ampliadas no objeto retornado pelo comando [`FORM Event`](../commands/form-event.md) quando são gerados para áreas 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -359,7 +359,7 @@ Atributos do tamanho do papel são usados para especificar as dimensões ou mode
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
   - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](./commands/print-option-values).
+  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
     Nesse caso, [`VP Get print info`](./commands/vp-get-print-info.md) retorna o formato correspondente com a altura e a largura.
 
 ### Escala
@@ -511,4 +511,3 @@ Contém as seguintes propriedades:
 | ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                                   |
 | ViewPro.inited         | Parâmetros    | Indica si el área 4D View Pro ha sido inicializada o no (ver evento[On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                       |
 | ViewPro.interface      | Text          | Especifica o tipo de interface do usuário: "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                                          |
-

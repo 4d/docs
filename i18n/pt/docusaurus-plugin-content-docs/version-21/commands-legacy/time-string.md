@@ -24,7 +24,7 @@ O formato da string é HH:MM:SS.
 
 Se passar um número de segundos superior ao número de segundos que há em um dia (86 400), Time string continua adicionando horas, minutos e segundos. Por exemplo, Time string (86401) retorna 24:00:01.
 
-**Nota:** se necesitar o formato da string da expressão de tipo hora em uma variedade de formatos, utilize [String](./commands/string.md "String").
+**Nota:** se necesitar o formato da string da expressão de tipo hora em uma variedade de formatos, utilize [String](../commands/string.md "String").
 
 ## Exemplo 
 
@@ -36,7 +36,7 @@ O exemplo a seguir mostra uma caixa de alerta com a mensagem, “46 800 segundos
 
 ## Ver também 
 
-[String](./commands/string)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
 ## Propriedades
@@ -45,7 +45,5 @@ O exemplo a seguir mostra uma caixa de alerta com a mensagem, “46 800 segundos
 | --- | --- |
 | Número do comando | 180 |
 | Thread-seguro | yes |
-
-
 
 

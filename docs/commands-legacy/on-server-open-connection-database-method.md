@@ -62,7 +62,7 @@ The **On Server Open Connection database method** is executed on the 4D Server m
 
 For example, if a remote 4D connects to a 4D Server interpreted database, the user process, the Design process and the client registration process (by default) for that client are started. The On Server Open Connection database method is therefore executed three times in a row—the first time within the Application process, the second time within the client registration process, and the third time within the Design process. If the three process are respectively the sixth, seventh and eighth process to be started on the Server machine, and if you call [Current process](current-process.md) from within the **On Server Open Connection database method**, the first time [Current process](current-process.md) returns 6, the second time 7 and the third time 8.
 
-Note that **On Server Open Connection database method** executes on the Server machine. It executes within the 4D Client process running on the Server machine, independent of the process running on the client side. In addition, at the moment when the method is invoked, the 4D Client process has not yet been named ([Process info](./commands/process-info) will not at this point return the name of the 4D Client process).
+Note that **On Server Open Connection database method** executes on the Server machine. It executes within the 4D Client process running on the Server machine, independent of the process running on the client side. In addition, at the moment when the method is invoked, the 4D Client process has not yet been named ([Process info](../commands/process-info.md) will not at this point return the name of the 4D Client process).
 
 The **On Server Open Connection database method** has no access to the process variable table of the process running on the Client side. This table resides on the Client machine, not on the Server machine. 
 
@@ -152,6 +152,5 @@ The following example prevents any new connection from 2 to 4 A.M.
 | --- | --- |
 | Command number | 16001 |
 | Thread safe | no |
-
 
 

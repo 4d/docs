@@ -50,7 +50,7 @@ This way a user can activate licenses without having to modify the database.
 
 ## See also 
 
-[License info](./commands/license-info)  
+[License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
 ## Properties
@@ -60,6 +60,5 @@ This way a user can activate licenses without having to modify the database.
 | Command number | 637 |
 | Thread safe | no |
 | Forbidden on the server ||
-
 
 

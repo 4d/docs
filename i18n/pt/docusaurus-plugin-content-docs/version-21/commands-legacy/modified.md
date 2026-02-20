@@ -43,7 +43,7 @@ Em todos os casos, utilize o comando [Old](old.md) para detectar se o valor do c
 
 **Nota:** apesar de que **Modified** pode ser aplicado a todo tipo de campo, ele é utilizado com o comando \[#cmd id="35"/\], deve levar em conta as restrições que aplicam ao comando \[#cmd id="35"/\], Para mais detalhes, ver a descrição do comando \[#cmd id="35"/\],
 
-Durante a entrada de dados, geralmente é mais fácil realizar operações em métodos de objeto com a ajuda do comando [Form event code](./commands/form-event-code) que utilizar **Modified** nos métodos de formulário. Como um método de objeto recebe o evento On Data Change quando se modifica um campo, o uso de um método de objeto é equivalente a utilizar **Modified** em um método de formulário.
+Durante a entrada de dados, geralmente é mais fácil realizar operações em métodos de objeto com a ajuda do comando [Form event code](../commands/form-event-code.md) que utilizar **Modified** nos métodos de formulário. Como um método de objeto recebe o evento On Data Change quando se modifica um campo, o uso de um método de objeto é equivalente a utilizar **Modified** em um método de formulário.
 
 **Nota:** para funcionar corretamente, o comando **Modified** deve ser utilizado unicamente em um método de formulário ou em um método chamado por um método de formulário.
 
@@ -78,7 +78,7 @@ Seleciona um registro para a tabela *\[umaTabela\]*, depois chama múltiplas sub
 
 ## Ver também 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
 
 ## Propriedades
@@ -87,6 +87,5 @@ Seleciona um registro para a tabela *\[umaTabela\]*, depois chama múltiplas sub
 | --- | --- |
 | Número do comando | 32 |
 | Thread-seguro | no |
-
 
 

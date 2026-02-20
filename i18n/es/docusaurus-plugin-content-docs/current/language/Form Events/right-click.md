@@ -34,7 +34,7 @@ Este comando debe utilizarse únicamente en el contexto del evento de formulario
 ## Ver también 
 
 [Contextual click](contextual-click.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
 ## Propiedades
 
@@ -42,6 +42,5 @@ Este comando debe utilizarse únicamente en el contexto del evento de formulario
 | --- | --- |
 | Número de comando | 712 |
 | Hilo seguro | no |
-
 
 

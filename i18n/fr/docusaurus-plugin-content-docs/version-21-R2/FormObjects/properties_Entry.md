@@ -21,7 +21,7 @@ La propriété Correction orthographique active la vérification orthographique 
 
 #### Commandes
 
-[`OBJECT Get auto spellcheck`](./commands/object-get-auto-spellcheck) - [`OBJECT SET AUTO SPELLCHECK`](./commands/object-set-auto-spellcheck) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck.md) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck.md) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -38,7 +38,7 @@ Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbo
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan.
   Lorsque l'utilisateur modifie un attribut de style via ce menu déroulant, 4D génère l'événement formulaire `On After Edit`.
 
-Pour une [zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. Il est possible de contrôler l'accès au menu contextuel via la commande [`WA SET PREFERENCE`](./commands/wa-set-preference).
+Pour une [zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. Il est possible de contrôler l'accès au menu contextuel via la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
 #### Grammaire JSON
 
@@ -52,7 +52,7 @@ Pour une [zone Web](webArea_overview.md), le contenu du menu dépend du moteur d
 
 #### Commandes
 
-[`OBJECT Get context menu`](./commands/object-get-context-menu) - [`OBJECT SET CONTEXT MENU`](./commands/object-set-context-menu) - [`WA GET PREFERENCE`](./commands/wa-get-preference) - [`WA SET PREFERENCE`](./commands/wa-set-preference)
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu.md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
 
 ---
 
@@ -76,11 +76,11 @@ Lorsque cette propriété est désactivée, tous les pop-up menus associés à u
 
 #### Commandes
 
-[`OBJECT Get enterable`](./commands/object-get-enterable) - [`OBJECT SET ENTERABLE`](./commands/object-set-enterable)
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
 
 #### Voir également
 
-[`FORM GET ENTRY ORDER`](./commands/form-get-entry-order) - [`FORM SET ENTRY ORDER`](./commands/form-set-entry-order)
+[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
 
 ---
 
@@ -140,7 +140,7 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 
 #### Commandes
 
-[`OBJECT Get filter`](./commands/object-get-filter) - [`OBJECT SET FILTER`](./commands/object-set-filter)
+[`OBJECT Get filter`](../commands-legacy/object-get-filter.md) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter.md)
 
 ## Focusable
 
@@ -166,7 +166,7 @@ Lorsque la propriété **Focusable** est sélectionnée pour un objet non saisis
 
 #### Commandes
 
-[`OBJECT Get enterable`](./commands/object-get-enterable) - [`OBJECT SET ENTERABLE`](./commands/object-set-enterable)
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
 
 ---
 
@@ -190,7 +190,7 @@ Par défaut, la saisie utilise la configuration courante du clavier.
 
 #### Commandes
 
-[`OBJECT Get keyboard layout`](./commands/object-get-keyboard-layout) - [`OBJECT SET KEYBOARD LAYOUT`](./commands/object-set-keyboard-layout)
+[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout.md) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout.md)
 
 ---
 
@@ -226,7 +226,7 @@ Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option
 
 #### Commandes
 
-[`OBJECT Get multiline`](./commands/object-get-multiline) - [`OBJECT SET MULTILINE`](./commands/object-set-multiline)
+[`OBJECT Get multiline`](../commands-legacy/object-get-multiline.md) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline.md)
 
 ---
 
@@ -251,7 +251,7 @@ Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tan
 
 Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pas possible de combiner une référence avec du texte statique.
 
-> Vous pouvez également écrire et lire le texte du placeholder en utilisant les commandes [`OBJET SET PLACEHOLDER`](./commands/object-set-placeholder) et [`OBJECT Get placeholder`](./commands/object-get-placeholder).
+> Vous pouvez également écrire et lire le texte du placeholder en utilisant les commandes [`OBJET SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) et [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md).
 
 #### Grammaire JSON
 
@@ -269,7 +269,7 @@ Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pa
 
 #### Commandes
 
-[`OBJECT Get placeholder`](./commands/object-get-placeholder) - [`OBJECT SET PLACEHOLDER`](./commands/object-set-placeholder)
+[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md)
 
 ---
 
@@ -318,7 +318,7 @@ Pour afficher une liste de tous les raccourcis utilisés dans l'IDE de 4D, voir 
 
 #### Commandes
 
-[`OBJECT GET SHORTCUT`](./commands/object-get-shortcut) - [`OBJECT SET SHORTCUT`](./commands/object-set-shortcut)
+[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)
 
 ---
 
@@ -342,6 +342,5 @@ Lorsque cette option n'est pas activée, les utilisateurs doivent d'abord sélec
 
 #### Commandes
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
-
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 

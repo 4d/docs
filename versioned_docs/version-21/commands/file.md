@@ -84,9 +84,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 [`4D.File` class](../API/FileClass.md)  
 [Folder](folder.md)  
-[Get 4D file](./commands/get-4d-file)  
-[Object to path](./commands/object-to-path)  
-[Path to object](./commands/path-to-object)
+[Get 4D file](../commands-legacy/get-4d-file.md)  
+[Object to path](../commands-legacy/object-to-path.md)  
+[Path to object](../commands-legacy/path-to-object.md)
 
 
 
@@ -96,6 +96,5 @@ If the command is called from a component, pass the optional `*` parameter to ge
 | --- | --- |
 | Command number | 1566 |
 | Thread safe | yes |
-
 
 

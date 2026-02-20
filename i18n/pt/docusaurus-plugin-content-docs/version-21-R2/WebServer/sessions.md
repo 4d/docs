@@ -28,7 +28,7 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 
 As sessões Web são usadas para:
 
-- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](./commands/theme/Web_Services_Server) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
+- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
 
 ## Enabling web sessions {#enabling-web-sessions}
@@ -42,7 +42,7 @@ Esta opção é selecionada por defeito nos novos projetos. Sin embargo, se pued
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). Neste caso, este parâmetro substitui a opção definida na caixa de diálogo Propriedades para o objeto Web Server (não é armazenado em disco).
 
-> The [`WEB SET OPTION`](./commands/web-set-option) command can also set the session mode for the main Web server.
+> The [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
 
 Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
@@ -90,7 +90,7 @@ Uma sessão Web escalável é encerrada quando:
 
 O tempo de vida de um cookie inativo é 60 minutos por padrão, o que significa que o servidor irá automaticamente fechar as sessões inativas após 60 minutos.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](./commands/open-datastore) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
 Quando uma sessão Web é fechada, se o comando [`Session`](commands/session.md) for chamado posteriormente:
 
@@ -488,6 +488,5 @@ A new user is created, and some information is stored in the session, especially
 A session token has a lifespan, and the session itself has a lifespan. O tempo de vida útil do token de sessão pode ser definido [na criação do token](../API/SessionClass.md#createotp). Por padrão, o tempo de vida do token é o mesmo valor que o valor [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 
 A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
-
 
 

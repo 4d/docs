@@ -19,14 +19,14 @@ displayed_sidebar: docs
 O comando ACCEPT é utilizado em métodos de objeto ou de formulário (ou em subrotinas) para:
 
 * aceitar um registro ou novo sub-registro ou modificado, para o qual a entrada de dados for inicializada utilizando [ADD RECORD](add-record.md "ADD RECORD"), [MODIFY RECORD](modify-record.md "MODIFY RECORD"), *ADD SUBRECORD*, ou *MODIFY SUBRECORD*.
-* aceitar um formulário mostrado pelo comando [DIALOG](./commands/dialog.md "DIALOG").
+* aceitar um formulário mostrado pelo comando [DIALOG](../commands/dialog.md "DIALOG").
 * sair de um formulário que mostra uma seleção de registros, utilizando [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION") ou [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION").
 
 <!--REF #_command_.ACCEPT.Summary-->ACCEPT realiza a mesma ação que se um usuário tivesse pressionado a tecla Intro.<!-- END REF--> Depois de que o formulário é aceito, a variável sistema OK toma o valor 1.
 
 ACCEPT é executado com frequência como resultado da seleção de um comando de menu. ACCEPT é igualmente utilizado no método de objeto de um botão “sem ação”.
 
-Este comando também pode ser utilizado no método de caixa de fechamento opcional de uma janela criada pelo comando [Open window](./commands/open-window.md "Open window"). Se houver uma caixa de controle de menu numa janela, se puder chamar a ACCEPT ou [CANCEL](cancel.md "CANCEL"), no método a executar, quando fizer duplo clique sobre a caixa de controle de menu ou for selecionado o comando de menu **Fechar**.
+Este comando também pode ser utilizado no método de caixa de fechamento opcional de uma janela criada pelo comando [Open window](../commands/open-window.md "Open window"). Se houver uma caixa de controle de menu numa janela, se puder chamar a ACCEPT ou [CANCEL](cancel.md "CANCEL"), no método a executar, quando fizer duplo clique sobre a caixa de controle de menu ou for selecionado o comando de menu **Fechar**.
 
 Não é possível concatenar vários ACCEPT. A execução consecutiva de dois comandos ACCEPT em um método terá o mesmo resultado que a execução de um só comando. 
 
@@ -45,6 +45,5 @@ Não é possível concatenar vários ACCEPT. A execução consecutiva de dois co
 | Número do comando | 269 |
 | Thread-seguro | no |
 | Modificar variáveis | OK |
-
 
 

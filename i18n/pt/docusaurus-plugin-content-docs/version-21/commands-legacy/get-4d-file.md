@@ -82,7 +82,7 @@ Se quiser obter a rota do último arquivo de backup:
 
 ## Ver também 
 
-[File](./commands/file)    
+[File](../commands/file.md)    
 
 ## Propriedades
 
@@ -90,6 +90,5 @@ Se quiser obter a rota do último arquivo de backup:
 | --- | --- |
 | Número do comando | 1418 |
 | Thread-seguro | yes |
-
 
 

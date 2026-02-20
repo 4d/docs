@@ -62,7 +62,7 @@ La méthode formulaire suivante est utilisée pendant l'impression d'un état. E
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
@@ -72,6 +72,5 @@ La méthode formulaire suivante est utilisée pendant l'impression d'un état. E
 | --- | --- |
 | Numéro de commande | 198 |
 | Thread safe | yes |
-
 
 

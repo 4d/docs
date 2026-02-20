@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Compile project](./commands/compile-project)  
+[Compile project](../commands/compile-project.md)  
 
 ## プロパティ
 
@@ -72,6 +72,5 @@ displayed_sidebar: docs
 | スレッドセーフである | no |
 | システム変数を更新する | OK、Document、error |
 | サーバー上での使用は不可 ||
-
 
 

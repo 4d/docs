@@ -60,7 +60,7 @@ L'objet *errorObj* permet d'obtenir des informations plus détaillées sur les e
 | message            | texte     | Description de l'erreur. Le **message** peut contenir des placeholders qui seront remplacés par des propriétés personnalisées ajoutées à l'objet *errorObj*. Chaque placeholder doit être spécifié en utilisant des accolades {} entourant le nom de la propriété à utiliser. If the **message** is not provided or is an empty string, the command will look for a description in the current database xliff files with a resname built as follows: ERR\_{componentSignature}\_{errCode}". Si le **message** n'est pas fourni ou s'il s'agit d'une chaîne vide, la commande recherchera une description dans les fichiers xliff de la base de données actuelle, avec un nouveau nom construit comme suit : ERR\_{componentSignature}\_{errCode}". |
 | deferred           | booléen   | Vrai si l'erreur doit être différée au retour de la méthode en cours ou à la fin du [Try block](../Concepts/error-handling.md#trycatchend-try). La valeur par défaut est faux.  |
 
-Lorsque vous utilisez cette syntaxe, l'objet *errorObj* est renvoyé dans [Last errors](./commands/last-errors).
+Lorsque vous utilisez cette syntaxe, l'objet *errorObj* est renvoyé dans [Last errors](../commands/last-errors.md).
 
 **Note :** Il est possible d'appeler la commande plusieurs fois dans la même méthode de projet pour générer plusieurs erreurs. Vous pouvez utiliser l'option **deferred** pour envoyer toutes les erreurs en une seule fois.
 
@@ -68,7 +68,7 @@ Lorsque vous utilisez cette syntaxe, l'objet *errorObj* est renvoyé dans [Last 
 
 Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie qu'elles seront ajoutées à une pile et traitées au retour de la méthode appelante. Ceci est typiquement fait à l'intérieur d'un [ON ERR CALL](on-err-call.md) callback.
 
-* **Dans une application :** Lorsqu'une erreur survient, elle est ajoutée à la pile d'erreurs et la méthode [ON ERR CALL](on-err-call.md) de l'application est appelée à la fin de la méthode courante. La fonction [Last errors](./commands/last-errors) renvoie la pile d'erreurs.
+* **Dans une application :** Lorsqu'une erreur survient, elle est ajoutée à la pile d'erreurs et la méthode [ON ERR CALL](on-err-call.md) de l'application est appelée à la fin de la méthode courante. La fonction [Last errors](../commands/last-errors.md) renvoie la pile d'erreurs.
 * **Par conséquent, dans un composant** : La pile d'erreurs peut être envoyée à l'application hôte et la méthode [ON ERR CALL](on-err-call.md) de l'application hôte est appelée.
 
 ## Example 1 
@@ -116,7 +116,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 ## Voir aussi 
 
 [ASSERT](assert.md)  
-[Last errors](./commands/last-errors)  
+[Last errors](../commands/last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
 ## Propriétés
@@ -125,6 +125,5 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 | --- | --- |
 | Numéro de commande | 1805 |
 | Thread safe | no |
-
 
 

@@ -45,7 +45,7 @@ See example in *Record Locking*.
 
 ## Example 2 
 
-See example for the command [Process number](./commands/process-number).
+See example for the command [Process number](../commands/process-number.md).
 
 ## See also 
 
@@ -58,6 +58,5 @@ See example for the command [Process number](./commands/process-number).
 | --- | --- |
 | Command number | 323 |
 | Thread safe | yes |
-
 
 

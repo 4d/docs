@@ -25,7 +25,6 @@ Voir [List box hiérarchiques](listbox_overview.md#hierarchical-list-boxes)
 
 #### Commandes
 
-[LISTBOX GET HIERARCHY](./commands/listbox-get-hierarchy) - [LISTBOX SET HIERARCHY](./commands/listbox-set-headers-height)
-
+[LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md) - [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-headers-height.md)
 
 

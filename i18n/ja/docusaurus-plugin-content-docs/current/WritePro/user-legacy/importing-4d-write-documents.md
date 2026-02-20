@@ -22,8 +22,8 @@ slug: /WritePro/importing-4d-write-documents
 
 4D Write Proオブジェクトに 4D Writeドキュメントを読み込む方法は二つあります:
 
-* ディスク上に保存されている 4D Write ファイルに関しては、[WP Import document](./commands/wp-import-document) コマンドを使用してください。
-* BLOBフィールドに格納されている 4D Write エリアに関しては、[WP New](./commands/wp-new) コマンドを使用してください。
+* ディスク上に保存されている 4D Write ファイルに関しては、[WP Import document](../commands/wp-import-document) コマンドを使用してください。
+* BLOBフィールドに格納されている 4D Write エリアに関しては、[WP New](../commands/wp-new) コマンドを使用してください。
 
 より詳細な情報に関しては、それぞれのコマンドの詳細を参照してください。
 
@@ -31,7 +31,7 @@ slug: /WritePro/importing-4d-write-documents
 
 4D Write プラグインから4D Write Proへの移行を簡単にするために、4D Write の機能のうち、出来る限り多くのものが4D Write Proオブジェクトでサポートされようとしています。
 
-以下の段落では、4D Write プラグインのプロパティのうち、[WP Import document](./commands/wp-import-document) または [WP New](./commands/wp-new) コマンドを使用して4D Write Proエリアへと読み込んだときに復元されるプロパティについてまとめています。
+以下の段落では、4D Write プラグインのプロパティのうち、[WP Import document](../commands/wp-import-document) または [WP New](../commands/wp-new) コマンドを使用して4D Write Proエリアへと読み込んだときに復元されるプロパティについてまとめています。
 
 しかしながら一部の機能において、バグとはみなされない小さな差異が生じることがあります。これらは例えば、4D Write Proで使用されるデフォルトの行頭の記号や、下線のタイプの小さな変化などによるものです。
 
@@ -84,7 +84,7 @@ slug: /WritePro/importing-4d-write-documents
 | URLカラー             | 利用不可                                     |
 | アクセス済みのURLカラー      | 利用不可                                     |
 
-**注:** 小数点区切りには([GET SYSTEM FORMAT](../../commands/get-system-format)で返される)システムの小数点が使用されます。この引数は[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドを使用することで変更できます。
+**注:** 小数点区切りには([GET SYSTEM FORMAT](../../commands/get-system-format)で返される)システムの小数点が使用されます。この引数は[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドを使用することで変更できます。
 
 ### ドキュメントのページ付の引数 
 
@@ -127,7 +127,7 @@ slug: /WritePro/importing-4d-write-documents
 
 **互換性に関する注意:**
 
-* 4D v19 R2 のWrite Pro 以降、[WP Import document](./commands/wp-import-document) を使用するとピクチャーの表示モードは自動的に読み込まれます。*importDisplayMode* 属性を使用することで以前の振る舞い(全ての画像は合致するように縮小する)を復活させることができます。
+* 4D v19 R2 のWrite Pro 以降、[WP Import document](../commands/wp-import-document) を使用するとピクチャーの表示モードは自動的に読み込まれます。*importDisplayMode* 属性を使用することで以前の振る舞い(全ての画像は合致するように縮小する)を復活させることができます。
 * Windows では、Mac OS PICT フォーマットの画像は読み込まれますが4D Write Pro ではレンダリングされません。このタイプの画像を格納しているドキュメントを読み込んだ場合、それらの画像を他のフォーマットへと変換する必要があります。PICT フォーマットのサポートは4D v18 以降削除されており、今後使用することはできません。
 
 | **4D Write プラグイン**     | **4D Write Pro**                   |
@@ -213,7 +213,7 @@ slug: /WritePro/importing-4d-write-documents
 | HTML 式             | 利用不可\*\*         |
 | RTF 式              | 利用不可             |
 
-\*読み込まれたドキュメント内においてフォーミュラから返されたCR を段落ブレークへと変換するためには[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドとwk break paragraphs in formulas 属性を使用してください(デフォルトでは改行として扱われます)。詳細は*フォーミュラの管理* を参照してください。
+\*読み込まれたドキュメント内においてフォーミュラから返されたCR を段落ブレークへと変換するためには[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドとwk break paragraphs in formulas 属性を使用してください(デフォルトでは改行として扱われます)。詳細は*フォーミュラの管理* を参照してください。
 
 \*ただしwk import html expressions as text 定数を使用した場合には**##htmlBegin##** および **##htmlEnd##** タグに挟まれたテキストとして読み込み可能
 

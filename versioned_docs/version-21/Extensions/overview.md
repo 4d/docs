@@ -8,7 +8,7 @@ title: Extending 4D Applications
 The 4D [project architecture](../Project/architecture.md) is open and can be extended in different ways. If you need a feature that is not available natively in 4D, you can always integrate it into your application in a variety of ways, i.e.:
 
 - [**System workers**](../API/SystemWorkerClass.md) allow the 4D code to call any external process (a shell command, PHP, any script, etc.) and monitor its execution.
-- [**SQL commands**](./commands/theme/SQL) allow you to connect and use various SQL data sources.
+- [**SQL commands**](../commands/theme/SQL) allow you to connect and use various SQL data sources.
 - The [**built-in HTTP client**](../API/HTTPRequestClass.md) can request any HTTP server and process data.
 - [**Web Areas**](../FormObjects/webArea_overview.md) can give access to web pages or various HTML contents within your forms.  
 - [**Components**](Concepts/components.md). Components are made of 4D code. 4D proposes a set of utility components (see below) that you can install and use depending on your needs. You can also [develop your own 4D components](develop-components.md), or use third-party components. Many developers from the 4D community have shared 4D components (browse Github to have a list of public 4D components gathered with the [`4d-component`](https://github.com/topics/4d-component) topic). 
@@ -33,7 +33,6 @@ A subset of these components is listed by default in the Github panel of the [De
 |4D Widgets|https://github.com/4d/4D-Widgets|Manage DatePicker, TimePicker, SearchPicker 4D widgets|`DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ...|
 |4D WritePro Interface|https://github.com/4d/4D-WritePro-Interface|Manage 4D Write Pro palettes and [table wizard](../WritePro/writeprointerface.md)|`WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`|
 |Build4D|https://github.com/4d-depot/Build4D|Compile, build, and sign projects|CI/CD |
-
 
 
 

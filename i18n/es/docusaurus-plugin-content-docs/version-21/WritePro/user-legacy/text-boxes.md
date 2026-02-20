@@ -24,7 +24,7 @@ Para seleccionar una caja de texto, el usuario tiene que hacer clic sobre ella (
 
 Para eliminar una caja de texto seleccionada, puede presionar la tecla **Suprimir** o **Retroceso**, utilizar la acción estándar **textBox/eliminar**, o ejecutar el comando **WP DELETE TEXT BOX**.
 
-Los atributos de las cajas de texto se manejan con el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) o *Acciones 4D Write Pro*. Están disponibles los siguientes atributos y acciones:  
+Los atributos de las cajas de texto se manejan con el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) o *Acciones 4D Write Pro*. Están disponibles los siguientes atributos y acciones:  
   
 | **Propiedad (constante)** | **Acción estándar**   | **Comentarios**                                                                                              |
 | ------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------ |

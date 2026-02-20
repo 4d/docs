@@ -181,7 +181,7 @@ Se quiser saber a quantidade de subpastas em uma rota:
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](./commands/file)    
+[File](../commands/file.md)    
 [Folder ](folder.md)  
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
@@ -192,6 +192,5 @@ Se quiser saber a quantidade de subpastas em uma rota:
 | --- | --- |
 | Número do comando | 1547 |
 | Thread-seguro | yes |
-
 
 

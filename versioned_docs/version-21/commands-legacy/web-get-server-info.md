@@ -141,8 +141,8 @@ After you execute the following code:
 
 ## See also 
 
-[License info](./commands/license-info)  
-[Process activity](./commands/process-activity)  
+[License info](../commands/license-info.md)  
+[Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
 ## Properties
@@ -151,6 +151,5 @@ After you execute the following code:
 | --- | --- |
 | Command number | 1531 |
 | Thread safe | yes |
-
 
 

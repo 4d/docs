@@ -34,7 +34,7 @@ Quando exibido em modo Page ou Draft (no contexto de impressão de documento), P
 
 Quebras podem ser adicionadas por programação ou pelo usuário. Ações disponíveis incluem:
 
-* [WP INSERT BREAK](./commands/wp-insert-break) comando
+* [WP INSERT BREAK](../commands/wp-insert-break) comando
 * *insertPageBreak* ação padrão
 * **Insert page break** opção do menu contextual padrão
 
@@ -46,7 +46,7 @@ Pode controlar quebras automáticas em parágrafos usando as funcionalidades aba
 * **Avoid page break inside**: Quando essa opção for estabelecida para um parágrafo, 4D Write Pro previne que esse parágrafo seja quebrada em partes ou em duas ou mais páginas.
 * **Manter com o próximo**: quando se estabelece esta opção para um parágrafo, esse parágrafo não pode separar-se do que lhe segue por uma quebra automática. Ver `wk keep with next` e a [ação padrão](./defining-a-4d-write-pro-area.md#standard-actions) correspondente *keepWithNext*.
 
-Essas opções podem ser estabelecidas usando o menu contextual, ou [atributos](./commands/4d-write-pro-attributes) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled*, *avoidPageBreakInside*. 
+Essas opções podem ser estabelecidas usando o menu contextual, ou [atributos](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled*, *avoidPageBreakInside*. 
 
 ## Fundo 
 
@@ -59,7 +59,7 @@ O fundo de documentos 4D Write e elementos de documentos (tabelas, parágrafos, 
 * área de pintura
 * repetir
 
-Esses [atributos](./commands/4d-write-pro-attributes) podem ser definidos programaticamente para os elementos indivíduos ou uma página ou fundos de documentos inteiros com o comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) ou por [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions).
+Esses [atributos](../commands-legacy/4d-write-pro-attributes.md) podem ser definidos programaticamente para os elementos indivíduos ou uma página ou fundos de documentos inteiros com o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) ou por [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions).
 
 Usuários podem modificar atributos de fundo via o menu contextual como mostrado abaixo:
 
@@ -153,7 +153,7 @@ Pode entrar qualquer conteúdo estático, que será automaticamente repetido em 
 
 Pode inserir conteúdos dinâmicos tais como número de página ou contador de página usando o comando [ST INSERT EXPRESSION](../../commands/st-insert-expression) (para saber mais, veja o parágrafo *Inserir documentos e expressões de página*).  
   
-Nota: TAmbém é possível manejar cabeçalhos e rodapés por programação, usando comandos específicos como [WP Get header](./commands/wp-get-header) ou [WP Get footer](./commands/wp-get-footer)
+Nota: TAmbém é possível manejar cabeçalhos e rodapés por programação, usando comandos específicos como [WP Get header](../commands/wp-get-header) ou [WP Get footer](../commands/wp-get-footer)
 
 Quando um cabeçalho ou rodapé tiver sido definido para uma seção, pode configurar seus atributos comuns usando o menu contextual:
 
@@ -239,7 +239,7 @@ Para criar uma tabulação, dê um clique direito diretamente na régua e escolh
 
 :::note Notas 
 
-* Abas também podem ser definidas por programação com os comandos [WP SET ATTRIBUTES](./commands/wp-set-attributes), [WP GET ATTRIBUTES](./commands/wp-get-attributes), e [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) com os seletores wk tab default e wk tabs
+* Abas também podem ser definidas por programação com os comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes), e [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) com os seletores wk tab default e wk tabs
 * Para separações decimais, 4D Write Pro consida o primeiro caractere ponto ou vírgula da direita como um separador decimal; essa configuração padrão pode ser modificada com o seletor wk tab decimal separator
 
 :::
@@ -254,7 +254,7 @@ Os caracteres precedendo as tabulações (signos iniciais) podem ser definidos a
 * \_\_ (subscritos)
 * \*\*\* (asteriscos)
 
-Signos iniciais sempre aparecem antes da aba e seguem a direção do texto (da esquerda para direita ou direita para esquerda). Podem ser definidos por programação com os comandos [WP SET ATTRIBUTES](./commands/wp-set-attributes), [WP GET ATTRIBUTES](./commands/wp-get-attributes), e [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) usando `wk leading` com os seletores `wk tab default` ou `wk tabs` , ou através do menu contextual da régua horizontal (mostrado abaixo).
+Signos iniciais sempre aparecem antes da aba e seguem a direção do texto (da esquerda para direita ou direita para esquerda). Podem ser definidos por programação com os comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes), e [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) usando `wk leading` com os seletores `wk tab default` ou `wk tabs` , ou através do menu contextual da régua horizontal (mostrado abaixo).
 
 ![](../../assets/en/WritePro/pict5761675.en.png)
 
@@ -280,12 +280,12 @@ Um evento de formulário [`On After Edit`](../../Events/onAfterEdit.md) é ativa
 
 Colunas podem ser definidas ao nível de documento (são exibidos no documento inteiro) ou no nível da seção (cada seção pode ter sua própria configuração de coluna).
 
-**Nota:** Colunas só são compatíveis nos modos **Vista de página** e **Vista rascunho** (não são exibidos em modo **Embedded** e são exportados a .docx por [WP EXPORT DOCUMENT](./commands/wp-export-document) , mas não aos formato HTML e MIME HTML wk web page complete ).
+**Nota:** Colunas só são compatíveis nos modos **Vista de página** e **Vista rascunho** (não são exibidos em modo **Embedded** e são exportados a .docx por [WP EXPORT DOCUMENT](../commands/wp-export-document) , mas não aos formato HTML e MIME HTML wk web page complete ).
 
 Colunas podem ser estabelecidas usando:
 
 * o submenu **Colunas** do menu contextual de área 4D Write Pro,
-* [atributos](./commands/4d-write-pro-attributes) 4D Write Pro,
+* [atributos](../commands-legacy/4d-write-pro-attributes.md) 4D Write Pro,
 * [ações padrão](./using-4d-write-pro-standard-actions.md) 4D Write Pro.
 
 Pode estabelecer ou obter as propriedades abaixo e ações para colunas:
@@ -296,7 +296,7 @@ Pode estabelecer ou obter as propriedades abaixo e ações para colunas:
 | Espaçamento de coluna           | Espaço entre colunas em pts, polegadas, ou cm. Note que todas as colunas vão ter o mesmo tamanho. Cada largura de coluna é automaticamente calculada por 4D Write Pro de acordo com o número de colunas, a largura de página e o espaçamento                             | wk column spacing                                                           | *columnSpacing*                                         |
 | Largura de coluna               | (atributo apenas leitura) Largura atual de cada coluna, ou seja, largura computada                                                                                                                                                                                       | wk column width                                                             | \-                                                      |
 | Estilo, cor e largura de coluna | Pode adicionar um separadador vertical (uma linha decorativa) entre as collunas. Essas opções permitem planejar o estilo de separador, cor e largura. ![](../../assets/en/WritePro/pict3752176.en.png)Para remover o separador vertical, selecione **None** como estilo. | wk column rule style, wk column rule color, wk column rule width            | *columnRuleStyle*, *columnRuleColor*, *columnRuleWidth* |
-| Inserir break                   | Insere uma quebra de coluna                                                                                                                                                                                                                                              | wk column break, veja também [WP INSERT BREAK](./commands/wp-insert-break) | *insertColumnBreak*                                     |
+| Inserir break                   | Insere uma quebra de coluna                                                                                                                                                                                                                                              | wk column break, veja também [WP INSERT BREAK](../commands/wp-insert-break) | *insertColumnBreak*                                     |
 | Menu de Colunas                 | Crie um sub-menu Colunas                                                                                                                                                                                                                                                 | \-                                                                          | *colunas*                                               |
 
 ### Criar uma página com seções múltiplas-colunas e únicas colunas 
@@ -321,16 +321,16 @@ Bookmarks são dinâmicas, o que significa que se suas faixas associadas são mo
 - Se então inserir 50 páginas no começo do documento.
 - Mesmo assim ainda poderá acessar o mesmo texto "Hello world" automaticamente, agora na página 70 do documento, através do bookmark "MyBM".
 
-Um documento pode conter um número ilimitado de bookmarks. Diversas bookmarks podem referenciar a mesma faixa, e faixas de bookmarks podem ser intercaladas. Entretanto, cada nome de bookmark deve ser único no documento. Bookmarks não são importadas quando usar o comando [WP INSERT DOCUMENT](./commands/wp-insert-document-body) (bookmarks no documento de destino não podem ser gravadas por cima).
+Um documento pode conter um número ilimitado de bookmarks. Diversas bookmarks podem referenciar a mesma faixa, e faixas de bookmarks podem ser intercaladas. Entretanto, cada nome de bookmark deve ser único no documento. Bookmarks não são importadas quando usar o comando [WP INSERT DOCUMENT](../commands/wp-insert-document-body) (bookmarks no documento de destino não podem ser gravadas por cima).
 
 Ao ser criada, uma bookmark é armazenada dentro do documento. A bookmark é salva com o documento e pode ser manejada através de diversos comandos. Também pode ser usada para referenciar partes de um documento modelo. Estas partes podem então ser juntadas automaticamente com dados do banco de dados para produzir documentos output dinâmicos tais como faturas ou catálogos.
 
 Diversos comandos permitem que se crie, remova ou use bookmarks:
 
-- [WP NEW BOOKMARK](./commands/wp-new-bookmark) para criar uma nova bookmark de uma faixa,
-- [WP GET BOOKMARKS](./commands/wp-get-bookmarks) para obter todas as bookmarks definidas em um documento,
-- [WP Bookmark range](./commands/wp-bookmark-range) para recuperar uma faixa de uma bookmark existente,
-- [WP DELETE BOOKMARK](./commands/wp-delete-bookmark) para apagar uma bookmark.
+- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) para criar uma nova bookmark de uma faixa,
+- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) para obter todas as bookmarks definidas em um documento,
+- [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) para recuperar uma faixa de uma bookmark existente,
+- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) para apagar uma bookmark.
 
 
 ## Links
@@ -351,12 +351,12 @@ Em um documento 4D Write Pro, um link pode ser ativado utilizando um simples cli
 
 Os hyperlinks são manejados através dos comandos abaixo:
 
-- [WP SET LINK](./commands/wp-set-link) para inserir um link utilizando um objeto de destino.
-- [WP Get links](./commands/wp-get-links) para obter a coleção de todos os links em um objeto de destino.
+- [WP SET LINK](../commands-legacy/wp-set-link.md) para inserir um link utilizando um objeto de destino.
+- [WP Get links](../commands-legacy/wp-get-links.md) para obter a coleção de todos os links em um objeto de destino.
 
 :::note
 
-Nota: os links são manejados como atributos, portanto podem ser definidos ou obtidos utilizando os comandos [WP SET ATTRIBUTES](./commands/wp-set-attributes) e [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) assim como a constante `wk link url`. Entretanto, recomendamos utilizar [WP SET LINK](./commands/wp-set-link) e [WP Get links](./commands/wp-get-links) porque automaticamente codificam/decodificam links como URLs. Quando são lidos links utilizando o comando [WP GET ATTRIBUTES](./commands/wp-get-attributes), se a range conter vários hyperlinks, o comando devolve a primeira string de url.
+Nota: os links são manejados como atributos, portanto podem ser definidos ou obtidos utilizando os comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes) e [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) assim como a constante `wk link url`. Entretanto, recomendamos utilizar [WP SET LINK](../commands-legacy/wp-set-link.md) e [WP Get links](../commands-legacy/wp-get-links.md) porque automaticamente codificam/decodificam links como URLs. Quando são lidos links utilizando o comando [WP GET ATTRIBUTES](../commands/wp-get-attributes), se a range conter vários hyperlinks, o comando devolve a primeira string de url.
 
 :::
 
@@ -420,5 +420,3 @@ Os seguintes comandos 4D do tema [Objetos (Formulários)](../../commands/theme/O
 | OBJECT Get pointer | |
 
 Todos os comandos OBJECT não enumerados anteriormente não são aplicáveis às áreas 4D Write Pro.
-
-

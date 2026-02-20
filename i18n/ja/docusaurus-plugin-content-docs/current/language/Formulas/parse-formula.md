@@ -102,7 +102,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Formula from string](./commands/formula-from-string)  
+[Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *フォーミュラ内でのトークンの使用*  
@@ -113,6 +113,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1576 |
 | スレッドセーフである | no |
-
 
 

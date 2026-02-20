@@ -105,7 +105,7 @@ You want to get a date from an object attribute, whatever the current attribute 
 ## See also 
 
 [Bool](bool.md)  
-[String](./commands/string)  
+[String](../commands/string.md)  
 
 ## Properties
 
@@ -113,6 +113,5 @@ You want to get a date from an object attribute, whatever the current attribute 
 | --- | --- |
 | Command number | 102 |
 | Thread safe | yes |
-
 
 

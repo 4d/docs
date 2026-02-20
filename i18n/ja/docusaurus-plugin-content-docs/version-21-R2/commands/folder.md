@@ -73,8 +73,8 @@ displayed_sidebar: docs
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)  
-[Object to path](./commands/object-to-path)  
-[Path to object](./commands/path-to-object)
+[Object to path](../commands-legacy/object-to-path.md)  
+[Path to object](../commands-legacy/path-to-object.md)
 
 ## プロパティ
 
@@ -82,6 +82,5 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1567 |
 | スレッドセーフ | ◯    |
-
 
 

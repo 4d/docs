@@ -54,7 +54,7 @@ displayed_sidebar: docs
 このコマンドは以下のコンテキストで動作します:
 
 * 入力フォームのデータ入力
-* [DIALOG](./commands/dialog.md "DIALOG")コマンドを使用して表示されたフォーム
+* [DIALOG](../commands/dialog.md "DIALOG")コマンドを使用して表示されたフォーム
 * [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION")や[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")コマンドで表示される出力フォームのヘッダとフッタ
 * フォーム印刷イベント
 
@@ -86,6 +86,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 664 |
 | スレッドセーフである | no |
-
 
 

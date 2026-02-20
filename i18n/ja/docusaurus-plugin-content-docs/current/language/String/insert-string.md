@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 *where*が、*source*の長さよりも大きい場合は、*what*を*source*の後ろに追加します。*where*が1よりも小さい場合には、*what*を*source*の前に挿入します。
 
-Insert stringは、文字を上書きしないで挿入するという点が[Change string](./commands/change-string.md "Change string")と異なります。
+Insert stringは、文字を上書きしないで挿入するという点が[Change string](../commands/change-string.md "Change string")と異なります。
 
 ## 例題 
 
@@ -40,9 +40,9 @@ Insert string関数の使用例を次に示します。結果を変数*vtResult*
 
 ## 参照 
 
-[Change string](./commands/change-string)  
-[Delete string](./commands/delete-string)  
-[Replace string](./commands/replace-string)  
+[Change string](../commands/change-string)  
+[Delete string](../commands/delete-string)  
+[Replace string](../commands/replace-string)  
 
 ## プロパティ
 
@@ -50,6 +50,5 @@ Insert string関数の使用例を次に示します。結果を変数*vtResult*
 | --- | --- |
 | コマンド番号 | 231 |
 | スレッドセーフである | yes |
-
 
 

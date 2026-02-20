@@ -50,7 +50,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### コマンド
 
-[OBJECT Get focus rectangle invisible](./commands/object-get-focus-rectangle-invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](./commands/object-set-focus-rectangle-invisible)
+[OBJECT Get focus rectangle invisible](../commands-legacy/object-get-focus-rectangle-invisible.md) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
 
 ---
 
@@ -76,7 +76,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### コマンド
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -106,7 +106,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### コマンド
 
-[OBJECT GET SCROLLBAR](./commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
 
 #### 参照
 
@@ -408,7 +408,7 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 #### コマンド
 
-[OBJECT GET SCROLLBAR](./commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
 
 #### 参照
 

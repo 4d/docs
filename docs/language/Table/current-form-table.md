@@ -72,7 +72,7 @@ To do so, use the object method to create the variable *vsCurrentRecord*, then c
 
 ## See also 
 
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
@@ -83,6 +83,5 @@ To do so, use the object method to create the variable *vsCurrentRecord*, then c
 | --- | --- |
 | Command number | 627 |
 | Thread safe | no |
-
 
 

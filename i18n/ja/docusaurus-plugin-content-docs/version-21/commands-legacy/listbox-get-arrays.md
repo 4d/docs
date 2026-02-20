@@ -63,7 +63,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](./commands/listbox-get-property)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
 ## プロパティ
@@ -72,6 +72,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 832 |
 | スレッドセーフである | no |
-
 
 

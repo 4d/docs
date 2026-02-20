@@ -20,7 +20,7 @@ Quando é usado, este evento é gerado após cada alteração feita no conteúdo
 - Qualquer entrada de teclado feita pelo usuário; neste caso, o evento `On After Edit` é gerado após os eventos [`On Before Keystroke`](onBeforeKeystroke.md) e [`On After Keystroke`](onAfterKeystroke.md), se eles forem utilizados.
 - Qualquer modificação feita usando um comando de linguagem que simula uma ação do usuário (ou seja, `POST KEY`).
 
-No evento `No After Edit`, os dados de texto sendo inseridos são retornados pelo comando [`Obter texto editado`](./commands/get-edited-text).
+No evento `No After Edit`, os dados de texto sendo inseridos são retornados pelo comando [`Obter texto editado`](../commands-legacy/get-edited-text.md).
 
 ### 4D View Pro
 
@@ -112,4 +112,3 @@ O exemplo acima poderia gerar um objeto evento como este:
 "newValue":"jumped over the lazy dog";
 }
 ```
-

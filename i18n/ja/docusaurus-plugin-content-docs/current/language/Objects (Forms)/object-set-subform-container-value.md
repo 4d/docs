@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form](./commands/form)  
+[Form](../commands/form.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
 
 ## プロパティ
@@ -50,6 +50,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1784 |
 | スレッドセーフである | no |
-
 
 

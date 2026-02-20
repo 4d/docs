@@ -62,4 +62,4 @@ displayed_sidebar: docs
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  
-[WP INSERT FORMULA](./commands/wp-insert-formula)  
+[WP INSERT FORMULA](../commands/wp-insert-formula.md)  

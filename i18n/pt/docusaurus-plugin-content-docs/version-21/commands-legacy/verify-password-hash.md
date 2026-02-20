@@ -35,7 +35,7 @@ Esta função compara a *senha* com um *hash* gerado pela função [Generate pas
 
 ### Gestão de erros 
 
-Os erros abaixo podem ser devolvidos. Pode revisar um erro com os comandos [Last errors](./commands/last-errors)  e [ON ERR CALL](on-err-call.md).  
+Os erros abaixo podem ser devolvidos. Pode revisar um erro com os comandos [Last errors](../commands/last-errors.md)  e [ON ERR CALL](on-err-call.md).  
   
 | **Número** | **Mensagem**                                         |
 | ---------- | ---------------------------------------------------- |
@@ -72,6 +72,5 @@ Este exemplo verifica um hash de senha previamente criado por [Generate password
 | --- | --- |
 | Número do comando | 1534 |
 | Thread-seguro | yes |
-
 
 

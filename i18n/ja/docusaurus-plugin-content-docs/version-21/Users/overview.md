@@ -9,7 +9,7 @@ title: アクセスコントロールの概要
 
 - in multi-user Web and REST applications, access control is based upon [ORDA's Roles and privileges](../ORDA/privileges.md) features.
 - in multi-user desktop applications, you can rely on 4D users and groups,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](./commands/current-system-user).
+- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
 
 :::tip Related Blog post
 
@@ -33,7 +33,7 @@ Single-user applications are desktop applications, deployed with 4D or merged wi
 
 ### ユーザー認証
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](./commands/current-system-user) command, which returns the user who opened the system session. つまり、ユーザー認証は OSレベルに委ねられています。
+To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](../commands-legacy/current-system-user.md) command, which returns the user who opened the system session. つまり、ユーザー認証は OSレベルに委ねられています。
 
 この場合、次のようなコードを使用して、アプリケーション内でアクセスを許可または拒否することができます:
 
@@ -44,7 +44,7 @@ End if
 
 ```
 
-If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](./commands/set-user-alias) command, for example:
+If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command, for example:
 
 ```4d
 SET USER ALIAS(Current system user)

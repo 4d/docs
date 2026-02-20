@@ -46,18 +46,18 @@ Las colecciones deben haber sido instanciadas, de lo contrario intentar leer o m
 
 La instanciación de la colección puede realizarse de una de las siguientes maneras:
 
-- usando el comando [`New collection`](./commands/new-collection)
+- usando el comando [`New collection`](../commands/new-collection.md)
 - utilizando el operador `[]`.
 
 :::info
 
-Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Monitored activity`](./commands/monitored-activity) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
+Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Monitored activity`](../commands-legacy/monitored-activity.md) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
 
 :::
 
 ### Comando `New collection`
 
-El comando [`New collection`](./commands/new-collection) crea una nueva colección vacía o prellenada y devuelve su referencia.
+El comando [`New collection`](../commands/new-collection.md) crea una nueva colección vacía o prellenada y devuelve su referencia.
 
 Ejemplos:
 

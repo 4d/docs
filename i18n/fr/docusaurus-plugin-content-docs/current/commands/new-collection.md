@@ -82,7 +82,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 ## Voir également
 
 [New shared collection](new-shared-collection.md)\
-[Type](./commands/type)
+[Type](../commands-legacy/type.md)
 
 ## Propriétés
 
@@ -90,6 +90,5 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 | ------------------ | ---- |
 | Numéro de commande | 1472 |
 | Thread safe        | oui  |
-
 
 

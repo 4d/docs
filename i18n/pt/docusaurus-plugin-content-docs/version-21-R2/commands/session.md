@@ -69,7 +69,7 @@ For more information on remote user sessions, please refer to the [**Remote user
 
 Todos os processos de procedimento armazenado compartilham a mesma sessão de usuário virtual. O objeto `Session` de procedimentos armazenados está disponível em:
 
-- métodos chamados com o comando [`Execute on server`](./commands/execute-on-server),
+- métodos chamados com o comando [`Execute on server`](../commands-legacy/execute-on-server.md),
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
 For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../Desktop/sessions.md#stored-procedure-sessions) paragraph.
@@ -141,6 +141,5 @@ IP:port/4DACTION/action_Session
 | ----------------- | ---- |
 | Número de comando | 1714 |
 | Thread safe       | sim  |
-
 
 

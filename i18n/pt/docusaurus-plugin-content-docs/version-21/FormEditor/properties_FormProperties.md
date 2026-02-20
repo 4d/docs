@@ -52,7 +52,7 @@ A associação de uma classe ao formulário oferece os seguintes benefícios:
 
 - Você também pode se beneficiar de [recursos de preenchimento automático](../code-editor/write-class-method.md#autocomplete-functions) no editor de código.
 
-- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](./commands/form). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto *formData* como parâmetro para os comandos [`DIALOG`](./commands/dialog), [`Print form`](./commands/print-form), [`FORM LOAD`](./commands/form-load) e [`PRINT SELECTION`](./commands/print-selection).
+- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto *formData* como parâmetro para os comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md) e [`PRINT SELECTION`](../commands-legacy/print-selection.md).
 
 :::note
 
@@ -209,6 +209,5 @@ Você pode usar referências dinâmicas para definir os títulos das janelas dos
 | Nome        | Tipo de dados | Valores possíveis                                      |
 | ----------- | ------------- | ------------------------------------------------------ |
 | windowTitle | string        | O nome da janela como texto simples ou como referência |
-
 
 

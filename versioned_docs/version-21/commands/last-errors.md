@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](./commands/throw) command, if any. 
+<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](../commands-legacy/throw.md) command, if any. 
 
-This command must be called from an on error call method installed by the [ON ERR CALL](./commands/on-err-call) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
+This command must be called from an on error call method installed by the [ON ERR CALL](../commands-legacy/on-err-call.md) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
 
 Each error object contains the following properties:
 
@@ -83,8 +83,8 @@ Each error object contains the following properties:
 
 ## See also 
 
-[ON ERR CALL](./commands/on-err-call)
-[throw](./commands/throw)  
+[ON ERR CALL](../commands-legacy/on-err-call.md)
+[throw](../commands-legacy/throw.md)  
 [Error handling](../Concepts/error-handling.md)
 
 ## Properties
@@ -93,6 +93,5 @@ Each error object contains the following properties:
 | --- | --- |
 | Command number | 1799 |
 | Thread safe | yes |
-
 
 

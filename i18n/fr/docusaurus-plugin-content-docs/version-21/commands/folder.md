@@ -73,8 +73,8 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 [classe `4D.Folder`](../API/FolderClass.md)
 [File](file.md)\
-[Object to path](./commands/object-to-path)\
-[Path to object](./commands/path-to-object)
+[Object to path](../commands-legacy/object-to-path.md)\
+[Path to object](../commands-legacy/path-to-object.md)
 
 ## Propriétés
 
@@ -82,6 +82,5 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 | ------------------ | ---- |
 | Numéro de commande | 1567 |
 | Thread safe        | oui  |
-
 
 

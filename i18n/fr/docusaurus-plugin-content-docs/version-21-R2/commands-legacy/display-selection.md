@@ -73,7 +73,7 @@ L'exemple suivant sélectionne tous les enregistrements de la table \[Personnes\
 
 ## Exemple 2 
 
-Reportez-vous à l'exemple n°6 de la commande [Form event code](./commands/form-event-code) ; il indique tous les tests que vous pourrez avoir besoin d'effectuer pour surveiller la totalité des événements intervenant pendant l'exécution de la commande **DISPLAY SELECTION**. 
+Reportez-vous à l'exemple n°6 de la commande [Form event code](../commands/form-event-code.md) ; il indique tous les tests que vous pourrez avoir besoin d'effectuer pour surveiller la totalité des événements intervenant pendant l'exécution de la commande **DISPLAY SELECTION**. 
 
 ## Exemple 3 
 
@@ -103,7 +103,7 @@ Vous pouvez aussi utiliser d'autres commandes telles que [PRINT SELECTION](print
 
 ## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *Présentation des ensembles*  
 
@@ -114,6 +114,5 @@ Vous pouvez aussi utiliser d'autres commandes telles que [PRINT SELECTION](print
 | Numéro de commande | 59 |
 | Thread safe | no |
 | Interdite sur le serveur ||
-
 
 

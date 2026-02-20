@@ -30,19 +30,19 @@ displayed_sidebar: docs
 **CANCEL** コマンドは以下の目的で、フォームあるいはオブジェクトメソッド (またはそこから呼ばれるサブルーチンで) 使用されます:
 
 * [ADD RECORD](add-record.md) 、[MODIFY RECORD](modify-record.md) を使用して開始されたレコードのデータ新規あるいは更新入力をキャンセルする。
-* [DIALOG](./commands/dialog) コマンドで表示されたフォームをキャンセルする。
+* [DIALOG](../commands/dialog.md) コマンドで表示されたフォームをキャンセルする。
 * [DISPLAY SELECTION](display-selection.md) や [MODIFY SELECTION](modify-selection.md) でレコードセレクションを表示したフォームを閉じる。
-* [Print form](./commands/print-form) コマンドで印刷されようとしているフォームの印刷をキャンセルする (後述)。
+* [Print form](../commands/print-form.md) コマンドで印刷されようとしているフォームの印刷をキャンセルする (後述)。
 
 <!--REF #_command_.CANCEL.Summary-->データ入力のコンテキストで、**CANCEL** はキャンセルキー (**Esc**) を押したのと同じ動作をします。<!-- END REF-->
 
 **CANCEL** は一般的にメニューコマンド選択結果として実行されます。また**CANCEL** は"アクションなし"ボタンのオブジェクトメソッドで使用されます。
 
-また[Open window](./commands/open-window) コマンドのオプションのクローズボックスメソッドでもしばしば使用されます。ウィンドウ上にコントロールメニューボックスがあれば、コントロールメニューボックスをクリックまたは閉じるメニューコマンドが選択されたときに実行されるメソッド中で[ACCEPT](accept.md) または **CANCEL** を呼び出すことができます。
+また[Open window](../commands/open-window.md) コマンドのオプションのクローズボックスメソッドでもしばしば使用されます。ウィンドウ上にコントロールメニューボックスがあれば、コントロールメニューボックスをクリックまたは閉じるメニューコマンドが選択されたときに実行されるメソッド中で[ACCEPT](accept.md) または **CANCEL** を呼び出すことができます。
 
 **CANCEL** を実行待ちのキューに追加することはできません。イベントへのレスポンスとしてメソッド中で2つの**CANCEL** コマンドを実行しても、1回実行したのと同じ効果しかありません。
 
-最後に、このコマンドは[Print form](./commands/print-form) コマンド使用時にOn Printing Detail フォームイベントで使用できます。このコンテキストでは、**CANCEL** コマンドは印刷しようとしていたフォームの印刷を一時的に停止し、次のページから再開します。このメカニズムは印刷スペースがなくなったときや、ページブレークが必要な時に使用できます。
+最後に、このコマンドは[Print form](../commands/print-form.md) コマンド使用時にOn Printing Detail フォームイベントで使用できます。このコンテキストでは、**CANCEL** コマンドは印刷しようとしていたフォームの印刷を一時的に停止し、次のページから再開します。このメカニズムは印刷スペースがなくなったときや、ページブレークが必要な時に使用できます。
 
 **Note:** この処理はすべての印刷待ちフォームをキャンセルする[PAGE BREAK](page-break.md)(\*) コマンドとは動作が異なります。
 
@@ -62,7 +62,7 @@ CANCELコマンドが実行される (フォームや印刷がキャンセルさ
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
 ## プロパティ
 
@@ -71,6 +71,5 @@ CANCELコマンドが実行される (フォームや印刷がキャンセルさ
 | コマンド番号 | 270 |
 | スレッドセーフである | no |
 | システム変数を更新する | OK |
-
 
 

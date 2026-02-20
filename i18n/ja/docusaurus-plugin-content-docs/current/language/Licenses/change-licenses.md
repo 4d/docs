@@ -50,7 +50,7 @@ CHANGE LICENSES は、顧客に配付されたコンパイル済みのシング�
 
 ## 参照 
 
-[License info](./commands/license-info)  
+[License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
 ## プロパティ
@@ -60,6 +60,5 @@ CHANGE LICENSES は、顧客に配付されたコンパイル済みのシング�
 | コマンド番号 | 637 |
 | スレッドセーフである | no |
 | サーバー上での使用は不可 ||
-
 
 

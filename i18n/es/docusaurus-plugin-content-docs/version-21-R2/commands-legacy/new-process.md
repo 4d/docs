@@ -64,7 +64,7 @@ El parámetro *pila*, le permite indicar la cantidad de memoria asignada para la
 
 ### Nombre del proceso 
 
- Pase el nombre del nuevo proceso en *nombre*. Este nombre aparecerá en la lista de procesos del Explorador de ejecución y será devuelto por el comando [Process info](./commands/process-info) cuando se aplica a este nuevo proceso. Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena vacía.
+ Pase el nombre del nuevo proceso en *nombre*. Este nombre aparecerá en la lista de procesos del Explorador de ejecución y será devuelto por el comando [Process info](../commands/process-info.md) cuando se aplica a este nuevo proceso. Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena vacía.
 
 ### Parámetros del método proceso 
 
@@ -136,6 +136,5 @@ En el editor de barras de menús, puede reemplazar ADD CUSTOMERS por el método 
 | --- | --- |
 | Número de comando | 317 |
 | Hilo seguro | yes |
-
 
 

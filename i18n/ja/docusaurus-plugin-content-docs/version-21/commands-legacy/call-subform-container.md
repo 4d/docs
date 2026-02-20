@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
 
 ## プロパティ
@@ -48,6 +48,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1086 |
 | スレッドセーフである | no |
-
 
 

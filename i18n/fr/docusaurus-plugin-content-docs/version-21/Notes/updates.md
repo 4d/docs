@@ -24,8 +24,8 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fr/whats-new-in-4d-21lt
 - L'étape d'activation du produit 4D a été simplifiée et automatisée lors de la [connexion](../GettingStarted/Installation.md#sign-in).
 - Composant 4D AIKit : nouvelles fonctionnalités pour [invoquer un outil spécifique automatiquement](../aikit/Classes/OpenAIChatHelper.md#registertool) et [spécifier un format de réponse](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format).
 - Langage 4D :
-  - Nouvelles commandes "trim" pour supprimer les espaces de début et de fin d'une chaîne : [`Trim`](./commands/trim), [`Trim start`](./commands/trim-start), et [`Trim end`](./commands/trim-end).
-  - Les commandes [`Num`](./commands/num) et [`String`](./commands/string) ont été mises à jour pour prendre en charge des conversions dans différentes bases (radix).
+  - Nouvelles commandes "trim" pour supprimer les espaces de début et de fin d'une chaîne : [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), et [`Trim end`](../commands/trim-end.md).
+  - Les commandes [`Num`](../commands/num.md) et [`String`](../commands/string.md) ont été mises à jour pour prendre en charge des conversions dans différentes bases (radix).
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21) : liste de tous les bugs qui ont été corrigés dans 4D 21.
 - [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes) : les nouveautés de Qodly Studio.
 
@@ -41,10 +41,10 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fr/whats-new-in-4d-21lt
 - Serveur Web :
   - la prise en charge des URLs dépréciés `4DSYNC/` et `4DCGI/` est supprimée. Plus aucun traitement spécifique n'est effectué sur ces URLs,
   - les process web ne sont plus recyclés lorsque l'option [sessions extensibles](../WebServer/sessions.md#enabling-web-sessions) est activée.
-- Les sessions utilisateurs Web sont désormais renvoyées par [`Process activity`](./commands/process-activity).
+- Les sessions utilisateurs Web sont désormais renvoyées par [`Process activity`](../commands/process-activity.md).
 - Les commandes PHP sont désormais [dépréciées](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) et ne doivent plus être utilisées dans vos développements.
-- La commande [`HIGHLIGHT TEXT`](./commands/highlight-text) est maintenant prise en charge dans le contexte des sous-formulaires.
-- En client/serveur, la notion de process local est supprimée. Le "$" n'a plus de signification spécifique dans les noms de process et le paramètre \* dans [`REGISTER CLIENT`](./commands/register-client) est ignoré.
+- La commande [`HIGHLIGHT TEXT`](../commands/highlight-text) est maintenant prise en charge dans le contexte des sous-formulaires.
+- En client/serveur, la notion de process local est supprimée. Le "$" n'a plus de signification spécifique dans les noms de process et le paramètre \* dans [`REGISTER CLIENT`](../commands/register-client) est ignoré.
 - **Les composants ne sont plus intégrés** : à partir de 4D 21, les composants développés par 4D (4D NetKit, 4D SVG..., voir [cette liste](../Extensions/overview.md#components-developed-by-4d)) ne sont plus intégrés dans l'application 4D. Lors de la mise à jour d'un projet vers 4D 21 ou supérieur, une boîte de dialogue s'affiche :<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
   \- **Import**/**Importer** : importer automatiquement les composants 4D comme dépendances du projet<br/>
@@ -66,18 +66,18 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fe-whats-new-in-4d-
 - Gestion des [événements ORDA sur les données](../ORDA/orda-events.md).
 - Nouvelle option `connectionTimeout` dans le paramètre [`options`](../API/TCPConnectionClass.md#options-parameter) de la fonction [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - Nouvelle classe [`4D.Vector`](../API/VectorClass.md) pour traiter et comparer des vecteurs, généralement calculés par des IA.
-- Nouvelles options pour générer des UUIDs en **version 7** pour les [champs 4D automatiques](../settings/database.md#auto-uuid-version) et la commande [`Generate UUID`](./commands/generate-uuid).
+- Nouvelles options pour générer des UUIDs en **version 7** pour les [champs 4D automatiques](../settings/database.md#auto-uuid-version) et la commande [`Generate UUID`](../commands/generate-uuid).
 - Nouvelles classes [`UDPSocket`](../API/UDPSocketClass.md) et [`UDPEvent`](../API/UDPEventClass.md) pour envoyer des données en utilisant des sockets UDP. Prise en charge de la journalisation détaillée des événements UDP dans le fichier journal [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) (anciennement nommé `4DTCPLog.txt`).
 - Nouvelles fonctions [`.promote()`](../API/SessionClass.md#promote) et [`.demote()`](../API/SessionClass.md#demote) dans la [classe Session](../API/SessionClass.md) pour ajouter/supprimer dynamiquement des privilèges dans un process web.
-- [Sélection automatique des licences à intégrer](../Desktop/building.md#application-automatically-embedding-available-licenses) dans la boîte de dialogue du Générateur d'application, modification de la commande [`Create deployment license`](./commands/create-deployment-license), nouvelle clé xml BuildApplication [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html).
+- [Sélection automatique des licences à intégrer](../Desktop/building.md#application-automatically-embedding-available-licenses) dans la boîte de dialogue du Générateur d'application, modification de la commande [`Create deployment license`](../commands/create-deployment-license.md), nouvelle clé xml BuildApplication [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html).
 - Sécurité renforcée pour le copier/coller de formules dans [4D Write Pro](../WritePro/managing-formulas.md) et les [zones de texte stylées](../FormObjects/input_overview.md) : les formules copiées depuis l'extérieur de l'application 4D en cours sont désormais toujours collées en tant que valeurs uniquement.
 - Composant 4D AIKit : nouvelle classe [OpenAIEmbeddingsAPI](../aikit/Classes/OpenAIEmbeddingsAPI.md) pour créer des embeddings à l'aide de l'API OpenAI.
 - Vous pouvez [associer une classe](../Develop/field-properties.md) à un champ objet dans l'éditeur de structure.
 - Gestion automatique des [dépendances récursives](../Project/components.md#automatic-dependency-resolution).
 - Langage 4D :
-  - Pour des raisons de cohérence, les commandes [`Create entity selection`](./commands/create-entity-selection) et [`USE ENTITY SELECTION`](./commands/use-entity-selection) ont été déplacées du thème ["4D Environnement"](./commands/theme/4D_Environment) vers le thème ["Sélections"](./commands/theme/Selection).
-  - Nouvelles commandes [`OBJET SET DATA SOURCE FORMULA`](./commands/object-set-data-source-formula) et [`OBJECT Get data source formula`](./commands/object-get-data-source-formula) pour assigner et lire les objets `Formula` comme sources de données pour les objets de formulaire.
-  - [`LISTBOX SET PROPERTY`](./commands/listbox-set-property) et [`LISTBOX Get property`](./commands/listbox-get-property) prennent en charge trois nouvelles constantes : `lk current item`, `lk current item position`, et `lk selected items expression`.
+  - Pour des raisons de cohérence, les commandes [`Create entity selection`](../commands/create-entity-selection.md) et [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) ont été déplacées du thème ["4D Environnement"](../commands/theme/4D_Environment.md) vers le thème ["Sélections"](../commands/theme/Selection.md).
+  - Nouvelles commandes [`OBJET SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) et [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) pour assigner et lire les objets `Formula` comme sources de données pour les objets de formulaire.
+  - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) et [`LISTBOX Get property`](../commands/listbox-get-property.md) prennent en charge trois nouvelles constantes : `lk current item`, `lk current item position`, et `lk selected items expression`.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R10) : liste de tous les bugs qui ont été corrigés dans 4D 20 R10.
 
 #### Changements de comportement
@@ -86,7 +86,7 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fe-whats-new-in-4d-
 - La bibliothèque *MeCab* a été supprimée. Cette modification n'affecte que le traitement du texte japonais.
 - Lorsqu'une variable objet ou un paramètre objet est déclaré(e) avec un type ["cs" class](../Concepts/classes.md#cs), son affectation à une instance d'objet d'une classe différente génère désormais une erreur de syntaxe.
 - [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) renvoie True pour les privilèges promus dans le process web.
-- La commande [`Time`](./commands/time) renvoie désormais une expression temporelle négative lorsque le paramètre *timeValue* est négatif. Par exemple, `Time("-01:02:03")` renverra **-01:02:03**. Dans les versions précédentes, le signe moins était ignoré.
+- La commande [`Time`](../commands/time) renvoie désormais une expression temporelle négative lorsque le paramètre *timeValue* est négatif. Par exemple, `Time("-01:02:03")` renverra **-01:02:03**. Dans les versions précédentes, le signe moins était ignoré.
 
 ### 4D 20 R9
 
@@ -98,9 +98,9 @@ Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Prise en charge des [tokens de session](../WebServer/sessions.md#session-token-otp) gérés avec les nouvelles fonctions [`Session.createOTP()`](../API/SessionClass.md#createotp) et [`Session.restore()`](../API/SessionClass.md#restore).
 - L'assistant d'étiquettes utilise maintenant l'éditeur de formules pour ajouter ou éditer des formules dans la [zone de construction du modèle](../Desktop/labels.md#label-preview).
 - Nouvelle classe [`TCPListener`](../API/TCPListenerClass.md) pour créer des connexions à un serveur TCP ; nouvelles propriétés dans les classes associées : `address`, `listener` et `port` dans la classe [`TCPConnection`](../API/TCPConnectionClass.md), `address` et `port` dans la classe [`TCPEvent`](../API/TCPEventClass.md).
-- Les commandes et constantes obsolètes génèrent maintenant des warnings spécifiques dans le [live checker et le compilateur](../code-editor/write-class-method.md#warnings-and-errors). Vous pouvez savoir si une commande est obsolète en utilisant la commande [`Command name`](./commands/command-name).
-- Nouvelles commandes [WA SET CONTEXT](./commands/wa-set-context) et [WA Get context](./commands/wa-get-context) pour contrôler le contenu de [$4d](../FormObjects/webArea_overview.md#4d-object) dans les zones web.
-- Nouveau paramètre de base de données [`RDP optimization`](./commands/set-database-parameter.md#rdp-optimization-133) pour optimiser par exemple le presse-papiers partagé lors de l'utilisation du protocole de bureau distant avec 4D.
+- Les commandes et constantes obsolètes génèrent maintenant des warnings spécifiques dans le [live checker et le compilateur](../code-editor/write-class-method.md#warnings-and-errors). Vous pouvez savoir si une commande est obsolète en utilisant la commande [`Command name`](../commands/command-name.md).
+- Nouvelles commandes [WA SET CONTEXT](../commands/wa-set-context.md) et [WA Get context](../commands/wa-get-context.md) pour contrôler le contenu de [$4d](../FormObjects/webArea_overview.md#4d-object) dans les zones web.
+- Nouveau paramètre de base de données [`RDP optimization`](../commands-legacy/set-database-parameter.md#rdp-optimization-133) pour optimiser par exemple le presse-papiers partagé lors de l'utilisation du protocole de bureau distant avec 4D.
 - Les composants interprétés peuvent maintenant être [édités depuis le projet hôte](../Extensions/develop-components.md#editing-components).
 - Les [licenses](../Admin/licenses.md) sont maintenant automatiquement actualisées au démarrage.
 - Nouveau [composant 4D AIkit](../aikit/overview.md) permettant l'interaction avec les API IA tierces.
@@ -117,7 +117,7 @@ Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fe-whats-new-in-4d-2
 
 - Implémentez votre propre [**gestionnaire de requêtes HTTP**](../WebServer/http-request-handler.md) en utilisant la nouvelle classe [`4D.IncomingMessage`](../API/IncomingMessageClass.md).
 - Les expressions utilisées dans [les propriétés des objets de formulaire](../FormObjects/properties_Reference.md) bénéficient maintenant de la vérification syntaxique dans la [liste des propriétés](../FormEditor/formEditor.md#property-list) et dans le [Compilateur](../Project/compiler.md#check-syntax).
-- Vous pouvez [associer une classe à un formulaire](../FormEditor/properties_FormProperties.md#form-class) pour activer le type-ahead et l'instanciation automatique des données de formulaire lors de l'utilisation de la commande [`Form`](./commands/form).
+- Vous pouvez [associer une classe à un formulaire](../FormEditor/properties_FormProperties.md#form-class) pour activer le type-ahead et l'instanciation automatique des données de formulaire lors de l'utilisation de la commande [`Form`](../commands/form.md).
 - Prise en charge de [sessions autonomes](../API/SessionClass.md) pour simplifier le développement en local d'applications client/serveur.
 - [débogueur 4D](../Debugging/debugger.md) : nouveau design, nouvelles fonctions de sauvegarde automatique et de mode d'affichage.
 - [Nouvelle architecture des composants générés](../Desktop/building.md#build-component) pour une meilleure conformité avec les directives de notarisation d'Apple.
@@ -130,13 +130,13 @@ Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fe-whats-new-in-4d-2
   - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), et [WP Insert break](../WritePro/commands/wp-insert-break.md), sont maintenant des fonctions qui retournent des plages.
   - Nouvelles expressions liées aux attributs de documents : [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) et [This.pageIndex](../WritePro/managing-formulas.md).
 - Langage 4D :
-  - Commande modifiée : [`FORM EDIT`](./commands/form-edit)
+  - Commande modifiée : [`FORM EDIT`](../commands/form-edit.md)
   - Les fonctions [`.sign()`](../API/CryptoKeyClass.md#sign) et [`.verify()`](../API/CryptoKeyClass.md#verify) de la [classe 4D.CryptoKey](../API/CryptoKeyClass.md) prennent en charge des Blobs dans le paramètre *message*.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R8) : liste de tous les bugs qui ont été corrigés dans 4D 20 R8.
 
 #### Changements de comportement
 
-- Après une modification du fichier journal en utilisant [`SELECT LOG FILE`](./commands/select-log-file) ou les [paramètres de sauvegarde](../Backup/settings.md#log-management), la commande [`New log file`](./commands/new-log-file) valide maintenant le changement, sans attendre une sauvegarde. L'erreur -4447 (sauvegarde requise) n'est plus générée.
+- Après une modification du fichier journal en utilisant [`SELECT LOG FILE`](../commands/select-log-file.md) ou les [paramètres de sauvegarde](../Backup/settings.md#log-management), la commande [`New log file`](../commands/new-log-file.md) valide maintenant le changement, sans attendre une sauvegarde. L'erreur -4447 (sauvegarde requise) n'est plus générée.
 - En raison de leur [nouvelle architecture](../Desktop/building.md#build-component), les composants construits avec 4D 20 R8 et suivantes ne peuvent pas être installés dans les versions 4D précédentes.
 
 ### 4D 20 R7
@@ -156,9 +156,9 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Nouvelles clés Build Application pour que les applications 4D distantes valident les [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.fe.html) et/ou les [domaines](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.fe.html) des autorités de certification des serveurs.
 - Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
 - Langage 4D :
-  - Nouvelles commandes : [Process info](./commands/process-info), [Session info](./commands/session-info), [SET WINDOW DOCUMENT ICON](./commands/set-window-document-icon)
-  - Commandes modifiées : [Process activity](./commands/process-activity), [Process number](./commands/process-number)
-  - Commandes obsolètes (remplacement) : `GET LAST ERROR STACK` ([Last errors](./commands/last-errors)), `GET SERIAL INFORMATION` ([License info](./commands/license-info)), `PROCESS PROPERTIES` ([Process info](./commands/process-info)), `SET SCREEN DEPTH`, commandes `C_XXX` ([var](../Concepts/variables.md#declaring-variables) et déclarations [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters)). Les commandes obsolètes sont précédées du préfixe "\*o\*".
+  - Nouvelles commandes : [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
+  - Commandes modifiées : [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
+  - Commandes obsolètes (remplacement) : `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md)), `GET SERIAL INFORMATION` ([License info](../commands/license-info.md)), `PROCESS PROPERTIES` ([Process info](../commands/process-info.md)), `SET SCREEN DEPTH`, commandes `C_XXX` ([var](../Concepts/variables.md#declaring-variables) et déclarations [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters)). Les commandes obsolètes sont précédées du préfixe "\*o\*".
 - 4D Write Pro :
   - Nouvelle commande : [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - Commandes modifiées : [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
@@ -166,8 +166,8 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fe-whats-new-in-4d-2
 
 #### Changements de comportement
 
-- Les documentations du [Langage 4D](./commands/command-index) et du [Langage 4D Write Pro](../WritePro/commands/command-index.md) sont maintenant entièrement disponibles sur developer.4d.com. Découvrez toutes les nouvelles fonctionnalités et les modifications concernant ces documentations dans cette release note.
-- La commande [`File`](./commands/file) (ainsi que [`4D.File.new()`](../API/FileClass.md#4dfilenew)) est plus stricte lorsqu'il s'agit de vérifier la syntaxe du *path* fourni en paramètre.
+- Les documentations du [Langage 4D](../commands/command-index.md) et du [Langage 4D Write Pro](../WritePro/commands/command-index.md) sont maintenant entièrement disponibles sur developer.4d.com. Découvrez toutes les nouvelles fonctionnalités et les modifications concernant ces documentations dans cette release note.
+- La commande [`File`](../commands/file.md) (ainsi que [`4D.File.new()`](../API/FileClass.md#4dfilenew)) est plus stricte lorsqu'il s'agit de vérifier la syntaxe du *path* fourni en paramètre.
 - L'action de [permission](../ORDA/privileges.md#permission-actions) **describe** a été supprimée des actions disponibles. L'accès aux urls [`/rest/$catalog`](../REST/$catalog.md) n'est plus contrôlé. Les privilèges *describe* des sessions sont désormais ignorés.
 
 ### 4D 20 R6
@@ -187,7 +187,7 @@ Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Nouvelle [API `$singleton`](../REST/$singleton.md) pour appeler les fonctions singleton exposées depuis REST et nouveaux [privilèges associés](../ORDA/privileges.md).
 - Un [nouveau bouton de paramètre](../settings/web.md#activer-la-validation-dauthentification-rest-avec-la-fonction-dsauthentify) vous aide à mettre à niveau votre projet pour utiliser le mode REST "connexion forcée" (la méthode base `On REST Authentication` est maintenant obsolète).
 - Un [nouvel onglet de paramètres](../Project/compiler.md#warnings) vous permet de définir la génération de warnings de manière globale.
-- Plusieurs commandes, principalement du thème "Environnement 4D", sont maintenant thread-safe, ainsi que quelques sélecteurs des commandes [`SET DATABASE PARAMETER`](./commands/set-database-parameter)/[`Get database parameter`](./commands/get-database-parameter).
+- Plusieurs commandes, principalement du thème "Environnement 4D", sont maintenant thread-safe, ainsi que quelques sélecteurs des commandes [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md).
 - Nouveau [composant 4D-QPDF](https://github.com/4d/4D-QPDF) qui fournit la commande `PDF Get attachments` pour extraire les pièces jointes d'un document PDF/A3.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R6) : liste de tous les bugs qui ont été corrigés dans 4D 20 R6.
 
@@ -210,7 +210,7 @@ Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Prise en charge de l'[initialisation d'une propriété de classe dans sa ligne de déclaration](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
 - Nouveau [mode de connexion force login pour les requêtes REST](../REST/authUsers.md#force-login-mode) avec une [prise en charge spécifique dans Qodly Studio for 4D](\(developer.4d.com/qodly/4DQodlyPro/force-login\)).
 - Nouveau paramètre REST [$format](../REST/$format.md).
-- L'objet [`Session`](./commands/session) est maintenant disponible pour les sessions utilisateur à distance et les procédures stockées.
+- L'objet [`Session`](../commands/session.md) est maintenant disponible pour les sessions utilisateur à distance et les procédures stockées.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R5) : liste de tous les bugs qui ont été corrigés dans 4D 20 R5.
 
 #### Changements de comportement
@@ -231,7 +231,7 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fe-whats-new-in-4d-v
 - Les paramètres de méthode déclarés dans les prototypes `#DECLARE` ne sont [plus nécessaires dans les méthodes "Compiler_"](../Concepts/parameters.md).
 - Prise en charge des [formats de date et d'heure personnalisés](../Project/date-time-formats.md)
 - Nouveau mot-clé [`Try(expression)`](../Concepts/error-handling.md#tryexpression) pour gérer les cas d'erreur simples.
-- Nouvelle commande [`HTTP Parse message`](./commands/http-parse-message).
+- Nouvelle commande [`HTTP Parse message`](../commands/http-parse-message.md).
 - Nouvelle option de compatibilité [Impression non bloquante](../settings/compatibility.md).
 - Nouveau [mode édition](../Admin/dataExplorer.md#editing-data) dans le Data Explorer.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R4) : liste de tous les bugs qui ont été corrigés dans 4D 20 R4.
@@ -241,7 +241,7 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fe-whats-new-in-4d-v
 - L'utilisation d'une ancienne syntaxe pour la déclaration des paramètres (par exemple `C_TEXT($1)` ou `var $1 : Text`) est maintenant dépréciée et génère des warnings lors du typage du code, de la vérification syntaxique et de la compilation.
 - La cohérence des sélections est désormais préservée lorsque certains enregistrements sont supprimés puis d'autres créés (voir [ce billet de blog](https://blog.4d.com/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/)).
 - Dans la mise à jour de la [bibliothèque OpenSSL](#library-table-4d-21-lts), le niveau de sécurité SSL/TLS par défaut a été modifié de 1 à 2. Les clés RSA, DSA et DH de 1024 bits et plus et de moins de 2048 bits ainsi que les clés ECC de 160 bits et plus et de moins de 224 bits ne sont plus autorisées. Par défaut, la compression TLS était déjà désactivée dans les versions précédentes d'OpenSSL. Au niveau de sécurité 2, il ne peut pas être activé.
-- Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Afin de permettre la vérification du mot de passe lorsque [l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande [`Open datastore`](./commands/open-datastore) est maintenant envoyée en clair par défaut. Dans certains cas spécifiques, l'option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande [`Open datastore`](./commands/open-datastore)).
+- Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Afin de permettre la vérification du mot de passe lorsque [l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore.md) est maintenant envoyée en clair par défaut. Dans certains cas spécifiques, l'option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande [`Open datastore`](../commands/open-datastore.md)).
 
 ### 4D 20 R3
 
@@ -250,7 +250,7 @@ Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fe-whats-new-in-4d-v
 #### Points forts
 
 - Nouvelle fonction [`collection.multiSort`](../API/CollectionClass.md#multisort).
-- Prise en charge du paramètre *context* dans [`Formula from string`](./commands/formula-from-string).
+- Prise en charge du paramètre *context* dans [`Formula from string`](../commands/formula-from-string.md).
 - Prise en charge de la propriété `headers` dans le paramètre *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Marqueur de modification global](../ORDA/global-stamp.md) pour faciliter la mise en œuvre de modules de synchronisation des données. Nouvelles fonctions : [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) et [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
 - L'assignation de références de fichiers à des attributs picture/blob est [prise en charge dans ORDA](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes).
@@ -262,7 +262,7 @@ Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fe-whats-new-in-4d-v
 
 #### Changements de comportement
 
-- Certaines erreurs ne pouvaient être interceptées par votre [méthode de gestion des erreurs](../Concepts/error-handling.md) qu'en mode interprété. Une correction a été apportée, de sorte que les erreurs suivantes seront désormais également détectées en mode compilé : *Indice hors de l'intervalle*, *Type incompatible*, et *Déréférencement d'un pointeur Null*. Cependant, pour de telles erreurs sur les processeurs Intel, la procédure est toujours interrompue comme auparavant, alors que sur les processeurs Apple Silicon, la procédure n'est interrompue que si vous appelez la commande [`ABORT`](./commands/abort).
+- Certaines erreurs ne pouvaient être interceptées par votre [méthode de gestion des erreurs](../Concepts/error-handling.md) qu'en mode interprété. Une correction a été apportée, de sorte que les erreurs suivantes seront désormais également détectées en mode compilé : *Indice hors de l'intervalle*, *Type incompatible*, et *Déréférencement d'un pointeur Null*. Cependant, pour de telles erreurs sur les processeurs Intel, la procédure est toujours interrompue comme auparavant, alors que sur les processeurs Apple Silicon, la procédure n'est interrompue que si vous appelez la commande [`ABORT`](../commands-legacy/abort.md).
 - 4D n'inclut plus d'interpréteur PHP interne. Vous devez [configurer et exécuter votre propre interpréteur PHP](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) pour utiliser les commandes PHP.
 
 ### 4D 20 R2
@@ -308,5 +308,3 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                       |
 | Xerces       | 3.3.0  | **21**              | Utilisé pour les commandes XML                                                                                                                        |
 | Zlib         | 1.3.1  | **21**              |                                                                                                                                                       |
-
-

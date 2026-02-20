@@ -41,14 +41,14 @@ To create a trigger for a table, click on the **Edit...** button in the Inspecto
 
 If this option is selected, the trigger will be invoked each time a record of the table is modified. This happens when:
 
-- Modifying a record in data entry (Design environment, [`MODIFY RECORD`](./commands/modify-record) command or the SQL `UPDATE` command).
-- Saving an already existing record using [`SAVE RECORD`](./commands/save-record).
-- Calling any other commands that save existing records (i.e., [`ARRAY TO SELECTION`](./commands/array-to-selection), [`APPLY TO SELECTION`](./commands/apply-to-selection), etc.).
+- Modifying a record in data entry (Design environment, [`MODIFY RECORD`](../commands/modify-record) command or the SQL `UPDATE` command).
+- Saving an already existing record using [`SAVE RECORD`](../commands/save-record).
+- Calling any other commands that save existing records (i.e., [`ARRAY TO SELECTION`](../commands/array-to-selection), [`APPLY TO SELECTION`](../commands/apply-to-selection), etc.).
 - Using an ORDA function that saves the entity.
 
 :::note
 
-For optimization reasons, the trigger is not called when the record is saved by the user or via the [`SAVE RECORD`](./commands/save-record) command if no field in the table has been modified in the record. If you want to "force" the calling of the trigger in this case, you can simply assign a field to itself:
+For optimization reasons, the trigger is not called when the record is saved by the user or via the [`SAVE RECORD`](../commands/save-record) command if no field in the table has been modified in the record. If you want to "force" the calling of the trigger in this case, you can simply assign a field to itself:
 
 ```4d
 [thetable]thefield:=[thetable]thefield
@@ -60,13 +60,13 @@ For optimization reasons, the trigger is not called when the record is saved by 
 
 If this option is selected, the trigger will be invoked each time a record of the table is deleted. This happens when:
 
-- Deleting a record (Design environment or calling [`DELETE RECORD`](./commands/delete-record), [`DELETE SELECTION`](./commands/delete-selection) or the SQL `DELETE` command).
+- Deleting a record (Design environment or calling [`DELETE RECORD`](../commands/delete-record), [`DELETE SELECTION`](../commands/delete-selection) or the SQL `DELETE` command).
 - Performing any operation that provokes deletion of related records through the deletion control options of a relation.
 - Using an ORDA function that deletes the entity.
 
 :::note
 
-The [`TRUNCATE TABLE`](./commands/trucate-table) command does NOT call the trigger.
+The [`TRUNCATE TABLE`](../commands/trucate-table) command does NOT call the trigger.
 
 :::
 
@@ -74,18 +74,18 @@ The [`TRUNCATE TABLE`](./commands/trucate-table) command does NOT call the trigg
 
 If this option is selected, the trigger will be invoked each time a record is added to the table. This happens when:
 
-- Adding a record in data entry (Design environment, [`ADD RECORD`](./commands/add-record) command or the SQL `INSERT` command).
-- Creating and saving a record with [`CREATE RECORD`](./commands/create-record) and [`SAVE RECORD`](./commands/save-record). Note that the trigger is invoked at the moment you call [`SAVE RECORD`](./commands/save-record), not when it is created.
+- Adding a record in data entry (Design environment, [`ADD RECORD`](../commands/add-record) command or the SQL `INSERT` command).
+- Creating and saving a record with [`CREATE RECORD`](../commands/create-record) and [`SAVE RECORD`](../commands/save-record). Note that the trigger is invoked at the moment you call [`SAVE RECORD`](../commands/save-record), not when it is created.
 - Importing records (Design environment or using an import command).
-- Calling any other commands that create and/or save new records (i.e., [`ARRAY TO SELECTION`](./commands/array-to-selection), [`SAVE RELATED ONE`](./commands/save-related-one), etc.).
+- Calling any other commands that create and/or save new records (i.e., [`ARRAY TO SELECTION`](../commands/array-to-selection), [`SAVE RELATED ONE`](../commands/save-related-one), etc.).
 - Using ORDA functions such as [`ds.dataclass.new()`](../API/DataClassClass.md#new) and [`entity.save()`](../API/EntityClass.md#save).
 
 
 ## Database events
 
-A trigger can be invoked for one of the three database events described above. Within the trigger, you detect which event is occurring by calling the [`Trigger event`](./commands/trigger-event) command. This function returns a numeric value that denotes the database event.
+A trigger can be invoked for one of the three database events described above. Within the trigger, you detect which event is occurring by calling the [`Trigger event`](../commands/trigger-event) command. This function returns a numeric value that denotes the database event.
 
-Typically, you write a trigger with a [`Case of` structure](../Concepts/flow-control.md#case-ofelseend-case) on the result returned by [`Trigger event`](./commands/trigger-event). 
+Typically, you write a trigger with a [`Case of` structure](../Concepts/flow-control.md#case-ofelseend-case) on the result returned by [`Trigger event`](../commands/trigger-event). 
 
 ```4d
   //Trigger for [anyTable]
@@ -206,7 +206,7 @@ At the process level, you handle trigger errors the same way you handle database
 :::note Notes
 
 - During data entry, if a trigger error is returned while attempting to validate or delete a record, the error is handled like a unique indexed error. The error dialog is displayed, and you stay in data entry. Even if you use a database in the Design environment (not in the Application environment), you have the benefit of using triggers.
-- When an error is generated by a trigger for a record within the framework of a command acting on a selection of records ([`DELETE SELECTION`](./commands/delete-selection), [`APPLY TO SELECTION`](./commands/apply-to-selection), [`ARRAY TO SELECTION`](./commands/array-to-selection)...), the record is not processed but is automatically registered in the [`LockedSet` of the process](../Develop/processes.md#elements-of-a-process). The command continues its execution until the end and no error can be catched. The error-handling method, if any, is not called. To know if errors have been generated in this context, you need to test the `LockedSet` just after the command call. Also, in the trigger, you have to store error codes, for example in a collection, and handle them afterwards. 
+- When an error is generated by a trigger for a record within the framework of a command acting on a selection of records ([`DELETE SELECTION`](../commands/delete-selection), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`ARRAY TO SELECTION`](../commands/array-to-selection)...), the record is not processed but is automatically registered in the [`LockedSet` of the process](../Develop/processes.md#elements-of-a-process). The command continues its execution until the end and no error can be catched. The error-handling method, if any, is not called. To know if errors have been generated in this context, you need to test the `LockedSet` just after the command call. Also, in the trigger, you have to store error codes, for example in a collection, and handle them afterwards. 
 
 :::
 
@@ -235,17 +235,17 @@ Be careful about using other database or language objects of the 4D environment,
 - **Sets and Named selections**: If you use a set or a named selection from within a trigger, you work on the machine where the trigger executes. In client/server mode, "process" sets and named selections (whose names do not begin with a $ nor with \<>) that are created on the client machine are visible in a trigger.
 - **User Interface**: Do NOT use user interface elements in a trigger (no alerts, no messages, no dialog boxes). Accordingly, you should limit any tracing of triggers in the [Debugging window](../Debugging/debugger.md). Remember that in Client/Server, triggers execute on the 4D Server machine. An alert message on the server machine does not help a user on a client machine. Let the invoking process handle the user interface.
 
-Note that in client-server mode, if you use 4D's password system, you can execute the [`Current user`](./commands/current-user) command in the trigger in order, for example, to save the name of the user at the origin of the trigger call in a journaled table.
+Note that in client-server mode, if you use 4D's password system, you can execute the [`Current user`](../commands/current-user) command in the trigger in order, for example, to save the name of the user at the origin of the trigger call in a journaled table.
 
 
 ## Triggers and Transactions 
 
-[Transactions](./transactions.md) must be handled at the invoking process level. They must not be managed at the trigger level. During one trigger execution, if you have to add, modify or delete multiple records (see the following case study), you must first use the [`In transaction`](./commands/in-transaction) command from within the trigger to test if the invoking process is currently in transaction. If this is not the case, the trigger may potentially encounter a locked record. Therefore, if the invoking process is not in transaction, do not even start the operations on the records. Just return an error in the trigger $result in order to signal to the invoking process that the database operation it is trying to perform must be executed in a transaction. Otherwise, if locked records are met, the invoking process will have no means to roll back the actions of the trigger.
+[Transactions](./transactions.md) must be handled at the invoking process level. They must not be managed at the trigger level. During one trigger execution, if you have to add, modify or delete multiple records (see the following case study), you must first use the [`In transaction`](../commands/in-transaction) command from within the trigger to test if the invoking process is currently in transaction. If this is not the case, the trigger may potentially encounter a locked record. Therefore, if the invoking process is not in transaction, do not even start the operations on the records. Just return an error in the trigger $result in order to signal to the invoking process that the database operation it is trying to perform must be executed in a transaction. Otherwise, if locked records are met, the invoking process will have no means to roll back the actions of the trigger.
 
 
 :::note
 
-In order to optimize the combined operation of triggers and transactions, 4D does not call triggers after the execution of [`VALIDATE TRANSACTION`](./commands/validate-transaction). This prevents the triggers from being executed twice.
+In order to optimize the combined operation of triggers and transactions, 4D does not call triggers after the execution of [`VALIDATE TRANSACTION`](../commands/validate-transaction). This prevents the triggers from being executed twice.
 
 :::
 
@@ -281,12 +281,11 @@ Consider that all tables in this example have triggers activated for all databas
 
 In this cascade relationship, the [Invoices] trigger is said to be executing at level 1, the [Customers], [Line Items], and [Payments] triggers at level 2, and the [Products] trigger at level 3.
 
-From within the triggers, you can use the [`Trigger level`](./commands/trigger-level) command to detect the level at which a trigger is executed. In addition, you can use the [`TRIGGER PROPERTIES`](./commands/trigger-properties) command to get information about the other levels.
+From within the triggers, you can use the [`Trigger level`](../commands/trigger-level) command to detect the level at which a trigger is executed. In addition, you can use the [`TRIGGER PROPERTIES`](../commands/trigger-properties) command to get information about the other levels.
 
 For example, if a [Products] record is being deleted at a process level, the [Products] trigger would be executed at level 1, not at level 3.
 
-Using [`Trigger level`](./commands/trigger-level) and [`TRIGGER PROPERTIES`](./commands/trigger-properties), you can detect the cause of an action. In our example, an invoice is deleted at a process level. If we delete a [Customers] record at a process level, then the [Customers] trigger should attempt to delete all the invoices related to that customer. This means that the [Invoices] trigger will be invoked as above, but for another reason. From within the [Invoices] trigger, you can detect if it executed at level 1 or 2. If it did execute at level 2, you can then check whether or not it is because the [Customers] record is deleted. If this is the case, you do not even need to bother updating the Gross Sales field.
-
+Using [`Trigger level`](../commands/trigger-level) and [`TRIGGER PROPERTIES`](../commands/trigger-properties), you can detect the cause of an action. In our example, an invoice is deleted at a process level. If we delete a [Customers] record at a process level, then the [Customers] trigger should attempt to delete all the invoices related to that customer. This means that the [Invoices] trigger will be invoked as above, but for another reason. From within the [Invoices] trigger, you can detect if it executed at level 1 or 2. If it did execute at level 2, you can then check whether or not it is because the [Customers] record is deleted. If this is the case, you do not even need to bother updating the Gross Sales field.
 
 
 

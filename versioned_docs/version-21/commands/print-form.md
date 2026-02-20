@@ -29,7 +29,7 @@ In the *form* parameter, you can pass:
 * the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
 * an object containing a description of the form.
 
-Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](./commands/page-break) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](./commands/cancel) command before the [PAGE BREAK](./commands/page-break) command.
+Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](../commands-legacy/page-break.md) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](../commands-legacy/cancel.md) command before the [PAGE BREAK](../commands-legacy/page-break.md) command.
 
 Three different syntaxes may be used:
 
@@ -98,20 +98,20 @@ For detailed information on the form data object, please refer to the [`DIALOG`]
 
 **Return value**
 
-The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](./commands/get-printed-height) command.
+The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
 
 The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
-* Call [PRINT SETTINGS](./commands/print-settings). In this case, you let the user choose the settings.
-* Call [SET PRINT OPTION](./commands/set-print-option) and [GET PRINT OPTION](./commands/get-print-option). In this case, print settings are specified programmatically.
+* Call [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
+* Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
 
-**Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](./commands/page-break). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](./commands/page-break) command (except in the context of an [OPEN PRINTING JOB](./commands/open-printing-job), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
+**Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
 
-**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](./commands/open-printing-job), you must NOT call [PAGE BREAK](./commands/page-break) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](./commands/close-printing-job) command. If you call [PAGE BREAK](./commands/page-break) in this case, a blank page is printed.
+**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. If you call [PAGE BREAK](../commands-legacy/page-break.md) in this case, a blank page is printed.
 
 This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
 
-**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](./commands/print-record) instead.
+**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands-legacy/print-record.md) instead.
 
 **Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
 
@@ -122,7 +122,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 ## Example 1 
 
-The following example performs as a [PRINT SELECTION](./commands/print-selection) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
+The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
  QUERY([Register]) // Select the records
@@ -147,7 +147,7 @@ The following example performs as a [PRINT SELECTION](./commands/print-selection
 
 ## Example 2 
 
-Refer to the example of the [SET PRINT MARKER](./commands/set-print-marker) command. 
+Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command. 
 
 ## Example 3 
 
@@ -179,10 +179,10 @@ The code that calls the dialog then prints its body:
 
 ## See also 
 
-[CANCEL](./commands/cancel)  
-[PAGE BREAK](./commands/page-break)  
-[PRINT SETTINGS](./commands/print-settings)  
-[SET PRINT OPTION](./commands/set-print-option)  
+[CANCEL](../commands-legacy/cancel.md)  
+[PAGE BREAK](../commands-legacy/page-break.md)  
+[PRINT SETTINGS](../commands-legacy/print-settings.md)  
+[SET PRINT OPTION](../commands-legacy/set-print-option.md)  
 
 ## Properties
 
@@ -190,6 +190,5 @@ The code that calls the dialog then prints its body:
 | --- | --- |
 | Command number | 5 |
 | Thread safe | no |
-
 
 

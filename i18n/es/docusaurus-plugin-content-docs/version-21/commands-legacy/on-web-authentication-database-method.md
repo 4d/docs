@@ -97,7 +97,7 @@ El [Método base On Web Connection](metodo-base-on-web-connection.md) sólo se e
 
 **Notas:**
 
-* No llame elementos de interfaz en el Método base On Web Authentication ([ALERT](alert.md), [DIALOG](./commands/dialog), etc.) porque de lo contrario su ejecución se interrumpirá y la conexión será rechazada. Lo mismo sucede si se presenta un error durante su proceso.
+* No llame elementos de interfaz en el Método base On Web Authentication ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) porque de lo contrario su ejecución se interrumpirá y la conexión será rechazada. Lo mismo sucede si se presenta un error durante su proceso.
 * Es posible evitar la ejecución por *4DACTION* o *4DSCRIPT* de cada método de proyecto con la ayuda de la opción “Disponible vía las etiquetas HTML y URLs (4DACTION...) en la caja de diálogo de las Propiedades de los métodos. Para mayor información sobre este punto, consulte la sección *Seguridad de las conexiones*.
 
 ## Llamadas del método base On Web Authentication 
@@ -207,4 +207,3 @@ var $i : Integer
     End if
  End for
 ```
-

@@ -138,6 +138,6 @@ Resultado:
 ## Ver también
 
 *Managing formulas*\
-[WP COMPUTE FORMULAS](./commands/wp-compute-formulas)</br>
-[WP FREEZE FORMULAS](./commands/wp-freeze-formulas)</br>
-[WP Get formulas](./commands/wp-get-formulas)
+[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>
+[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas.md)</br>
+[WP Get formulas](../commands-legacy/wp-get-formulas.md)

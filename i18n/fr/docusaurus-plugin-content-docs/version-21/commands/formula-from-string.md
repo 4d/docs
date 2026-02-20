@@ -64,7 +64,7 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 ## Voir également
 
 [Formula](formula.md)\
-[Parse formula](./commands/parse-formula)
+[Parse formula](../commands-legacy/parse-formula.md)
 
 ## Propriétés
 
@@ -72,6 +72,5 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 | ------------------ | ---- |
 | Numéro de commande | 1601 |
 | Thread safe        | oui  |
-
 
 

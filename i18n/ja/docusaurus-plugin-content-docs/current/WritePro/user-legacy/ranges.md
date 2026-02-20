@@ -14,7 +14,7 @@ slug: /WritePro/ranges
 - 文字、段落、画像、ピクチャー、表などのレンジは、元の親ドキュメント内の文字の位置を通じて定義されます。
 - セル、カラム、行のレンジは、それらの位置を通じて定義されており、親の表へアンカーされます。
 
-レンジを使用することで選択した要素を指定したりドキュメントの一部の属性を操作（[`WP GET ATTRIBUTES`](./commands/wp-get-attributes) および [`WP SET ATTRIBUTES`](./commands/wp-set-attributes)）することができます。
+レンジを使用することで選択した要素を指定したりドキュメントの一部の属性を操作（[`WP GET ATTRIBUTES`](../commands/wp-get-attributes) および [`WP SET ATTRIBUTES`](../commands/wp-set-attributes)）することができます。
 
 レンジにはさまざまなタイプがあり、`wk type` 属性（読み取り専用）を使えば、レンジの種類を知ることができます。各レンジのタイプを定義することができます。また各レンジには、そのレンジを定義する複数の非公開の属性値が含まれます：
 
@@ -40,15 +40,13 @@ slug: /WritePro/ranges
 
 ドキュメントのレンジは次のように定義できます：
 
-- [WP Text range](./commands/wp-text-range) `(wpArea ; startRange ; endRange) -> rangeObj`: 範囲として渡した境界値に基づく新しいレンジを返します。
-- [WP Selection range](./commands/wp-selection-range) `({*} wpArea) -> rangeObj`: 現在のユーザーセレクションに対応した新しいレンジを返します。
-- [WP Picture range](./commands/wp-picture-range) `(rangeObj) -> rangeObj`: 新しい画像のみのレンジを返します。
-- [WP Paragraph range](./commands/wp-paragraph-range) `(rangeObj) -> rangeObj`: 新しい段落のみのレンジを返します。
-- [WP Table range](./commands/wp-table-range) `(rangeObj) -> rangeObj`: 新しい表のみのレンジを返します。
+- [WP Text range](../commands-legacy/wp-text-range.md) `(wpArea ; startRange ; endRange) -> rangeObj`: 範囲として渡した境界値に基づく新しいレンジを返します。
+- [WP Selection range](../commands-legacy/wp-selection-range) `({*} wpArea) -> rangeObj`: 現在のユーザーセレクションに対応した新しいレンジを返します。
+- [WP Picture range](../commands-legacy/wp-picture-range) `(rangeObj) -> rangeObj`: 新しい画像のみのレンジを返します。
+- [WP Paragraph range](../commands-legacy/wp-paragraph-range) `(rangeObj) -> rangeObj`: 新しい段落のみのレンジを返します。
+- [WP Table range](../commands-legacy/wp-table-range) `(rangeObj) -> rangeObj`: 新しい表のみのレンジを返します。
 
-ドキュメント内でのレンジの位置情報（ページ番号、カラム番号など）を取得するには、[`WP Get position`](./commands/wp-get-position) コマンドを使用してください。
-
-
+ドキュメント内でのレンジの位置情報（ページ番号、カラム番号など）を取得するには、[`WP Get position`](../commands-legacy/wp-get-position) コマンドを使用してください。
 
 
 

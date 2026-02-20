@@ -10,9 +10,9 @@ Une feuille de style est un objet composé d’un ensemble de paramètres d’at
 
 ## Style par défaut
 
-Tous les documents 4D Write Pro ont une feuille de style de paragraphe par défaut, nommée “Normal”. De nouvelles feuilles de style (créées à l’aide de la commande [WP New style sheet](./commands/wp-new-style-sheet)) sont héritées automatiquement du style Normal. Les attributs modifiés par une feuille de style ont uniquement une incidence sur les paragraphes auxquels ils s’appliquent, le reste du document conserve les paramètres par défaut (Normal). Si une feuille de style est supprimée, les attributs qui ont été modifiés reprennent le style Normal.
+Tous les documents 4D Write Pro ont une feuille de style de paragraphe par défaut, nommée “Normal”. De nouvelles feuilles de style (créées à l’aide de la commande [WP New style sheet](../commands-legacy/wp-new-style-sheet)) sont héritées automatiquement du style Normal. Les attributs modifiés par une feuille de style ont uniquement une incidence sur les paragraphes auxquels ils s’appliquent, le reste du document conserve les paramètres par défaut (Normal). Si une feuille de style est supprimée, les attributs qui ont été modifiés reprennent le style Normal.
 
-Le style Normal définit une valeur par défaut à chaque feuille de style dans un document 4D Write Pro et peut être récupéré à l’aide de la commande [WP Get style sheet](./commands/wp-get-style-sheet). La feuille de style Normal peut être modifiée (mais ne peut pas être renommée) à l’aide de la commande [WP SET ATTRIBUTES](./commands/wp-set-attributes). Si les feuilles de style créées avec la commande [WP New style sheet](./commands/wp-new-style-sheet) sont supprimées avec la commande [WP DELETE STYLE SHEET](./commands/wp-delete-style-sheet), la feuille de style Normal ne peut pas être supprimée.
+Le style Normal définit une valeur par défaut à chaque feuille de style dans un document 4D Write Pro et peut être récupéré à l’aide de la commande [WP Get style sheet](../commands-legacy/wp-get-style-sheet). La feuille de style Normal peut être modifiée (mais ne peut pas être renommée) à l’aide de la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes). Si les feuilles de style créées avec la commande [WP New style sheet](../commands-legacy/wp-new-style-sheet) sont supprimées avec la commande [WP DELETE STYLE SHEET](../commands-legacy/wp-delete-style-sheet), la feuille de style Normal ne peut pas être supprimée.
 
 ## Attributs des feuilles de style de paragraphe et de caractère
 
@@ -32,22 +32,22 @@ Plusieurs feuilles de style de paragraphe et de caractère peuvent être intégr
 
 ## Appliquer les feuilles de style
 
-Les feuilles de style s’appliquent à l’aide de la commande [WP SET ATTRIBUTES](./commands/wp-set-attributes) et des constantes `wk style sheet` ou `wk new line style sheet` (ou à l’aide de la notation objets).
+Les feuilles de style s’appliquent à l’aide de la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes) et des constantes `wk style sheet` ou `wk new line style sheet` (ou à l’aide de la notation objets).
 
 ## Récupérer les feuilles de style
 
-La commande [WP Get style sheets](./commands/wp-get-style-sheets) vous permet de récupérer toutes les feuilles de style d’un document en fonction de leur type. La commande [WP Get style sheet](./commands/wp-get-style-sheet) vous permet de récupérer une feuille de style via son nom.
+La commande [WP Get style sheets](../commands-legacy/wp-get-style-sheets) vous permet de récupérer toutes les feuilles de style d’un document en fonction de leur type. La commande [WP Get style sheet](../commands-legacy/wp-get-style-sheet) vous permet de récupérer une feuille de style via son nom.
 
 ## Importer et exporter des feuilles de style
 
 Les feuilles de style étant stockées sous forme d’objets, elles peuvent être facilement importées dans d’autres documents 4D Write Pro ou maintenues lorsqu’elles sont exportées sous plusieurs formats.
 
-- **Import** - Vous pouvez obtenir tous les objets de la feuille de style d’un document 4D Write Pro spécifique et les utiliser dans un nouveau document à l’aide de la commande [WP IMPORT STYLE SHEETS](./commands/wp-import-style-sheets).
-- **Export** - Les commandes [WP EXPORT DOCUMENT](./commands/wp-export-document) ou [WP EXPORT VARIABLE](./commands/wp-export-variable) exportent vos documents avec leurs feuilles de style.
+- **Import** - Vous pouvez obtenir tous les objets de la feuille de style d’un document 4D Write Pro spécifique et les utiliser dans un nouveau document à l’aide de la commande [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets).
+- **Export** - Les commandes [WP EXPORT DOCUMENT](../commands/wp-export-document) ou [WP EXPORT VARIABLE](../commands/wp-export-variable.md) exportent vos documents avec leurs feuilles de style.
 
 ## Attributs des feuilles de style
 
-Les attributs de paragraphe et de caractère ci-dessous peuvent être modifiés à l’aide des commandes [WP SET ATTRIBUTES](./commands/wp-set-attributes) et [WP RESET ATTRIBUTES](./commands/wp-reset-attributes), ou récupérés à l’aide de la commande [WP GET ATTRIBUTES](./commands/wp-get-attributes).
+Les attributs de paragraphe et de caractère ci-dessous peuvent être modifiés à l’aide des commandes [WP SET ATTRIBUTES](../commands/wp-set-attributes) et [WP RESET ATTRIBUTES](../commands/wp-reset-attributes), ou récupérés à l’aide de la commande [WP GET ATTRIBUTES](../commands/wp-get-attributes).
 
 :::note
 
@@ -134,7 +134,5 @@ Note : Certains attributs sont liés. Ainsi, lorsque vous ajoutez l’un de ces 
 | `wk type`                        | X (read only) | X (read only) |             |
 | `wk vertical align`              | X         | X         |             |
 | `wk width`                       | X         |           |             |
-
-
 
 

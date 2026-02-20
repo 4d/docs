@@ -114,7 +114,7 @@ Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 
 ## Propriétés
 
@@ -122,6 +122,5 @@ Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande
 | --- | --- |
 | Numéro de commande | 1391 |
 | Thread safe | yes |
-
 
 

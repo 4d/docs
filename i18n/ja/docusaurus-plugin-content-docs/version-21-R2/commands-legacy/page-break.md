@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAKはプリンタに送信されたデータの印刷を実行させ、改ページを行います。<!-- END REF-->PAGE BREAKは (On Printing Detailフォームイベントのコンテキストで) [Print form](./commands/print-form.md "Print form")と共に使用し、強制的に改ページを行ったり、メモリに作成された最後のページを印刷するために使用します。PAGE BREAKは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドとともに使用してはいけません。この代りに、[Subtotal](subtotal.md "Subtotal")や[BREAK LEVEL](break-level.md "BREAK LEVEL")にオプション引数を使用してページブレークを行ってください。
+<!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAKはプリンタに送信されたデータの印刷を実行させ、改ページを行います。<!-- END REF-->PAGE BREAKは (On Printing Detailフォームイベントのコンテキストで) [Print form](../commands/print-form.md "Print form")と共に使用し、強制的に改ページを行ったり、メモリに作成された最後のページを印刷するために使用します。PAGE BREAKは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドとともに使用してはいけません。この代りに、[Subtotal](subtotal.md "Subtotal")や[BREAK LEVEL](break-level.md "BREAK LEVEL")にオプション引数を使用してページブレークを行ってください。
 
 *\** と *\>* 引数は両方ともオプションです。
 
-*\** 引数により、[Print form](./commands/print-form.md "Print form") コマンドによって開始したプリントジョブをキャンセルすることができます。このコマンドを実行すると、進行中のプリントジョブが直ちに中止されます。
+*\** 引数により、[Print form](../commands/print-form.md "Print form") コマンドによって開始したプリントジョブをキャンセルすることができます。このコマンドを実行すると、進行中のプリントジョブが直ちに中止されます。
 
 **Note:** Windowsでは、プリンタサーバのスプールプロパティによってはこのメカニズムが動作しないことがあります。プリンタがただちに印刷を行うように設定されている場合、取消しは機能しないでしょう。PAGE BREAK(\*) コマンドの操作を有効にするには、プリンタ設定で最後のページがスプールされてから印刷を開始する設定を選んでください。
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 例題 1 
 
-[Print form](./commands/print-form.md "Print form") コマンドの例題参照
+[Print form](../commands/print-form.md "Print form") コマンドの例題参照
 
 ## 例題 2 
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [CANCEL](cancel.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
 ## プロパティ
 
@@ -65,7 +65,5 @@ displayed_sidebar: docs
 | コマンド番号 | 6 |
 | スレッドセーフである | no |
 | システム変数を更新する | OK |
-
-
 
 

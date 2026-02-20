@@ -37,7 +37,7 @@ Dependendo do tipo de sessão (cliente 4D ou REST por exemplo), os conteúdos do
 
 ## objeto session para sessões 4D client 
 
-Dentro da coleção retornada para sessões 4D, cada elemento contém u m objeto session idêntico àquele retornado pelo comando [Process activity](./commands/process-activity):
+Dentro da coleção retornada para sessões 4D, cada elemento contém u m objeto session idêntico àquele retornado pelo comando [Process activity](../commands/process-activity.md):
 
 | **Nome de propriedade** | **Tipo**      | **Descrição**                                                                 |
 | ----------------------- | ------------- | ----------------------------------------------------------------------------- |
@@ -81,6 +81,5 @@ Essa tabela detalha os conteúdos do objeto sessão para sessões REST:
 | --- | --- |
 | Número do comando | 1782 |
 | Thread-seguro | no |
-
 
 

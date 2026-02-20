@@ -49,7 +49,7 @@ You want to reject or accept new client connections:
 ## See also 
 
 [DROP REMOTE USER](drop-remote-user.md)  
-[Application info](./commands/application-info)  
+[Application info](../commands/application-info.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
 ## Properties
@@ -58,6 +58,5 @@ You want to reject or accept new client connections:
 | --- | --- |
 | Command number | 1635 |
 | Thread safe | yes |
-
 
 

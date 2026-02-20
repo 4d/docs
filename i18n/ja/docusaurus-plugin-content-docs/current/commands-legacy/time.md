@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Time.Summary-->Time コマンドは、*timeValue* 引数で指定した時間に相当する時間表示を返します。<!-- END REF-->引数には以下のものを渡す事ができます。
 
-* システムの言語に対応している4D標準の時間フォーマットで表された時刻を含んでいる文字列(詳細な情報については[String](./commands/string) を参照して下さい)。
+* システムの言語に対応している4D標準の時間フォーマットで表された時刻を含んでいる文字列(詳細な情報については[String](../commands/string.md) を参照して下さい)。
 * 00:00:00を経過した秒数を表す倍長整数
 
 **注:** *timeValue* 引数の式が未定義に評価される場合、**Time** コマンドは空の文字列(00:00:00)を返します。これは式の結果が、たとえ未定義であっても時間として返されることを期待したい場合などに有効です。
@@ -59,10 +59,10 @@ displayed_sidebar: docs
 ## 参照 
 
 [ARRAY TIME](array-time.md)  
-[Bool](./commands/bool)  
-[String](./commands/string)  
-[Time string](./commands/time-string)  
-[Timestamp](./commands/timestamp)  
+[Bool](../commands/bool)  
+[String](../commands/string.md)  
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)  
 
 ## プロパティ
 
@@ -70,7 +70,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 179 |
 | スレッドセーフである | yes |
-
-
 
 

@@ -35,7 +35,7 @@ displayed_sidebar: docs
 | formula   | Text (あれば) | 呼び出しチェーンのカレントレベルにおけるコードの現在の行のコンテンツ(平文テキスト)。 メソッドで示されているソースファイル内の `line` プロパティによって参照される行のコンテンツに対応します。 ソースコードが利用できない場合、 `formula` プロパティは省略されます(未定義)。                                                                                                                                                                                                                                                     | "var $stack:=Call chain" |
 | 行         | Integer                       | メソッド呼び出しの行番号                                                                                                                                                                                                                                                                                                                                                                                                                                 | "line":6                 |
 | name      | Text                          | 呼び出されたメソッドの名前                                                                                                                                                                                                                                                                                                                                                                                                                                | "name":"On Load"         |
-| type      | Text                          | メソッドのタイプ: <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (*サーバー上で実行属性*つきのプロジェクトメソッドを呼び出した場合)</li><li> "executeFormula" ([PROCESS 4D TAGS](./commands/process-4d-tags) あるいは4D Write Pro ドキュメント内のフォーミュラの評価経由でフォーミュラを実行した場合)</li><li>"classFunction"</li><li>"formMethod"</li> | "type":"formMethod"      |
+| type      | Text                          | メソッドのタイプ: <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (*サーバー上で実行属性*つきのプロジェクトメソッドを呼び出した場合)</li><li> "executeFormula" ([PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) あるいは4D Write Pro ドキュメント内のフォーミュラの評価経由でフォーミュラを実行した場合)</li><li>"classFunction"</li><li>"formMethod"</li> | "type":"formMethod"      |
 
 :::note
 
@@ -96,6 +96,5 @@ $currentCallChain:=Call chain
 | ------- | ---- |
 | コマンド番号  | 1662 |
 | スレッドセーフ | ◯    |
-
 
 

@@ -23,7 +23,7 @@ Pour sélectionner une zone de texte, l'utilisateur doit cliquer dessus (**Ctrl/
 
 Pour supprimer une zone de texte sélectionnée, vous pouvez appuyer sur la touche **Effacer** ou **Retour arrière**, utiliser l'action standard **textBox/remove** ou exécuter la commande **WP DELETE TEXT BOX**. 
 
-Les attributs des zones de texte sont gérés par la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) ou la commande *Actions 4D Write Pro*. Les attributs et actions suivants sont disponibles :
+Les attributs des zones de texte sont gérés par la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) ou la commande *Actions 4D Write Pro*. Les attributs et actions suivants sont disponibles :
 
 | **Propriété (constante)** | **Standard action**       | **Commentaires**                                                                                                            |
 | ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |

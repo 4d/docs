@@ -69,7 +69,7 @@ Pour plus d'informations sur les sessions utilisateur distant, veuillez consulte
 
 Tous les process des procédures stockées partagent la même session d'utilisateur virtuel. L'objet `Session` des procédures stockées est disponible depuis :
 
-- les méthodes appelées avec la commande [`Execute on server`](./commands/execute-on-server),
+- les méthodes appelées avec la commande [`Execute on server`](../commands-legacy/execute-on-server.md),
 - Les méthodes base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, et `On System event`.
 
 Pour plus d'informations sur la session utilisateur virtuel des procédures stockées, veuillez vous reporter au paragraphe [**Sessions de procédures stockées**](../Desktop/sessions.md#stored-procedure-sessions).
@@ -141,6 +141,5 @@ IP:port/4DACTION/action_Session
 | ------------------ | ---- |
 | Numéro de commande | 1714 |
 | Thread safe        | oui  |
-
 
 

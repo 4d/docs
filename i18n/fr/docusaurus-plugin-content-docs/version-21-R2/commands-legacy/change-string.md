@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 Si *nouveau* est une chaîne vide (""), **Change string** retourne *source* inchangé. **Change string** retourne toujours une chaîne de la même longueur que *source*. Si *positionDépart* est inférieur ou supérieur à la longueur de *source*, **Change string** retourne *source*.
 
-La fonction **Change string** est différente de [Insert string](./commands/insert-string) car elle remplace des caractères au lieu de les insérer.
+La fonction **Change string** est différente de [Insert string](../commands/insert-string) car elle remplace des caractères au lieu de les insérer.
 
 ## Exemple 
 
@@ -37,9 +37,9 @@ L'exemple suivant illustre l'utilisation de **Change string**. Les résultats so
 
 ## Voir aussi 
 
-[Delete string](./commands/delete-string)  
-[Insert string](./commands/insert-string)  
-[Replace string](./commands/replace-string)  
+[Delete string](../commands/delete-string)  
+[Insert string](../commands/insert-string)  
+[Replace string](../commands/replace-string)  
 
 ## Propriétés
 
@@ -47,6 +47,5 @@ L'exemple suivant illustre l'utilisation de **Change string**. Les résultats so
 | --- | --- |
 | Numéro de commande | 234 |
 | Thread safe | yes |
-
 
 

@@ -77,7 +77,7 @@ Usted desea crear y modificar un objeto compartido. La estructura debe llamarse 
 ## Ver también 
 
 [New object](new-object.md)  
-[New shared collection](./commands/new-shared-collection)  
+[New shared collection](../commands/new-shared-collection.md)  
 *Objetos y colecciones compartidos*  
 
 ## Propiedades
@@ -86,6 +86,5 @@ Usted desea crear y modificar un objeto compartido. La estructura debe llamarse 
 | --- | --- |
 | Número de comando | 1526 |
 | Hilo seguro | yes |
-
 
 

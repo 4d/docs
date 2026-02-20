@@ -68,7 +68,7 @@ Dans votre application, vous utilisez la convention suivante : au moment de l'af
 
 ## Voir aussi 
 
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
@@ -79,6 +79,5 @@ Dans votre application, vous utilisez la convention suivante : au moment de l'af
 | --- | --- |
 | Numéro de commande | 627 |
 | Thread safe | no |
-
 
 

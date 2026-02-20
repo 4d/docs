@@ -47,7 +47,7 @@ You can control automatic breaks in paragraphs using the following features:
 * **Avoid page break inside**: When this option is set for a paragraph, 4D Write Pro prevents this paragraph from being broken into parts on two or more pages.
 * **Keep with next:** When this option is set for a paragraph, that paragraph cannot be separated from the one that follows it by an automatic break. See `wk keep with next` and the corresponding *keepWithNext* [standard action](./standard-actions.md).
 
-These options can be set using the context menu, or [attributes](./commands/4d-write-pro-attributes) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./standard-actions). 
+These options can be set using the context menu, or [attributes](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./standard-actions). 
 
 
 <!-- INCLUDE lists-WP.Desc -->
@@ -63,7 +63,7 @@ The background of 4D Write Pro documents and document elements (tables, paragrap
 * painting area
 * repeat
 
-These [attributes](./commands/4d-write-pro-attributes) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command or by [standard actions](./standard-actions). 
+These [attributes](../commands-legacy/4d-write-pro-attributes.md) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command or by [standard actions](./standard-actions). 
 
 Users can modify background attributes via the contextual menu as shown below:
 
@@ -282,7 +282,7 @@ Columns can be defined at the document level (they are displayed in the whole do
 Columns can be set using:
 
 * the **Columns** submenu of the 4D Write Pro area context menu,
-* 4D Write Pro [attributes](./commands/4d-write-pro-attributes),
+* 4D Write Pro [attributes](../commands-legacy/4d-write-pro-attributes.md),
 * 4D Write Pro [standard actions](./standard-actions).
 
 You can set or get the following properties and actions for columns:
@@ -325,10 +325,10 @@ Once created, a bookmark is stored within the document. It is saved with the doc
 
 Several commands allow you to create, remove, and use bookmarks:
 
-[WP NEW BOOKMARK](./commands/wp-new-bookmark) to create a new bookmark from a range,
-[WP GET BOOKMARKS](./commands/wp-get-bookmarks) to get all bookmarks defined in a document,
-[WP Bookmark range](./commands/wp-bookmark-range) to retrieve a range from an existing bookmark,
-[WP DELETE BOOKMARK](./commands/wp-delete-bookmark) to delete a bookmark.
+[WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) to create a new bookmark from a range,
+[WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) to get all bookmarks defined in a document,
+[WP Bookmark range](../commands-legacy/wp-bookmark-range.md) to retrieve a range from an existing bookmark,
+[WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) to delete a bookmark.
 
 ## Links
 
@@ -346,13 +346,13 @@ Hyperlinks can also be activated from within 4D Write Pro documents using the **
 
 Hyperlinks are managed through the following commands:
 
-- [WP SET LINK](./commands/wp-set-link) to insert a link using a target object
-- [WP Get links](./commands/wp-get-links) to get the collection of all links in a target object.
+- [WP SET LINK](../commands-legacy/wp-set-link.md) to insert a link using a target object
+- [WP Get links](../commands-legacy/wp-get-links.md) to get the collection of all links in a target object.
 
 
 :::note
 
-Links are handled as attributes, thus they can be set or get using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) and [WP GET ATTRIBUTES](./commands/wp-get-attributes) commands along with the `wk link url` constant. However, we recommended using [WP SET LINK](./commands/wp-set-link) and [WP Get links](./commands/wp-get-links) because they automatically encode/decode hyperlinks as URLs. When reading links using the [WP GET ATTRIBUTES](./commands/wp-get-attributes) command, if the target object contains several links, the command returns the first link string.
+Links are handled as attributes, thus they can be set or get using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) and [WP GET ATTRIBUTES](./commands/wp-get-attributes) commands along with the `wk link url` constant. However, we recommended using [WP SET LINK](../commands-legacy/wp-set-link.md) and [WP Get links](../commands-legacy/wp-get-links.md) because they automatically encode/decode hyperlinks as URLs. When reading links using the [WP GET ATTRIBUTES](./commands/wp-get-attributes) command, if the target object contains several links, the command returns the first link string.
 
 :::
 
@@ -411,7 +411,7 @@ The following 4D commands from the [Objects (Forms)](../../commands/theme/Object
 | `OBJECT GET RGB COLORS` / `OBJECT SET RGB COLORS`           | Applied to current selection (if any) |
 | `OBJECT Get type`                                           |          |
 | `OBJECT Get vertical alignment` / `OBJECT SET VERTICAL ALIGNMENT` | Vertical alignment of paragraphs: only has an effect when paragraph height is greater than paragraph text height |
-| `OBJECT Get visible` / [`OBJECT SET VISIBLE`](./commands/object-set-visible)                 |          |
+| `OBJECT Get visible` / [`OBJECT SET VISIBLE`](../commands/object-set-visible)                 |          |
 | `OBJECT Is styled text`                                     | Returns true |
 | `OBJECT MOVE`                                               |          |
 | `OBJECT GET SUBFORM CONTAINER SIZE`                         |          |
@@ -419,6 +419,4 @@ The following 4D commands from the [Objects (Forms)](../../commands/theme/Object
 | `OBJECT Get pointer`                                        |          |
 
 Any OBJECT commands not listed above are not applicable to 4D Write Pro areas.
-
-
 

@@ -29,7 +29,7 @@ displayed_sidebar: docs
 - 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス、*Form file path* 参照)
 - フォームの詳細を格納しているオブジェクト
 
-**Print form** は、 フォームの印刷後に改ページを行わないため、同じページに異なるフォームを容易に配置することができます。 したがって、**Print form** は、異なるテーブルや異なるフォームを含む複雑な印刷処理に最適です。 フォーム間で改ページを強制的に行うには[PAGE BREAK](./commands/page-break) コマンドを使用してください。 印刷可能領域を超える高さのフォームの印刷を次のページに持ち越すには、[PAGE BREAK](./commands/page-break) コマンドを使用する前に[CANCEL](./commands/cancel) コマンドを呼び出してください。
+**Print form** は、 フォームの印刷後に改ページを行わないため、同じページに異なるフォームを容易に配置することができます。 したがって、**Print form** は、異なるテーブルや異なるフォームを含む複雑な印刷処理に最適です。 フォーム間で改ページを強制的に行うには[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用してください。 印刷可能領域を超える高さのフォームの印刷を次のページに持ち越すには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用する前に[CANCEL](../commands-legacy/cancel.md) コマンドを呼び出してください。
 
 3つの異なるシンタックスを使用できます:
 
@@ -97,20 +97,20 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **戻り値**
 
-**Print form** によって返される値は印刷可能範囲 の高さを表します。 この値は、 [Get printed height](./commands/get-printed-height) コマンドに自動的に考慮されます。
+**Print form** によって返される値は印刷可能範囲 の高さを表します。 この値は、 [Get printed height](../commands-legacy/get-printed-height.md) コマンドに自動的に考慮されます。
 
 **Print form** を使用する場合、印刷ダイアログボックス は表示されません。 レポート はデザインモードでフォームに割り当てられた用紙設定を使用しません。 **Print form** を呼び出す前に用紙設定を指定する方法は2通りあります:
 
-- [PRINT SETTINGS](./commands/print-settings) コマンドを使用する。  この場合、ユーザが設定を行います。
-- [SET PRINT OPTION](./commands/set-print-option) と [GET PRINT OPTION](./commands/get-print-option) コマンドを使用する。  この場合、用紙設定はプログラムで指定します。
+- [PRINT SETTINGS](../commands-legacy/print-settings.md) コマンドを使用する。  この場合、ユーザが設定を行います。
+- [SET PRINT OPTION](../commands-legacy/set-print-option.md) と [GET PRINT OPTION](../commands-legacy/get-print-option.md) コマンドを使用する。  この場合、用紙設定はプログラムで指定します。
 
-**Print form** は、印刷するページをそれぞれメモリ 中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](./commands/page-break) コマンドを実行すると印刷されます。 **Print form** の使用後、最後のページの印刷を確実に行うためには、[PAGE BREAK](./commands/page-break) コマンドで終了しなければなりません(ただし [OPEN PRINTING JOB](./commands/open-printing-job) のコンテキスト内の場合を除く、注意参照)。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。
+**Print form** は、印刷するページをそれぞれメモリ 中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** の使用後、最後のページの印刷を確実に行うためには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドで終了しなければなりません(ただし [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) のコンテキスト内の場合を除く、注意参照)。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。
 
-**警告:** このコマンドが [OPEN PRINTING JOB](./commands/open-printing-job) で開かれた印刷ジョブのコンテキストで呼び出された場合、 [PAGE BREAK](./commands/page-break) を使用して最後のページを印刷しようとしてはいけません。なぜなら、最後のページは[CLOSE PRINTING JOB](./commands/close-printing-job) コマンドによって自動的に印刷されるからです。 この状況で[PAGE BREAK](./commands/page-break) を使用した場合、空のページが印刷されます。
+**警告:** このコマンドが [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) で開かれた印刷ジョブのコンテキストで呼び出された場合、 [PAGE BREAK](../commands-legacy/page-break.md) を使用して最後のページを印刷しようとしてはいけません。なぜなら、最後のページは[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドによって自動的に印刷されるからです。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。
 
 このコマンドは外部エリアとオブジェクト(例えば 4D Write や 4D Viewエリアなど) を印刷します。 エリアはコマンドの実行の際に毎回リセットされます。 エリアはコマンドの実行の際に毎回リセットされます。
 
-**警告:** サブフォームは、 **Print form** では印刷はされません。 そのようなオブジェクトを含んだフォームを一つだけ印刷したい場合は、代わりに[PRINT RECORD](./commands/print-record) を使用して下さい。
+**警告:** サブフォームは、 **Print form** では印刷はされません。 そのようなオブジェクトを含んだフォームを一つだけ印刷したい場合は、代わりに[PRINT RECORD](../commands-legacy/print-record.md) を使用して下さい。
 
 **Print form** は、1回だけフォームメソッドの[`On Printing Detail` event](../Events/onPrintingDetail.md) イベントを生成します。
 
@@ -121,7 +121,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ## 例題 1
 
-以下の例は [PRINT SELECTION](./commands/print-selection)コマンドをエミュレートします。 しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します:
+以下の例は [PRINT SELECTION](../commands-legacy/print-selection.md)コマンドをエミュレートします。 しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します:
 
 ```4d
  QUERY([Register]) // レコードを選択
@@ -146,7 +146,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ## 例題 2
 
-[SET PRINT MARKER](./commands/set-print-marker) コマンドの例題参照
+[SET PRINT MARKER](../commands-legacy/set-print-marker.md) コマンドの例題参照
 
 ## 例題 3
 
@@ -178,10 +178,10 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ## 参照
 
-[CANCEL](./commands/cancel)\
-[PAGE BREAK](./commands/page-break)\
-[PRINT SETTINGS](./commands/print-settings)\
-[SET PRINT OPTION](./commands/set-print-option)
+[CANCEL](../commands-legacy/cancel.md)\
+[PAGE BREAK](../commands-legacy/page-break.md)\
+[PRINT SETTINGS](../commands-legacy/print-settings.md)\
+[SET PRINT OPTION](../commands-legacy/set-print-option.md)
 
 ## プロパティ
 
@@ -189,6 +189,5 @@ form data オブジェクトについての詳細な情報については、[`DI
 | ------- | - |
 | コマンド番号  | 5 |
 | スレッドセーフ | × |
-
 
 

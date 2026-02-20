@@ -21,13 +21,13 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 #### Developer Preview
 
 - Prise en charge du [**rendu d'interface Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) sous Windows :
-  - nouvelle commande [`FORM theme`](./commands/form-theme),
+  - nouvelle commande [`FORM theme`](../commands/form-theme.md),
   - nouveau [media query css`form-theme`](../FormEditor/createStylesheet.md#media-queries),
   - nouvelle option [**Utiliser Fluent UI sous Windows**](../settings/interface.md#use-fluent-ui-on-windows) dans la boîte de dialogue des Propriétés du projet.
 
 #### Changements de comportement
 
-- Sous Windows, si le [rendu **Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) est activé, la commande [`GET STYLE SHEET INFO`](./commands/get-style-sheet-info) peut renvoyer des informations différentes selon qu'elle est appelée depuis un formulaire ou non.
+- Sous Windows, si le [rendu **Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) est activé, la commande [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) peut renvoyer des informations différentes selon qu'elle est appelée depuis un formulaire ou non.
 
 ## Tableau des bibliothèques
 
@@ -50,4 +50,3 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                       |
 | Xerces       | 3.3.0  | **21**              | Utilisé pour les commandes XML                                                                                                                        |
 | Zlib         | 1.3.1  | **21**              |                                                                                                                                                       |
-

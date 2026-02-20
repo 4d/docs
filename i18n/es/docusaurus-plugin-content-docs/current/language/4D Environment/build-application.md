@@ -62,7 +62,7 @@ Si el comando falla, se genera un error que puede interceptar con la ayuda del c
 
 ## Ver también 
 
-[Compile project ](./commands/compile-project)  
+[Compile project ](../commands/compile-project.md)  
 
 ## Propiedades
 
@@ -72,6 +72,5 @@ Si el comando falla, se genera un error que puede interceptar con la ayuda del c
 | Hilo seguro | no |
 | Modifica variables | OK, Document, error |
 | Prohibido en el servidor ||
-
 
 

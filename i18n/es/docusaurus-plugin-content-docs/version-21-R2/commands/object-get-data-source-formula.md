@@ -39,9 +39,9 @@ $formula:=OBJECT Get data source formula(*; "myInput")
 ## Ver también
 
 [OBJECT SET DATA SOURCE FORMULA](object-set-data-source-formula.md)<br/>
-[LISTBOX GET COLUMN FORMULA](./commands/listbox-get-column-formula)<br/>
-[OBJECT SET DATA SOURCE](./commands/object-set-data-source)<br/>
-[OBJECT GET VALUE](./commands/object-get-value)
+[LISTBOX GET COLUMN FORMULA](../commands-legacy/listbox-get-column-formula.md)<br/>
+[OBJECT SET DATA SOURCE](../commands-legacy/object-set-data-source.md)<br/>
+[OBJECT GET VALUE](../commands-legacy/object-get-value.md)
 
 ## Propiedades
 
@@ -49,6 +49,5 @@ $formula:=OBJECT Get data source formula(*; "myInput")
 | ----------------- | ---- |
 | Número de comando | 1852 |
 | Hilo seguro       | no   |
-
 
 

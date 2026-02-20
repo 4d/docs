@@ -53,7 +53,7 @@ Le paramètre *titre* retourne le nom de la fenêtre du formulaire, tel qu’il 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
-[Open form window](./commands/open-form-window)  
+[Open form window](../commands/open-form-window.md)  
 
 ## Propriétés
 
@@ -61,6 +61,5 @@ Le paramètre *titre* retourne le nom de la fenêtre du formulaire, tel qu’il 
 | --- | --- |
 | Numéro de commande | 674 |
 | Thread safe | no |
-
 
 

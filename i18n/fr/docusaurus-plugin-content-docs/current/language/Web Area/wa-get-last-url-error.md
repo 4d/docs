@@ -46,7 +46,7 @@ It is recommended to call this command within the framework of the On URL Loadin
 
 ## See also 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
 ## Properties
 
@@ -54,6 +54,5 @@ It is recommended to call this command within the framework of the On URL Loadin
 | --- | --- |
 | Command number | 1034 |
 | Thread safe | no |
-
 
 

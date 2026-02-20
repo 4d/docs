@@ -98,11 +98,10 @@ Los parámetros *$user* y *$pw* reciben el nombre de usuario y la contraseña in
 
 El Método base On Web Connection puede utilizarse como punto de entrada para el servidor web 4D, bien sea utilizando la URL especial *4DCGI*, o utilizando las URLs de comando personalizadas.
 
-**Advertencia:** la llamada de un comando 4D que muestra un elemento de interfaz ([DIALOG](./commands/dialog), [ALERT](alert.md)...) termina el procesamiento del método.
+**Advertencia:** la llamada de un comando 4D que muestra un elemento de interfaz ([DIALOG](../commands/dialog.md), [ALERT](alert.md)...) termina el procesamiento del método.
 
 El Método base On Web Connection se llama en los siguientes casos:
 
 * Cuando 4D recibe el URL */4DCGI*. El método base se llama con el URL */4DCGI/<action>* en *$url*.
 * Cuando una página web llamada con un URL de tipo *<ruta>/<archivo>* no se encuentra. El método base se llama con la URL.
 * Cuando una página web se llama con un URL del tipo *<file>/* y ninguna página ha sido definida por defecto. El método base se llama con la URL.
-

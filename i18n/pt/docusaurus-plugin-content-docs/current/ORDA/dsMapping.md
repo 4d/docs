@@ -28,7 +28,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 > O mapeamento ORDA não leva em consideração:
 >
 > - a opção "Invisível" para tabelas ou campos,
-> - the virtual structure defined through [`SET TABLE TITLES`](./commands/set-table-titles) or [`SET FIELD TITLES`](./commands/set-field-titles),
+> - the virtual structure defined through [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
 > - a propriedade "Manual" ou "Automática" das relações.
 
 ### Regras para o controlo do acesso remoto
@@ -252,4 +252,3 @@ As selecções de entidades não ordenadas são criadas nos seguintes casos:
 > - selecções de entidades construídas em datastores remotos.
 
 Observe que quando uma seleção de entidade ordenada se torna uma seleção de entidade não ordenada, quaisquer referências repetidas são removidas.
-

@@ -8,7 +8,7 @@ title: Extension des applications 4D
 L'architecture des [projets 4D](../Project/architecture.md) est ouverte et peut être étendue de différentes manières. Si vous avez besoin d'une fonctionnalité qui n'est pas disponible de manière native dans 4D, vous pouvez toujours l'intégrer dans votre application de différentes manières :
 
 - les [**System workers**](../API/SystemWorkerClass.md) permettent au code 4D d'appeler n'importe quel process externe (une commande shell, PHP, un script, etc.) et d'en contrôler l'exécution.
-- les [**commandes SQL**](./commands/theme/SQL) vous permettent de vous connecter à diverses sources de données SQL et de les utiliser .
+- les [**commandes SQL**](../commands/theme/SQL) vous permettent de vous connecter à diverses sources de données SQL et de les utiliser .
 - Le [**client HTTP intégré**](../API/HTTPRequestClass.md) peut envoyer des requêtes à n'importe quel serveur HTTP et traiter les données.
 - les [**zones web**](../FormObjects/webArea_overview.md) peuvent donner accès à des pages web ou à divers contenus HTML à l'intérieur de vos formulaires.
 - les [**Composants**](Concepts/components.md). Les composants sont faits de code 4D. 4D propose un ensemble de composants utilitaires (voir ci-dessous) que vous pouvez installer et utiliser en fonction de vos besoins. Vous pouvez également [développer vos propres composants 4D](develop-components.md), ou utiliser des composants tiers. De nombreux développeurs de la communauté 4D ont partagé des composants 4D (consultez Github pour obtenir une liste des composants 4D publics rassemblés dans le topic [`4d-component`](https://github.com/topics/4d-component)).
@@ -32,7 +32,6 @@ including:
 | 4D Widgets            | https://github.com/4d/4D-Widgets            | Gestion des widgets 4D DatePicker, TimePicker et SearchPicker                                           | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
 | Interface 4D WritePro | https://github.com/4d/4D-WritePro-Interface | Gestion de palettes et de [l'assistant de tableaux](../WritePro/writeprointerface.md) dans 4D Write Pro | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
 | Build4D               | https://github.com/4d-depot/Build4D         | Compiler, construire et signer des projets                                                              | CI/CD                                                                                                                                   |
-
 
 
 

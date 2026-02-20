@@ -82,7 +82,7 @@ Each object of the `products` collection can have the following properties:
 
 | **Property**  | | **Type**  | **Description**         | **Example**            |
 | ------ |---| ----------- | ---------------------------- | ----------------------- |
-|id            | | number                | License number                                                                                        | For available values, see the [Is license available](./commands/is-license-available) command |
+|id            | | number                | License number                                                                                        | For available values, see the [Is license available](../commands-legacy/is-license-available.md) command |
 |name         |  | string                | License name                                                                                          | "4D Write - 4D Write Pro"                                                             |
 |usedCount     | | number                | Number of consumed connections                                                                        | 8                                                                                     |
 |allowedCount  | | number                | Total connections allowed for the product against the expiry dates                                    | 15                                                                                    |
@@ -139,9 +139,9 @@ You want to get information on your current 4D Server license:
 
 ## See also 
 
-[CHANGE LICENSES](./commands/change-licenses)  
-[Is license available](./commands/is-license-available)  
-[WEB Get server info](./commands/web-get-server-info)  
+[CHANGE LICENSES](../commands-legacy/change-licenses.md)  
+[Is license available](../commands-legacy/is-license-available.md)  
+[WEB Get server info](../commands-legacy/web-get-server-info.md)  
 
 ## Properties
 
@@ -149,6 +149,5 @@ You want to get information on your current 4D Server license:
 | --- | --- |
 | Command number | 1489 |
 | Thread safe | yes |
-
 
 

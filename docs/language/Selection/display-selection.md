@@ -74,7 +74,7 @@ The following example selects all the records in the \[People\] table. It then u
 
 ## Example 2 
 
-See example #6 for the [Form event code](./commands/form-event-code) command. This example shows all the tests you may need to check in order to fully monitor the events that occur during a DISPLAY SELECTION.
+See example #6 for the [Form event code](../commands/form-event-code.md) command. This example shows all the tests you may need to check in order to fully monitor the events that occur during a DISPLAY SELECTION.
 
 ## Example 3 
 
@@ -104,7 +104,7 @@ You can also use other commands, such as [PRINT SELECTION](print-selection.md), 
 
 ## See also 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *Sets*  
 
@@ -115,6 +115,5 @@ You can also use other commands, such as [PRINT SELECTION](print-selection.md), 
 | Command number | 59 |
 | Thread safe | no |
 | Forbidden on the server ||
-
 
 

@@ -77,7 +77,7 @@ Se quiser criar e modificar um objeto compartido. A estrutura deve ser chamada p
 ## Ver também 
 
 [New object](new-object.md)  
-[New shared collection](./commands/new-shared-collection)  
+[New shared collection](../commands/new-shared-collection.md)  
 *Objetos compartidos e Coleções compartidas*  
 
 ## Propriedades
@@ -86,6 +86,5 @@ Se quiser criar e modificar um objeto compartido. A estrutura deve ser chamada p
 | --- | --- |
 | Número do comando | 1526 |
 | Thread-seguro | yes |
-
 
 

@@ -143,7 +143,7 @@ devolve um objeto que contém a informação abaixo:
 
 ## Ver também 
 
-[Application info](./commands/application-info)  
+[Application info](../commands/application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
@@ -153,6 +153,5 @@ devolve um objeto que contém a informação abaixo:
 | --- | --- |
 | Número do comando | 1571 |
 | Thread-seguro | yes |
-
 
 

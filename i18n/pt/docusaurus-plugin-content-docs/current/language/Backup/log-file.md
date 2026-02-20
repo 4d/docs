@@ -42,7 +42,7 @@ Se o banco de dados funciona com um arquivo de histórico, a variável de sistem
 
 ## Ver também 
 
-[SELECT LOG FILE](./commands/select-log-file)  
+[SELECT LOG FILE](../commands/select-log-file.md)  
 
 ## Propriedades
 
@@ -51,6 +51,5 @@ Se o banco de dados funciona com um arquivo de histórico, a variável de sistem
 | Número do comando | 928 |
 | Thread-seguro | yes |
 | Modificar variáveis | OK |
-
 
 

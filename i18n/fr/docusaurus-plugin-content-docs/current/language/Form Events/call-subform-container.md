@@ -39,7 +39,7 @@ In *event*, you can pass one of the [4D form events that are supported by subfor
 
 ## See also 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
 
 ## Properties
@@ -48,6 +48,5 @@ In *event*, you can pass one of the [4D form events that are supported by subfor
 | --- | --- |
 | Command number | 1086 |
 | Thread safe | no |
-
 
 

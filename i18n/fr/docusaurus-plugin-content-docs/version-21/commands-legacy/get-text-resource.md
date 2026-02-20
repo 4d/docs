@@ -51,7 +51,7 @@ OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 
 
 ## Voir aussi 
 
-[Get indexed string](./commands/get-indexed-string)  
+[Get indexed string](../commands/get-indexed-string)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
@@ -62,6 +62,5 @@ OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 
 | Numéro de commande | 504 |
 | Thread safe | no |
 | Modifie les variables | OK |
-
 
 

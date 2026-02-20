@@ -64,7 +64,7 @@ El parámetro *pila*, le permite indicar la cantidad de memoria asignada para la
 
 ### Nombre del proceso 
 
- Pase el nombre del nuevo proceso en *nombre*. Este nombre aparecerá en la lista de procesos del Explorador de ejecución y será devuelto por el comando [Process info](./commands/process-info) cuando se aplica a este nuevo proceso. Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena vacía.
+ Pase el nombre del nuevo proceso en *nombre*. Este nombre aparecerá en la lista de procesos del Explorador de ejecución y será devuelto por el comando [Process info](../commands/process-info.md) cuando se aplica a este nuevo proceso. Puede omitir este parámetro; si lo hace, el nombre del proceso será una cadena vacía.
 
 ### Parámetros del método proceso 
 
@@ -92,7 +92,7 @@ Dado el siguiente método proyecto:
  Until(OK=0)
 ```
 
-Si asocia este método de proyecto a un comando de menú creado en el Editor de barras de menú y le asigna la propiedad Iniciar un nuevo proceso, 4D automáticamente iniciará un nuevo proceso en el momento de la ejecución del método. La llamada [SET MENU BAR](set-menu-bar.md)(1) asocia esta barra de menús al nuevo proceso. En ausencia de ventanas (que podría haber abierto con [Open window](./commands/open-window)), la llamada a [ADD RECORD](add-record.md) abrirá automáticamente una.
+Si asocia este método de proyecto a un comando de menú creado en el Editor de barras de menú y le asigna la propiedad Iniciar un nuevo proceso, 4D automáticamente iniciará un nuevo proceso en el momento de la ejecución del método. La llamada [SET MENU BAR](set-menu-bar.md)(1) asocia esta barra de menús al nuevo proceso. En ausencia de ventanas (que podría haber abierto con [Open window](../commands/open-window.md)), la llamada a [ADD RECORD](add-record.md) abrirá automáticamente una.
 
 Para poder iniciar el proceso Add Customers haciendo clic en un botón situado en un panel de control personalizado, puede escribir:  
 
@@ -136,6 +136,5 @@ En el editor de barras de menús, puede reemplazar ADD CUSTOMERS por el método 
 | --- | --- |
 | Número de comando | 317 |
 | Hilo seguro | yes |
-
 
 

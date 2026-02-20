@@ -175,7 +175,7 @@ Une fois le formulaire exécuté, la list box est automatiquement remplie avec l
 
 ## Voir également
 
-[Self](./commands/self)\
+[Self](../commands-legacy/self.md)\
 [Super](super.md)
 
 ## Propriétés
@@ -184,6 +184,5 @@ Une fois le formulaire exécuté, la list box est automatiquement remplie avec l
 | ------------------ | ---- |
 | Numéro de commande | 1470 |
 | Thread safe        | oui  |
-
 
 

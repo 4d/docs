@@ -69,7 +69,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 ## Voir également
 
 [New collection](new-collection.md)\
-[New shared object](./commands/new-shared-object)\
+[New shared object](../commands-legacy/new-shared-object.md)\
 *Shared objects and shared collections*
 
 ## Propriétés
@@ -78,6 +78,5 @@ Contrairement aux collections standard (non partagées), les collections partag�
 | ------------------ | ---- |
 | Numéro de commande | 1527 |
 | Thread safe        | oui  |
-
 
 

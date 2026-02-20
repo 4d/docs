@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 このコマンドがサブフォームまたはサブフォームのオブジェクトから呼び出され、セレクターのどれか一つがXY Current formであった場合、座標系はサブフォーム自身に対して相対的であり、親フォームに対して相対的ではありません。
 
-フォームウィンドウの位置を変換、または位置へ変換する場合(例えば[GET WINDOW RECT](get-window-rect.md)の結果を変換する場合、または[Open form window](./commands/open-form-window)に渡された値へ変換する場合)、この座標系はWindowsマシンのウィンドウコマンドで使用されているものであるため、XY Main windowを使用する必要があります。これはOS Xにおいてもこの目的で使用する事ができ、その場合はXY Screenと同等になります。
+フォームウィンドウの位置を変換、または位置へ変換する場合(例えば[GET WINDOW RECT](get-window-rect.md)の結果を変換する場合、または[Open form window](../commands/open-form-window.md)に渡された値へ変換する場合)、この座標系はWindowsマシンのウィンドウコマンドで使用されているものであるため、XY Main windowを使用する必要があります。これはOS Xにおいてもこの目的で使用する事ができ、その場合はXY Screenと同等になります。
 
 *from* 引数がXY Current formであり、点がリストフォームのボディセクション内にある場合、コマンドの実行コンテキストによって結果が変化します:
 
@@ -101,6 +101,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1365 |
 | スレッドセーフである | no |
-
 
 

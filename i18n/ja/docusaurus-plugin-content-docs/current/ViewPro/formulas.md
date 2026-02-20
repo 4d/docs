@@ -282,13 +282,13 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ### 仮想ストラクチャーを使ったフィールド参照
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](./commands/set-table-titles) and/or [`SET FIELD TITLES`](./commands/set-field-titles) commands with the \* parameter. この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
+4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter. この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
 
 > **警告**: 仮想ストラクチャーと `VP SET CUSTOM FUNCTIONS` を同時に使用することはできません。 `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
 #### 要件
 
-- The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](./commands/set-table-titles) and/or [`SET FIELD TITLES`](./commands/set-field-titles) commands with the \* parameter (see example),
+- The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter (see example),
 - テーブルとフィールド名は ECMA 準拠であること ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。
 - フィールドの型が 4D View Pro でサポートされていること (前述参照)。
 
@@ -362,5 +362,4 @@ TABLENAME_FIELDNAME()
 - 既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
 
 > [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) および [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) コマンドのいずれもがセッション中に実行されていない場合、4D View Pro カスタムファンクションには 4D の汎用的な `SET ALLOWED METHODS` コマンドで許可されたメソッドが使用できます。 この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
-
 

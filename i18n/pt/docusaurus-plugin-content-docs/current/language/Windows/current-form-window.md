@@ -29,12 +29,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form window.Summary-->O comando Current form window devolve a referência da janela do formulário atual.<!-- END REF--> Se nenhuma janela tiver sido definida para o formulário atual, o comando devolve 0.  
 
-A janela do formulário atual pode ser gerada automaticamente por um comando tal como ADD RECORD, depois de uma ação de usuário ou utilizando os comandos [Open window](./commands/open-window) ou [Open form window](./commands/open-form-window).
+A janela do formulário atual pode ser gerada automaticamente por um comando tal como ADD RECORD, depois de uma ação de usuário ou utilizando os comandos [Open window](../commands/open-window.md) ou [Open form window](../commands/open-form-window.md).
 
 ## Ver também 
 
-[Open form window](./commands/open-form-window)  
-[Open window](./commands/open-window)  
+[Open form window](../commands/open-form-window.md)  
+[Open window](../commands/open-window.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
 ## Propriedades
@@ -43,6 +43,5 @@ A janela do formulário atual pode ser gerada automaticamente por um comando tal
 | --- | --- |
 | Número do comando | 827 |
 | Thread-seguro | no |
-
 
 

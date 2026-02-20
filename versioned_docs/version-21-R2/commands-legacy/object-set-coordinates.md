@@ -47,7 +47,7 @@ You can also pass absolute coordinate values in the *right* and *bottom* paramet
 This command only functions in the following contexts:
 
 * Input forms in entry mode,
-* Forms displayed using the [DIALOG](./commands/dialog) command,
+* Forms displayed using the [DIALOG](../commands/dialog.md) command,
 * Headers and footers of output forms displayed by the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) command,
 * Forms being printed.
 
@@ -73,6 +73,5 @@ The following statement places the "button\_1" object at the (10,20) (30,40) coo
 | --- | --- |
 | Command number | 1248 |
 | Thread safe | no |
-
 
 

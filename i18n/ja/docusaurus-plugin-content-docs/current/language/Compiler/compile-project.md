@@ -119,8 +119,8 @@ displayed_sidebar: docs
 
 | **プロパティ**      | **型**                   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | -------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type           | Text                    | "projectMethod"、 "formObjectMethod"、 "formMethod"、 "databaseMethod"、 "triggerMethod"、 "executeOnServer" (*サーバー上で実行属性*つきのプロジェクトメソッドを呼び出した場合)、 "executeFormula" (when executing a formula via [PROCESS 4D TAGS](./commands/process-4d-tags) からフォーミュラを実行した場合または4D Write Pro ドキュメント内のフォーミュラを評価した場合)、 "class"、 "classFunction"、 "formObjectExpression" (フォームオブジェクトに割り当てられた式の中で発生したエラー) |
-| path           | Text                    | メソッドパス([METHOD OPEN PATH](./commands/method-open-path) と同じフォーマット)                                                                                                                                                                                                                                                                                                                                                       |
+| type           | Text                    | "projectMethod"、 "formObjectMethod"、 "formMethod"、 "databaseMethod"、 "triggerMethod"、 "executeOnServer" (*サーバー上で実行属性*つきのプロジェクトメソッドを呼び出した場合)、 "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) からフォーミュラを実行した場合または4D Write Pro ドキュメント内のフォーミュラを評価した場合)、 "class"、 "classFunction"、 "formObjectExpression" (フォームオブジェクトに割り当てられた式の中で発生したエラー) |
+| path           | Text                    | メソッドパス([METHOD OPEN PATH](../commands-legacy/method-open-path.md) と同じフォーマット)                                                                                                                                                                                                                                                                                                                                                       |
 | file           | 4D.File | メソッドファイル                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |                |                         | **以下は`type` プロパティの値に応じて返されます:**                                                                                                                                                                                                                                                                                                                                                                                                       |
 | methodName     | Text                    | プロジェクトメソッド                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -191,7 +191,7 @@ var $result:=Compile project($options)
 
 ## 参照
 
-[BUILD APPLICATION](./commands/build-application)
+[BUILD APPLICATION](../commands-legacy/build-application.md)
 
 ## プロパティ
 
@@ -199,6 +199,5 @@ var $result:=Compile project($options)
 | ------- | ---- |
 | コマンド番号  | 1760 |
 | スレッドセーフ | ×    |
-
 
 

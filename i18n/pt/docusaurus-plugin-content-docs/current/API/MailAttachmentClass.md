@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Os objetos Attachment permitem fazer referência a arquivos em um objeto [`Email`](EmailObjectClass.md). Os objetos Attachment são criados usando o comando [`MAIL New attachment`](./commands/mail-new-attachment).
+Os objetos Attachment permitem fazer referência a arquivos em um objeto [`Email`](EmailObjectClass.md). Os objetos Attachment são criados usando o comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ### Objeto anexos
 
@@ -53,7 +53,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 #### Descrição
 
-A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary --> cria e retorna um novo objeto do tipo `4D.MailAttachment`<!-- END REF -->. Ele é idêntico ao comando [`MAIL New attachment`](./commands/mail-new-attachment) (atalho).
+A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary --> cria e retorna um novo objeto do tipo `4D.MailAttachment`<!-- END REF -->. Ele é idêntico ao comando [`MAIL New attachment`](../commands/mail-new-attachment.md) (atalho).
 
 ## .cid
 
@@ -91,7 +91,7 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descrição
 
-A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->retorna o conteúdo do objeto anexo em um objeto `4D.Blob`<!-- END REF -->. Você pode usar esse método com objetos de anexo recebidos pelo comando [`MAIL Convert from MIME`](./commands/mail-convert-from-mime).
+A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->retorna o conteúdo do objeto anexo em um objeto `4D.Blob`<!-- END REF -->. Você pode usar esse método com objetos de anexo recebidos pelo comando [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md).
 
 ## .name
 
@@ -99,7 +99,7 @@ A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary --
 
 #### Descrição
 
-A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary --> o nome e a extensão do anexo<!-- END REF -->.  Por padrão, é o nome do arquivo, a menos que outro nome tenha sido especificado no comando [`MAIL New attachment`](./commands/mail-new-attachment).
+A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary --> o nome e a extensão do anexo<!-- END REF -->.  Por padrão, é o nome do arquivo, a menos que outro nome tenha sido especificado no comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ## .path
 
@@ -139,5 +139,4 @@ A propriedade `.size` contém <!-- REF #MailAttachmentClass.size.Summary --> o v
 
 #### Descrição
 
-A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se esse tipo não for explicitamente passado para o comando [`MAIL New attachment`](./commands/mail-new-attachment), o `content-type` será baseado em sua extensão de arquivo.
-
+A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se esse tipo não for explicitamente passado para o comando [`MAIL New attachment`](../commands/mail-new-attachment.md), o `content-type` será baseado em sua extensão de arquivo.

@@ -73,7 +73,7 @@ The following code will create a dialog accepting a formula in text format:
 ## See also 
 
 [Formula](formula.md)  
-[Parse formula](./commands/parse-formula)  
+[Parse formula](../commands-legacy/parse-formula.md)  
 
 
 
@@ -84,6 +84,5 @@ The following code will create a dialog accepting a formula in text format:
 | --- | --- |
 | Command number | 1601 |
 | Thread safe | yes |
-
 
 

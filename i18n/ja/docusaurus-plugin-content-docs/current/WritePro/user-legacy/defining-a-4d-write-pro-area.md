@@ -25,7 +25,7 @@ slug: /WritePro/configuring-4d-write-pro-areas
 
 ドキュメントビュープロパティは、4D Write Pro エリアのプロパティリストで直接設定可能です。これを使用することで4D Write Pro エリアにおいて4D Wrie Pro ドキュメントがデフォルトでどのように表示されるかを指定することができます。これらのプロパティを使って、例えば 4D Write Pro ドキュメントを印刷されるとおりに表示するか、それともブラウザーで見たときと同じように表示するかを設定することができます。同一のフォーム上で、同じ 4D Write Pro ドキュメントの異なるビューを表示させることも可能です。
 
-**注:** ビュー設定は[WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) および [WP Get view properties](./commands/wp-get-view-properties) コマンドを使用することで動的に管理することも可能です。
+**注:** ビュー設定は[WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) および [WP Get view properties](../commands/wp-get-view-properties) コマンドを使用することで動的に管理することも可能です。
 
 ドキュメントビューの設定は、4D Write Pro フォームオブジェクトのプロパティリストにおいて、**アピアランス**テーマの項目で指定します:
 
@@ -81,6 +81,5 @@ slug: /WritePro/configuring-4d-write-pro-areas
 **注:** ページビューモードはドキュメントには保存されません。
 
 4Dフォームに埋め込まれたエリアについては、プロパティリストを使用してデフォルトのビューモードを設定することができます。この場合、ビューモードは 4D Write Proフォームオブジェクトのプロパティとして保存されます (より詳細な情報については、*ビュープロパティの設定* の章を参照してください)。
-
 
 

@@ -314,7 +314,7 @@ Une fonction de construction de classe ORDA est déclenchée juste après la cr�
 
 Cette fonction ne peut être définie qu'au [niveau de l'entité](#entity-class). Il ne peut y avoir qu'une seule fonction constructor dans une classe d'entité (sinon une erreur est renvoyée).
 
-La fonction du constructeur de la classe ORDA ne reçoit ni ne renvoie de paramètres. Cependant, vous pouvez l'utiliser pour initialiser les valeurs des attributs en utilisant [`This`](./commands/this). Notez que les valeurs initialisées par le constructeur sont remplacées si les attributs correspondants sont remplis par le code.
+La fonction du constructeur de la classe ORDA ne reçoit ni ne renvoie de paramètres. Cependant, vous pouvez l'utiliser pour initialiser les valeurs des attributs en utilisant [`This`](../commands/this.md). Notez que les valeurs initialisées par le constructeur sont remplacées si les attributs correspondants sont remplis par le code.
 
 :::note
 
@@ -1207,4 +1207,3 @@ Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéde
 Dans l'éditeur de code 4D, les variables typées en tant que classe ORDA bénéficient automatiquement des fonctions d'auto-complétion. Exemple avec une variable de classe Entity :
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
-

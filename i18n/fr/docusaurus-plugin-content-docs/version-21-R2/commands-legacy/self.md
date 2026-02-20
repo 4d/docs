@@ -50,7 +50,7 @@ Référez-vous à l'exemple de la commande [RESOLVE POINTER](resolve-pointer.md)
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-[This](./commands/this)  
+[This](../commands/this.md)  
 
 ## Propriétés
 
@@ -58,6 +58,5 @@ Référez-vous à l'exemple de la commande [RESOLVE POINTER](resolve-pointer.md)
 | --- | --- |
 | Numéro de commande | 308 |
 | Thread safe | no |
-
 
 

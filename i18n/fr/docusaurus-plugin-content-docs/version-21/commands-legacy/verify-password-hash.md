@@ -35,7 +35,7 @@ Cette fonction compare *motDePasse* à un *hash* généré par la commande [Gene
 
 ### Gestion des erreurs 
 
-Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](./commands/last-errors)  et [ON ERR CALL](on-err-call.md).
+Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](../commands/last-errors.md)  et [ON ERR CALL](on-err-call.md).
 
 | **Numéro** | **Message**                                              |
 | ---------- | -------------------------------------------------------- |
@@ -72,6 +72,5 @@ Cet exemple compare un hash de mot de passe créé par la commande [Generate pas
 | --- | --- |
 | Numéro de commande | 1534 |
 | Thread safe | yes |
-
 
 

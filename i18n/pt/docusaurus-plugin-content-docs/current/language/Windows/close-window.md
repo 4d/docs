@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW fecha a janela ativa aberta pelo comando [Open window](./commands/open-window) ou [Open form window](./commands/open-form-window) no processo atual.<!-- END REF--> CLOSE WINDOW não faz nada se não houver uma janela personalizada aberta; não fecha as janelas sistema. CLOSE WINDOW tampoco tem efeito se for chamado enquanto um formulário estiver ativo na janela. Deve chamar CLOSE WINDOW quando tiver terminado de utilizar uma janela aberta por [Open window](./commands/open-window) ou [Open form window](./commands/open-form-window)..  
+<!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW fecha a janela ativa aberta pelo comando [Open window](../commands/open-window.md) ou [Open form window](../commands/open-form-window.md) no processo atual.<!-- END REF--> CLOSE WINDOW não faz nada se não houver uma janela personalizada aberta; não fecha as janelas sistema. CLOSE WINDOW tampoco tem efeito se for chamado enquanto um formulário estiver ativo na janela. Deve chamar CLOSE WINDOW quando tiver terminado de utilizar uma janela aberta por [Open window](../commands/open-window.md) ou [Open form window](../commands/open-form-window.md)..  
 
-É inútil passar um número a CLOSE WINDOW quando o utiliza para fechar as janelas abertas por [Open window](./commands/open-window) ou [Open form window](./commands/open-form-window) , já que CLOSE WINDOW sempre fechará a última janela criada por um destes comandos.  
+É inútil passar um número a CLOSE WINDOW quando o utiliza para fechar as janelas abertas por [Open window](../commands/open-window.md) ou [Open form window](../commands/open-form-window.md) , já que CLOSE WINDOW sempre fechará a última janela criada por um destes comandos.  
   
 Se passar um número de referência de janela externa no parâmetro *janela*, CLOSE WINDOW fecha a janela externa especificada. Para maior informação sobre janelas externas, consulte a função .
 
@@ -38,8 +38,8 @@ O seguinte exemplo abre uma janela formulario e cria novos registros com o coman
 
 ## Ver também 
 
-[Open form window](./commands/open-form-window)  
-[Open window](./commands/open-window)  
+[Open form window](../commands/open-form-window.md)  
+[Open window](../commands/open-window.md)  
 
 ## Propriedades
 
@@ -47,6 +47,5 @@ O seguinte exemplo abre uma janela formulario e cria novos registros com o coman
 | --- | --- |
 | Número do comando | 154 |
 | Thread-seguro | no |
-
 
 

@@ -49,7 +49,7 @@ Para saber o tamanho total da página, pode:
 ## Ver também 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
 ## Propriedades
 
@@ -57,6 +57,5 @@ Para saber o tamanho total da página, pode:
 | --- | --- |
 | Número do comando | 703 |
 | Thread-seguro | no |
-
 
 

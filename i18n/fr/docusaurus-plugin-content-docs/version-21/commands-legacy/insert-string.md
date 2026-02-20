@@ -26,7 +26,7 @@ Si *insertion* est une chaîne vide (""), **Insert string** retourne *source* in
 
 Si *position* est supérieur à la longueur de *source*, *insertion* est ajouté à la fin de *source*. Si *position* est inférieur à un (1), *insertion* est inséré au début de *source*.
 
-**Insert string** est différent de [Change string](./commands/change-string) puisque cette fonction insère des caractères au lieu de les remplacer.
+**Insert string** est différent de [Change string](../commands/change-string) puisque cette fonction insère des caractères au lieu de les remplacer.
 
 ## Exemple 
 
@@ -40,9 +40,9 @@ L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats so
 
 ## Voir aussi 
 
-[Change string](./commands/change-string)  
-[Delete string](./commands/delete-string)  
-[Replace string](./commands/replace-string)  
+[Change string](../commands/change-string)  
+[Delete string](../commands/delete-string)  
+[Replace string](../commands/replace-string)  
 
 ## Propriétés
 
@@ -50,6 +50,5 @@ L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats so
 | --- | --- |
 | Numéro de commande | 231 |
 | Thread safe | yes |
-
 
 

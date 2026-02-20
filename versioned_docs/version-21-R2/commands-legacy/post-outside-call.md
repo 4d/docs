@@ -54,7 +54,7 @@ See example for [Semaphore](semaphore.md).
 
 ## See also 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
@@ -65,6 +65,5 @@ See example for [Semaphore](semaphore.md).
 | Command number | 329 |
 | Thread safe | no |
 | Forbidden on the server ||
-
 
 

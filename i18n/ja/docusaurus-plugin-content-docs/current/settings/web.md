@@ -162,7 +162,7 @@ CORSサービスで許可されたホストとメソッドの一覧。 [CORS設�
 
 4D Web サーバーが受け取るリクエストのログを開始/停止します。ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 [ログの記録](../WebServer/webServerConfig.md#ログの記録) 参照。
 
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](./commands/web-set-option) command.
+> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](../commands-legacy/web-set-option.md) command.
 
 ログフォーマットメニューでは、次のオプションを提供します。
 
@@ -317,4 +317,3 @@ See [Users and sessions](../REST/authUsers.md) to know the recommended way to co
 :::
 
 このオプションにより、ユーザーはカレントプロジェクトの [Qodly Studio](developer.4d.com/qodly/) にアクセスできるようになります。 [アプリケーションレベル](../Admin/webAdmin.md) でグローバルアクセスが許可されている必要があることに注意してください。
-

@@ -76,7 +76,7 @@ Dans une list box de type tableau, chaque colonne est associée à un tableau 4D
 Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. Vous pouvez le modifier, ainsi que les autres [propriétés des colonnes](listbox_overview.md#proprietes-specifiques-des-colonnes). Le format d'affichage de chaque colonne peut également être défini à l'aide de la commande `OBJECT SET FORMAT`.
 > Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques), disposant de mécanismes spécifiques.
 
-Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#énumération) à une colonne afin de contrôler la saisie. Les valeurs des colonnes sont gérées à l'aide de commandes List box de haut niveau (telles que [`LISTBOX INSERT ROWS`](./commands/listbox-insert-rows) ou `LISTBOX DELETE ROWS`) ainsi que des commandes de manipulation de tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
+Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#énumération) à une colonne afin de contrôler la saisie. Les valeurs des colonnes sont gérées à l'aide de commandes List box de haut niveau (telles que [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) ou `LISTBOX DELETE ROWS`) ainsi que des commandes de manipulation de tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -1232,4 +1232,3 @@ Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox
     *   case à cocher (passage cochée/non cochée)
 *   **Sur clic** : Lorsque l'utilisateur clique sur un bouton installé à l'aide de l'attribut *valueType*, un événement `On Clicked` est généré. Cet événement doit être ensuite géré par le programmeur.
 *   **Sur clic alternatif** : Lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton"), un événement `On Alternative Click` est généré. Cet événement doit être ensuite géré par le programmeur.
-

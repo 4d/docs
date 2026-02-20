@@ -36,7 +36,7 @@ slug: /WritePro/properties
 
 ブレークはプログラミングによって、またはユーザーの操作で追加することが可能です。利用可能なアクションとしては以下のようなものが含まれます:
 
-* [WP INSERT BREAK](./commands/wp-insert-break) コマンド
+* [WP INSERT BREAK](../commands/wp-insert-break) コマンド
 * *insertPageBreak* 標準アクション
 * デフォルトのコンテキストメニューの、**段落ブレーク挿入**オプション
 
@@ -48,7 +48,7 @@ slug: /WritePro/properties
 * **段落内の改ページを避ける**: このオプションが段落に対してチェックされている場合、4D Write Pro はその段落が 2枚以上のページに分割されないようにします。
 * **次の段落につなげる:** このオプションが段落に対して設定されている場合、その段落は、その後に続く段落と自動ブレークでは分割されなくなります。詳細に関しては`wk keep with next` とそれに対応する[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)を参照して下さい*keepWithNext*.
 
-これらのオプションはコンテキストメニューを使用するか、あるいは[属性](./commands/4d-write-pro-attributes)(`wk avoid widows and orphans`、`wk page break inside paragraph`、または[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)(*widowAndOrphanControlEnabled*、 *avoidPageBreakInside*。
+これらのオプションはコンテキストメニューを使用するか、あるいは[属性](../commands-legacy/4d-write-pro-attributes.md)(`wk avoid widows and orphans`、`wk page break inside paragraph`、または[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)(*widowAndOrphanControlEnabled*、 *avoidPageBreakInside*。
 
 <!-- INCLUDE lists-WP.Desc -->
 
@@ -63,7 +63,7 @@ slug: /WritePro/properties
 * 塗りエリア
 * 繰り返し
 
-これらの[属性](./commands/4d-write-pro-attributes)は、[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドあるいは[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)によってによって、プログラムによってページ上のそれぞれの要素に対して、あるいはドキュメントの背景全体に対して定義することが可能です。
+これらの[属性](../commands-legacy/4d-write-pro-attributes.md)は、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドあるいは[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)によってによって、プログラムによってページ上のそれぞれの要素に対して、あるいはドキュメントの背景全体に対して定義することが可能です。
 
 ユーザーは以下のように、コンテキストメニューを通じて背景属性を変更することが可能です:
 
@@ -160,7 +160,7 @@ slug: /WritePro/properties
 
 [ST INSERT EXPRESSION](../../commands/st-insert-expression) コマンドを使用することで、ページ番号やページ数などの動的なコンテンツを挿入することができます (より詳細な情報については、*式の挿入*の段落を参照してください)。
 
-**注:** [WP Get header](./commands/wp-get-header) と [WP Get footer](./commands/wp-get-footer) といった特定のコマンドを使用することで、フッターやヘッダーのをプログラミングによって管理することができます。
+**注:** [WP Get header](../commands/wp-get-header) と [WP Get footer](../commands/wp-get-footer) といった特定のコマンドを使用することで、フッターやヘッダーのをプログラミングによって管理することができます。
 
 セクションのヘッダーとフッターが定義できたら、コンテキストメニューを使用してそれらの属性を設定することができます:
 
@@ -246,7 +246,7 @@ slug: /WritePro/properties
 
 :::note 注
 
-* タブは、[WP SET ATTRIBUTES](./commands/wp-set-attributes)、[WP GET ATTRIBUTES](./commands/wp-get-attributes)、あるいは[WP RESET ATTRIBUTES](./commands/wp-reset-attributes) コマンドとwk tab default および wk tabs セレクターを使用することでプログラムで定義することも可能です。
+* タブは、[WP SET ATTRIBUTES](../commands/wp-set-attributes)、[WP GET ATTRIBUTES](../commands/wp-get-attributes)、あるいは[WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドとwk tab default および wk tabs セレクターを使用することでプログラムで定義することも可能です。
 * 小数点揃えに関しては、4D Write Pro は右からみて最初のドットまたはカンマ文字を小数点区切りとして認識します。このデフォルトの設定はwk tab decimal separator セレクターを使用して変更することができます。
 
 :::
@@ -261,7 +261,7 @@ slug: /WritePro/properties
 * \_\_ (アンダースコア)
 * \*\*\* (アスタリスク)
 
-リーダー文字は必ずタブの前に表示され、テキストの方向(左から右、あるいは右から左)に従います。[WP SET ATTRIBUTES](./commands/wp-set-attributes) 、[WP GET ATTRIBUTES](./commands/wp-get-attributes) 、および[WP RESET ATTRIBUTES](./commands/wp-reset-attributes) コマンドと`wk leading` と `wk tab default` または `wk tabs` セレクターを使用することでプログラミングによる定義も可能ですし、水平ルーラーのコンテキストメニューからユーザーインターフェース経由で定義することも可能です(以下参照)。
+リーダー文字は必ずタブの前に表示され、テキストの方向(左から右、あるいは右から左)に従います。[WP SET ATTRIBUTES](../commands/wp-set-attributes) 、[WP GET ATTRIBUTES](../commands/wp-get-attributes) 、および[WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドと`wk leading` と `wk tab default` または `wk tabs` セレクターを使用することでプログラミングによる定義も可能ですし、水平ルーラーのコンテキストメニューからユーザーインターフェース経由で定義することも可能です(以下参照)。
 
 ![](../../assets/en/WritePro/pict5761675.en.png)
 
@@ -287,12 +287,12 @@ slug: /WritePro/properties
 
 カラムはドキュメントレベル(ドキュメント全体に表示される)、あるいはセクションレベル(各セクションはそれぞれ独自のカラム設定を持つことができる)において定義することができます。
 
-**注:** カラムは**ページビュー**モードと**下書きビュー**モードにおいてのみサポートされます(**埋め込み**ビューモードでは表示されません)。また[WP EXPORT DOCUMENT](./commands/wp-export-document) コマンドを使用して.docx フォーマットへと書き出すことができますが、HTML またはMIME HTML フォーマット(wk web page complete フォーマット)への書き出しはできません。
+**注:** カラムは**ページビュー**モードと**下書きビュー**モードにおいてのみサポートされます(**埋め込み**ビューモードでは表示されません)。また[WP EXPORT DOCUMENT](../commands/wp-export-document) コマンドを使用して.docx フォーマットへと書き出すことができますが、HTML またはMIME HTML フォーマット(wk web page complete フォーマット)への書き出しはできません。
 
 カラムは以下の方法を用いて設定することも可能です:
 
 * 4D Write Pro エリアコンテキストメニューの**カラム**サブメニュー
-* 4D Write Pro [属性](./commands/4d-write-pro-attributes)
+* 4D Write Pro [属性](../commands-legacy/4d-write-pro-attributes.md)
 * 4D Write Pro [標準アクション](./using-4d-write-pro-standard-actions.md)
 
 カラムに対しては、以下のプロパティを設定/取得することができます:
@@ -303,7 +303,7 @@ slug: /WritePro/properties
 | カラム間隔          | カラム間の間隔をpt、インチ、cm単位で指定。全てのカラムに同じ間隔が適用されることに注意してください。各カラムの幅は、カラム数、ページ幅、そしてカラム間隔に応じて、4D Write Proによって自動的に算出されます。                                                         | wk column spacing                                                       | *columnSpacing*                                       |
 | カラム幅           | (読込のみ属性) 各カラムのカレントの(自動算出された)幅。                                                                                                                                         | wk column width                                                         | \-                                                    |
 | 区切り線スタイル、カラー、幅 | カラムの間には垂直のセパレーター(区切り線)を追加することができます。これらのオプションを使用すると、その区切り線のスタイル、カラー、幅をデザインすることができます。![](../../assets/en/WritePro/pict3752176.en.png)区切り線を削除するためには、スタイルから**なし**を選んでください。 | wk column rule style、wk column rule color、wk column rule width          | *columnRuleStyle*、*columnRuleColor*、*columnRuleWidth* |
-| ブレークを挿入        | カラムブレークを挿入                                                                                                                                                             | wk column break、[WP INSERT BREAK](./commands/wp-insert-break)も参照してください | *insertColumnBreak*                                   |
+| ブレークを挿入        | カラムブレークを挿入                                                                                                                                                             | wk column break、[WP INSERT BREAK](../commands/wp-insert-break)も参照してください | *insertColumnBreak*                                   |
 | カラムメニュー        | カラムのサブメニューを作成します                                                                                                                                                       | \-                                                                      | *columns*                                             |
 
 ### 複数カラムと単一カラムのセクションを持ったページの作成 
@@ -328,7 +328,7 @@ slug: /WritePro/properties
 - 次に、ドキュメントの先頭に50ページを挿入します。
 - "MyBM" ブックマークを使用すると、今度はドキュメント内の70ページにある "Hello world" に自動的にアクセスできます。
 
-ドキュメント内には無制限のブックマークを含むことができます。複数のブックマークが同じ範囲を参照することができ、ブックマークの範囲は重なり合うことがあります。ただし、ドキュメント内の各ブックマーク名は一意である必要があります。ブックマークは、[WP INSERER DOCUMENT](./commands/wp-insert-document-body) コマンドが使用されるとインポートされません（移行先のドキュメント内のブックマークは上書きされません）。
+ドキュメント内には無制限のブックマークを含むことができます。複数のブックマークが同じ範囲を参照することができ、ブックマークの範囲は重なり合うことがあります。ただし、ドキュメント内の各ブックマーク名は一意である必要があります。ブックマークは、[WP INSERER DOCUMENT](../commands/wp-insert-document-body) コマンドが使用されるとインポートされません（移行先のドキュメント内のブックマークは上書きされません）。
 
 一度作成されたブックマークはドキュメント内に保存されます。ブックマークはドキュメントと共に保存され、複数のコマンドで操作することができます。
 
@@ -336,10 +336,10 @@ slug: /WritePro/properties
 
 複数のコマンドを使用して、ブックマークを作成、削除、使用することができます：
 
-- [WP NEW BOOKMARK](./commands/wp-new-bookmark) はレンジから新しいブックマークを作成します。
-- [WP GET BOOKMARKS](./commands/wp-get-bookmarks) はドキュメント内で定義されている全てのブックマークを取得します。
-- [WP Bookmark range](./commands/wp-bookmark-range) は既存のブックマークからレンジを取得します。
-- [WP DELETE BOOKMARK](./commands/wp-delete-bookmark) はブックマークを削除します。
+- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) はレンジから新しいブックマークを作成します。
+- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) はドキュメント内で定義されている全てのブックマークを取得します。
+- [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) は既存のブックマークからレンジを取得します。
+- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) はブックマークを削除します。
 
 ## リンク
 
@@ -357,12 +357,12 @@ slug: /WritePro/properties
 
 ハイパーリンクは以下のコマンドで管理することができます:
 
-- [WP SET LINK](./commands/wp-set-link) を使用して、ターゲットオブジェクトの指定用にリンクを挿入
-- [WP Get links](./commands/wp-get-links) を使用して、ターゲットオブジェクト内のすべてのリンクのコレクションとして取得
+- [WP SET LINK](../commands-legacy/wp-set-link.md) を使用して、ターゲットオブジェクトの指定用にリンクを挿入
+- [WP Get links](../commands-legacy/wp-get-links.md) を使用して、ターゲットオブジェクト内のすべてのリンクのコレクションとして取得
 
 :::note
 
-注: リンクは属性として扱われるため、`wk link url` 定数を用いて [WP SET ATTRIBUTES](./commands/wp-set-attributes) および [WP GET ATTRIBUTES](./commands/wp-get-attributes) コマンドで定義・取得することができます。けれども、通常は [WP SET LINK](./commands/wp-set-link) や [WP Get links](./commands/wp-get-links) の使用が推奨されます。これらは自動的に URL としてリンクをエンコード／デコードします。[WP GET ATTRIBUTES](./commands/wp-get-attributes) コマンドを使用してリンクを読み取るとき、ターゲットオブジェクトが複数のリンクを含む場合は、最初のリンク文字列のみが返されます。
+注: リンクは属性として扱われるため、`wk link url` 定数を用いて [WP SET ATTRIBUTES](../commands/wp-set-attributes) および [WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドで定義・取得することができます。けれども、通常は [WP SET LINK](../commands-legacy/wp-set-link.md) や [WP Get links](../commands-legacy/wp-get-links.md) の使用が推奨されます。これらは自動的に URL としてリンクをエンコード／デコードします。[WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドを使用してリンクを読み取るとき、ターゲットオブジェクトが複数のリンクを含む場合は、最初のリンク文字列のみが返されます。
 
 :::
 
@@ -428,5 +428,3 @@ WP SET LINK($range;New object("url";"http://www.4d.com"))
 | OBJECT Get pointer | |
 
 上記にないOBJECTコマンドはそれぞれ Write Proエリアに対しては使用できません。
-
-

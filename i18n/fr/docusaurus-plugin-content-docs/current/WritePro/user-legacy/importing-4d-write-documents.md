@@ -22,8 +22,8 @@ Pour plus d'informations, reportez-vous à *Gérer des formules*.
 
 Les objets 4D Write Pro permettent d'importer des documents 4D Write de deux manières :
 
-* Pour les fichiers 4D Write stockés sur disque, vous pouvez utiliser la commande [WP Importer document](./commands/wp-importer-document),
-* Pour les fichiers 4D Write stockés dans des champs BLOB, vous pouvez utiliser la commande [WP Nouveau](./commands/wp-nouveau).
+* Pour les fichiers 4D Write stockés sur disque, vous pouvez utiliser la commande [WP Importer document](../commands/wp-importer-document),
+* Pour les fichiers 4D Write stockés dans des champs BLOB, vous pouvez utiliser la commande [WP Nouveau](../commands/wp-nouveau).
 
 Pour plus d'informations, veuillez vous reporter aux descriptions de ces commandes.
 
@@ -31,7 +31,7 @@ Pour plus d'informations, veuillez vous reporter aux descriptions de ces command
 
 Afin de faciliter votre migration du plug-in 4D Write vers 4D Write Pro, nous voulons conserver autant de fonctions 4D Write que possible dans les objets 4D Write Pro.
 
-Ce paragraphe liste les propriétés du plug-in 4D Write qui sont actuellement récupérées dans une zone 4D Write Pro après un import effectué à l'aide de la commande [WP Importer document](./commands/wp-importer-document) ou [WP Nouveau](./commands/wp-nouveau). 
+Ce paragraphe liste les propriétés du plug-in 4D Write qui sont actuellement récupérées dans une zone 4D Write Pro après un import effectué à l'aide de la commande [WP Importer document](../commands/wp-importer-document) ou [WP Nouveau](../commands/wp-nouveau). 
 
 Notez que quelques différences de rendu pourront apparaître, qui ne seront pas nécessairement considérées comme des bogues. Par exemple, des différences peuvent être liées à la police par défaut utilisée par 4D Write Pro pour les puces, ou aux conversions des caractères soulignés. 
 
@@ -84,7 +84,7 @@ Notez que quelques différences de rendu pourront apparaître, qui ne seront pas
 | Couleur lien         | Non disponible                                                         |
 | Couleur lien visité  | Non disponible                                                         |
 
-Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](../../commands/lire-formatage-systeme)) est utilisé comme séparateur décimal pour les tabulations décimales. Vous pouvez modifier ce paramètre à l'aide de la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs). 
+Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](../../commands/lire-formatage-systeme)) est utilisé comme séparateur décimal pour les tabulations décimales. Vous pouvez modifier ce paramètre à l'aide de la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs). 
 
 ### Paramètres pagination document 
 
@@ -127,7 +127,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 
 **Note de compatibilité** : 
 
-* Les modes d'affichage des images sont automatiquement importés à partir de 4D Write Pro v19 R2, à l'aide de [WP Importer document](./commands/wp-importer-document). Vous pouvez restaurer le comportement précédent (toutes les images sont redimensionnées pour s'adapter) à l'aide de l'attribut *importDisplayMode*.
+* Les modes d'affichage des images sont automatiquement importés à partir de 4D Write Pro v19 R2, à l'aide de [WP Importer document](../commands/wp-importer-document). Vous pouvez restaurer le comportement précédent (toutes les images sont redimensionnées pour s'adapter) à l'aide de l'attribut *importDisplayMode*.
 * Sous Windows, les images au format PICT Mac OS insérées dans le document 4D Write sont importées mais ne peuvent pas être restituées dans 4D Write Pro. Si vous importez un document contenant ce type d'images, il sera nécessaire de les convertir. Le format PICT n'est plus pris en charge depuis 4D v18 et ne peut plus être utilisé.
 
 | **4D Write plug-in**            | **4D Write Pro**                                             |
@@ -213,7 +213,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 | Expression HTML      | Non disponible\*\* |
 | Expression RTF       | Non disponible     |
 
-\*Utilisez la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) avec l'attribut wk break paragraphs in formulas pour transformer les retours chariots retournés par les formules en sauts de paragraphe dans le document importé (sauts de ligne par défaut). Voir *Gérer des formules*).
+\*Utilisez la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec l'attribut wk break paragraphs in formulas pour transformer les retours chariots retournés par les formules en sauts de paragraphe dans le document importé (sauts de ligne par défaut). Voir *Gérer des formules*).
 
 \*\*peut être importée en tant que texte dans les balises ***##htmlBegin##*** et ***##htmlEnd##*** si vous utilisez la constante wk import html expressions as text.
 

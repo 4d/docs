@@ -26,7 +26,7 @@ Passe o tipo de informação a se obter em *seletor*. É possível utilizar uma 
 | Constante               | Tipo          | Valor | Comentário                                                                                                                                                                                                           |
 | ----------------------- | ------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Last backup date        | Inteiro longo | 0     | *info1* e *info2* devolvem respectivamente a data e a hora do último backup.                                                                                                                                         |
-| Last backup information | Inteiro longo | 5     | *info1* devolve a última cópia de segurança em milissegundos (inteiro longo) e *info2* a última timestamp de inicio da cópia de segurança (string, ver os detalhes de formato no comando [Timestamp](./commands/timestamp)). |
+| Last backup information | Inteiro longo | 5     | *info1* devolve a última cópia de segurança em milissegundos (inteiro longo) e *info2* a última timestamp de inicio da cópia de segurança (string, ver os detalhes de formato no comando [Timestamp](../commands/timestamp)). |
 | Last backup status      | Inteiro longo | 2     | *info1* devolve o número e *info2* o texto de estado da última cópia de segurança                                                                                                                                    |
 | Next backup date        | Inteiro longo | 4     | *info1* devolve a data e *info2* a hora da próxima cópia de segurança programada                                                                                                                                     |
 
@@ -40,6 +40,5 @@ Passe o tipo de informação a se obter em *seletor*. É possível utilizar uma 
 | --- | --- |
 | Número do comando | 888 |
 | Thread-seguro | no |
-
 
 

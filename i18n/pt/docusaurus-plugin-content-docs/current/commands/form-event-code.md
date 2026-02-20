@@ -100,7 +100,7 @@ This example is a template for a form method. Mostra cada um dos possíveis even
 
 ## Exemplo
 
-This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](./commands/display-selection) or [MODIFY SELECTION](./commands/modify-selection) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
+This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](../commands-legacy/display-selection.md) or [MODIFY SELECTION](../commands-legacy/modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
 ```4d
   //A form method
@@ -139,7 +139,7 @@ This example shows the template of a form method that handles the events that ca
 
 ## Exemplo 2
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](./commands/get-edited-text), [Keystroke](./commands/keystroke) and [FILTER KEYSTROKE](./commands/filter-keystroke) commands.
+For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) and [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) commands.
 
 ## Exemplo 6
 
@@ -340,14 +340,14 @@ As a result, the red rectangle follows the scrolling of the list box:
 ## Veja também
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](./commands/call-subform-container)\
-[Current form table](./commands/current-form-table)\
-[FILTER KEYSTROKE](./commands/filter-keystroke)\
+[CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)\
+[Current form table](../commands-legacy/current-form-table.md)\
+[FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md)\
 [FORM Event](form-event.md)\
-[Get edited text](./commands/get-edited-text)\
-[Keystroke](./commands/keystroke)\
-[POST OUTSIDE CALL](./commands/post-outside-call)\
-[SET TIMER](./commands/set-timer)
+[Get edited text](../commands-legacy/get-edited-text.md)\
+[Keystroke](../commands-legacy/keystroke.md)\
+[POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
+[SET TIMER](../commands-legacy/set-timer.md)
 
 ## Propriedades
 
@@ -355,6 +355,5 @@ As a result, the red rectangle follows the scrolling of the list box:
 | ----------------- | --- |
 | Número de comando | 388 |
 | Thread safe       | não |
-
 
 

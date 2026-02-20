@@ -55,9 +55,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Date](./commands/date)  
-[Num](./commands/num)  
-[String](./commands/string)  
+[Date](../commands/date)  
+[Num](../commands/num.md)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
 ## プロパティ
@@ -66,7 +66,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1537 |
 | スレッドセーフである | yes |
-
-
 
 

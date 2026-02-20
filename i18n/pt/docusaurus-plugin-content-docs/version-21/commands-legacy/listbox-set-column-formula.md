@@ -45,7 +45,7 @@ O parâmetro *formula* pode conter toda expressão valida:
 
 Quando o comando é chamado, a fórmula é analisada e logo executada.  
   
-**Nota**: utilize o comando [Command name](./commands/command-name) para definir as fórmulas independentes da linguagem da aplicação (quando são chamados os comandos 4D).  
+**Nota**: utilize o comando [Command name](../commands/command-name.md) para definir as fórmulas independentes da linguagem da aplicação (quando são chamados os comandos 4D).  
   
 O parâmetro *tipoDados* designa o tipo de dados resultantes da execução da fórmula. Neste parâmetro, passe uma das constantes do tema *Tipos de campos e variáveis*. Se o resultado da fórmula não corresponde ao tipo de dados esperado, um erro é gerado.
 
@@ -60,6 +60,5 @@ O parâmetro *tipoDados* designa o tipo de dados resultantes da execução da f�
 | --- | --- |
 | Número do comando | 1203 |
 | Thread-seguro | no |
-
 
 

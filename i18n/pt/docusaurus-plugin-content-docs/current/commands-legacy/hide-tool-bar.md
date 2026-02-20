@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.HIDE TOOL BAR.Summary-->O comando HIDE TOOL BAR  gerencia a visualização das barras de ferramentas personalizadas criadas pelo comando [Open form window](./commands/open-form-window) para o processo atual.<!-- END REF-->
+<!--REF #_command_.HIDE TOOL BAR.Summary-->O comando HIDE TOOL BAR  gerencia a visualização das barras de ferramentas personalizadas criadas pelo comando [Open form window](../commands/open-form-window.md) para o processo atual.<!-- END REF-->
 
-Se uma janela barra de ferramentas foi criada pelo comando [Open form window](./commands/open-form-window) com a opção Toolbar form window, o comando oculta esta janela. Se a janela barra de ferramentas já estava oculta ou se nenhuma janela deste tipo foi criada, o comando não faz nada.
+Se uma janela barra de ferramentas foi criada pelo comando [Open form window](../commands/open-form-window.md) com a opção Toolbar form window, o comando oculta esta janela. Se a janela barra de ferramentas já estava oculta ou se nenhuma janela deste tipo foi criada, o comando não faz nada.
 
 ## Exemplo 
 
@@ -60,6 +60,5 @@ Para evitar isto, no evento formulário On Resize da janela estandarte, é neces
 | --- | --- |
 | Número do comando | 434 |
 | Thread-seguro | no |
-
 
 

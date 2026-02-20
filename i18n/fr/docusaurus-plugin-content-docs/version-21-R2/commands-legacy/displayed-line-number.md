@@ -55,7 +55,7 @@ Cet exemple permet d’appliquer une couleur alternée à un formulaire liste af
 
 ## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Selected record number](selected-record-number.md)  
 
 ## Propriétés
@@ -64,6 +64,5 @@ Cet exemple permet d’appliquer une couleur alternée à un formulaire liste af
 | --- | --- |
 | Numéro de commande | 897 |
 | Thread safe | no |
-
 
 

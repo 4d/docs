@@ -100,7 +100,7 @@ L'exemple suivant est une méthode formulaire générique. Elle fait apparaître
 
 ## Exemple 4
 
-L'exemple suivant montre une méthode formulaire générique qui gère les événements pouvant survenir dans un formulaire sortie quand il s'affiche à l'aide de la commande [DISPLAY SELECTION](./commands/display-selection) ou [MODIFY SELECTION](./commands/modify-selection). Dans un but informatif, elle affiche l'événement dans la barre de titre de la fenêtre.
+L'exemple suivant montre une méthode formulaire générique qui gère les événements pouvant survenir dans un formulaire sortie quand il s'affiche à l'aide de la commande [DISPLAY SELECTION](../commands-legacy/display-selection.md) ou [MODIFY SELECTION](../commands-legacy/modify-selection.md). Dans un but informatif, elle affiche l'événement dans la barre de titre de la fenêtre.
 
 ```4d
 // Une méthode formulaire exemple
@@ -139,7 +139,7 @@ L'exemple suivant montre une méthode formulaire générique qui gère les évé
 
 ## Exemple 5
 
-Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](./commands/get-edited-text), [Keystroke](./commands/keystroke) et [FILTER KEYSTROKE](./commands/filter-keystroke).
+Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) et [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md).
 
 ## Exemple 6
 
@@ -341,14 +341,14 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 ## Voir également
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](./commands/call-subform-container)\
-[Current form table](./commands/current-form-table)\
-[FILTER KEYSTROKE](./commands/filter-keystroke)\
+[CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)\
+[Current form table](../commands-legacy/current-form-table.md)\
+[FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md)\
 [FORM Event](form-event.md)\
-[Get edited text](./commands/get-edited-text)\
-[Keystroke](./commands/keystroke)\
-[POST OUTSIDE CALL](./commands/post-outside-call)\
-[SET TIMER](./commands/set-timer)
+[Get edited text](../commands-legacy/get-edited-text.md)\
+[Keystroke](../commands-legacy/keystroke.md)\
+[POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
+[SET TIMER](../commands-legacy/set-timer.md)
 
 ## Propriétés
 
@@ -356,6 +356,5 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 | ------------------ | --- |
 | Numéro de commande | 388 |
 | Thread safe        | non |
-
 
 

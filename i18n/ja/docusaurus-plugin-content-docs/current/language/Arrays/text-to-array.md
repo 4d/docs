@@ -117,8 +117,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Split string](./commands/split-string  
-[ST Get plain text](st-get-plain-text)  
+[Split string](../commands/split-string  
+[ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 
 ## プロパティ
@@ -127,6 +127,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1149 |
 | スレッドセーフである | no |
-
 
 

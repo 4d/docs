@@ -42,7 +42,7 @@ If the database operates with a log file, the system variable OK is set to 1\. T
 
 ## See also 
 
-[SELECT LOG FILE](./commands/select-log-file)  
+[SELECT LOG FILE](../commands/select-log-file.md)  
 
 ## Properties
 
@@ -51,5 +51,4 @@ If the database operates with a log file, the system variable OK is set to 1\. T
 | Command number | 928 |
 | Thread safe | yes |
 | Modifies variables | OK |
-
 

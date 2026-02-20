@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.FORM NEXT PAGE.Summary-->**FORM NEXT PAGE** change la page courante d'un formulaire pour afficher la page suivante.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](./commands/form-load), ou si la page affichée est la dernière page du formulaire, **FORM NEXT PAGE** ne fait rien.
+<!--REF #_command_.FORM NEXT PAGE.Summary-->**FORM NEXT PAGE** change la page courante d'un formulaire pour afficher la page suivante.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la page affichée est la dernière page du formulaire, **FORM NEXT PAGE** ne fait rien.
 
 ## Exemple 
 
@@ -51,6 +51,5 @@ Cet exemple est une méthode appelée par une commande de menu. Elle provoque l'
 | --- | --- |
 | Numéro de commande | 248 |
 | Thread safe | no |
-
 
 

@@ -32,7 +32,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](./commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](./commands/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
 
 #### Veja também
 
@@ -64,7 +64,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](./commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](./commands/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
 
 #### Veja também
 
@@ -138,7 +138,7 @@ Autoriza a deslocação de linhas durante a execução. Esta opção é selecion
 
 #### Comandos
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -158,7 +158,7 @@ Permite la selección de múltiples registros/opciones en una [lista jerárquica
 
 #### Comandos
 
-[GET LIST PROPERTIES](./commands/get-list-properties) - [SET LIST PROPERTIES](./commands/set-list-properties)
+[GET LIST PROPERTIES](../commands-legacy/get-list-properties.md) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties.md)
 
 ---
 
@@ -185,7 +185,7 @@ Em outros casos (list box baseados em seleções nomeadas, colunas associadas co
 
 #### Comandos
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -207,6 +207,5 @@ Você pode atribuir uma ação padrão e um método projeto de um objeto. Neste 
 
 #### Comandos
 
-[`OBJECT Get action`](./commands/object-get-action) - [`OBJECT SET ACTION`](./commands/object-set-action)
-
+[`OBJECT Get action`](../commands-legacy/object-get-action.md) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action.md)
 

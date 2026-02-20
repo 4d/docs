@@ -74,7 +74,7 @@ Se quiser executar instruções usando chamadas para comandos 4D e tabelas. Já 
 
 ## Ver também 
 
-[Command name](./commands/command-name)  
+[Command name](../commands/command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
@@ -84,6 +84,5 @@ Se quiser executar instruções usando chamadas para comandos 4D e tabelas. Já 
 | --- | --- |
 | Número do comando | 63 |
 | Thread-seguro | yes |
-
 
 

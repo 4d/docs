@@ -80,7 +80,7 @@ User settings file for data および User settings file の両ファイルに�
 
 ## 参照 
 
-[File](./commands/file)    
+[File](../commands/file.md)    
 
 ## プロパティ
 
@@ -88,6 +88,5 @@ User settings file for data および User settings file の両ファイルに�
 | --- | --- |
 | コマンド番号 | 1418 |
 | スレッドセーフである | yes |
-
 
 

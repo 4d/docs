@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TIMER.Summary-->The **SET TIMER** command activates the On Timer form event and sets, for the current form and process, the number of ticks elapsed between each On Timer form event.<!-- END REF--> 
 
-**Note:** For more information about this form event, please refer to the description of the command [Form event code](./commands/form-event-code).
+**Note:** For more information about this form event, please refer to the description of the command [Form event code](../commands/form-event-code.md).
 
 If this command is called in a context in which it is not displaying a form, it will have no effect. 
 
@@ -55,7 +55,7 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
 
 ## See also 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
 
 ## Properties
@@ -64,6 +64,5 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
 | --- | --- |
 | Command number | 645 |
 | Thread safe | no |
-
 
 

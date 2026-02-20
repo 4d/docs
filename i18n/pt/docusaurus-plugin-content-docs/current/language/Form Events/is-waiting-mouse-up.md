@@ -69,7 +69,7 @@ O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mo
 
 ## Ver também 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
 ## Propriedades
 
@@ -77,6 +77,5 @@ O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mo
 | --- | --- |
 | Número do comando | 1422 |
 | Thread-seguro | no |
-
 
 

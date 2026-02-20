@@ -66,7 +66,7 @@ displayed_sidebar: docs
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
 
 ## プロパティ
@@ -75,6 +75,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 101 |
 | スレッドセーフである | no |
-
 
 

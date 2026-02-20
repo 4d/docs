@@ -114,7 +114,7 @@ displayed_sidebar: docs
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 
 ## プロパティ
 
@@ -122,6 +122,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1391 |
 | スレッドセーフである | yes |
-
 
 

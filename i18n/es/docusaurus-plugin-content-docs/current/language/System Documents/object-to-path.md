@@ -63,7 +63,7 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](./commands/file)    
+[File](../commands/file.md)    
 [Folder ](folder.md)  
 [Path to object ](path-to-object.md)  
 [Test path name](test-path-name.md)  
@@ -74,6 +74,5 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 | --- | --- |
 | Número de comando | 1548 |
 | Hilo seguro | yes |
-
 
 

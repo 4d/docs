@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
-Este comando está diseñado para trabajar con interfaces de usuario personalizadas y avanzadas basadas en formularios. Puede utilizarlo para mostrar información procedente de la base de datos o de otras ubicaciones, o para proporcionar funciones de entrada de datos. A diferencia de [ADD RECORD](./commands/add-record) o [MODIFY RECORD](./commands/modify-record), **DIALOG** le ofrece un control total sobre el formulario, su contenido y los botones de navegación y validación.
+Este comando está diseñado para trabajar con interfaces de usuario personalizadas y avanzadas basadas en formularios. Puede utilizarlo para mostrar información procedente de la base de datos o de otras ubicaciones, o para proporcionar funciones de entrada de datos. A diferencia de [ADD RECORD](../commands-legacy/add-record.md) o [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** le ofrece un control total sobre el formulario, su contenido y los botones de navegación y validación.
 
 Este comando suele invocarse junto con el comando [Open form window](open-form-window.md) para mostrar formularios sofisticados, como se muestra en el siguiente ejemplo:
 
 ![](../assets/en/commands/pict3541609.en.png)
 
-El comando **DIALOG** también puede utilizarse en lugar de [ALERT](./commands/alert), [CONFIRM](./commands/confirm) o [Request](./commands/request) cuando la información a presentar o recopilar es más compleja de lo que esos comandos pueden gestionar.
+El comando **DIALOG** también puede utilizarse en lugar de [ALERT](../commands-legacy/alert.md), [CONFIRM](../commands-legacy/confirm.md) o [Request](../commands-legacy/request.md) cuando la información a presentar o recopilar es más compleja de lo que esos comandos pueden gestionar.
 
 En el parámetro *form*, puede pasar:
 
@@ -55,18 +55,18 @@ Para llenar el objeto "form data", tiene dos posibilidades:
 
 :::
 
-El diálogo es cerrado por el usuario ya sea con una acción "aceptar" (activada por la acción estándar ak accept, la tecla Intro, o el comando [ACCEPT](./commands/accept)), o con una acción de "cancelar" (activada por la acción estándar ak cancel, la tecla Escape, o el comando [CANCEL](./commands/cancel)). Una acción de aceptación pondrá la variable sistema OK en 1, mientras que una acción de cancelación pondrá OK en 0\.
+El diálogo es cerrado por el usuario ya sea con una acción "aceptar" (activada por la acción estándar ak accept, la tecla Intro, o el comando [ACCEPT](../commands-legacy/accept.md)), o con una acción de "cancelar" (activada por la acción estándar ak cancel, la tecla Escape, o el comando [CANCEL](../commands-legacy/cancel.md)). Una acción de aceptación pondrá la variable sistema OK en 1, mientras que una acción de cancelación pondrá OK en 0\.
 
-Tenga en cuenta que la validación no es igual al guardado: si el diálogo incluye campos, debe llamar explícitamente al comando [SAVE RECORD](./commands/save-record) para guardar cualquier dato que haya sido modificado.
+Tenga en cuenta que la validación no es igual al guardado: si el diálogo incluye campos, debe llamar explícitamente al comando [SAVE RECORD](../commands-legacy/save-record.md) para guardar cualquier dato que haya sido modificado.
 
 Si se pasa el parámetro opcional *\**, el formulario se carga y se muestra en la última ventana abierta del proceso actual y el comando finaliza su ejecución dejando el formulario activo en la pantalla.  
-Este formulario reacciona entonces "normalmente" a las acciones del usuario y se cierra utilizando una acción estándar o cuando el código 4D relacionado con el formulario (método objeto o método formulario) llama al comando [CANCEL](./commands/cancel) o [ACCEPT](./commands/accept). Si el proceso actual termina, los formularios creados de este modo se cierran automáticamente del mismo modo que si se hubiera llamado a un comando [CANCEL](./commands/cancel). Este modo de apertura es especialmente útil para mostrar una paleta flotante con un documento, sin necesidad de otro proceso.
+Este formulario reacciona entonces "normalmente" a las acciones del usuario y se cierra utilizando una acción estándar o cuando el código 4D relacionado con el formulario (método objeto o método formulario) llama al comando [CANCEL](../commands-legacy/cancel.md) o [ACCEPT](../commands-legacy/accept.md). Si el proceso actual termina, los formularios creados de este modo se cierran automáticamente del mismo modo que si se hubiera llamado a un comando [CANCEL](../commands-legacy/cancel.md). Este modo de apertura es especialmente útil para mostrar una paleta flotante con un documento, sin necesidad de otro proceso.
 
 **Notas:**
 
-- Puede combinar el uso de la sintaxis **DIALOG**(form;\*) con el comando [CALL FORM](./commands/call-form) para establecer la comunicación entre los formularios.
+- Puede combinar el uso de la sintaxis **DIALOG**(form;\*) con el comando [CALL FORM](../commands-legacy/call-form.md) para establecer la comunicación entre los formularios.
 - Debe crear una ventana antes de llamar a la instrucción **DIALOG**(form;\*). No es posible utilizar la ventana de diálogo actual en el proceso ni la ventana creada por defecto para cada proceso. En caso contrario, se genera el error -9909.
-- Cuando se utiliza el parámetro *\**, la ventana se cierra automáticamente tras una acción estándar o una llamada al comando [CANCEL](./commands/cancel) o [ACCEPT](./commands/accept). No tiene que gestionar el cierre de la propia ventana.
+- Cuando se utiliza el parámetro *\**, la ventana se cierra automáticamente tras una acción estándar o una llamada al comando [CANCEL](../commands-legacy/cancel.md) o [ACCEPT](../commands-legacy/accept.md). No tiene que gestionar el cierre de la propia ventana.
 
 ## Ejemplo 1
 
@@ -165,10 +165,10 @@ Tras una llamada a **DIALOG**, si se acepta el diálogo, OK se pone en 1; si se 
 
 ## Ver también
 
-[ACCEPT](./commands/accept)\
-[ADD RECORD](./commands/add-record)\
-[CALL FORM](./commands/call-form)\
-[CANCEL](./commands/cancel)\
+[ACCEPT](../commands-legacy/accept.md)\
+[ADD RECORD](../commands-legacy/add-record.md)\
+[CALL FORM](../commands-legacy/call-form.md)\
+[CANCEL](../commands-legacy/cancel.md)\
 [Form](form.md)\
 [Open window](open-window.md)
 
@@ -179,5 +179,4 @@ Tras una llamada a **DIALOG**, si se acepta el diálogo, OK se pone en 1; si se 
 | Número de comando      | 40        |
 | Hilo seguro            | no        |
 | Modifica las variables | OK, error |
-
 

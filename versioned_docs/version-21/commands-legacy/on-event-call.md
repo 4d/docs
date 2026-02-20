@@ -107,7 +107,7 @@ If **Ctrl+period** has been pressed, the event-handling method sets *◊vbWeStop
  End if
 ```
 
-Note that this example uses **ON EVENT CALL** because it performs a special printing report using the *\_o\_PAGE SETUP*, [Print form](./commands/print-form) and [PAGE BREAK](page-break.md) commands with a [ARRAY TO LIST](array-to-list.md) loop. 
+Note that this example uses **ON EVENT CALL** because it performs a special printing report using the *\_o\_PAGE SETUP*, [Print form](../commands/print-form.md) and [PAGE BREAK](page-break.md) commands with a [ARRAY TO LIST](array-to-list.md) loop. 
 
 If you print a report using [PRINT SELECTION](print-selection.md), you do NOT need to handle events that let the user interrupt the printing; this command does that for you.
 
@@ -125,6 +125,5 @@ If you print a report using [PRINT SELECTION](print-selection.md), you do NOT ne
 | Command number | 190 |
 | Thread safe | no |
 | Forbidden on the server ||
-
 
 

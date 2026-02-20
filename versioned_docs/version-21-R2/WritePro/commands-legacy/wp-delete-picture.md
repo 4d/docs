@@ -38,4 +38,4 @@ You want to delete an image using its ID:
 ## See also 
 
 *Handling pictures*  
-[WP Add picture](./commands/wp-add-picture)  
+[WP Add picture](../commands/wp-add-picture.md)  

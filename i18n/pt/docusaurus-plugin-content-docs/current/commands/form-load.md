@@ -38,7 +38,7 @@ Para obter informações detalhadas sobre o objeto de dados do formulário, cons
 
 ### Impressão de dados
 
-Para poder executar este comando, uma tarefa de impressão deve ser aberta antes usando o comando [OPEN PRINTING JOB](./commands/open-printing-job). O comando [OPEN PRINTING JOB](./commands/open-printing-job) faz uma chamada implícita para o comando [FORM UNLOAD](./commands/form-unload), portanto, nesse contexto, é necessário executar **LOAD FORM**. Uma vez carregado, este *formulário* torna-se o formulário de impressão atual. Todos os comandos de gerenciamento de objetos e, em particular, o comando [Print object](./commands/print-object), funcionam com esse formulário.
+Para poder executar este comando, uma tarefa de impressão deve ser aberta antes usando o comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md). O comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) faz uma chamada implícita para o comando [FORM UNLOAD](../commands-legacy/form-unload.md), portanto, nesse contexto, é necessário executar **LOAD FORM**. Uma vez carregado, este *formulário* torna-se o formulário de impressão atual. Todos os comandos de gerenciamento de objetos e, em particular, o comando [Print object](../commands-legacy/print-object.md), funcionam com esse formulário.
 
 Se um formulário de impressão já tiver sido carregado anteriormente (por meio de uma chamada anterior ao comando **FORM LOAD**), ele será fechado e substituído por *form*. Você pode abrir e fechar vários formulários de projeto na mesma sessão de impressão. A alteração do formulário de impressão por meio do comando **FORM LOAD** não gera quebras de página. Cabe ao desenvolvedor gerenciar as quebras de página.
 
@@ -46,17 +46,17 @@ Apenas o [evento `No carregamento`](../Events/onLoad.md) é executado durante a 
 
 Para preservar a consistência gráfica das formas, é recomendado aplicar a propriedade de aparência "Imprimindo" independentemente da plataforma.
 
-O formulário de impressão atual é fechado automaticamente quando o comando [CLOSE PRINTING JOB](./commands/close-printing-job) é chamado.
+O formulário de impressão atual é fechado automaticamente quando o comando [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) é chamado.
 
 ### Analisar o conteúdo do formulário
 
 Isso consiste em carregar um formulário fora da tela para fins de análise. Para fazer isso, basta chamar **FORM LOAD** fora do contexto de um trabalho de impressão. Nesse caso, os eventos de formulário não são executados.
 
-O **FORM LOAD** pode ser usado com os comandos [FORM GET OBJECTS](./commands/form-get-objects) e [OBJECT Get type](./commands/object-get-type) para executar qualquer tipo de processamento no conteúdo do formulário. Em seguida, você deve chamar o comando [FORM UNLOAD](./commands/form-unload) para liberar o formulário da memória.
+O **FORM LOAD** pode ser usado com os comandos [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) e [OBJECT Get type](../commands-legacy/object-get-type.md) para executar qualquer tipo de processamento no conteúdo do formulário. Em seguida, você deve chamar o comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar o formulário da memória.
 
-Observe que, em todos os casos, o formulário na tela permanece carregado (não é afetado pelo comando **FORM LOAD**), portanto, não é necessário recarregá-lo depois de chamar [FORM UNLOAD](./commands/form-unload).
+Observe que, em todos os casos, o formulário na tela permanece carregado (não é afetado pelo comando **FORM LOAD**), portanto, não é necessário recarregá-lo depois de chamar [FORM UNLOAD](../commands-legacy/form-unload.md).
 
-**Lembrete:** no contexto fora da tela, não se esqueça de chamar [FORM UNLOAD](./commands/form-unload) para evitar qualquer risco de estouro de memória.
+**Lembrete:** no contexto fora da tela, não se esqueça de chamar [FORM UNLOAD](../commands-legacy/form-unload.md) para evitar qualquer risco de estouro de memória.
 
 ## Exemplo 1
 
@@ -156,11 +156,11 @@ End case
 
 ## Veja também
 
-[Current form name](./commands/current-form-name)\
-[FORM UNLOAD](./commands/form-unload)\
-[LISTBOX GET OBJECTS](./commands/listbox-get-objects)\
-[OBJECT Get type](./commands/object-get-type)\
-[Print object](./commands/print-object)
+[Current form name](../commands-legacy/current-form-name.md)\
+[FORM UNLOAD](../commands-legacy/form-unload.md)\
+[LISTBOX GET OBJECTS](../commands-legacy/listbox-get-objects.md)\
+[OBJECT Get type](../commands-legacy/object-get-type.md)\
+[Print object](../commands-legacy/print-object.md)
 
 ## Propriedades
 
@@ -168,6 +168,5 @@ End case
 | ----------------- | ---- |
 | Número de comando | 1103 |
 | Thread safe       | não  |
-
 
 

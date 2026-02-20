@@ -54,12 +54,12 @@ Esquematicamente, essa variável funciona como a área de endereço de um navega
 
 ### Variável URL e comando WA OPEN URL
 
-The URL variable produces the same effects as the [`WA OPEN URL`](./commands/wa-open-url) command. No entanto, há que assinalar as seguintes diferenças:
+The URL variable produces the same effects as the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command. No entanto, há que assinalar as seguintes diferenças:
 
-- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). The [`WA OPEN URL`](./commands/wa-open-url) command accepts both notations.
-- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. The [`WA OPEN URL`](./commands/wa-open-url) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [`WA OPEN URL`](./commands/wa-open-url) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [`WA OPEN URL`](./commands/wa-open-url) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command accepts both notations.
+- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command generates an error in this case.
+- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command.
+- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
 #### Gramática JSON
 
@@ -73,7 +73,7 @@ The URL variable produces the same effects as the [`WA OPEN URL`](./commands/wa-
 
 #### Comandos
 
-[`WA GET PREFERENCE`](./commands/wa-get-preference) - [`WA SET PREFERENCE`](./commands/wa-set-preference)
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
 
 ---
 
@@ -89,8 +89,8 @@ Essa opção permite escolher entre dois mecanismos de renderização para a ár
 
 The Blink engine has the following limitations:
 
-- [CONTEÚDO DA SEGURANÇA PÁ](./commands/wa-set-page-content): o uso deste comando requer que pelo menos uma página já esteja carregada na área (por meio de uma chamada para [`URL ABERTO ABERTO`](./commands/wa-open-url) ou uma atribuição à variável de URL associada à área).
-- Quando os drops de URL forem ativados pelo seletor `WA enable URL drop` do comando [WA SET PREFERENCE](./commands/wa-set-preference), o primeiro drop deve ser precedido por pelo menos uma chamada a [WA OPEN URL](./commands/wa-open-url) ou uma atribuição à variável de URL associada à área.
+- [CONTEÚDO DA SEGURANÇA PÁ](../commands-legacy/wa-set-page-content.md): o uso deste comando requer que pelo menos uma página já esteja carregada na área (por meio de uma chamada para [`URL ABERTO ABERTO`](../commands-legacy/wa-open-url.md) ou uma atribuição à variável de URL associada à área).
+- Quando os drops de URL forem ativados pelo seletor `WA enable URL drop` do comando [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md), o primeiro drop deve ser precedido por pelo menos uma chamada a [WA OPEN URL](../commands-legacy/wa-open-url.md) ou uma atribuição à variável de URL associada à área.
 
 :::note
 
@@ -110,4 +110,4 @@ Você pode personalizar os parâmetros da área CEF criando um arquivo de config
 
 #### Comandos
 
-[`WA GET PREFERENCE`](./commands/wa-get-preference) - [`WA SET PREFERENCE`](./commands/wa-set-preference)
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)

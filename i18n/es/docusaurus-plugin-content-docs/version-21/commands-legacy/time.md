@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 El parámetro *valHora* debe contener:
 
-* una cadena que contenga una hora expresada en uno de los siguientes formatos de hora estándar de 4D correspondientes al lenguaje de su sistema (para mayor información, consulte la descripción del comando [String](./commands/string)).
+* una cadena que contenga una hora expresada en uno de los siguientes formatos de hora estándar de 4D correspondientes al lenguaje de su sistema (para mayor información, consulte la descripción del comando [String](../commands/string.md)).
 * un entero largo que representa el número de segundos transcurridos desde 00:00:00.
 
 **Nota:** si la expresión *valHora* se evalúa como indefinida, **Time** devuelve una hora vacía (00:00:00). Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo objeto) sea una hora, incluso si puede ser indefinida.
@@ -61,10 +61,10 @@ Puede expresar todo valor numérico como una hora:
 #### Ver también 
 
 [ARRAY TIME](array-time.md)  
-[Bool](./commands/bool)  
-[String](./commands/string)  
-[Time string](./commands/time-string)  
-[Timestamp](./commands/timestamp)  
+[Bool](../commands/bool)  
+[String](../commands/string.md)  
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)  
 
 #### Propiedades
 
@@ -72,7 +72,5 @@ Puede expresar todo valor numérico como una hora:
 | --- | --- |
 | Número de comando | 179 |
 | Hilo seguro | yes |
-
-
 
 

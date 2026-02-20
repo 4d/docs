@@ -25,8 +25,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Process number](./commands/process-number)  
-[Process info](./commands/process-info)  
+[Process number](../commands/process-number.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 
 ## プロパティ
@@ -35,6 +35,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 322 |
 | スレッドセーフである | yes |
-
 
 

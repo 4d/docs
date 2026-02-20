@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 In order for the **In break** execution cycle to be generated, make sure that the On Printing Break event property for the form and/or the objects has been selected in the Design environment.
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Printing Break event.
+**Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Printing Break event.
 
 ## See also 
 
@@ -34,6 +34,5 @@ In order for the **In break** execution cycle to be generated, make sure that th
 | --- | --- |
 | Command number | 113 |
 | Thread safe | no |
-
 
 

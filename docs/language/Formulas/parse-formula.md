@@ -104,7 +104,7 @@ The optional *errorMessage* parameter will receive an error message if there is 
 
 ## See also 
 
-[Formula from string](./commands/formula-from-string)  
+[Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Using tokens in formulas*  
@@ -115,6 +115,5 @@ The optional *errorMessage* parameter will receive an error message if there is 
 | --- | --- |
 | Command number | 1576 |
 | Thread safe | no |
-
 
 

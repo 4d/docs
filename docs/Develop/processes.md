@@ -20,9 +20,9 @@ The 4D application creates processes for its own needs, for example the Main pro
 There are several ways to create a new process:
 
 - Execute a method in the Design environment after checking the **New Process** check box in the "Execute Method" dialog box. The method chosen in the Execute Method dialog box is the process method.
-- Use the [`New process`](./commands/new-process) command. The method passed as a parameter to the [`New process`](./commands/new-process) command is the process method.
-- Use the [`Execute on server`](./commands/execute-on-server) command in order to create a stored procedure on the server. The method passed as a parameter of the command is the process method.
-- Use the [`CALL WORKER`](./commands/call-worker) command. If the worker process does not already exist, it is created.
+- Use the [`New process`](../commands-legacy/new-process.md) command. The method passed as a parameter to the [`New process`](../commands/new-process) command is the process method.
+- Use the [`Execute on server`](../commands-legacy/execute-on-server.md) command in order to create a stored procedure on the server. The method passed as a parameter of the command is the process method.
+- Use the [`CALL WORKER`](../commands-legacy/call-worker.md) command. If the worker process does not already exist, it is created.
 
 :::note
 
@@ -35,7 +35,7 @@ A process can be cleared under the following conditions (the first two condition
 - When the process method finishes executing
 - When the user quits from the application
 - If you stop the process procedurally or use the **Abort** button in the Debugger or in the Runtime Explorer
-- If you call the [`KILL WORKER`](./commands/kill-worker) command (to delete a worker process only).
+- If you call the [`KILL WORKER`](../commands-legacy/kill-worker.md) command (to delete a worker process only).
 
 A process can create another process. Processes are not organized hierarchically—all processes are equal, regardless of the process from which they have been created. Once the “parent” process creates a “child” process, the child process will continue regardless of whether or not the parent process is still executing.
 
@@ -87,11 +87,11 @@ For optimization reason, while no server access is required, for example if the 
 
 Using a Worker process is a simple and powerful way to exchange information between processes. This feature is based upon an asynchronous messaging system that allows processes and forms to be called and asked to execute methods with parameters in their own context.
 
-A worker can be "hired" by any process (using the [`CALL WORKER`](./commands/call-worker) command) to execute project methods with parameters in their own context, thus allowing access to shared information.
+A worker can be "hired" by any process (using the [`CALL WORKER`](../commands-legacy/call-worker.md) command) to execute project methods with parameters in their own context, thus allowing access to shared information.
 
 :::info
 
-In Desktop applications, a project method can also be executed with parameters in the context of any form using the [`CALL FORM`](./commands/call-form) command.
+In Desktop applications, a project method can also be executed with parameters in the context of any form using the [`CALL FORM`](../commands-legacy/call-form.md) command.
 
 :::
 
@@ -102,7 +102,7 @@ This functionality addresses the following needs regarding 4D interprocess commu
 
 :::note
 
-Although they have been designed mainly for interprocess communication in the context of preemptive processes, [`CALL WORKER`](./commands/call-worker) and [`CALL FORM`](./commands/call-form) can be used with cooperative processes. 
+Although they have been designed mainly for interprocess communication in the context of preemptive processes, [`CALL WORKER`](../commands/call-worker) and [`CALL FORM`](../commands/call-form) can be used with cooperative processes. 
 
 :::
 
@@ -115,34 +115,32 @@ A worker is used to ask a process to execute project methods. A worker consists 
 - a message box
 - a startup method (optional)
 
-You ask a worker to execute a project method by calling the [`CALL WORKER`](./commands/call-worker) command. The worker and its message box are created at first use; its associated process is also automatically launched at first use. If the worker process dies thereafter, the message box remains open and any new message in the box will start a new worker process.
+You ask a worker to execute a project method by calling the [`CALL WORKER`](../commands/call-worker) command. The worker and its message box are created at first use; its associated process is also automatically launched at first use. If the worker process dies thereafter, the message box remains open and any new message in the box will start a new worker process.
 
 The following animation illustrates this sequence:
 
 ![](../assets/en/Develop/WorkerAnimation.gif)
 
-Unlike a process created with the [`New process`](./commands/new-process) command, a worker process **remains alive after the execution of the process method ends**. This means that all method executions for the same worker will be run in the same process, which maintains all process state information (process variables, current record and current selection, etc.). Consequently, methods executed successively will access and thus share the same information, allowing communication between processes. The worker's message box handles successive calls asynchronously.
+Unlike a process created with the [`New process`](../commands/new-process) command, a worker process **remains alive after the execution of the process method ends**. This means that all method executions for the same worker will be run in the same process, which maintains all process state information (process variables, current record and current selection, etc.). Consequently, methods executed successively will access and thus share the same information, allowing communication between processes. The worker's message box handles successive calls asynchronously.
 
-[`CALL WORKER`](./commands/call-worker) encapsulates both the method name and command arguments in a message that is posted in the worker's message box. The worker process is then started, if it does not already exist, and asked to execute the message. This means that [`CALL WORKER`](./commands/call-worker) will usually return before the method is actually executed (processing is asynchronous). For this reason, [`CALL WORKER`](./commands/call-worker) does not return any value. If you need a worker to send information back to the process which called it (callback), you need to use [`CALL WORKER`](./commands/call-worker) again to pass the information needed to the caller. Of course, in this case, the caller itself must be a worker.
+[`CALL WORKER`](../commands/call-worker) encapsulates both the method name and command arguments in a message that is posted in the worker's message box. The worker process is then started, if it does not already exist, and asked to execute the message. This means that [`CALL WORKER`](../commands/call-worker) will usually return before the method is actually executed (processing is asynchronous). For this reason, [`CALL WORKER`](../commands/call-worker) does not return any value. If you need a worker to send information back to the process which called it (callback), you need to use [`CALL WORKER`](../commands/call-worker) again to pass the information needed to the caller. Of course, in this case, the caller itself must be a worker.
 
-It is not possible to use [`CALL WORKER`](./commands/call-worker) to execute a method in a process created by the [`New process`](./commands/new-process) command. Only worker processes have a message box and can thus be called by `CALL WORKER`. Note that a process created by [`New process`](./commands/new-process) can call a worker, but cannot be called back.
+It is not possible to use [`CALL WORKER`](../commands/call-worker) to execute a method in a process created by the [`New process`](../commands/new-process) command. Only worker processes have a message box and can thus be called by `CALL WORKER`. Note that a process created by [`New process`](../commands/new-process) can call a worker, but cannot be called back.
 
-Worker processes can be created on 4D Server through stored procedures: for example, you can use the `Execute on server` command to execute a method that calls the [`CALL WORKER`](./commands/call-worker) command.
+Worker processes can be created on 4D Server through stored procedures: for example, you can use the `Execute on server` command to execute a method that calls the [`CALL WORKER`](../commands/call-worker) command.
 
-A worker process is closed by a call to the [`KILL WORKER`](./commands/kill-worker) command, which empties the worker's message box and asks the associated process to stop processing messages and to terminate its current execution as soon as the current task is finished.
+A worker process is closed by a call to the [`KILL WORKER`](../commands-legacy/kill-worker.md) command, which empties the worker's message box and asks the associated process to stop processing messages and to terminate its current execution as soon as the current task is finished.
 
-The startup method of a worker is the method used to create the worker (at first use). If [`CALL WORKER`](./commands/call-worker) is called with an empty *method* parameter, then the startup method is automatically reused as method to execute.
+The startup method of a worker is the method used to create the worker (at first use). If [`CALL WORKER`](../commands/call-worker) is called with an empty *method* parameter, then the startup method is automatically reused as method to execute.
 
-The main process created by 4D when opening a database for user and application modes is a worker process and can be called using [`CALL WORKER`](./commands/call-worker). Note that the name of the main process may vary depending on the 4D localization language, but it always has the process number 1; as a result, it's more convenient to designate it by process number instead of process name when calling [`CALL WORKER`](./commands/call-worker).
+The main process created by 4D when opening a database for user and application modes is a worker process and can be called using [`CALL WORKER`](../commands/call-worker). Note that the name of the main process may vary depending on the 4D localization language, but it always has the process number 1; as a result, it's more convenient to designate it by process number instead of process name when calling [`CALL WORKER`](../commands/call-worker).
 
 ### Identifying Worker processes
 
-All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](./commands/process-info) command.
+All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](../commands/process-info.md) command.
 
 [Specific icons](../ServerWindow/processes#process-type) identify worker processes.
 
 ### See also
 
 For more information, please see [this blog post](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) about how to use workers.
-
-

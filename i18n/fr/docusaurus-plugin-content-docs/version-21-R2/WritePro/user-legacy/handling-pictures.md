@@ -9,9 +9,9 @@ slug: /WritePro/pictures
 
 Ajouter des images dans un document 4D Write Pro peut se faire de multiples façons et dépend de vos besoins :
 
-* pour ajouter une **image d'arrière-plan**, utilisez l'attribut wk background image ou wk background image url avec la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs)
-* pour ajouter une **image en ligne**, *i.e.* insérée dans le texte comme un caractère, utilisez la commande [WP INSERER IMAGE](./commands/wp-inserer-image) ou la commande [ST INSERER EXPRESSION](../../commands/st-inserer-expression)
-* pour ajouter une **image ancrée** dans la page (derrière ou devant le texte), utilisez la commande [WP Ajouter image](./commands/wp-ajouter-image).
+* pour ajouter une **image d'arrière-plan**, utilisez l'attribut wk background image ou wk background image url avec la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs)
+* pour ajouter une **image en ligne**, *i.e.* insérée dans le texte comme un caractère, utilisez la commande [WP INSERER IMAGE](../commands/wp-inserer-image) ou la commande [ST INSERER EXPRESSION](../../commands/st-inserer-expression)
+* pour ajouter une **image ancrée** dans la page (derrière ou devant le texte), utilisez la commande [WP Ajouter image](../commands/wp-ajouter-image).
 
 La façon dont vous ajoutez une image détermine la couche où elle est positionnée, comme le montre le diagramme ci-dessous :
 
@@ -41,7 +41,7 @@ L'affichage de l'image d'arrière-plan peut également être défini par program
 
 ## Positionnement et affichage des images ancrées 
 
-Les images ancrées sont ajoutées avec une position absolue, devant/derrière le texte, et ancrées à la page ou à des parties spécifiques d'un document (*i.e.*, en-tête, pied de page, section). La définition d'une position absolue pour une image se fait grâce aux commandes [WP Ajouter image](./commands/wp-ajouter-image) et [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs).
+Les images ancrées sont ajoutées avec une position absolue, devant/derrière le texte, et ancrées à la page ou à des parties spécifiques d'un document (*i.e.*, en-tête, pied de page, section). La définition d'une position absolue pour une image se fait grâce aux commandes [WP Ajouter image](../commands/wp-ajouter-image) et [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs).
 
 Les positions d'images ancrées peuvent être modifiées avec les attributs spécifiques et / ou les actions standard suivants :  
 
@@ -83,17 +83,17 @@ Vous pouvez visualiser la référence d'une expression dans l'infobulle de l'ima
 
 (\*)Comme il n'y a pas de texte associé à une image ancrée, une référence d'expression ne peut pas être affichée.
 
-Tous les attributs d'images peuvent être appliqués aux expressions image (les attributs wk image et wk image url peuvent uniquement être lus). Notez cependant que, comme les images ont des attributs spécifiques, 4D Write Pro doit évaluer l'expression au moins une fois pour détecter que son résultat est une image et pouvoir la traiter comme expression image. Cela signifie que lorsqu'une expression image est insérée avec [WP INSERER FORMULE](./commands/wp-inserer-formule), [WP CALCULER FORMULES](./commands/wp-calculer-formules) doit être appelée avant d'appliquer le moindre attribut d'image.
+Tous les attributs d'images peuvent être appliqués aux expressions image (les attributs wk image et wk image url peuvent uniquement être lus). Notez cependant que, comme les images ont des attributs spécifiques, 4D Write Pro doit évaluer l'expression au moins une fois pour détecter que son résultat est une image et pouvoir la traiter comme expression image. Cela signifie que lorsqu'une expression image est insérée avec [WP INSERER FORMULE](../commands/wp-inserer-formule), [WP CALCULER FORMULES](../commands/wp-calculer-formules) doit être appelée avant d'appliquer le moindre attribut d'image.
 
 Si l'image résultant de l'expression ne peut pas être calculée ou chargée, 4D Write Pro affiche un cadre d'image par défaut noir :
 
 ![](../../assets/en/WritePro/pict3513505.en.png)
 
-**Note** : Comme les autres expressions, les expressions image sont aussi impactées par les commandes [WP CALCULER FORMULES](./commands/wp-calculer-formules) et [WP FIGER FORMULES](./commands/wp-figer-formules).
+**Note** : Comme les autres expressions, les expressions image sont aussi impactées par les commandes [WP CALCULER FORMULES](../commands/wp-calculer-formules) et [WP FIGER FORMULES](../commands/wp-figer-formules).
 
 ### Images ancrées 
 
-Les expression image ancrées sont ajoutées à l'aide la commande [WP Ajouter image](./commands/wp-ajouter-image) (sans le second paramètre), suivie par un appel à la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) avec le sélecteur wk image formule.
+Les expression image ancrées sont ajoutées à l'aide la commande [WP Ajouter image](../commands/wp-ajouter-image) (sans le second paramètre), suivie par un appel à la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec le sélecteur wk image formule.
 
 Exemple :
 
@@ -102,15 +102,15 @@ Exemple :
  WP FIXER ATTRIBUTS(obImage;wk image formule;Formule(m_buildPict))
 ```
 
-Vous pouvez aussi insérer des expressions image en utilisant [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) et wk image formule sur des images ancrées existantes.
+Vous pouvez aussi insérer des expressions image en utilisant [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) et wk image formule sur des images ancrées existantes.
 
 **Note de compatibilité :** wk image expression peut toujours être utilisée pour définir des expressions image via du texte. Toutefois, il est recommandé d'utiliser wk image expression et des objets.
 
-L'appel de la commande [WP REINITIALISER ATTRIBUTS](./commands/wp-reinitialiser-attributs) avec wk image formule est similaire à l'appel de [WP FIGER FORMULES](./commands/wp-figer-formules) (sur le document entier) dans la mesure où l'expression est effacée de l'attribut image. Cependant, [WP FIGER FORMULES](./commands/wp-figer-formules) calcule l'expression avant de l'effacer, contrairement à [WP REINITIALISER ATTRIBUTS](./commands/wp-reinitialiser-attributs). Si une expression n'a jamais été calculée, le cadre d'image par défaut noir est affiché.
+L'appel de la commande [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs) avec wk image formule est similaire à l'appel de [WP FIGER FORMULES](../commands/wp-figer-formules) (sur le document entier) dans la mesure où l'expression est effacée de l'attribut image. Cependant, [WP FIGER FORMULES](../commands/wp-figer-formules) calcule l'expression avant de l'effacer, contrairement à [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs). Si une expression n'a jamais été calculée, le cadre d'image par défaut noir est affiché.
 
 ### Images en ligne 
 
-Les expressions image en ligne sont ajoutées dans vos zones 4D Write Pro à l'aide de la commande [WP INSERER FORMULE](./commands/wp-inserer-formule).
+Les expressions image en ligne sont ajoutées dans vos zones 4D Write Pro à l'aide de la commande [WP INSERER FORMULE](../commands/wp-inserer-formule).
 
 Exemples :
 
@@ -134,17 +134,17 @@ Si une image est vide (par exemple, elle n'a pas pu être chargée, elle résult
 Vous pouvez supprimer ces rectangles noirs de la vue actuelle à l'aide de :
 
 *  l'option "Show empty or unsupported images" de la liste des propriétés (voir *Configuring View properties*), ou
-* la commande [WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) avec le wk visible empty images selector,  ou
+* la commande [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) avec le wk visible empty images selector,  ou
 * l'action standard *visibleEmptyImage* (voir  *Using 4D Write Pro standard actions*).
 
-Vous pouvez également utiliser le wk visible empty images selector avec les commandes [WP EXPORT DOCUMENT](./commands/wp-export-document) et [WP EXPORT VARIABLE](./commands/wp-export-variable) pour supprimer les rectangles noirs du contenu exporté.
+Vous pouvez également utiliser le wk visible empty images selector avec les commandes [WP EXPORT DOCUMENT](../commands/wp-export-document) et [WP EXPORT VARIABLE](../commands/wp-export-variable) pour supprimer les rectangles noirs du contenu exporté.
 
 Notez que lorsque cette option est activée, les éléments d'image manquants ne s'affichent pas, même s'ils ont des bordures, une largeur, une hauteur ou un arrière-plan. Cela peut avoir un impact sur la mise en page des images intégrées.
 
 
 ## Propriétés des images 
 
-Toutes les images ont des propriétés (attributs) telles que la hauteur, la largeur, les bordures, le mode d'affichage, etc., qui peuvent être lues ou fixées via le langage 4D Write Pro ([WP LIRE ATTRIBUTS](./commands/wp-lire-attributs) et [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs)) ou les actions standard.
+Toutes les images ont des propriétés (attributs) telles que la hauteur, la largeur, les bordures, le mode d'affichage, etc., qui peuvent être lues ou fixées via le langage 4D Write Pro ([WP LIRE ATTRIBUTS](../commands/wp-lire-attributs) et [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs)) ou les actions standard.
 
 * La liste complète des propriétés utilisables pour les images est disponible sur la page *Attributs 4D Write Pro*.
 * La section *Image* contient les attributs spécifiques aux images seules.
@@ -181,15 +181,15 @@ Lorsque vous lisez une image à l'aide d'un de ces attributs, vous recevez un te
 
 Les commandes ci-dessous peuvent être utilisées pour récupérer des images :
 
-* [WP Plage images](./commands/wp-plage-images) \- s'applique uniquement aux images en ligne
-* [WP Plage selection](./commands/wp-plage-selection) \- s'applique uniquement aux images sélectionnées par l'utilisateur
+* [WP Plage images](../commands/wp-plage-images) \- s'applique uniquement aux images en ligne
+* [WP Plage selection](../commands/wp-plage-selection) \- s'applique uniquement aux images sélectionnées par l'utilisateur
 
 ## Supprimer des images 
 
 Vous pouvez supprimer des images en ligne et ancrées à l'aide de : 
 
 * *Actions souris / clavier*
-* la commande [WP SUPPRIMER IMAGE](./commands/wp-supprimer-image)
+* la commande [WP SUPPRIMER IMAGE](../commands/wp-supprimer-image)
 
 ## Actions souris / clavier 
 

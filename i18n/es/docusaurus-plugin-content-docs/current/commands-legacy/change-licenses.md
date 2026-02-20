@@ -50,7 +50,7 @@ De esta forma un usuario puede activar licencias sin tener que modificar la base
 
 ## Ver también 
 
-[License info](./commands/license-info)  
+[License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
 ## Propiedades
@@ -60,6 +60,5 @@ De esta forma un usuario puede activar licencias sin tener que modificar la base
 | Número de comando | 637 |
 | Hilo seguro | no |
 | Prohibido en el servidor ||
-
 
 

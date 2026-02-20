@@ -55,7 +55,7 @@ Este ejemplo le permite aplicar un color alterno en un formulario listado mostra
 
 ## Ver también 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Selected record number](selected-record-number.md)  
 
 ## Propiedades
@@ -64,6 +64,5 @@ Este ejemplo le permite aplicar un color alterno en un formulario listado mostra
 | --- | --- |
 | Número de comando | 897 |
 | Hilo seguro | no |
-
 
 

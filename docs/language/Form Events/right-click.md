@@ -34,7 +34,7 @@ This command should be used only in the context of the On Clicked form event. It
 ## See also 
 
 [Contextual click](contextual-click.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
 ## Properties
 
@@ -42,6 +42,5 @@ This command should be used only in the context of the On Clicked form event. It
 | --- | --- |
 | Command number | 712 |
 | Thread safe | no |
-
 
 

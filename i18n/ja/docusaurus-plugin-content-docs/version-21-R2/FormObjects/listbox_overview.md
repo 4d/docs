@@ -72,7 +72,7 @@ title: リストボックス
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 
 配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。
-リストボックスのハイレベルコマンド ([`LISTBOX INSERT ROWS`](./commands/listbox-insert-rows) や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
+リストボックスのハイレベルコマンド ([`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -197,7 +197,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ### サポートされるフォームイベント {#supported-form-events}
 
-| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](./commands/form-event) を参照してください)                                           | コメント                                                                                                                         |
+| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event.md) を参照してください)                                           | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On After Keystroke   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
@@ -272,7 +272,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ### サポートされるフォームイベント {#supported-form-events-1}
 
-| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](./commands/form-event) を参照してください)                                           | コメント                                                                                                                         |
+| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event.md) を参照してください)                                           | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On After Keystroke   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
@@ -313,7 +313,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてヘッダーで発生したイベントは、その列のオブジェクトメソッド が受け取ります。
 
-ヘッダーに [`OBJECT SET VISIBLE`](./commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
+ヘッダーに [`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
 
 ### ヘッダー特有のプロパティ
 
@@ -349,7 +349,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてフッターで発生したイベントは、その列のオブジェクトメソッド が受け取ります。
 
-フッターに [`OBJECT SET VISIBLE`](./commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
+フッターに [`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
 
 ### フッター特有のプロパティ
 
@@ -461,7 +461,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
  End if
 ```
 
-> [`OBJECT SET SCROLL POSITION`](./commands/object-set-scroll-position) コマンドは、最初に選択された行または指定された行を表示するようにリストボックスをスクロールします。
+> [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) コマンドは、最初に選択された行または指定された行を表示するようにリストボックスをスクロールします。
 
 ### 選択行の見た目のカスタマイズ
 
@@ -573,11 +573,11 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 ### カスタムソート
 
-デベロッパーは、例えば[`LISTBOX SORT COLUMNS`](./commands/listbox-sort-columns) コマンドを使用したり、あるいは[`On Header Click`](../Events/onHeaderClick) および [`On After Sort`](../Events/onAfterSort) フォームイベントと関連する4D コマンドを組み合わせることにより、カスタムのソートを設定することができます。
+デベロッパーは、例えば[`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) コマンドを使用したり、あるいは[`On Header Click`](../Events/onHeaderClick) および [`On After Sort`](../Events/onAfterSort) フォームイベントと関連する4D コマンドを組み合わせることにより、カスタムのソートを設定することができます。
 
 カスタムソートを以下のことが可能です:
 
-- [`LISTBOX SORT COLUMNS`](./commands/listbox-sort-columns) コマンドを使うことで、複数のカラムに対してマルチレベルソートを実行する。
+- [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) コマンドを使うことで、複数のカラムに対してマルチレベルソートを実行する。
 - [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) や [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) などの関数を使って、複雑な条件のソートをおこなう
 
 #### 例題
@@ -621,7 +621,7 @@ End if
 
 変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
-> The [`OBJECT SET FORMAT`](./commands/object-set-format) コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
+> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
 
 ## スタイルとカラー、表示の管理
 
@@ -693,14 +693,14 @@ End if
 
 ### 詳細モード
 
-このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) コマンドはオブジェクトの印刷をコントロールするために使用されるコマンドです。
+このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドはオブジェクトの印刷をコントロールするために使用されるコマンドです。
 
 このモードでは:
 
-- オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されたオブジェクトのサイズは [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) コマンドを使用することで取得することができます。
+- オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されたオブジェクトのサイズは [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用することで取得することができます。
 - リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。
-  これらの設定には印刷される最初の行も含みます。印刷を実行する前に [`OBJECT SET SCROLL POSITION`](./commands/object-set-scroll-position) を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
-- 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) コマンドを使用して印刷の状態を進行中にチェックすることができます。
+  これらの設定には印刷される最初の行も含みます。印刷を実行する前に [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
+- 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用して印刷の状態を進行中にチェックすることができます。
 
 ## 階層リストボックス
 
@@ -716,7 +716,7 @@ End if
 
 - フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
 - フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-- [`LISTBOX SET HIERARCHY`](./commands/listbox-set-hierarchy) と [`LISTBOX GET HIERARCHY`](./commands/listbox-get-hierarchy) コマンドを使用する。
+- [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) と [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) コマンドを使用する。
 
 #### "階層リストボックス" プロパティによる階層化
 
@@ -839,7 +839,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 > 親が折りたたまれているために行が非表示になっていると、それらは選択から除外されます。 (直接あるいはスクロールによって) 表示されている行のみを選択できます。 言い換えれば、行を選択かつ隠された状態にすることはできません。
 
-選択と同様に、[`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、[`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。
+選択と同様に、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。
 
 *非階層表示:*
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -851,11 +851,11 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 #### ブレーク行の管理
 
-ユーザーがブレーク行を選択すると、[`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) は対応する配列の最初のオカレンスを返します。 以下のケースで:
+ユーザーがブレーク行を選択すると、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は対応する配列の最初のオカレンスを返します。 以下のケースで:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) は (2;4) を返します。 プログラムでブレーク行を選択するには [`LISTBOX SELECT BREAK`](./commands/listbox-select-break) コマンドを使用する必要があります。
+... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は (2;4) を返します。 プログラムでブレーク行を選択するには [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) コマンドを使用する必要があります。
 
 ブレーク行はリストボックスのグラフィカルな表示 (スタイルやカラー) を管理する内部的な配列では考慮されません。 しかし、オブジェクトのグラフィックを管理するオブジェクト (フォーム) テーマのコマンドを使用してブレーク行の表示を変更できます。 階層を構成する配列に対して、適切なコマンドを実行します。
 
@@ -884,19 +884,19 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 `On Expand` や `On Collapse` フォームイベントを使用して階層リストボックスの表示を最適化できます。
 
-階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから ([`SELECTION TO ARRAY`](./commands/selection-to-array) コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
+階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから ([`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
 
-`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、[`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
+`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
 
 この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
 
 - リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません:
   ![](../assets/en/FormObjects/hierarch15.png)
 
-- ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には [`SELECTION TO ARRAY`](./commands/selection-to-array) コマンドから得られる値を設定します。そして[`LISTBOX INSERT ROWS`](./commands/listbox-insert-rows) コマンドを使用して必要なだけ行を挿入します。
+- ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には [`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドから得られる値を設定します。そして[`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) コマンドを使用して必要なだけ行を挿入します。
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) コマンドは該当するセルを返します。そして[`LISTBOX DELETE ROWS`](./commands/listbox-delete-rows) コマンドを使用して必要なだけ行をリストボックスから削除することができます。
+- ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは該当するセルを返します。そして[`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) コマンドを使用して必要なだけ行をリストボックスから削除することができます。
 
 ## オブジェクト配列の使用
 
@@ -908,7 +908,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 ### オブジェクト配列カラムの設定
 
-オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](./commands/listbox-insert-column) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
+オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -1178,7 +1178,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します: 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
 - "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
-- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [`New list`](./commands/new-list) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
+- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [`New list`](../commands-legacy/new-list.md) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
 - "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
 単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:
@@ -1266,5 +1266,3 @@ OB SET($ob;"label";"Edit...")
   - チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
 - **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。 このイベントはプログラマーによって管理されます。
 - **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。 このイベントはプログラマーによって管理されます。
-
-

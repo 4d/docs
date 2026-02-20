@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 - El editor de fórmulas: los métodos autorizados aparecen al final de la lista de comandos por defecto y pueden utilizarse en las fórmulas (ver la sección *Descripción del editor de fórmulas*).
 - El editor de etiquetas: los métodos permitidos aparecen en el menú **Aplicar** si también se comparten con el componente (ver la sección *Descripción del editor de etiquetas*).
-- Fórmulas insertadas en áreas de texto con estilo o documentos 4D Write Pro a través del comando [ST INSERT EXPRESSION](./commands/st-insert-expression) - los métodos no permitidos se rechazan automáticamente.
+- Fórmulas insertadas en áreas de texto con estilo o documentos 4D Write Pro a través del comando [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) - los métodos no permitidos se rechazan automáticamente.
 - Documentos 4D View Pro - por defecto, si el comando [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) nunca ha sido llamado durante la sesión, las fórmulas de 4D View Pro sólo aceptan métodos definidos por **SET ALLOWED METHODS**. Sin embargo, se recomienda utilizar [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md). Ver [Declarando el método permitido](../ViewPro/formulas.md#declaring-allowed-methods).
 
 Por defecto, si no se utiliza el comando **SET ALLOWED METHODS**, no se puede introducir ningún método (utilizar un método no autorizado en una expresión provoca un error).
@@ -55,8 +55,8 @@ Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al méto
 
 ## Ver también
 
-[EDIT FORMULA](./commands/edit-formula)\
-[GET ALLOWED METHODS](./commands/get-allowed-methods)
+[EDIT FORMULA](../commands-legacy/edit-formula.md)\
+[GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
 
 ## Propiedades
 
@@ -64,6 +64,5 @@ Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al méto
 | ----------------- | --- |
 | Número de comando | 805 |
 | Hilo seguro       | no  |
-
 
 

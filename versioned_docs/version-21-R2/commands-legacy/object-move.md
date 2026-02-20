@@ -55,7 +55,7 @@ By default, the values *moveH*, *moveV*, *resizeH* and *resizeV* modify the coor
 This command works in the following contexts:
 
 * Data entering in Input forms,
-* Forms displayed using the [DIALOG](./commands/dialog) command,
+* Forms displayed using the [DIALOG](../commands/dialog.md) command,
 * Headers and footers of Output forms displayed with [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) commands,
 * Form printing events.
 
@@ -88,6 +88,5 @@ The following statement moves “button\_1” to the following coordinates (10;2
 | --- | --- |
 | Command number | 664 |
 | Thread safe | no |
-
 
 

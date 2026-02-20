@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current time.Summary-->Current time コマンドは、システムクロックの現在の時刻を返します。<!-- END REF--> 
 
-現在の時刻は常に00:00:00から23:59:59の間です。[String](./commands/string.md "String")または[Time string](./commands/time-string.md "Time string")を使用して、Current timeから返される時間式の文字列を得ることができます。
+現在の時刻は常に00:00:00から23:59:59の間です。[String](../commands/string.md "String")または[Time string](../commands/time-string.md "Time string")を使用して、Current timeから返される時間式の文字列を得ることができます。
 
 **4D Server:** この関数を実行する際に、リモートモードの4Dでアスタリスク (\*) 引数を使用すると、サーバの現在時刻が返されます。
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Milliseconds](milliseconds.md)  
-[String](./commands/string)  
+[String](../commands/string.md)  
 [Tickcount](tickcount.md)  
 
 ## プロパティ
@@ -58,7 +58,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 178 |
 | スレッドセーフである | yes |
-
-
 
 

@@ -19,7 +19,7 @@ title: 行列数
 
 #### コマンド
 
-[OBJECT Get format](./commands/object-get-format) - [OBJECT SET FORMAT](./commands/object-set-format)
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -39,5 +39,4 @@ title: 行列数
 
 #### コマンド
 
-[OBJECT Get format](./commands/object-get-format) - [OBJECT SET FORMAT](./commands/object-set-format)
-
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 ## Description 
 
 <!--REF #_command_.DEFAULT TABLE.Summary-->**Conseil :** Bien que l'appel de **DEFAULT TABLE** et l'omission du nom de la table rendent le code plus lisible, la plupart des programmeurs estiment que l'utilisation de cette commande apporte plus d'inconvénients que d'avantages.<!-- END REF-->  
-En particulier, notez que [DEFAULT TABLE](default-table.md) est prioritaire lorsque vous utilisez par exemple la commande [DIALOG](./commands/dialog) avec un formulaire projet et qu'un formulaire de la table par défaut a le même nom.
+En particulier, notez que [DEFAULT TABLE](default-table.md) est prioritaire lorsque vous utilisez par exemple la commande [DIALOG](../commands/dialog.md) avec un formulaire projet et qu'un formulaire de la table par défaut a le même nom.
 
 **DEFAULT TABLE** désigne *laTable* comme la table par défaut pour le process courant.
 
@@ -86,6 +86,5 @@ Voici le résultat lorsqu'une table par défaut est définie :
 | --- | --- |
 | Numéro de commande | 46 |
 | Thread safe | yes |
-
 
 

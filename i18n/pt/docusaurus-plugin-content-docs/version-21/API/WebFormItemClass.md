@@ -5,9 +5,9 @@ title: WebFormItem
 
 The `4D.WebFormItem` class allows you to handle the behavior of your Qodly webform components.
 
-Os objetos `4D.WebFormItem` são propriedades do objeto [`4D.WebForm`](WebFormClass.md) retornado pelo comando [`Web Form`](./commands/web-form).
+Os objetos `4D.WebFormItem` são propriedades do objeto [`4D.WebForm`](WebFormClass.md) retornado pelo comando [`Web Form`](../commands/web-form.md).
 
-When you call the [`Web Form`](./commands/web-form) command, the returned `4D.WebForm` proxy object holds as many `4D.WebFormItems` as there are components with [**server-side references**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) in your webform.
+When you call the [`Web Form`](../commands/web-form.md) command, the returned `4D.WebForm` proxy object holds as many `4D.WebFormItems` as there are components with [**server-side references**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) in your webform.
 
 For example, `WebFormObject.myImage` refers to the image component with `myImage` as server reference.
 
@@ -114,10 +114,9 @@ The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the co
 
 ## Veja também
 
-[Web Form](./commands/web-form)</br>
-[Web Event](./commands/web-event)</br>
+[Web Form](../commands/web-form.md)</br>
+[Web Event](../commands/web-event.md)</br>
 [WebForm class](WebFormClass.md)
-
 
 
 

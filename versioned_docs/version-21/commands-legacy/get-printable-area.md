@@ -49,7 +49,7 @@ To know the total size of the page, you can:
 ## See also 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
 ## Properties
 
@@ -57,6 +57,5 @@ To know the total size of the page, you can:
 | --- | --- |
 | Command number | 703 |
 | Thread safe | no |
-
 
 

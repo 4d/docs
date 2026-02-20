@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->El comando SET PRINTABLE MARGIN \[#descv\]permite asignar los valores de varias márgenes de impresión utilizando los comandos [Print form](./commands/print-form), [PRINT SELECTION](print-selection.md) y [PRINT RECORD](print-record.md).<!-- END REF--> 
+<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->El comando SET PRINTABLE MARGIN \[#descv\]permite asignar los valores de varias márgenes de impresión utilizando los comandos [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) y [PRINT RECORD](print-record.md).<!-- END REF--> 
 
 Puede pasar uno de los siguientes valores en los parámetros *izquierda*, *superior*, *derecha* e *inferior*:
 
@@ -68,7 +68,7 @@ El siguiente ejemplo le permite obtener el tamaño del papel:
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
 ## Propiedades
 
@@ -76,6 +76,5 @@ El siguiente ejemplo le permite obtener el tamaño del papel:
 | --- | --- |
 | Número de comando | 710 |
 | Hilo seguro | no |
-
 
 

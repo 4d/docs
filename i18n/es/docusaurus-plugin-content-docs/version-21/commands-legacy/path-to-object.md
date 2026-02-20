@@ -182,7 +182,7 @@ Desea saber la cantidad de subcarpetas en una ruta:
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](./commands/file)    
+[File](../commands/file.md)    
 [Folder ](folder.md)  
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
@@ -193,6 +193,5 @@ Desea saber la cantidad de subcarpetas en una ruta:
 | --- | --- |
 | Número de comando | 1547 |
 | Hilo seguro | yes |
-
 
 

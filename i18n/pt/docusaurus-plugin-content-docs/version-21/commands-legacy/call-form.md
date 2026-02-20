@@ -114,7 +114,7 @@ Depois pode adicionar outras mensagens executando o comando **CALL FORM** novame
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 
 ## Propriedades
 
@@ -122,6 +122,5 @@ Depois pode adicionar outras mensagens executando o comando **CALL FORM** novame
 | --- | --- |
 | Número do comando | 1391 |
 | Thread-seguro | yes |
-
 
 

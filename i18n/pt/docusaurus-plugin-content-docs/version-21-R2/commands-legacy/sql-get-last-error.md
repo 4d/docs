@@ -42,7 +42,7 @@ Os dos últimos parâmetros apenas são preenchidos quando o erro vem da fonte O
 
 ## Ver também 
 
-[Last errors](./commands/last-errors)   
+[Last errors](../commands/last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
 
 ## Propriedades
@@ -51,6 +51,5 @@ Os dos últimos parâmetros apenas são preenchidos quando o erro vem da fonte O
 | --- | --- |
 | Número do comando | 825 |
 | Thread-seguro | no |
-
 
 

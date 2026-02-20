@@ -58,7 +58,7 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 ## Ver também 
 
 [CHANGE LICENSES](change-licenses.md)  
-[License info](./commands/license-info)  
+[License info](../commands/license-info.md)  
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
@@ -69,6 +69,5 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 | --- | --- |
 | Número do comando | 714 |
 | Thread-seguro | no |
-
 
 

@@ -217,7 +217,7 @@ A toolbar form window is created with the location, size and graphical propertie
 
 :::note Toolbar form windows and macOS full screen mode
 
-If your application displays both a toolbar window and standard windows that support [`Form has full screen mode Mac`](#form-has-full-screen-mode-mac) option, interface rules require that you hide the toolbar when a standard window enters full screen mode. To know if a window has switched to full screen mode, just test whether its vertical size is exactly the same as the screen's height (see the [`HIDE TOOL BAR`](./commands/hide-tool-bar) command).
+If your application displays both a toolbar window and standard windows that support [`Form has full screen mode Mac`](#form-has-full-screen-mode-mac) option, interface rules require that you hide the toolbar when a standard window enters full screen mode. To know if a window has switched to full screen mode, just test whether its vertical size is exactly the same as the screen's height (see the [`HIDE TOOL BAR`](../commands-legacy/hide-tool-bar.md) command).
 
 :::
 
@@ -285,6 +285,5 @@ DIALOG("/RESOURCES/OutputPersonnel.json";*)
 | ------- | --- |
 | コマンド番号  | 675 |
 | スレッドセーフ | ×   |
-
 
 

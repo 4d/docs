@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](./commands/open-window).<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](../commands/open-window.md).<!-- END REF-->  
   
 **GOTO XY** positions the character cursor (an invisible cursor) to set the location of the next message in the window.
 
@@ -67,6 +67,5 @@ displays the following window (on Macintosh) for 30 seconds:
 | --- | --- |
 | Command number | 161 |
 | Thread safe | no |
-
 
 

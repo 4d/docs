@@ -42,7 +42,7 @@ Les seules différences entre ces deux commandes sont les suivantes :
 ## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 *Présentation des ensembles*  
 
 ## Propriétés
@@ -52,6 +52,5 @@ Les seules différences entre ces deux commandes sont les suivantes :
 | Numéro de commande | 204 |
 | Thread safe | no |
 | Interdite sur le serveur ||
-
 
 

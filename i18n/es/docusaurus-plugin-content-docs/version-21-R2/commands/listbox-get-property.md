@@ -98,9 +98,9 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 
 ## Ver también
 
-[LISTBOX SET GRID](./commands/listbox-set-grid)  
+[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
-[OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
+[OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
 
 ## Propiedades
 
@@ -108,6 +108,5 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 | ----------------- | --- |
 | Número de comando | 917 |
 | Hilo seguro       | no  |
-
 
 

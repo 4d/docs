@@ -63,7 +63,7 @@ displayed_sidebar: docs
 
 コマンドが呼び出される際、*formula*は解析・実行されます。
 
-**注:** フォーミュラが4Dコマンドを呼び出す場合、アプリケーションのローカライズの影響を受けないようにするため、[Command name](./commands/command-name)を使用してください。
+**注:** フォーミュラが4Dコマンドを呼び出す場合、アプリケーションのローカライズの影響を受けないようにするため、[Command name](../commands/command-name.md)を使用してください。
 
 *dataType* 引数は、フォーミュラを実行した結果の型を指定するために使用します。*Field and Variable Types*テーマの以下の定数の1つを渡さなければなりません:
 
@@ -142,6 +142,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 970 |
 | スレッドセーフである | no |
-
 
 

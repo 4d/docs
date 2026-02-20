@@ -98,9 +98,9 @@ displayed_sidebar: docs
 
 ## 参照
 
-[LISTBOX SET GRID](./commands/listbox-set-grid)  
+[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
-[OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
+[OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
 
 ## プロパティ
 
@@ -108,6 +108,5 @@ displayed_sidebar: docs
 | ------- | --- |
 | コマンド番号  | 917 |
 | スレッドセーフ | ×   |
-
 
 

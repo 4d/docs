@@ -24,7 +24,7 @@ Cet élément peut ensuite être passé aux commandes :
 
 * [WP SELECT](wp-select.md) pour sélectionner le corps du document.
 * [WP Text range](wp-text-range.md) pour définir le corps en tant que plage.
-* [WP SET ATTRIBUTES](./commands/wp-set-attributes) et [WP GET ATTRIBUTES](./commands/wp-get-attributes) pour gérer les attributs du corps du document.
+* [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) et [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) pour gérer les attributs du corps du document.
 
 ## Exemple 
 

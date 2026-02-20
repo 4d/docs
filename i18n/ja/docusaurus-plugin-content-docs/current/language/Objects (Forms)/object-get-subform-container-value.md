@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form](./commands/form)  
+[Form](../commands/form.md)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
 
@@ -74,6 +74,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1785 |
 | スレッドセーフである | no |
-
 
 

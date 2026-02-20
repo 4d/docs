@@ -72,7 +72,7 @@ Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. Vou
 > Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques), disposant de mécanismes spécifiques.
 
 Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#choice-list) à une colonne afin de contrôler la saisie.
-Les valeurs des colonnes sont gérées à l'aide de commandes List box de haut niveau (telles que [`LISTBOX INSERT ROWS`](./commands/listbox-insert-rows) ou `LISTBOX DELETE ROWS`) ainsi que de commandes de manipulation de tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
+Les valeurs des colonnes sont gérées à l'aide de commandes List box de haut niveau (telles que [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) ou `LISTBOX DELETE ROWS`) ainsi que de commandes de manipulation de tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -197,7 +197,7 @@ Les propriétés prises en charge dépendent du type de list box.
 
 ### Événements de formulaire pris en charge {#supported-form-events}
 
-| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](./commands/form-event) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event.md) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
@@ -271,7 +271,7 @@ Vous pouvez définir des propriétés standard (texte, couleur de fond, etc.) po
 
 ### Événements formulaire pris en charge {#supported-form-events-1}
 
-| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](./commands/form-event) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event.md) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
@@ -312,7 +312,7 @@ Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. 
 
 Au moment de l'exécution, les événements qui se produisent dans un en-tête sont générés dans la méthode objet de la colonne de list box.
 
-Lorsque la commande [`OBJECT SET VISIBLE`](./commands/object-set-visible) est utilisée avec un en-tête, elle est appliquée à tous les en-têtes, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "header3";False)` masquera tous les en-têtes de l'objet list box auquel *header3* appartient et pas simplement cet en-tête.
+Lorsque la commande [`OBJECT SET VISIBLE`](../commands/object-set-visible) est utilisée avec un en-tête, elle est appliquée à tous les en-têtes, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "header3";False)` masquera tous les en-têtes de l'objet list box auquel *header3* appartient et pas simplement cet en-tête.
 
 ### Propriétés spécifiques des en-têtes
 
@@ -332,7 +332,7 @@ Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés 
 
 Au moment de l'exécution, les événements qui se produisent dans un pied de page sont générés dans la méthode objet de la colonne de list box.
 
-Lorsque la commande [`OBJECT SET VISIBLE`](./commands/object-set-visible) est utilisée avec un pied de page, elle s'applique à tous les pieds de page, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "footer3";False)` masquera tous les pieds de page de l'objet list box auquel *footer3* appartient et pas simplement ce pied de page.
+Lorsque la commande [`OBJECT SET VISIBLE`](../commands/object-set-visible) est utilisée avec un pied de page, elle s'applique à tous les pieds de page, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "footer3";False)` masquera tous les pieds de page de l'objet list box auquel *footer3* appartient et pas simplement ce pied de page.
 
 ### Propriétés spécifiques des pieds de page
 
@@ -421,7 +421,7 @@ La gestion des sélections s'effectue différemment selon que la list box de typ
  End if
 ```
 
-> La commande [`OBJECT SET SCROLL POSITION`](./commands/object-set-scroll-position) fait défiler les lignes de la list box de manière à afficher la première ligne sélectionnée ou une ligne spécifiée.
+> La commande [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) fait défiler les lignes de la list box de manière à afficher la première ligne sélectionnée ou une ligne spécifiée.
 
 ### Personnaliser la représentation des sélections de lignes
 
@@ -532,11 +532,11 @@ La prise en charge du tri standard dépend du type de list box :
 
 ### Tri personnalisé
 
-Le développeur peut mettre en place des tris personnalisés, par exemple en utilisant la commande [`LISTBOX SORT COLUMNS`](./commands/listbox-sort-columns) et/ou en combinant les événements formulaire [`On Header Click`](../Events/onHeaderClick) et [`On After Sort`](../Events/onAfterSort) et les commandes 4D correspondantes.
+Le développeur peut mettre en place des tris personnalisés, par exemple en utilisant la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) et/ou en combinant les événements formulaire [`On Header Click`](../Events/onHeaderClick) et [`On After Sort`](../Events/onAfterSort) et les commandes 4D correspondantes.
 
 Les tris personnalisés vous permettent de :
 
-- effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](./commands/listbox-sort-columns),
+- effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md),
 - utiliser des fonctions telles que [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) pour trier les colonnes en fonction de critères complexes.
 
 #### Exemple
@@ -578,7 +578,7 @@ La valeur de la [variable associée à l’en-tête d’une colonne](properties_
 
 Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. Le tri de la colonne lui-même n'est pas modifié dans ce cas ; c'est au développeur de s'en charger.
 
-> La commande [`OBJECT SET FORMAT`](./commands/object-set-format) offre un support spécifique pour les icônes dans les en-têtes de list box, ce qui peut être utile lorsque vous souhaitez travailler avec une icône de tri personnalisée.
+> La commande [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) offre un support spécifique pour les icônes dans les en-têtes de list box, ce qui peut être utile lorsque vous souhaitez travailler avec une icône de tri personnalisée.
 
 ## Gestion des styles et des couleurs
 
@@ -650,14 +650,14 @@ L’impression d’une list box en mode prévisualisation consiste à imprimer d
 
 ### Mode avancé
 
-Dans ce mode, l’impression des list box s’effectue par programmation, via la commande `Print object` (les formulaires projet et les formulaires table sont pris en charge). La commande [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) permet de contrôler l'impression de l'objet.
+Dans ce mode, l’impression des list box s’effectue par programmation, via la commande `Print object` (les formulaires projet et les formulaires table sont pris en charge). La commande [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) permet de contrôler l'impression de l'objet.
 
 Dans ce mode :
 
-- La hauteur de l’objet list box est automatiquement réduite lorsque le nombre de lignes à imprimer est inférieur à la hauteur d’origine de l’objet (il n’y a pas de lignes "vides" imprimées). En revanche, la hauteur n’augmente pas automatiquement en fonction du contenu de l’objet. La taille de l'objet réellement imprimé peut être obtenue par la commande [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information).
+- La hauteur de l’objet list box est automatiquement réduite lorsque le nombre de lignes à imprimer est inférieur à la hauteur d’origine de l’objet (il n’y a pas de lignes "vides" imprimées). En revanche, la hauteur n’augmente pas automatiquement en fonction du contenu de l’objet. La taille de l'objet réellement imprimé peut être obtenue par la commande [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information).
 - L'objet list box est imprimé "tel quel", c’est-à-dire en tenant compte de ses paramètres d’affichage courants : visibilité des en-têtes et des grilles, lignes affichées et masquées, etc.
-  Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande [`OBJECT SET SCROLL POSITION`](./commands/object-set-scroll-position) avant de lancer l'impression, la première ligne imprimée dans la zone de liste sera celle désignée par la commande.
-- Un mécanisme automatique facilite l’impression des list box contenant plus de lignes qu’il est possible d’en afficher : des appels successifs à `Print object` permettent d’imprimer à chaque fois un nouvel ensemble de lignes. La commande [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) peut être utilisée pour vérifier l'état de l'impression en cours.
+  Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) avant de lancer l'impression, la première ligne imprimée dans la zone de liste sera celle désignée par la commande.
+- Un mécanisme automatique facilite l’impression des list box contenant plus de lignes qu’il est possible d’en afficher : des appels successifs à `Print object` permettent d’imprimer à chaque fois un nouvel ensemble de lignes. La commande [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) peut être utilisée pour vérifier l'état de l'impression en cours.
 
 ## List box hiérarchiques
 
@@ -673,7 +673,7 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 - Configurer manuellement les éléments hiérarchiques via la liste des propriétés dans l’éditeur de formulaires (ou éditer le formulaire JSON).
 - Générer visuellement la hiérarchie à l’aide du pop up menu de gestion des list box, dans l’éditeur de formulaires.
-- Utilisez les commandes [`LISTBOX SET HIERARCHY`](./commands/listbox-set-hierarchy) et [`LISTBOX GET HIERARCHY`](./commands/listbox-get-hierarchy).
+- Utilisez les commandes [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) et [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md).
 
 #### Propriété List box hiérarchique
 
@@ -796,7 +796,7 @@ Représentation hiérarchique :
 
 > Si une ou plusieurs lignes sont masquées du fait que leurs parents ont été contractés, elles ne sont plus sélectionnées. Seules les lignes visibles (directement ou suite à un défilement) sont sélectionnables. Autrement dit, les lignes ne peuvent pas être à la fois sélectionnées et cachées.
 
-Comme pour les sélections, la commande [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) renvoie les mêmes valeurs pour une list box hiérarchique que pour une list box non hiérarchique. Cela signifie que dans les deux exemples ci-dessous, [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) renverra la même position : (3;2).
+Comme pour les sélections, la commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie les mêmes valeurs pour une list box hiérarchique que pour une list box non hiérarchique. Cela signifie que dans les deux exemples ci-dessous, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renverra la même position : (3;2).
 
 *Non-hierarchical representation:*
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -808,11 +808,11 @@ Lorsque toutes les lignes d’une sous-hiérarchie sont masquées, la ligne de r
 
 #### Lignes de rupture
 
-Si l'utilisateur sélectionne une ligne de rupture, [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) renvoie la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant :
+Si l'utilisateur sélectionne une ligne de rupture, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant :
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) retourne (2;4). Pour sélectionner une ligne de rupture par programmation, vous devez utiliser la commande [`LISTBOX SELECT BREAK`](./commands/listbox-select-break).
+... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retourne (2;4). Pour sélectionner une ligne de rupture par programmation, vous devez utiliser la commande [`LISTBOX SELECT BREAK`](../commands/listbox-select-break).
 
 Les lignes de rupture ne sont pas prises en compte dans les tableaux internes permettant de gérer l’apparence graphique des list box (styles et couleurs). Il est toutefois possible de modifier ces caractéristiques pour les lignes de rupture via les commandes de gestion graphique des objets. Il suffit pour cela d’exécuter ces commandes appropriées sur les tableaux constituant la hiérarchie.
 
@@ -841,19 +841,19 @@ Résultat:
 
 Vous pouvez optimiser l’affichage et la gestion des list box hiérarchiques en tirant parti des événements formulaire `On Expand` et `On Collapse`.
 
-Une list box hiérarchique est construite à partir du contenu des tableaux qui la constituent, elle ne peut donc être affichée que lorsque tous les tableaux sont chargés en mémoire. Il est donc difficile de construire de grandes list box hiérarchiques basées sur des tableaux générés à partir de données (via la commande [`SELECTION TO ARRAY`](./commands/selection-to-array)), non seulement en raison de la vitesse d'affichage, mais aussi de la mémoire utilisée.
+Une list box hiérarchique est construite à partir du contenu des tableaux qui la constituent, elle ne peut donc être affichée que lorsque tous les tableaux sont chargés en mémoire. Il est donc difficile de construire de grandes list box hiérarchiques basées sur des tableaux générés à partir de données (via la commande [`SELECTION TO ARRAY`](../commands/selection-to-array)), non seulement en raison de la vitesse d'affichage, mais aussi de la mémoire utilisée.
 
-L'utilisation des événements formulaire `On Expand` et `On Collapse` permet de surmonter ces contraintes : par exemple, vous pouvez n'afficher qu'une partie de la hiérarchie et charger/décharger les tableaux à la volée, en fonction des actions de l'utilisateur. Dans le contexte de ces événements, la commande [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) renvoie la cellule sur laquelle l'utilisateur a cliqué pour développer ou réduire une ligne.
+L'utilisation des événements formulaire `On Expand` et `On Collapse` permet de surmonter ces contraintes : par exemple, vous pouvez n'afficher qu'une partie de la hiérarchie et charger/décharger les tableaux à la volée, en fonction des actions de l'utilisateur. Dans le contexte de ces événements, la commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie la cellule sur laquelle l'utilisateur a cliqué pour développer ou réduire une ligne.
 
 Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués par le code. Les principes à mettre en oeuvre sont :
 
 - A l’affichage de la listbox, seul le premier tableau doit être rempli. Cependant, vous devez créer un deuxième tableau avec des valeurs vides pour que la zone de liste affiche les boutons déployer/contracter :
   ![](../assets/en/FormObjects/hierarch15.png)
 
-- Lorsque l’utilisateur clique sur un bouton de déploiement, vous pouvez traiter l’événement `On Expand`. La commande [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) renvoie la cellule concernée et vous permet de construire la hiérarchie appropriée : vous remplissez le premier tableau avec les valeurs répétées et le second avec les valeurs envoyées par la commande [`SELECTION TO ARRAY`](./commands/selection-to-array) et vous insérez autant de lignes que nécessaire dans la zone de liste à l'aide de la commande [`LISTBOX INSERT ROWS`](./commands/listbox-insert-rows).
+- Lorsque l’utilisateur clique sur un bouton de déploiement, vous pouvez traiter l’événement `On Expand`. La commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie la cellule concernée et vous permet de construire la hiérarchie appropriée : vous remplissez le premier tableau avec les valeurs répétées et le second avec les valeurs envoyées par la commande [`SELECTION TO ARRAY`](../commands/selection-to-array) et vous insérez autant de lignes que nécessaire dans la zone de liste à l'aide de la commande [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows).
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- Lorsque l’utilisateur clique sur un bouton de contraction, vous pouvez traiter l’événement `On Collapse`. La commande [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) renvoie la cellule concernée : vous supprimez autant de lignes que nécessaire de la zone de liste à l'aide de la commande [`LISTBOX DELETE ROWS`](./commands/listbox-delete-rows).
+- Lorsque l’utilisateur clique sur un bouton de contraction, vous pouvez traiter l’événement `On Collapse`. La commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie la cellule concernée : vous supprimez autant de lignes que nécessaire de la zone de liste à l'aide de la commande [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows).
 
 ## Tableaux d'objets dans les colonnes
 
@@ -865,7 +865,7 @@ La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ### Configurer une colonne tableau d'objets
 
-Pour affecter un tableau d'objets à une colonne de list box, il suffit de définir le nom du tableau d'objets soit dans la liste des propriétés (champ "Nom de la variable"), soit à l'aide de la commande [`LISTBOX INSERT COLUMN`](./commands/listbox-insert-column), comme pour toute autre colonne basée sur un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
+Pour affecter un tableau d'objets à une colonne de list box, il suffit de définir le nom du tableau d'objets soit dans la liste des propriétés (champ "Nom de la variable"), soit à l'aide de la commande [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md), comme pour toute autre colonne basée sur un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -1225,5 +1225,3 @@ Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox
   - case à cocher (passage cochée/non cochée)
 - **Sur clic** : Lorsque l'utilisateur clique sur un bouton installé à l'aide de l'attribut *valueType*, un événement `On Clicked` est généré. Cet événement doit être ensuite géré par le programmeur.
 - **Sur clic alternatif** : Lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton"), un événement `On Alternative Click` est généré. Cet événement doit être ensuite géré par le programmeur.
-
-

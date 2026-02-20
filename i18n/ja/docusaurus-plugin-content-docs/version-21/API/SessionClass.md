@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session オブジェクトは [`Session`](./commands/session) コマンドによって返されます。  These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
+Session オブジェクトは [`Session`](../commands/session.md) コマンドによって返されます。  These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
 
 :::tip 関連したblog 記事
 
@@ -423,7 +423,7 @@ End if
 
 :::tip
 
-[`Session storage`](./commands/session-storage) コマンドにこのプロパティを渡すことで、セッションの[`.storage`](#storage) オブジェクトを取得できます。
+[`Session storage`](../commands/session-storage.md) コマンドにこのプロパティを渡すことで、セッションの[`.storage`](#storage) オブジェクトを取得できます。
 
 :::
 
@@ -494,8 +494,8 @@ End if
 
 `.info` プロパティは、<!-- REF #SessionClass.info.Summary -->サーバー上のデスクトップまたはWeb セッションの情報を格納します<!-- END REF -->。
 
-- **リモートセッション** および **ストアドプロシージャーセッション**の場合: `.info` オブジェクトは[`Process activity`](./commands/process-activity) コマンドの "session" プロパティに返されるオブジェクトと同じです。
-- **スタンドアロンセッションの場合**: `.info` オブジェクトは、[`Session info`](./commands/session-info) コマンドで返されるものと同じオブジェクトです。
+- **リモートセッション** および **ストアドプロシージャーセッション**の場合: `.info` オブジェクトは[`Process activity`](../commands/process-activity.md) コマンドの "session" プロパティに返されるオブジェクトと同じです。
+- **スタンドアロンセッションの場合**: `.info` オブジェクトは、[`Session info`](../commands/session-info.md) コマンドで返されるものと同じオブジェクトです。
 - **Web ユーザーセッション**: `.info` オブジェクトにはWeb ユーザーセッションにおいて利用可能なプロパティが格納されています。
 
 `.info` オブジェクトには、次のプロパティが格納されています:
@@ -819,7 +819,7 @@ End if
 
 :::tip
 
-セッションの`.storage` プロパティは[`Session storage`](./commands/session-storage) コマンドを使用することで取得できます。
+セッションの`.storage` プロパティは[`Session storage`](../commands/session-storage.md) コマンドを使用することで取得できます。
 
 :::
 
@@ -869,10 +869,9 @@ End use
 `.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
 - **Web セッション**: このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
-- **リモート/ ストアドプロシージャーセッション**: このプロパティは [`Current user`](./commands/current-user) コマンドと同じユーザー名を返します。
-- **スタンドアロンセッション**: このプロパティは"designer" または[`SET USER ALIAS`](./commands/set-user-alias) コマンドで設定された名前が格納されています。
+- **リモート/ ストアドプロシージャーセッション**: このプロパティは [`Current user`](../commands-legacy/current-user.md) コマンドと同じユーザー名を返します。
+- **スタンドアロンセッション**: このプロパティは"designer" または[`SET USER ALIAS`](../commands-legacy/set-user-alias.md) コマンドで設定された名前が格納されています。
 
 このプロパティはデスクトップセッションにおいては**読み取り専用**です。
 
 <!-- END REF -->
-

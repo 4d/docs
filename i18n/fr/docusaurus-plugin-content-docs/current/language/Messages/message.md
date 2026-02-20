@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.MESSAGE.Summary-->The **MESSAGE** command is usually used to inform the user of some activity.<!-- END REF--> It displays *message* on the screen in a special message window that opens and closes each time you call **MESSAGE**, unless you work with a window you previously opened using [Open window](./commands/open-window) (see the following details). The message is temporary and is erased as soon as a form is displayed or the method stops executing. If another **MESSAGE** is executed, the old message is erased.
+<!--REF #_command_.MESSAGE.Summary-->The **MESSAGE** command is usually used to inform the user of some activity.<!-- END REF--> It displays *message* on the screen in a special message window that opens and closes each time you call **MESSAGE**, unless you work with a window you previously opened using [Open window](../commands/open-window.md) (see the following details). The message is temporary and is erased as soon as a form is displayed or the method stops executing. If another **MESSAGE** is executed, the old message is erased.
 
-If a window is opened with [Open window](./commands/open-window), all subsequent calls to **MESSAGE** display the messages in that window. The window behaves like a terminal:
+If a window is opened with [Open window](../commands/open-window.md), all subsequent calls to **MESSAGE** display the messages in that window. The window behaves like a terminal:
 
 * Successive messages do not erase previous messages when displayed in the window. Instead, they are concatenated onto existing messages.
 * If a message is wider than the window, 4D automatically performs text wrap.
@@ -41,7 +41,7 @@ If a window is opened with [Open window](./commands/open-window), all subsequent
 * The window is only an output window and does not redraw when other windows overlap it.
 * You can modify the font and size of characters displayed in the window by means of the "Interface" page in the Database Settings.
 
-**Note:** **MESSAGE** is compatible with the [Open form window](./commands/open-form-window) command; however, in this context the second *\** parameter of [Open form window](./commands/open-form-window), which saves the window's size and position, is not supported. 
+**Note:** **MESSAGE** is compatible with the [Open form window](../commands/open-form-window.md) command; however, in this context the second *\** parameter of [Open form window](../commands/open-form-window.md), which saves the window's size and position, is not supported. 
 
 ## Example 1 
 
@@ -61,7 +61,7 @@ The following window appears and disappears at each MESSAGE call:
 
 ## Example 2 
 
-In order to avoid this "blinking" window, you can display the messages in a window opened using [Open window](./commands/open-window), as in this example:
+In order to avoid this "blinking" window, you can display the messages in a window opened using [Open window](../commands/open-window.md), as in this example:
 
 ```4d
  Open window(50;50;500;250;5;"Operation in Progress")
@@ -124,7 +124,7 @@ This provides the following result (shown here on Windows):
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
-[Open window](./commands/open-window)  
+[Open window](../commands/open-window.md)  
 
 ## Properties
 
@@ -132,6 +132,5 @@ This provides the following result (shown here on Windows):
 | --- | --- |
 | Command number | 88 |
 | Thread safe | no |
-
 
 

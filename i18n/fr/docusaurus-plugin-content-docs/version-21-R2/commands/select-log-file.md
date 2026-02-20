@@ -23,7 +23,7 @@ Passez dans *logFile* le nom ou le chemin d'accès complet du fichier d'historiq
 
 Si vous passez une chaîne vide, **SELECT LOG FILE** présente une boîte de dialogue standard d'enregistrement de fichier, permettant à l'utilisateur de choisir le nom et l'emplacement du fichier d'historique à créer. Autrement, si l'utilisateur clique sur le bouton Annuler ou si le fichier d'historique ne peut pas être créé, OK prend la valeur 0. Si le fichier est correctement créé, la variable OK prend la valeur 1.
 
-**Note :** Le nouveau fichier journal n'est pas généré immédiatement après l'exécution de la commande, mais après la sauvegarde suivante (le paramétrage est conservé dans le fichier de données et sera pris en compte même si la base de données est fermée entre-temps) ou un appel à la commande [`New log file`](new-log-file.md). Vous pouvez appeler la commande [BACKUP](./commands/backup) pour déclencher la création du fichier journal.
+**Note :** Le nouveau fichier journal n'est pas généré immédiatement après l'exécution de la commande, mais après la sauvegarde suivante (le paramétrage est conservé dans le fichier de données et sera pris en compte même si la base de données est fermée entre-temps) ou un appel à la commande [`New log file`](new-log-file.md). Vous pouvez appeler la commande [BACKUP](../commands-legacy/backup.md) pour déclencher la création du fichier journal.
 
 Si vous passez *\** dans *logFile*, **SELECT LOG FILE** ferme le fichier journal courant de la base de données. La variable OK prend la valeur 1 lorsque le fichier d'historique est refermé.
 
@@ -34,7 +34,7 @@ OK prend la valeur 1 si le fichier d'historique est correctement créé ou ferm�
 ## Voir également
 
 [New log file](new-log-file.md)\
-[ON ERR CALL](./commands/on-err-call)
+[ON ERR CALL](../commands-legacy/on-err-call.md)
 
 ## Propriétés
 
@@ -43,5 +43,4 @@ OK prend la valeur 1 si le fichier d'historique est correctement créé ou ferm�
 | Numéro de commande    | 345       |
 | Thread safe           | non       |
 | Modifie les variables | OK, error |
-
 

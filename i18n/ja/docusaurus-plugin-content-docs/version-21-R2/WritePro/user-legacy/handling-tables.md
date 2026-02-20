@@ -15,14 +15,14 @@ slug: /WritePro/tables
 
 ## 表の作成 
 
-4D Write Pro の表は[WP Insert table](./commands/wp-insert-table) コマンドを呼び出すことによって作成されます。その後、[WP Table append row](./commands/wp-table-append-row) コマンドを使用して行を追加することができます。
+4D Write Pro の表は[WP Insert table](../commands/wp-insert-table) コマンドを呼び出すことによって作成されます。その後、[WP Table append row](../commands/wp-table-append-row) コマンドを使用して行を追加することができます。
 
 **注:** ユーザーはセルの範囲をコピー・ペーストすることによって表を作成することができます:   
 ![](../../assets/en/WritePro/pict3307941.en.png)
 
 ## 表の編集 
 
-セルの中身は[WP Table append row](./commands/wp-table-append-row) コマンドを使用することでプログラミングによって追加することができます。
+セルの中身は[WP Table append row](../commands/wp-table-append-row) コマンドを使用することでプログラミングによって追加することができます。
 
 表組みの作成後は、セルの中身はユーザーによってランタイムで編集可能です。ユーザーはセル内をクリックし、通常の段落同様、選択、編集、コピー/ペースト、あるいはテキストまたはピクチャーの削除をすることが可能です。また**Tab**キーを使用してセルを移動していくことも可能です(**Shift+Tab**で逆方向に移動していきます)。
 
@@ -34,13 +34,13 @@ slug: /WritePro/tables
 
 ユーザーはまた、カラム、行、あるいはセルを選択し、ビルトインのポップアップメニューあるいはカスタマイズされたインターフェースを使用して、テキストスタイル、カラー、並び、などの利用可能な属性を適用することができます。4D Write Proでは表組みの任意の部分を選択する複数のコマンドを提供します:
 
-* [WP Table get rows](./commands/wp-table-get-rows) は行のレンジ(またはヘッダー行レンジ)を取得します。
-* [WP Table get columns](./commands/wp-table-get-columns) はカラムのレンジを取得します。(\*)
-* [WP Table get cells](./commands/wp-table-get-cells) はセルのレンジを取得します。
+* [WP Table get rows](../commands/wp-table-get-rows) は行のレンジ(またはヘッダー行レンジ)を取得します。
+* [WP Table get columns](../commands/wp-table-get-columns) はカラムのレンジを取得します。(\*)
+* [WP Table get cells](../commands/wp-table-get-cells) はセルのレンジを取得します。
 
 (\*) カラムは、それに相当するものがhtmlにはありません。4D Write Proでは、カラムのレンジは実際にはセルのレンジであり、これはつまりカラムはセルと同じプロパティを持つことを意味します。
 
-レンジを選択したら、[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドを使用して適切な属性を適用することができます。セルの中では、そのコンテンツに応じて、属性は段落、章、あるいはピクチャーへと適用されます。例えば、表組みあるいは表組みのセルに対しては、高さ、フォントサイズ、境界線、パッディング、などを設定することができます(詳細な情報については、*4D Write Pro属性* の章を参照して下さい)。
+レンジを選択したら、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドを使用して適切な属性を適用することができます。セルの中では、そのコンテンツに応じて、属性は段落、章、あるいはピクチャーへと適用されます。例えば、表組みあるいは表組みのセルに対しては、高さ、フォントサイズ、境界線、パッディング、などを設定することができます(詳細な情報については、*4D Write Pro属性* の章を参照して下さい)。
 
 異なる属性が表の要素に同時に適用された場合、レンダリングには以下の優先順位が適用されます:
 
@@ -68,7 +68,7 @@ slug: /WritePro/tables
 
 ### セルの結合と結合解除 
 
-4D Write Pro では、表内のセルを結合したり結合解除したりできます。セルの結合とは、表内の同じ行または列にある隣り合った2つ以上のセルを1つのセルへと組み合わせることです。セルの結合解除とは、すでに結合したセルに対して、同じ行または列内にに並んだ複数の隣り合ったセルへと分割することです。セルは、[WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) コマンドまたは**cell/merge** 標準アクションを使用することで結合でき、また[WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) コマンドや**cell/split** 標準コマンドを使用することで結合解除できます。
+4D Write Pro では、表内のセルを結合したり結合解除したりできます。セルの結合とは、表内の同じ行または列にある隣り合った2つ以上のセルを1つのセルへと組み合わせることです。セルの結合解除とは、すでに結合したセルに対して、同じ行または列内にに並んだ複数の隣り合ったセルへと分割することです。セルは、[WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) コマンドまたは**cell/merge** 標準アクションを使用することで結合でき、また[WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) コマンドや**cell/split** 標準コマンドを使用することで結合解除できます。
 
 ![](../../assets/en/WritePro/pict6421031.en.png)
 
@@ -79,7 +79,7 @@ slug: /WritePro/tables
 **ランゲージを使用したセル結合の例:**
 
 1. 表内で結合したいセルのレンジを指定します。指定するセルは水平方向、垂直方向、またはその両方向に隣り合っている必要があります。
-2. 選択されたレンジに対して[WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) コマンドを呼び出します。
+2. 選択されたレンジに対して[WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) コマンドを呼び出します。
 
 ```4d
  $cells:=WP Table get cells($table;1;1;3;1)
@@ -99,7 +99,7 @@ slug: /WritePro/tables
 **ランゲージを使用したセル結合解除の例:**
 
 1. 表内で結合を解除したいセルのレンジを指定します。選択されたレンジには既に結合されているセルが含まれている必要があります。
-2. 選択されたレンジに対して[WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) コマンドを呼び出します。
+2. 選択されたレンジに対して[WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) コマンドを呼び出します。
 
 ```4d
  $cells:=WP Table get cells($table;1;1;1;1)
@@ -171,11 +171,11 @@ slug: /WritePro/tables
 
  表のページ分けは、プログラムによって、あるいはユーザーによってコントロール可能です。利用可能なアクションには以下のものが含まれます: 
 * 表内に改ページを挿入する:  
-   * [WP INSERT BREAK](./commands/wp-insert-break) コマンド  
+   * [WP INSERT BREAK](../commands/wp-insert-break) コマンド  
    * *insertPageBreak* 標準アクション  
    * デフォルトのコンテキストメニューの**改ページを挿入**オプション
 * 表内にカラムブレークを挿入  
-   * [WP INSERT BREAK](./commands/wp-insert-break) コマンド  
+   * [WP INSERT BREAK](../commands/wp-insert-break) コマンド  
    * *insertColumnBreak* 標準アクション  
    * デフォルトのコンテキストメニューの**カラムブレークを挿入**オプション
 
@@ -198,17 +198,17 @@ slug: /WritePro/tables
 表のヘッダー行に指定できるのは表の最初の行(あるいは最初の複数の行)です。ヘッダー行を定義するためには、以下の方法があります:
 
 * *headerRowCount* 標準アクション(*4D Write Pro標準アクションの使用* 参照)を使用する。
-* [WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドに対して、wk header row count (ターゲットは表、*テーブル*参照)、あるいは wk header (ターゲットは行、*行とカラム*参照)を使用する。
+* [WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドに対して、wk header row count (ターゲットは表、*テーブル*参照)、あるいは wk header (ターゲットは行、*行とカラム*参照)を使用する。
 
 5行以上の行をヘッダー行として指定した場合(あるいは既存のヘッダーに対して行を挿入した結果5行以上になった場合)、4D Write Pro は最初の5行のみをヘッダー行として使用します。ヘッダーとして定義されている行を削除した場合、ヘッダー行の数はそれだけ減少します。
 
 ## 表のデータソース 
 
-表に対してフォーミュラオブジェクトをデータソースとして割り当て、表内から*This を使用した式* を使用することで計算された値にアクセスすることができます(以下参照)。データソースのフォーミュラは、フォーミュラが計算されたとき(例: ドキュメントが開かれたとき、[WP COMPUTE FORMULAS](./commands/wp-compute-formulas) コマンドが呼ばれたとき、など)に4D Write Pro によって処理されます。この機能はデータコンテキストの機能を活用しています([WP SET DATA CONTEXT](./commands/wp-set-data-context) 参照)。
+表に対してフォーミュラオブジェクトをデータソースとして割り当て、表内から*This を使用した式* を使用することで計算された値にアクセスすることができます(以下参照)。データソースのフォーミュラは、フォーミュラが計算されたとき(例: ドキュメントが開かれたとき、[WP COMPUTE FORMULAS](../commands/wp-compute-formulas) コマンドが呼ばれたとき、など)に4D Write Pro によって処理されます。この機能はデータコンテキストの機能を活用しています([WP SET DATA CONTEXT](../commands/wp-set-data-context) 参照)。
 
 データソースのフォーミュラオブジェクトが(空でない)コレクションまたはエンティティセレクションを返す場合、フォーミュラが計算されるとすぐに表はデータが埋められます。表にはコレクション内にある要素数分だけ、あるいはエンティティセレクション内のエンティティ数分だけ行が表示されます。(ヘッダー行を除いた)最初の行はテンプレート行として使用され、そこにはThis.item.lastname といったような特別なキーワードを使用した式を挿入することができます。式はコレクションまたはエンティティセレクションからのデータの処理中に置き換えられます。このテンプレート行は、フォーミュラが計算された後のコレクションまたはエンティティセレクション内の項目数と項目行の数が合致するように複製されていきます。  
   
-表にデータソースを割り当てる場合、[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドとwk datasource 定数を使用し、値として*4D formula* オブジェクトを渡します。例えば、表の中にFrance に住む全ての人のデータを行に表したい場合、以下のようなコードを使用します:  
+表にデータソースを割り当てる場合、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドとwk datasource 定数を使用し、値として*4D formula* オブジェクトを渡します。例えば、表の中にFrance に住む全ての人のデータを行に表したい場合、以下のようなコードを使用します:  
   
 ```4d
  $formula:=Formula(ds.people.query("country = :1";"France"))
@@ -219,7 +219,7 @@ slug: /WritePro/tables
 * データ行(およびブレーク行)内では、This.item.lastname のような特殊なキーワードを使用した式を挿入することができます。式は、処理の過程で、コレクションまたはエンティティセレクションからのデータによって置き換えられます。繰り返される行は、フォーミュラ計算後に項目行がコレクションまたはエンティティセレクション内の項目の数と同じになるように複製されていきます。
 * データソースフォーミュラがコレクションまたはエンティティセレクションを返さない場合、あるいは空のコレクション/エンティティセレクションを返す場合、表の行は自動的には作成されず、全ての行は通常の行として扱われます。データソースが空の場合に表示されるプレースホルダー行を定義することができます。
 
-表からデータソースを削除するためには、[WP RESET ATTRIBUTES](./commands/wp-reset-attributes) コマンドを使用してください。このコマンドはデータソース属性値をnull に設定します:  
+表からデータソースを削除するためには、[WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドを使用してください。このコマンドはデータソース属性値をnull に設定します:  
   
 ```4d
  WP RESET ATTRIBUTES($table;wk datasource)
@@ -271,7 +271,7 @@ slug: /WritePro/tables
 1. 表のテンプレートに、データ行またはブレーク行のすぐ後に行を追加し、例えば**This.previousItems** のように必要なフォーミュラを中に入力します。
 2. ドキュメントにおいてキャリーオーバー行を有効化します。以下の2つの方法があります:  
 \- *bottomCarryOverRow* 標準アクションを使用する(*4D Write Pro標準アクションの使用* 参照)  
-\- [WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドに wk bottom carry over row *表* 属性セレクターを組み合わせて使用する
+\- [WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドに wk bottom carry over row *表* 属性セレクターを組み合わせて使用する
 
 **注意:** キャリーオーバー行機能が有効化されている場合、行内の改ページは許可されません(*表のページ分け* 参照)。対応するオプションが設定されてい場合には、無視されます。
 
@@ -320,7 +320,7 @@ slug: /WritePro/tables
 
 その他のコンテキストにおいては、これらの式は*undefined* を返します。
 
-**注意:** フォーミュラの挿入についてのより詳しい情報については、[WP INSERT FORMULA](./commands/wp-insert-formula) を参照してください。
+**注意:** フォーミュラの挿入についてのより詳しい情報については、[WP INSERT FORMULA](../commands/wp-insert-formula) を参照してください。
 
 ### 表のデータソースを扱う 
 

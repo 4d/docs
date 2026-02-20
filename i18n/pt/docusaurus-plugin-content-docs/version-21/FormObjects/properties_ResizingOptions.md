@@ -41,13 +41,13 @@ Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL P
 
 #### Comandos
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
 ## Dimensionamento horizontal
 
-Esta propriedade específica se o tamanho horizontal de um objeto deve ser movido ou redimensionado quando um usuário redimensiona o formulário. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](./commands/object-set-resizing-options) language command.
+Esta propriedade específica se o tamanho horizontal de um objeto deve ser movido ou redimensionado quando um usuário redimensiona o formulário. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) language command.
 
 Estão disponíveis três opções:
 
@@ -71,7 +71,7 @@ Estão disponíveis três opções:
 
 #### Comandos
 
-[`OBJECT GET RESIZING OPTIONS`](./commands/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](./commands/object-set-resizing-options)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
 
 ---
 
@@ -101,7 +101,7 @@ Estão disponíveis três opções:
 
 #### Comandos
 
-[`OBJECT GET RESIZING OPTIONS`](./commands/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](./commands/object-set-resizing-options)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
 
 ---
 
@@ -146,6 +146,5 @@ Designa se o tamanho da coluna pode ser modificado pelo usuário.
 
 #### Comandos
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
-
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 

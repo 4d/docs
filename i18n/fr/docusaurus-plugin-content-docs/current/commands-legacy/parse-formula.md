@@ -100,7 +100,7 @@ Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur e
 
 ## Voir aussi 
 
-[Formula from string](./commands/formula-from-string)  
+[Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Utiliser des tokens dans les formules*  
@@ -111,6 +111,5 @@ Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur e
 | --- | --- |
 | Numéro de commande | 1576 |
 | Thread safe | no |
-
 
 

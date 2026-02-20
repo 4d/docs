@@ -48,5 +48,5 @@ Para atualizar todas as fórmulas na primeira seção de um documento:
 *Gestão de fórmulas*  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  
-[WP INSERT FORMULA](./commands/wp-insert-formula)  
+[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
 [WP SET DATA CONTEXT](wp-set-data-context.md)  

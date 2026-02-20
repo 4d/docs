@@ -47,7 +47,7 @@ También puede pasar los valores de coordenadas absolutas en los parámetros *de
 Este comando sólo funciona en los siguientes contextos:
 
 * Los formularios de entrada en el modo entrada,
-* Formulario mostrados usando el comando [DIALOG](./commands/dialog),
+* Formulario mostrados usando el comando [DIALOG](../commands/dialog.md),
 * Encabezados y pies de página de formularios de salida mostrados por el comando [MODIFY SELECTION](modify-selection.md) o [DISPLAY SELECTION](display-selection.md),
 * Los formularios en impresión.
 
@@ -73,6 +73,5 @@ La siguiente declaración ubica el objeto "button\_1" en las coordenadas (10,20)
 | --- | --- |
 | Número de comando | 1248 |
 | Hilo seguro | no |
-
 
 

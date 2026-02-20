@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.Tool bar height.Summary-->El comando Tool bar height devuelve la altura de la barra de herramientas visible actualmente, expresada en píxeles.<!-- END REF--> Dependiendo del contexto, puede ser la barra de herramientas de modo Diseño 4D, o una barra de herramientas personalizada creada con [Open form window](./commands/open-form-window) (la barra de herramientas de modo Diseño se oculta automáticamente cuando se muestra una barra de herramientas personalizada).
+<!--REF #_command_.Tool bar height.Summary-->El comando Tool bar height devuelve la altura de la barra de herramientas visible actualmente, expresada en píxeles.<!-- END REF--> Dependiendo del contexto, puede ser la barra de herramientas de modo Diseño 4D, o una barra de herramientas personalizada creada con [Open form window](../commands/open-form-window.md) (la barra de herramientas de modo Diseño se oculta automáticamente cuando se muestra una barra de herramientas personalizada).
 
 Si no se muestra ninguna barra de herramientas, el comando devuelve 0.
 
@@ -44,6 +44,5 @@ Si no se muestra ninguna barra de herramientas, el comando devuelve 0.
 | --- | --- |
 | Número de comando | 1016 |
 | Hilo seguro | no |
-
 
 

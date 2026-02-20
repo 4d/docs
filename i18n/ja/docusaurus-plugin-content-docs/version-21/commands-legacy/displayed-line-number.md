@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Selected record number](selected-record-number.md)  
 
 ## プロパティ
@@ -64,6 +64,5 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 897 |
 | スレッドセーフである | no |
-
 
 

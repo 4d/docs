@@ -82,7 +82,7 @@ You create a new collection and then add a new element:
 ## See also 
 
 [New shared collection](new-shared-collection.md)  
-[Type](./commands/type)  
+[Type](../commands-legacy/type.md)  
 
 ## Properties
 
@@ -90,6 +90,5 @@ You create a new collection and then add a new element:
 | --- | --- |
 | Command number | 1472 |
 | Thread safe | yes |
-
 
 

@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.FORM Get current page.Summary-->The **FORM Get current page** command returns the number of the currently displayed form page or of the current form loaded by the [FORM LOAD](./commands/form-load) command.<!-- END REF--> 
+<!--REF #_command_.FORM Get current page.Summary-->The **FORM Get current page** command returns the number of the currently displayed form page or of the current form loaded by the [FORM LOAD](../commands/form-load.md) command.<!-- END REF--> 
 
 The *\** parameter is useful when the command is called in the context of a page type subform containing several pages. In this case, when you pass this parameter, the command changes the page of the current subform (the one that called the command). By default, when the *\** parameter is omitted, the command is always applied to the parent form. 
 
@@ -88,6 +88,5 @@ In a form, when you select a menu item from the menu bar or when the form receiv
 | --- | --- |
 | Command number | 276 |
 | Thread safe | no |
-
 
 

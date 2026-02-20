@@ -22,8 +22,8 @@ Para más información, consulte *Gestión de fórmulas*.
 
 Los objetos 4D Write Pro ofrecen dos maneras de importar documentos 4D Write:
 
-* Para los archivos 4D Write Pro almacenados en el disco, se utiliza el comando [WP Import document](./commands/wp-import-document),
-* Para las áreas 4D Write almacenadas en campos BLOB, se utiliza el comando [WP New](./commands/wp-new).
+* Para los archivos 4D Write Pro almacenados en el disco, se utiliza el comando [WP Import document](../commands/wp-import-document),
+* Para las áreas 4D Write almacenadas en campos BLOB, se utiliza el comando [WP New](../commands/wp-new).
 
 Para más información, consulte la descripción de estos comandos.
 
@@ -84,7 +84,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Color URL                | No disponible                                                            |
 | Color visitado URL       | No disponible                                                            |
 
-**Nota:** el separador del sistema (como devuelto por [GET SYSTEM FORMAT](../../commands/get-system-format)) se utiliza como separador décimal para las tabulaciones decimales. Puede cambiar este parámetro utilizando el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes). 
+**Nota:** el separador del sistema (como devuelto por [GET SYSTEM FORMAT](../../commands/get-system-format)) se utiliza como separador décimal para las tabulaciones decimales. Puede cambiar este parámetro utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes). 
 
 ### Parámetros de paginación de documentos 
 
@@ -127,7 +127,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 
 **Notas de compatibilidad:** 
 
-* Los modos de visualización de imágenes se importan automáticamente a partir de 4D Write Pro v19 R2, utilizando [WP Import document](./commands/wp-import-document). Puede restaurar el comportamiento anterior (todas las imágenes se escalan para ajustarse) utilizando el atributo *importDisplayMode*.
+* Los modos de visualización de imágenes se importan automáticamente a partir de 4D Write Pro v19 R2, utilizando [WP Import document](../commands/wp-import-document). Puede restaurar el comportamiento anterior (todas las imágenes se escalan para ajustarse) utilizando el atributo *importDisplayMode*.
 * En Windows, las imágenes en formato PICT Mac OS son importadas pero no pueden ser renderizadas en 4D Write Pro. Si importa documentos que contengan imágenes de este tipo, es necesario convertirlas a otro formato. Tenga en cuenta que el formato PICT es obsoleto y no debe ser utilizado.
 
 | **Plug-in** **4D Write**                       | **4D Write Pro**                                            |
@@ -213,7 +213,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Expresión HTML           | No disponible\*\* |
 | Expresión RTF            | No disponible     |
 
-\* Utilice el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) con el atributo wk break paragraphs in formulas para transformar el CR devuelto por las fórmulas en saltos de párrafo en el documento importado (saltos de línea por defecto). (Ver *Gestión de fórmulas*) 
+\* Utilice el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) con el atributo wk break paragraphs in formulas para transformar el CR devuelto por las fórmulas en saltos de párrafo en el documento importado (saltos de línea por defecto). (Ver *Gestión de fórmulas*) 
 
 \*\*se puede importar como texto entre las etiquetas **##htmlBegin##** y **##htmlEnd##** si utiliza la constante wk import html expressions as text.
 

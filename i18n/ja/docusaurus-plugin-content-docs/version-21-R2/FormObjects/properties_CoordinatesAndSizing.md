@@ -48,7 +48,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[`LISTBOX Get property`](./commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](./commands/listbox-set-property)
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
 
 ---
 
@@ -96,7 +96,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[OBJECT GET COORDINATES](./commands/object-get-coordinates) - [OBJECT MOVE](./commands/object-move) - [OBJECT SET COORDINATES](./commands/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
 
 ---
 
@@ -144,7 +144,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[OBJECT GET COORDINATES](./commands/object-get-coordinates) - [OBJECT MOVE](./commands/object-move) - [OBJECT SET COORDINATES](./commands/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
 
 ---
 
@@ -192,7 +192,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[OBJECT GET COORDINATES](./commands/object-get-coordinates) - [OBJECT MOVE](./commands/object-move) - [OBJECT SET COORDINATES](./commands/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
 
 ---
 
@@ -240,7 +240,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[OBJECT GET COORDINATES](./commands/object-get-coordinates) - [OBJECT MOVE](./commands/object-move) - [OBJECT SET COORDINATES](./commands/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
 
 ---
 
@@ -272,7 +272,7 @@ title: 座標とサイズ
 
 :::
 
-このプロパティは、[OBJECT Get corner radius](./commands/object-get-corner-radius) および [OBJECT SET CORNER RADIUS](./commands/object-set-corner-radius) コマンドを使用することでも設定できます。
+このプロパティは、[OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) および [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md) コマンドを使用することでも設定できます。
 
 #### JSON 文法
 
@@ -286,7 +286,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[OBJECT GET CORNER RADIUS](./commands/object-get-corner-radius) - [OBJECT SET CORNER RADIUS](./commands/object-set-corner-radius)
+[OBJECT GET CORNER RADIUS](../commands-legacy/object-get-corner-radius.md) - [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md)
 
 ---
 
@@ -336,7 +336,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[OBJECT GET COORDINATES](./commands/object-get-coordinates) - [OBJECT MOVE](./commands/object-move) - [OBJECT SET COORDINATES](./commands/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
 
 ---
 
@@ -388,7 +388,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[OBJECT GET COORDINATES](./commands/object-get-coordinates) - [OBJECT MOVE](./commands/object-move) - [OBJECT SET COORDINATES](./commands/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
 
 ---
 
@@ -410,7 +410,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[LISTBOX Get column width](./commands/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](./commands/listbox-set-column-width)
+[LISTBOX Get column width](../commands-legacy/listbox-get-column-width.md) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width.md)
 
 ---
 
@@ -432,7 +432,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[LISTBOX Get column width](./commands/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](./commands/listbox-set-column-width)
+[LISTBOX Get column width](../commands-legacy/listbox-get-column-width.md) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width.md)
 
 ---
 
@@ -452,7 +452,7 @@ title: 座標とサイズ
 
 #### コマンド
 
-[LISTBOX Get row height](./commands/listbox-get-row-height) - [LISTBOX Get rows height](./commands/listbox-get-rows-height) - [LISTBOX SET ROW HEIGHT](./commands/listbox-set-row-height) - [LISTBOX SET ROWS HEIGHT](./commands/listbox-set-rows-height)
+[LISTBOX Get row height](../commands-legacy/listbox-get-row-height.md) - [LISTBOX Get rows height](../commands-legacy/listbox-get-rows-height.md) - [LISTBOX SET ROW HEIGHT](../commands-legacy/listbox-set-row-height.md) - [LISTBOX SET ROWS HEIGHT](../commands-legacy/listbox-set-rows-height.md)
 
 #### 参照
 
@@ -490,7 +490,7 @@ RowHeights{5}:=3
 
 #### コマンド
 
-[`LISTBOX Get array`](./commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](./commands/listbox-get-arrays)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md)
 
 #### 参照
 
@@ -516,7 +516,7 @@ RowHeights{5}:=3
 
 #### コマンド
 
-[`LISTBOX Get property`](./commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](./commands/listbox-set-property)
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
 
 #### 参照
 
@@ -540,9 +540,8 @@ RowHeights{5}:=3
 
 #### コマンド
 
-[`LISTBOX Get property`](./commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](./commands/listbox-set-property)
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
 
 #### 参照
 
 [横方向パディング](#横方向パディング)
-

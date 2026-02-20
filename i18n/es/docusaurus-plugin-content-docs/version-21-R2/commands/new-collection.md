@@ -79,7 +79,7 @@ Se crea una nueva colección y se añade un nuevo elemento:
 ## Ver también
 
 [New shared collection](new-shared-collection.md)\
-[Type](./commands/type)
+[Type](../commands-legacy/type.md)
 
 ## Propiedades
 
@@ -87,6 +87,5 @@ Se crea una nueva colección y se añade un nuevo elemento:
 | ----------------- | ---- |
 | Número de comando | 1472 |
 | Hilo seguro       | sí   |
-
 
 
