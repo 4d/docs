@@ -114,7 +114,7 @@ You can then add other messages by executing the **CALL FORM** command again:
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](../commands/dialog.md)  
+[DIALOG](./commands/dialog)  
 
 ## Properties
 
@@ -122,5 +122,6 @@ You can then add other messages by executing the **CALL FORM** command again:
 | --- | --- |
 | Command number | 1391 |
 | Thread safe | yes |
+
 
 

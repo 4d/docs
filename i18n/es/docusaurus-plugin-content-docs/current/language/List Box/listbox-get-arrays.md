@@ -63,7 +63,7 @@ Para un list box de tipo selección, colección o selección de entidades, *arrE
 ## Ver también 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](../commands/listbox-get-property.md)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
 ## Propiedades
@@ -72,5 +72,6 @@ Para un list box de tipo selección, colección o selección de entidades, *arrE
 | --- | --- |
 | Número de comando | 832 |
 | Hilo seguro | no |
+
 
 

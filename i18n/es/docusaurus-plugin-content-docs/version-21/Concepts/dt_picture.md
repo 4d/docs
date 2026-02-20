@@ -23,7 +23,7 @@ Los formatos de imágenes reconocidos por 4D son devueltos por el comando `PICTU
 
 La forma devuelta para cada formato dependerá de la forma en que se registre el códec a nivel del sistema operativo. Tenga en cuenta que la lista de códecs disponibles para lectura y escritura puede ser diferente, ya que los códecs de codificación pueden requerir licencias específicas.
 
-La mayoría de los comandos de gestión de imágenes [4D](../commands/theme/Pictures.md) pueden recibir un Codec ID como parámetro. Por lo tanto, es imperativo utilizar el ID del sistema devuelto por el comando `PICTURE CODEC LIST`.
+La mayoría de los comandos de gestión de imágenes [4D](./commands/theme/Pictures) pueden recibir un Codec ID como parámetro. Por lo tanto, es imperativo utilizar el ID del sistema devuelto por el comando `PICTURE CODEC LIST`.
 Los formatos de imágenes reconocidos por 4D son devueltos por el comando `PICTURE CODEC LIST`.
 
 ## Operadores de imágenes
@@ -130,3 +130,4 @@ circle*|0.25 //La altura del círculo pasa a ser un cuarto de lo que era
 ```
 
 ![](../assets/en/Concepts/vertscaling.en.png)![](../assets/en/Concepts/veticalscaling2.en.png)
+

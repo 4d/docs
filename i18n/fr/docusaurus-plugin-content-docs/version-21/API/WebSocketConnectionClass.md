@@ -84,7 +84,7 @@ Les contenus suivants sont envoyés en fonction du type de *message* :
 | ------ | ----------------------------------------------------------------------------------------------------------------------- |
 | Text   | Texte en UTF-8                                                                                                          |
 | Blob   | Données binaires                                                                                                        |
-| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](../commands-legacy/json-stringify.md)) |
+| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](./commands/json-stringify)) |
 
 <!-- END REF -->
 
@@ -138,4 +138,5 @@ La propriété `.wss` contient <!-- REF #WebSocketConnectionClass.wss.Summary --
 Cette propriété est en lecture seule.
 
 <!-- END REF -->
+
 

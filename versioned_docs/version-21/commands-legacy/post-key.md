@@ -64,7 +64,7 @@ If you specify the *process* parameter, the keystroke is sent to the process who
 
 ## Example 
 
-See example for the [Process number](../commands/process-number.md) command.
+See example for the [Process number](./commands/process-number) command.
 
 ## See also 
 
@@ -79,5 +79,6 @@ See example for the [Process number](../commands/process-number.md) command.
 | --- | --- |
 | Command number | 465 |
 | Thread safe | no |
+
 
 

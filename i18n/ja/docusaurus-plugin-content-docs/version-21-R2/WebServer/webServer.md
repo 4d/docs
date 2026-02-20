@@ -53,7 +53,7 @@ RESTリクエストの詳細については、[RESTサーバー](../REST/getting
 
 ## 拡張設定
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](./commands/web-set-option) command.
 
 ## テンプレートとURL
 
@@ -66,3 +66,4 @@ The 4D web server configuration is defined through a comprehensive set of applic
 ## 専用のデータベースメソッド
 
 `On Web Authentication`、`On Web Connection`、および `On REST Authentication` データベースメソッドは、Webサーバーにおいてリクエストのエントリーポイントであり、あらゆるタイプのリクエストを評価・ルーティングするのに使用できます。
+

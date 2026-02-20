@@ -5,7 +5,7 @@ displayed_sidebar: docs
 slug: /WritePro/exporting-to-html-and-mime-html-formats
 ---
 
-4D Write Pro ドキュメントは、[WP EXPORT DOCUMENT](../commands/wp-export-document) および [WP EXPORT VARIABLE](../commands/wp-export-variable) コマンドを使用することでHTML およびMIME HTML フォーマットで書き出すことができます。以下の一覧表は、どの4D Write Pro 属性や機能がHTML およびMIME HTML に書き出されるのかを表したものです。属性/機能はアルファベット順に並べられています。属性の詳細な一覧については、*4D Write Pro属性* を参照してください。
+4D Write Pro ドキュメントは、[WP EXPORT DOCUMENT](./commands/wp-export-document) および [WP EXPORT VARIABLE](./commands/wp-export-variable) コマンドを使用することでHTML およびMIME HTML フォーマットで書き出すことができます。以下の一覧表は、どの4D Write Pro 属性や機能がHTML およびMIME HTML に書き出されるのかを表したものです。属性/機能はアルファベット順に並べられています。属性の詳細な一覧については、*4D Write Pro属性* を参照してください。
 
 ### 共通の属性 
 

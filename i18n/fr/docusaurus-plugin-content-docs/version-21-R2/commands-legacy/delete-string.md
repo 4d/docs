@@ -42,9 +42,9 @@ L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats so
 
 ## Voir aussi 
 
-[Change string](../commands/change-string)  
-[Insert string](../commands/insert-string)  
-[Replace string](../commands/replace-string)  
+[Change string](./commands/change-string)  
+[Insert string](./commands/insert-string)  
+[Replace string](./commands/replace-string)  
 
 ## Propriétés
 
@@ -52,5 +52,6 @@ L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats so
 | --- | --- |
 | Numéro de commande | 232 |
 | Thread safe | yes |
+
 
 

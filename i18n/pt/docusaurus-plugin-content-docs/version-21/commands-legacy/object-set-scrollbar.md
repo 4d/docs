@@ -54,7 +54,7 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos indicando s
 
 ## Ver também 
 
-[LISTBOX Get property](../commands/listbox-get-property.md)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
@@ -65,5 +65,6 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos indicando s
 | --- | --- |
 | Número do comando | 843 |
 | Thread-seguro | no |
+
 
 

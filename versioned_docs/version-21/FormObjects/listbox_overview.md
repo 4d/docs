@@ -64,7 +64,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 
 You can completely configure a list box object through its properties, and you can also manage it dynamically through programming.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
+The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](./commands/edit-item), [`Displayed line number`](./commands/displayed-line-number) commands can also be used. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
 
 
 
@@ -152,7 +152,7 @@ For example, this method allows inverting the selection of the first row of the 
  End if
 ```
 
-> The [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command scrolls the list box rows so that the first selected row or a specified row is displayed.
+> The [`OBJECT SET SCROLL POSITION`](./commands/object-set-scroll-position) command scrolls the list box rows so that the first selected row or a specified row is displayed.
 
 
 ### Customizing appearance of selected rows
@@ -267,11 +267,11 @@ Standard sort support depends on the list box type:
 
 ### Custom sort
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](./commands/listbox-sort-columns) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
 Custom sorts allow you to:
 
-- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command,
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](./commands/listbox-sort-columns) command,
 - use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Example
@@ -313,7 +313,7 @@ The value of the [column header variable](properties_Object.md#variable-or-expre
 
 You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
 
-> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> The [`OBJECT SET FORMAT`](./commands/object-set-format) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
 ## Managing row colors, styles, and display
@@ -391,14 +391,14 @@ Printing a list box in preview mode consists of directly printing the list box a
 
 ### Advanced mode  
 
-In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command is used to control the printing of the object.
+In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) command is used to control the printing of the object.
 
 In this mode:
 
-- The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command.
+- The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) command.
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc.
-These parameters also include the first row to be printed: if you call the [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command before launching the printing, the first row printed in the list box will be the one designated by the command.
-- An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command can be used to check the status of the printing while it is underway.
+These parameters also include the first row to be printed: if you call the [`OBJECT SET SCROLL POSITION`](./commands/object-set-scroll-position) command before launching the printing, the first row printed in the list box will be the one designated by the command.
+- An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The [`LISTBOX GET PRINT INFORMATION`](./commands/listbox-get-print-information) command can be used to check the status of the printing while it is underway.
 
 
 
@@ -419,7 +419,7 @@ To specify a hierarchical list box, there are several possibilities:
 
 *	Manually configure hierarchical elements using the Property list of the form editor (or edit the JSON form).
 *	Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
-*	Use the [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) and [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) commands.
+*	Use the [`LISTBOX SET HIERARCHY`](./commands/listbox-set-hierarchy) and [`LISTBOX GET HIERARCHY`](./commands/listbox-get-hierarchy) commands.
 
 
 #### Hierarchical List Box property
@@ -544,7 +544,7 @@ For example, if you want to select the row containing Rennes, you must pass:
 
 > If one or more rows are hidden because their parents are collapsed, they are no longer selected. Only the rows that are visible (either directly or by scrolling) can be selected. In other words, rows cannot be both hidden and selected.
 
-As with selections, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) will return the same position: (3;2).
+As with selections, the [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) will return the same position: (3;2).
 
 *Non-hierarchical representation:*  
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -556,12 +556,12 @@ When all the rows of a sub-hierarchy are hidden, the break line is automatically
 
 #### Break rows  
 
-If the user selects a break row, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns the first occurrence of the row in the corresponding array. In the following case:
+If the user selects a break row, [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) returns the first occurrence of the row in the corresponding array. In the following case:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
 
-... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns (2;4). To select a break row by programming, you will need to use the [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) command.
+... [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) returns (2;4). To select a break row by programming, you will need to use the [`LISTBOX SELECT BREAK`](./commands/listbox-select-break) command.
 
 Break rows are not taken into account in the internal arrays used to manage the graphic appearance of list boxes (styles and colors). It is however possible to modify these characteristics for break rows via the graphic management commands for objects. You simply need to execute the appropriate commands on the arrays that constitute the hierarchy.
 
@@ -591,19 +591,21 @@ Result:
 
 You can optimize hierarchical list boxes display and management using the `On Expand` and `On Collapse` form events.
 
-A hierarchical list box is built from the contents of its arrays so it can only be displayed when all these arrays are loaded into memory. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the [`SELECTION TO ARRAY`](../commands/selection-to-array) command), not only because of the display speed but also the memory used.
+A hierarchical list box is built from the contents of its arrays so it can only be displayed when all these arrays are loaded into memory. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the [`SELECTION TO ARRAY`](./commands/selection-to-array) command), not only because of the display speed but also the memory used.
 
 
-Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell where the user clicked in order to expand or collapse a row.
+Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) command returns the cell where the user clicked in order to expand or collapse a row.
 
 In this case, you must fill and empty arrays through the code. The principles to be implemented are:
 - When the list box is displayed, only the first array must be filled. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:  
 ![](../assets/en/FormObjects/hierarch15.png)
 
-- When a user clicks on an expand button, you can process the `On Expand` event. The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the [`SELECTION TO ARRAY`](../commands/selection-to-array) command and you insert as many rows as needed in the list box using the [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) command.  
+- When a user clicks on an expand button, you can process the `On Expand` event. The [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the [`SELECTION TO ARRAY`](./commands/selection-to-array) command and you insert as many rows as needed in the list box using the [`LISTBOX INSERT ROWS`](./commands/listbox-insert-rows) command.  
 ![](../assets/en/FormObjects/hierarch16.png)
 
-- When a user clicks on a collapse button, you can process the `On Collapse` event. The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned: you remove as many rows as needed from the list box using the [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) command.
+- When a user clicks on a collapse button, you can process the `On Collapse` event. The [`LISTBOX GET CELL POSITION`](./commands/listbox-get-cell-position) command returns the cell concerned: you remove as many rows as needed from the list box using the [`LISTBOX DELETE ROWS`](./commands/listbox-delete-rows) command.
+
+
 
 
 

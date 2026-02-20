@@ -9,9 +9,9 @@ slug: /WritePro/pictures
 
 4D Write Pro ドキュメントへのピクチャーの追加は、必要に応じて複数の方法で行うことができます:
 
-* **背景画像**を追加するためには、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドとwk background image 属性あるいは wk background image url 属性を使用します。
-* **インライン画像**(文字のようにテキストフローに挿入された画像)を追加するためには、[WP INSERT PICTURE](../commands/wp-insert-picture) あるいは [ST INSERT EXPRESSION](../../commands/st-insert-expression) コマンドを使用します。
-* **アンカー画像**をページ内(テキストの後ろあるいは前面)に追加するためには、[WP Add picture](../commands/wp-add-picture) コマンドを使用します。
+* **背景画像**を追加するためには、[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドとwk background image 属性あるいは wk background image url 属性を使用します。
+* **インライン画像**(文字のようにテキストフローに挿入された画像)を追加するためには、[WP INSERT PICTURE](./commands/wp-insert-picture) あるいは [ST INSERT EXPRESSION](../../commands/st-insert-expression) コマンドを使用します。
+* **アンカー画像**をページ内(テキストの後ろあるいは前面)に追加するためには、[WP Add picture](./commands/wp-add-picture) コマンドを使用します。
 
 ピクチャーの追加方法によって画像が位置するレイヤーが決定されます。以下の図を参照してください:
 
@@ -41,7 +41,7 @@ slug: /WritePro/pictures
 
 ## アンカーされたピクチャーの位置と表示 
 
-アンカーされたピクチャーは絶対位置で、テキストの前あるいは後ろに追加されます。また、ページあるいはドキュメントの特定のパーツ(ヘッダー、フッター、セクションなど)にアンカーすることもできます。ピクチャーに絶対位置を設定するためには、[WP Add picture](../commands/wp-add-picture) and [WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドを使用します。
+アンカーされたピクチャーは絶対位置で、テキストの前あるいは後ろに追加されます。また、ページあるいはドキュメントの特定のパーツ(ヘッダー、フッター、セクションなど)にアンカーすることもできます。ピクチャーに絶対位置を設定するためには、[WP Add picture](./commands/wp-add-picture) and [WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドを使用します。
 
 アンカーされた画像の位置は以下の特定の属性あるいは標準アクションを使用することで変更可能です:
 
@@ -83,13 +83,13 @@ slug: /WritePro/pictures
 
 (\*)アンカーされたがずには割り当てられたテキストは何もないため、その式参照は表示されません。
 
-全ての画像属性はピクチャー式に適用することができます(wk imageおよび wk image url 属性は読出し専用です)。しかしながら、ピクチャーには特有の属性があるため、4D Write Pro はそその式の結果がピクチャーであると判定し、それをピクチャー式として扱うために、少なくとも一度は式を評価する必要がある点に注意してください。これはつまり[WP INSERT FORMULA](../commands/wp-insert-formula) を使用してピクチャー式を挿入した場合、どのピクチャー属性を設定するよりも前に[WP COMPUTE FORMULAS](../commands/wp-compute-formulas) を呼び出す必要があるということです。
+全ての画像属性はピクチャー式に適用することができます(wk imageおよび wk image url 属性は読出し専用です)。しかしながら、ピクチャーには特有の属性があるため、4D Write Pro はそその式の結果がピクチャーであると判定し、それをピクチャー式として扱うために、少なくとも一度は式を評価する必要がある点に注意してください。これはつまり[WP INSERT FORMULA](./commands/wp-insert-formula) を使用してピクチャー式を挿入した場合、どのピクチャー属性を設定するよりも前に[WP COMPUTE FORMULAS](./commands/wp-compute-formulas) を呼び出す必要があるということです。
 
-**注**: 他の式同様、ピクチャー式は[WP INSERT FORMULA](../commands/wp-insert-formula) および [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) コマンドの影響を受けます。
+**注**: 他の式同様、ピクチャー式は[WP INSERT FORMULA](./commands/wp-insert-formula) および [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) コマンドの影響を受けます。
 
 ### アンカーされた画像 
 
-アンカーされたピクチャー式は、[WP Add picture](../commands/wp-add-picture) コマンド(第2引数なし)によって追加され、その後に[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドをwk image formula セレクターつきで呼び出します。
+アンカーされたピクチャー式は、[WP Add picture](./commands/wp-add-picture) コマンド(第2引数なし)によって追加され、その後に[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドをwk image formula セレクターつきで呼び出します。
 
 例:
 
@@ -98,15 +98,15 @@ slug: /WritePro/pictures
  WP SET ATTRIBUTES(obImage;wk image formula;Formula(m_buildPict))
 ```
 
-また、既存のアンカーされたピクチャーに[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドとwk image formula を合わせて使用することでピクチャー式を挿入することもできます。
+また、既存のアンカーされたピクチャーに[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドとwk image formula を合わせて使用することでピクチャー式を挿入することもできます。
 
 **互換性に関する注意:** テキストを通してピクチャー式を定義するためには、wk image expression 定数は引き続き使用することができます。しかしながら、今後はwk image formula とオブジェクトを使用する方法が推奨されます。
 
-[WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドをwk image formula と呼び出すことは、式が画像属性から消去されるという点において、[WP FREEZE FORMULAS](../commands/wp-freeze-formulas) を(ドキュメント全体に)呼び出すことに似ています。しかしながら、[WP FREEZE FORMULAS](../commands/wp-freeze-formulas) コマンドは消去の前に式を計算するのに対し、[WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドは計算をしません。式が一度も計算されていない場合、デフォルトの黒いフレーム画像が表示されます。
+[WP RESET ATTRIBUTES](./commands/wp-reset-attributes) コマンドをwk image formula と呼び出すことは、式が画像属性から消去されるという点において、[WP FREEZE FORMULAS](./commands/wp-freeze-formulas) を(ドキュメント全体に)呼び出すことに似ています。しかしながら、[WP FREEZE FORMULAS](./commands/wp-freeze-formulas) コマンドは消去の前に式を計算するのに対し、[WP RESET ATTRIBUTES](./commands/wp-reset-attributes) コマンドは計算をしません。式が一度も計算されていない場合、デフォルトの黒いフレーム画像が表示されます。
 
 ### 画像式の挿入 
 
-[WP INSERT FORMULA](../commands/wp-insert-formula) コマンドを使用することでインラインピクチャー式を追加することができます。
+[WP INSERT FORMULA](./commands/wp-insert-formula) コマンドを使用することでインラインピクチャー式を追加することができます。
 
 例:
 
@@ -130,16 +130,16 @@ slug: /WritePro/pictures
 以下の方法を使用してこれらの黒い四角形をカレントのビューから消去することができます:
 
 * プロパティリストの"空またはサポートされていない画像を表示"オプション(*ビュープロパティの設定* 参照)を使用する
-* [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) コマンドとwk visible empty images セレクターを組み合わせて使用する
+* [WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) コマンドとwk visible empty images セレクターを組み合わせて使用する
 * *visibleEmptyImage* 標準アクションを使用する(*4D Write Pro標準アクションの使用* 参照)
 
-またwk visible empty images セレクターを[WP EXPORT DOCUMENT](../commands/wp-export-document) および [WP EXPORT VARIABLE](../commands/wp-export-variable) コマンドに対して使用することで、書き出されたコンテンツから黒い四角形を消去することもできます。
+またwk visible empty images セレクターを[WP EXPORT DOCUMENT](./commands/wp-export-document) および [WP EXPORT VARIABLE](./commands/wp-export-variable) コマンドに対して使用することで、書き出されたコンテンツから黒い四角形を消去することもできます。
 
 このオプションが設定されている場合、たとえ画像に境界線、幅、高さ、背景などが設定されてあっても空の画像要素は全く表示されないという点に注意して下さい。これはインライン画像のページレイアウトに影響する可能性があります。
 
 ## ピクチャープロパティ 
 
-全てのピクチャーには高さ、幅、境界線、表示モードなどといったプロパティ(属性)があります。これら4D Write Pro ランゲージ([WP GET ATTRIBUTES](../commands/wp-get-attributes) あるいは [WP SET ATTRIBUTES](../commands/wp-set-attributes))あるいは標準アクションを用いて取得あるいは設定することが可能です。
+全てのピクチャーには高さ、幅、境界線、表示モードなどといったプロパティ(属性)があります。これら4D Write Pro ランゲージ([WP GET ATTRIBUTES](./commands/wp-get-attributes) あるいは [WP SET ATTRIBUTES](./commands/wp-set-attributes))あるいは標準アクションを用いて取得あるいは設定することが可能です。
 
 * ピクチャーに対して使用可能なプロパティの完全な一覧は、*4D Write Pro属性* のページに記載されています。
 * *画像* の章にはピクチャー専用の属性が含まれています。
@@ -176,15 +176,15 @@ slug: /WritePro/pictures
 
 以下のコマンドを使用するとピクチャーが返されます:
 
-* [WP Picture range](../commands/wp-picture-range) \- インライン画像に対してのみ適用可能
-* [WP Selection range](../commands/wp-selection-range) \- ユーザーが選択した画像に対してのみ適用可能
+* [WP Picture range](./commands/wp-picture-range) \- インライン画像に対してのみ適用可能
+* [WP Selection range](./commands/wp-selection-range) \- ユーザーが選択した画像に対してのみ適用可能
 
 ## ピクチャーの削除 
 
 インライン画像とアンカー画像は、以下の方法で削除することができます:
 
 * *マウス/キーボードアクション* を使用する
-* [WP DELETE PICTURE](../commands/wp-delete-picture) コマンドを使用する
+* [WP DELETE PICTURE](./commands/wp-delete-picture) コマンドを使用する
 
 ## マウス/キーボードアクション 
 

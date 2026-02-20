@@ -29,7 +29,7 @@ No parâmetro *form*, você pode passar:
 - o caminho (na sintaxe POSIX) para um arquivo .json válido que contém uma descrição do formulário a ser usado (consulte *Caminho do arquivo de formulário*), ou
 - um objeto contendo uma descrição do formulário.
 
-Como **Imprimir formulário** não emite uma quebra de página após a impressão do formulário, é fácil combinar diferentes formulários na mesma página. Portanto, o **Print form** é perfeito para tarefas de impressão complexas que envolvam diferentes tabelas e diferentes formulários. Para forçar uma quebra de página entre os formulários, use o comando [PAGE BREAK](../commands-legacy/page-break.md). Para transferir a impressão para a próxima página em um formulário cuja altura seja maior que o espaço disponível, chame o comando [CANCEL](../commands-legacy/cancel.md) antes do comando [PAGE BREAK](../commands-legacy/page-break.md).
+Como **Imprimir formulário** não emite uma quebra de página após a impressão do formulário, é fácil combinar diferentes formulários na mesma página. Portanto, o **Print form** é perfeito para tarefas de impressão complexas que envolvam diferentes tabelas e diferentes formulários. Para forçar uma quebra de página entre os formulários, use o comando [PAGE BREAK](./commands/page-break). Para transferir a impressão para a próxima página em um formulário cuja altura seja maior que o espaço disponível, chame o comando [CANCEL](./commands/cancel) antes do comando [PAGE BREAK](./commands/page-break).
 
 Três sintaxes diferentes podem ser usadas:
 
@@ -97,20 +97,20 @@ Para obter informações detalhadas sobre o objeto de dados do formulário, cons
 
 **Valor retornado**
 
-O valor retornado por **Print form** indica a altura da área impressa. Esse valor será automaticamente levado em conta pelo comando [Get printed height](../commands-legacy/get-printed-height.md).
+O valor retornado por **Print form** indica a altura da área impressa. Esse valor será automaticamente levado em conta pelo comando [Get printed height](./commands/get-printed-height).
 
 As caixas de diálogo da impressora não são exibidas quando você usa **Print form**. O relatório não usa as configurações de impressão que foram atribuídas ao formulário no ambiente Design. Há duas maneiras de especificar as configurações de impressão antes de emitir uma série de chamadas para **Print form**:
 
-- Chame [PRINT SETTINGS](../commands-legacy/print-settings.md). Nesse caso, você permite que o usuário escolha as configurações.
-- Chame [SET PRINT OPTION](../commands-legacy/set-print-option.md) e [GET PRINT OPTION](../commands-legacy/get-print-option.md). Nesse caso, as configurações de impressão são especificadas de forma programática.
+- Chame [PRINT SETTINGS](./commands/print-settings). Nesse caso, você permite que o usuário escolha as configurações.
+- Chame [SET PRINT OPTION](./commands/set-print-option) e [GET PRINT OPTION](./commands/get-print-option). Nesse caso, as configurações de impressão são especificadas de forma programática.
 
-**Print form**\* cria cada página impressa na memória. Cada página é impressa quando a página na memória está cheia ou quando você chama [PAGE BREAK] (../commands-legacy/page-break.md). Para garantir a impressão da última página após qualquer uso de **formulário de impressão**, você deve concluir com o comando [PAGE BREAK](../commands-legacy/page-break.md) (exceto no contexto de um [ABERTO PRINTING JOB](../commands-legacy/open-printing-job.md), ver nota). Caso contrário, se a última página não estiver cheia, ela permanecerá na memória e não será impressa.
+**Print form**\* cria cada página impressa na memória. Cada página é impressa quando a página na memória está cheia ou quando você chama [PAGE BREAK] (./commands/page-break). Para garantir a impressão da última página após qualquer uso de **formulário de impressão**, você deve concluir com o comando [PAGE BREAK](./commands/page-break) (exceto no contexto de um [ABERTO PRINTING JOB](./commands/open-printing-job), ver nota). Caso contrário, se a última página não estiver cheia, ela permanecerá na memória e não será impressa.
 
-**Aviso:** Se o comando for chamado no contexto de um trabalho de impressão aberto com [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), você NÃO deve chamar [PAGE BREAK](../commands-legacy/page-break.md) para a última página porque ela é impressa automaticamente pelo comando [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md). Se você chamar [PAGE BREAK](../commands-legacy/page-break.md) nesse caso, uma página em branco será impressa.
+**Aviso:** Se o comando for chamado no contexto de um trabalho de impressão aberto com [OPEN PRINTING JOB](./commands/open-printing-job), você NÃO deve chamar [PAGE BREAK](./commands/page-break) para a última página porque ela é impressa automaticamente pelo comando [CLOSE PRINTING JOB](./commands/close-printing-job). Se você chamar [PAGE BREAK](./commands/page-break) nesse caso, uma página em branco será impressa.
 
 Esse comando imprime áreas e objetos externos (por exemplo, áreas 4D Write ou 4D View). A área é redefinida para cada execução do comando.
 
-**Aviso:** Os subformulários não são impressos com **Imprimir formulário**. Para imprimir apenas um formulário com esses objetos, use [PRINT RECORD](../commands-legacy/print-record.md) em vez disso.
+**Aviso:** Os subformulários não são impressos com **Imprimir formulário**. Para imprimir apenas um formulário com esses objetos, use [PRINT RECORD](./commands/print-record) em vez disso.
 
 **Print form** gera apenas um evento [`On Printing Detail`](../Events/onPrintingDetail.md) para o método formulário.
 
@@ -121,7 +121,7 @@ Esse comando imprime áreas e objetos externos (por exemplo, áreas 4D Write ou 
 
 ## Exemplo 1
 
-O exemplo a seguir funciona como um comando [PRINT SELECTION](../commands-legacy/print-selection.md). No entanto, o relatório usa um de dois formulários diferentes, dependendo se o registro é de um cheque ou de um depósito:
+O exemplo a seguir funciona como um comando [PRINT SELECTION](./commands/print-selection). No entanto, o relatório usa um de dois formulários diferentes, dependendo se o registro é de um cheque ou de um depósito:
 
 ```4d
  QUERY([Register]) // Selecionar os registros
@@ -146,7 +146,7 @@ O exemplo a seguir funciona como um comando [PRINT SELECTION](../commands-legacy
 
 ## Exemplo 2
 
-Consulte o exemplo do comando [SET PRINT MARKER](../commands-legacy/set-print-marker.md).
+Consulte o exemplo do comando [SET PRINT MARKER](./commands/set-print-marker).
 
 ## Exemplo 3
 
@@ -178,10 +178,10 @@ O código que chama a caixa de diálogo imprime seu corpo:
 
 ## Veja também
 
-[CANCEL](../commands-legacy/cancel.md)\
-[PAGE BREAK](../commands-legacy/page-break.md)\
-[PRINT SETTINGS](../commands-legacy/print-settings.md)\
-[SET PRINT OPTION](../commands-legacy/set-print-option.md)
+[CANCEL](./commands/cancel)\
+[PAGE BREAK](./commands/page-break)\
+[PRINT SETTINGS](./commands/print-settings)\
+[SET PRINT OPTION](./commands/set-print-option)
 
 ## Propriedades
 
@@ -189,5 +189,6 @@ O código que chama a caixa de diálogo imprime seu corpo:
 | ----------------- | --- |
 | Número de comando | 5   |
 | Thread safe       | não |
+
 
 

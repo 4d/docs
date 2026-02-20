@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 Para que el ciclo de ejecución **Before** se genere, asegúrese de que la propiedad de evento On Load para el formulario y/o los objetos se haya seleccionado en el entorno Diseño.
 
-**Nota:** este comando es equivalente a usar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Load.
+**Nota:** este comando es equivalente a usar [Form event code](./commands/form-event-code) y probar si devuelve el evento On Load.
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Propiedades
 
@@ -33,5 +33,6 @@ Para que el ciclo de ejecución **Before** se genere, asegúrese de que la propi
 | --- | --- |
 | Número de comando | 29 |
 | Hilo seguro | no |
+
 
 

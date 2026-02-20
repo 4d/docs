@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Last errors](../commands/last-errors.md)   
+[Last errors](./commands/last-errors)   
 [ON ERR CALL](on-err-call.md)  
 
 ## プロパティ
@@ -53,5 +53,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 825 |
 | スレッドセーフである | no |
+
 
 

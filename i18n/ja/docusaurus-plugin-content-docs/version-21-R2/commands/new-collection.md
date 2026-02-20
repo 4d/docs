@@ -79,7 +79,7 @@ displayed_sidebar: docs
 ## 参照
 
 [New shared collection](new-shared-collection.md)\
-[Type](../commands-legacy/type.md)
+[Type](./commands/type)
 
 ## プロパティ
 
@@ -87,5 +87,6 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1472 |
 | スレッドセーフ | ◯    |
+
 
 

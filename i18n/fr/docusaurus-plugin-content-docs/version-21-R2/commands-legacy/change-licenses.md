@@ -50,7 +50,7 @@ Vous permettrez ainsi à un utilisateur d‘activer des licences sans avoir à m
 
 ## Voir aussi 
 
-[License info](../commands/license-info.md)  
+[License info](./commands/license-info)  
 [Is license available](is-license-available.md)  
 
 ## Propriétés
@@ -60,5 +60,6 @@ Vous permettrez ainsi à un utilisateur d‘activer des licences sans avoir à m
 | Numéro de commande | 637 |
 | Thread safe | no |
 | Interdite sur le serveur ||
+
 
 

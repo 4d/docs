@@ -62,7 +62,7 @@ If the command fails, an error is generated that you can intercept using the [ON
 
 ## See also 
 
-[Compile project](../commands/compile-project.md)  
+[Compile project](./commands/compile-project)  
 
 ## Properties
 
@@ -72,5 +72,6 @@ If the command fails, an error is generated that you can intercept using the [ON
 | Thread safe | no |
 | Modifies variables | OK, Document, error |
 | Forbidden on the server ||
+
 
 

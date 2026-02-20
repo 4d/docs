@@ -62,7 +62,7 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
 
 ## Veja também
 
-[Comandos Acesso objetos Design](../commands/theme/Design_Object_Access.md)
+[Comandos Acesso objetos Design](./commands/theme/Design_Object_Access)
 
 ## Propriedades
 
@@ -70,5 +70,6 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
 | ----------------- | ---- |
 | Número de comando | 1749 |
 | Thread safe       | não  |
+
 
 

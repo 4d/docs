@@ -64,7 +64,7 @@ Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la
 
 ### Nom du process 
 
-Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [Process info](../commands/process-info.md). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. 
+Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [Process info](./commands/process-info). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. 
 
 ### Paramètres de la méthode process 
 
@@ -134,5 +134,6 @@ Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode
 | --- | --- |
 | Numéro de commande | 317 |
 | Thread safe | yes |
+
 
 

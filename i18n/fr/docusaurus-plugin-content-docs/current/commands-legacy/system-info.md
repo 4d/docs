@@ -145,7 +145,7 @@ retourne un objet contenant les informations suivantes :
 
 ## Voir aussi 
 
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
@@ -155,5 +155,6 @@ retourne un objet contenant les informations suivantes :
 | --- | --- |
 | Numéro de commande | 1571 |
 | Thread safe | yes |
+
 
 

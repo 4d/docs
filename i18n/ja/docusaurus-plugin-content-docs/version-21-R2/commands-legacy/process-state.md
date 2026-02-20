@@ -59,7 +59,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Count tasks](count-tasks.md)  
-[Process info](../commands/process-info.md)  
+[Process info](./commands/process-info)  
 
 ## プロパティ
 
@@ -67,5 +67,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 330 |
 | スレッドセーフである | no |
+
 
 

@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 Este comando no tendrá efecto si el comando [DEFAULT TABLE](default-table.md "DEFAULT TABLE") no ha sido llamado de antemano.
 
-Este comando está relacionado con el uso de formularios de proyecto (formularios no asociados a tablas): la mayoría de los comandos relacionados a los formularios (aparte de los formularios de usuario) aceptan un parámetro opcional de tipo tabla como primer parámetro. Por ejemplo, este es el caso de los comandos *FORM GET PARAMETER*, [Open form window](../commands/open-form-window.md "Open form window") o [DIALOG](../commands/dialog.md "DIALOG"). Como un formulario de proyecto y un formulario de tabla pueden tener el mismo nombre, este parámetro puede utilizarse para determinar el formulario a utilizar: pase el parámetro cuando quiera apuntar a un formulario tabla y omítalo en el caso de un formulario de proyecto.
+Este comando está relacionado con el uso de formularios de proyecto (formularios no asociados a tablas): la mayoría de los comandos relacionados a los formularios (aparte de los formularios de usuario) aceptan un parámetro opcional de tipo tabla como primer parámetro. Por ejemplo, este es el caso de los comandos *FORM GET PARAMETER*, [Open form window](./commands/open-form-window.md "Open form window") o [DIALOG](./commands/dialog.md "DIALOG"). Como un formulario de proyecto y un formulario de tabla pueden tener el mismo nombre, este parámetro puede utilizarse para determinar el formulario a utilizar: pase el parámetro cuando quiera apuntar a un formulario tabla y omítalo en el caso de un formulario de proyecto.
 
 En una base que contiene un formulario de proyecto llamado “ElFormulario” y un formulario de tabla con el mismo nombre para la tabla \[Tabla1\]:
 
@@ -62,5 +62,6 @@ En una base que contiene un formulario de proyecto llamado “ElFormulario” y 
 | --- | --- |
 | Número de comando | 993 |
 | Hilo seguro | yes |
+
 
 

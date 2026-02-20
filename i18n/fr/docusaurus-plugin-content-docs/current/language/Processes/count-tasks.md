@@ -29,7 +29,7 @@ See the example for [Process state](process-state.md) and for the [Semaphore](se
 
 [Count user processes](count-user-processes.md)  
 [Count users](count-users.md)  
-[Process info](../commands/process-info.md)  
+[Process info](./commands/process-info)  
 [Process state](process-state.md)  
 
 ## Properties
@@ -38,5 +38,6 @@ See the example for [Process state](process-state.md) and for the [Semaphore](se
 | --- | --- |
 | Command number | 335 |
 | Thread safe | yes |
+
 
 

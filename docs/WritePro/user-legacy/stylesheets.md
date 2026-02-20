@@ -11,9 +11,9 @@ A style sheet is an object of defined set of attribute settings used to control 
 
 ## Default style
 
-All 4D Write Pro documents have a default paragraph style sheet, "Normal". New style sheets (created with the [WP New style sheet](../commands-legacy/wp-new-style-sheet) command) automatically inherit from the Normal style. Attributes modified by a style sheet effect only the paragraphs they are applied to, the rest of the document retains the default Normal settings. If a style sheet is removed, the modified attributes will revert to the Normal style.
+All 4D Write Pro documents have a default paragraph style sheet, "Normal". New style sheets (created with the [WP New style sheet](./commands/wp-new-style-sheet) command) automatically inherit from the Normal style. Attributes modified by a style sheet effect only the paragraphs they are applied to, the rest of the document retains the default Normal settings. If a style sheet is removed, the modified attributes will revert to the Normal style.
 
-The Normal style defines a default value for every style sheet attribute in a 4D Write Pro document and can be retrieved with the [WP Get style sheet](../commands-legacy/wp-get-style-sheet) command. The Normal style sheet can be modified (but not renamed) with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. While style sheets created with the [WP New style sheet](../commands-legacy/wp-new-style-sheet) command can be deleted with the [WP DELETE STYLE SHEET](../commands-legacy/wp-delete-style-sheet) command, the Normal style sheet can not be deleted.
+The Normal style defines a default value for every style sheet attribute in a 4D Write Pro document and can be retrieved with the [WP Get style sheet](./commands/wp-get-style-sheet) command. The Normal style sheet can be modified (but not renamed) with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. While style sheets created with the [WP New style sheet](./commands/wp-new-style-sheet) command can be deleted with the [WP DELETE STYLE SHEET](./commands/wp-delete-style-sheet) command, the Normal style sheet can not be deleted.
 
 ## Paragraph and character style sheet attributes
 
@@ -38,13 +38,13 @@ Style sheets are applied with the [WP SET ATTRIBUTES](./commands/wp-set-attribut
 
 ## Retrieving style sheets
 
-The [WP Get style sheets](../commands-legacy/wp-get-style-sheets) command lets you retrieve all style sheets in a document according to their specific type. The [WP Get style sheet](../commands-legacy/wp-get-style-sheet) command lets you retrieve a single style sheet by its name.
+The [WP Get style sheets](./commands/wp-get-style-sheets) command lets you retrieve all style sheets in a document according to their specific type. The [WP Get style sheet](./commands/wp-get-style-sheet) command lets you retrieve a single style sheet by its name.
 
 ## Importing and exporting style sheets
 
 Because style sheets are stored as objects, they can easily be imported into other 4D Write Pro documents or maintained when exported in multiple formats. 
 
-- **Import** - You can get all of the style sheet objects from a designated 4D Write Pro document and use them in a new document with the [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets) command. 
+- **Import** - You can get all of the style sheet objects from a designated 4D Write Pro document and use them in a new document with the [WP IMPORT STYLE SHEETS](./commands/wp-import-style-sheets) command. 
 - **Export** - The [WP EXPORT DOCUMENT](./commands/wp-export-document) or [WP EXPORT VARIABLE](./commands/wp-export-variable) commands export your documents with their style sheets. 
 
 
@@ -137,5 +137,6 @@ Some attributes are linked together. Therefore when adding only one of these att
 | `wk type`                        | X (read only) | X (read only) |             |
 | `wk vertical align`              | X         | X         |             |
 | `wk width`                       | X         |           |             |
+
 
 

@@ -76,7 +76,7 @@ DISPLAY SELECTION の実行中と後、ユーザが選択したレコードは U
 
 ## 例題 2 
 
-[Form event](../commands/form-event.md "Form event")の6番目の例題を参照してください。この例題ではDISPLAY SELECTIONコマンドの実行中に発生するイベントをすべて監視するためのあらゆるチェックが示されています。
+[Form event](./commands/form-event.md "Form event")の6番目の例題を参照してください。この例題ではDISPLAY SELECTIONコマンドの実行中に発生するイベントをすべて監視するためのあらゆるチェックが示されています。
 
 ## 例題 3 
 
@@ -104,7 +104,7 @@ c. 以下のプロジェクトメソッドをメニューに関連付けます:
 
 ## 参照 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [MODIFY SELECTION](modify-selection.md)  
 *セット*  
 
@@ -115,5 +115,7 @@ c. 以下のプロジェクトメソッドをメニューに関連付けます:
 | コマンド番号 | 59 |
 | スレッドセーフである | no |
 | サーバー上での使用は不可 ||
+
+
 
 

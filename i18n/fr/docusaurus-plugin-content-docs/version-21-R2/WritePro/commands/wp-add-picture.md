@@ -46,7 +46,7 @@ Par défaut, l'image ajoutée est :
 
 L'emplacement, la couche (en ligne, devant/derrière le texte), la visibilité et toutes les propriétés de l'image peuvent être modifiées en utilisant la commande [WP SET ATTRIBUTES](wp-set-attributes.md), ou via des actions standards (voir *Utiliser des actions standard 4D Write Pro*).
 
-**Note :** La commande [WP Selection range](../commands-legacy/wp-selection-range.md) retourne un objet *picture reference* si une image ancrée est sélectionnée et un *range object* si une image en ligne est sélectionnée. Vous pouvez déterminer si un objet sélectionné est un objet image en vérifiant l'attribut `wk type` :
+**Note :** La commande [WP Selection range](./commands/wp-selection-range) retourne un objet *picture reference* si une image ancrée est sélectionnée et un *range object* si une image en ligne est sélectionnée. Vous pouvez déterminer si un objet sélectionné est un objet image en vérifiant l'attribut `wk type` :
 
 - **Value = 2** : l'objet sélectionné est un objet image.
 - **Value = 0** : l'objet sélectionné est un objet plage.
@@ -100,5 +100,5 @@ Vous voulez utiliser une expression de champ pour ajouter une image ancrée à u
 
 ## Voir également
 
-[WP DELETE PICTURE](../commands-legacy/wp-delete-picture.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range.md)
+[WP DELETE PICTURE](./commands/wp-delete-picture)</br>
+[WP Picture range](./commands/wp-picture-range)

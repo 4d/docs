@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-**Preliminary note:** This command only works with 4D Server. It can only be executed via the [Execute on server](../commands-legacy/execute-on-server.md) command or in a stored procedure. 
+**Preliminary note:** This command only works with 4D Server. It can only be executed via the [Execute on server](./commands/execute-on-server) command or in a stored procedure. 
 
 <!--REF #_command_.New log file.Summary-->The **New log file** command closes the current log file, renames it and creates a new one with the same name in the same location as the previous one<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
 
@@ -36,7 +36,7 @@ A log file must always be related to a data file. If you call this command just 
 
 ## Error management 
 
-In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](../commands-legacy/on-err-call.md) command.
+In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](./commands/on-err-call) command.
 
 ## See also 
 

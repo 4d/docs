@@ -176,7 +176,7 @@ $val:=$o.f() //8
 
 ## 参照
 
-[Self](../commands-legacy/self.md)\
+[Self](./commands/self)\
 [Super](super.md)
 
 ## プロパティ
@@ -185,5 +185,6 @@ $val:=$o.f() //8
 | ------- | ---- |
 | コマンド番号  | 1470 |
 | スレッドセーフ | ◯    |
+
 
 

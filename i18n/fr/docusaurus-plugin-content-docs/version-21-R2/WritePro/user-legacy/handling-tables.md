@@ -13,14 +13,14 @@ Les documents 4D Write Pro peuvent contenir des tableaux. Les tableaux 4D Write 
 
 ## Créer un tableau 
 
-Pour créer un tableau 4D Write Pro, vous devez appeler la commande [WP Inserer tableau](../commands/wp-inserer-tableau). Vous pouvez ensuite ajouter des lignes à l'aide de la commande [WP Tableau ajouter ligne](../commands/wp-tableau-ajouter-ligne).
+Pour créer un tableau 4D Write Pro, vous devez appeler la commande [WP Inserer tableau](./commands/wp-inserer-tableau). Vous pouvez ensuite ajouter des lignes à l'aide de la commande [WP Tableau ajouter ligne](./commands/wp-tableau-ajouter-ligne).
 
 **Note :** L'utilisateur peut créer un tableau par copier-coller d'une plage de cellules :   
 ![](../../assets/en/WritePro/pict3307941.en.png)
 
 ## Modifier les tableaux 
 
-Le contenu des cellules peut être ajouté par programmation à l'aide de la commande [WP Tableau ajouter ligne](../commands/wp-tableau-ajouter-ligne).
+Le contenu des cellules peut être ajouté par programmation à l'aide de la commande [WP Tableau ajouter ligne](./commands/wp-tableau-ajouter-ligne).
 
 Une fois qu'un tableau est créé, le contenu des cellulles peut également être modifié à l'exécution par l'utilisateur. Il peut cliquer dans les cellules, puis sélectionner, modifier, copier/coller ou supprimer le texte et les images comme dans tout paragraphe. Il peut naviguer parmi les cellules en appuyant sur la touche **Tabulation** (**Maj+Tabulation** pour se déplacer dans la direction inverse).
 
@@ -32,13 +32,13 @@ Notez que la largeur des cellules est fixe : lorsque l'utilisateur saisit du tex
 
 Les utilisateurs peuvent également sélectionner des colonnes, des lignes ou des cellules et appliquer divers attributs relatifs au style de texte, aux couleurs, alignements etc., via le pop up menu intégré ou une interface personnalisée. 4D Write Pro fournit plusieurs commandes permettant de sélectionner toutes les parties d'un tableau :
 
-* [WP Tableau lire lignes](../commands/wp-tableau-lire-lignes) pour obtenir une plage de lignes
-* [WP Tableau lire colonnes](../commands/wp-tableau-lire-colonnes) pour obtenir une plage de colonnes(\*)
-* [WP Tableau lire cellules](../commands/wp-tableau-lire-cellules) pour obtenir une plage de cellules
+* [WP Tableau lire lignes](./commands/wp-tableau-lire-lignes) pour obtenir une plage de lignes
+* [WP Tableau lire colonnes](./commands/wp-tableau-lire-colonnes) pour obtenir une plage de colonnes(\*)
+* [WP Tableau lire cellules](./commands/wp-tableau-lire-cellules) pour obtenir une plage de cellules
 
 (\*) Les colonnes n'ont pas d'équivalent en html. Dans 4D Write Pro, une plage de colonne est en réalité une plage de cellules, ce qui signifie que les colonnes ont la même priorité que les cellules (cf. ci-dessous).
 
-Une fois que vous avez sélectionné une plage, vous pouvez lui appliquer un attribut à l'aide de la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs). A l'intérieur des cellules, les attributs sont appliqués aux paragraphes, caractères ou images, suivant leur contenu. Par exemple, vous pouvez définir la hauteur, la taille de police, la bordure, la marge intérieure etc. d'un tableau ou des cellules d'un tableau (pour plus d'informations, veuillez vous référer à la section *Attributs 4D Write Pro*).
+Une fois que vous avez sélectionné une plage, vous pouvez lui appliquer un attribut à l'aide de la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs). A l'intérieur des cellules, les attributs sont appliqués aux paragraphes, caractères ou images, suivant leur contenu. Par exemple, vous pouvez définir la hauteur, la taille de police, la bordure, la marge intérieure etc. d'un tableau ou des cellules d'un tableau (pour plus d'informations, veuillez vous référer à la section *Attributs 4D Write Pro*).
 
 Lorsque des attributs différents sont appliqués à des éléments concurrents d'un tableau, l'ordre de priorité suivant est utilisé pour le rendu :
 
@@ -68,7 +68,7 @@ Si vous appuyez sur la touche **Shift** tout en redimensionnant une colonne, la 
 
 ### Fusionner et fractionner des cellules 
 
-Avec 4D Write Pro, vous pouvez fusionner et fractionner des cellules dans un tableau. La fusion de cellules consiste à combiner deux ou plusieurs cellules de tableau adjacentes situées sur la même ligne ou colonne en une seule cellule. La division de cellules consiste à prendre des cellules déjà fusionnées et à les fusionner en plusieurs cellules adjacentes sur la même ligne ou colonne. Les cellules peuvent être fusionnées à l'aide de la commande [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) ou de l'action standard **cell/merge**, et fractionnées à l'aide de la commande [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) ou de l'action standard **cell/split**.
+Avec 4D Write Pro, vous pouvez fusionner et fractionner des cellules dans un tableau. La fusion de cellules consiste à combiner deux ou plusieurs cellules de tableau adjacentes situées sur la même ligne ou colonne en une seule cellule. La division de cellules consiste à prendre des cellules déjà fusionnées et à les fusionner en plusieurs cellules adjacentes sur la même ligne ou colonne. Les cellules peuvent être fusionnées à l'aide de la commande [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) ou de l'action standard **cell/merge**, et fractionnées à l'aide de la commande [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) ou de l'action standard **cell/split**.
 
 ![](../../assets/en/WritePro/pict6421031.en.png)
 
@@ -79,7 +79,7 @@ Les cellules du tableau peuvent être fusionnées :
 **Exemple de fusion de cellules à l'aide du langage :**
 
 1. Désignez une plage de cellules à fusionner dans votre tableau. Les cellules doivent être adjacentes horizontalement, verticalement, ou les deux.
-2. Appelez la commande [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) sur la plage sélectionnée.
+2. Appelez la commande [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) sur la plage sélectionnée.
 
 ```4d
  $cells:=WP Table get cells($table;1;1;3;1)
@@ -100,7 +100,7 @@ Après
 **Exemple de fractionnement de cellules à l'aide du langage :**
 
 1. Désignez une plage de cellules à fractionner dans votre tableau. La plage sélectionnée doit contenir des cellules déjà fusionnées.
-2. Appeler la commande [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) sur la plage sélectionnée.
+2. Appeler la commande [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) sur la plage sélectionnée.
 
 ```4d
  $cells:=WP Table get cells($table;1;1;1;1)
@@ -125,7 +125,7 @@ Après
 
 **Désignation des cellules fusionnées :**
 
-Une cellule fusionnée peut être manipulée de la même manière qu'une cellule individuelle (couleur de fond, style de bordure, styles de paragraphe...) en utilisant l'interface de 4D Write Pro, les actions standard ou la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) .
+Une cellule fusionnée peut être manipulée de la même manière qu'une cellule individuelle (couleur de fond, style de bordure, styles de paragraphe...) en utilisant l'interface de 4D Write Pro, les actions standard ou la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) .
 
 Toutes les commandes de tableau existantes s'appliquent aux plages ou aux éléments contenant des cellules fusionnées. Dans un tableau qui contient des cellules fusionnées, les index des cellules restent les mêmes que si aucune cellule n'avait été fusionnée.
 
@@ -177,11 +177,11 @@ Les coupures de tableaux peuvent s'effectuer entre les lignes et les coupures de
 La pagination des tableaux peut également être contrôlée par programmation ou par l'utilisateur. Les actions disponibles incluent :
 
 * l'insertion d'un saut de page dans un tableau :  
-   * commande [WP INSERER RUPTURE](../commands/wp-inserer-rupture)  
+   * commande [WP INSERER RUPTURE](./commands/wp-inserer-rupture)  
    * action standard *insertPageBreak*  
    * option **Insérer saut de page** du menu contextuel par défaut
 * l'insertion d'un saut de colonne dans un tableau :  
-   * commande [WP INSERER RUPTURE](../commands/wp-inserer-rupture)  
+   * commande [WP INSERER RUPTURE](./commands/wp-inserer-rupture)  
    * action standard *insertColumnBreak*  
    * option **Insérer saut de colonne** du menu contextuel par défaut
 
@@ -204,15 +204,15 @@ Lorsqu'un saut de page ou de colonne est inséré via une action standard ou le 
 Les en-têtes de tableau sont la ou les premières lignes du tableau. Pour définir les lignes d'en-tête, vous pouvez :
 
 * utiliser l'action standard *headerRowCount* (voir *Utiliser les actions standard 4D Write Pro*), ou
-* utiliser l'action [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec wk header row count (sur un tableau, voir *Tableaux*), ou wk header (sur une ligne, voir *Lignes et colonnes*).
+* utiliser l'action [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) avec wk header row count (sur un tableau, voir *Tableaux*), ou wk header (sur une ligne, voir *Lignes et colonnes*).
 
 Si vous désignez plus de cinq lignes comme en-tête (ou si cela résulte d'une insertion de lignes dans un en-tête existant), 4D Write Pro utilise uniquement les cinq premières lignes comme en-tête. Si vous supprimez la ou les lignes définies dans l'en-tête, le nombre de lignes d'en-tête est réduit. 
 
 ## Datasource de tableau 
 
-Vous pouvez assigner un objet formule comme source de données pour un tableau et accéder aux valeurs résultantes à travers le tableau en utilisant des *Expressions avec This* (voir ci-dessous). La formule de la source de données est évaluée par 4D Write Pro lors du calcul des formules (par exemple à l'ouverture du document, lors de l'appel de la commande [WP CALCULER FORMULES](../commands/wp-calculer-formules), etc.). Cette fonctionnalité bénéficie des contextes de données (voir [WP FIXER CONTEXTE DONNEES](../commands/wp-fixer-contexte-donnees)).
+Vous pouvez assigner un objet formule comme source de données pour un tableau et accéder aux valeurs résultantes à travers le tableau en utilisant des *Expressions avec This* (voir ci-dessous). La formule de la source de données est évaluée par 4D Write Pro lors du calcul des formules (par exemple à l'ouverture du document, lors de l'appel de la commande [WP CALCULER FORMULES](./commands/wp-calculer-formules), etc.). Cette fonctionnalité bénéficie des contextes de données (voir [WP FIXER CONTEXTE DONNEES](./commands/wp-fixer-contexte-donnees)).
 
-Pour affecter une source de données à un tableau, utilisez la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec wk datasource et un objet [formule 4D](https://developer.4d.com/docs/fr/API/FunctionClass/) comme valeur. Par exemple, pour remplir un tableau avec une ligne pour chaque personne vivant en France :
+Pour affecter une source de données à un tableau, utilisez la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) avec wk datasource et un objet [formule 4D](https://developer.4d.com/docs/fr/API/FunctionClass/) comme valeur. Par exemple, pour remplir un tableau avec une ligne pour chaque personne vivant en France :
 
 ```4d
  $formula:=Formula(ds.people.query("country = :1";"France"))
@@ -223,7 +223,7 @@ Pour affecter une source de données à un tableau, utilisez la commande [WP FIX
 * Dans la ligne de données (et la ou les lignes de rupture), vous pouvez insérer des expressions qui utilisent des mots-clés spéciaux tels que This.item.lastname. Les expressions sont remplacées au cours du traitement par les données de la collection ou de la sélection d'entités. La ligne de données sera dupliquée de manière à ce que le nombre de lignes d'éléments soit égal au nombre d'éléments de la collection ou de la sélection d'entités après le traitement des formules.
 * Si la formule de la source de données ne renvoie pas de collection ou de sélection d'entités, ou si elle retourne une collection/sélection d'entités vide, les lignes du tableau ne sont pas créées automatiquement et toutes les lignes sont traitées comme des lignes normales. Vous pouvez définir une ligne de remplacement à afficher en cas de source de données vide.
 
-Pour supprimer une source de données d'un tableau, utilisez la commande [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs). La valeur de l'attribut de la source de données sera alors *null* :
+Pour supprimer une source de données d'un tableau, utilisez la commande [WP REINITIALISER ATTRIBUTS](./commands/wp-reinitialiser-attributs). La valeur de l'attribut de la source de données sera alors *null* :
 
 ```4d
  WP RESET ATTRIBUTES($table;wk datasource)
@@ -277,7 +277,7 @@ Pour créer des carry-over rows :
 1. Dans le template de tableau, ajoutez une ligne juste après la ligne de données ou la (les) ligne(s) de rupture et insérez-y les formules nécessaires, en utilisant par exemple **This.previousItems**.
 2. Activer la fonctionnalité carry-over row pour votre document. Vous pouvez:  
 \- Utiliser l'action standard *bottomCarryOverRow* (voir *Utiliser les actions standard 4D Write Pro*), ou  
-\- Utiliser la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec le sélecteur d'attribut wk bottom carry over row *Tableaux*.
+\- Utiliser la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) avec le sélecteur d'attribut wk bottom carry over row *Tableaux*.
 
 **Remarque:** Les sauts de page à l'intérieur des lignes ne sont pas autorisés lorsque la fonctionnalité carry-over row est activée (voir *Pagination des tableaux*). Les options correspondantes, si elles sont définies, sont ignorées.
 
@@ -326,7 +326,7 @@ Lorsqu'il est utilisé dans une formule à l'intérieur du tableau, le mot-clé 
 
 Dans tout autre contexte, ces expressions retourneront *undefined*.
 
-**Note** : Pour plus d'informations sur l'insertion de formules, voir [WP INSERER FORMULE](../commands/wp-inserer-formule).
+**Note** : Pour plus d'informations sur l'insertion de formules, voir [WP INSERER FORMULE](./commands/wp-inserer-formule).
 
 ### Travailler avec un tableau basé sur une datasource 
 

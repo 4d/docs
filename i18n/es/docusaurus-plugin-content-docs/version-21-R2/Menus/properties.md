@@ -14,7 +14,7 @@ En el editor de menús, puede introducir directamente la etiqueta como "fijo". T
 - Una referencia a un recurso XLIFF del tipo :xliff:MyLabel. Para más información sobre las referencias XLIFF, consulte la sección *Arquitectura XLIFF* en *Referencia Diseño 4D*.
 - (**Obsoleto**) Un nombre de variable interproceso seguido de un número, por ejemplo: `:<>vlang,3`. Si se cambia el contenido de esta variable, se modificará la etiqueta del menú cuando se muestre. En este caso, la etiqueta llamará a un recurso XLIFF. El valor contenido en la variable `<>vlang` corresponde al atributo *id* del elemento *group*. El segundo valor (3 en este ejemplo) designa el atributo *id* del elemento *trans-unit*.
 
-Usando el lenguaje 4D, se define la propiedad del título a través del parámetro *itemText* de los comandos [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), y [`SET MENU ITEM`](../commands/set-menu-item).
+Usando el lenguaje 4D, se define la propiedad del título a través del parámetro *itemText* de los comandos [`APPEND MENU ITEM`](./commands/append-menu-item), [`INSERT MENU ITEM`](./commands/insert-menu-item), y [`SET MENU ITEM`](./commands/set-menu-item).
 
 ### Caracteres de control
 
@@ -33,9 +33,9 @@ Los caracteres de control no aparecen en las etiquetas de los comandos del menú
 
 ## Parámetros
 
-Puede asociar un parámetro personalizado a cada elemento del menú. Un parámetro de elemento de menú es una cadena de caracteres cuyo contenido puede elegirse libremente. Puede configurarse en el editor de menús o mediante el comando [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter).
+Puede asociar un parámetro personalizado a cada elemento del menú. Un parámetro de elemento de menú es una cadena de caracteres cuyo contenido puede elegirse libremente. Puede configurarse en el editor de menús o mediante el comando [`SET MENU ITEM PARAMETER`](./commands/set-menu-item-parameter).
 
-Los parámetros de los elementos de menú son útiles para la gestión programada de menús, en particular cuando se utilizan los comandos [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu), [`Get menu item parameter`](../commands/get-menu-item-parameter) y [`Get selected menu item parameter`](../commands/get-selected-menu-item-parameter).
+Los parámetros de los elementos de menú son útiles para la gestión programada de menús, en particular cuando se utilizan los comandos [`Dynamic pop up menu`](./commands/dynamic-pop-up-menu), [`Get menu item parameter`](./commands/get-menu-item-parameter) y [`Get selected menu item parameter`](./commands/get-selected-menu-item-parameter).
 
 ## Acción
 
@@ -57,7 +57,7 @@ Puede asignar un método proyecto y/o una acción estándar a un comando de men�
 - **Acción estándar asociada**: elija o escriba la acción que desea asignar en el combo box "Acción estándar asociada". Puede introducir toda acción soportada y (opcionalmente) el parámetro que desee en el área. Para obtener una lista completa de acciones estándar, consulte la sección **Acciones estándar** en el *Modo Diseño*.
   **Nota para macOS:** en macOS, los comandos de menús personalizados asociados a la acción *Salir* se colocan automáticamente en el menú de la aplicación, conforme a los estándares de interfaz de la plataforma.
 
-Utilizando el lenguaje 4D, puede asociar un método de proyecto utilizando el comando [`SET MENU ITEM METHOD`](../commands/set-menu-item-method), y una acción estándar utilizando el comando [`SET MENU ITEM PROPERTY`](../commands/set-menu-item-property).
+Utilizando el lenguaje 4D, puede asociar un método de proyecto utilizando el comando [`SET MENU ITEM METHOD`](./commands/set-menu-item-method), y una acción estándar utilizando el comando [`SET MENU ITEM PROPERTY`](./commands/set-menu-item-property).
 
 ### Iniciar un proceso
 
@@ -93,7 +93,7 @@ Se añade una línea de separación mediante la creación de un comando de menú
 En el editor de menús, en lugar de introducir el texto del comando de menú en el área del título, basta con seleccionar la opción **Línea separadora**. En lugar de texto, aparece una línea en el área de la barra de menú actual. Cuando esta opción está marcada, las otras propiedades no tienen efecto.
 **Nota:** en macOS, si utiliza el guión "-" como primer caracter de un elemento de menú, aparecerá como línea de separación.
 
-En el lenguaje 4D, se inserta una línea separadora introduciendo `-` o `(-` como itemText para los comandos [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), o [`SET MENU ITEM`](../commands/set-menu-item).
+En el lenguaje 4D, se inserta una línea separadora introduciendo `-` o `(-` como itemText para los comandos [`APPEND MENU ITEM`](./commands/append-menu-item), [`INSERT MENU ITEM`](./commands/insert-menu-item), o [`SET MENU ITEM`](./commands/set-menu-item).
 
 ### Atajos de teclado
 
@@ -153,13 +153,13 @@ A menos que especifique lo contrario, 4D habilita automáticamente cada elemento
 
 ### Marca de verificación
 
-Esta opción del editor de menús puede utilizarse para asociar una marca de verificación del sistema a un elemento del menú. A continuación, puede gestionar la visualización de la marca de verificación mediante los comandos del lenguaje ([`SET MENU ITEM MARK`](../commands/set-menu-item-mark) y [`Get menu item mark`](../commands/get-menu-item-mark)).
+Esta opción del editor de menús puede utilizarse para asociar una marca de verificación del sistema a un elemento del menú. A continuación, puede gestionar la visualización de la marca de verificación mediante los comandos del lenguaje ([`SET MENU ITEM MARK`](./commands/set-menu-item-mark) y [`Get menu item mark`](./commands/get-menu-item-mark)).
 
 Las marcas de verificación se utilizan generalmente para los elementos del menú de acción continua e indican que la acción está en curso.
 
 ### Estilos de fuentes
 
-4D le permite personalizar los menús aplicando diferentes estilos de letra a los comandos del menú. Puede personalizar sus menús con los estilos Negrita, Cursiva o Subrayado mediante las opciones del editor de menús, o utilizando el comando de lenguaje [`SET MENU ITEM STYLE`](../commands/set-menu-item-style).
+4D le permite personalizar los menús aplicando diferentes estilos de letra a los comandos del menú. Puede personalizar sus menús con los estilos Negrita, Cursiva o Subrayado mediante las opciones del editor de menús, o utilizando el comando de lenguaje [`SET MENU ITEM STYLE`](./commands/set-menu-item-style).
 
 Como regla general, aplique los estilos de fuente con moderación a sus menús; demasiados estilos distraerán al usuario y darán un aspecto desordenado a su aplicación.
 
@@ -177,4 +177,4 @@ Para definir el icono en el editor de menús, haga clic en el área "Icono del e
 
 Para eliminar el icono del elemento, elija la opción **Sin icono** del área "Icono línea".
 
-Para definir iconos de los elementos utilizando el lenguaje 4D, llame al comando [`SET MENU ITEM ICON`](../commands/set-menu-item-icon).
+Para definir iconos de los elementos utilizando el lenguaje 4D, llame al comando [`SET MENU ITEM ICON`](./commands/set-menu-item-icon).

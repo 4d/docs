@@ -110,4 +110,4 @@ Se quiser obter todos os processos relacionados à sessão atual:
 [`Process info`](process-info.md)
 [`Session info`](session-info.md)
 [Session storage](session-storage.md)  
-[WEB Get server info](../commands-legacy/web-get-server-info.md)
+[WEB Get server info](./commands/web-get-server-info)

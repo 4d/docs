@@ -64,7 +64,7 @@ As a result, at runtime, updating the value of the main form's Input object also
 
 ## Ver também 
 
-[Form](../commands/form.md)  
+[Form](./commands/form)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
 
@@ -74,5 +74,6 @@ As a result, at runtime, updating the value of the main form's Input object also
 | --- | --- |
 | Número do comando | 1785 |
 | Thread-seguro | no |
+
 
 

@@ -40,14 +40,14 @@ Activar un trigger que no está escrito o escribir un trigger sin activarlo no a
 
 Si se selecciona esta opción, el trigger se llamará cada vez que se modifique un registro de la tabla. Esto sucede cuando:
 
-- se modifica un registro en la entrada de datos (entorno Diseño, comando [`MODIFY RECORD`](../commands/modify-record) o el comando SQL `UPDATE`).
-- se guarda un registro existente utilizando [`SAVE RECORD`](../commands/save-record).
-- se llama un comando que guarda registros existentes (por ejemplo, [`ARRAY TO SELECTION`](../commands/array-to-selection), [`APPLY TO SELECTION`](../commands/apply-to-selection), etc.).
+- se modifica un registro en la entrada de datos (entorno Diseño, comando [`MODIFY RECORD`](./commands/modify-record) o el comando SQL `UPDATE`).
+- se guarda un registro existente utilizando [`SAVE RECORD`](./commands/save-record).
+- se llama un comando que guarda registros existentes (por ejemplo, [`ARRAY TO SELECTION`](./commands/array-to-selection), [`APPLY TO SELECTION`](./commands/apply-to-selection), etc.).
 - se utiliza función ORDA que guarda la entidad.
 
 :::note
 
-Por razones de optimización, el trigger no se llama cuando el registro es guardado por el usuario o vía el comando [`SAVE RECORD`](../commands/save-record) si ningún campo de la tabla ha sido modificado en el registro. Si quiere "forzar" el llamado del trigger en este caso, simplemente puede asignar un campo:
+Por razones de optimización, el trigger no se llama cuando el registro es guardado por el usuario o vía el comando [`SAVE RECORD`](./commands/save-record) si ningún campo de la tabla ha sido modificado en el registro. Si quiere "forzar" el llamado del trigger en este caso, simplemente puede asignar un campo:
 
 ```4d
 [thetable]thefield:=[thetable]thefield
@@ -59,13 +59,13 @@ Por razones de optimización, el trigger no se llama cuando el registro es guard
 
 Si selecciona esta opción, el trigger se llamará cada vez que se borre un registro de la tabla. Esto sucede cuando:
 
-- Cuando se borra un registro (entorno Diseño o llamando a los comandos [`DELETE RECORD`](../commands/delete-record), [`DELETE SELECTION`](../commands/delete-selection) o al comando SQL `DELETE`).
+- Cuando se borra un registro (entorno Diseño o llamando a los comandos [`DELETE RECORD`](./commands/delete-record), [`DELETE SELECTION`](./commands/delete-selection) o al comando SQL `DELETE`).
 - Cuando se efectúan operaciones que provocan la eliminación de un registro relacionado por intermedio de las opciones de control de eliminación de una relación
 - Cuando se utiliza una función ORDA que elimina la entidad.
 
 :::note
 
-El comando [`TRUNCATE TABLE`](../commands/trucate-table) no llama al trigger.
+El comando [`TRUNCATE TABLE`](./commands/trucate-table) no llama al trigger.
 
 :::
 
@@ -73,18 +73,18 @@ El comando [`TRUNCATE TABLE`](../commands/trucate-table) no llama al trigger.
 
 Si esta opción se selecciona, el trigger se llamará cada vez que un registro se cree en la tabla, es decir en las siguientes circunstancias:
 
-- Cuando se añade un registro en la entrada de datos (entorno Diseño, comando [`ADD RECORD`](../commands/add-record) o comando SQL `INSERT`).
-- Cuando se crea y guarda un registro con [`CREATE RECORD`](../commands/create-record) y [`SAVE RECORD`](../commands/save-record). Note que el trigger se llama en el momento en que llama [`SAVE RECORD`](../commands/save-record), no cuando se crea.
+- Cuando se añade un registro en la entrada de datos (entorno Diseño, comando [`ADD RECORD`](./commands/add-record) o comando SQL `INSERT`).
+- Cuando se crea y guarda un registro con [`CREATE RECORD`](./commands/create-record) y [`SAVE RECORD`](./commands/save-record). Note que el trigger se llama en el momento en que llama [`SAVE RECORD`](./commands/save-record), no cuando se crea.
 - Cuando se importan registros (entorno Diseño o utilizando un comando de importación).
-- Cuando se llaman otros comandos que crean y/o guardan nuevos registros (por ejemplo, [`ARRAY TO SELECTION`](../commands/array-to-selection), [`SAVE RELATED ONE`](../commands/save-related-one), etc.).
+- Cuando se llaman otros comandos que crean y/o guardan nuevos registros (por ejemplo, [`ARRAY TO SELECTION`](./commands/array-to-selection), [`SAVE RELATED ONE`](./commands/save-related-one), etc.).
 - Cuando se utiliza funciones ORDA como [`ds.dataclass.new()`](../API/DataClassClass.md#new) y [`entity.save()`](../API/EntityClass.md#save).
 
 
 ## Eventos de base
 
-Un trigger puede ser llamado por uno de los cuatro eventos de base descritos anteriormente. En el trigger, puede detectar qué evento está ocurriendo llamando la función [`Trigger event`](../commands/trigger-event). Esta función devuelve un valor numérico que indica el evento de base.
+Un trigger puede ser llamado por uno de los cuatro eventos de base descritos anteriormente. En el trigger, puede detectar qué evento está ocurriendo llamando la función [`Trigger event`](./commands/trigger-event). Esta función devuelve un valor numérico que indica el evento de base.
 
-Generalmente, se escribe un trigger con una estructura de tipo [`Case of`](../Concepts/flow-control.md#case-ofelseend-case) sobre el resultado devuelto por [`Trigger event`](../commands/trigger-event). 
+Generalmente, se escribe un trigger con una estructura de tipo [`Case of`](../Concepts/flow-control.md#case-ofelseend-case) sobre el resultado devuelto por [`Trigger event`](./commands/trigger-event). 
 
 
 ```4d
@@ -210,7 +210,7 @@ A nivel del proceso, usted administra los errores trigger de la misma manera que
 :::note Notas
 
 - Durante la entrada de datos, si un error trigger es devuelto mientras intenta validar o borrar un registro, el error se trata como un error de índice único. La caja de diálogo de error se muestra, y permanece en la entrada de datos. Incluso si utiliza una base en el entorno Diseño (no en el entorno Aplicación), usted se beneficia del uso de triggers.
-- Cuando se genera un error por un trigger para un registro en el marco de un comando que actúa sobre una selección de registros ([`DELETE SELECTION`](../commands/delete-selection), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`ARRAY TO SELECTION`](../commands/array-to-selection)...), el registro no es procesado pero se registra automáticamente en el Locke[`LockedSet`](../Develop/processes.md#elements-of-a-process). El comando continúa su ejecución hasta el final y no se detecta ningún error. No se llama al método de manejo de errores, si lo hay. Para saber si se han generado errores en este contexto, debe probar `LockedSet` justo después de la llamada al comando. Además, en el trigger, debe almacenar códigos de error, en una colección por ejemplo y manejarlos después.
+- Cuando se genera un error por un trigger para un registro en el marco de un comando que actúa sobre una selección de registros ([`DELETE SELECTION`](./commands/delete-selection), [`APPLY TO SELECTION`](./commands/apply-to-selection), [`ARRAY TO SELECTION`](./commands/array-to-selection)...), el registro no es procesado pero se registra automáticamente en el Locke[`LockedSet`](../Develop/processes.md#elements-of-a-process). El comando continúa su ejecución hasta el final y no se detecta ningún error. No se llama al método de manejo de errores, si lo hay. Para saber si se han generado errores en este contexto, debe probar `LockedSet` justo después de la llamada al comando. Además, en el trigger, debe almacenar códigos de error, en una colección por ejemplo y manejarlos después.
 
 :::
 
@@ -244,17 +244,17 @@ Tenga cuidado cuando utilice otros objetos de la base y del lenguaje del entorno
 - **Conjuntos y selecciones temporales**: si utiliza un conjunto o una selección temporal en un trigger, trabaja en el equipo donde los triggers se ejecutan.
 - **Interfaz del usuario**: NO utilice elementos de la interfaz del usuario en un trigger (alertas, mensajes o cajas de diálogo). De la misma forma, debe limitar todo seguimiento de triggers en la [ventana del **Depurador**](../Debugging/debugger.md). Recuerde que en Cliente/Servidor, los triggers se ejecutan en el equipo 4D Server. Un mensaje de alerta en el equipo servidor no ayuda al usuario en un equipo cliente. Deje al proceso llamante administrar la interfaz del usuario.
 
-Tenga en cuenta que si utiliza el sistema de contraseñas de 4D, puede ejecutar el comando [`Current user`](../commands/current-user) en el trigger con el fin, por ejemplo, de guardar el nombre del usuario en el origen de la llamada del trigger en una tabla con historial, incluso en modo cliente-servidor.
+Tenga en cuenta que si utiliza el sistema de contraseñas de 4D, puede ejecutar el comando [`Current user`](./commands/current-user) en el trigger con el fin, por ejemplo, de guardar el nombre del usuario en el origen de la llamada del trigger en una tabla con historial, incluso en modo cliente-servidor.
 
 
 
 ## Triggers y transacciones
 
-Las [transacciones](./transactions.md) deben administrarse en el nivel del proceso llamante. No deben administrarse a nivel del trigger. Si durante la ejecución del trigger, tiene que añadir, modificar o borrar varios registros, primero debe utilizar el comando [`In transaction`](../commands/in-transaction) desde el trigger para probar si el proceso llamante está en transacción actualmente. Si no es el caso, el trigger podría encontrarse con un registro bloqueado. Por lo tanto, si el proceso llamante no está en transacción, no comienzan las operaciones en los registros y devuelve un error en $0 para indicar al proceso llamante que la operación de la base de datos debe ejecutarse en una transacción. Por otra parte, si encuentra registros bloqueados, el proceso llamante no podrá deshacer las acciones del trigger.
+Las [transacciones](./transactions.md) deben administrarse en el nivel del proceso llamante. No deben administrarse a nivel del trigger. Si durante la ejecución del trigger, tiene que añadir, modificar o borrar varios registros, primero debe utilizar el comando [`In transaction`](./commands/in-transaction) desde el trigger para probar si el proceso llamante está en transacción actualmente. Si no es el caso, el trigger podría encontrarse con un registro bloqueado. Por lo tanto, si el proceso llamante no está en transacción, no comienzan las operaciones en los registros y devuelve un error en $0 para indicar al proceso llamante que la operación de la base de datos debe ejecutarse en una transacción. Por otra parte, si encuentra registros bloqueados, el proceso llamante no podrá deshacer las acciones del trigger.
 
 :::note
 
-Con el fin de optimizar el funcionamiento combinado de los triggers y transacciones, 4D no llama triggers después de la ejecución de [`VALIDATE TRANSACTION`](../commands/validate-transaction). Esto evita que los triggers se ejecuten dos veces.
+Con el fin de optimizar el funcionamiento combinado de los triggers y transacciones, 4D no llama triggers después de la ejecución de [`VALIDATE TRANSACTION`](./commands/validate-transaction). Esto evita que los triggers se ejecuten dos veces.
 
 :::
 
@@ -289,11 +289,12 @@ Imagine que todas las tablas en este ejemplo tienen triggers activados para todo
 
 En esta cascada, el trigger de [Facturas] se ejecuta en el nivel 1, los triggers de [Clientes], [Linea_Factura], y [Pagos] en el nivel 2 y el trigger de [Productos] en el nivel 3.
 
-Desde dentro de los triggers, puede utilizar el comando [`Trigger level`](../commands/trigger-level) para detectar el nivel en el cual se ejecuta un trigger. Además, puede utilizar el comando [`TRIGGER PROPERTIES`](../commands/trigger-properties) para obtener información sobre los otros niveles.
+Desde dentro de los triggers, puede utilizar el comando [`Trigger level`](./commands/trigger-level) para detectar el nivel en el cual se ejecuta un trigger. Además, puede utilizar el comando [`TRIGGER PROPERTIES`](./commands/trigger-properties) para obtener información sobre los otros niveles.
 
 Por ejemplo, si borra un registro de [Productos] a nivel del proceso, el trigger de [Productos] se ejecutará en el nivel 1, no en el nivel 3.
 
-Con [`Trigger level`](../commands/trigger-level) y [`TRIGGER PROPERTIES`](../commands/trigger-properties), puede identificar la causa de una acción. En nuestro ejemplo, una factura se borra al nivel del proceso. Si borramos un registro de [Clientes] a nivel del proceso, el trigger de [Clientes] debe intentar borrar todas las facturas relacionadas con ese cliente. Esto significa que el trigger [Facturas] será llamado como se llamó anteriormente, pero por otra razón. Desde el trigger de [Facturas], puede detectar si se ejecuta en el nivel 1 ó 2. Si se ejecutó en el nivel 2, puede verificar si fue porque se borro el registro de [Clientes]. Si este es el caso, no tiene que preocuparse en actualizar el campo Ventas_Brutas.
+Con [`Trigger level`](./commands/trigger-level) y [`TRIGGER PROPERTIES`](./commands/trigger-properties), puede identificar la causa de una acción. En nuestro ejemplo, una factura se borra al nivel del proceso. Si borramos un registro de [Clientes] a nivel del proceso, el trigger de [Clientes] debe intentar borrar todas las facturas relacionadas con ese cliente. Esto significa que el trigger [Facturas] será llamado como se llamó anteriormente, pero por otra razón. Desde el trigger de [Facturas], puede detectar si se ejecuta en el nivel 1 ó 2. Si se ejecutó en el nivel 2, puede verificar si fue porque se borro el registro de [Clientes]. Si este es el caso, no tiene que preocuparse en actualizar el campo Ventas_Brutas.
+
 
 
 

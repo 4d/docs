@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.ABORT PROCESS BY ID.Summary-->**ABORT PROCESS BY ID** コマンドは4D Server 上の特定のプロセスを中止します。<!-- END REF-->引数には、サーバー上で実行中で中止したいプロセスの固有IDを渡します。プロセスIDは、[Process activity](../commands/process-activity.md) あるいは [Process info](../commands/process-info.md) コマンドを使用することで取得できます。
+<!--REF #_command_.ABORT PROCESS BY ID.Summary-->**ABORT PROCESS BY ID** コマンドは4D Server 上の特定のプロセスを中止します。<!-- END REF-->引数には、サーバー上で実行中で中止したいプロセスの固有IDを渡します。プロセスIDは、[Process activity](./commands/process-activity) あるいは [Process info](./commands/process-info) コマンドを使用することで取得できます。
 
 **注**:
 
@@ -59,5 +59,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1634 |
 | スレッドセーフである | yes |
+
 
 

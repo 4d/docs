@@ -69,7 +69,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。  ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
-- [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
+- [`Execute on server`](./commands/execute-on-server) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
 
 ストアドプロシージャーバーチャルユーザーセッションの詳細については、[**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション) の段落を参照ください。
@@ -141,5 +141,6 @@ IP:port/4DACTION/action_Session
 | ------- | ---- |
 | コマンド番号  | 1714 |
 | スレッドセーフ | ◯    |
+
 
 

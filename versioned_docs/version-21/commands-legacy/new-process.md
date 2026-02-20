@@ -64,7 +64,7 @@ The *stack* parameter allows you to indicate the amount of memory allocated for 
 
 ### Process Name 
 
- You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](../commands/process-info.md) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be an empty string. 
+ You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](./commands/process-info) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be an empty string. 
 
 ### Parameters to Process Method 
 
@@ -134,5 +134,6 @@ In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method STA
 | --- | --- |
 | Command number | 317 |
 | Thread safe | yes |
+
 
 

@@ -314,7 +314,7 @@ Una función class constructor ORDA se activa justo después de que se cree una 
 
 Esta función sólo puede definirse al [nivel de la entidad](#entity-class). Sólo puede haber una función constructor en una class entity (de lo contrario se devuelve un error).
 
-Esta función class constructor ORDA no recibe ni devuelve parámetros. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this.md). Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes.
+Esta función class constructor ORDA no recibe ni devuelve parámetros. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](./commands/this). Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes.
 
 :::note
 
@@ -1207,3 +1207,4 @@ Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directa
 En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
+

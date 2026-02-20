@@ -144,7 +144,7 @@ devuelve un objeto que contiene la siguiente información:
 
 ## Ver también 
 
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
@@ -154,5 +154,6 @@ devuelve un objeto que contiene la siguiente información:
 | --- | --- |
 | Número de comando | 1571 |
 | Hilo seguro | yes |
+
 
 

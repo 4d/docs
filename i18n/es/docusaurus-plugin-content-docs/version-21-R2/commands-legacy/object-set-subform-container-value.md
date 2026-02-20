@@ -41,7 +41,7 @@ A detailed example is available in the [OBJECT Get subform container value](obje
 
 ## Ver también 
 
-[Form](../commands/form.md)  
+[Form](./commands/form)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
 
 ## Propiedades
@@ -50,5 +50,6 @@ A detailed example is available in the [OBJECT Get subform container value](obje
 | --- | --- |
 | Número de comando | 1784 |
 | Hilo seguro | no |
+
 
 

@@ -76,7 +76,7 @@ Voici un exemple de traitement à la volée des caractères saisis dans un champ
 
 ## Voir aussi 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [Is editing text](is-editing-text.md)  
 
 ## Propriétés
@@ -85,5 +85,6 @@ Voici un exemple de traitement à la volée des caractères saisis dans un champ
 | --- | --- |
 | Numéro de commande | 655 |
 | Thread safe | no |
+
 
 

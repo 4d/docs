@@ -77,7 +77,7 @@ displayed_sidebar: docs
 | String(1/0)                                                      | "INF"                             | 正の無限の数値                             |
 | String(-1/0)                                                     | "-INF"                            | 負の無限の数値                             |
 
-(\*) 実数をテキストへと変換するアルゴリズムは、有効数字13 桁に基づいて計算されています。詳細は[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) を参照してください。
+(\*) 実数をテキストへと変換するアルゴリズムは、有効数字13 桁に基づいて計算されています。詳細は[`SET REAL COMPARISON LEVEL`](./commands/set-real-comparison-level) を参照してください。
 
 #### String(number;base)
 
@@ -255,11 +255,11 @@ displayed_sidebar: docs
 
 ## 参照
 
-[Bool](../commands-legacy/bool.md)  
-[Date](../commands-legacy/date.md)  
+[Bool](./commands/bool)  
+[Date](./commands/date)  
 [Num](num.md)  
-[Time string](../commands-legacy/time-string.md)  
-[Timestamp](../commands-legacy/timestamp.md)
+[Time string](./commands/time-string)  
+[Timestamp](./commands/timestamp)
 
 ## プロパティ
 
@@ -267,5 +267,6 @@ displayed_sidebar: docs
 | ------- | -- |
 | コマンド番号  | 10 |
 | スレッドセーフ | ◯  |
+
 
 

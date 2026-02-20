@@ -10,9 +10,9 @@ slug: /WritePro/stylesheets
 
 ## デフォルト スタイル
 
-すべての 4D Write Pro ドキュメントにはデフォルトの段落スタイルシート「Normal」が含まれます。新しいスタイルシートは、[WP New style sheet](../commands-legacy/wp-new-style-sheet) コマンドで作成すると、自動的にこの標準スタイルを継承します。スタイルシートによって変更された属性は、そのスタイルシートが適用されている段落にのみ影響し、ドキュメントの残りの部分はデフォルトの Normal 設定を保持します。スタイルシートを削除すると、変更された属性は Normal スタイルに戻されます。
+すべての 4D Write Pro ドキュメントにはデフォルトの段落スタイルシート「Normal」が含まれます。新しいスタイルシートは、[WP New style sheet](./commands/wp-new-style-sheet) コマンドで作成すると、自動的にこの標準スタイルを継承します。スタイルシートによって変更された属性は、そのスタイルシートが適用されている段落にのみ影響し、ドキュメントの残りの部分はデフォルトの Normal 設定を保持します。スタイルシートを削除すると、変更された属性は Normal スタイルに戻されます。
 
-通常スタイル Normal は、4D Write Pro ドキュメント内のすべてのスタイル属性のデフォルト値を定義します。これは [WP Get style sheet](../commands-legacy/wp-get-style-sheet) コマンドで取得することができます。通常スタイルは [WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドで編集可能ですが（ただし名前の変更はできません）。[WP New style sheet](../commands-legacy/wp-new-style-sheet) コマンドで作成されたスタイルシートは [WP DELETE STYLE SHEET](../commands-legacy/wp-delete-style-sheet) コマンドで削除できますが、Normal スタイルシートは削除することができません。
+通常スタイル Normal は、4D Write Pro ドキュメント内のすべてのスタイル属性のデフォルト値を定義します。これは [WP Get style sheet](./commands/wp-get-style-sheet) コマンドで取得することができます。通常スタイルは [WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドで編集可能ですが（ただし名前の変更はできません）。[WP New style sheet](./commands/wp-new-style-sheet) コマンドで作成されたスタイルシートは [WP DELETE STYLE SHEET](./commands/wp-delete-style-sheet) コマンドで削除できますが、Normal スタイルシートは削除することができません。
 
 ## 段落スタイルシートと文字スタイルシートの属性
 
@@ -32,22 +32,22 @@ slug: /WritePro/stylesheets
 
 ## スタイルシートの適用
 
-スタイルシートは [WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドに `wk style sheet` または `wk new line style sheet` 定数を使うことで適用されます（オブジェクト記法を使っても適用されます）。
+スタイルシートは [WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンドに `wk style sheet` または `wk new line style sheet` 定数を使うことで適用されます（オブジェクト記法を使っても適用されます）。
 
 ## スタイルシートの取得
 
-[WP Get style sheets](../commands-legacy/wp-get-style-sheets) コマンドを使うと、指定されたタイプに基づいてすべてのスタイルシートを取得することができます。[WP Get style sheet](../commands-legacy/wp-get-style-sheet) コマンドを使用するとスタイルシート名を指定して取得することができます。
+[WP Get style sheets](./commands/wp-get-style-sheets) コマンドを使うと、指定されたタイプに基づいてすべてのスタイルシートを取得することができます。[WP Get style sheet](./commands/wp-get-style-sheet) コマンドを使用するとスタイルシート名を指定して取得することができます。
 
 ## スタイルシートの読み込みと書き出し
 
 スタイルシートはオブジェクトとして保存されるので、他の 4D Write Pro ドキュメントへ簡単に読み込んだり、書き出しても容易に維持できます。
 
-- 書き込み – [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets) コマンドを使用すれば、指定4Dドキュメントのスタイルシートオブジェクトを取得し、新規ドキュメントで使用することが可能です。
-- 書き出し – [WP EXPORT DOCUMENT](../commands/wp-export-document) または [WP EXPORT VARIABLE](../commands/wp-export-variable.md) コマンドでスタイル付きの文書をエクスポートすることができます。
+- 書き込み – [WP IMPORT STYLE SHEETS](./commands/wp-import-style-sheets) コマンドを使用すれば、指定4Dドキュメントのスタイルシートオブジェクトを取得し、新規ドキュメントで使用することが可能です。
+- 書き出し – [WP EXPORT DOCUMENT](./commands/wp-export-document) または [WP EXPORT VARIABLE](./commands/wp-export-variable) コマンドでスタイル付きの文書をエクスポートすることができます。
 
 ## スタイルシート属性
 
-以下の属性はスタイルシートにより変更可能で、[WP SET ATTRIBUTES](../commands/wp-set-attributes) および [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドで保存すること、[WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドで取得することが可能です。
+以下の属性はスタイルシートにより変更可能で、[WP SET ATTRIBUTES](./commands/wp-set-attributes) および [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) コマンドで保存すること、[WP GET ATTRIBUTES](./commands/wp-get-attributes) コマンドで取得することが可能です。
 
 :::note
 
@@ -134,5 +134,7 @@ slug: /WritePro/stylesheets
 | `wk type`                        | X (read only) | X (read only) |             |
 | `wk vertical align`              | X         | X         |             |
 | `wk width`                       | X         |           |             |
+
+
 
 

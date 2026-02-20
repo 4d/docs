@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 En *mensaje*, pase el texto del mensaje que se mostrará. Se mostrará como una alerta o una notificación en la pantalla de los usuarios de la sesión.
 
-El parámetro opcional *sesionUsuario* se puede utilizar para designar un usuario específico al pasar su ID de sesión. Puede recuperar el ID de sesión con el comando [Process activity](../commands/process-activity.md). Si se omite *sesionUsuario*, el mensaje se envía a todos los usuarios.
+El parámetro opcional *sesionUsuario* se puede utilizar para designar un usuario específico al pasar su ID de sesión. Puede recuperar el ID de sesión con el comando [Process activity](./commands/process-activity). Si se omite *sesionUsuario*, el mensaje se envía a todos los usuarios.
 
 **Nota**: este comando solo puede ejecutarse en 4D Server. Si el método que llama al comando se ejecuta localmente en un 4D remoto o monopuesto, **SEND MESSAGE TO REMOTE USER** no hace nada.
 
@@ -71,5 +71,6 @@ Desea enviar un mensaje a todos los usuarios y luego enviar un mensaje a un usua
 | --- | --- |
 | Número de comando | 1632 |
 | Hilo seguro | yes |
+
 
 

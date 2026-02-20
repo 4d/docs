@@ -52,7 +52,7 @@ Resultado:
 #### Ver también 
 
 [Milliseconds](milliseconds.md)  
-[String](../commands/string.md)  
+[String](./commands/string)  
 [Time](time.md)  
 
 #### Propiedades
@@ -61,5 +61,6 @@ Resultado:
 | --- | --- |
 | Número de comando | 1445 |
 | Hilo seguro | yes |
+
 
 

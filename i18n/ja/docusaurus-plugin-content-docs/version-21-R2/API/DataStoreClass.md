@@ -5,8 +5,8 @@ title: DataStore
 
 [データストア](ORDA/dsMapping.md#datastore) とは、 ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 `Datastore` オブジェクトは以下のコマンドによって返されます:
 
-- [ds](../commands/ds.md): メインデータストアへのショートカット
-- [Open datastore](../commands/open-datastore.md): リモートデータストアを開きます
+- [ds](./commands/ds): メインデータストアへのショートカット
+- [Open datastore](./commands/open-datastore): リモートデータストアを開きます
 
 ### 概要
 
@@ -232,7 +232,7 @@ title: DataStore
 
 この関数は次の場合にのみ使えます:
 
-- ローカルデータストア ([`ds`](../commands/ds.md)) を対象に。
+- ローカルデータストア ([`ds`](./commands/ds)) を対象に。
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -384,7 +384,7 @@ $info:=$ds.getAllRemoteContexts()
 
 この関数は次の場合にのみ使えます:
 
-- ローカルデータストア ([`ds`](../commands/ds.md)) を対象に。
+- ローカルデータストア ([`ds`](./commands/ds)) を対象に。
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -825,7 +825,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 この関数は次の場合にのみ使えます:
 
-- ローカルデータストア ([`ds`](../commands/ds.md)) を対象に。
+- ローカルデータストア ([`ds`](./commands/ds)) を対象に。
 - クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
@@ -1259,3 +1259,4 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 [`.startTransaction()`](#starttransaction) の例題を参照ください。
 
 <!-- END REF -->
+

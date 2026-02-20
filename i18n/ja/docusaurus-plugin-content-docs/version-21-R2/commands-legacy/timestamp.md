@@ -52,7 +52,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Milliseconds](milliseconds.md)  
-[String](../commands/string.md)  
+[String](./commands/string)  
 [Time](time.md)  
 
 ## プロパティ
@@ -61,5 +61,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1445 |
 | スレッドセーフである | yes |
+
 
 

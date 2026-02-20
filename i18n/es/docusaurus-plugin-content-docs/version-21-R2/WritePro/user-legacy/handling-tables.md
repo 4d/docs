@@ -13,14 +13,14 @@ Los documentos 4D Write Pro pueden contener tablas. Las tablas 4D Write Pro son 
 
 ## Crear una tabla 
 
-Las tablas 4D Write Pro se crean mediante una llamada al comando [WP Insert table](../commands/wp-insert-table). Luego puede añadir líneas utilizando el comando [WP Table append row](../commands/wp-table-append-row).
+Las tablas 4D Write Pro se crean mediante una llamada al comando [WP Insert table](./commands/wp-insert-table). Luego puede añadir líneas utilizando el comando [WP Table append row](./commands/wp-table-append-row).
 
 **Nota:** un usuario puede crear una tabla al copiar y pegar un rango de celdas:  
 ![](../../assets/en/WritePro/pict3307941.en.png)
 
 ## Edición de tablas 
 
-El contenido de las celdas se puede agregar por programación utilizando el comando [WP Table append row](../commands/wp-table-append-row).
+El contenido de las celdas se puede agregar por programación utilizando el comando [WP Table append row](./commands/wp-table-append-row).
 
 Una vez se crea una tabla, el contenido de la celda también puede ser editado en tiempo de ejecución por los usuarios. Pueden hacer clic en las celdas y seleccionar, editar, copiar o pegar o borrar texto o imágenes como en los párrafos regulares. Pueden navegar a través de las celdas con la tecla **Tab** (**Mayús**\+ **Tab** para navegar en dirección opuesta).
 
@@ -32,13 +32,13 @@ Tenga en cuenta que el ancho de la celda es fijo: cuando un usuario escribe text
 
 Los usuarios también pueden seleccionar columnas, filas o celdas y aplicar los atributos disponibles con respecto al estilo del texto, colores, alineación, etc. utilizando el menú emergente integrado o cualquier interfaz personalizada. 4D Write Pro ofrece varios comandos para seleccionar cualquier parte de una tabla:
 
-* [WP Table get rows](../commands/wp-table-get-rows) para obtener un rango de líneas (o rango de líneas de encabezado)
-* [WP Table get columns ](../commands/wp-table-get-columns) para obtener un rango de columnas (\*)
-* [WP Table get cells](../commands/wp-table-get-cells) para obtener un rango de celdas
+* [WP Table get rows](./commands/wp-table-get-rows) para obtener un rango de líneas (o rango de líneas de encabezado)
+* [WP Table get columns ](./commands/wp-table-get-columns) para obtener un rango de columnas (\*)
+* [WP Table get cells](./commands/wp-table-get-cells) para obtener un rango de celdas
 
 (\*) Las columnas no tienen equivalente en html. En 4D Write Pro, un rango de columnas es en realidad un rango de celdas, lo que significa que las columnas tienen la misma prioridad que las celdas.
 
-Una vez que haya seleccionado un rango, puede aplicar cualquier atributo apropiado usando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes). Dentro de las celdas, los atributos se aplican a párrafos, caracteres o imágenes, dependiendo de su contenido. Por ejemplo, puede definir la altura, el tamaño de fuente, el borde, el relleno, etc. de tablas o celdas de tabla (para obtener más información, consulte la sección *Atributos 4D Write Pro*).
+Una vez que haya seleccionado un rango, puede aplicar cualquier atributo apropiado usando el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes). Dentro de las celdas, los atributos se aplican a párrafos, caracteres o imágenes, dependiendo de su contenido. Por ejemplo, puede definir la altura, el tamaño de fuente, el borde, el relleno, etc. de tablas o celdas de tabla (para obtener más información, consulte la sección *Atributos 4D Write Pro*).
 
 Cuando se aplican atributos diferentes a elementos concurrentes de una tabla, se aplica un orden de prioridad para la renderización:
 
@@ -66,7 +66,7 @@ Si presiona la tecla **Mayús** mientras cambia el tamaño de una columna, el ta
 
 ### Fusión y división de celdas 
 
-Con 4D Write Pro, puede dividir y combinar celdas en una tabla. Fusionar celdas es combinar dos o más celdas adyacentes de una tabla situadas en la misma línea o columna en una única celda. Dividir celdas es tomar celdas ya fusionadas y separarlas en múltiples celdas adyacentes en la misma línea o columna. Las celdas pueden fusionarse utilizando el comando [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) o la acción estándar **cell/merge**, y dividirse utilizando el comando [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) o la acción estándar **cell/split**.
+Con 4D Write Pro, puede dividir y combinar celdas en una tabla. Fusionar celdas es combinar dos o más celdas adyacentes de una tabla situadas en la misma línea o columna en una única celda. Dividir celdas es tomar celdas ya fusionadas y separarlas en múltiples celdas adyacentes en la misma línea o columna. Las celdas pueden fusionarse utilizando el comando [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) o la acción estándar **cell/merge**, y dividirse utilizando el comando [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) o la acción estándar **cell/split**.
 
 ![](../../assets/en/WritePro/pict6421031.en.png)
 
@@ -77,7 +77,7 @@ Las celdas de la tabla se pueden fusionar:
 **Ejemplo de fusión de celdas utilizando el lenguaje:**
 
 1. Designe un rango de celdas para fusionar en su tabla, las celdas tienen que ser adyacentes horizontal o verticalmente, o ambas.
-2. Llame al comando [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) en el rango seleccionado.
+2. Llame al comando [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) en el rango seleccionado.
 
 ```4d
  $cells:=WP Table get cells($table;1;1;3;1)
@@ -97,7 +97,7 @@ después
 **Ejemplo de división de celdas utilizando el lenguaje:**
 
 1. Designe un rango de celdas a dividir en su tabla, el rango seleccionado tiene que contener algunas celdas ya fusionadas.
-2. Llame al comando [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) en el rango seleccionado.
+2. Llame al comando [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) en el rango seleccionado.
 
 ```4d
  $cells:=WP Table get cells($table;1;1;1;1)
@@ -122,7 +122,7 @@ después
   
 **Designación de celdas fusionadas:** 
 
-Una celda fusionada puede manipularse igual que una celda individual (color de fondo, estilo de borde, estilos de párrafo..) utilizando la interfaz de 4D Write Pro, las acciones estándar o el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes).
+Una celda fusionada puede manipularse igual que una celda individual (color de fondo, estilo de borde, estilos de párrafo..) utilizando la interfaz de 4D Write Pro, las acciones estándar o el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes).
 
 Todos los comandos de tabla existentes son aplicables a rangos o elementos que contienen celdas fusionadas. En una tabla que contiene celdas fusionadas, los índices de las celdas permanecen como si no se hubiera combinado ninguna celda.   
 
@@ -172,11 +172,11 @@ Las tablas se dividen entre líneas, y las líneas también pueden dividirse. La
 La paginación de la tabla se puede controlar por programación o por el usuario. Las acciones disponibles incluyen:
 
 * insertar un salto de página en una tabla:  
-   * Comando [WP INSERT BREAK](../commands/wp-insert-break)  
+   * Comando [WP INSERT BREAK](./commands/wp-insert-break)  
    * Acción estándar *insertPageBreak*  
    * Opción **I** **nsertar salto de página** del menú contextual predeterminado
 * insertar un salto de columna en una tabla:  
-   * Comando [WP INSERT BREAK](../commands/wp-insert-break)  
+   * Comando [WP INSERT BREAK](./commands/wp-insert-break)  
    * Acción estándar *insertColumnBreak*  
    * Opción **Insertar salto de columna** del menú contextual predeterminado
 
@@ -199,15 +199,15 @@ Cuando se inserta un salto de página o un salto de columna mediante una acción
 Los encabezados de la tabla son la(s) primera(s) línea(s) de la tabla. Para definir las líneas de encabezado, puede:
 
 * utilizar la acción estándar *headerRowCount* (ver *Utilizar las acciones estándar 4D Write Pro*), o
-* utilizar la acción [WP SET ATTRIBUTES](../commands/wp-set-attributes) con wk header row count (en una tabla, ver *Tablas*), o wk header (en una línea, ver *Líneas y columnas*).
+* utilizar la acción [WP SET ATTRIBUTES](./commands/wp-set-attributes) con wk header row count (en una tabla, ver *Tablas*), o wk header (en una línea, ver *Líneas y columnas*).
 
 Si designa más de cinco líneas como encabezado (o si resulta de una inserción de líneas en un encabezado existente), 4D Write Pro sólo utiliza las cinco primeras líneas como encabezado. Si elimina la(s) línea(s) definida(s) en el encabezado, el número de líneas del encabezado disminuye.
 
 ## Tabla fuentes de datos 
 
-Puede asignar un objeto fórmula como fuente de datos para una tabla y acceder a los valores resultantes desde la tabla utilizando *Expresiones con This* (ver más abajo). La fórmula de la fuente de datos es procesada por 4D Write Pro cuando se calculan las fórmulas (por ejemplo, cuando se abre el documento, cuando se llama al comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). Esta función aprovecha los contextos de datos (ver [WP SET DATA CONTEXT](../commands/wp-set-data-context)).
+Puede asignar un objeto fórmula como fuente de datos para una tabla y acceder a los valores resultantes desde la tabla utilizando *Expresiones con This* (ver más abajo). La fórmula de la fuente de datos es procesada por 4D Write Pro cuando se calculan las fórmulas (por ejemplo, cuando se abre el documento, cuando se llama al comando [WP COMPUTE FORMULAS](./commands/wp-compute-formulas), etc.). Esta función aprovecha los contextos de datos (ver [WP SET DATA CONTEXT](./commands/wp-set-data-context)).
 
-Para asignar una fuente de datos a una tabla, utilice el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) con el comando wk datasource y un objeto *4D formula* como valor. Por ejemplo, para llenar una tabla con una línea por cada persona que vive en Francia:
+Para asignar una fuente de datos a una tabla, utilice el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) con el comando wk datasource y un objeto *4D formula* como valor. Por ejemplo, para llenar una tabla con una línea por cada persona que vive en Francia:
 
 ```4d
  $formula:=Formula(ds.people.query("country = :1";"France"))
@@ -218,7 +218,7 @@ Para asignar una fuente de datos a una tabla, utilice el comando [WP SET ATTRIBU
 * En la línea de datos (y líneas de ruptura), puede insertar expresiones que utilicen palabras claves especiales como *Este.elemento.apellido*. Las expresiones se sustituyen durante el procesamiento por los datos de la colección o la selección de entidades. La línea de datosse duplicará para que el número de líneas de elementos sea igual al número de elementos de la colección o selección de entidades después de calcular las fórmulas.
 * Si la fórmula de la fuente de datos no devuelve una colección o una selección de entidades, o si devuelve una colección/selección de entidades vacía, las líneas de la tabla no se crean automáticamente y todas las líneas se tratan como líneas normales. Puede definir una fila de marcador de posición que se mostrará en caso de que la fuente de datos esté vacía.
 
-Para eliminar una fuente de datos de una tabla, utilice el comando [WP RESET ATTRIBUTES](../commands/wp-reset-attributes). Definirá el valor del atributo datasource como null:
+Para eliminar una fuente de datos de una tabla, utilice el comando [WP RESET ATTRIBUTES](./commands/wp-reset-attributes). Definirá el valor del atributo datasource como null:
 
 ```4d
  WP RESET ATTRIBUTES($table;wk datasource)
@@ -270,7 +270,7 @@ Para crear líneas de arrastre:
 1. En la plantilla de la tabla, añada una línea justo después de la línea de datos o las líneas de ruptura e inserte las fórmulas necesarias en su interior, utilizando, por ejemplo **This.previousItems**.
 2. Active la funcionalidad de arrastre de línes para su documento. Puede:  
 \- utilizar la acción estándar *bottomCarryOverRow* (ver *Utilizar las acciones estándar 4D Write Pro*), o  
-\- utilizar el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) con el selector de atributos wk bottom carry over row *Tablas*.
+\- utilizar el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) con el selector de atributos wk bottom carry over row *Tablas*.
 
 **Nota:** no se permiten saltos de página dentro de las líneas cuando la función de traspaso de líneas está activada (ver *Paginación de tablas*). Las opciones correspondientes, si se definen, se ignoran.
 
@@ -317,7 +317,7 @@ Cuando se utiliza en una fórmula dentro de la tabla, la palabra clave **This** 
 
 En cualquier otro contexto, estas expresiones devolverán *undefined*.
 
-**Nota:** para más información sobre la inserción de fórmulas, ver [WP INSERT FORMULA](../commands/wp-insert-formula).
+**Nota:** para más información sobre la inserción de fórmulas, ver [WP INSERT FORMULA](./commands/wp-insert-formula).
 
 ### Trabajar con una tabla fuente de datos 
 

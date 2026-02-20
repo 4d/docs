@@ -19,7 +19,7 @@ Si l'événement est coché pour un objet uniquement, il est généré uniquemen
 
 L'événement `On Mouse Move` met à jour les variables système *MouseX* et *MouseY*.
 
-Les objets sont rendus invisibles à l'aide de la commande [`OBJECT SET VISIBLE`](../commands/object-set-visible) ou la propriété [Visibility](FormObjects/properties_Display.md#visibility) ne génèrent pas cet événement.
+Les objets sont rendus invisibles à l'aide de la commande [`OBJECT SET VISIBLE`](./commands/object-set-visible) ou la propriété [Visibility](FormObjects/properties_Display.md#visibility) ne génèrent pas cet événement.
 
 
 ### Appeler la pile

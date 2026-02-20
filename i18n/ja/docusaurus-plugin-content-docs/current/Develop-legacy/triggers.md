@@ -44,12 +44,12 @@ displayed_sidebar: docs
 このオプションを選択すると、テーブルのレコードが修正されるたびに、トリガーが起動します。
 以下の場合にトリガーが起動します。
 
-- データ入力時にレコードを修正する (デザインモード、 [`MODIFY RECORD`](../commands/modify-record)コマンド またはUPDATEコマンド等を使用) 。
-- [`SAVE RECORD`](../commands/save-record)を使用して既存レコードを保存する。
-- 既存レコードを保存するコマンドを使用する [`ARRAY TO SELECTION`](../commands/array-to-selection), [`APPLY TO SELECTION`](../commands/apply-to-selection)など) 。
-- [`SAVE RECORD`](../commands/save-record) コマンドを呼び出すプラグインを使用する。
+- データ入力時にレコードを修正する (デザインモード、 [`MODIFY RECORD`](./commands/modify-record)コマンド またはUPDATEコマンド等を使用) 。
+- [`SAVE RECORD`](./commands/save-record)を使用して既存レコードを保存する。
+- 既存レコードを保存するコマンドを使用する [`ARRAY TO SELECTION`](./commands/array-to-selection), [`APPLY TO SELECTION`](./commands/apply-to-selection)など) 。
+- [`SAVE RECORD`](./commands/save-record) コマンドを呼び出すプラグインを使用する。
 
-注: 最適化のため、ユーザーがレコードを保存したり[`SAVE RECORD`](../commands/save-record)コマンドでレコードが保存されたりする際、レコードのフィールドが全く変更されていなければ、トリガーは呼び出されません。トリガーを強制的に呼び出したいときは、フィールドに同じ値を代入します:
+注: 最適化のため、ユーザーがレコードを保存したり[`SAVE RECORD`](./commands/save-record)コマンドでレコードが保存されたりする際、レコードのフィールドが全く変更されていなければ、トリガーは呼び出されません。トリガーを強制的に呼び出したいときは、フィールドに同じ値を代入します:
 
 ```4d
 [thetable]thefield:=[thetable]thefield
@@ -62,13 +62,13 @@ displayed_sidebar: docs
 このオプションを選択すると、テーブルのレコードが削除されるたびに、トリガーが起動します。
 以下の場合にトリガが起動します。
 
-- レコードを削除する (デザインモード、[`DELETE RECORD`](../commands/delete-record)コマンド、[`DELETE SELECTION`](../commands/delete-selection)コマンドまたはSQLのDELETEコマンドを使用する) 。
+- レコードを削除する (デザインモード、[`DELETE RECORD`](./commands/delete-record)コマンド、[`DELETE SELECTION`](./commands/delete-selection)コマンドまたはSQLのDELETEコマンドを使用する) 。
 - リレートの削除制御オプションによって、リレート先レコードの削除を引き起こす何らかの操作を実行する。
 - DELETE RECORDコマンドを呼び出すプラグインを使用する。
 
 :::note
 
-[`TRUNCATE TABLE`](../commands/trucate-table) コマンドはトリガーを呼び出しません。
+[`TRUNCATE TABLE`](./commands/trucate-table) コマンドはトリガーを呼び出しません。
 
 :::
 
@@ -78,18 +78,18 @@ displayed_sidebar: docs
 
 以下の場合にトリガーが起動します。
 
-- データ入力時にレコードを追加する(デザインモード、[`ADD RECORD`](../commands/add-record)コマンド または SQLのINSERTコマンド等を使用) 。
-- [`CREATE RECORD`](../commands/create-record) や [`SAVE RECORD`](../commands/save-record)を使用してレコードを作成し、保存する。トリガーは[`SAVE RECORD`](../commands/save-record)を呼び出したときに起動します。レコードを作成したときではありません。
+- データ入力時にレコードを追加する(デザインモード、[`ADD RECORD`](./commands/add-record)コマンド または SQLのINSERTコマンド等を使用) 。
+- [`CREATE RECORD`](./commands/create-record) や [`SAVE RECORD`](./commands/save-record)を使用してレコードを作成し、保存する。トリガーは[`SAVE RECORD`](./commands/save-record)を呼び出したときに起動します。レコードを作成したときではありません。
 - レコードを読み込む (デザインモード、または読み込みコマンドを使用して) 。
-- 新規レコードを作成または保存するコマンドを使用する ([`ARRAY TO SELECTION`](../commands/array-to-selection), [`SAVE RELATED ONE`](../commands/save-related-one)など) 。
-- [`CREATE RECORD`](../commands/create-record) や [`SAVE RECORD`](../commands/save-record)コマンドを呼び出すプラグインを使用する。
+- 新規レコードを作成または保存するコマンドを使用する ([`ARRAY TO SELECTION`](./commands/array-to-selection), [`SAVE RELATED ONE`](./commands/save-related-one)など) 。
+- [`CREATE RECORD`](./commands/create-record) や [`SAVE RECORD`](./commands/save-record)コマンドを呼び出すプラグインを使用する。
 
 
 ## データベースイベント
 
-トリガーは、前述の3つのデータベースイベントのいずれかに対して起動することができます。トリガー内で[`Trigger event`](../commands/trigger-event) 関数を呼び出すことによって、どのイベントが発生しているかを検出します。この関数はデータベースイベントを示す数値を返します。
+トリガーは、前述の3つのデータベースイベントのいずれかに対して起動することができます。トリガー内で[`Trigger event`](./commands/trigger-event) 関数を呼び出すことによって、どのイベントが発生しているかを検出します。この関数はデータベースイベントを示す数値を返します。
 
-一般的には、[`Trigger event`](../commands/trigger-event) から返される結果に関して、 [Case of](../Concepts/flow-control.md#case-ofelseend-case) ストラクチャーを用いて、トリガーを記述します。Trigger Events テーマの定数を使用できます。
+一般的には、[`Trigger event`](./commands/trigger-event) から返される結果に関して、 [Case of](../Concepts/flow-control.md#case-ofelseend-case) ストラクチャーを用いて、トリガーを記述します。Trigger Events テーマの定数を使用できます。
 
 ```4d
   //トリガー用の[anyTable] テーブル
@@ -217,7 +217,7 @@ ON ERR CALLでインストールしたエラー処理メソッドを使用して
 :::note 注
 
 - データ入力時に、レコードを受け入れまたは削除しようとしているときにトリガーエラーが返されると、エラーは重複不可なインデックスエラーのように処理されます。エラーダイアログが表示され、データ入力状態になります。デザインモード (アプリケーションモードでなく) でデータベースを使用する場合でも、トリガーを使用することのメリットが得られます。
-- レコードのセレクションで動作しているコマンドのフレームワーク内のトリガーによってエラーが生成されると ([`DELETE SELECTION`](../commands/delete-selection), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`ARRAY TO SELECTION`](../commands/array-to-selection)など)レコードは処理されず、自動的にLockedSet に登録されます(セット 参照)。コマンドは終わりまで実行が続けられ、このときエラーはキャッチされません。つまりエラーハンドリングメソッドは(あったとしても)呼び出されません。このコンテキストにおいて、エラーが生成されたかどうかを確認するためには、コマンドの呼び出しの直後にLockedSet をテストする必要があります。また、トリガでは、エラーをあとで適切に管理するためには、エラーコードを例えばコレクションなどに保存する必要があります。
+- レコードのセレクションで動作しているコマンドのフレームワーク内のトリガーによってエラーが生成されると ([`DELETE SELECTION`](./commands/delete-selection), [`APPLY TO SELECTION`](./commands/apply-to-selection), [`ARRAY TO SELECTION`](./commands/array-to-selection)など)レコードは処理されず、自動的にLockedSet に登録されます(セット 参照)。コマンドは終わりまで実行が続けられ、このときエラーはキャッチされません。つまりエラーハンドリングメソッドは(あったとしても)呼び出されません。このコンテキストにおいて、エラーが生成されたかどうかを確認するためには、コマンドの呼び出しの直後にLockedSet をテストする必要があります。また、トリガでは、エラーをあとで適切に管理するためには、エラーコードを例えばコレクションなどに保存する必要があります。
 
 :::
 
@@ -247,13 +247,13 @@ ON ERR CALLでインストールしたエラー処理メソッドを使用して
 - **ユーザーインターフェース**: トリガー内でユーザーインターフェースエレメントを使用してないでください (警告、メッセージ、ダイアログボックスを使用しない) 。したがって、トリガーのトレースはデバッグウィンドウに限定する必要があります。クライアント/サーバーでは、トリガーは4D Server上で実行されることを覚えておいてください。サーバーマシン上で警告メッセージを表示しても、クライアント上のユーザーの助けにはなりません。起動プロセスにユーザインターフェースの処理も行わせるようにしてください。
 
 
-4Dパスワードシステムを使用した場合、トリガー内で[`Current user`](../commands/current-user) コマンドを使用できることに注意して下さい。これを使用すると、例えばジャーナルを取っているテーブルのトリガー呼び出し元にユーザー名を保存することができます(クライアント・サーバーモードにおいても可能です)。
+4Dパスワードシステムを使用した場合、トリガー内で[`Current user`](./commands/current-user) コマンドを使用できることに注意して下さい。これを使用すると、例えばジャーナルを取っているテーブルのトリガー呼び出し元にユーザー名を保存することができます(クライアント・サーバーモードにおいても可能です)。
 
 
 
 ## トリガとトランザクション   
 
-トランザクションは起動プロセスレベルで処理されなければなりません。トリガーレベルでトランザクションを管理してはいけません。一つのトリガーを実行してい る間に、複数のレコード (下記の例を参照) を追加、修正、削除する必要がある場合、最初にトリガー内から[`In transaction`](../commands/in-transaction)コマンド を使用して、起動プロセスが現在トランザクション内にあるかどうかテストしなければなりません。そうでない場合には、トリガーがロックされたレコードに出く わす可能性があります。そのため、起動プロセスがトランザクション内に無い場合は、レコードに対する操作を開始しないでください。起動プロセスに、実行し ようとしているデータベース操作はトランザクション内で実行されなければならないことを知らせるためにエラーを$0 に返すだけにしてください。そうしないとロックされたレコードに出くわした場合、起動プロセスにはトリガーの動作をロールバックする方法がなくなります。
+トランザクションは起動プロセスレベルで処理されなければなりません。トリガーレベルでトランザクションを管理してはいけません。一つのトリガーを実行してい る間に、複数のレコード (下記の例を参照) を追加、修正、削除する必要がある場合、最初にトリガー内から[`In transaction`](./commands/in-transaction)コマンド を使用して、起動プロセスが現在トランザクション内にあるかどうかテストしなければなりません。そうでない場合には、トリガーがロックされたレコードに出く わす可能性があります。そのため、起動プロセスがトランザクション内に無い場合は、レコードに対する操作を開始しないでください。起動プロセスに、実行し ようとしているデータベース操作はトランザクション内で実行されなければならないことを知らせるためにエラーを$0 に返すだけにしてください。そうしないとロックされたレコードに出くわした場合、起動プロセスにはトリガーの動作をロールバックする方法がなくなります。
 
 注: 
 
@@ -261,7 +261,7 @@ ON ERR CALLでインストールしたエラー処理メソッドを使用して
 
 :::note
 
-トリガーとトランザクションを統合した操作を最適化するため、4Dでは[`VALIDATE TRANSACTION`](../commands/validate-transaction)を実行した後、トリガーは呼び出されません。これにより、トリガーの実行を2度繰り返すことを防ぎます。
+トリガーとトランザクションを統合した操作を最適化するため、4Dでは[`VALIDATE TRANSACTION`](./commands/validate-transaction)を実行した後、トリガーは呼び出されません。これにより、トリガーの実行を2度繰り返すことを防ぎます。
 
 :::
 
@@ -297,11 +297,12 @@ ON ERR CALLでインストールしたエラー処理メソッドを使用して
 
 こ のカスケードの関係においては、[Invoices] のトリガーはレベル1で、 [Customers]、 [Line Items]、 と [Payments] のトリガーはレベル2で、そして [Products] のトリガーはレベル3で実行されていると言えます。
 
-トリガー内から[`Trigger level`](../commands/trigger-level)コマンドを使用して、トリガーが実行されるレベルを検出します。更に[`TRIGGER PROPERTIES`](../commands/trigger-properties)コマンドを使用して、他のレベルに関する情報を入手することができます。
+トリガー内から[`Trigger level`](./commands/trigger-level)コマンドを使用して、トリガーが実行されるレベルを検出します。更に[`TRIGGER PROPERTIES`](./commands/trigger-properties)コマンドを使用して、他のレベルに関する情報を入手することができます。
 
 例えば、 [Products] レコードがプロセスレベルで削除されている場合、 [Products] のトリガーは、レベル3ではなく、レベル1で実行されます。
 
-[`Trigger level`](../commands/trigger-level)と[`TRIGGER PROPERTIES`](../commands/trigger-properties)を使用すれば、動作の原因を検出できます。前述の例では、請求書がプロセスレベルで削除されています。[Customers] レコードをプロセスレベルで削除すると、 [Customers] のトリガーは、その顧客に関連するすべての請求書を削除しようとします。これにより、前述の例と同じように、 [Invoices] のトリガーが起動されることになりますが、起動される理由は異なります。[Invoices] トリガー内から、そのトリガーがレベル1で実行されたか、レベル2で実行されたかを、検出することができます。トリガーがレベル2で実行された場合には、次に、 それが [Customers] レコードが削除されたためであるかどうかをチェックできます。そうであれば、総売上フィールドの更新にわずらわされる必要はありません。
+[`Trigger level`](./commands/trigger-level)と[`TRIGGER PROPERTIES`](./commands/trigger-properties)を使用すれば、動作の原因を検出できます。前述の例では、請求書がプロセスレベルで削除されています。[Customers] レコードをプロセスレベルで削除すると、 [Customers] のトリガーは、その顧客に関連するすべての請求書を削除しようとします。これにより、前述の例と同じように、 [Invoices] のトリガーが起動されることになりますが、起動される理由は異なります。[Invoices] トリガー内から、そのトリガーがレベル1で実行されたか、レベル2で実行されたかを、検出することができます。トリガーがレベル2で実行された場合には、次に、 それが [Customers] レコードが削除されたためであるかどうかをチェックできます。そうであれば、総売上フィールドの更新にわずらわされる必要はありません。
+
 
 
 

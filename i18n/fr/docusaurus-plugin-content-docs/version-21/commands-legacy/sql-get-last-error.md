@@ -44,7 +44,7 @@ Les deux derniers paramètres ne sont remplis que si l’erreur provient de la s
 
 ## Voir aussi 
 
-[Last errors](../commands/last-errors.md)   
+[Last errors](./commands/last-errors)   
 [ON ERR CALL](on-err-call.md)  
 
 ## Propriétés
@@ -53,5 +53,6 @@ Les deux derniers paramètres ne sont remplis que si l’erreur provient de la s
 | --- | --- |
 | Numéro de commande | 825 |
 | Thread safe | no |
+
 
 

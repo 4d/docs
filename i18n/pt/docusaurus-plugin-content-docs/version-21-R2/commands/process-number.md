@@ -30,15 +30,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Summary-->O comando `Process number` retorna o número do processo cujo *name* ou *id* você passou no primeiro parâmetro<!-- END REF-->. Se nenhum processo for encontrado, `Process number` retornará 0.
 
-O parâmetro opcional \* permite que você recupere, de um 4D remoto, o número de um processo executado no servidor. Nesse caso, o valor retornado é negativo. Essa opção é especialmente útil ao usar os comandos [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md) e [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable.md).
+O parâmetro opcional \* permite que você recupere, de um 4D remoto, o número de um processo executado no servidor. Nesse caso, o valor retornado é negativo. Essa opção é especialmente útil ao usar os comandos [GET PROCESS VARIABLE](./commands/get-process-variable), [SET PROCESS VARIABLE](./commands/set-process-variable) e [VARIABLE TO VARIABLE](./commands/variable-to-variable).
 
 Se o comando for executado com o parâmetro \* de um processo no computador do servidor, o valor retornado será positivo.
 
 ## Veja também
 
-[GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
-[Process state](../commands-legacy/process-state.md)\
-[SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
+[GET PROCESS VARIABLE](./commands/get-process-variable)\
+[Process state](./commands/process-state)\
+[SET PROCESS VARIABLE](./commands/set-process-variable)
 
 ## Propriedades
 
@@ -46,5 +46,6 @@ Se o comando for executado com o parâmetro \* de um processo no computador do s
 | ----------------- | --- |
 | Número de comando | 372 |
 | Thread safe       | sim |
+
 
 

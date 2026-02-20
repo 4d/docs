@@ -47,7 +47,7 @@ Durante la ejecución, un campo o toda área introducible es delimitada por un r
 
 #### Comandos
 
-[OBJECT Get focus rectangle invisible](../commands-legacy/object-get-focus-rectangle-invisible.md) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+[OBJECT Get focus rectangle invisible](./commands/object-get-focus-rectangle-invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](./commands/object-set-focus-rectangle-invisible)
 
 ---
 
@@ -73,7 +73,7 @@ Por defecto, esta opción no está activa.
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
 
 ---
 
@@ -103,7 +103,7 @@ Valores disponibles:
 
 #### Comandos
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+[OBJECT GET SCROLLBAR](./commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
 
 #### Ver también
 
@@ -405,7 +405,7 @@ Valores disponibles:
 
 #### Comandos
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+[OBJECT GET SCROLLBAR](./commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
 
 #### Ver también
 

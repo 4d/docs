@@ -82,9 +82,9 @@ displayed_sidebar: docs
 
 [`4D.File` class](../API/FileClass.md)  
 [Folder](folder.md)  
-[Get 4D file](../commands-legacy/get-4d-file.md)  
-[Object to path](../commands-legacy/object-to-path.md)  
-[Path to object](../commands-legacy/path-to-object.md)
+[Get 4D file](./commands/get-4d-file)  
+[Object to path](./commands/object-to-path)  
+[Path to object](./commands/path-to-object)
 
 ## プロパティ
 
@@ -92,5 +92,6 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1566 |
 | スレッドセーフ | ◯    |
+
 
 

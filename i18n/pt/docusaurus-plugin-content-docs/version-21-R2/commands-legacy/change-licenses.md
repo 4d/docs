@@ -51,7 +51,7 @@ Desta forma um usuário pode ativar licenças sem ter que modificar a base.
 
 ## Ver também 
 
-[License info](../commands/license-info.md)  
+[License info](./commands/license-info)  
 [Is license available](is-license-available.md)  
 
 ## Propriedades
@@ -61,5 +61,6 @@ Desta forma um usuário pode ativar licenças sem ter que modificar a base.
 | Número do comando | 637 |
 | Thread-seguro | no |
 | Proibido no servidor ||
+
 
 

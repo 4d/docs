@@ -36,7 +36,7 @@ Se soportan los siguientes tipos de documentos:
 - Documentos en formato 4D Write Pro (.4wp). Para obtener más información acerca del formato de documento 4D Write Pro, consulte el \*formato de documento *.4wp*.
 - documentos en formato .docx. Para más información, consulte *Importar y exportar en formato .docx*.
 
-**Nota:** si desea importar un documento almacenado en un campo BLOB 4D, también puede considerar el uso del comando [WP New](../commands-legacy/wp-new.md).
+**Nota:** si desea importar un documento almacenado en un campo BLOB 4D, también puede considerar el uso del comando [WP New](./commands/wp-new).
 
 Se devuelve un error si el parámetro *filePath* o *fileObj* no es válido, si falta el archivo o si el formato de archivo no es compatible.
 
@@ -120,4 +120,5 @@ WParea:=WP Import document($file)
 
 ## Ver también
 
-[WP New](../commands-legacy/wp-new.md)
+[WP New](./commands/wp-new)
+

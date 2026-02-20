@@ -43,9 +43,9 @@ Delete stringの使用例を次に示します。結果を変数*vtResult*に代
 
 ## 参照 
 
-[Change string](../commands/change-string)  
-[Insert string](../commands/insert-string)  
-[Replace string](../commands/replace-string)  
+[Change string](./commands/change-string)  
+[Insert string](./commands/insert-string)  
+[Replace string](./commands/replace-string)  
 
 ## プロパティ
 
@@ -53,5 +53,6 @@ Delete stringの使用例を次に示します。結果を変数*vtResult*に代
 | --- | --- |
 | コマンド番号 | 232 |
 | スレッドセーフである | yes |
+
 
 

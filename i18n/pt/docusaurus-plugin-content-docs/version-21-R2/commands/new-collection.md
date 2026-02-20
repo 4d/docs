@@ -79,7 +79,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 ## Veja também
 
 [New shared collection](new-shared-collection.md)\
-[Type](../commands-legacy/type.md)
+[Type](./commands/type)
 
 ## Propriedades
 
@@ -87,5 +87,6 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 | ----------------- | ---- |
 | Número de comando | 1472 |
 | Thread safe       | sim  |
+
 
 

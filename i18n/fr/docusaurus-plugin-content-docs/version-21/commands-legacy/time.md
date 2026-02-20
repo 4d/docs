@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Le paramètre *valHeure* peut contenir soit :
 
-* une chaîne contenant une heure exprimée dans l'un des formats d'heure standard de 4D correspondant à la langue de votre système (pour plus d'informations, reportez-vous à la description de la commande [String](../commands/string.md)).
+* une chaîne contenant une heure exprimée dans l'un des formats d'heure standard de 4D correspondant à la langue de votre système (pour plus d'informations, reportez-vous à la description de la commande [String](./commands/string)).
 * un entier long représentant un nombre de secondes écoulées depuis 00:00:00.
 
 Note : Si l'évaluation de l'expression *valHeure* donne une valeur indéfinie, **Time** retourne une heure vide (00:00:00). Ce fonctionnement est utile lorsque le code attend toujours une heure alors que l'évaluation de *valHeure* peut parfois aboutir au type **indéfini** (cas par exemple des attributs d'objets).
@@ -61,10 +61,10 @@ Vous pouvez exprimer toute valeur numérique sous forme d’heure :
 ## Voir aussi 
 
 [ARRAY TIME](array-time.md)  
-[Bool](../commands/bool)  
-[String](../commands/string.md)  
-[Time string](../commands/time-string)  
-[Timestamp](../commands/timestamp)  
+[Bool](./commands/bool)  
+[String](./commands/string)  
+[Time string](./commands/time-string)  
+[Timestamp](./commands/timestamp)  
 
 ## Propriétés
 
@@ -72,5 +72,7 @@ Vous pouvez exprimer toute valeur numérique sous forme d’heure :
 | --- | --- |
 | Numéro de commande | 179 |
 | Thread safe | yes |
+
+
 
 

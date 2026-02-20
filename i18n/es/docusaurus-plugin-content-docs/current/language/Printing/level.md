@@ -66,7 +66,7 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [PRINT SELECTION](print-selection.md)  
 
 ## Propiedades
@@ -75,5 +75,6 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
 | --- | --- |
 | Número de comando | 101 |
 | Hilo seguro | no |
+
 
 

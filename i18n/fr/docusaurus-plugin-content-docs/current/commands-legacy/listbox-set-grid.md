@@ -41,7 +41,7 @@ Passez dans les paramètres *horizontal* et *vertical* des valeurs booléennes i
 ## Voir aussi 
 
 [LISTBOX GET GRID](listbox-get-grid.md)  
-[LISTBOX Get property](../commands/listbox-get-property.md)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
 ## Propriétés
@@ -50,5 +50,6 @@ Passez dans les paramètres *horizontal* et *vertical* des valeurs booléennes i
 | --- | --- |
 | Numéro de commande | 841 |
 | Thread safe | no |
+
 
 

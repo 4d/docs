@@ -54,12 +54,12 @@ Schématiquement, cette variable fonctionne comme la zone d’adresse d’un nav
 
 ### Variable URL et commande WA OUVRIR URL
 
-La variable URL produit les mêmes effets que la commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md). Les différences suivantes sont toutefois à noter :
+La variable URL produit les mêmes effets que la commande [`WA OPEN URL`](./commands/wa-open-url). Les différences suivantes sont toutefois à noter :
 
-- Pour les accès aux documents, la variable accepte uniquement des URLs conformes aux RFC ("file://c:/Mon%20Doc") et non les chemins d’accès système ("c:\MonDoc"). La commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md) accepte les deux notations.
-- Si la variable URL contient une chaîne vide, la zone Web ne tente pas de charger l’URL. La commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md) génère une erreur dans ce cas.
-- Si la variable URL ne contient pas de protocole (http, mailto, file, etc.), la zone Web ajoute "http://", ce qui n'est pas le cas de la commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md).
-- Lorsque la zone Web n'est pas affichée dans le formulaire (lorsqu'elle est située sur une autre page du formulaire), l'exécution de la commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md) est sans effet, alors que l'attribution d'une valeur à la variable URL peut être utilisée pour mettre à jour l'URL courant.
+- Pour les accès aux documents, la variable accepte uniquement des URLs conformes aux RFC ("file://c:/Mon%20Doc") et non les chemins d’accès système ("c:\MonDoc"). La commande [`WA OPEN URL`](./commands/wa-open-url) accepte les deux notations.
+- Si la variable URL contient une chaîne vide, la zone Web ne tente pas de charger l’URL. La commande [`WA OPEN URL`](./commands/wa-open-url) génère une erreur dans ce cas.
+- Si la variable URL ne contient pas de protocole (http, mailto, file, etc.), la zone Web ajoute "http://", ce qui n'est pas le cas de la commande [`WA OPEN URL`](./commands/wa-open-url).
+- Lorsque la zone Web n'est pas affichée dans le formulaire (lorsqu'elle est située sur une autre page du formulaire), l'exécution de la commande [`WA OPEN URL`](./commands/wa-open-url) est sans effet, alors que l'attribution d'une valeur à la variable URL peut être utilisée pour mettre à jour l'URL courant.
 
 #### Grammaire JSON
 
@@ -73,7 +73,7 @@ La variable URL produit les mêmes effets que la commande [`WA OPEN URL`](../com
 
 #### Commandes
 
-[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+[`WA GET PREFERENCE`](./commands/wa-get-preference) - [`WA SET PREFERENCE`](./commands/wa-set-preference)
 
 ---
 
@@ -89,8 +89,8 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
 
 Le moteur CEF a les limitations suivantes :
 
-- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md) : pour utiliser cette commande, il faut qu'au moins une page soit déjà chargée dans la zone (par un appel à [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou par une affectation à la variable URL associée à la zone).
-- Lorsque les dépôts d'URL sont activés par le sélecteur `WA enable URL drop` de la commande [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md), le premier dépôt doit être précédé d'au moins un appel à [WA OPEN URL](../commands-legacy/wa-open-url.md) ou d'une assignation à la variable URL associée à la zone.
+- [WA SET PAGE CONTENT](./commands/wa-set-page-content) : pour utiliser cette commande, il faut qu'au moins une page soit déjà chargée dans la zone (par un appel à [`WA OPEN URL`](./commands/wa-open-url) ou par une affectation à la variable URL associée à la zone).
+- Lorsque les dépôts d'URL sont activés par le sélecteur `WA enable URL drop` de la commande [WA SET PREFERENCE](./commands/wa-set-preference), le premier dépôt doit être précédé d'au moins un appel à [WA OPEN URL](./commands/wa-open-url) ou d'une assignation à la variable URL associée à la zone.
 
 :::note
 
@@ -110,4 +110,4 @@ Vous pouvez personnaliser les paramètres de la zone CEF en créant un fichier d
 
 #### Commandes
 
-[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+[`WA GET PREFERENCE`](./commands/wa-get-preference) - [`WA SET PREFERENCE`](./commands/wa-set-preference)

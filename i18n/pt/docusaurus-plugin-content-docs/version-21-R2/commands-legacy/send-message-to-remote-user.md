@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 In *message*, pass the text of the message to be displayed. It will be displayed as an alert or a notification on the screen of the session user(s).
 
-The optional *userSession* parameter can be used to designate a specific user by passing their session ID. You can retrieve the session ID with the [Process activity](../commands/process-activity.md) command. If *userSession* is omitted, the message is sent to all users.
+The optional *userSession* parameter can be used to designate a specific user by passing their session ID. You can retrieve the session ID with the [Process activity](./commands/process-activity) command. If *userSession* is omitted, the message is sent to all users.
 
 **Note**: This command can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or on 4D single user, **SEND MESSAGE TO REMOTE USER** does nothing.
 
@@ -71,5 +71,6 @@ You want to send a message to all users, then send a message to a specific user:
 | --- | --- |
 | Número do comando | 1632 |
 | Thread-seguro | yes |
+
 
 

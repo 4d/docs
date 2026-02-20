@@ -106,8 +106,8 @@ Vous souhaitez lire une date depuis un attribut d'objet, quelle que soit l'optio
 
 ## Voir aussi 
 
-[Bool](../commands/bool)  
-[String](../commands/string.md)  
+[Bool](./commands/bool)  
+[String](./commands/string)  
 
 ## Propriétés
 
@@ -115,5 +115,7 @@ Vous souhaitez lire une date depuis un attribut d'objet, quelle que soit l'optio
 | --- | --- |
 | Numéro de commande | 102 |
 | Thread safe | yes |
+
+
 
 

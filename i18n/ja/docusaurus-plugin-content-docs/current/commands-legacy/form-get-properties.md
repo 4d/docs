@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
-[Open form window](../commands/open-form-window.md)  
+[Open form window](./commands/open-form-window)  
 
 ## プロパティ
 
@@ -61,5 +61,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 674 |
 | スレッドセーフである | no |
+
 
 

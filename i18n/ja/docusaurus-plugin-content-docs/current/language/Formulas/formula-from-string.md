@@ -64,7 +64,7 @@ displayed_sidebar: docs
 ## 参照
 
 [Formula](formula.md)\
-[Parse formula](../commands-legacy/parse-formula.md)
+[Parse formula](./commands/parse-formula)
 
 ## プロパティ
 
@@ -72,5 +72,6 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1601 |
 | スレッドセーフ | ◯    |
+
 
 

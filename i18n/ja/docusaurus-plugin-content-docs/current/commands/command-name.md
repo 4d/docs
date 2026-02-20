@@ -130,7 +130,7 @@ Until(OK=0) // 既存のコマンドの終了
 
 ## 参照
 
-[EXECUTE FORMULA](../commands-legacy/execute-formula.md)  
+[EXECUTE FORMULA](./commands/execute-formula)  
 [プリエンプティブプロセス](../Develop/preemptive.md)
 
 ## プロパティ
@@ -140,5 +140,6 @@ Until(OK=0) // 既存のコマンドの終了
 | コマンド番号     | 538 |
 | スレッドセーフ    | ◯   |
 | 更新するシステム変数 | OK  |
+
 
 

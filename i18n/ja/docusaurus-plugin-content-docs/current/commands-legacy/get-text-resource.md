@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
+[Get indexed string](./commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
 ## プロパティ
@@ -61,5 +61,6 @@ displayed_sidebar: docs
 | コマンド番号 | 504 |
 | スレッドセーフである | no |
 | システム変数を更新する | OK |
+
 
 

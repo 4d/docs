@@ -38,13 +38,13 @@ displayed_sidebar: docs
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Si omite este parámetro, indica que el parámetro *objeto* es una variable. En ese caso, no pasa una cadena, sino una referencia de variable. Para mayor información sobre nombres de objetos, consulte la sección *Propiedades de los objetos*. 
 
-Este comando debe utilizarse con el evento de formulario On row moved (ver el comando [Form event code](../commands/form-event-code.md)). 
+Este comando debe utilizarse con el evento de formulario On row moved (ver el comando [Form event code](./commands/form-event-code)). 
 
 **Nota:** este comando no tiene en cuenta el estado oculto/mostrado de las líneas del list box. 
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  
 
 ## Propiedades
@@ -53,5 +53,6 @@ Este comando debe utilizarse con el evento de formulario On row moved (ver el co
 | --- | --- |
 | Número de comando | 837 |
 | Hilo seguro | no |
+
 
 

@@ -5,7 +5,7 @@ displayed_sidebar: docs
 slug: /WritePro/exporting-to-svg-format
 ---
 
-Vous pouvez exporter les pages d’un document 4D Write Pro au format SVG à l'aide des commandes [WP EXPORTER DOCUMENT](../commands/wp-exporter-document) et [WP EXPORTER VARIABLE](../commands/wp-exporter-variable). Cette page contient des informations et des notes supplémentaires sur l'exportation SVG.
+Vous pouvez exporter les pages d’un document 4D Write Pro au format SVG à l'aide des commandes [WP EXPORTER DOCUMENT](./commands/wp-exporter-document) et [WP EXPORTER VARIABLE](./commands/wp-exporter-variable). Cette page contient des informations et des notes supplémentaires sur l'exportation SVG.
 
 ### Rendu SVG 
 

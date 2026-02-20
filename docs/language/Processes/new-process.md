@@ -64,7 +64,7 @@ The *stack* parameter allows you to indicate the amount of memory allocated for 
 
 ### Process Name 
 
- You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](../commands/process-info.md) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be an empty string. 
+ You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](./commands/process-info) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be an empty string. 
 
 ### Parameters to Process Method 
 
@@ -92,7 +92,7 @@ Given the following project method:
  Until(OK=0)
 ```
 
-If you attach this project method to a custom menu item **Menu Bar Editor** window whose **Start a New Process** property is set, 4D will automatically start a new process running that method. The call [SET MENU BAR](set-menu-bar.md)(1) adds a menu bar to the new process. In the absence of any window (that you could open with [Open window](../commands/open-window.md)), the call to [ADD RECORD](add-record.md) will automatically open one.
+If you attach this project method to a custom menu item **Menu Bar Editor** window whose **Start a New Process** property is set, 4D will automatically start a new process running that method. The call [SET MENU BAR](set-menu-bar.md)(1) adds a menu bar to the new process. In the absence of any window (that you could open with [Open window](./commands/open-window)), the call to [ADD RECORD](add-record.md) will automatically open one.
 
 To be able to start this Add Customers process when you click on a button in a custom control panel, you can write:
 
@@ -134,5 +134,6 @@ In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method STA
 | --- | --- |
 | Command number | 317 |
 | Thread safe | yes |
+
 
 

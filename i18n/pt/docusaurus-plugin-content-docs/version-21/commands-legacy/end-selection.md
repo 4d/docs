@@ -58,7 +58,7 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
 ## Ver também 
 
 [Before selection](before-selection.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
@@ -69,5 +69,6 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
 | --- | --- |
 | Número do comando | 36 |
 | Thread-seguro | yes |
+
 
 

@@ -66,7 +66,7 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 ## Veja também
 
 [New collection](new-collection.md)\
-[New shared object](../commands-legacy/new-shared-object.md)\
+[New shared object](./commands/new-shared-object)\
 *Shared objects and shared collections*
 
 ## Propriedades
@@ -75,5 +75,6 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 | ----------------- | ---- |
 | Número de comando | 1527 |
 | Thread safe       | sim  |
+
 
 

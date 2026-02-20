@@ -175,7 +175,7 @@ Una vez ejecutado el formulario, el list box se llena automáticamente con la se
 
 ## Ver también
 
-[Self](../commands-legacy/self.md)\
+[Self](./commands/self)\
 [Super](super.md)
 
 ## Propiedades
@@ -184,5 +184,6 @@ Una vez ejecutado el formulario, el list box se llena automáticamente con la se
 | ----------------- | ---- |
 | Número de comando | 1470 |
 | Hilo seguro       | sí   |
+
 
 

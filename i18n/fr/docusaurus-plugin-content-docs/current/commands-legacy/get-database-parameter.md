@@ -836,7 +836,7 @@ Dans la [On Startup database method](on-startup-database-method.md), vous pouvez
 ## Voir aussi 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
@@ -846,5 +846,6 @@ Dans la [On Startup database method](on-startup-database-method.md), vous pouvez
 | --- | --- |
 | Numéro de commande | 643 |
 | Thread safe | no |
+
 
 

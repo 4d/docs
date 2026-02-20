@@ -34,7 +34,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Contextual click](contextual-click.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## プロパティ
 
@@ -42,5 +42,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 712 |
 | スレッドセーフである | no |
+
 
 

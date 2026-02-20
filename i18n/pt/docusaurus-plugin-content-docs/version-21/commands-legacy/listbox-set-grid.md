@@ -41,7 +41,7 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos que indicam
 ## Ver também 
 
 [LISTBOX GET GRID](listbox-get-grid.md)  
-[LISTBOX Get property](../commands/listbox-get-property.md)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
 ## Propriedades
@@ -50,5 +50,6 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos que indicam
 | --- | --- |
 | Número do comando | 841 |
 | Thread-seguro | no |
+
 
 

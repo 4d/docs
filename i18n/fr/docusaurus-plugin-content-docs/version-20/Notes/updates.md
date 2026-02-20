@@ -93,7 +93,7 @@ Sous Windows 11 24H2, la génération de fichiers PDF à l'aide du pilote Micros
 
 #### Changements de comportement
 
-- A compter de 4D 20.3, afin de permettre la vérification du mot de passe lorsque \[l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt\](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande \[`Open datastore`\](../commands-legacy/open-datastore.md) est maintenant envoyée en clair par défaut. Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Dans certains cas spécifiques, une nouvelle option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande `Open datastore`).
+- A compter de 4D 20.3, afin de permettre la vérification du mot de passe lorsque \[l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt\](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande \[`Open datastore`\](./commands/open-datastore) est maintenant envoyée en clair par défaut. Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Dans certains cas spécifiques, une nouvelle option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande `Open datastore`).
 
 
 ## 4D 20.2 LTS
@@ -377,3 +377,4 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 | PHP          | 8.2.4            | 20                  |                                                                                                               |
 | libldap      | 2.6.4            | 20                  |                                                                                                               |
 | libsasl      | 2.1.28           | 20                  |                                                                                                               |
+

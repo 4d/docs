@@ -105,8 +105,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Bool](../commands/bool)  
-[String](../commands/string.md)  
+[Bool](./commands/bool)  
+[String](./commands/string)  
 
 ## プロパティ
 
@@ -114,5 +114,7 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 102 |
 | スレッドセーフである | yes |
+
+
 
 

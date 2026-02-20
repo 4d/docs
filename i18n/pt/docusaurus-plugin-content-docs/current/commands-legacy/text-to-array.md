@@ -117,8 +117,8 @@ Deve imprimir em uma área de 400 pixeles de largo um texto de um máximo de 80 
 
 ## Ver também 
 
-[Split string](../commands/split-string  
-[ST Get plain text](st-get-plain-text.md)  
+[Split string](./commands/split-string  
+[ST Get plain text](st-get-plain-text)  
 [ST Get text](st-get-text.md)  
 
 ## Propriedades
@@ -127,5 +127,6 @@ Deve imprimir em uma área de 400 pixeles de largo um texto de um máximo de 80 
 | --- | --- |
 | Número do comando | 1149 |
 | Thread-seguro | no |
+
 
 

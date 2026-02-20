@@ -39,7 +39,7 @@ Vous pouvez passer dans *événement* un des [événements formulaire 4D pris en
 
 ## Voir aussi 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [GOTO OBJECT](goto-object.md)  
 
 ## Propriétés
@@ -48,5 +48,6 @@ Vous pouvez passer dans *événement* un des [événements formulaire 4D pris en
 | --- | --- |
 | Numéro de commande | 1086 |
 | Thread safe | no |
+
 
 

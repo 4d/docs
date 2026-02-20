@@ -26,13 +26,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.FORM UNLOAD.Summary-->The **FORM UNLOAD** command releases from memory the current form designated using the [FORM LOAD](../commands/form-load.md) command.<!-- END REF-->
+<!--REF #_command_.FORM UNLOAD.Summary-->The **FORM UNLOAD** command releases from memory the current form designated using the [FORM LOAD](./commands/form-load) command.<!-- END REF-->
 
-Calling this command is necessary when you use the [FORM LOAD](../commands/form-load.md) command outside of the printing context (in the case of printing, the current form is automatically closed again when the [CLOSE PRINTING JOB](close-printing-job.md) command is called). 
+Calling this command is necessary when you use the [FORM LOAD](./commands/form-load) command outside of the printing context (in the case of printing, the current form is automatically closed again when the [CLOSE PRINTING JOB](close-printing-job.md) command is called). 
 
 ## See also 
 
-[FORM LOAD](../commands/form-load.md)  
+[FORM LOAD](./commands/form-load)  
 
 ## Properties
 
@@ -40,5 +40,6 @@ Calling this command is necessary when you use the [FORM LOAD](../commands/form-
 | --- | --- |
 | Command number | 1299 |
 | Thread safe | no |
+
 
 

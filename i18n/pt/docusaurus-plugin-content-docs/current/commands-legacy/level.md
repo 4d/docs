@@ -66,7 +66,7 @@ Este exemplo é um modelo para um método de formulário. Mostra cada evento pos
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [PRINT SELECTION](print-selection.md)  
 
 ## Propriedades
@@ -75,5 +75,6 @@ Este exemplo é um modelo para um método de formulário. Mostra cada evento pos
 | --- | --- |
 | Número do comando | 101 |
 | Thread-seguro | no |
+
 
 

@@ -362,7 +362,7 @@ Les attributs de taille de papier sont utilisés pour spécifier les dimensions 
 - Si vous définissez le format du papier à l'aide de la propriété `kind`, vous pouvez utiliser l'une ou l'autre :
   - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
   - Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
-    un des formats retournés par la commande [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
+    un des formats retournés par la commande [`PRINT OPTION VALUES`](./commands/print-option-values).
 
 ### Graduation
 
@@ -513,3 +513,4 @@ Il contient les propriétés suivantes :
 | ViewPro.formulaBar     | Boolean    | Indique si la barre de formule est affichée ou non. Disponible uniquement pour l'interface "toolbar".                                                                                                                                                                                                                                                                                     |
 | ViewPro.inited         | Boolean    | Indique si la zone 4D View Pro a été initialisée ou non (voir l'événement [On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                                                         |
 | ViewPro.interface      | Text       | Spécifie le type de l'interface utilisateur : "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                                                                                |
+

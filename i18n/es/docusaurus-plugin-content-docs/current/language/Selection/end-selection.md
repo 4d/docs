@@ -59,7 +59,7 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 ## Ver también 
 
 [Before selection](before-selection.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
@@ -70,5 +70,6 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 | --- | --- |
 | Número de comando | 36 |
 | Hilo seguro | yes |
+
 
 

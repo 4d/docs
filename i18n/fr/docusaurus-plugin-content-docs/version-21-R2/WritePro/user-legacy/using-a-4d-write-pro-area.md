@@ -34,7 +34,7 @@ Lorsqu'ils sont affichés en mode Page ou Brouillon (ou dans le contexte de l'im
 
 Les ruptures peuvent être ajoutées par programmation ou par l'utilisateur. Les actions disponibles sont les suivantes :
 
-* commande [WP INSERER RUPTURE](../commands/wp-inserer-rupture)
+* commande [WP INSERER RUPTURE](./commands/wp-inserer-rupture)
 * action standard *insertPageBreak*
 * l'option **Insérer un saut de page** du menu contextuel par défaut.
 
@@ -46,7 +46,7 @@ Vous pouvez contrôler les sauts de paragraphe automatiques à l'aide des foncti
 * **Éviter le saut de page à l'intérieur** : Lorsque cette option est définie pour un paragraphe, 4D Write Pro empêche ce paragraphe d'être divisé en parties sur deux pages ou plus.
 * **Paragraphe solidaire :** Lorsque cette option est définie pour un paragraphe, ce paragraphe ne peut pas être séparé de celui qui le suit par un saut automatique. Voir wk keep with next et l'[action standard](./defining-a-4d-write-pro-area.md#standard-actions) correspondante *keepWithNext*.
 
-Ces options peuvent être définies à l'aide du menu contextuel, ou des [attributs](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou des [actions standard](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled* et *avoidPageBreakInsidev*).
+Ces options peuvent être définies à l'aide du menu contextuel, ou des [attributs](./commands/4d-write-pro-attributes) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou des [actions standard](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled* et *avoidPageBreakInsidev*).
 
 <!-- INCLUDE lists-WP.Desc -->
 
@@ -61,7 +61,7 @@ L'arrière-plan (le fond) des documents et des éléments de documents de 4D Wri
 * rectangle d'application
 * répétition
 
-Ces [attributs](../commands-legacy/4d-write-pro-attributes.md) peuvent être définis par programmation pour le fond des éléments individuels dans la page et/ou de l'ensemble du document via la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) ou les [actions standard](./defining-a-4d-write-pro-area.md#standard-actions). 
+Ces [attributs](./commands/4d-write-pro-attributes) peuvent être définis par programmation pour le fond des éléments individuels dans la page et/ou de l'ensemble du document via la commande [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs) ou les [actions standard](./defining-a-4d-write-pro-area.md#standard-actions). 
 
 Les utilisateurs peuvent modifier les attributs d'arrière-plan à l'aide du menu contextuel de la zone : 
 
@@ -155,7 +155,7 @@ Vous pouvez ajouter tout contenu statique, qui sera automatiquement répété su
 
 Vous pouvez ajouter du contenu dynamique tel que le numéro de page ou le nombre de pages, à l'aide de la commande [ST INSERER EXPRESSION](../../commands/st-inserer-expression) (pour plus d'informations, veuillez vous reporter au paragraphe *Insérer des expressions de page et de document*).
 
-**Note :** Vous pouvez également gérer les en-têtes et pieds de page par programmation à l'aide de commandes spécifiques telles que [WP Lire entete](../commands/wp-lire-entete) et [WP Lire pied](../commands/wp-lire-pied).
+**Note :** Vous pouvez également gérer les en-têtes et pieds de page par programmation à l'aide de commandes spécifiques telles que [WP Lire entete](./commands/wp-lire-entete) et [WP Lire pied](./commands/wp-lire-pied).
 
 Une fois qu'un en-tête ou un pied de page a été défini pour une section, vous pouvez configurer ses attributs communs à l'aide du menu contextuel :
 
@@ -241,7 +241,7 @@ Le libellé **Retirer la tabulation** est disponible en cas de clic droit sur un
 
 :::note Notes 
 
-* Les tabulations peuvent également être définies par programmation à l'aide des commandes [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs), [WP LIRE ATTRIBUTS](../commands/wp-lire-attributs), et [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs) avec les sélecteurs wk tab default et wk tabs.
+* Les tabulations peuvent également être définies par programmation à l'aide des commandes [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs), [WP LIRE ATTRIBUTS](./commands/wp-lire-attributs), et [WP REINITIALISER ATTRIBUTS](./commands/wp-reinitialiser-attributs) avec les sélecteurs wk tab default et wk tabs.
 * Pour les tabulations décimales, 4D Write Pro considère le premier point ou la première virgule de droite comme un séparateur décimal ; ce paramètre par défaut peut être modifié avec le sélecteur wk tab decimal separator.
 
 :::
@@ -256,7 +256,7 @@ Vous pouvez définir les caractères qui précèdent les tabulations (caractère
 * \_\_ (traits de soulignement)
 * \*\*\* (astérisques)
 
-Les caractères de conduite apparaissent toujours avant la tabulation et suivent la direction du texte (gauche à droite ou droite à gauche). Ils peuvent être définis soit par programmation avec les commandes [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs), [WP LIRE ATTRIBUTS](../commands/wp-lire-attributs) ou [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs) à l'aide de `wk leading` et des sélecteurs `wk tab defaul`t ou `wk tabs`, soit via le menu contextuel de la règle horizontale (comme illustré ci-dessous) :
+Les caractères de conduite apparaissent toujours avant la tabulation et suivent la direction du texte (gauche à droite ou droite à gauche). Ils peuvent être définis soit par programmation avec les commandes [WP FIXER ATTRIBUTS](./commands/wp-fixer-attributs), [WP LIRE ATTRIBUTS](./commands/wp-lire-attributs) ou [WP REINITIALISER ATTRIBUTS](./commands/wp-reinitialiser-attributs) à l'aide de `wk leading` et des sélecteurs `wk tab defaul`t ou `wk tabs`, soit via le menu contextuel de la règle horizontale (comme illustré ci-dessous) :
 
 ![](../../assets/en/WritePro/pict3632556.fr.png)
 
@@ -282,12 +282,12 @@ Un [`On After Edit`](../../Events/onAfterEdit.md) (événement Sur après modifi
 
 Les colonnes peuvent être définies au niveau du document (elles sont alors affichées dans l'ensemble du document) et/ou au niveau de la section (chaque section peut avoir sa propre configuration de colonne).
 
-**Note :** Les colonnes sont prises en charge uniquement dans les modes d'affichage **Page** et **Brouillon** (elles ne sont pas affichées en mode **Inclus),** et sont exportées en .docx à l'aide de [WP EXPORTER DOCUMENT](../commands/wp-exporter-document) mais pas aux formats HTML et MIME HTML (format wk page web complète).
+**Note :** Les colonnes sont prises en charge uniquement dans les modes d'affichage **Page** et **Brouillon** (elles ne sont pas affichées en mode **Inclus),** et sont exportées en .docx à l'aide de [WP EXPORTER DOCUMENT](./commands/wp-exporter-document) mais pas aux formats HTML et MIME HTML (format wk page web complète).
 
 Les colonnes peuvent être définies via :
 
 * le sous-menu **Colonnes** du menu contextuel de la zone 4D Write Pro,
-* les [attributes](../commands-legacy/4d-write-pro-attributes.md) 4D Write Pro,
+* les [attributes](./commands/4d-write-pro-attributes) 4D Write Pro,
 * les [actions standard](./using-4d-write-pro-standard-actions.md) 4D Write Pro.
 
 Vous pouvez définir ou lire les propriétés et actions suivantes pour les colonnes :
@@ -298,7 +298,7 @@ Vous pouvez définir ou lire les propriétés et actions suivantes pour les colo
 | Espacement de colonne                                | Espacement entre les colonnes en pts, pouces ou cm. A noter que toutes les colonnes ont la même largeur. La largeur de chaque colonne est calculée automatiquement par 4D Write Pro en fonction du nombre de colonnes, de la largeur de la page et de l'espacement                                     | wk column spacing                                                                | *columnSpacing*                                         |
 | Largeur de colonne                                   | (attribut en lecture seule) Largeur actuelle de chaque colonne, i.e. largeur calculée                                                                                                                                                                                                                  | wk column width                                                                  | \-                                                      |
 | Style, couleur et épaisseur du séparateur de colonne | Vous pouvez ajouter un séparateur vertical (une ligne décorative) entre les colonnes. Ces options vous permettent de définir le style, la couleur et l'épaisseur de la ligne. ![](../../assets/en/WritePro/pict3752176.en.png)Pour supprimer le séparateur vertical, choisissez **Aucun** comme style. | wk column rule style, wk column rule color, wk column rule width                 | *columnRuleStyle*, *columnRuleColor*, *columnRuleWidth* |
-| Insérer saut                                         | Insérer un saut de colonne                                                                                                                                                                                                                                                                             | wk column break, voir aussi [WP INSERER RUPTURE](../commands/wp-inserer-rupture) | *insertColumnBreak*                                     |
+| Insérer saut                                         | Insérer un saut de colonne                                                                                                                                                                                                                                                                             | wk column break, voir aussi [WP INSERER RUPTURE](./commands/wp-inserer-rupture) | *insertColumnBreak*                                     |
 | Menu Colonnes                                        | Créer un sous-menu Colonnes                                                                                                                                                                                                                                                                            | \-                                                                               | *columns*                                               |
 
 ### Créer une page avec des sections multi-colonnes et des section à une seule colonne 
@@ -324,7 +324,7 @@ Les signets sont dynamiques, ce qui signifie que si l’utilisateur déplace, aj
 - Puis vous insérez 50 pages au début du document.
 - Vous pouvez toujours accéder automatiquement au même contenu "Hello world", maintenant à la page 70 du document, par l’intermédiaire du signet "MyBM".
 
-Un document peut contenir un nombre illimité de signets. Plusieurs signets peuvent référencer la même plage, et les plages des signets peuvent être entrelacées. Cependant, chaque nom de signet doit être unique dans le document. Les signets ne sont pas importés lorsque la commande [WP INSERER DOCUMENT](../commands/wp-insert-document-body) est utilisée (les signets dans le document de destination ne peuvent pas être écrasés).
+Un document peut contenir un nombre illimité de signets. Plusieurs signets peuvent référencer la même plage, et les plages des signets peuvent être entrelacées. Cependant, chaque nom de signet doit être unique dans le document. Les signets ne sont pas importés lorsque la commande [WP INSERER DOCUMENT](./commands/wp-insert-document-body) est utilisée (les signets dans le document de destination ne peuvent pas être écrasés).
 
 Une fois créé, un signet est stocké dans le document. Il est enregistré avec le document, et peut être manipulé par différentes commandes.
 
@@ -332,10 +332,10 @@ Les signets peuvent être utilisés pour référencer des parties d’un documen
 
 Plusieurs commandes vous permettent de créer, supprimer et utiliser les signets :
 
-* [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) pour créer un signet à partir d’une plage
-* [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) pour récupérer tous les signets définis dans le document,
-* [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) pour récupérer une plage depuis un signet existant,
-* [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) pour supprimer un signet
+* [WP NEW BOOKMARK](./commands/wp-new-bookmark) pour créer un signet à partir d’une plage
+* [WP GET BOOKMARKS](./commands/wp-get-bookmarks) pour récupérer tous les signets définis dans le document,
+* [WP Bookmark range](./commands/wp-bookmark-range) pour récupérer une plage depuis un signet existant,
+* [WP DELETE BOOKMARK](./commands/wp-delete-bookmark) pour supprimer un signet
 
 
 ## Liens
@@ -354,12 +354,12 @@ Les liens hypertexte peuvent également être activés directement depuis les do
 
 Les liens hypertexte sont gérés via les commandes suivantes :
 
-* [WP FIXER LIEN](../commands-legacy/wp-set-link.md) pour insérer un lien à l'aide de l'objet cible
-* [WP Lire liens](../commands-legacy/wp-get-links.md) pour lire la collection de tous les liens dans un objet cible.
+* [WP FIXER LIEN](./commands/wp-set-link) pour insérer un lien à l'aide de l'objet cible
+* [WP Lire liens](./commands/wp-get-links) pour lire la collection de tous les liens dans un objet cible.
 
 :::note
 
-Les liens sont gérés en tant qu'attributs, ils peuvent donc être définis ou lus à l'aide des commandes [WP SET ATTRIBUTES](../commands/wp-set-attributes) et [WP GET ATTRIBUTES](../commands/wp-get-attributes) associées à la constante `wk link url`. Toutefois, il est recommandé d'utiliser les commandes [WP SET LINK](../commands-legacy/wp-set-link.md) et [WP Get links](../commands-legacy/wp-get-links.md, puisqu'elles encodent/décodent automatiquement les liens hypertexte sous forme d'URL. Lorsque les liens sont lus à l'aide de la commande [WP GET ATTRIBUTES](../commands/wp-get-attributes), si l'objet cible contient plusieurs liens, la commande retourne la chaîne du premier lien.
+Les liens sont gérés en tant qu'attributs, ils peuvent donc être définis ou lus à l'aide des commandes [WP SET ATTRIBUTES](./commands/wp-set-attributes) et [WP GET ATTRIBUTES](./commands/wp-get-attributes) associées à la constante `wk link url`. Toutefois, il est recommandé d'utiliser les commandes [WP SET LINK](./commands/wp-set-link) et [WP Get links](./commands/wp-get-links.md, puisqu'elles encodent/décodent automatiquement les liens hypertexte sous forme d'URL. Lorsque les liens sont lus à l'aide de la commande [WP GET ATTRIBUTES](./commands/wp-get-attributes), si l'objet cible contient plusieurs liens, la commande retourne la chaîne du premier lien.
 
 :::
 
@@ -423,5 +423,7 @@ Les commandes 4D suivantes du thème [Objets (Formulaires)](../../commands/theme
 | `OBJECT Get pointer`                                                            |                                                                                                          |
 
 Les commandes OBJET non listées ci-dessus ne sont pas applicables aux zones 4D Write Pro.
+
+
 
 

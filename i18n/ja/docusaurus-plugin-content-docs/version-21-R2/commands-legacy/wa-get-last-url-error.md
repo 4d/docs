@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## プロパティ
 
@@ -53,5 +53,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1034 |
 | スレッドセーフである | no |
+
 
 

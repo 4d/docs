@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 [Count user processes](count-user-processes.md)  
 [Count users](count-users.md)  
-[Process info](../commands/process-info.md)  
+[Process info](./commands/process-info)  
 [Process state](process-state.md)  
 
 ## プロパティ
@@ -38,5 +38,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 335 |
 | スレッドセーフである | yes |
+
 
 

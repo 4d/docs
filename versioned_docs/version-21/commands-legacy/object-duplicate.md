@@ -115,7 +115,7 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
-[OBJECT SET DATA SOURCE FORMULA](../commands/object-set-data-source-formula.md)
+[OBJECT SET DATA SOURCE FORMULA](./commands/object-set-data-source-formula)
 
 ## Properties
 
@@ -124,5 +124,6 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
 | Command number | 1111 |
 | Thread safe | no |
 | Modifies variables | OK |
+
 
 

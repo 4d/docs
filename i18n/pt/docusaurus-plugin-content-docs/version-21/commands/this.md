@@ -176,7 +176,7 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 ## Veja também
 
-[Self](../commands-legacy/self.md)\
+[Self](./commands/self)\
 [Super](super.md)
 
 ## Propriedades
@@ -185,5 +185,6 @@ Once the form is executed, the list box is automatically filled with the entity 
 | ----------------- | ---- |
 | Número de comando | 1470 |
 | Thread safe       | sim  |
+
 
 

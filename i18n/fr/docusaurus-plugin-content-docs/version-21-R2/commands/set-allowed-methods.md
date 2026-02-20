@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 - L'éditeur de formules - les méthodes autorisées apparaissent à la fin de la liste des commandes par défaut et peuvent être utilisées dans les formules (voir la section *Description de l'éditeur de formules*).
 - L'éditeur d'étiquettes - les méthodes autorisées sont listées dans le menu **Appliquer** si elles sont également partagées avec le composant (voir la section *Description de l'éditeur d'étiquettes*).
-- Les formules insérées dans des zones de texte stylées ou dans des documents 4D Write Pro par la commande [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) - les méthodes non autorisées sont automatiquement rejetées.
+- Les formules insérées dans des zones de texte stylées ou dans des documents 4D Write Pro par la commande [ST INSERT EXPRESSION](./commands/st-insert-expression) - les méthodes non autorisées sont automatiquement rejetées.
 - Les documents 4D View Pro - par défaut, si la commande [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) n'a jamais été appelée au cours de la session, les formules 4D View Pro n'acceptent que les méthodes définies par **SET ALLOWED METHODS**. Cependant, il est recommandé d'utiliser [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md). Voir [Déclarer une méthode autorisée](../ViewPro/formulas.md#declaring-allowed-methods).
 
 Par défaut, si vous n'utilisez pas la commande **SET ALLOWED METHODS**, aucune méthode n'est appelable (l'utilisation d'une méthode non autorisée dans une expression provoque une erreur).
@@ -55,8 +55,8 @@ Cet exemple autorise la saisie de toutes les méthodes commençant par "formula"
 
 ## Voir également
 
-[EDIT FORMULA](../commands-legacy/edit-formula.md)\
-[GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
+[EDIT FORMULA](./commands/edit-formula)\
+[GET ALLOWED METHODS](./commands/get-allowed-methods)
 
 ## Propriétés
 
@@ -64,5 +64,6 @@ Cet exemple autorise la saisie de toutes les méthodes commençant par "formula"
 | ------------------ | --- |
 | Numéro de commande | 805 |
 | Thread safe        | non |
+
 
 

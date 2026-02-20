@@ -44,7 +44,7 @@ Dans l'objet *options*, passez les propriétés à utiliser lors de la générat
 
 ### Gestion des erreurs 
 
-Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](../commands/last-errors.md)  et [ON ERR CALL](on-err-call.md).  
+Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](./commands/last-errors)  et [ON ERR CALL](on-err-call.md).  
 
 | **Numéro** | **Message**                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------ |
@@ -86,5 +86,6 @@ Cet exemple génère un hash de mot de passe à l'aide de bcrypt avec un coût d
 | --- | --- |
 | Numéro de commande | 1533 |
 | Thread safe | yes |
+
 
 

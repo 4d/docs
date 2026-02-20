@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET TIMER.Summary-->La commande **SET TIMER** permet d’activer l’événement formulaire On Timer et de fixer, pour le process et le formulaire courants, le nombre de ticks (1 tick = 1/60ème de seconde) entre chaque événement formulaire On Timer.<!-- END REF--> 
 
-**Note :** Pour plus d’informations sur cet événement formulaire, reportez-vous à la description de la commande [Form event code](../commands/form-event-code.md).
+**Note :** Pour plus d’informations sur cet événement formulaire, reportez-vous à la description de la commande [Form event code](./commands/form-event-code).
 
 Si elle est appelée dans un contexte autre que l’affichage d’un formulaire, cette commande ne fait rien.
 
@@ -55,7 +55,7 @@ Vous souhaitez que, lorsqu’un formulaire est affiché à l’écran, un bip so
 
 ## Voir aussi 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [REDRAW](redraw.md)  
 
 ## Propriétés
@@ -64,5 +64,6 @@ Vous souhaitez que, lorsqu’un formulaire est affiché à l’écran, un bip so
 | --- | --- |
 | Numéro de commande | 645 |
 | Thread safe | no |
+
 
 

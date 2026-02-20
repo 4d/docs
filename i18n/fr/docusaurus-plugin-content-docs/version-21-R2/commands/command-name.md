@@ -130,7 +130,7 @@ Until(OK=0) //fin des commandes existantes
 
 ## Voir également
 
-[EXECUTE FORMULA](../commands-legacy/execute-formula.md)\
+[EXECUTE FORMULA](./commands/execute-formula)\
 [Preemptive Processes](../Develop/preemptive.md)
 
 ## Propriétés
@@ -140,5 +140,6 @@ Until(OK=0) //fin des commandes existantes
 | Numéro de commande    | 538 |
 | Thread safe           | oui |
 | Modifie les variables | OK  |
+
 
 

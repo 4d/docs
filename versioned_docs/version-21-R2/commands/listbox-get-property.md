@@ -99,9 +99,9 @@ Given a list box "MyListbox", if you execute the following statement:
 
 ## See also 
 
-[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)  
+[LISTBOX SET GRID](./commands/listbox-set-grid)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
-[OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)  
+[OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)  
 
 ## Properties
 
@@ -109,5 +109,6 @@ Given a list box "MyListbox", if you execute the following statement:
 | --- | --- |
 | Command number | 917 |
 | Thread safe | no |
+
 
 

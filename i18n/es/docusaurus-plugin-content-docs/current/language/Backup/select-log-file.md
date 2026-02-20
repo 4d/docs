@@ -23,7 +23,7 @@ En *logFile*, pase el nombre o la ruta completa del archivo de registro a ser cr
 
 Si se pasa una cadena vacía en *logFile*, **SELECT LOG FILE** presenta un cuadro de diálogo Save File, que permite al usuario elegir el nombre y la ubicación del archivo de registro que se va a crear. Si el archivo se crea correctamente, la variable OK toma el valor 1. De lo contrario, si el usuario hace clic en Cancelar o si el archivo de registro no pudo ser creado, OK toma el valor 0.
 
-**Nota:** el nuevo archivo de registro no se genera inmediatamente después de la ejecución del comando, sino después de la siguiente copia de seguridad (el parámetro se mantiene en el archivo de datos y se tendrá en cuenta aunque la base de datos se cierre mientras tanto) o de una llamada al comando [New log file](new-log-file.md). Puede llamar al comando [BACKUP](../commands-legacy/backup.md) para activar la creación del archivo de registro.
+**Nota:** el nuevo archivo de registro no se genera inmediatamente después de la ejecución del comando, sino después de la siguiente copia de seguridad (el parámetro se mantiene en el archivo de datos y se tendrá en cuenta aunque la base de datos se cierre mientras tanto) o de una llamada al comando [New log file](new-log-file.md). Puede llamar al comando [BACKUP](./commands/backup) para activar la creación del archivo de registro.
 
 Si pasa *\** en *logFile*, **SELECT LOG FILE** cierra el archivo de registro actual para la base de datos. La variable OK toma el valor 1 cuando se cierra el archivo de registro.
 
@@ -34,7 +34,7 @@ OK toma el valor 1 si el archivo de historial está correctamente creado, o cerr
 ## Ver también
 
 [New log file](new-log-file.md)  
-[ON ERR CALL](../commands-legacy/on-err-call.md)
+[ON ERR CALL](./commands/on-err-call)
 
 ## Propiedades
 
@@ -43,4 +43,5 @@ OK toma el valor 1 si el archivo de historial está correctamente creado, o cerr
 | Número de comando      | 345       |
 | Hilo seguro            | no        |
 | Modifica las variables | OK, error |
+
 

@@ -45,7 +45,7 @@ Esta informação se retorna em três variáveis:
 
 ## Ver também 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Propriedades
 
@@ -53,5 +53,6 @@ Esta informação se retorna em três variáveis:
 | --- | --- |
 | Número do comando | 1034 |
 | Thread-seguro | no |
+
 
 

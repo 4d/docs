@@ -58,7 +58,7 @@ Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouil
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
-[Timestamp](../commands/timestamp)  
+[Timestamp](./commands/timestamp)  
 
 ## Propriétés
 
@@ -66,5 +66,6 @@ Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouil
 | --- | --- |
 | Numéro de commande | 459 |
 | Thread safe | yes |
+
 
 

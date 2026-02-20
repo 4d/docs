@@ -41,7 +41,7 @@ displayed_sidebar: docs
 ## See also 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 *Sets*  
 
 ## Properties
@@ -51,5 +51,6 @@ displayed_sidebar: docs
 | Command number | 204 |
 | Thread safe | no |
 | Forbidden on the server ||
+
 
 

@@ -47,7 +47,7 @@ Vous pouvez également passer des valeurs de coordonnées absolues dans les para
 Cette commande fonctionne uniquement dans les contextes suivants :
 
 * Formulaires entrée en mode saisie,
-* Formulaires affichés via la commande [DIALOG](../commands/dialog.md),
+* Formulaires affichés via la commande [DIALOG](./commands/dialog),
 * En-têtes et pieds de page des formulaires sortie affichés par la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
 * Formulaires en cours d'impression.
 
@@ -73,5 +73,6 @@ L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (3
 | --- | --- |
 | Numéro de commande | 1248 |
 | Thread safe | no |
+
 
 

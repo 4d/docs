@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> A pilha de erros inclui objetos enviados pelo comando [throw](../commands-legacy/throw.md), se houver. 
+<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> A pilha de erros inclui objetos enviados pelo comando [throw](./commands/throw), se houver. 
 
-Este comando deve ser chamado de uma método de chamada de erro instalado pelo comando [ON ERR CALL](../commands-legacy/on-err-call.md) ou dentro de um contexto [Try ou Try/Catch](../Concepts/error-handling.md#tryexpression).
+Este comando deve ser chamado de uma método de chamada de erro instalado pelo comando [ON ERR CALL](./commands/on-err-call) ou dentro de um contexto [Try ou Try/Catch](../Concepts/error-handling.md#tryexpression).
 
 Each error object contains the following properties:
 
@@ -77,8 +77,8 @@ Each error object contains the following properties:
 
 ## Veja também
 
-[ON ERR CALL](../commands-legacy/on-err-call.md)
-[throw](../commands-legacy/throw.md)  
+[ON ERR CALL](./commands/on-err-call)
+[throw](./commands/throw)  
 [Error handling](../Concepts/error-handling.md)
 
 ## Propriedades
@@ -87,5 +87,6 @@ Each error object contains the following properties:
 | ----------------- | ---- |
 | Número de comando | 1799 |
 | Thread safe       | sim  |
+
 
 

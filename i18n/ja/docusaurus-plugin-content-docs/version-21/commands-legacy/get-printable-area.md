@@ -49,7 +49,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Print form](../commands/print-form.md)  
+[Print form](./commands/print-form)  
 
 ## プロパティ
 
@@ -57,5 +57,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 703 |
 | スレッドセーフである | no |
+
 
 

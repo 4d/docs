@@ -76,8 +76,8 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)  
-[Object to path](../commands-legacy/object-to-path.md)  
-[Path to object](../commands-legacy/path-to-object.md)  
+[Object to path](./commands/object-to-path)  
+[Path to object](./commands/path-to-object)  
 
 
 ## Properties
@@ -86,5 +86,6 @@ If the command is called from a component, pass the optional `*` parameter to ge
 | --- | --- |
 | Command number | 1567 |
 | Thread safe | yes |
+
 
 

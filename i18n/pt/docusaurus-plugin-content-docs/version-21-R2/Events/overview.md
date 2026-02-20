@@ -5,7 +5,7 @@ title: Eventos formulário
 
 Eventos de formulário são eventos que podem levar à execução do método de formulário e/ou método(s) de objeto de formulário. Os eventos de formulário permitem que você controle o fluxo do aplicativo e escreva códigos que são executados somente quando ocorre um evento específico.
 
-Em seu código, você controla os eventos usando o comando [`FORM Event`](../commands/form-event.md), que retorna o evento acionado. Por exemplo:
+Em seu código, você controla os eventos usando o comando [`FORM Event`](./commands/form-event), que retorna o evento acionado. Por exemplo:
 
 ```4d
 //código de um botão
@@ -18,7 +18,7 @@ End if
 
 ## Objecto evento
 
-Cada evento é retornado como um objeto pelo comando [`FORM Event`](../commands/form-event.md). Por padrão, ele contém as seguintes propriedades:
+Cada evento é retornado como um objeto pelo comando [`FORM Event`](./commands/form-event). Por padrão, ele contém as seguintes propriedades:
 
 | Propriedade | Tipo          | Descrição                                                                                               |
 | ----------- | ------------- | ------------------------------------------------------------------------------------------------------- |
@@ -114,4 +114,5 @@ A tabela seguinte resume a forma como os métodos objeto e formulário são cham
 Lembre-se sempre de que, para qualquer evento, o método de um formulário ou de um objeto é chamado se a propriedade de evento correspondente estiver selecionada para o formulário ou para os objetos. A vantagem de desativar os eventos no ambiente Design (usando a Lista de propriedades do editor de formulários) é que você pode reduzir o número de chamadas para métodos e, portanto, otimizar significativamente a velocidade de execução dos formulários.
 
 > ATENCIÓN: los eventos [On Load](onLoad.md) y [On Unload](onUnload.md) se generan para los objetos si están activados a la vez para los objetos y para el formulario al que pertenecen los objetos. Se os eventos estiverem ativados somente para objetos, eles não ocorrerão; esses dois eventos também devem ser ativados no nível do formulário.
+
 

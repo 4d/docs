@@ -14,7 +14,7 @@ Cet événement est généré une fois, lorsque le curseur de la souris quitte l
 
 L'événement `On Mouse Leave` met à jour les variables système *MouseX* et *MouseY*.
 
-Les objets sont rendus invisibles à l'aide de la commande [`OBJECT SET VISIBLE`](../commands/object-set-visible) ou la propriété [Visibility](FormObjects/properties_Display.md#visibility) ne génèrent pas cet événement.
+Les objets sont rendus invisibles à l'aide de la commande [`OBJECT SET VISIBLE`](./commands/object-set-visible) ou la propriété [Visibility](FormObjects/properties_Display.md#visibility) ne génèrent pas cet événement.
 
 
 ### Appeler la pile

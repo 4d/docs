@@ -31,11 +31,11 @@ title: デスクトップセッション
 
 ## リモートユーザーセッション {#remote-user-sessions}
 
-サーバー上では、"ユーザープロセス"(つまりリモートユーザーに関連したプロセス)内では、[`Session`](../commands/session.md) コマンドはカレントのユーザーセッションを表す `session` オブジェクトを返します。  このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+サーバー上では、"ユーザープロセス"(つまりリモートユーザーに関連したプロセス)内では、[`Session`](./commands/session) コマンドはカレントのユーザーセッションを表す `session` オブジェクトを返します。  このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 :::note
 
-リモート4D 上では、 [`Session`](../commands/session) コマンドは必ず null を返します。
+リモート4D 上では、 [`Session`](./commands/session) コマンドは必ず null を返します。
 
 :::
 
@@ -60,7 +60,7 @@ title: デスクトップセッション
 - [サーバー上で実行](../Project/project-method-properties.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "ツイン(双子)" プロセスで実行されます)
 - トリガー
 - ORDA [データモデル関数](../ORDA/ordaClasses.md) (ただし、[`local`](../ORDA/ordaClasses.md#local-functions) キーワードで宣言されているものを除く)
-- [`On Server Open Connection`](../commands/on-server-open-connection-database-method) と [`On Server Close Connection`](../commands/on-server-close-connection-database-method)などのデータベースメソッド。
+- [`On Server Open Connection`](./commands/on-server-open-connection-database-method) と [`On Server Close Connection`](./commands/on-server-close-connection-database-method)などのデータベースメソッド。
 
 ## ストアドプロシージャーセッション {#stored-procedure-sessions}
 
@@ -74,9 +74,9 @@ title: デスクトップセッション
 
 ストアドプロシージャーの `session` オブジェクトは、次のいずれかから利用できます:
 
-- [`Execute on Server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたプロジェクトメソッド
+- [`Execute on Server`](./commands/execute-on-server) コマンドで呼び出されたプロジェクトメソッド
 - ストアドプロシージャーから呼び出されたORDA [データモデル関数](../ORDA/ordaClasses.md)
-- [`On Server Startup`](../commands/on-server-startup-database-method) と [`On Server Shutdown`](../commands/on-server-shutdown-database-method)などのデータベースメソッド。
+- [`On Server Startup`](./commands/on-server-startup-database-method) と [`On Server Shutdown`](./commands/on-server-shutdown-database-method)などのデータベースメソッド。
 
 ## スタンドアロンセッション {#standalone-sessions}
 
@@ -104,7 +104,7 @@ title: デスクトップセッション
 
 :::note
 
-クライアント/サーバー環境においてOTP トークンを作成する場合、[OTP 作成コード](../API/SessionClass.md#createotp) を**サーバー上で** 実行する必要があります(`Session` オブジェクトはリモート4D ではNull となります)。 たとえば [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) データベースメソッドなどを使用することができます。
+クライアント/サーバー環境においてOTP トークンを作成する場合、[OTP 作成コード](../API/SessionClass.md#createotp) を**サーバー上で** 実行する必要があります(`Session` オブジェクトはリモート4D ではNull となります)。 たとえば [`On Server Open Connection`](./commands/on-server-open-connection-database-method) データベースメソッドなどを使用することができます。
 
 :::
 
@@ -153,4 +153,6 @@ return Session.createOTP()
 Session.clearPrivileges() // セッションから古い権限を消去する
 Session.setPrivileges("viewProducts")
 ```
+
+
 

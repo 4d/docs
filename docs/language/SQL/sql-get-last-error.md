@@ -44,7 +44,7 @@ The last two parameters are only filled when the error comes from the ODBC sourc
 
 ## See also 
 
-[Last errors](../commands/last-errors.md)   
+[Last errors](./commands/last-errors)   
 [ON ERR CALL](on-err-call.md)  
 
 ## Properties
@@ -53,5 +53,6 @@ The last two parameters are only filled when the error comes from the ODBC sourc
 | --- | --- |
 | Command number | 825 |
 | Thread safe | no |
+
 
 

@@ -54,7 +54,7 @@ Ver el ejemplo de la sección [Semáforo](semaphore.md).
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
@@ -65,5 +65,6 @@ Ver el ejemplo de la sección [Semáforo](semaphore.md).
 | Número de comando | 329 |
 | Hilo seguro | no |
 | Prohibido en el servidor ||
+
 
 

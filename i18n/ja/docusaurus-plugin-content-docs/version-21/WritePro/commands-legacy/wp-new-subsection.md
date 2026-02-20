@@ -49,5 +49,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
+[WP DELETE SUBSECTION](./commands/wp-delete-subsection)  
 [WP Get subsection](wp-get-subsection.md)  

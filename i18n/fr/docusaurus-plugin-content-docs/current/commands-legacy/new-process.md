@@ -64,7 +64,7 @@ Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la
 
 ### Nom du process 
 
-Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [Process info](../commands/process-info.md). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. 
+Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [Process info](./commands/process-info). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. 
 
 ### Paramètres de la méthode process 
 
@@ -92,7 +92,7 @@ Examinons la méthode projet suivante :
  Until(OK=0)
 ```
 
-Si vous associez cette méthode projet à une commande de menu créé dans l'éditeur de barres de menus et que vous lui affectez la propriété **Démarrer un process**, 4D va automatiquement créer un nouveau process lors de l'exécution de la méthode. L'instruction [SET MENU BAR](set-menu-bar.md)(1) associe cette barre de menus au nouveau process. En l'absence de toute fenêtre (que vous pourriez avoir ouverte avec [Open window](../commands/open-window.md)), l'appel à [ADD RECORD](add-record.md) en créera une automatiquement.
+Si vous associez cette méthode projet à une commande de menu créé dans l'éditeur de barres de menus et que vous lui affectez la propriété **Démarrer un process**, 4D va automatiquement créer un nouveau process lors de l'exécution de la méthode. L'instruction [SET MENU BAR](set-menu-bar.md)(1) associe cette barre de menus au nouveau process. En l'absence de toute fenêtre (que vous pourriez avoir ouverte avec [Open window](./commands/open-window)), l'appel à [ADD RECORD](add-record.md) en créera une automatiquement.
 
 Si maintenant vous voulez pouvoir démarrer le process Ajout Clients lorsque vous cliquez sur un bouton situé dans un tableau de contrôle personnalisé, vous pouvez écrire : 
 
@@ -134,5 +134,6 @@ Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode
 | --- | --- |
 | Numéro de commande | 317 |
 | Thread safe | yes |
+
 
 

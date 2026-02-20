@@ -54,7 +54,7 @@ Ver o exemplo do comando [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER")
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-[This ](../commands/this.md)  
+[This ](./commands/this)  
 
 ## Propriedades
 
@@ -62,5 +62,6 @@ Ver o exemplo do comando [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER")
 | --- | --- |
 | Número do comando | 308 |
 | Thread-seguro | no |
+
 
 

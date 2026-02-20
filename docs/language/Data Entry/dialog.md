@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
-This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](../commands-legacy/add-record.md) or [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons. 
+This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](./commands/add-record) or [MODIFY RECORD](./commands/modify-record), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons. 
 
 This command is typically called along with the [Open form window](open-form-window.md) to display sophisticated forms, as shown in the following example: 
 
 ![](../assets/en/commands/pict3541609.en.png)
 
-The **DIALOG** command can also be used instead of [ALERT](../commands-legacy/alert.md), [CONFIRM](../commands-legacy/confirm.md) or [Request](../commands-legacy/request.md) when the information to be presented or gathered is more complex than those commands can manage.
+The **DIALOG** command can also be used instead of [ALERT](./commands/alert), [CONFIRM](./commands/confirm) or [Request](./commands/request) when the information to be presented or gathered is more complex than those commands can manage.
 
 In the *form* parameter, you can pass:
 
@@ -55,18 +55,18 @@ To fill the "form data" object, you have two possibilities:
 
 :::
 
-The dialog is closed by the user either with an "accept" action (triggered by the ak accept standard action, the Enter key, or the [ACCEPT](../commands-legacy/accept.md) command), or with a "cancel" action (triggered by the ak cancel standard action, the Escape key, or the [CANCEL](../commands-legacy/cancel.md) command). An accept action will set the OK system variable to 1, while a cancel action will set OK to 0\. 
+The dialog is closed by the user either with an "accept" action (triggered by the ak accept standard action, the Enter key, or the [ACCEPT](./commands/accept) command), or with a "cancel" action (triggered by the ak cancel standard action, the Escape key, or the [CANCEL](./commands/cancel) command). An accept action will set the OK system variable to 1, while a cancel action will set OK to 0\. 
 
-Keep in mind that validation does not equal saving: if the dialog includes fields, you must explicitly call the [SAVE RECORD](../commands-legacy/save-record.md) command to save any data that has been modified. 
+Keep in mind that validation does not equal saving: if the dialog includes fields, you must explicitly call the [SAVE RECORD](./commands/save-record) command to save any data that has been modified. 
 
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.   
-This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. If the current process terminates, the forms created in this way are automatically closed in the same way as if a [CANCEL](../commands-legacy/cancel.md) command had been called. This opening mode is particularly useful for displaying a floating palette with a document, without necessarily requiring another process. 
+This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](./commands/cancel) or [ACCEPT](./commands/accept) command. If the current process terminates, the forms created in this way are automatically closed in the same way as if a [CANCEL](./commands/cancel) command had been called. This opening mode is particularly useful for displaying a floating palette with a document, without necessarily requiring another process. 
 
 **Notes:** 
 
-* You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](../commands-legacy/call-form.md) command to establish communication between the forms.
+* You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](./commands/call-form) command to establish communication between the forms.
 * You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
-* When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. You do not have to manage the closing of the window itself.
+* When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](./commands/cancel) or [ACCEPT](./commands/accept) command. You do not have to manage the closing of the window itself.
 
 ## Example 1 
 
@@ -165,10 +165,10 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 
 ## See also 
 
-[ACCEPT](../commands-legacy/accept.md)  
-[ADD RECORD](../commands-legacy/add-record.md)  
-[CALL FORM](../commands-legacy/call-form.md)  
-[CANCEL](../commands-legacy/cancel.md)  
+[ACCEPT](./commands/accept)  
+[ADD RECORD](./commands/add-record)  
+[CALL FORM](./commands/call-form)  
+[CANCEL](./commands/cancel)  
 [Form](form.md)  
 [Open window](open-window.md)  
 
@@ -179,4 +179,5 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 | Command number | 40 |
 | Thread safe | no |
 | Modifies variables | OK, error |
+
 

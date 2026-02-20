@@ -82,7 +82,7 @@ Usted quiere obtener la ruta del último archivo de backup:
 
 ## Ver también 
 
-[File](../commands/file.md)    
+[File](./commands/file)    
 
 ## Propiedades
 
@@ -90,5 +90,6 @@ Usted quiere obtener la ruta del último archivo de backup:
 | --- | --- |
 | Número de comando | 1418 |
 | Hilo seguro | yes |
+
 
 

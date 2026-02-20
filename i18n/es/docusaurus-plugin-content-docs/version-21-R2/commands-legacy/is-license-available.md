@@ -56,7 +56,7 @@ Is license available devuelve [False](false.md "False") si el plug-in está func
 ## Ver también 
 
 [CHANGE LICENSES](change-licenses.md)  
-[License info](../commands/license-info.md)  
+[License info](./commands/license-info)  
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
@@ -67,5 +67,6 @@ Is license available devuelve [False](false.md "False") si el plug-in está func
 | --- | --- |
 | Número de comando | 714 |
 | Hilo seguro | no |
+
 
 

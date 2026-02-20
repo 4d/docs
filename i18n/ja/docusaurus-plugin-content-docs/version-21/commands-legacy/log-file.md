@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SELECT LOG FILE](../commands/select-log-file.md)  
+[SELECT LOG FILE](./commands/select-log-file)  
 
 ## プロパティ
 
@@ -51,5 +51,6 @@ displayed_sidebar: docs
 | コマンド番号 | 928 |
 | スレッドセーフである | yes |
 | システム変数を更新する | OK |
+
 
 

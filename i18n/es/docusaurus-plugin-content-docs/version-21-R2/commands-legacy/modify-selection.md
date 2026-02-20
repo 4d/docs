@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 *Conjuntos*  
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Propiedades
 
@@ -51,5 +51,6 @@ displayed_sidebar: docs
 | Número de comando | 204 |
 | Hilo seguro | no |
 | Prohibido en el servidor ||
+
 
 

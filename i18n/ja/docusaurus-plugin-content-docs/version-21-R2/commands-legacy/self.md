@@ -50,7 +50,7 @@ Self が上記のコンテキスト以外で呼ばれた場合、Nilポインタ
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-[This](../commands/this.md)  
+[This](./commands/this)  
 
 ## プロパティ
 
@@ -58,5 +58,6 @@ Self が上記のコンテキスト以外で呼ばれた場合、Nilポインタ
 | --- | --- |
 | コマンド番号 | 308 |
 | スレッドセーフである | no |
+
 
 

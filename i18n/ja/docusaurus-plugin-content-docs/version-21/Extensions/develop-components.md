@@ -27,7 +27,7 @@ title: コンポーネントの開発
 
 - コンポーネントを使用するには、[アプリケーションにインストール](../Project/components.md) するだけです。 ホストから直接コンポーネントを作成することもできます。この場合、このコンポーネントは直ちに使用することが可能です。
 - 言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
-- コンポーネントは次の 4D の要素を呼び出すことができます: データストア([`ds`](../commands/ds.md))、クラス、関数、プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 以下のデータベースメソッドを使用することが可能です: [On Web Connection](../commands-legacy/on-web-connection-database-method.md)、 [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md)、 [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md) 。
+- コンポーネントは次の 4D の要素を呼び出すことができます: データストア([`ds`](./commands/ds))、クラス、関数、プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 以下のデータベースメソッドを使用することが可能です: [On Web Connection](./commands/on-web-connection-database-method)、 [On Web Authentication](./commands/on-web-authentication-database-method)、 [On Host Database Event](./commands/on-host-database-event-database-method) 。
 - 外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
 - インタープリターモードで動作するホストプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。 コンパイルモードで実行されるホストデータベースでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
 
@@ -98,7 +98,7 @@ title: コンポーネントの開発
 
 - フォルダ、メソッド、クラスおよびフォーム(プレビューのみ)を含むホーム
 - プロジェクトメソッド
-- データベースメソッド([On Web Connection](../commands-legacy/on-web-connection-database-method.md)、[On Web Authentication](../commands-legacy/on-web-authentication-database-method.md)、[On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
+- データベースメソッド([On Web Connection](./commands/on-web-connection-database-method)、[On Web Authentication](./commands/on-web-authentication-database-method)、[On Host Database Event](./commands/on-host-database-event-database-method))
 - クラス
 - プロジェクトフォームメソッド
 - コマンドと定数
@@ -118,13 +118,13 @@ title: コンポーネントの開発
 
 [使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。 ただし[`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) と [`EXECUTE METHOD`](../commands-legacy/execute-method.md) コマンドは除きます。これらはコマンドで指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
+コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。 ただし[`EXECUTE FORMULA`](./commands/execute-formula) と [`EXECUTE METHOD`](./commands/execute-method) コマンドは除きます。これらはコマンドで指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
-[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) および [`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
+[`SET DATABASE PARAMETER`](./commands/set-database-parameter) および [`Get database parameter`](./commands/get-database-parameter) コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
 
 さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
-[`COMPONENT LIST`](../commands-legacy/component-list.md) コマンドを使用して、ホストプロジェクトにロードされたコンポーネントのリストを取得できます。
+[`COMPONENT LIST`](./commands/component-list) コマンドを使用して、ホストプロジェクトにロードされたコンポーネントのリストを取得できます。
 
 ### 使用できないコマンド
 
@@ -167,7 +167,7 @@ title: コンポーネントの開発
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-ホストプロジェクトのプロジェクトメソッドがコンポーネントから利用可能になっていれば、[`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) または [`EXECUTE METHOD`](../commands-legacy/execute-method.md) コマンドを使用して、コンポーネント側からホストのメソッドを実行することができます。 例:
+ホストプロジェクトのプロジェクトメソッドがコンポーネントから利用可能になっていれば、[`EXECUTE FORMULA`](./commands/execute-formula) または [`EXECUTE METHOD`](./commands/execute-method) コマンドを使用して、コンポーネント側からホストのメソッドを実行することができます。 例:
 
 ```4d
 // ホストメソッド
@@ -292,7 +292,7 @@ component_method($input_t)
 
 - コンポーネントI が定義する変数 `myIvar` があるとき、コンポーネントC はポインター `->myIvar` を使用しても変数の値にアクセスすることはできません。 このシンタックスは実行エラーを起こします。
 
-- [`RESOLVE POINTER`](../commands/resolve-pointer) コマンドを使用したポインターの比較はお勧めできません。変数の分離の原則により、ホストプロジェクトとコンポーネント (あるいは他のコンポーネント) で同じ名前の変数が存在することができますが、根本的にそれらは異なる内容を持ちます。 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
+- [`RESOLVE POINTER`](./commands/resolve-pointer) コマンドを使用したポインターの比較はお勧めできません。変数の分離の原則により、ホストプロジェクトとコンポーネント (あるいは他のコンポーネント) で同じ名前の変数が存在することができますが、根本的にそれらは異なる内容を持ちます。 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -309,7 +309,7 @@ component_method($input_t)
 
 ## エラー処理
 
-[`ON ERR CALL`](../commands-legacy/on-err-call.md) コマンドを使用して実装された[エラー処理メソッド](Concepts/error-handling.md) は実行中のアプリケーションに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
+[`ON ERR CALL`](./commands/on-err-call) コマンドを使用して実装された[エラー処理メソッド](Concepts/error-handling.md) は実行中のアプリケーションに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
 
 しかしながら、[ホストアプリケーションにコンポーネントエラーハンドラーを実装する](../Concepts/error-handling.md#scope-and-components) ことで、コンポーネントでキャッチされなかったエラーを管理することができます。
 
@@ -510,4 +510,6 @@ macOS 上では、Finder からこの情報を見ることができます:
 ## GitHub上でコンポーネントを共有する
 
 開発したコンポーネントを [GitHub](https://github.com/topics/4d-component) で公開し、4D開発者のコミュニティをサポートすることをお勧めします。 正しく参照されるためには、**`4d-component`** トピックをご利用ください。
+
+
 

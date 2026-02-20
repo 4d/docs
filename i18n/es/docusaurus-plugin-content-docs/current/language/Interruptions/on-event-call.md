@@ -107,7 +107,7 @@ Si se ha presionado la combinación Ctrl+punto, el método de gestión de evento
  End if
 ```
 
-Note que este ejemplo utiliza ON EVENT CALL porque realiza un informe especial de impresión utilizando los comandos *PAGE SETUP*, [Print form](../commands/print-form.md "Print form") y [PAGE BREAK](page-break.md "PAGE BREAK") en una estructura de tipo bucle *For...End for*.   
+Note que este ejemplo utiliza ON EVENT CALL porque realiza un informe especial de impresión utilizando los comandos *PAGE SETUP*, [Print form](./commands/print-form.md "Print form") y [PAGE BREAK](page-break.md "PAGE BREAK") en una estructura de tipo bucle *For...End for*.   
 Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SELECTION"), NO necesita administrar los eventos que permiten al usuario interrumpir la impresión; [PRINT SELECTION](print-selection.md "PRINT SELECTION") hace esto por usted.
 
 ## Ver también 
@@ -124,5 +124,6 @@ Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SEL
 | Número de comando | 190 |
 | Hilo seguro | no |
 | Prohibido en el servidor ||
+
 
 

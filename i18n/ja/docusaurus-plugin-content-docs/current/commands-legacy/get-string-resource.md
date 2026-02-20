@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get indexed string](../commands/get-indexed-string)
+[Get indexed string](./commands/get-indexed-string)
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
@@ -62,5 +62,6 @@ displayed_sidebar: docs
 | コマンド番号 | 506 |
 | スレッドセーフである | no |
 | システム変数を更新する | OK |
+
 
 

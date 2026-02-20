@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 配列には、表示非表示に関わらず、全ての列に関して(列のフッターを含む)オブジェクト名が返されます。
 
-このコマンドは [FORM LOAD](../commands/form-load.md)、[FORM GET OBJECTS](form-get-objects.md) と [OBJECT Get type](object-get-type.md) コマンドを使用してフォームを解析する際に有用です。必要に応じてリストボックスのサブオブジェクトの名前を取得するために使用することができます。
+このコマンドは [FORM LOAD](./commands/form-load)、[FORM GET OBJECTS](form-get-objects.md) と [OBJECT Get type](object-get-type.md) コマンドを使用してフォームを解析する際に有用です。必要に応じてリストボックスのサブオブジェクトの名前を取得するために使用することができます。
 
 ## 例題 
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM LOAD](../commands/form-load.md)  
+[FORM LOAD](./commands/form-load)  
 [OBJECT Get type](object-get-type.md)  
 
 ## プロパティ
@@ -78,5 +78,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1302 |
 | スレッドセーフである | no |
+
 
 

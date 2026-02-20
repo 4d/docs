@@ -21,13 +21,13 @@ title: リリースノート
 #### デベロッパー・プレビュー
 
 - Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) のサポート:
-  - 新しい [`FORM theme`](../commands/form-theme.md) コマンド
+  - 新しい [`FORM theme`](./commands/form-theme) コマンド
   - 新しい [`form-theme` CSS メディアクエリ](../FormEditor/createStylesheet.md#メディアクエリ)
   - 設定ダイアログボック内での新しい [**Windows 上でFluent UI を使用**](../settings/interface.md#windows-上でfluent-ui-を使用) オプション。
 
 #### 動作の変更
 
-- Windows 上で、[**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されている場合、 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) コマンドは、フォームから呼ばれているかどうかに関わらず、異なる情報を返すことがあります。
+- Windows 上で、[**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されている場合、 [`GET STYLE SHEET INFO`](./commands/get-style-sheet-info) コマンドは、フォームから呼ばれているかどうかに関わらず、異なる情報を返すことがあります。
 
 ## ライブラリの一覧
 
@@ -50,3 +50,4 @@ title: リリースノート
 | webKit    | WKWebView                              | 19             |                                                                                                                                                      |
 | Xerces    | 3.3.0  | **21**         | XML コマンドにおいて使用されます                                                                                                                                   |
 | Zlib      | 1.3.1  | **21**         |                                                                                                                                                      |
+

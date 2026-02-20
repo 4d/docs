@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Los parámetros *\** y *\>* son opcionales.
 
-El parámetro *\** le permite cancelar un trabajo de impresión iniciado por el comando [Print form](../commands/print-form.md "Print form"). La ejecución de este comando detiene inmediatamente los trabajos de impresión en progreso.
+El parámetro *\** le permite cancelar un trabajo de impresión iniciado por el comando [Print form](./commands/print-form.md "Print form"). La ejecución de este comando detiene inmediatamente los trabajos de impresión en progreso.
 
 **Nota:** bajo Windows, este mecanismo puede ser trastornado por las propiedades de cola de espera del servidor de impresión. Si la impresora se configura para comenzar la impresión de inmediatamente, la cancelación no será efectiva. Para que el comando PAGE BREAK(\*) funcione correctamente, es preferible elegir la propiedad "Iniciar impresión cuando la última página haya entrado en la cola" de la impresora.
 
@@ -46,7 +46,7 @@ La segunda opción es particularmente útil cuando se utiliza con un trabajo de 
 
 ## Ejemplo 1 
 
-Ver el ejemplo del comando [Print form](../commands/print-form.md "Print form").
+Ver el ejemplo del comando [Print form](./commands/print-form.md "Print form").
 
 ## Ejemplo 2 
 
@@ -55,7 +55,7 @@ Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRIN
 ## Ver también 
 
 [CANCEL](cancel.md)  
-[Print form](../commands/print-form.md)  
+[Print form](./commands/print-form)  
 
 ## Propiedades
 
@@ -64,5 +64,7 @@ Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRIN
 | Número de comando | 6 |
 | Hilo seguro | no |
 | Modifica variables | OK |
+
+
 
 

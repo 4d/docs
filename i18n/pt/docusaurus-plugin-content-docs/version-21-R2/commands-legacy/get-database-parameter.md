@@ -1049,7 +1049,7 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
 ## Ver também 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
@@ -1059,5 +1059,6 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
 | --- | --- |
 | Número do comando | 643 |
 | Thread-seguro | no |
+
 
 

@@ -50,7 +50,7 @@ Este método, combinado com uma área de rolagem, lhe permite modificar o valor 
 
 ## Ver também 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [Right click](right-click.md)  
 
 ## Propriedades
@@ -59,5 +59,6 @@ Este método, combinado com uma área de rolagem, lhe permite modificar o valor 
 | --- | --- |
 | Número do comando | 713 |
 | Thread-seguro | no |
+
 
 

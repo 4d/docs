@@ -40,7 +40,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 *セット*  
 
 ## プロパティ
@@ -50,5 +50,6 @@ displayed_sidebar: docs
 | コマンド番号 | 204 |
 | スレッドセーフである | no |
 | サーバー上での使用は不可 ||
+
 
 

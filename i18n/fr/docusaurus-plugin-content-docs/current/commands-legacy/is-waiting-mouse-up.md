@@ -61,7 +61,7 @@ Le code suivant peut être utilisé pour gérer le suivi de la souris dans un ob
 
 ## Voir aussi 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Propriétés
 
@@ -69,5 +69,6 @@ Le code suivant peut être utilisé pour gérer le suivi de la souris dans un ob
 | --- | --- |
 | Numéro de commande | 1422 |
 | Thread safe | no |
+
 
 

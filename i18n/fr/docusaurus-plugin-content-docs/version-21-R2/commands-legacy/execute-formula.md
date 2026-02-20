@@ -73,7 +73,7 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
 
 ## Voir aussi 
 
-[Command name](../commands/command-name.md)  
+[Command name](./commands/command-name)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
@@ -83,5 +83,6 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
 | --- | --- |
 | Numéro de commande | 63 |
 | Thread safe | yes |
+
 
 

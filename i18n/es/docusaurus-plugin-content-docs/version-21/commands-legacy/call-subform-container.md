@@ -40,7 +40,7 @@ En *evento*, puede pasar uno de los [eventos de formulario 4D soportado por subf
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [GOTO OBJECT](goto-object.md)  
 
 ## Propiedades
@@ -49,3 +49,4 @@ En *evento*, puede pasar uno de los [eventos de formulario 4D soportado por subf
 | --- | --- |
 | Número de comando | 1086 |
 | Hilo seguro | no |
+

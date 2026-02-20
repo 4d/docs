@@ -49,7 +49,7 @@ Es recomendable llamar este comando dentro del marco del evento de formulario On
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Propiedades
 
@@ -57,5 +57,6 @@ Es recomendable llamar este comando dentro del marco del evento de formulario On
 | --- | --- |
 | Número de comando | 1034 |
 | Hilo seguro | no |
+
 
 

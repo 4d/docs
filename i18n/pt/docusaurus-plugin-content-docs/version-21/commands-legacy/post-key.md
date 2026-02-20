@@ -39,7 +39,7 @@ Se especificar o parâmetro *processo*, a tecla foi enviada ao processo cujo nú
 
 ## Exemplo 
 
-Ver exemplo do comando [Process number](../commands/process-number.md).
+Ver exemplo do comando [Process number](./commands/process-number).
 
 ## Ver também 
 
@@ -54,5 +54,6 @@ Ver exemplo do comando [Process number](../commands/process-number.md).
 | --- | --- |
 | Número do comando | 465 |
 | Thread-seguro | no |
+
 
 

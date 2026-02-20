@@ -60,7 +60,7 @@ Si la commande échoue, une erreur est générée, que vous pouvez intercepter �
 
 ## Voir aussi 
 
-[Compile project](../commands/compile-project.md)  
+[Compile project](./commands/compile-project)  
 
 ## Propriétés
 
@@ -70,5 +70,6 @@ Si la commande échoue, une erreur est générée, que vous pouvez intercepter �
 | Thread safe | no |
 | Modifie les variables | OK, Document, error |
 | Interdite sur le serveur ||
+
 
 

@@ -180,8 +180,8 @@ displayed_sidebar: docs
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](../commands/file.md)    
-[Folder](../commands/folder.md)    
+[File](./commands/file)    
+[Folder](./commands/folder)    
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
 
@@ -191,5 +191,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1547 |
 | スレッドセーフである | yes |
+
 
 

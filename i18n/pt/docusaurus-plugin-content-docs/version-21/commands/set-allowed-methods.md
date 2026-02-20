@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 - The formula editor - allowed methods appear at the end of the list of default commands and can be used in formulas (see section *Description of formula editor*).
 - The label editor - the allowed methods are listed in the **Apply** menu if they are also shared with the component (see section *Description of label editor*).
-- Fórmulas inseridas em áreas de texto com estilo ou documentos do 4D Write Pro por meio do comando [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) - os métodos não permitidos são automaticamente rejeitados.
+- Fórmulas inseridas em áreas de texto com estilo ou documentos do 4D Write Pro por meio do comando [ST INSERT EXPRESSION](./commands/st-insert-expression) - os métodos não permitidos são automaticamente rejeitados.
 - 4D View Pro documents - by default, if the [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) command has never been called during the session, 4D View Pro formulas only accept methods defined by **SET ALLOWED METHODS**. No entanto, é recomendável usar [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md). Veja [Declarando o método permitido](../ViewPro/formulas.md#declaring-allowed-methods).
 
 By default, if you do not use the **SET ALLOWED METHODS** command, no method is enterable (using an unauthorized method in an expression causes an error).
@@ -55,8 +55,8 @@ This example authorizes all methods starting with “formula” and the “Total
 
 ## Veja também
 
-[EDIT FORMULA](../commands-legacy/edit-formula.md)\
-[GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
+[EDIT FORMULA](./commands/edit-formula)\
+[GET ALLOWED METHODS](./commands/get-allowed-methods)
 
 ## Propriedades
 
@@ -64,5 +64,6 @@ This example authorizes all methods starting with “formula” and the “Total
 | ----------------- | --- |
 | Número de comando | 805 |
 | Thread safe       | não |
+
 
 

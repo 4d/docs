@@ -18,7 +18,7 @@ Se o evento é verificado somente para um objeto, ele é gerado somente quando o
 
 El evento `On Mouse Move` actualiza las variables sistema *MouseX* y *MouseY*.
 
-Objects that are made invisible using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
+Objects that are made invisible using the [`OBJECT SET VISIBLE`](./commands/object-set-visible) command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
 
 ### Chamar a pilha
 

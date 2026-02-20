@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GOTO XY.Summary-->El comando GOTO XY se utiliza conjuntamente con el comando [MESSAGE](message.md "MESSAGE") cuando usted muestra mensajes en una ventana abierta por el comando [Open window](../commands/open-window.md "Open window").<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->El comando GOTO XY se utiliza conjuntamente con el comando [MESSAGE](message.md "MESSAGE") cuando usted muestra mensajes en una ventana abierta por el comando [Open window](./commands/open-window.md "Open window").<!-- END REF-->  
   
 GOTO XY determina la posición del cursor de inserción de caracteres (un cursor invisible) para definir la ubicación del siguiente mensaje en la ventana. 
 
@@ -67,5 +67,6 @@ Muestra la siguiente ventana (en Macintosh) por 30 segundos:
 | --- | --- |
 | Número de comando | 161 |
 | Hilo seguro | no |
+
 
 

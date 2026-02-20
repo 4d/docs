@@ -49,7 +49,7 @@ Para saber el tamaño total de la página, puede:
 ## Ver también 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Print form](../commands/print-form.md)  
+[Print form](./commands/print-form)  
 
 ## Propiedades
 
@@ -57,5 +57,6 @@ Para saber el tamaño total de la página, puede:
 | --- | --- |
 | Número de comando | 703 |
 | Hilo seguro | no |
+
 
 

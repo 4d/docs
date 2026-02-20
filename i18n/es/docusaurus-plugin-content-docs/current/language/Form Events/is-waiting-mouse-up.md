@@ -72,7 +72,7 @@ End case
 
 ## Ver también 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 
 ## Propiedades
 
@@ -80,5 +80,6 @@ End case
 | --- | --- |
 | Número de comando | 1422 |
 | Hilo seguro | no |
+
 
 

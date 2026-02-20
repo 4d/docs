@@ -66,7 +66,7 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [PRINT SELECTION](print-selection.md)  
 
 ## Propriétés
@@ -75,5 +75,6 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
 | --- | --- |
 | Numéro de commande | 101 |
 | Thread safe | no |
+
 
 

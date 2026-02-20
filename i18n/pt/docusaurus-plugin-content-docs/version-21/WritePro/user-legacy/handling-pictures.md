@@ -9,9 +9,9 @@ slug: /WritePro/pictures
 
 Agregar imagenes a um documento 4D Write Pro pode ser feita de múltiplas maneiras dependendo de suas necessidades:
 
-* para agregar uma **imagem de fundo**, use o atributo wk background image com o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes)
-* para agregar uma **imagem inserida** (inline), ou seja, inserida no fluxo de texto como un caractere, use o comando [WP INSERT PICTURE](../commands/wp-insert-picture) ou o comando [ST INSERT EXPRESSION](../../commands/st-insert-expression)
-* para agregar uma **imagem ancorada** na página (atrás ou na frente do texto), use [WP Add picture](../commands/wp-add-picture) e defina o atributo wk anchor layout.
+* para agregar uma **imagem de fundo**, use o atributo wk background image com o comando [WP SET ATTRIBUTES](./commands/wp-set-attributes)
+* para agregar uma **imagem inserida** (inline), ou seja, inserida no fluxo de texto como un caractere, use o comando [WP INSERT PICTURE](./commands/wp-insert-picture) ou o comando [ST INSERT EXPRESSION](../../commands/st-insert-expression)
+* para agregar uma **imagem ancorada** na página (atrás ou na frente do texto), use [WP Add picture](./commands/wp-add-picture) e defina o atributo wk anchor layout.
 
 A forma em que agrega uma imagem determina a capa na qual está colocada, como se ilustra no diagrama abaixo:
 
@@ -41,7 +41,7 @@ A visualização da imagem de fundo também pode se estabelecer por programaçã
 
 ## Posição e exibição das imagens ancoradas 
 
-As imagens ancoradas são agregadas com uma posição absoluta, na frente e atrás do texto, e também são ancoradas a página ou partes específicas de um documento (ou seja, cabeçalho, rodapé, seções). Estabelecer uma posição absoluta para uma imagem se realiza com os comandos [WP Add picture](../commands/wp-add-picture) e [WP SET ATTRIBUTES](../commands/wp-set-attributes).
+As imagens ancoradas são agregadas com uma posição absoluta, na frente e atrás do texto, e também são ancoradas a página ou partes específicas de um documento (ou seja, cabeçalho, rodapé, seções). Estabelecer uma posição absoluta para uma imagem se realiza com os comandos [WP Add picture](./commands/wp-add-picture) e [WP SET ATTRIBUTES](./commands/wp-set-attributes).
 
 As posições das imagens ancoradas podem ser modificadas com os atributos abaixo específicos ou ações padrão:
 
@@ -83,13 +83,13 @@ Pode ver a referência de uma expressão na ponta da imagem (\*):
 
 (\*)Como não há texto associado com uma imagem ancorada, sua referência de expressão não pode ser mostrada.
 
-Todos os atributos imagem podem ser aplicados a expressões imagem (wk image e os atributos wk image url apenas podem ser lidos). Entretanto, lembre que, dado que as imagens têm atributos específicos, 4D Write Pro deve avaliar a expressão ao menos uma vez para detectar que seu resultado seja uma imagem e manejá-la como uma expressão de imagem. Isto significa que quando for inserida uma expressão de imagem com [WP INSERT FORMULA](../commands/wp-insert-formula), [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) deve ser chamada antes de definir todo atributo imagem.
+Todos os atributos imagem podem ser aplicados a expressões imagem (wk image e os atributos wk image url apenas podem ser lidos). Entretanto, lembre que, dado que as imagens têm atributos específicos, 4D Write Pro deve avaliar a expressão ao menos uma vez para detectar que seu resultado seja uma imagem e manejá-la como uma expressão de imagem. Isto significa que quando for inserida uma expressão de imagem com [WP INSERT FORMULA](./commands/wp-insert-formula), [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) deve ser chamada antes de definir todo atributo imagem.
 
-**Nota**: da mesma forma que com outras expressões, as expressões de imagem também são afetadas pelos comandos [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) e [WP FREEZE FORMULAS](../commands/wp-freeze-formulas)
+**Nota**: da mesma forma que com outras expressões, as expressões de imagem também são afetadas pelos comandos [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) e [WP FREEZE FORMULAS](./commands/wp-freeze-formulas)
 
 ### Imagens ancoradas 
 
-As expressões imagem ancoradas são adicioinadas com o comando [WP Add picture](../commands/wp-add-picture) (sem o segundo parâmetro), seguido de um chamada ao comando [WP SET ATTRIBUTES](../commands/wp-set-attributes)com o seletor wk image formula
+As expressões imagem ancoradas são adicioinadas com o comando [WP Add picture](./commands/wp-add-picture) (sem o segundo parâmetro), seguido de um chamada ao comando [WP SET ATTRIBUTES](./commands/wp-set-attributes)com o seletor wk image formula
 
 Exemplo:
 
@@ -98,15 +98,15 @@ Exemplo:
  WP SET ATTRIBUTES(obImage;wk image formula;Formula(m_buildPict))
 ```
 
-Também pode inserir expressões de imagem usando [WP SET ATTRIBUTES](../commands/wp-set-attributes) e wk image expression em imagens ancoradas existentes.
+Também pode inserir expressões de imagem usando [WP SET ATTRIBUTES](./commands/wp-set-attributes) e wk image expression em imagens ancoradas existentes.
 
 **Nota de compatibilidade:** wk image expression ainda pode ser usada para definir as expressões de imagem através de texto. Entretanto é recomendado usar wk image formula e objetos. 
 
-Chamar ao comando [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) com wk image expression é similar a chamar a [ST FREEZE EXPRESSIONS](../../commands/st-freeze-expressions) (no documento todo) na qual a expressão é limpada desde o atributo imagem. Entretanto, [ST FREEZE EXPRESSIONS](../../commands/st-freeze-expressions) calcula a expressão antes de apagar, enquanto [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) não faz isso. Se nunca tiver calculado uma expressão, se mostrará a imagem de marco negro pré-determinada.
+Chamar ao comando [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) com wk image expression é similar a chamar a [ST FREEZE EXPRESSIONS](../../commands/st-freeze-expressions) (no documento todo) na qual a expressão é limpada desde o atributo imagem. Entretanto, [ST FREEZE EXPRESSIONS](../../commands/st-freeze-expressions) calcula a expressão antes de apagar, enquanto [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) não faz isso. Se nunca tiver calculado uma expressão, se mostrará a imagem de marco negro pré-determinada.
 
 ### Inserir expressões de imagem 
 
-Expressões de imagem Inline são adicionadas com o comando [WP INSERT FORMULA](../commands/wp-insert-formula)
+Expressões de imagem Inline são adicionadas com o comando [WP INSERT FORMULA](./commands/wp-insert-formula)
 
 Exemplos:
 
@@ -130,16 +130,16 @@ Se uma imagem estiver vazia (por exemplo, se não foi carregada, ou é resultado
 Pode remover os retângulos negros da visão atual usando:
 
 * A opção "Mostrar imagens vazias ou não compatíveis" da lista de Propriedades *Configurar propriedades de Vista*, ou
-* o comando [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) com o seletor wk visible empty images ou
+* o comando [WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) com o seletor wk visible empty images ou
 * a ação padrão *visibleEmptyImage* (ver *Usando ações padrão*).
 
-Também pode usar o seletor wk visible empty images com os comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) e [WP EXPORT VARIABLE](../commands/wp-export-variable) para remover os retângulos negros de conteúdos exportados
+Também pode usar o seletor wk visible empty images com os comandos [WP EXPORT DOCUMENT](./commands/wp-export-document) e [WP EXPORT VARIABLE](./commands/wp-export-variable) para remover os retângulos negros de conteúdos exportados
 
 Note que quando esta opção for estabelecida, elementos de imagem faltando não serão exibidos mesmo que tenham bordas, altura, largura ou fundo; por isso podem impactar o layout de página para imagens inline.
 
 ## Propriedades de Imagens 
 
-Todas as imagens têm propriedades (atributos) como altura, largura, bordas, etc., que podem ser obtidas ou definidas através da linguagem 4D Write Pro ([WP GET ATTRIBUTES](../commands/wp-get-attributes) e [WP SET ATTRIBUTES](../commands/wp-set-attributes)) ou de ações padrão.
+Todas as imagens têm propriedades (atributos) como altura, largura, bordas, etc., que podem ser obtidas ou definidas através da linguagem 4D Write Pro ([WP GET ATTRIBUTES](./commands/wp-get-attributes) e [WP SET ATTRIBUTES](./commands/wp-set-attributes)) ou de ações padrão.
 
 * a lista completa de propriedades disponíveis para imagens é oferecida na página *Atributos 4D Write Pro*.
 * a seção *Imagem* contém atributos que são específicos das imagens somente.
@@ -176,15 +176,15 @@ Quando obter uma imagem utilizando um desses atributos, recebe um texto. Se a im
 
 Os comandos abaixo podem ser usados para devolver imagens:
 
-* [WP Picture range](../commands/wp-picture-range) \- aplica so a imagens inseridas inline
-* [WP Selection range](../commands/wp-selection-range) \- só aplica as imagens selecionadas pelo usuário
+* [WP Picture range](./commands/wp-picture-range) \- aplica so a imagens inseridas inline
+* [WP Selection range](./commands/wp-selection-range) \- só aplica as imagens selecionadas pelo usuário
 
 ## Apagando Imagens 
 
 Pode remover imagens inline ou ancoradas com: 
 
 * *Ações Mouse/teclado*
-* o comando [WP DELETE PICTURE ](../commands/wp-delete-picture)
+* o comando [WP DELETE PICTURE ](./commands/wp-delete-picture)
 
 ## Ações Mouse/teclado 
 

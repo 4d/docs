@@ -51,7 +51,7 @@ Si se encuentra el recurso, OK toma el valor 1\. De lo contrario, toma el valor 
 
 ## Ver también 
 
-[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
+[Get indexed string](./commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
 ## Propiedades
@@ -61,5 +61,6 @@ Si se encuentra el recurso, OK toma el valor 1\. De lo contrario, toma el valor 
 | Número de comando | 504 |
 | Hilo seguro | no |
 | Modifica variables | OK |
+
 
 

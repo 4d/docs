@@ -81,7 +81,7 @@ displayed_sidebar: docs
 
 | **プロパティ**    |                                                                                            | **型**               | **Description**                               | **Example**                                                                                 |
 | ------------ | ------------------------------------------------------------------------------------------ | ------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| id           |                                                                                            | number              | ライセンス番号                                       | 取りうる値については、[Is license available](../commands-legacy/is-license-available.md) コマンドを参照して下さい。 |
+| id           |                                                                                            | number              | ライセンス番号                                       | 取りうる値については、[Is license available](./commands/is-license-available) コマンドを参照して下さい。 |
 | name         |                                                                                            | string              | ライセンス名                                        | "4D Write - 4D Write Pro"                                                                   |
 | usedCount    |                                                                                            | number              | 消費接続数                                         | 8                                                                                           |
 | allowedCount |                                                                                            | number              | 有効期限内においてその製品に対して許可される総接続数                    | 15                                                                                          |
@@ -137,9 +137,9 @@ displayed_sidebar: docs
 
 ## 参照
 
-[CHANGE LICENSES](../commands-legacy/change-licenses.md)\
-[Is license available](../commands-legacy/is-license-available.md)\
-[WEB Get server info](../commands-legacy/web-get-server-info.md)
+[CHANGE LICENSES](./commands/change-licenses)\
+[Is license available](./commands/is-license-available)\
+[WEB Get server info](./commands/web-get-server-info)
 
 ## プロパティ
 
@@ -147,5 +147,6 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1489 |
 | スレッドセーフ | ◯    |
+
 
 

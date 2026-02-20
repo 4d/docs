@@ -59,7 +59,7 @@ El siguiente ejemplo coloca el nombre y número de referencia para cada proceso 
 ## Ver también 
 
 [Count tasks](count-tasks.md)  
-[Process info](../commands/process-info.md)  
+[Process info](./commands/process-info)  
 
 ## Propiedades
 
@@ -67,5 +67,6 @@ El siguiente ejemplo coloca el nombre y número de referencia para cada proceso 
 | --- | --- |
 | Número de comando | 330 |
 | Hilo seguro | no |
+
 
 

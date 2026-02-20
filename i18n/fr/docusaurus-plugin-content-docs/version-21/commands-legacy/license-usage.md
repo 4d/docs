@@ -43,7 +43,7 @@ Selon le type de session (client 4D ou REST par exemple), le contenu de l'objet 
 
 ## Objet session pour les sessions 4D clientes 
 
-Dans la collection retournée pour les sessions 4D, chaque élément contient un objet session identique à celui retourné par la commande [Process activity](../commands/process-activity.md) :
+Dans la collection retournée pour les sessions 4D, chaque élément contient un objet session identique à celui retourné par la commande [Process activity](./commands/process-activity) :
 
 | **Nom de la propriété** | **Type**      | **Description**                                                                 |
 | ----------------------- | ------------- | ------------------------------------------------------------------------------- |
@@ -87,5 +87,6 @@ Ce tableau détaille le contenu de l'objet session des sessions REST :
 | --- | --- |
 | Numéro de commande | 1782 |
 | Thread safe | no |
+
 
 

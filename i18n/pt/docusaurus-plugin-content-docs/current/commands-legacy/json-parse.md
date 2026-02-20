@@ -201,7 +201,7 @@ beta[1].golf:{line:10,offset:12}}}
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
-[JSON Validate](../commands/json-validate.md)  
+[JSON Validate](./commands/json-validate)  
 *Tipos de campos e variáveis*  
 
 ## Propriedades
@@ -210,5 +210,6 @@ beta[1].golf:{line:10,offset:12}}}
 | --- | --- |
 | Número do comando | 1218 |
 | Thread-seguro | yes |
+
 
 

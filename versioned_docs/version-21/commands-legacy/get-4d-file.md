@@ -82,7 +82,7 @@ You want to get the path of the last backup file:
 
 ## See also 
 
-[File](../commands/file.md)  
+[File](./commands/file)  
 
 ## Properties
 
@@ -90,5 +90,6 @@ You want to get the path of the last backup file:
 | --- | --- |
 | Command number | 1418 |
 | Thread safe | yes |
+
 
 

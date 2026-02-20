@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
+[Get indexed string](./commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 
 ## プロパティ
@@ -65,5 +65,6 @@ displayed_sidebar: docs
 | コマンド番号 | 511 |
 | スレッドセーフである | no |
 | システム変数を更新する | OK |
+
 
 

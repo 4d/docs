@@ -58,7 +58,7 @@ El siguiente código espera hasta 5 segundos para que un registro bloqueado se d
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
-[Timestamp](../commands/timestamp)  
+[Timestamp](./commands/timestamp)  
 
 ## Propiedades
 
@@ -66,5 +66,6 @@ El siguiente código espera hasta 5 segundos para que un registro bloqueado se d
 | --- | --- |
 | Número de comando | 459 |
 | Hilo seguro | yes |
+
 
 

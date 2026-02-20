@@ -144,7 +144,7 @@ returns an object that contains, for example, the following information:
 
 ## See also 
 
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
@@ -154,5 +154,6 @@ returns an object that contains, for example, the following information:
 | --- | --- |
 | Command number | 1571 |
 | Thread safe | yes |
+
 
 

@@ -23,7 +23,7 @@ Para selecionar uma caixa de texto, o usuário tem que clicar nela (**Ctrl/Cmd+c
 
 Para eliminar uma caixa de texto selecionada, pode pressionar a tecla **Delete** ou **Retrocesso**, utilizar a ação padrão **textBox/eliminar**, ou executar o comando **WP DELETE TEXT BOX**.
 
-Os atributos das caixas de texto são manejadas com o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) ou *ações 4D Write Pro*. Estão disponíveis os seguintes atributos e ações:  
+Os atributos das caixas de texto são manejadas com o comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) ou *ações 4D Write Pro*. Estão disponíveis os seguintes atributos e ações:  
   
 | **Propriedade (constante)** | **Ação padrão**       | **Comentários**                                                                                                   |
 | --------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------- |

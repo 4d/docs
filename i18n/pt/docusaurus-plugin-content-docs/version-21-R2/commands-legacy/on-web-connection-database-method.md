@@ -98,10 +98,11 @@ Os parâmetros *$user* e *$pw* recebem o nome de usuário e senha inseridos pelo
 
 O On Web Connection database method pode ser utilizado como ponto de entrada para o servidor web 4D, seja para usar a URL especial *4DCGI*, ou utilizando as URLs de comando personalizados.
 
-**Advertência**: a chamada de um comando 4D que mostra um elemento de interface ([DIALOG](../commands/dialog.md), [ALERT](alert.md)...) termina o processamento do método.  
+**Advertência**: a chamada de um comando 4D que mostra um elemento de interface ([DIALOG](./commands/dialog), [ALERT](alert.md)...) termina o processamento do método.  
   
 O On Web Connection database method é chamado nos seguintes casos:
 
 * Quando 4D recebe a *URL /4DCGI*. O método banco se chama com a URL */4DCGI/* em *$url*.
 * Quando uma página web chamada com uma URL de tipo *<rota>/<arquivo>* não for encontrada. O método de banco se chama com a URL (\*).
 * Quando uma página web for chama com uma URL do tipo <file>/ e nenhuma página tiver sido definida como padrão. O método de banco se chama com a URL
+

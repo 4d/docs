@@ -103,7 +103,7 @@ Utilizando las tablas del **Ejemplo 1**:
 
 ## Ver también 
 
-[Formula from string](../commands/formula-from-string.md)  
+[Formula from string](./commands/formula-from-string)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Utilizar tokens en fórmulas*  
@@ -114,5 +114,6 @@ Utilizando las tablas del **Ejemplo 1**:
 | --- | --- |
 | Número de comando | 1576 |
 | Hilo seguro | no |
+
 
 

@@ -49,7 +49,7 @@ Desea rechazar o aceptar las nuevas conexiones de clientes:
 ## Ver también 
 
 [DROP REMOTE USER](drop-remote-user.md)  
-[Application info](../commands/application-info.md)  
+[Application info](./commands/application-info)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
 ## Propiedades
@@ -58,5 +58,6 @@ Desea rechazar o aceptar las nuevas conexiones de clientes:
 | --- | --- |
 | Número de comando | 1635 |
 | Hilo seguro | yes |
+
 
 

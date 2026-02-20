@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DIALOG](../commands/dialog.md)  
+[DIALOG](./commands/dialog)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
@@ -82,5 +82,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 627 |
 | スレッドセーフである | no |
+
 
 

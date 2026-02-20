@@ -53,7 +53,7 @@ O parâmetro *título* retorna o título da janela do formulário, tal como foi 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
-[Open form window](../commands/open-form-window.md)  
+[Open form window](./commands/open-form-window)  
 
 ## Propriedades
 
@@ -61,5 +61,6 @@ O parâmetro *título* retorna o título da janela do formulário, tal como foi 
 | --- | --- |
 | Número do comando | 674 |
 | Thread-seguro | no |
+
 
 

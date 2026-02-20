@@ -10,9 +10,9 @@ Una hoja de estilo es un objeto de un conjunto definido de configuraciones de at
 
 ## Estilo por defecto
 
-Todos los documentos 4D Write Pro tienen una hoja de estilo de párrafo predeterminada, “Normal”. Las nuevas hojas de estilo (creadas con el comando [WP New style sheet](../commands-legacy/wp-new-style-sheet)) se heredan automáticamente del estilo Normal. Los atributos modificados por una hoja de estilo solo afectan a los párrafos a los que se aplican, el resto del documento conserva la configuración Normal predeterminada. Si se elimina una hoja de estilo, los atributos modificados volverán al estilo Normal.
+Todos los documentos 4D Write Pro tienen una hoja de estilo de párrafo predeterminada, “Normal”. Las nuevas hojas de estilo (creadas con el comando [WP New style sheet](./commands/wp-new-style-sheet)) se heredan automáticamente del estilo Normal. Los atributos modificados por una hoja de estilo solo afectan a los párrafos a los que se aplican, el resto del documento conserva la configuración Normal predeterminada. Si se elimina una hoja de estilo, los atributos modificados volverán al estilo Normal.
 
-El estilo Normal define un valor predeterminado para cada atributo de hoja de estilo en un documento 4D Write Pro y se puede recuperar con el comando [WP Get style sheet](../commands-legacy/wp-get-style-sheet). La hoja de estilo Normal se puede modificar (pero no renombrar) con el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes). Si bien las hojas de estilo creadas con el comando [WP New style sheet](../commands-legacy/wp-new-style-sheet) se pueden eliminar con el comando [WP DELETE STYLE SHEET](../commands-legacy/wp-delete-style-sheet), la hoja de estilo Normal no se puede eliminar.
+El estilo Normal define un valor predeterminado para cada atributo de hoja de estilo en un documento 4D Write Pro y se puede recuperar con el comando [WP Get style sheet](./commands/wp-get-style-sheet). La hoja de estilo Normal se puede modificar (pero no renombrar) con el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes). Si bien las hojas de estilo creadas con el comando [WP New style sheet](./commands/wp-new-style-sheet) se pueden eliminar con el comando [WP DELETE STYLE SHEET](./commands/wp-delete-style-sheet), la hoja de estilo Normal no se puede eliminar.
 
 ## Atributos de hojas de estilo de párrafo y de carácter
 
@@ -32,22 +32,22 @@ Se pueden combinar varias hojas de estilo de párrafos y caracteres en el mismo 
 
 ## Aplicando hojas de estilo
 
-Las hojas de estilo se aplican con el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) utilizando las constantes `wk style sheet` o `wk new line style sheet` (utilizando notación de objetos).
+Las hojas de estilo se aplican con el comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) utilizando las constantes `wk style sheet` o `wk new line style sheet` (utilizando notación de objetos).
 
 ## Recuperando hojas de estilo
 
-El comando [WP Get style sheets](../commands-legacy/wp-get-style-sheets) le permite recuperar todas las hojas de estilo de un documento de acuerdo con su tipo específico. El comando [WP Get style sheet](../commands-legacy/wp-get-style-sheet) permite recuperar una sola hoja de estilo por su nombre.
+El comando [WP Get style sheets](./commands/wp-get-style-sheets) le permite recuperar todas las hojas de estilo de un documento de acuerdo con su tipo específico. El comando [WP Get style sheet](./commands/wp-get-style-sheet) permite recuperar una sola hoja de estilo por su nombre.
 
 ## Importar y exportar hojas de estilo
 
 Debido a que las hojas de estilo se almacenan como objetos, pueden importarse fácilmente en otros documentos 4D Write Pro o mantenerse cuando se exportan en múltiples formatos.
 
-- **Importar** - puede obtener todos los objetos de hoja de estilo de un documento 4D Write Pro designado y usarlos en un nuevo documento con el comando [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets).
-- **Exportar** - los comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) o [WP EXPORT VARIABLE](../commands/wp-export-variable.md) exportan sus documentos con hojas de estilo.
+- **Importar** - puede obtener todos los objetos de hoja de estilo de un documento 4D Write Pro designado y usarlos en un nuevo documento con el comando [WP IMPORT STYLE SHEETS](./commands/wp-import-style-sheets).
+- **Exportar** - los comandos [WP EXPORT DOCUMENT](./commands/wp-export-document) o [WP EXPORT VARIABLE](./commands/wp-export-variable) exportan sus documentos con hojas de estilo.
 
 ## Atributos de hojas de estilo
 
-Los siguientes atributos de hoja de estilo de párrafos y caracteres se pueden modificar con los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes) y [WP RESET ATTRIBUTES](../commands/wp-reset-attributes), o recuperarse con el comando [WP GET ATTRIBUTES](../commands/wp-get-attributes).
+Los siguientes atributos de hoja de estilo de párrafos y caracteres se pueden modificar con los comandos [WP SET ATTRIBUTES](./commands/wp-set-attributes) y [WP RESET ATTRIBUTES](./commands/wp-reset-attributes), o recuperarse con el comando [WP GET ATTRIBUTES](./commands/wp-get-attributes).
 
 :::note
 
@@ -134,5 +134,7 @@ Nota: algunos atributos están vinculados entre sí. Por lo tanto, al agregar so
 | `wk type`                        | X (read only) | X (read only) |             |
 | `wk vertical align`              | X         | X         |             |
 | `wk width`                       | X         |           |             |
+
+
 
 

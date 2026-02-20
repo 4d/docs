@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
@@ -65,5 +65,6 @@ displayed_sidebar: docs
 | コマンド番号 | 329 |
 | スレッドセーフである | no |
 | サーバー上での使用は不可 ||
+
 
 

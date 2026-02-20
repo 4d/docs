@@ -34,7 +34,7 @@ Ter uma fórmula como se fosse um objeto permite que seja passada como um parâm
 A fórmula retornada pode ser chamada com:
 
 - os métodos [`.call()`](../API/FunctionClass.md#call) ou [`.apply()`](../API/FunctionClass.md#apply),
-- a sintaxe de notação de objeto (consulte [objeto formula](../commands/formula.md-object)).
+- a sintaxe de notação de objeto (consulte [objeto formula](./commands/formula.md-object)).
 
 ```4d
  var $f : 4D. Function
@@ -146,5 +146,6 @@ Chamar uma fórmula usando notação de objeto:
 | ----------------- | ---- |
 | Número de comando | 1597 |
 | Thread safe       | sim  |
+
 
 

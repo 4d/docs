@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
-[Timestamp](../commands/timestamp)  
+[Timestamp](./commands/timestamp)  
 
 ## プロパティ
 
@@ -66,5 +66,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 459 |
 | スレッドセーフである | yes |
+
 
 

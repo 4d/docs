@@ -80,9 +80,9 @@ L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évalua
 
 ## Voir aussi 
 
-[Change string](../commands/change-string)  
-[Delete string](../commands/delete-string)  
-[Insert string](../commands/insert-string)  
+[Change string](./commands/change-string)  
+[Delete string](./commands/delete-string)  
+[Insert string](./commands/insert-string)  
 
 ## Propriétés
 
@@ -90,5 +90,6 @@ L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évalua
 | --- | --- |
 | Numéro de commande | 233 |
 | Thread safe | yes |
+
 
 

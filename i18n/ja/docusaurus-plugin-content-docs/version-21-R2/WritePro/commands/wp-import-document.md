@@ -33,7 +33,7 @@ displayed_sidebar: docs
 - 4D Write Pro(.4wp)フォーマットドキュメント。 4D Write Pro(.4wp)フォーマットドキュメント。 4D Write Proドキュメントフォーマットについてのより詳細な情報に関しては、*.4wp ドキュメントフォーマット* を参照して下さい。
 - .docx フォーマットのドキュメント。 .docx フォーマットのドキュメント。 詳細な情報については、*.docxフォーマットの読み込み/書き出し* を参照してください。
 
-**注意:** 4D BLOBフィールドに保存されたドキュメントを読み込みたい場合には、[WP New](../commands-legacy/wp-new.md) コマンドの使用も検討してみて下さい。
+**注意:** 4D BLOBフィールドに保存されたドキュメントを読み込みたい場合には、[WP New](./commands/wp-new) コマンドの使用も検討してみて下さい。
 
 *filePath* または *fileObj* 引数に渡したパスが無効な場合、またはファイルが見つからない場合、または指定したファイルがサポートされていないフォーマットだった場合、エラーが返されます。
 
@@ -117,4 +117,5 @@ WParea:=WP Import document($file)
 
 ## 参照
 
-[WP New](../commands-legacy/wp-new.md)
+[WP New](./commands/wp-new)
+

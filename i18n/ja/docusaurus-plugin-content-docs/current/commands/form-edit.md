@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[デザインオブジェクトアクセスコマンド](../commands/theme/Design_Object_Access.md)
+[デザインオブジェクトアクセスコマンド](./commands/theme/Design_Object_Access)
 
 ## プロパティ
 
@@ -70,5 +70,6 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1749 |
 | スレッドセーフ | ×    |
+
 
 

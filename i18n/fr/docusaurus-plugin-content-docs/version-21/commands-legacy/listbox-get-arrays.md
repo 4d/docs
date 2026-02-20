@@ -63,7 +63,7 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
 ## Voir aussi 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](../commands/listbox-get-property.md)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
 ## Propriétés
@@ -72,5 +72,6 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
 | --- | --- |
 | Numéro de commande | 832 |
 | Thread safe | no |
+
 
 

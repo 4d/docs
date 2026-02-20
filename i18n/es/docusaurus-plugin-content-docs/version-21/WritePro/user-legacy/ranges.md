@@ -14,7 +14,7 @@ Un rango es un objeto que representa una porción de un documento 4D Write Pro:
 - un rango de caracteres, párrafos, imágenes o tablas se define a través de posiciones de caracteres dentro del documento principal,
 - un rango de celdas, columnas y filas se define a través de las posiciones de las celdas y están ancladas a la tabla principal.
 
-Puede usarse para designar elementos a seleccionar o manipular atributos en una parte del documento (usando [`WP GET ATTRIBUTES`](../commands/wp-get-attributes) y [`WP SET ATTRIBUTES`](../commands/wp-set-attributes)).
+Puede usarse para designar elementos a seleccionar o manipular atributos en una parte del documento (usando [`WP GET ATTRIBUTES`](./commands/wp-get-attributes) y [`WP SET ATTRIBUTES`](./commands/wp-set-attributes)).
 
 Hay diferentes tipos de rangos. Puede determinar el tipo de rango utilizando el atributo `wk type` (solo lectura). Cada rango contiene varios atributos privados que lo definen:
 
@@ -42,13 +42,15 @@ Los rangos de filas, columnas y celdas de [tables](./handling-tables.md) tienen 
 
 Varios comandos le permiten definir rangos:
 
-- [WP Text range](../commands-legacy/wp-text-range.md): devuelve un nuevo rango correspondiente a los límites que pasa como parámetros.
-- [WP Selection range](../commands-legacy/wp-selection-range): devuelve un nuevo rango que corresponde a la selección usuario actual.
-- [WP Picture range](../commands-legacy/wp-picture-range): devuelve un nuevo rango que contiene solo las imágenes.
-- [WP Paragraph range](../commands-legacy/wp-paragraph-range): devuelve un nuevo rango que contiene solo los párrafos.
-- [WP Table range](../commands-legacy/wp-table-range): devuelve un nuevo rango que contiene solo las tablas.
+- [WP Text range](./commands/wp-text-range): devuelve un nuevo rango correspondiente a los límites que pasa como parámetros.
+- [WP Selection range](./commands/wp-selection-range): devuelve un nuevo rango que corresponde a la selección usuario actual.
+- [WP Picture range](./commands/wp-picture-range): devuelve un nuevo rango que contiene solo las imágenes.
+- [WP Paragraph range](./commands/wp-paragraph-range): devuelve un nuevo rango que contiene solo los párrafos.
+- [WP Table range](./commands/wp-table-range): devuelve un nuevo rango que contiene solo las tablas.
 
-Puede obtener información sobre la posición de un rango en un documento (número de página, número de columna…) usando la comando [WP Get position](../commands-legacy/wp-get-position).
+Puede obtener información sobre la posición de un rango en un documento (número de página, número de columna…) usando la comando [WP Get position](./commands/wp-get-position).
+
+
 
 
 

@@ -14,7 +14,7 @@ Uma faixa é um objeto que representa uma porção de um documento 4D Write Pro:
 - uma faixa de caracteres, parágrafos, imagens ou de tabelas é definida através de posições de caracteres dentro do documento principal,
 - uma faixa de células, colunas e filas são definidas através das posições das células e estão ancoradas à tabela principal.
 
-Pode ser usado para designar elementos a selecionar ou manipular atributos em uma parte de documento (usando [`WP GET ATTRIBUTES`](../commands/wp-get-attributes) e [`WP SET ATTRIBUTES`](../commands/wp-set-attributes)).
+Pode ser usado para designar elementos a selecionar ou manipular atributos em uma parte de documento (usando [`WP GET ATTRIBUTES`](./commands/wp-get-attributes) e [`WP SET ATTRIBUTES`](./commands/wp-set-attributes)).
 
 | Constante   | Valor | Comentário |
 |------------|-------|-------------|
@@ -40,12 +40,14 @@ As faixas de filas, colunas e células possuem atributos privados específicos q
 
 Vários comandos lhe permitem definir faixas:
 
-- [WP Text range](../commands-legacy/wp-text-range.md): devolve uma nova faixa correspondente aos limites que passam como parâmetros.
-- [WP Selection range](../commands-legacy/wp-selection-range): devolve uma nova faixa que corresponde à seleção usuário atual.
-- [WP Picture range](../commands-legacy/wp-picture-range): devolve uma nova faixa que contém só as imagens.
-- [WP Paragraph range](../commands-legacy/wp-paragraph-range): devolve uma nova faixa que contém só os parágrafos.
-- [WP Table range](../commands-legacy/wp-table-range): devolve uma nova faixa que contém só as tabelas.
+- [WP Text range](./commands/wp-text-range): devolve uma nova faixa correspondente aos limites que passam como parâmetros.
+- [WP Selection range](./commands/wp-selection-range): devolve uma nova faixa que corresponde à seleção usuário atual.
+- [WP Picture range](./commands/wp-picture-range): devolve uma nova faixa que contém só as imagens.
+- [WP Paragraph range](./commands/wp-paragraph-range): devolve uma nova faixa que contém só os parágrafos.
+- [WP Table range](./commands/wp-table-range): devolve uma nova faixa que contém só as tabelas.
 
-Você pode obter informações sobre a posição de uma faixa em um documento (número da página, número da coluna…) usando o comando [WP Get position](../commands-legacy/wp-get-position).
+Você pode obter informações sobre a posição de uma faixa em um documento (número da página, número da coluna…) usando o comando [WP Get position](./commands/wp-get-position).
+
+
 
 

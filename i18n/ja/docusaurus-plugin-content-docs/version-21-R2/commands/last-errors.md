@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.Last errors.Summary-->**Last errors** コマンドは4D アプリケーションのカレントのスタックエラーをエラーオブジェクトのコレクションとして返すか、あるいはエラーが何も起きなかった場合には **null** を返します。<!-- END REF-->エラーのスタックには、 [throw](../commands-legacy/throw.md) コマンドで返されたオブジェクトも(あれば)含みます。
+<!--REF #_command_.Last errors.Summary-->**Last errors** コマンドは4D アプリケーションのカレントのスタックエラーをエラーオブジェクトのコレクションとして返すか、あるいはエラーが何も起きなかった場合には **null** を返します。<!-- END REF-->エラーのスタックには、 [throw](./commands/throw) コマンドで返されたオブジェクトも(あれば)含みます。
 
-このコマンドは[ON ERR CALL](../commands-legacy/on-err-call.md) コマンドで実装されたエラー処理メソッドから、あるいは[Try または Try/Catch](../Concepts/error-handling.md#tryexpression) コンテキスト内から呼び出す必要があります。
+このコマンドは[ON ERR CALL](./commands/on-err-call) コマンドで実装されたエラー処理メソッドから、あるいは[Try または Try/Catch](../Concepts/error-handling.md#tryexpression) コンテキスト内から呼び出す必要があります。
 
 それぞれのエラーオブジェクトには、次のプロパティが格納されています:
 
@@ -77,8 +77,8 @@ displayed_sidebar: docs
 
 ## 参照
 
-[ON ERR CALL](../commands-legacy/on-err-call.md)
-[throw](../commands-legacy/throw.md)  
+[ON ERR CALL](./commands/on-err-call)
+[throw](./commands/throw)  
 [Error handling](../Concepts/error-handling.md)
 
 ## プロパティ
@@ -87,5 +87,6 @@ displayed_sidebar: docs
 | ------- | ---- |
 | コマンド番号  | 1799 |
 | スレッドセーフ | ◯    |
+
 
 

@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Command name](../commands/command-name.md)  
+[Command name](./commands/command-name)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
@@ -83,5 +83,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 63 |
 | スレッドセーフである | yes |
+
 
 

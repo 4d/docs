@@ -59,7 +59,7 @@ La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d
 ## Voir aussi 
 
 [Before selection](before-selection.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](./commands/form-event-code)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
@@ -70,5 +70,6 @@ La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d
 | --- | --- |
 | Numéro de commande | 36 |
 | Thread safe | yes |
+
 
 

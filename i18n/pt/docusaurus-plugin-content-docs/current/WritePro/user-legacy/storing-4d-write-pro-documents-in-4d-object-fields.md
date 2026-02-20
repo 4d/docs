@@ -62,7 +62,7 @@ Sua área 4D Write Pro é então associada com o campo, assegurando que seus con
 
 Quando as áreas 4D Write Pro forem armazenadas nos campos Objeto, pode salvar e ler qualquer atributo personalizado com o documento 4D Write Pro, tais como o nome do escritor, a categoria do documento ou qualquer informação adicional que achar útil. Pode então pesquisar qualquer atributo personalizável para selecionar registros que se enquadrem nos critérios.
 
-* Atributos personalizados não serão exportados com os comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) ou [WP EXPORT VARIABLE](../commands/wp-export-variable). Eles tambèm seráo quando converter um campo de objeto 4D Write Pro para JSON com o comando [JSON Stringify](../../commands/json-stringify) (junto com os principais atributos de documento 4D Write Pro).
+* Atributos personalizados não serão exportados com os comandos [WP EXPORT DOCUMENT](./commands/wp-export-document) ou [WP EXPORT VARIABLE](./commands/wp-export-variable). Eles tambèm seráo quando converter um campo de objeto 4D Write Pro para JSON com o comando [JSON Stringify](../../commands/json-stringify) (junto com os principais atributos de documento 4D Write Pro).
 
 Para estabelecer ou conseguir atributos personalizados, precisa usar os comandos padrão [OB Get](../../commands/ob-get) e [OB SET](../../commands/ob-set).
 
@@ -112,11 +112,11 @@ Já que atributos personalizados têm o mesmo espaço de nomeação que atributo
 
 :::
 
-**Nota:** a partir de 4D v15 R4, os atributos internos de 4D Write Pro também são acessíveis por programação utilizando os comandos padrão [OB Get](../../commands/ob-get) e [OB SET](../../commands/ob-set), mas também utilizando [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes) e [WP RESET ATTRIBUTES](../commands/wp-reset-attributes). 
+**Nota:** a partir de 4D v15 R4, os atributos internos de 4D Write Pro também são acessíveis por programação utilizando os comandos padrão [OB Get](../../commands/ob-get) e [OB SET](../../commands/ob-set), mas também utilizando [WP SET ATTRIBUTES](./commands/wp-set-attributes), [WP GET ATTRIBUTES](./commands/wp-get-attributes) e [WP RESET ATTRIBUTES](./commands/wp-reset-attributes). 
  
 ## Abrir e exportar documentos
 
-Nas aplicações 4D, os documentos, 4D Write Pro são criados importados e exportados por meio de comandos específicos que se encontram no tema **4D Write Pro** ([WP EXPORT DOCUMENT](../commands/wp-export-document), [WP EXPORT VARIABLE](../commands/wp-export-variable), [WP Import document](../commands/wp-import-document), [WP New](../commands/wp-new)). 
+Nas aplicações 4D, os documentos, 4D Write Pro são criados importados e exportados por meio de comandos específicos que se encontram no tema **4D Write Pro** ([WP EXPORT DOCUMENT](./commands/wp-export-document), [WP EXPORT VARIABLE](./commands/wp-export-variable), [WP Import document](./commands/wp-import-document), [WP New](./commands/wp-new)). 
 
 Também é possível [associar uma área 4D Write Pro com um campo Objeto](../user-legacy/defining-a-4d-write-pro-area.md#storing-4d-write-pro-documents-in-4d-object-fields) em um banco de dados. Desta maneira, cada documento 4D Write Pro é automaticamente salvo com o registro e armazenado nos dados do banco de dados.
 
@@ -163,10 +163,10 @@ A partir de 4D v15 R5, 4D Write Pro inclui novas funcionalidades de impressão. 
 
 #### Novos comandos 4D Write Pro 
 
-Basicamente, dois comandos manejam a função de impressão 4D Write Pro: [WP PRINT](../commands/wp-print) e [WP USE PAGE SETUP](../commands/wp-use-page-setup).
+Basicamente, dois comandos manejam a função de impressão 4D Write Pro: [WP PRINT](./commands/wp-print) e [WP USE PAGE SETUP](./commands/wp-use-page-setup).
 
-* [WP PRINT](../commands/wp-print) inicia um trabalho de impressão0 para o documento 4D Write Pro ou agrega o documento ao trabalho de impressão atual.
-* [WP USE PAGE SETUP](../commands/wp-use-page-setup) modifica a configuração de página da impressora atual dos atributos de documento 4D Write Pro para o tamanho e orientação.
+* [WP PRINT](./commands/wp-print) inicia um trabalho de impressão0 para o documento 4D Write Pro ou agrega o documento ao trabalho de impressão atual.
+* [WP USE PAGE SETUP](./commands/wp-use-page-setup) modifica a configuração de página da impressora atual dos atributos de documento 4D Write Pro para o tamanho e orientação.
 
 **Notas** 
 
@@ -176,6 +176,6 @@ Basicamente, dois comandos manejam a função de impressão 4D Write Pro: [WP PR
 
 Os comandos abaixo 4D suportam as funcionalidades de impressão 4D Write Pro:
 
-* [SET PRINT OPTION](../../commands/set-print-option) e [GET PRINT OPTION](../../commands/get-print-option): todas as opções são suportadas para documentos 4D Write Pro impressos por [WP PRINT](../commands/wp-print). Para Paper option e Orientation option, é mais eficiente chamar a [WP USE PAGE SETUP](../commands/wp-use-page-setup) para sincronizar facilmente estes atributos com a configuração do documento 4D Write Pro. Page range option (15) lhe permite definir a faixa de página a imprimir.
-* [PRINT SETTINGS](../../commands/print-settings): permite estabelecer os ajustes de impressão para a impressora atual; se [WP PRINT](../commands/wp-print) for chamado depois, será utilizada a configuração de impressora modificada se foram modificados por diálogos de configuração de impressão (com exceção das márgens de diálogo de configuração de página que sempre se baseiam no documento 4D Write Pro).
-* [OPEN PRINTING JOB](../../commands/open-printing-job) e [CLOSE PRINTING JOB](../../commands/close-printing-job): [WP PRINT](../commands/wp-print) pode ser chamada entre estes comandos para inserir um ou mais documentos 4D Write Pro em um trabalho de impressão.
+* [SET PRINT OPTION](../../commands/set-print-option) e [GET PRINT OPTION](../../commands/get-print-option): todas as opções são suportadas para documentos 4D Write Pro impressos por [WP PRINT](./commands/wp-print). Para Paper option e Orientation option, é mais eficiente chamar a [WP USE PAGE SETUP](./commands/wp-use-page-setup) para sincronizar facilmente estes atributos com a configuração do documento 4D Write Pro. Page range option (15) lhe permite definir a faixa de página a imprimir.
+* [PRINT SETTINGS](../../commands/print-settings): permite estabelecer os ajustes de impressão para a impressora atual; se [WP PRINT](./commands/wp-print) for chamado depois, será utilizada a configuração de impressora modificada se foram modificados por diálogos de configuração de impressão (com exceção das márgens de diálogo de configuração de página que sempre se baseiam no documento 4D Write Pro).
+* [OPEN PRINTING JOB](../../commands/open-printing-job) e [CLOSE PRINTING JOB](../../commands/close-printing-job): [WP PRINT](./commands/wp-print) pode ser chamada entre estes comandos para inserir um ou mais documentos 4D Write Pro em um trabalho de impressão.

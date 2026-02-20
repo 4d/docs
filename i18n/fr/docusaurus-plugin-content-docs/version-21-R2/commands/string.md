@@ -77,7 +77,7 @@ Le format est spécifié de la même manière que pour un [nombre saisi dans un 
 | String(1/0)                                                      | "INF"                             | Nombre infini positif                                 |
 | String(-1/0)                                                     | "-INF"                            | Nombre infini négatif                                 |
 
-(\*) L'algorithme de conversion des valeurs réelles en texte est basé sur 13 chiffres significatifs, voir [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
+(\*) L'algorithme de conversion des valeurs réelles en texte est basé sur 13 chiffres significatifs, voir [`SET REAL COMPARISON LEVEL`](./commands/set-real-comparison-level).
 
 #### String(number;base)
 
@@ -255,11 +255,11 @@ Si *expression* est évaluée à **Null**, la commande renvoie la chaîne "null"
 
 ## Voir également
 
-[Bool](../commands-legacy/bool.md)  
-[Date](../commands-legacy/date.md)  
+[Bool](./commands/bool)  
+[Date](./commands/date)  
 [Num](num.md)  
-[Time string](../commands-legacy/time-string.md)  
-[Timestamp](../commands-legacy/timestamp.md)
+[Time string](./commands/time-string)  
+[Timestamp](./commands/timestamp)
 
 ## Propriétés
 
@@ -267,5 +267,6 @@ Si *expression* est évaluée à **Null**, la commande renvoie la chaîne "null"
 | ------------------ | --- |
 | Numéro de commande | 10  |
 | Thread safe        | oui |
+
 
 

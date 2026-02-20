@@ -66,7 +66,7 @@ Esta función modifica la colección original.
 ## Ver también
 
 [New collection](new-collection.md)\
-[New shared object](../commands-legacy/new-shared-object.md)\
+[New shared object](./commands/new-shared-object)\
 *Shared objects and shared collections*
 
 ## Propiedades
@@ -75,5 +75,6 @@ Esta función modifica la colección original.
 | ----------------- | ---- |
 | Número de comando | 1527 |
 | Hilo seguro       | sí   |
+
 
 

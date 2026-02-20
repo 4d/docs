@@ -64,7 +64,7 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 ## Ver también
 
 [Formula](formula.md)\
-[Parse formula](../commands-legacy/parse-formula.md)
+[Parse formula](./commands/parse-formula)
 
 ## Propiedades
 
@@ -72,5 +72,6 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 | ----------------- | ---- |
 | Número de comando | 1601 |
 | Hilo seguro       | sí   |
+
 
 

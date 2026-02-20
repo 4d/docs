@@ -63,7 +63,7 @@ Para seleção de registro, list boxes do tipo coleção ou seleção de entidad
 ## Ver também 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](../commands/listbox-get-property.md)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
 ## Propriedades
@@ -72,5 +72,6 @@ Para seleção de registro, list boxes do tipo coleção ou seleção de entidad
 | --- | --- |
 | Número do comando | 832 |
 | Thread-seguro | no |
+
 
 

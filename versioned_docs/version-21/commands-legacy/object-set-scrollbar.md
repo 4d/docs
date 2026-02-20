@@ -55,7 +55,7 @@ The following table indicates the values you can pass in the *horizontal* and *v
 
 ## See also 
 
-[LISTBOX Get property](../commands/listbox-get-property.md)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
@@ -66,5 +66,6 @@ The following table indicates the values you can pass in the *horizontal* and *v
 | --- | --- |
 | Command number | 843 |
 | Thread safe | no |
+
 
 

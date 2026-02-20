@@ -22,8 +22,8 @@ Para saber mais veja *Gestão de fórmulas*.
 
 Os objetos 4D Write Pro oferecem duas maneiras de importar documentos 4D Write:
 
-* Para os arquivos 4D Write Pro armazenados no disco, se utiliza o comando [WP Import document](../commands/wp-import-document),
-* Para as áreas 4D Write armazenadas em campos BLOB, se utiliza o comando [WP New](../commands/wp-new).
+* Para os arquivos 4D Write Pro armazenados no disco, se utiliza o comando [WP Import document](./commands/wp-import-document),
+* Para as áreas 4D Write armazenadas em campos BLOB, se utiliza o comando [WP New](./commands/wp-new).
 
 Para mais informação, consulte a descrição destes comandos.
 
@@ -31,7 +31,7 @@ Para mais informação, consulte a descrição destes comandos.
 
 Para facilitar a migração desde o plug-in 4D Write a 4D Write Pro, queremos suportar tantas funcionalidades 4D Write como seja possível em objetos 4D Write Pro.
 
-Este parágrafo mostra as propriedades do plug-in 4D Write que se recuperam em uma área 4D Write Pro depois de uma importação com os comandos [WP Import document](../commands/wp-import-document) ou [WP New](../commands/wp-new). 
+Este parágrafo mostra as propriedades do plug-in 4D Write que se recuperam em uma área 4D Write Pro depois de uma importação com os comandos [WP Import document](./commands/wp-import-document) ou [WP New](./commands/wp-new). 
 
 Tenha em conta no entanto, que há algumas diferenças, que não se consideram como bugs. Isto deve ser, por exemplo, a fonte pré determinada utilizada em 4D Write Pro para vinhetas, ou pequenas conversões no tipo Sublinhado.
 
@@ -84,7 +84,7 @@ Tenha em conta no entanto, que há algumas diferenças, que não se consideram c
 | Cor URL                  | Não disponível                                                       |
 | Cor de URL visitado      | Não disponível                                                       |
 
-**Nota:** O separador do sistema (como retornado por [GET SYSTEM FORMAT](../../commands/get-system-format)) é usado como separador decimal para tabulação decimal. Pode mudar esse parâmetro usando o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes). 
+**Nota:** O separador do sistema (como retornado por [GET SYSTEM FORMAT](../../commands/get-system-format)) é usado como separador decimal para tabulação decimal. Pode mudar esse parâmetro usando o comando [WP SET ATTRIBUTES](./commands/wp-set-attributes). 
 
 ### Parâmetros de paginação de documentos 
 
@@ -127,7 +127,7 @@ Tenha em conta no entanto, que há algumas diferenças, que não se consideram c
 
 **Notas de compatibilidade**:
 
-Os modos de visualização de imagens são importadas automaticamente a partir de 4D Write Pro v19 R2, utilizando [WP Import document](../commands/wp-import-document). Pode restaurar o comportamento anterior (todas as imagens se escalam para ajuste) utilizando o atributo importDisplayMode.
+Os modos de visualização de imagens são importadas automaticamente a partir de 4D Write Pro v19 R2, utilizando [WP Import document](./commands/wp-import-document). Pode restaurar o comportamento anterior (todas as imagens se escalam para ajuste) utilizando o atributo importDisplayMode.
 
  Windows imagens com o formato PICT de Mac OS são importadas mas não podem ser geradas em 4D Write Pro . Se quiser importar documentos que contenham imagens desse tipo, deve primeiro converter as imagens para outro formato, Lembre que o formato PICT é obsoleto e não deve mais ser usado (ver ).  
   
@@ -213,7 +213,7 @@ Os modos de visualização de imagens são importadas automaticamente a partir d
 | Expressão HTML           | Não disponível\* |
 | Expressão RTF            | Não disponível   |
 
-\*Use o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) com o atributo wk break paragraphs in formulas para transformar CR (retorno de carro) retornado pelas fórmulas em quebras de parágrafo no documento importado (quebra de linha como padrão). (Ver *Gestão de fórmulas*) 
+\*Use o comando [WP SET ATTRIBUTES](./commands/wp-set-attributes) com o atributo wk break paragraphs in formulas para transformar CR (retorno de carro) retornado pelas fórmulas em quebras de parágrafo no documento importado (quebra de linha como padrão). (Ver *Gestão de fórmulas*) 
 
 \*\*pode ser importado como texto entre as tags **##htmlBegin##** e **##htmlEnd##** se usar a constante wk import html expressions as text.
 

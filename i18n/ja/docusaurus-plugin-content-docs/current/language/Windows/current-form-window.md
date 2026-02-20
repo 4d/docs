@@ -29,12 +29,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form window.Summary-->Current form window コマンドはカレントフォームウィンドウの参照を返します。<!-- END REF-->カレントフォームにウィンドウが設定されていない場合、コマンドは0を返します。
 
-カレントフォームウィンドウは[ADD RECORD](add-record.md "ADD RECORD")のようなコマンドを使用すると自動で生成されることがあります。また[Open window](../commands/open-window.md "Open window") や [Open form window](../commands/open-form-window.md "Open form window") コマンドでも生成されます。 
+カレントフォームウィンドウは[ADD RECORD](add-record.md "ADD RECORD")のようなコマンドを使用すると自動で生成されることがあります。また[Open window](./commands/open-window.md "Open window") や [Open form window](./commands/open-form-window.md "Open form window") コマンドでも生成されます。 
 
 ## 参照 
 
-[Open form window](../commands/open-form-window.md)  
-[Open window](../commands/open-window.md)  
+[Open form window](./commands/open-form-window)  
+[Open window](./commands/open-window)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
 ## プロパティ
@@ -43,5 +43,7 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 827 |
 | スレッドセーフである | no |
+
+
 
 

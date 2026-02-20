@@ -5,7 +5,7 @@ displayed_sidebar: docs
 slug: /WritePro/exporting-to-html-and-mime-html-formats
 ---
 
-Los documentos 4D Write Pro pueden exportarse a los formatos HTML y MIME HTML utilizando los comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) y [WP EXPORT VARIABLE](../commands/wp-export-variable). Utilice estas tablas para comprobar qué atributos y funcionalidades de 4D Write Pro se exportan a HTML y MIME HTML. Los atributos/funcionalidades están ordenados alfabéticamente. Para una lista detallada de atributos, ver *Atributos 4D Write Pro*.
+Los documentos 4D Write Pro pueden exportarse a los formatos HTML y MIME HTML utilizando los comandos [WP EXPORT DOCUMENT](./commands/wp-export-document) y [WP EXPORT VARIABLE](./commands/wp-export-variable). Utilice estas tablas para comprobar qué atributos y funcionalidades de 4D Write Pro se exportan a HTML y MIME HTML. Los atributos/funcionalidades están ordenados alfabéticamente. Para una lista detallada de atributos, ver *Atributos 4D Write Pro*.
 
 ### Atributos comunes 
 

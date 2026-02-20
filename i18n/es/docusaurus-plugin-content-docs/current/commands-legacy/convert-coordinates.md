@@ -45,7 +45,7 @@ En el parámetro *de*, pase el sistema de coordenadas inicial del punto de entra
 
 Cuando este comando se llama desde el método de un subformulario o un objeto de un subformulario, y si uno de los selectores es XY Current form, a continuación, las coordenadas son relativas al subformulario en sí, no a su formulario padre.
 
-Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](get-window-rect.md), o con los valores pasados ​​a [Open form window](../commands/open-form-window.md)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en macOS, donde es equivalente a XY Screen.
+Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](get-window-rect.md), o con los valores pasados ​​a [Open form window](./commands/open-form-window)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en macOS, donde es equivalente a XY Screen.
 
 Cuando *de* es XY Current form y el punto se encuentra en la sección del cuerpo de un formulario listado, el resultado depende del contexto de llamada del comando:
 
@@ -101,5 +101,6 @@ Usted quiere abrir una ventana emergente en la posición del cursor del ratón. 
 | --- | --- |
 | Número de comando | 1365 |
 | Hilo seguro | no |
+
 
 

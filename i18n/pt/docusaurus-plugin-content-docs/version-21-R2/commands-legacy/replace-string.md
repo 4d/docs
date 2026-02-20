@@ -83,9 +83,9 @@ O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacr
 
 ## Ver também 
 
-[Change string](../commands/change-string)  
-[Delete string](../commands/delete-string)  
-[Insert string](../commands/insert-string)  
+[Change string](./commands/change-string)  
+[Delete string](./commands/delete-string)  
+[Insert string](./commands/insert-string)  
 
 ## Propriedades
 
@@ -93,5 +93,6 @@ O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacr
 | --- | --- |
 | Número do comando | 233 |
 | Thread-seguro | yes |
+
 
 

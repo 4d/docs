@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE changes the currently displayed form page to the next form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if the last form page is already displayed, FORM NEXT PAGE does nothing.
+<!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE changes the currently displayed form page to the next form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](./commands/form-load) command, or if the last form page is already displayed, FORM NEXT PAGE does nothing.
 
 ## Example 
 
@@ -51,5 +51,6 @@ The following example is a one-line method called from a menu command. It displa
 | --- | --- |
 | Command number | 248 |
 | Thread safe | no |
+
 
 
