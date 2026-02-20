@@ -241,44 +241,44 @@ title: 検索と置換
 名称変更しようとしているオブジェクトのタイプ(プロジェクトメソッドまたは変数)によっては、名称変更ダイアログボックスに追加のオプションが表示される場合があります:
 
 - プロジェクトメソッド: **すべての参照箇所でメソッド名を変更** オプションを使用すると、それを参照しているプロジェクト内の全てのコードにおいてメソッド名を変更します。 このオプションを選択解除することで、例えばエクスプローラー内においてのみメソッド名を変更することができます。
-- Process variable: The **Rename variable in whole database** option renames the variable in all the project code that references it. If you uncheck this option, the variable is only renamed in the current method.
-- Local variable: No distribution option for this object; the variable is only renamed in the current method or class.
+- プロセス変数: **すべての参照箇所で変数名を変更** オプションを使用すると、それを参照しているプロジェクト内のすべてのコードにおいて変数名を変更します。 このオプションを選択解除することで、カレントのメソッドの内の変数のみが名称変更されます。
+- ローカル変数: これに対しては追加のオプションはありません。変数はカレントのメソッドまたはクラスにおいてのみ名称変更されます。
 
-## Searching for unused elements
+## 未使用の要素の検索
 
-Two specific search commands allow you to detect variables and methods that are not used in the code of your host project. You can then remove them to free up memory. These commands are found in the **Edit** menu of the Design environment.
+二つの特定のコマンドを使用することで、ホストプロジェクト内のコードでもう使用されていない変数とメソッドを検知することができます。 これらを削除することで、メモリーを解放することができます。 これらのコマンドは、デザイン環境の **編集** メニュー内にあります。
 
-### Find Unused Methods and Global Variables
+### 未使用のメソッドとグローバル変数を検索
 
-This command looks for project methods as well as "global" variables (process and interprocess variables) that are declared but not used. The search results appear in a standard [Results window](#results-window).
+このコマンドは、宣言されているものの使用されていないプロジェクトメソッドと、"グローバル"変数(プロセス変数とインタープロセス変数) を探します。 検索結果は標準の [結果ウィンドウ](#結果ウィンドウ) に表示されます。
 
-A project method is considered to be unused when:
+プロジェクトメソッドは、以下のようの場合に未使用であると判断されます:
 
-- it is not in the Trash,
-- it is not called anywhere in the 4D code,
-- it is not called by a menu command,
-- it is not called as a string constant in the 4D code (4D detects a method name in a string even when it is followed by parameters in parentheses).
+- ゴミ箱の中にない
+- 4D コード内でどこからも呼び出されていない
+- メニューコマンドから呼び出されていない
+- 4D コード内から文字列定数として呼び出されていない(4D はたとえメソッド名が括弧の中で後ろに引数が続いている時も、文字列内のメソッド名を検知することができます)。
 
-A process or interprocess variable is considered to be unused when:
+プロセス変数とインタープロセス変数は、以下の場合に未使用であると判断されます:
 
-- it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
-- it is not used anywhere else in the 4D code,
-- it is not used in any form object.
+- 4D コード内で [宣言されている](../Concepts/variables.md#変数の宣言)
+- 4D コード内でどこでも使用されていない
+- どのフォームオブジェクトでも使用されていない
 
-Note that certain uses cannot be detected by the function - i.e. an element considered unused may in fact be used. This is the case in the following code:
+ただしこの機能では特定の用法は検知できないことに注意してください。つまり、未使用と判断された要素が使用されていることが有り得るということです。 これは以下のようなコードの場合に当てはまります:
 
 ```4d
 var v : Text :="method"
 EXECUTE FORMULA("my"+v+String(42))
 ```
 
-This code builds a method name. The *mymethod42* project method is considered unused when in fact it is called. Therefore, it is advisable to check that the elements declared as unused are in fact unnecessary before you remove them.
+このコードはメソッド名をビルドします。 *mymethod42* プロジェクトメソッドは実際には呼び出されていますが、ここでは未使用であると判断されてしまいます。 そのため、未使用であると宣言された要素が実際に不要であるかどうかを、削除する前に確認することが望ましいといえます。
 
-### Find Unused Local Variables
+### 未使用のローカル変数を検索
 
-This command looks for local variables that are declared but not used. The search results appear in a standard [Results window](#results-window).
+このコマンドは宣言されているものの使用されていないローカル変数を探します。 検索結果は標準の [結果ウィンドウ](#結果ウィンドウ) に表示されます。
 
-A local variable is considered to be unused when:
+ローカル変数は、以下のような場合に未使用であると判断されます:
 
-- it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
-- it is not used anywhere else within the same method.
+- 4D コード内で [宣言されている](../Concepts/variables.md#変数の宣言)
+- 同じメソッド内において宣言の箇所以外で使用されていない。
