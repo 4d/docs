@@ -103,6 +103,11 @@ Dois tipos de ações estão disponíveis para áreas 4D Write Pro:
 | keepWithNext | keepWithNext | Paragraph | Links a paragraph with the next so that they cannot be separated by automatic page or column breaks.   If applied to the last paragraph of the last cell in a table, the last row of the table is linked to the following paragraph.  | 
 | lineHeight | lineHeight?value={<Css_length> \| <Css_percentage>} | Paragraph, Submenu | Paragraph line height.  Ex: lineHeight?value=120% | 
 | layer | {image \| textBox}/layer | Submenu | Default submenu with layering actions for images or text boxes | 
+| listConcatString | listConcatStringFormat | Paragraph | Determines whether the numbering marker of the current level should be concatenated with the one of the previous level or not.|
+| listLevelAppend  | listLevelDec  | Paragraph | Creates a new hierarchical paragraph style sheet of a higher level and applies it to the selected paragraph.| 
+| listLevelDec     | listLevelDec  | Paragraph | Applies the hierarchical paragraph style sheet of the next level to the selected paragraph.| 
+| listLevelInc     | listLevelInc  | Paragraph | Applies the hierarchical paragraph style sheet of the previous level to the selected paragraph.| 
+| listNumberFormat | listNumberFormat?value=endDot|endParenthesis|doubleParenthesis | Paragraph, Submenu | Determines which delimiter to add to the numbering marker: an ending dot, an ending parenthesis, or double parenthesis (“1.”, “1)”, “(1)” |
 | listStartNumber | listStartNumber?value={<number> (longint) \| auto} | Paragraph, Submenu | List start number. Ex: listStartNumber?value=10 | 
 | listStyleImage | listStyleImage/showDialog | Paragraph, showDialog | Opens a file dialog to choose a image to display as list style bullet; it will set also list style type to disc – style to be used if image is not found. | 
 | listStyleType | listStyleType?value={none \| disc \| circle \| square \| hollow-square \| diamond \| club \| decimal \| decimal-leading- zero \| lower-latin \| lower-roman \| upper-latin \| upper-roman \| lower-greek \| decimal-greek \| armenian \| georgian \| hebrew \| hiragana \| katakana \| cjk-ideographic} | Paragraph, Submenu | Paragraph list style type. | 

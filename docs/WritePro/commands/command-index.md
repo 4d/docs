@@ -26,7 +26,7 @@ title: 4D Write Pro Commands
 [`WP DELETE HEADER`](../commands-legacy/wp-delete-header.md)<br/>
 [`WP DELETE PICTURE`](../commands-legacy/wp-delete-picture.md)<br/>
 [`WP DELETE SECTION`](wp-delete-section.md) ***New 4D 20 R7***<br/>
-[`WP DELETE STYLE SHEET`](../commands-legacy/wp-delete-style-sheet.md)<br/>
+[`WP DELETE STYLE SHEET`](wp-delete-style-sheet.md) ***Modified 4D 21 R3***<br/>
 [`WP DELETE SUBSECTION`](wp-delete-subsection.md) ***Modified 4D 20 R7***<br/>
 [`WP DELETE TEXT BOX`](../commands-legacy/wp-delete-text-box.md)
 
@@ -60,7 +60,7 @@ title: 4D Write Pro Commands
 [`WP Get position`](../commands-legacy/wp-get-position.md)<br/>
 [`WP Get section`](../commands-legacy/wp-get-section.md)<br/>
 [`WP Get sections`](../commands-legacy/wp-get-sections.md)<br/>
-[`WP Get style sheet`](../commands-legacy/wp-get-style-sheet.md)<br/>
+[`WP Get style sheet`](wp-get-style-sheet.md) ***Modified 4D 21 R3***<br/>
 [`WP Get style sheets`](../commands-legacy/wp-get-style-sheets.md)<br/>
 [`WP Get subsection`](../commands-legacy/wp-get-subsection.md)<br/>
 [`WP Get text`](../commands-legacy/wp-get-text.md)<br/>
@@ -69,7 +69,7 @@ title: 4D Write Pro Commands
 <a id="I"><b>I</b></a>
 
 [`WP Import document`](wp-import-document.md) ***Modified 4D 20 R8***<br/>
-[`WP IMPORT STYLE SHEETS`](../commands-legacy/wp-import-style-sheets.md)<br/>
+[`WP IMPORT STYLE SHEETS`](wp-import-style-sheets.md)<br/>
 [`WP INSERT BREAK`](wp-insert-break.md) ***Modified 4D 20 R8***<br/>
 [`WP Insert document body`](wp-insert-document-body.md) ***Modified 4D 20 R8***<br/>
 [`WP INSERT FORMULA`](wp-insert-formula.md) ***Modified 4D 20 R8***<br/>
@@ -83,7 +83,7 @@ title: 4D Write Pro Commands
 [`WP NEW BOOKMARK`](../commands-legacy/wp-new-bookmark.md)<br/>
 [`WP New footer`](../commands-legacy/wp-new-footer.md)<br/>
 [`WP New header`](../commands-legacy/wp-new-header.md)<br/>
-[`WP New style sheet`](../commands-legacy/wp-new-style-sheet.md)<br/>
+[`WP New style sheet`](wp-new-style-sheet.md) ***Modified 4D 21 R3***<br/>
 [`WP New subsection`](../commands-legacy/wp-new-subsection.md)<br/>
 [`WP New text box`](../commands-legacy/wp-new-text-box.md)
 
