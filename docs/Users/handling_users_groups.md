@@ -59,7 +59,7 @@ The editor for users is located in the Toolbox of 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](commands/edit-access) command. 
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](./commands/edit-access) command. 
 > The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.  
 
 ### Adding and modifying users

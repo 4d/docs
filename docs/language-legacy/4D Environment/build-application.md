@@ -62,7 +62,7 @@ If the command fails, an error is generated that you can intercept using the [ON
 
 ## See also 
 
-[Compile project](commands/compile-project)  
+[Compile project](./commands/compile-project)  
 
 ## Properties
 

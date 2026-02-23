@@ -179,7 +179,7 @@ Here is the sequence of callback calls:
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](commands/call-worker), NOT [`New process`](commands/new-process).
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](./commands/call-worker), NOT [`New process`](./commands/new-process).
 
 :::
 
@@ -420,7 +420,7 @@ If the response from the server has already arrived, the function returns immedi
 
 :::note 
 
-During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](commands/call-worker) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
+During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](./commands/call-worker) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
 
 :::
 

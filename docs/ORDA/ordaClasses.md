@@ -336,7 +336,7 @@ An ORDA class constructor function is triggered just after a new entity is creat
 
 This function can only be set at the [entity level](#entity-class). There can only be one constructor function in an entity class (otherwise an error is returned). 
 
-This ORDA class constructor function does not receive or return parameters. However, you can use it to initialize attribute values using [`This`](commands/this). Note that values initialized by the constructor are overriden if corresponding attributes are filled by the code. 
+This ORDA class constructor function does not receive or return parameters. However, you can use it to initialize attribute values using [`This`](./commands/this). Note that values initialized by the constructor are overriden if corresponding attributes are filled by the code. 
 
 :::note
 

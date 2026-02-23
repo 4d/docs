@@ -29,12 +29,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form window.Summary-->The **Current form window** command returns the reference of the current form window.<!-- END REF--> If no window has been set for the current form, the command returns 0.
 
-The current form window can be generated automatically using a command such as [ADD RECORD](add-record.md), following a user action or by using the [Open window](commands/open-window) or [Open form window](commands/open-form-window) commands. 
+The current form window can be generated automatically using a command such as [ADD RECORD](add-record.md), following a user action or by using the [Open window](./commands/open-window) or [Open form window](./commands/open-form-window) commands. 
 
 ## See also 
 
-[Open form window](commands/open-form-window)  
-[Open window](commands/open-window)  
+[Open form window](./commands/open-form-window)  
+[Open window](./commands/open-window)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
 ## Properties

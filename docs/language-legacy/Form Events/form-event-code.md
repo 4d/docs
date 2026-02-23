@@ -102,7 +102,7 @@ This example is a template for a form method. It shows each of the possible even
 
 ## Example 4 
 
-This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](commands/display-selection) or [MODIFY SELECTION](commands/modify-selection) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
+This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](./commands/display-selection) or [MODIFY SELECTION](./commands/modify-selection) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
 ```4d
   //A form method
@@ -141,7 +141,7 @@ This example shows the template of a form method that handles the events that ca
 
 ## Example 5 
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](commands/get-edited-text), [Keystroke](commands/keystroke) and [FILTER KEYSTROKE](commands/filter-keystroke) commands.
+For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](./commands/get-edited-text), [Keystroke](./commands/keystroke) and [FILTER KEYSTROKE](./commands/filter-keystroke) commands.
 
 ## Example 6 
 
@@ -343,14 +343,14 @@ As a result, the red rectangle follows the scrolling of the list box:
 ## See also 
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](commands/call-subform-container)  
-[Current form table](commands/current-form-table)  
-[FILTER KEYSTROKE](commands/filter-keystroke)  
+[CALL SUBFORM CONTAINER](./commands/call-subform-container)  
+[Current form table](./commands/current-form-table)  
+[FILTER KEYSTROKE](./commands/filter-keystroke)  
 [FORM Event](form-event.md)  
-[Get edited text](commands/get-edited-text)  
-[Keystroke](commands/keystroke)  
-[POST OUTSIDE CALL](commands/post-outside-call)  
-[SET TIMER](commands/set-timer)  
+[Get edited text](./commands/get-edited-text)  
+[Keystroke](./commands/keystroke)  
+[POST OUTSIDE CALL](./commands/post-outside-call)  
+[SET TIMER](./commands/set-timer)  
 
 ## Properties
 

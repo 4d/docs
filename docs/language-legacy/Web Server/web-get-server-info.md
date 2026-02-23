@@ -141,8 +141,8 @@ After you execute the following code:
 
 ## See also 
 
-[License info](commands/license-info)  
-[Process activity](commands/process-activity)  
+[License info](./commands/license-info)  
+[Process activity](./commands/process-activity)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
 ## Properties

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](commands/open-window).<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](./commands/open-window).<!-- END REF-->  
   
 **GOTO XY** positions the character cursor (an invisible cursor) to set the location of the next message in the window.
 

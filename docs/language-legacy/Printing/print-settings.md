@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](commands/print-form) commands or the [OPEN PRINTING JOB](open-printing-job.md) command.
+<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](./commands/print-form) commands or the [OPEN PRINTING JOB](open-printing-job.md) command.
 
 The optional *dialType* parameter can be used to configure the display of the printing dialog box. You can use one of the following constants from the *Print Options* theme:
 
@@ -42,7 +42,7 @@ The optional *dialType* parameter can be used to configure the display of the pr
 
 ## Example 
 
-See example for the command [Print form](commands/print-form).
+See example for the command [Print form](./commands/print-form).
 
 ## System variables and sets 
 
@@ -52,7 +52,7 @@ If the user clicks OK in both dialog boxes, the OK system variable is set to 1\.
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](commands/print-form)  
+[Print form](./commands/print-form)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
 ## Properties

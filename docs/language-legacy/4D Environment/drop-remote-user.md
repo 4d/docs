@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DROP REMOTE USER.Summary-->The **DROP REMOTE USER** command disconnects a specific user remotely connected to the 4D Server.<!-- END REF--> 
 
-In *userSession*, pass the session ID of the user you want to disconnect from the server. You can retrieve the session ID with the [Process activity](commands/process-activity) command.
+In *userSession*, pass the session ID of the user you want to disconnect from the server. You can retrieve the session ID with the [Process activity](./commands/process-activity) command.
 
 **Note:** This command is executed asynchronously and can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **DROP REMOTE USER** does nothing.
 

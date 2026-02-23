@@ -63,7 +63,7 @@ For record selection, collection or entity selection type list boxes, *arrStyles
 ## See also 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](commands/listbox-get-property)  
+[LISTBOX Get property](./commands/listbox-get-property)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
 ## Properties

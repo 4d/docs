@@ -70,7 +70,7 @@ For more information on remote user sessions, please refer to the [**Remote user
 
 All stored procedure processes share the same virtual user session. The `Session` object of stored procedures is available from:
 
-- methods called with the [`Execute on server`](commands/execute-on-server) command,
+- methods called with the [`Execute on server`](./commands/execute-on-server) command,
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
 For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../Desktop/sessions.md#stored-procedure-sessions) paragraph.

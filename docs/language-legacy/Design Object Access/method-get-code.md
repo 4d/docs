@@ -69,7 +69,7 @@ Additional attributes can be defined. For more information, refer to the descrip
 The *option* parameter allows you to select the code export mode with respect to the tokenized language elements of the method(s):
 
 * If you pass 0 or omit the *option* parameter, the method code is exported without tokens, i.e. just like it is displayed in the Method editor.
-* If you pass 1 or the Code with tokens constant, the method code is exported with tokens, i.e. tokenized elements are followed by their internal reference in the *code* exported contents. For example, the expression "[String](commands/string)(a)" is exported "[String](commands/string):C10(a)", where "C10" is the internal reference of the [String](commands/string) command.
+* If you pass 1 or the Code with tokens constant, the method code is exported with tokens, i.e. tokenized elements are followed by their internal reference in the *code* exported contents. For example, the expression "[String](./commands/string)(a)" is exported "[String](./commands/string):C10(a)", where "C10" is the internal reference of the [String](./commands/string) command.
 
 Tokenized language elements include:
 

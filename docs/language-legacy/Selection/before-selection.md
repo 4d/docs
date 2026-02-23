@@ -61,7 +61,7 @@ This form method is used during the printing of a report. It sets a variable, *v
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
-[Form event code](commands/form-event-code)  
+[Form event code](./commands/form-event-code)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 

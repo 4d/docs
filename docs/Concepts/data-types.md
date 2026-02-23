@@ -37,8 +37,8 @@ Although they are usually equivalent, some data types available at the database 
 
 You can always know the type of a field or variable using the following commands:
 
-- [`Type`](commands/type) for fields and scalar variables
-- [`Value type`](commands/value-type) for expressions
+- [`Type`](./commands/type) for fields and scalar variables
+- [`Value type`](./commands/value-type) for expressions
 
 
 ## Default values

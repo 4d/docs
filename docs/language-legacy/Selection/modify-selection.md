@@ -41,7 +41,7 @@ displayed_sidebar: docs
 ## See also 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](commands/form-event-code)  
+[Form event code](./commands/form-event-code)  
 *Sets*  
 
 ## Properties

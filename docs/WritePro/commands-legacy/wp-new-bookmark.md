@@ -35,7 +35,7 @@ You can create as many bookmarks as you want within the same document. Multiple 
 
 :::warning
 
-Bookmarks can only be created from ranges within the **body** of the document, i.e. they cannot be created from a range in the header, footer, or a text box of a document. To make sure a range belongs to the body, check its [`wk container` attribute](commands/4d-write-pro-attributes.md#ranges): it is `null` or `undefined` for body ranges.  
+Bookmarks can only be created from ranges within the **body** of the document, i.e. they cannot be created from a range in the header, footer, or a text box of a document. To make sure a range belongs to the body, check its [`wk container` attribute](./commands/4d-write-pro-attributes.md#ranges): it is `null` or `undefined` for body ranges.  
 
 :::
 

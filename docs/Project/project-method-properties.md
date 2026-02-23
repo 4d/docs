@@ -92,7 +92,7 @@ For security reasons, this option is unchecked by default. Each method that can 
 
 When it is checked, this option allows the project method to be executed by the SQL engine of 4D. By default, it is not selected, which means that, unless explicitly authorized, 4D project methods are protected and cannot be called by the SQL engine of 4D. 
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](commands/begin-sql)/[End SQL](commands/end-sql)  tags or the [QUERY BY SQL](commands/query-by-sql) command.
+This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](./commands/begin-sql)/[End SQL](./commands/end-sql)  tags or the [QUERY BY SQL](./commands/query-by-sql) command.
 
 **Notes:**
 
