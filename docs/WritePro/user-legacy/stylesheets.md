@@ -24,6 +24,8 @@ Style sheets allow you to define the attributes of entire paragraphs or specific
 
 Note that paragraph styles apply to whole paragraphs. To apply a style only to a specific part of a paragraph, you must use a character style sheet.
 
+<!-- INCLUDE hierarchical-list.Desc -->
+
 ## Style sheet precedence
 
 Multiple paragraph and character style sheets can be combined within the same 4D Write Pro document. It's important to note style sheet precedence is determined by the order they are applied. 

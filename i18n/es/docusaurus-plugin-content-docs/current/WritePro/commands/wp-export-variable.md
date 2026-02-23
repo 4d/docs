@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|4D 14 R5|Created|
+|4D 15 R2|Created|
+|4D 17 R4|Created|
+
+</details>
+</div>
+
 ## Descripción
 
 <!--REF #_command_.WP EXPORT VARIABLE.Summary-->The **WP EXPORT VARIABLE** command exports the *wpDoc* 4D Write Pro object to the 4D *destination* variable in the specified *format*.<!-- END REF-->
@@ -162,6 +174,6 @@ Para exportar la primera página de un 4D Write Pro como SVG en una variable Tex
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)  
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)  
 [Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)  
-[Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20/4D/20/Exporting-to-HTML-and-MIME-HTML-formats.200-6229467.en.html)<br/>
-[Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html)<br/>
+[Exporting to HTML and MIME HTML formats](../user-legacy/exporting-to-html-and-mime-html-formats.md)<br/>
+[Importing and Exporting in .docx format](../user-legacy/importing-and-exporting-in-docx-format.md)<br/>
 [WP EXPORT DOCUMENT](../commands/wp-export-document.md)
