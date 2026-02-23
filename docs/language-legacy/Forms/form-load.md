@@ -38,7 +38,7 @@ For detailed information on the form data object, please refer to the [`DIALOG`]
 
 ### Printing data 
 
-In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](./commands/open-printing-job) command. The [OPEN PRINTING JOB](./commands/open-printing-job) command makes an implicit call to the [FORM UNLOAD](./commands/form-unload) command, so in this context it is necessary to execute **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](./commands/print-object) command, work with this form.
+In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](commands/open-printing-job) command. The [OPEN PRINTING JOB](commands/open-printing-job) command makes an implicit call to the [FORM UNLOAD](commands/form-unload) command, so in this context it is necessary to execute **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](commands/print-object) command, work with this form.
 
 If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks. 
 
@@ -46,17 +46,17 @@ Only the [`On Load` form event](../Events/onLoad.md) is executed during the open
 
 To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform. 
 
-The current printing form is automatically closed when the [CLOSE PRINTING JOB](./commands/close-printing-job) command is called.
+The current printing form is automatically closed when the [CLOSE PRINTING JOB](commands/close-printing-job) command is called.
 
 ### Parsing form contents 
 
 This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
 
-**FORM LOAD** can be used with the [FORM GET OBJECTS](./commands/form-get-objects) and [OBJECT Get type](./commands/object-get-type) commands in order to perform any type of processing on the form contents. You must then call the [FORM UNLOAD](./commands/form-unload) command in order to release the form from memory.
+**FORM LOAD** can be used with the [FORM GET OBJECTS](commands/form-get-objects) and [OBJECT Get type](commands/object-get-type) commands in order to perform any type of processing on the form contents. You must then call the [FORM UNLOAD](commands/form-unload) command in order to release the form from memory.
 
-Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](./commands/form-unload). 
+Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](commands/form-unload). 
 
-**Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](./commands/form-unload) to avoid any risk of memory overflow.
+**Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](commands/form-unload) to avoid any risk of memory overflow.
 
 ## Example 1 
 
@@ -156,11 +156,11 @@ You want to print a form containing a list box. During the *on load* event, you 
 
 ## See also 
 
-[Current form name](./commands/current-form-name)  
-[FORM UNLOAD](./commands/form-unload)  
-[LISTBOX GET OBJECTS](./commands/listbox-get-objects)  
-[OBJECT Get type](./commands/object-get-type)  
-[Print object](./commands/print-object)  
+[Current form name](commands/current-form-name)  
+[FORM UNLOAD](commands/form-unload)  
+[LISTBOX GET OBJECTS](commands/listbox-get-objects)  
+[OBJECT Get type](commands/object-get-type)  
+[Print object](commands/print-object)  
 
 ## Properties
 

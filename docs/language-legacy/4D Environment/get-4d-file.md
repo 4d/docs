@@ -82,7 +82,7 @@ You want to get the path of the last backup file:
 
 ## See also 
 
-[File](./commands/file)  
+[File](commands/file)  
 
 ## Properties
 

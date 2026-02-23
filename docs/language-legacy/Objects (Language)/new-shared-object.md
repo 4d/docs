@@ -77,7 +77,7 @@ You want to create and modify a shared object. The structure must be called for 
 ## See also 
 
 [New object](new-object.md)  
-[New shared collection](./commands/new-shared-collection)  
+[New shared collection](commands/new-shared-collection)  
 *Shared objects and shared collections*  
 
 ## Properties

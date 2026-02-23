@@ -48,7 +48,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 *	The `compiler_web` project method (regardless of its actual "Execution mode" property);
 
-*	Basically any code processed by the [`PROCESS 4D TAGS`](./commands/process-4d-tags) command in the web context, for example through .shtml pages
+*	Basically any code processed by the [`PROCESS 4D TAGS`](commands/process-4d-tags) command in the web context, for example through .shtml pages
 
 *	Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
 

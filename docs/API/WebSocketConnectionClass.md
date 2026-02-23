@@ -90,7 +90,7 @@ The following contents are sent depending on the *message* type:
 |---|---|
 |Text|Text in UTF-8|
 |Blob|Binary data|
-|Object|Text in JSON UTF-8 (same result as with [`JSON Stringify`](./commands/json-stringify))|
+|Object|Text in JSON UTF-8 (same result as with [`JSON Stringify`](commands/json-stringify))|
 
 <!-- END REF -->
 

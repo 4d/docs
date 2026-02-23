@@ -86,7 +86,7 @@ The `On Web Authentication` database method is therefore called:
 
 - when the web server receives a URL requesting a resource that does not exist
 - when the web server receives a URL beginning with `4DACTION/`
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](./commands/web-set-home-page) command
+- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](commands/web-set-home-page) command
 - when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
 
 The `On Web Authentication` database method is NOT called:

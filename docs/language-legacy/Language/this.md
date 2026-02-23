@@ -183,7 +183,7 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 ## See also 
 
-[Self](./commands/self)  
+[Self](commands/self)  
 [Super](super.md)  
 
 ## Properties

@@ -29,7 +29,7 @@ The following rules are applied for any conversions:
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, 
-> - the virtual structure defined through [`SET TABLE TITLES`](./commands/set-table-titles) or [`SET FIELD TITLES`](./commands/set-field-titles),
+> - the virtual structure defined through [`SET TABLE TITLES`](commands/set-table-titles) or [`SET FIELD TITLES`](commands/set-field-titles),
 > - the "Manual" or "Automatic" property of relations.
 
 

@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SHOW TOOL BAR.Summary-->The **SHOW TOOL BAR** command handles the display of custom toolbars created by the [Open form window](./commands/open-form-window) command for the current process.<!-- END REF-->
+<!--REF #_command_.SHOW TOOL BAR.Summary-->The **SHOW TOOL BAR** command handles the display of custom toolbars created by the [Open form window](commands/open-form-window) command for the current process.<!-- END REF-->
 
-If a toolbar window has been created by the [Open form window](./commands/open-form-window) command with the Toolbar form window option, the command makes this window visible. If the toolbar window was already visible or if no window of this type has been created, the command does nothing.
+If a toolbar window has been created by the [Open form window](commands/open-form-window) command with the Toolbar form window option, the command makes this window visible. If the toolbar window was already visible or if no window of this type has been created, the command does nothing.
 
 ## Example 
 

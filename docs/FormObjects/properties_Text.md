@@ -6,7 +6,7 @@ title: Text
 
 ## Allow font/color picker
 
-When this property is enabled, the [OPEN FONT PICKER](./commands/open-font-picker) and [OPEN COLOR PICKER](./commands/open-color-picker) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
+When this property is enabled, the [OPEN FONT PICKER](commands/open-font-picker) and [OPEN COLOR PICKER](commands/open-color-picker) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
 #### JSON Grammar
 
@@ -24,7 +24,7 @@ When this property is enabled, the [OPEN FONT PICKER](./commands/open-font-picke
 
 Sets the selected text to appear darker and heavier.
 
-You can set this property using the [**OBJECT SET FONT STYLE**](./commands/object-set-font-style) command.
+You can set this property using the [**OBJECT SET FONT STYLE**](commands/object-set-font-style) command.
 
 >This is normal text.<br/>
 **This is bold text.**
@@ -41,7 +41,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](./commands/objec
 
 #### Commands
 
-[OBJECT Get font style](./commands/object-get-font-style) - [OBJECT SET FONT STYLE](./commands/object-set-font-style)
+[OBJECT Get font style](commands/object-get-font-style) - [OBJECT SET FONT STYLE](commands/object-set-font-style)
 
 ---
 
@@ -49,7 +49,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](./commands/objec
 
 Sets the selected text to slant slightly to the right.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](./commands/object-set-font-style) command.
+You can also set this property via the [**OBJECT SET FONT STYLE**](commands/object-set-font-style) command.
 
 >This is normal text.<br/>
 *This is text in italics.*
@@ -66,7 +66,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](./commands/ob
 
 #### Commands
 
-[OBJECT Get font style](./commands/object-get-font-style) - [OBJECT SET FONT STYLE](./commands/object-set-font-style)
+[OBJECT Get font style](commands/object-get-font-style) - [OBJECT SET FONT STYLE](commands/object-set-font-style)
 
 ---
 
@@ -86,7 +86,7 @@ Sets the text to have a line running beneath it.
 
 #### Commands
 
-[OBJECT Get font style](./commands/object-get-font-style) - [OBJECT SET FONT STYLE](./commands/object-set-font-style)
+[OBJECT Get font style](commands/object-get-font-style) - [OBJECT SET FONT STYLE](commands/object-set-font-style)
 
 ---
 
@@ -127,7 +127,7 @@ Three font themes are available:
 
 #### Commands
 
-[OBJECT Get style sheet](./commands/object-get-style-sheet) - [OBJECT SET STYLE SHEET](./commands/object-set-style-sheet)
+[OBJECT Get style sheet](commands/object-get-style-sheet) - [OBJECT SET STYLE SHEET](commands/object-set-style-sheet)
 
 ### Font Family
 
@@ -136,7 +136,7 @@ There are two types of font family names:
 - *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
 - *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [`OBJECT SET FONT`](./commands/object-set-font) command.  
+You can set this using the [`OBJECT SET FONT`](commands/object-set-font) command.  
 
 #### JSON Grammar
 
@@ -152,7 +152,7 @@ You can set this using the [`OBJECT SET FONT`](./commands/object-set-font) comma
 
 #### Commands
 
-[OBJECT Get font](./commands/object-get-font) - [OBJECT SET FONT](./commands/object-set-font)
+[OBJECT Get font](commands/object-get-font) - [OBJECT SET FONT](commands/object-set-font)
 
 ## Font Size
 
@@ -170,7 +170,7 @@ Allows defining the object's font size in points.
 
 #### Commands
 
-[OBJECT Get font size](./commands/object-get-font-size) - [OBJECT SET FONT SIZE](./commands/object-set-font-size)
+[OBJECT Get font size](commands/object-get-font-size) - [OBJECT SET FONT SIZE](commands/object-set-font-size)
 
 ---
 
@@ -186,7 +186,7 @@ The color can be specified by:
 - a HEX value - like "#ff0000"
 - an RGB value - like "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](./commands/object-set-rgb-colors) command.
+You can also set this property using the [**OBJECT SET RGB COLORS**](commands/object-set-rgb-colors) command.
 
 #### JSON Grammar
 
@@ -200,7 +200,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](./commands/
 
 #### Commands
 
-[OBJECT GET RGB COLORS](./commands/object-get-rgb-colors) - [OBJECT SET RGB COLORS](./commands/object-set-rgb-colors) 
+[OBJECT GET RGB COLORS](commands/object-get-rgb-colors) - [OBJECT SET RGB COLORS](commands/object-set-rgb-colors) 
 
 
 ---
@@ -209,11 +209,11 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](./commands/
 
 `Selection and collection/entity selection type list boxes`
 
-Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [`OBJECT SET RGB COLORS`](./commands/object-set-rgb-colors) command.
+Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [`OBJECT SET RGB COLORS`](commands/object-set-rgb-colors) command.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants described in the [`OBJECT SET RGB COLORS`](./commands/object-set-rgb-colors) command.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants described in the [`OBJECT SET RGB COLORS`](commands/object-set-rgb-colors) command.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](./commands/listbox-set-property) command with `lk font color expression` constant.
+You can also set this property using the [`LISTBOX SET PROPERTY`](commands/listbox-set-property) command with `lk font color expression` constant.
 
 >This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -236,7 +236,7 @@ Foreground color;Dark shadow color)
 
 #### Commands
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](commands/listbox-get-property) - [LISTBOX SET PROPERTY](commands/listbox-set-property)
 
 ---
 
@@ -246,7 +246,7 @@ Foreground color;Dark shadow color)
 
 Used to apply a custom character style to each row of the list box or each cell of the column.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](./commands/listbox-set-row-font-style) command.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](commands/listbox-set-row-font-style) command.
 
 Example:
 
@@ -254,7 +254,7 @@ Example:
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](./commands/listbox-set-property) command with `lk font style expression` constant.
+You can also set this property using the [`LISTBOX SET PROPERTY`](commands/listbox-set-property) command with `lk font style expression` constant.
 
 >This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -270,7 +270,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](./commands/lis
 
 #### Commands
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](commands/listbox-get-property) - [LISTBOX SET PROPERTY](commands/listbox-set-property)
 
 
 ---
@@ -299,7 +299,7 @@ Horizontal location of text within the area that contains it.
 
 #### Commands
 
-[OBJECT Get horizontal alignment](./commands/object-get-horizontal-alignment) - [OBJECT SET HORIZONTAL ALIGNMENT](./commands/object-set-horizontal-alignment)
+[OBJECT Get horizontal alignment](commands/object-get-horizontal-alignment) - [OBJECT SET HORIZONTAL ALIGNMENT](commands/object-set-horizontal-alignment)
 
 ---
 
@@ -312,7 +312,7 @@ The **Default** option (`automatic` JSON value) sets the alignment according to 
 - `bottom` for all data (except pictures) and
 - `top` for picture type data.
 
-This property can also be handled by the [`OBJECT Get vertical alignment`](./commands/object-get-vertical-alignment) and [`OBJECT SET VERTICAL ALIGNMENT`](./commands/object-set-vertical-alignment) commands.
+This property can also be handled by the [`OBJECT Get vertical alignment`](commands/object-get-vertical-alignment) and [`OBJECT SET VERTICAL ALIGNMENT`](commands/object-set-vertical-alignment) commands.
 
 #### JSON Grammar
 
@@ -326,7 +326,7 @@ This property can also be handled by the [`OBJECT Get vertical alignment`](./com
 
 #### Commands
 
-[`OBJECT Get vertical alignment`](./commands/object-get-vertical-alignment) - [`OBJECT SET VERTICAL ALIGNMENT`](./commands/object-set-vertical-alignment)
+[`OBJECT Get vertical alignment`](commands/object-get-vertical-alignment) - [`OBJECT SET VERTICAL ALIGNMENT`](commands/object-set-vertical-alignment)
 
 ---
 
@@ -416,7 +416,7 @@ Then, the *Color* method would contain:
 
 #### Commands
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](commands/listbox-get-property) - [LISTBOX SET PROPERTY](commands/listbox-set-property)
 
 
 ---
@@ -439,7 +439,7 @@ By default, this option is not enabled.
 
 #### Commands
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property) - [OBJECT Is styled text](./commands/object-is-styled-text) - 
+[LISTBOX Get property](commands/listbox-get-property) - [LISTBOX SET PROPERTY](commands/listbox-set-property) - [OBJECT Is styled text](commands/object-is-styled-text) - 
 
 
 ---
@@ -469,7 +469,7 @@ In addition to [static text areas](text.md), [input](input_overview.md) text obj
 
 #### Commands
 
-[OBJECT Get text orientation](./commands/object-get-text-orientation) - [OBJECT SET TEXT ORIENTATION](./commands/object-set-text-orientation)
+[OBJECT Get text orientation](commands/object-get-text-orientation) - [OBJECT SET TEXT ORIENTATION](commands/object-set-text-orientation)
 
 ---
 
@@ -479,7 +479,7 @@ In addition to [static text areas](text.md), [input](input_overview.md) text obj
 
 Allows setting a custom font color to each row of the list box or cell of the column.
 
-The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants described in the [`OBJECT SET RGB COLORS`](./commands/object-set-rgb-colors) command. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants described in the [`OBJECT SET RGB COLORS`](commands/object-set-rgb-colors) command. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
 
@@ -493,7 +493,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 #### Commands
 
-[`LISTBOX Get array`](./commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](./commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](./commands/listbox-set-array)
+[`LISTBOX Get array`](commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](commands/listbox-set-array)
 
 
 ---
@@ -504,7 +504,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 Allows setting a custom font style to each row of the list box or each cell of the column.
 
-The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](./commands/listbox-set-row-font-style) command. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](commands/listbox-set-row-font-style) command. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
 
@@ -518,7 +518,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 #### Commands
 
-[`LISTBOX Get array`](./commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](./commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](./commands/listbox-set-array)
+[`LISTBOX Get array`](commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](commands/listbox-set-array)
 
 
 ---

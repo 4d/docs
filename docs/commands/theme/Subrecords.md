@@ -8,4 +8,4 @@ slug: /commands/theme/Subrecords
 
 ||
 |---|
-|[<!-- INCLUDE #_command_.Get subrecord key.Syntax -->](./commands/get-subrecord-key)<br/>|
+|[<!-- INCLUDE #_command_.Get subrecord key.Syntax -->](commands/get-subrecord-key)<br/>|

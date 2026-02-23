@@ -89,7 +89,7 @@ To initialize the array associated to the drop-down list, you can:
 
 In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code could be placed in the form method and be executed when the `On Load` form event runs.
   
-* Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](./commands/list-to-array) command. For example:
+* Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](commands/list-to-array) command. For example:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -149,7 +149,7 @@ A hierarchical drop-down list has a sublist associated with each item in the lis
 
 You can assign the hierarchical choice list to the drop-down list object using the [Choice List](properties_DataSource.md#choice-list) field of the Property List.
 
-You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](./commands/list-item-parent).
+You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](commands/list-item-parent).
 
 ### Using a standard action
 

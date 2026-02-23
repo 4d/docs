@@ -50,7 +50,7 @@ See the example for the [RESOLVE POINTER](resolve-pointer.md) command.
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-[This](./commands/this)  
+[This](commands/this)  
 
 ## Properties
 

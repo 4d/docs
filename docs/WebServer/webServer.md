@@ -53,7 +53,7 @@ REST requests are detailed in the [REST server](../REST/gettingStarted.md) secti
 
 ## Extended settings
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](./commands/web-set-option) command.
+The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](commands/web-set-option) command.
 
 ## Templates and URLs
 

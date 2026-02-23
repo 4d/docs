@@ -55,7 +55,7 @@ This example lets you apply an alternating color to a list form displayed on scr
 
 ## See also 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](commands/form-event-code)  
 [Selected record number](selected-record-number.md)  
 
 ## Properties

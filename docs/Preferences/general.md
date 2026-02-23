@@ -102,7 +102,7 @@ If you intend to use VCS or external code editors with your new projects, you mi
 
 > This option can only be applied to projects (binary databases always include tokens).
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](./commands/method-get-code) with 1 in the *option* parameter.
+> You can always get the code with tokens by calling [`METHOD GET CODE`](commands/method-get-code) with 1 in the *option* parameter.
 
 #### Excluding tokens in existing projects
 

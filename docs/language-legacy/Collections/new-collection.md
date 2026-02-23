@@ -82,7 +82,7 @@ You create a new collection and then add a new element:
 ## See also 
 
 [New shared collection](new-shared-collection.md)  
-[Type](./commands/type)  
+[Type](commands/type)  
 
 ## Properties
 

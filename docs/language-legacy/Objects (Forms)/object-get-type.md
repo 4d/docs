@@ -105,7 +105,7 @@ You want to load a form and get a list of all the objects of list boxes that it 
 
 ## See also 
 
-[FORM LOAD](./commands/form-load)  
+[FORM LOAD](commands/form-load)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
 
 ## Properties

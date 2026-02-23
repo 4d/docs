@@ -8,12 +8,12 @@ title: Release Notes
 
 #### Highlights
 
-- The [`JSON Validate`](./commands/json-validate) command now supports of JSON Schema draft 2020-12. 
+- The [`JSON Validate`](commands/json-validate) command now supports of JSON Schema draft 2020-12. 
 
 
 #### Behavior changes
 
-- The [`JSON Validate`](./commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema. 
+- The [`JSON Validate`](commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema. 
 
 
 ## 4D 21 R2
@@ -34,13 +34,13 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 #### Developer Preview
 
 - Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows: 
-    - new [`FORM theme`](./commands/form-theme) command, 
+    - new [`FORM theme`](commands/form-theme) command, 
     - new [`form-theme` css media query](../FormEditor/createStylesheet.md#media-queries), 
     - new [**Use Fluent UI on Windows**](../settings/interface.md#use-fluent-ui-on-windows) option in the Settings dialog box.
 
 #### Behavior changes
 
-- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](./commands/get-style-sheet-info) command can return different information whether it is called from a form or not. 
+- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](commands/get-style-sheet-info) command can return different information whether it is called from a form or not. 
 
 
 

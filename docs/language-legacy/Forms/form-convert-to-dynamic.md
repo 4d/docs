@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 If you want to convert a table form, pass the form table in the *aTable* parameter and then pass its name as a string in *formName*. For a project form, pass the form name directly in *formName*.
 
-In order to be able to run the form directly by passing the resulting object to the [DIALOG](./commands/dialog) command, **FORM Convert to dynamic** applies specific rules when converting the form:
+In order to be able to run the form directly by passing the resulting object to the [DIALOG](commands/dialog) command, **FORM Convert to dynamic** applies specific rules when converting the form:
 
 * References to lists are exported by name instead of a JSON pointer referencing the lists.json file.
 * References to named filters and named display formats (using the '|' prefix character) are exported by value instead of a JSON pointer referencing the filters.json file.
@@ -71,7 +71,7 @@ If you execute the code:
 
 ## See also 
 
-[DIALOG](./commands/dialog)  
+[DIALOG](commands/dialog)  
 [Export structure file](export-structure-file.md)  
 
 ## Properties

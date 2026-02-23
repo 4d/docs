@@ -104,8 +104,8 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
 
 Available classes are accessible from their class stores. Two class stores are available:
 
-- [`cs`](./commands/cs) for user class store
-- [`4D`](./commands/4d) for built-in class store
+- [`cs`](commands/cs) for user class store
+- [`4D`](commands/4d) for built-in class store
 
 
 ### `cs`
@@ -663,13 +663,13 @@ The following commands have specific features when they are used within class fu
 
 ### `Super`
 
-The [`Super`](./commands/super) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code. 
+The [`Super`](commands/super) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code. 
 
-For more details, see the [`Super`](./commands/super) command description. 
+For more details, see the [`Super`](commands/super) command description. 
 
 ### `This`
 
-The [`This`](./commands/this) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
+The [`This`](commands/this) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
 Example:
 
@@ -689,7 +689,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-For more details, see the [`This`](./commands/this) command description. 
+For more details, see the [`This`](commands/this) command description. 
 
 
 
