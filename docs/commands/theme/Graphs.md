@@ -8,5 +8,5 @@ slug: /commands/theme/Graphs
 
 ||
 |---|
-|[<!-- INCLUDE #_command_.GRAPH.Syntax -->](../../language/Graphs/commands-legacy/graph.md)<br/>|
-|[<!-- INCLUDE #_command_.GRAPH SETTINGS.Syntax -->](../../language/Graphs/commands-legacy/graph-settings.md)<br/>|
+|[<!-- INCLUDE #_command_.GRAPH.Syntax -->](./commands/graph)<br/>|
+|[<!-- INCLUDE #_command_.GRAPH SETTINGS.Syntax -->](./commands/graph-settings)<br/>|

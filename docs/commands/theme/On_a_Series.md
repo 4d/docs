@@ -8,10 +8,10 @@ slug: /commands/theme/On-a-Series
 
 ||
 |---|
-|[<!-- INCLUDE #_command_.Average.Syntax -->](../../language/On a Series/commands-legacy/average.md)<br/>|
-|[<!-- INCLUDE #_command_.Max.Syntax -->](../../language/On a Series/commands-legacy/max.md)<br/>|
-|[<!-- INCLUDE #_command_.Min.Syntax -->](../../language/On a Series/commands-legacy/min.md)<br/>|
-|[<!-- INCLUDE #_command_.Std deviation.Syntax -->](../../language/On a Series/commands-legacy/std-deviation.md)<br/>|
-|[<!-- INCLUDE #_command_.Sum.Syntax -->](../../language/On a Series/commands-legacy/sum.md)<br/>|
-|[<!-- INCLUDE #_command_.Sum squares.Syntax -->](../../language/On a Series/commands-legacy/sum-squares.md)<br/>|
-|[<!-- INCLUDE #_command_.Variance.Syntax -->](../../language/On a Series/commands-legacy/variance.md)<br/>|
+|[<!-- INCLUDE #_command_.Average.Syntax -->](./commands/average)<br/>|
+|[<!-- INCLUDE #_command_.Max.Syntax -->](./commands/max)<br/>|
+|[<!-- INCLUDE #_command_.Min.Syntax -->](./commands/min)<br/>|
+|[<!-- INCLUDE #_command_.Std deviation.Syntax -->](./commands/std-deviation)<br/>|
+|[<!-- INCLUDE #_command_.Sum.Syntax -->](./commands/sum)<br/>|
+|[<!-- INCLUDE #_command_.Sum squares.Syntax -->](./commands/sum-squares)<br/>|
+|[<!-- INCLUDE #_command_.Variance.Syntax -->](./commands/variance)<br/>|

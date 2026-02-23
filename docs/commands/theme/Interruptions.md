@@ -8,15 +8,15 @@ slug: /commands/theme/Interruptions
 
 ||
 |---|
-|[<!-- INCLUDE #_command_.ABORT.Syntax -->](../../language/Interruptions/commands-legacy/abort.md)<br/>|
-|[<!-- INCLUDE #_command_.ASSERT.Syntax -->](../../language/Interruptions/commands-legacy/assert.md)<br/>|
-|[<!-- INCLUDE #_command_.Asserted.Syntax -->](../../language/Interruptions/commands-legacy/asserted.md)<br/>|
-|[<!-- INCLUDE #_command_.FILTER EVENT.Syntax -->](../../language/Interruptions/commands-legacy/filter-event.md)<br/>|
-|[<!-- INCLUDE #_command_.Get assert enabled.Syntax -->](../../language/Interruptions/commands-legacy/get-assert-enabled.md)<br/>|
-|[<!-- INCLUDE #_command_.Last errors.Syntax -->](../../language/Interruptions/commands/last-errors.md)<br/>|
-|[<!-- INCLUDE #_command_.Method called on error.Syntax -->](../../language/Interruptions/commands-legacy/method-called-on-error.md)<br/>|
-|[<!-- INCLUDE #_command_.Method called on event.Syntax -->](../../language/Interruptions/commands-legacy/method-called-on-event.md)<br/>|
-|[<!-- INCLUDE #_command_.ON ERR CALL.Syntax -->](../../language/Interruptions/commands-legacy/on-err-call.md)<br/>|
-|[<!-- INCLUDE #_command_.ON EVENT CALL.Syntax -->](../../language/Interruptions/commands-legacy/on-event-call.md)<br/>|
-|[<!-- INCLUDE #_command_.SET ASSERT ENABLED.Syntax -->](../../language/Interruptions/commands-legacy/set-assert-enabled.md)<br/>|
-|[<!-- INCLUDE #_command_.throw.Syntax -->](../../language/Interruptions/commands-legacy/throw.md)<br/>|
+|[<!-- INCLUDE #_command_.ABORT.Syntax -->](./commands/abort)<br/>|
+|[<!-- INCLUDE #_command_.ASSERT.Syntax -->](./commands/assert)<br/>|
+|[<!-- INCLUDE #_command_.Asserted.Syntax -->](./commands/asserted)<br/>|
+|[<!-- INCLUDE #_command_.FILTER EVENT.Syntax -->](./commands/filter-event)<br/>|
+|[<!-- INCLUDE #_command_.Get assert enabled.Syntax -->](./commands/get-assert-enabled)<br/>|
+|[<!-- INCLUDE #_command_.Last errors.Syntax -->](./commands/last-errors)<br/>|
+|[<!-- INCLUDE #_command_.Method called on error.Syntax -->](./commands/method-called-on-error)<br/>|
+|[<!-- INCLUDE #_command_.Method called on event.Syntax -->](./commands/method-called-on-event)<br/>|
+|[<!-- INCLUDE #_command_.ON ERR CALL.Syntax -->](./commands/on-err-call)<br/>|
+|[<!-- INCLUDE #_command_.ON EVENT CALL.Syntax -->](./commands/on-event-call)<br/>|
+|[<!-- INCLUDE #_command_.SET ASSERT ENABLED.Syntax -->](./commands/set-assert-enabled)<br/>|
+|[<!-- INCLUDE #_command_.throw.Syntax -->](./commands/throw)<br/>|

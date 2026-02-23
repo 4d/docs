@@ -8,26 +8,26 @@ slug: /commands/theme/Pictures
 
 ||
 |---|
-|[<!-- INCLUDE #_command_.BLOB TO PICTURE.Syntax -->](../../language/Pictures/commands-legacy/blob-to-picture.md)<br/>|
-|[<!-- INCLUDE #_command_.COMBINE PICTURES.Syntax -->](../../language/Pictures/commands-legacy/combine-pictures.md)<br/>|
-|[<!-- INCLUDE #_command_.CONVERT PICTURE.Syntax -->](../../language/Pictures/commands-legacy/convert-picture.md)<br/>|
-|[<!-- INCLUDE #_command_.CREATE THUMBNAIL.Syntax -->](../../language/Pictures/commands-legacy/create-thumbnail.md)<br/>|
-|[<!-- INCLUDE #_command_.Equal pictures.Syntax -->](../../language/Pictures/commands-legacy/equal-pictures.md)<br/>|
-|[<!-- INCLUDE #_command_.Get picture file name.Syntax -->](../../language/Pictures/commands-legacy/get-picture-file-name.md)<br/>|
-|[<!-- INCLUDE #_command_.GET PICTURE FORMATS.Syntax -->](../../language/Pictures/commands-legacy/get-picture-formats.md)<br/>|
-|[<!-- INCLUDE #_command_.GET PICTURE FROM LIBRARY.Syntax -->](../../language/Pictures/commands-legacy/get-picture-from-library.md)<br/>|
-|[<!-- INCLUDE #_command_.GET PICTURE KEYWORDS.Syntax -->](../../language/Pictures/commands-legacy/get-picture-keywords.md)<br/>|
-|[<!-- INCLUDE #_command_.GET PICTURE METADATA.Syntax -->](../../language/Pictures/commands-legacy/get-picture-metadata.md)<br/>|
-|[<!-- INCLUDE #_command_.Is picture file.Syntax -->](../../language/Pictures/commands-legacy/is-picture-file.md)<br/>|
-|[<!-- INCLUDE #_command_.PICTURE CODEC LIST.Syntax -->](../../language/Pictures/commands-legacy/picture-codec-list.md)<br/>|
-|[<!-- INCLUDE #_command_.PICTURE LIBRARY LIST.Syntax -->](../../language/Pictures/commands-legacy/picture-library-list.md)<br/>|
-|[<!-- INCLUDE #_command_.PICTURE PROPERTIES.Syntax -->](../../language/Pictures/commands-legacy/picture-properties.md)<br/>|
-|[<!-- INCLUDE #_command_.Picture size.Syntax -->](../../language/Pictures/commands-legacy/picture-size.md)<br/>|
-|[<!-- INCLUDE #_command_.PICTURE TO BLOB.Syntax -->](../../language/Pictures/commands-legacy/picture-to-blob.md)<br/>|
-|[<!-- INCLUDE #_command_.READ PICTURE FILE.Syntax -->](../../language/Pictures/commands-legacy/read-picture-file.md)<br/>|
-|[<!-- INCLUDE #_command_.REMOVE PICTURE FROM LIBRARY.Syntax -->](../../language/Pictures/commands-legacy/remove-picture-from-library.md)<br/>|
-|[<!-- INCLUDE #_command_.SET PICTURE FILE NAME.Syntax -->](../../language/Pictures/commands-legacy/set-picture-file-name.md)<br/>|
-|[<!-- INCLUDE #_command_.SET PICTURE METADATA.Syntax -->](../../language/Pictures/commands-legacy/set-picture-metadata.md)<br/>|
-|[<!-- INCLUDE #_command_.SET PICTURE TO LIBRARY.Syntax -->](../../language/Pictures/commands-legacy/set-picture-to-library.md)<br/>|
-|[<!-- INCLUDE #_command_.TRANSFORM PICTURE.Syntax -->](../../language/Pictures/commands-legacy/transform-picture.md)<br/>|
-|[<!-- INCLUDE #_command_.WRITE PICTURE FILE.Syntax -->](../../language/Pictures/commands-legacy/write-picture-file.md)<br/>|
+|[<!-- INCLUDE #_command_.BLOB TO PICTURE.Syntax -->](./commands/blob-to-picture)<br/>|
+|[<!-- INCLUDE #_command_.COMBINE PICTURES.Syntax -->](./commands/combine-pictures)<br/>|
+|[<!-- INCLUDE #_command_.CONVERT PICTURE.Syntax -->](./commands/convert-picture)<br/>|
+|[<!-- INCLUDE #_command_.CREATE THUMBNAIL.Syntax -->](./commands/create-thumbnail)<br/>|
+|[<!-- INCLUDE #_command_.Equal pictures.Syntax -->](./commands/equal-pictures)<br/>|
+|[<!-- INCLUDE #_command_.Get picture file name.Syntax -->](./commands/get-picture-file-name)<br/>|
+|[<!-- INCLUDE #_command_.GET PICTURE FORMATS.Syntax -->](./commands/get-picture-formats)<br/>|
+|[<!-- INCLUDE #_command_.GET PICTURE FROM LIBRARY.Syntax -->](./commands/get-picture-from-library)<br/>|
+|[<!-- INCLUDE #_command_.GET PICTURE KEYWORDS.Syntax -->](./commands/get-picture-keywords)<br/>|
+|[<!-- INCLUDE #_command_.GET PICTURE METADATA.Syntax -->](./commands/get-picture-metadata)<br/>|
+|[<!-- INCLUDE #_command_.Is picture file.Syntax -->](./commands/is-picture-file)<br/>|
+|[<!-- INCLUDE #_command_.PICTURE CODEC LIST.Syntax -->](./commands/picture-codec-list)<br/>|
+|[<!-- INCLUDE #_command_.PICTURE LIBRARY LIST.Syntax -->](./commands/picture-library-list)<br/>|
+|[<!-- INCLUDE #_command_.PICTURE PROPERTIES.Syntax -->](./commands/picture-properties)<br/>|
+|[<!-- INCLUDE #_command_.Picture size.Syntax -->](./commands/picture-size)<br/>|
+|[<!-- INCLUDE #_command_.PICTURE TO BLOB.Syntax -->](./commands/picture-to-blob)<br/>|
+|[<!-- INCLUDE #_command_.READ PICTURE FILE.Syntax -->](./commands/read-picture-file)<br/>|
+|[<!-- INCLUDE #_command_.REMOVE PICTURE FROM LIBRARY.Syntax -->](./commands/remove-picture-from-library)<br/>|
+|[<!-- INCLUDE #_command_.SET PICTURE FILE NAME.Syntax -->](./commands/set-picture-file-name)<br/>|
+|[<!-- INCLUDE #_command_.SET PICTURE METADATA.Syntax -->](./commands/set-picture-metadata)<br/>|
+|[<!-- INCLUDE #_command_.SET PICTURE TO LIBRARY.Syntax -->](./commands/set-picture-to-library)<br/>|
+|[<!-- INCLUDE #_command_.TRANSFORM PICTURE.Syntax -->](./commands/transform-picture)<br/>|
+|[<!-- INCLUDE #_command_.WRITE PICTURE FILE.Syntax -->](./commands/write-picture-file)<br/>|
