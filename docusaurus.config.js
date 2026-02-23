@@ -136,8 +136,7 @@ function sortKey(item, helpers) {
   return item.label || item.title || item.id || '';
 }
 
-// 6) Tri récursif (catégories + docs internes). Si tu ne veux trier
-//    QUE les catégories racine, supprime la récursion et ne trie que le niveau courant.
+// 6) Tri des catégories racine.
 function sortRec(items, helpers) {
   const collator = getCollator(helpers.locale);
   const withChildrenSorted = items.map((it) => {
