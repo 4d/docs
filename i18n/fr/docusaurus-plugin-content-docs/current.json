@@ -564,7 +564,7 @@
     "description": "The label for category 'Date and Time' in sidebar 'docs'"
   },
   "sidebar.docs.category.Design Object Access": {
-    "message": "Définition structure",
+    "message": "Accès objets développement",
     "description": "The label for category 'Design Object Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.Drag and Drop": {
@@ -1340,7 +1340,7 @@
     "description": "The label for category 'Date and Time' in sidebar 'docs'"
   },
   "sidebar.docs.category.Design-Object-Access-key": {
-    "message": "Accès objects développement",
+    "message": "Accès objets développement",
     "description": "The label for category 'Design Object Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.Drag-and-Drop-key": {

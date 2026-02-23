@@ -3,7 +3,7 @@ id: constant-list
 title: Constant List
 slug: /commands/constant-list
 displayed_sidebar: docs
-sidebar_position: 1000
+sidebar_position: 50
 ---
 
 
