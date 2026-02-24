@@ -1,5 +1,6 @@
 ---
 id: create-entity-selection
+slug: /commands/create-entity-selection
 title: Create entity selection
 displayed_sidebar: docs
 ---

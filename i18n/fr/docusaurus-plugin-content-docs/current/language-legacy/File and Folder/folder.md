@@ -1,5 +1,6 @@
 ---
 id: folder
+slug: /commands/folder
 title: Folder
 displayed_sidebar: docs
 ---

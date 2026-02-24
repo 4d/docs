@@ -1,5 +1,6 @@
 ---
 id: wa-set-context
+slug: /commands/wa-set-context
 title: WA SET CONTEXT
 displayed_sidebar: docs
 ---

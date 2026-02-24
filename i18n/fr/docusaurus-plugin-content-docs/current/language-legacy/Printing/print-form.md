@@ -1,5 +1,6 @@
 ---
 id: print-form
+slug: /commands/print-form
 title: Print form
 displayed_sidebar: docs
 ---

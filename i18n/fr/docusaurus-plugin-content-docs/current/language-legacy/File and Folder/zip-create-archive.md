@@ -1,5 +1,6 @@
 ---
 id: zip-create-archive
+slug: /commands/zip-create-archive
 title: ZIP Create archive
 displayed_sidebar: docs
 ---

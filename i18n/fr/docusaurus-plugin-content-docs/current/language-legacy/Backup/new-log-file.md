@@ -1,5 +1,6 @@
 ---
 id: new-log-file
+slug: /commands/new-log-file
 title: New log file
 displayed_sidebar: docs
 ---

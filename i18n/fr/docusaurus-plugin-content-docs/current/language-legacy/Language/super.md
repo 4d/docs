@@ -1,5 +1,6 @@
 ---
 id: super
+slug: /commands/super
 title: Super
 displayed_sidebar: docs
 ---

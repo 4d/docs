@@ -1,5 +1,6 @@
 ---
 id: open-datastore
+slug: /commands/open-datastore
 title: Open datastore
 displayed_sidebar: docs
 ---

@@ -1,5 +1,6 @@
 ---
 id: pop3-new-transporter
+slug: /commands/pop3-new-transporter
 title: POP3 New transporter
 displayed_sidebar: docs
 ---

@@ -1,5 +1,6 @@
 ---
 id: new-shared-collection
+slug: /commands/new-shared-collection
 title: New shared collection
 displayed_sidebar: docs
 ---

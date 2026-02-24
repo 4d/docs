@@ -1,5 +1,6 @@
 ---
 id: file
+slug: /commands/file
 title: File
 displayed_sidebar: docs
 ---

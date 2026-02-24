@@ -1,5 +1,6 @@
 ---
 id: web-server-list
+slug: /commands/web-server-list
 title: WEB Server list
 displayed_sidebar: docs
 ---

@@ -1,5 +1,6 @@
 ---
 id: cs
+slug: /commands/cs
 title: cs
 displayed_sidebar: docs
 ---

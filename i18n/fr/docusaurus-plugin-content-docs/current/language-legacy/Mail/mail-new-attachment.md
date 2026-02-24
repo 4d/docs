@@ -1,5 +1,6 @@
 ---
 id: mail-new-attachment
+slug: /commands/mail-new-attachment
 title: MAIL New attachment
 displayed_sidebar: docs
 ---

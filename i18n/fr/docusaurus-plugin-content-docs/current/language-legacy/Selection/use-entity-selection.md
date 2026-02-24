@@ -1,5 +1,6 @@
 ---
 id: use-entity-selection
+slug: /commands/use-entity-selection
 title: USE ENTITY SELECTION
 displayed_sidebar: docs
 ---

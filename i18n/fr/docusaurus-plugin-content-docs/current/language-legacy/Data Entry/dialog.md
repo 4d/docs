@@ -1,5 +1,6 @@
 ---
 id: dialog
+slug: /commands/dialog
 title: DIALOG
 displayed_sidebar: docs
 ---

@@ -1,5 +1,6 @@
 ---
 id: session-storage
+slug: /commands/session-storage
 title: Session storage
 displayed_sidebar: docs
 ---
