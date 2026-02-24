@@ -35,7 +35,7 @@ displayed_sidebar: docs
 The line of code adds 100 bytes to the BLOB *myBlob*:
 
 ```4d
- SET BLOB SIZE(myBlob;BLOB size(myBlob)+100)
+ SET BLOB SIZE(myBlob;BLOB size(myBlob)+100)
 ```
 
 ## See also 

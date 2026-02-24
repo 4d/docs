@@ -75,9 +75,9 @@ Regarding User settings file for data and User settings file, a path is returned
 You want to get the path of the last backup file:
 
 ```4d
- var $path : Text
- $path:=Get 4D file(Last backup file)
-  // $path = "C:\Backups\Countries\Countries[0025].4BK" for example
+ var $path : Text
+ $path:=Get 4D file(Last backup file)
+  // $path = "C:\Backups\Countries\Countries[0025].4BK" for example
 ```
 
 ## See also 

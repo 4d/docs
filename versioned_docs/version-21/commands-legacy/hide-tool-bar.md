@@ -39,15 +39,15 @@ On macOS, you have defined a custom toolbar and a standard window that has the H
 To prevent this, in the On Resize form event of the standard window, you need to detect when the window has entered full screen mode and then call **HIDE TOOL BAR**:
 
 ```4d
- Case of
-    :(FORM Event.code=On Resize)
-       GET WINDOW RECT($left;$top;$right;$bottom)
-       If(Screen height=($bottom-$top))
-          HIDE TOOL BAR
-       Else
-          SHOW TOOL BAR
-       End if
- End case
+ Case of
+    :(FORM Event.code=On Resize)
+       GET WINDOW RECT($left;$top;$right;$bottom)
+       If(Screen height=($bottom-$top))
+          HIDE TOOL BAR
+       Else
+          SHOW TOOL BAR
+       End if
+ End case
 ```
 
 ## See also 

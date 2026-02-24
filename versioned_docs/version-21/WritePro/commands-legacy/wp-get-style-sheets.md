@@ -33,8 +33,8 @@ The *type* parameter specifies the type of style sheet to return. The available 
 You want to retrieve a collection of all character style sheets:
 
 ```4d
- var $styleSheets : Collection
- $styleSheets:=WP Get style sheets(myDoc;wk type character)
+ var $styleSheets : Collection
+ $styleSheets:=WP Get style sheets(myDoc;wk type character)
 ```
 
 ## See also 

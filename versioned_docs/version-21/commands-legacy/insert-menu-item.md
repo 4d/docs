@@ -57,11 +57,11 @@ The optional *subMenu* parameter can be used to indicate a menu as the added ite
 The following example creates a menu consisting of two commands to which it assigns a method:
 
 ```4d
- menuRef:=Create menu
- APPEND MENU ITEM(menuRef;"Characters")
- SET MENU ITEM METHOD(menuRef;1;"CharMgmtDial")
- INSERT MENU ITEM(menuRef;1;"Paragraphs")
- SET MENU ITEM METHOD(menuRef;2;"ParaMgmtDial")
+ menuRef:=Create menu
+ APPEND MENU ITEM(menuRef;"Characters")
+ SET MENU ITEM METHOD(menuRef;1;"CharMgmtDial")
+ INSERT MENU ITEM(menuRef;1;"Paragraphs")
+ SET MENU ITEM METHOD(menuRef;2;"ParaMgmtDial")
 ```
 
 ## See also 

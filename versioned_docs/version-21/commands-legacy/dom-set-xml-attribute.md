@@ -49,23 +49,23 @@ In the following XML source:
 
 ```XML
 <Book>
-   <Title>The Best Seller</Title>
+   <Title>The Best Seller</Title>
 </Book>
 ```
 
 If the following code is executed:
 
 ```4d
- vAttrName:="Font"
- vAttrVal:="Verdana"
- DOM SET XML ATTRIBUTE(vElemRef;vAttrName;vAttrVal)
+ vAttrName:="Font"
+ vAttrVal:="Verdana"
+ DOM SET XML ATTRIBUTE(vElemRef;vAttrName;vAttrVal)
 ```
 
 We get:
 
 ```XML
 <Book>
-   <Title Font=Verdana>The Best Seller</Title>
+   <Title Font=Verdana>The Best Seller</Title>
 </Book>
 ```
 

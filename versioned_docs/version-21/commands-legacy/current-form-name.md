@@ -43,15 +43,15 @@ The command returns:
 In an input form, place the following code in a button:
 
 ```4d
- var $FormName : Text
- $win:=Open form window([Members];"Input";Plain form window)
- DIALOG([Members];"Input")
- $FormName:=Current form name
-  // $FormName = "Input"
- FORM LOAD([Members];"Drag")
- $FormName:=Current form name
-  // $FormName = "Drag"
-  //...
+ var $FormName : Text
+ $win:=Open form window([Members];"Input";Plain form window)
+ DIALOG([Members];"Input")
+ $FormName:=Current form name
+  // $FormName = "Input"
+ FORM LOAD([Members];"Drag")
+ $FormName:=Current form name
+  // $FormName = "Drag"
+  //...
 ```
 
 ## Example 2 
@@ -59,11 +59,11 @@ In an input form, place the following code in a button:
 You want to get the current form if it is a project form:
 
 ```4d
- $PointerTable:=Current form table
- If(Nil($PointerTable)) // this is a project form
-    $FormName:=Current form name
-    ... // processing
- End if
+ $PointerTable:=Current form table
+ If(Nil($PointerTable)) // this is a project form
+    $FormName:=Current form name
+    ... // processing
+ End if
 ```
 
 ## See also 

@@ -65,13 +65,13 @@ Under Windows, this principle is applied beginning with 4D v15 R4\. In order to 
 In a form, you want a drop-down list that displays a list of the fonts available on your system. The method of the drop-down list is as follows:
 
 ```4d
- Case of
-    :(FORM Event.code=On Load)
-       ARRAY TEXT(asFont;0)
-       FONT LIST(asFont)
-  // ...
- 
- End case
+ Case of
+    :(FORM Event.code=On Load)
+       ARRAY TEXT(asFont;0)
+       FONT LIST(asFont)
+  // ...
+ 
+ End case
 ```
 
 ## Example 2 
@@ -79,7 +79,7 @@ In a form, you want a drop-down list that displays a list of the fonts available
 You want to get a list of recent fonts:
 
 ```4d
- FONT LIST($arrFonts;Recent fonts)
+ FONT LIST($arrFonts;Recent fonts)
 ```
 
 ## See also 

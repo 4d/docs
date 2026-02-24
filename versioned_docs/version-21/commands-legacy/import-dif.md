@@ -39,8 +39,8 @@ When using **IMPORT DIF**, the default field delimiter is the tab character (cod
 The following example imports data from a DIF document. The method first sets the input form so that the data will be imported through the correct form, then performs the import:
 
 ```4d
- FORM SET INPUT([People];"Import")
- IMPORT DIF([People];"NewPeople.dif") // Import from “NewPeople.dif” document
+ FORM SET INPUT([People];"Import")
+ IMPORT DIF([People];"NewPeople.dif") // Import from “NewPeople.dif” document
 ```
 
 ## System variables and sets 

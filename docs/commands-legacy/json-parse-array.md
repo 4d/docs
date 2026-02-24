@@ -5,7 +5,7 @@ slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* ; *array* : Array )<!-- END REF-->
+<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* : Text ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 <div class="no-index">
 
@@ -35,7 +35,7 @@ In *jsonString*, pass the JSON-formatted string whose contents you want to parse
 
 In *array*, pass an array of the desired type to receive the parsing results. 
 
-**Note:** Starting with 4D v16 R4, **JSON PARSE ARRAY** can usually be replaced by a call to [JSON Parse](json-parse.md) that returns a **collection**. Collections are based on JSON arrays and allow to store data of mixed types, which provides more flexibility than arrays. 
+**Note:** Starting with 4D 16 R4, **JSON PARSE ARRAY** can usually be replaced by a call to [JSON Parse](json-parse.md) that returns a **collection**. Collections are based on JSON arrays and allow to store data of mixed types, which provides more flexibility than arrays. 
 
 ## Example 
 
@@ -46,10 +46,10 @@ In this example, data from fields of the records in a table are extracted and th
  ARRAY OBJECT($sel;0)
  ARRAY OBJECT($sel2;0)
  var v_String : Text
- 
+ 
  OB SET($ref;"name";->[Company]Company Name)
  OB SET($ref;"city";->[Company]City)
- 
+ 
  While(Not(End selection([Company])))
     $ref_company:=OB Copy($ref;True)
     APPEND TO ARRAY($sel;$ref_company)
@@ -58,7 +58,7 @@ In this example, data from fields of the records in a table are extracted and th
   // ...
     NEXT RECORD([Company])
  End while
- 
+ 
  v_String:=JSON Stringify array($sel)
   // v_String= [{"name":"4D SAS","city":"Clichy"},{"name":"MyComp","city":"Lyon"}...]
  JSON PARSE ARRAY(v_String;$sel2)

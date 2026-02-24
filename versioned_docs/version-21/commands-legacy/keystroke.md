@@ -52,81 +52,81 @@ See examples for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 When you process an On Before Keystroke event, you are dealing with the editing of the current text area (the one where the cursor is), not with the “future value” of the data source (field or variable) for this area. The Handle keystroke project method allows to shadow any text area data entry into a second variable, which you can use to perform the actions while entering characters into the area. You pass a pointer to the area’s data source as the first parameter and a pointer to the shadow variable as second parameter. The method returns the new value of the text area in the shadow variable, and returns **True** if the value is different from it what was before the last entered character was inserted.
 
 ```4d
-  // Handle keystroke project method
-  // Handle keystroke ( Pointer ; Pointer ) -> Boolean
-  // Handle keystroke ( -> srcArea ; -> curValue ) -> Is new value
- 
- #DECLARE ($srcArea : Pointer ; $curValue : Pointer) -> $newValue : Boolean
- var $vtNewValue : Text
- 
-  // Get the text selection range within the enterable area
- GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
-  // Start working with the current value
- $vtNewValue:=$curValue->
-  // Depending on the key pressed or the character entered,
-  // Perform the appropriate actions
- Case of
- 
-  // The Backspace (Delete) key has been pressed
-    :(Character code(Keystroke)=Backspace)
-  // Delete the selected characters or the character at the left of the text cursor
-       $vtNewValue:=Substring($vtNewValue;1;$vlStart-1-Num($vlStart=$vlEnd))\
-       +Substring($vtNewValue;$vlEnd)
- 
-  // An acceptable character has been entered
-    :(Position(Keystroke;"abcdefghjiklmnopqrstuvwxyz -0123456789")>0)
-       If($vlStart#$vlEnd)
-  // One or several characters are selected, the keystroke is going to override them
-          $vtNewValue:=Substring($vtNewValue;1;$vlStart-1)\
-          +Keystroke+Substring($vtNewValue;$vlEnd)
-       Else
-  // The text selection is the text cursor
-          Case of
-  // The text cursor is currently at the begining of the text
-             :($vlStart<=1)
-  // Insert the character at the begining of the text
-                $vtNewValue:=Keystroke+$vtNewValue
-  // The text cursor is currently at the end of the text
-             :($vlStart>=Length($vtNewValue))
-  // Append the character at the end of the text
-                $vtNewValue:=$vtNewValue+Keystroke
-             Else
-  // The text cursor is somewhere in the text, insert the new character
-                $vtNewValue:=Substring($vtNewValue;1;$vlStart-1)+Keystroke\
-                +Substring($vtNewValue;$vlStart)
-          End case
-       End if
- 
-  // An Arrow key has been pressed
-  // Do nothing, but accept the keystroke
-    :(Character code(Keystroke)=Left arrow key)
-    :(Character code(Keystroke)=Right arrow key)
-    :(Character code(Keystroke)=Up arrow key)
-    :(Character code(Keystroke)=Down arrow key)
-  `
-    Else
-  // Do not accept characters other than letters, digits, space and dash
-       FILTER KEYSTROKE("")
- End case
-  // Is the value now different?
- $newValue:=($vtNewValue#$curValue->)
-  // Return the value for the next keystroke handling
- $curValue->:=$vtNewValue
+  // Handle keystroke project method
+  // Handle keystroke ( Pointer ; Pointer ) -> Boolean
+  // Handle keystroke ( -> srcArea ; -> curValue ) -> Is new value
+ 
+ #DECLARE ($srcArea : Pointer ; $curValue : Pointer) -> $newValue : Boolean
+ var $vtNewValue : Text
+ 
+  // Get the text selection range within the enterable area
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
+  // Start working with the current value
+ $vtNewValue:=$curValue->
+  // Depending on the key pressed or the character entered,
+  // Perform the appropriate actions
+ Case of
+ 
+  // The Backspace (Delete) key has been pressed
+    :(Character code(Keystroke)=Backspace)
+  // Delete the selected characters or the character at the left of the text cursor
+       $vtNewValue:=Substring($vtNewValue;1;$vlStart-1-Num($vlStart=$vlEnd))\
+       +Substring($vtNewValue;$vlEnd)
+ 
+  // An acceptable character has been entered
+    :(Position(Keystroke;"abcdefghjiklmnopqrstuvwxyz -0123456789")>0)
+       If($vlStart#$vlEnd)
+  // One or several characters are selected, the keystroke is going to override them
+          $vtNewValue:=Substring($vtNewValue;1;$vlStart-1)\
+          +Keystroke+Substring($vtNewValue;$vlEnd)
+       Else
+  // The text selection is the text cursor
+          Case of
+  // The text cursor is currently at the begining of the text
+             :($vlStart<=1)
+  // Insert the character at the begining of the text
+                $vtNewValue:=Keystroke+$vtNewValue
+  // The text cursor is currently at the end of the text
+             :($vlStart>=Length($vtNewValue))
+  // Append the character at the end of the text
+                $vtNewValue:=$vtNewValue+Keystroke
+             Else
+  // The text cursor is somewhere in the text, insert the new character
+                $vtNewValue:=Substring($vtNewValue;1;$vlStart-1)+Keystroke\
+                +Substring($vtNewValue;$vlStart)
+          End case
+       End if
+ 
+  // An Arrow key has been pressed
+  // Do nothing, but accept the keystroke
+    :(Character code(Keystroke)=Left arrow key)
+    :(Character code(Keystroke)=Right arrow key)
+    :(Character code(Keystroke)=Up arrow key)
+    :(Character code(Keystroke)=Down arrow key)
+  `
+    Else
+  // Do not accept characters other than letters, digits, space and dash
+       FILTER KEYSTROKE("")
+ End case
+  // Is the value now different?
+ $newValue:=($vtNewValue#$curValue->)
+  // Return the value for the next keystroke handling
+ $curValue->:=$vtNewValue
 ```
 
 After this project method is added to your application, you can use it as follows:
 
 ```4d
-  // myObject enterable area object method
- Case of
-    :(FORM Event.code=On Load)
-       MyObject:=""
-       MyShadowObject:=""
-    :(FORM Event.code=On Before Keystroke)
-       If(Handle keystroke(->MyObject;->MyShadowObject))
-  // Perform appropriate actions using the value stored in MyShadowObject
-       End if
- End case
+  // myObject enterable area object method
+ Case of
+    :(FORM Event.code=On Load)
+       MyObject:=""
+       MyShadowObject:=""
+    :(FORM Event.code=On Before Keystroke)
+       If(Handle keystroke(->MyObject;->MyShadowObject))
+  // Perform appropriate actions using the value stored in MyShadowObject
+       End if
+ End case
 ```
 
 Let’s examine the following part of a form:
@@ -138,35 +138,35 @@ It is composed of the following objects: an enterable area *vsLookup*, a non-ent
 The *vsLookup* object method is listed here:
 
 ```4d
-  // vsLookup enterable area object method
- Case of
-    :(FORM Event.code=On Load)
-       vsLookup:=""
-       vsResult:=""
-       vsMessage:="Enter the first characters of the city you are looking for."
-       CLEAR VARIABLE(asLookup)
-    :(FORM Event.code=On Before Keystroke)
-       If(Handle keystroke(->vsLookup;->vsResult))
-          If(vsResult#"")
-             QUERY([US Zip Codes];[US Zip Codes]City=vsResult+"@")
-             MESSAGES OFF
-             DISTINCT VALUES([US Zip Codes]City;asLookup)
-             MESSAGES ON
-             $vlResult:=Size of array(asLookup)
-             Case of
-                :($vlResult=0)
-                   vsMessage:="No city found."
-                :($vlResult=1)
-                   vsMessage:="One city found."
-                Else
-                   vsMessage:=String($vlResult)+" cities found."
-             End case
-          Else
-             DELETE FROM ARRAY(asLookup;1;Size of array(asLookup))
-             vsMessage:="Enter the first characters of the city you are looking for."
-          End if
-       End if
- End case
+  // vsLookup enterable area object method
+ Case of
+    :(FORM Event.code=On Load)
+       vsLookup:=""
+       vsResult:=""
+       vsMessage:="Enter the first characters of the city you are looking for."
+       CLEAR VARIABLE(asLookup)
+    :(FORM Event.code=On Before Keystroke)
+       If(Handle keystroke(->vsLookup;->vsResult))
+          If(vsResult#"")
+             QUERY([US Zip Codes];[US Zip Codes]City=vsResult+"@")
+             MESSAGES OFF
+             DISTINCT VALUES([US Zip Codes]City;asLookup)
+             MESSAGES ON
+             $vlResult:=Size of array(asLookup)
+             Case of
+                :($vlResult=0)
+                   vsMessage:="No city found."
+                :($vlResult=1)
+                   vsMessage:="One city found."
+                Else
+                   vsMessage:=String($vlResult)+" cities found."
+             End case
+          Else
+             DELETE FROM ARRAY(asLookup;1;Size of array(asLookup))
+             vsMessage:="Enter the first characters of the city you are looking for."
+          End if
+       End if
+ End case
 ```
 
 Here is the form being executed:

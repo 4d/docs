@@ -42,7 +42,7 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 The following example displays the contents of the string resource ID=20911, which must be located in at least one of the currently open resource files:
 
 ```4d
- ALERT(Get string resource(20911))
+ ALERT(Get string resource(20911))
 ```
 
 ## System variables and sets 

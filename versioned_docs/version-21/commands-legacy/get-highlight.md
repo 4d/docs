@@ -67,8 +67,8 @@ See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 Modification of highlighted text style:
 
 ```4d
- GET HIGHLIGHT(*;"myText";$startsel,$endsel)
- ST SET ATTRIBUTES(*;"myText";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
+ GET HIGHLIGHT(*;"myText";$startsel,$endsel)
+ ST SET ATTRIBUTES(*;"myText";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
 ## See also 

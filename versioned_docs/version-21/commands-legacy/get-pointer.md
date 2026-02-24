@@ -42,11 +42,11 @@ However, you cannot pass variable elements (*ArrName+"{myVar}"*).
 In a form, you build a 5 x 10 grid of enterable variables named v1, v2... v50\. To initialize all of these variables, you write:
 
 ```4d
-  // ...
- For($vlVar;1;50)
-    $vpVar:=Get pointer("v"+String($vlVar))
-    $vpVar->:=""
- End for
+  // ...
+ For($vlVar;1;50)
+    $vpVar:=Get pointer("v"+String($vlVar))
+    $vpVar->:=""
+ End for
 ```
 
 ## Example 2 
@@ -54,10 +54,10 @@ In a form, you build a 5 x 10 grid of enterable variables named v1, v2... v50\. 
 Using pointers to elements of two-dimensional arrays:
 
 ```4d
- $pt:=Get pointer("a{1}{2}")
-  //$pt=->a{1}{2}
- $pt2:=Get pointer("atCities"+"{2}{6}")
-  //$pt2=->atCities{2}{6}
+ $pt:=Get pointer("a{1}{2}")
+  //$pt=->a{1}{2}
+ $pt2:=Get pointer("atCities"+"{2}{6}")
+  //$pt2=->atCities{2}{6}
 ```
 
 ## See also 

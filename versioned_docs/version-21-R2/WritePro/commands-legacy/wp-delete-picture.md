@@ -26,13 +26,13 @@ If no image exists, the command does nothing.
 You want to delete an image using its ID:
 
 ```4d
- var $myPicture : Object
- 
-  // get image  
- $myPicture:=WP Get element by ID(myDoc;"Logo")
- 
-  // Delete the image
- WP DELETE PICTURE($myPicture)
+ var $myPicture : Object
+ 
+  // get image  
+ $myPicture:=WP Get element by ID(myDoc;"Logo")
+ 
+  // Delete the image
+ WP DELETE PICTURE($myPicture)
 ```
 
 ## See also 

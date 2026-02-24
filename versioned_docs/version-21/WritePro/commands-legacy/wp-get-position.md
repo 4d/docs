@@ -72,10 +72,10 @@ If *targetObj* is displayed in a 4D Write Pro form area, make sure that viewing 
 You want to know the page number of a range:
 
 ```4d
- var $range;$rangePosition : Object
- $range:=WP Text range(WParea) //range from user selection
- $rangePosition:=WP Get position($range;wk 4D Write Pro layout)
- ALERT("First page number in selection is "+String($rangePosition.page))
+ var $range;$rangePosition : Object
+ $range:=WP Text range(WParea) //range from user selection
+ $rangePosition:=WP Get position($range;wk 4D Write Pro layout)
+ ALERT("First page number in selection is "+String($rangePosition.page))
 ```
 
 ## Example 2 
@@ -83,21 +83,21 @@ You want to know the page number of a range:
 You want to set to blue color the text in the first and last pages of the document:
 
 ```4d
- var $nbPages : Integer
- var $body : Object
- var $_paragraphs : Collection
- 
- $nbPages:=WP Get page count([DOC]Sample)
- $body:=WP Get body([DOC]Sample)
- $_paragraphs:=WP Get elements($body;wk type paragraph)
- For each($paragraph;$_paragraphs)
-    $info:=WP Get position($paragraph)
-    If($info.page=1)|($info.page=$nbPages) //first and last page paragraphs in blue
-       WP SET ATTRIBUTES($paragraph;wk text color;"blue")
-    Else //other pages paragraphs in black
-       WP SET ATTRIBUTES($paragraph;wk text color;"black")
-    End if
- End for each
+ var $nbPages : Integer
+ var $body : Object
+ var $_paragraphs : Collection
+ 
+ $nbPages:=WP Get page count([DOC]Sample)
+ $body:=WP Get body([DOC]Sample)
+ $_paragraphs:=WP Get elements($body;wk type paragraph)
+ For each($paragraph;$_paragraphs)
+    $info:=WP Get position($paragraph)
+    If($info.page=1)|($info.page=$nbPages) //first and last page paragraphs in blue
+       WP SET ATTRIBUTES($paragraph;wk text color;"blue")
+    Else //other pages paragraphs in black
+       WP SET ATTRIBUTES($paragraph;wk text color;"black")
+    End if
+ End for each
 ```
 
 ## Example 3 
@@ -105,33 +105,33 @@ You want to set to blue color the text in the first and last pages of the docume
 While building a document, you want to avoid paragraph splits:
 
 ```4d
- var WParea;$body : Object
- var $_paragraphs : Collection
- WParea:=WP New
- 
- $body:=WP Get body([DOC]Sample)
- $_paragraphs:=WP Get elements($body;wk type paragraph)
- 
- For each($paragraph;$_paragraphs)
-    $insert:=WP New($paragraph)
- 
-  //memorize current range and page number
-    $rangeBefore:=WP Text range(WParea;wk end text;wk end text)
-    $info:=WP Get position($rangeBefore)
-    $memoPage:=$info.page
- 
-  //insert the contents, keep the range untouched
-    WP INSERT DOCUMENT($rangeBefore;$insert;wk append;wk exclude from range)
- 
-  //check the position after insertion
-    $rangeAfter:=WP Text range(WParea;wk end text;wk end text)
-    $info:=WP Get position($rangeAfter)
- 
-    If($memoPage#$info.page) // if the page has changed, insert a page break
-       WP INSERT BREAK($rangeBefore;wk page break;wk replace)
-    End if
- 
- End for each
+ var WParea;$body : Object
+ var $_paragraphs : Collection
+ WParea:=WP New
+ 
+ $body:=WP Get body([DOC]Sample)
+ $_paragraphs:=WP Get elements($body;wk type paragraph)
+ 
+ For each($paragraph;$_paragraphs)
+    $insert:=WP New($paragraph)
+ 
+  //memorize current range and page number
+    $rangeBefore:=WP Text range(WParea;wk end text;wk end text)
+    $info:=WP Get position($rangeBefore)
+    $memoPage:=$info.page
+ 
+  //insert the contents, keep the range untouched
+    WP INSERT DOCUMENT($rangeBefore;$insert;wk append;wk exclude from range)
+ 
+  //check the position after insertion
+    $rangeAfter:=WP Text range(WParea;wk end text;wk end text)
+    $info:=WP Get position($rangeAfter)
+ 
+    If($memoPage#$info.page) // if the page has changed, insert a page break
+       WP INSERT BREAK($rangeBefore;wk page break;wk replace)
+    End if
+ 
+ End for each
 ```
 
 ## Example 4 
@@ -139,11 +139,11 @@ While building a document, you want to avoid paragraph splits:
 The following examples illustrate the returned bounding rectangle coordinates, depending on the *targetObj*.
 
 ```4d
- $default:=WP Text range(WPArea) //default (text) range
- $textCoordinates:=WP Get position($default) //red dotted line
- 
- $paragraph:=WP Create paragraph range($default) //paragraph range
- $paraCoordinates:=WP Get position($paragraph) // green dotted line
+ $default:=WP Text range(WPArea) //default (text) range
+ $textCoordinates:=WP Get position($default) //red dotted line
+ 
+ $paragraph:=WP Create paragraph range($default) //paragraph range
+ $paraCoordinates:=WP Get position($paragraph) // green dotted line
 ```
 
 ![](../../assets/en/WritePro/commands/pict4096405.en.png)

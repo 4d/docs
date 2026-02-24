@@ -51,7 +51,7 @@ In the following example, we compare two pictures (pict1 and pict2) and display 
 Here is the code for the **Compare** button:
 
 ```4d
- $equal :=Equal pictures($pict1;$pict2;$mask)
+ $equal :=Equal pictures($pict1;$pict2;$mask)
 ```
 
 

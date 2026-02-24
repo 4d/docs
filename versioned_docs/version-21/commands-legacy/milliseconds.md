@@ -38,20 +38,20 @@ The purpose of the command is to measure short periods of time with a high preci
 The following code waits up to 5 seconds for a locked record to become unlocked or it ends:
 
 ```4d
- If(Locked([Table_1]))
-    $starttime:=Milliseconds
-    Repeat
-       DELAY PROCESS(Current process;15)
-       LOAD RECORD([Table_1])
-       $waittime:=Milliseconds-$starttime
-    Until(Not(Locked([Table_1]))|(Process aborted)|($waittime>5000)) //wait 5 seconds max
- End if
+ If(Locked([Table_1]))
+    $starttime:=Milliseconds
+    Repeat
+       DELAY PROCESS(Current process;15)
+       LOAD RECORD([Table_1])
+       $waittime:=Milliseconds-$starttime
+    Until(Not(Locked([Table_1]))|(Process aborted)|($waittime>5000)) //wait 5 seconds max
+ End if
 ```
 
 **Note:** Always compare the difference between two calls of **Milliseconds** as shown above, never compare directly, *e.g.*:  
 
 ```4d
- (Milliseconds>($starttime+5000)) //never do it like this, as one could be positive, one negative
+ (Milliseconds>($starttime+5000)) //never do it like this, as one could be positive, one negative
 ```
 
 ## See also 

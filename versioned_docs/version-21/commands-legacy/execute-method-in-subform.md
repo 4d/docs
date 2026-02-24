@@ -52,18 +52,18 @@ This command must be called in the context of the parent form (containing the *s
 Given the "ContactDetail" form used as subform in the parent form "Company". The subform object that contains the ContactDetail form is named "ContactSubform". Imagine that we want to modify the appearance of certain elements of the subform according to the value of the field(s) of the company (for example, "contactname" must switch to red when \[Company\]City="New York" and to blue when \[Company\]City="San Diego"). This mechanism is implemented via the SetToColor method. To be able to get this result, the SetToColor method cannot be called directly from the process of the "On Load" form event of the Company parent form because the "contactname" object does not belong to the current form, but to the form displayed in the "ContactSubform" subform object. The method must therefore be executed using the EXECUTE METHOD IN SUBFORM command in order to function correctly.
 
 ```4d
- Case of
-    :(Form event code=On Load)
-       Case of
-          :([Company]City="New York")
-             $Color:=$Red
-          :([Company]City="San Diego")
-             $Color:=$Blue
-          Else
-             $Color:=$Black
-       End case
-       EXECUTE METHOD IN SUBFORM("ContactSubform";Formula(SetToColor);*;$Color)
- End case
+ Case of
+    :(Form event code=On Load)
+       Case of
+          :([Company]City="New York")
+             $Color:=$Red
+          :([Company]City="San Diego")
+             $Color:=$Blue
+          Else
+             $Color:=$Black
+       End case
+       EXECUTE METHOD IN SUBFORM("ContactSubform";Formula(SetToColor);*;$Color)
+ End case
 ```
 
 ## Example 2 
@@ -72,14 +72,14 @@ You are developing a database that will be used as a component. It includes a sh
 If this method was used directly in the Calendar form method, you could call it directly in the "On Load" event: 
 
 ```4d
- SetCalendarDate(Current date)
+ SetCalendarDate(Current date)
 ```
 
  But, in the context of the host database, imagine that a project form contains two "Calendar" subforms, in subform objects called "Cal1" and "Cal2". You must set the date of Cal1 to 01/01/10 and the date of Cal2 to 05/05/10\. You cannot call SetCalendarDate directly because the method will not "know" which forms and variables it should apply. Therefore, you must call it via the following code: 
 
 ```4d
- EXECUTE METHOD IN SUBFORM("Cal1";Formula(SetCalendarDate);*;!01/01/20!)
- EXECUTE METHOD IN SUBFORM("Cal2";Formula(SetCalendarDate);*;!05/05/20!)
+ EXECUTE METHOD IN SUBFORM("Cal1";Formula(SetCalendarDate);*;!01/01/20!)
+ EXECUTE METHOD IN SUBFORM("Cal2";Formula(SetCalendarDate);*;!05/05/20!)
 ```
 
 ## System variables and sets 

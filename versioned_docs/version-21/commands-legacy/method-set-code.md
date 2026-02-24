@@ -46,15 +46,15 @@ If a method does not exist, it is created with the *code* contents.
 You can use two types of syntaxes, based either on text arrays, or text variables:
 
 ```4d
- var tVpath : Text // text variables
- var tVcode : Text
- METHOD SET CODE(tVpath;tVcode) // code of a single method
+ var tVpath : Text // text variables
+ var tVcode : Text
+ METHOD SET CODE(tVpath;tVcode) // code of a single method
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // text arrays
- ARRAY TEXT(arrCodes;0)
- METHOD SET CODE(arrPaths;arrCodes) // code of several methods
+ ARRAY TEXT(arrPaths;0) // text arrays
+ ARRAY TEXT(arrCodes;0)
+ METHOD SET CODE(arrPaths;arrCodes) // code of several methods
 ```
 
 You cannot mix the two syntaxes.
@@ -64,7 +64,7 @@ If you pass an invalid pathname, the command does nothing.
 When **METHOD SET CODE** is called, the method attributes are reset by default. However, if the first line of the method *code* contains valid metadata (expressed in JSON), they are used to specify the method attributes and the first line is not inserted. Example of metadata:
 
 ```4d
-  // %attributes = {"invisible":true,"lang":"fr","folder":"Security"}
+  // %attributes = {"invisible":true,"lang":"fr","folder":"Security"}
 ```
 
 **Note:** These metadata are generated automatically by the [METHOD GET CODE](method-get-code.md) command. For more information about supported attributes, refer to the description of the [METHOD SET ATTRIBUTES](method-set-attributes.md) command.
@@ -82,31 +82,31 @@ You can execute this command from a component, but in this case, you must pass t
 This example exports and imports all the project methods of an application:
 
 ```4d
- $root_t:=Get 4D folder(Database folder)+"methods"+Folder separator
- ARRAY TEXT($fileNames_at;0)
- CONFIRM("Import or export methods?";"Import";"Export")
- 
- If(OK=1)
-    DOCUMENT LIST($root_t;$fileNames_at)
-    For($loop_l;1;Size of array($fileNames_at))
-       $filename_t:=$fileNames_at{$loop_l}
-       DOCUMENT TO BLOB($root_t+$filename_t;$blob_x)
-       METHOD SET CODE($filename_t;BLOB to text($blob_x;UTF8 text without length))
-    End for
- Else
-    If(Test path name($root_t)#Is a folder)
-       CREATE FOLDER($root_t;*)
-    End if
-    METHOD GET PATHS(Path project method;$fileNames_at)
-    METHOD GET CODE($fileNames_at;$code_at)
-    For($loop_l;1;Size of array($fileNames_at))
-       $filename_t:=$fileNames_at{$loop_l}
-       SET BLOB SIZE($blob_x;0)
-       TEXT TO BLOB($code_at{$loop_l};$blob_x;UTF8 text without length)
-       BLOB TO DOCUMENT($root_t+$filename_t;$blob_x)
-    End for
- End if
- SHOW ON DISK($root_t)
+ $root_t:=Get 4D folder(Database folder)+"methods"+Folder separator
+ ARRAY TEXT($fileNames_at;0)
+ CONFIRM("Import or export methods?";"Import";"Export")
+ 
+ If(OK=1)
+    DOCUMENT LIST($root_t;$fileNames_at)
+    For($loop_l;1;Size of array($fileNames_at))
+       $filename_t:=$fileNames_at{$loop_l}
+       DOCUMENT TO BLOB($root_t+$filename_t;$blob_x)
+       METHOD SET CODE($filename_t;BLOB to text($blob_x;UTF8 text without length))
+    End for
+ Else
+    If(Test path name($root_t)#Is a folder)
+       CREATE FOLDER($root_t;*)
+    End if
+    METHOD GET PATHS(Path project method;$fileNames_at)
+    METHOD GET CODE($fileNames_at;$code_at)
+    For($loop_l;1;Size of array($fileNames_at))
+       $filename_t:=$fileNames_at{$loop_l}
+       SET BLOB SIZE($blob_x;0)
+       TEXT TO BLOB($code_at{$loop_l};$blob_x;UTF8 text without length)
+       BLOB TO DOCUMENT($root_t+$filename_t;$blob_x)
+    End for
+ End if
+ SHOW ON DISK($root_t)
 ```
 
 ## See also 

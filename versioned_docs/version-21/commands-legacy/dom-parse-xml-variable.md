@@ -66,16 +66,16 @@ The command returns a character string (ElementRef) making up the reference in t
 Opening an XML object located in a 4D Text variable, without validation:
 
 ```4d
- var myTextVar : Text
- var vDoc : Time
- var $xml_Struct_Ref : Text
- 
- vDoc:=Open document("Document.xml")
- If(OK=1)
-    RECEIVE PACKET(vDoc;myTextVar;32000)
-    CLOSE DOCUMENT(vDoc)
-    $xml_Struct_Ref:=DOM Parse XML variable(myTextVar)
- End if
+ var myTextVar : Text
+ var vDoc : Time
+ var $xml_Struct_Ref : Text
+ 
+ vDoc:=Open document("Document.xml")
+ If(OK=1)
+    RECEIVE PACKET(vDoc;myTextVar;32000)
+    CLOSE DOCUMENT(vDoc)
+    $xml_Struct_Ref:=DOM Parse XML variable(myTextVar)
+ End if
 ```
 
 ## Example 2 
@@ -83,11 +83,11 @@ Opening an XML object located in a 4D Text variable, without validation:
 Opening an XML document located in a 4D BLOB, without validation:
 
 ```4d
- var myBlobVar : Blob
- var $ref_XML_Struct : Text
- 
- DOCUMENT TO BLOB(“c:\\import.xml”;myBlobVar)
- $xml_Struct_Ref:=DOM Parse XML variable(myBlobVar)
+ var myBlobVar : Blob
+ var $ref_XML_Struct : Text
+ 
+ DOCUMENT TO BLOB(“c:\\import.xml”;myBlobVar)
+ $xml_Struct_Ref:=DOM Parse XML variable(myBlobVar)
 ```
 
 ## System variables and sets 

@@ -40,16 +40,16 @@ If the *subSectionType* is not specified, the main section footer will be return
 You want to copy the footer of the first page of a 4D Write Pro document to the footer of all pages of another 4D Write Pro document:
 
 ```4d
- var $footerSource;$rangeSource;$tempoc;$footerTarget;$rangeTarget : Object
- 
- $footerSource:=WP Get footer([TEMPLATES]WPtemplate;1;wk first page) //get the first page footer of section 1
- $rangeSource:=WP Text range($footerSource;wk start text;wk end text)
- $tempoc:=WP New($rangeSource)
- 
- $footerTarget:=WP Get footer([Docs]MyWPDoc;1) //all pages of section 1
- $rangeTarget:=WP Text range($footerTarget;wk start text;wk end text)
- 
- WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
+ var $footerSource;$rangeSource;$tempoc;$footerTarget;$rangeTarget : Object
+ 
+ $footerSource:=WP Get footer([TEMPLATES]WPtemplate;1;wk first page) //get the first page footer of section 1
+ $rangeSource:=WP Text range($footerSource;wk start text;wk end text)
+ $tempoc:=WP New($rangeSource)
+ 
+ $footerTarget:=WP Get footer([Docs]MyWPDoc;1) //all pages of section 1
+ $rangeTarget:=WP Text range($footerTarget;wk start text;wk end text)
+ 
+ WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
 ## See also 

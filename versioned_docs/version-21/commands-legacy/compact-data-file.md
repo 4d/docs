@@ -68,10 +68,10 @@ Regardless of the option selected, as soon as a log file is generated, its path 
 The following example (Windows) carries out the compacting of a data file:
 
 ```4d
- $structFile:=Structure file
- $dataFile:="C:\\Databases\\Invoices\\January\\Invoices.4dd"
- $origFile:="C:\\Databases\\Invoices\\Archives\\January\\"
- $archFolder:=Compact data file($structFile;$dataFile;$origFile)
+ $structFile:=Structure file
+ $dataFile:="C:\\Databases\\Invoices\\January\\Invoices.4dd"
+ $origFile:="C:\\Databases\\Invoices\\Archives\\January\\"
+ $archFolder:=Compact data file($structFile;$dataFile;$origFile)
 ```
 
 ## System variables and sets 

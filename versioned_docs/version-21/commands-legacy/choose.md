@@ -47,7 +47,7 @@ This command can be used to generate concise code that replaces tests of the “
 * if *value* is a dynamic expression that causes side effects (update of a counter, modification of any kind), these effects will happen in all cases;
 * if a value parameter is an invalid expression, **Choose** will return an error in all cases. For example, the following code will return an error:  
 ```4d  
- $res:=Choose(True;"red1";"blue"+2) //error  
+ $res:=Choose(True;"red1";"blue"+2) //error  
 ```
 
 ## Example 1 
@@ -55,17 +55,17 @@ This command can be used to generate concise code that replaces tests of the “
 Here is an example of the typical use of this command with a Boolean type criterion:
 
 ```4d
- vTitle:=Choose([Person]Masculine;"Mr";"Ms")
+ vTitle:=Choose([Person]Masculine;"Mr";"Ms")
 ```
 
 This code is strictly equivalent to:
 
 ```4d
- If([Person]Masculine)
-    vTitle:="Mr"
- Else
-    vTitle:="Ms"
- End if
+ If([Person]Masculine)
+    vTitle:="Mr"
+ Else
+    vTitle:="Ms"
+ End if
 ```
 
 ## Example 2 
@@ -73,22 +73,22 @@ This code is strictly equivalent to:
 Here is an example of the typical use of this command with a Number type criterion:
 
 ```4d
- vStatus:=Choose([Person]Status;"Single";"Married";"Widowed";"Divorced")
+ vStatus:=Choose([Person]Status;"Single";"Married";"Widowed";"Divorced")
 ```
 
 This code is strictly equivalent to:
 
 ```4d
- Case of
-    :([Person]Status=0)
-       vStatus:="Single"
-    :([Person]Status=1)
-       vStatus:="Married"
-    :([Person]Status=2)
-       vStatus:="Widowed"
-    :([Person]Status=3)
-       vStatus:="Divorced"
- End case
+ Case of
+    :([Person]Status=0)
+       vStatus:="Single"
+    :([Person]Status=1)
+       vStatus:="Married"
+    :([Person]Status=2)
+       vStatus:="Widowed"
+    :([Person]Status=3)
+       vStatus:="Divorced"
+ End case
 ```
 
 

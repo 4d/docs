@@ -48,10 +48,10 @@ Using EXPORT TEXT, the default field delimiter is the tab character (code 9). Th
 This example exports data to a text document. The method first sets the output form so that the data will be exported through the correct form, changes the 4D delimiter variables, then performs the export:
 
 ```4d
- FORM SET OUTPUT([People];"Export")
- FldDelimit:=27 // Set field delimiter to Escape character
- RecDelimit:=10 // Set record delimiter to Line Feed character
- EXPORT TEXT([People];"NewPeople.txt") // Export to the "NewPeople.txt" document
+ FORM SET OUTPUT([People];"Export")
+ FldDelimit:=27 // Set field delimiter to Escape character
+ RecDelimit:=10 // Set record delimiter to Line Feed character
+ EXPORT TEXT([People];"NewPeople.txt") // Export to the "NewPeople.txt" document
 ```
 
 ## System variables and sets 

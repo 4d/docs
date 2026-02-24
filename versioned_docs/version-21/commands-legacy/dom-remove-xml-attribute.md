@@ -41,13 +41,13 @@ Given the following structure:
 The following code can be used to remove the first attribute "N=1": 
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- var $LineNum : Integer
- 
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
- DOM REMOVE XML ATTRIBUTE($xml_Child_Ref;"N")
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ var $LineNum : Integer
+ 
+ $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
+ $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
+ DOM REMOVE XML ATTRIBUTE($xml_Child_Ref;"N")
 ```
 
 ## See also 

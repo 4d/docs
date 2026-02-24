@@ -55,7 +55,7 @@ As with the [QUERY](query.md) command, this lets you break up a complex statemen
 In the following example, the two arrays *asLastNames* and *asCompanies* place data in the *\[People\]* table. The values from the array *asLastNames* area placed in the field *\[People\]Last Name* and the values from the array *asCompanies* are placed in the field *\[People\]Company*:
 
 ```4d
- ARRAY TO SELECTION(asLastNames;[People]Last Name;asCompanies;[People]Company)
+ ARRAY TO SELECTION(asLastNames;[People]Last Name;asCompanies;[People]Company)
 ```
 
 ## Example 2 
@@ -63,31 +63,31 @@ In the following example, the two arrays *asLastNames* and *asCompanies* place d
 You want to copy a selection of records to an archive table by selecting the fields according to the option value:
 
 ```4d
- ARRAY TEXT($_name;0)
- ARRAY TEXT($_firstname;0)
- ARRAY TEXT($_cv;0)
- ARRAY PICTURE($_photo;0)
- 
- SELECTION TO ARRAY([Candidate]Name;$_name;*)
- SELECTION TO ARRAY([Candidate]Firstname;$_firstname;*)
- If(withCV) //load the CV field
-    SELECTION TO ARRAY([Candidate]cv;$_cv;*)
- End if
- If(withPhoto) //load the photo field
-    SELECTION TO ARRAY([Candidate]photo;$_photo;*)
- End if
- SELECTION TO ARRAY //execute copy
- 
- REDUCE SELECTION([Candidate_Archive];0)
- ARRAY TO SELECTION($_name;[Candidate_Archive]Name;*)
- ARRAY TO SELECTION($_prenom;[Candidate_Archive]Firstname;*)
- If(withCV)
-    ARRAY TO SELECTION($_cv;[Candidate_Archive]cv;*)
- End if
- If(withPhoto)
-    ARRAY TO SELECTION($_photo;[Candidate_Archive]photo;*)
- End if
- ARRAY TO SELECTION
+ ARRAY TEXT($_name;0)
+ ARRAY TEXT($_firstname;0)
+ ARRAY TEXT($_cv;0)
+ ARRAY PICTURE($_photo;0)
+ 
+ SELECTION TO ARRAY([Candidate]Name;$_name;*)
+ SELECTION TO ARRAY([Candidate]Firstname;$_firstname;*)
+ If(withCV) //load the CV field
+    SELECTION TO ARRAY([Candidate]cv;$_cv;*)
+ End if
+ If(withPhoto) //load the photo field
+    SELECTION TO ARRAY([Candidate]photo;$_photo;*)
+ End if
+ SELECTION TO ARRAY //execute copy
+ 
+ REDUCE SELECTION([Candidate_Archive];0)
+ ARRAY TO SELECTION($_name;[Candidate_Archive]Name;*)
+ ARRAY TO SELECTION($_prenom;[Candidate_Archive]Firstname;*)
+ If(withCV)
+    ARRAY TO SELECTION($_cv;[Candidate_Archive]cv;*)
+ End if
+ If(withPhoto)
+    ARRAY TO SELECTION($_photo;[Candidate_Archive]photo;*)
+ End if
+ ARRAY TO SELECTION
 ```
 
 ## See also 

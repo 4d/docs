@@ -60,12 +60,12 @@ If conflicting color values are set using properties for list boxes or list box 
 In an array type list box, we want to set colors for a row and for one cell in this row:
 
 ```4d
-  // Definition of font color for cell
- LISTBOX SET ROW COLOR(*;"Col5";3;"yellow")
- 
-  // Definition of background and font color for row 3
- LISTBOX SET ROW COLOR(*;"ListBox";3;"red";lk background color)
- LISTBOX SET ROW COLOR(*;"ListBox";3;"blue")
+  // Definition of font color for cell
+ LISTBOX SET ROW COLOR(*;"Col5";3;"yellow")
+ 
+  // Definition of background and font color for row 3
+ LISTBOX SET ROW COLOR(*;"ListBox";3;"red";lk background color)
+ LISTBOX SET ROW COLOR(*;"ListBox";3;"blue")
 ```
 
 ![](../assets/en/commands/pict1205393.fr.png)

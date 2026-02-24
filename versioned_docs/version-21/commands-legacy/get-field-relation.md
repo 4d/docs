@@ -68,25 +68,25 @@ The properties of the relation linking the \[Employees\]Company field to the \[C
 The following code illustrates the various possibilities offered by the **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) and [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) commands along with their effects:
 
 ```4d
- GET AUTOMATIC RELATIONS(one;many) //returns False, False
- GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
- 
- SET FIELD RELATION([Employees]Company;2;0) //changes Many-to-One relation to manual
- 
- GET FIELD RELATION([Employees]Company;one;many) //returns 2,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 2, 2
- 
- SET FIELD RELATION([Employees]Company;1;0) //re-establishes the parameters set in Design environment for Many-to-One relation
- 
- GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
- 
- SET AUTOMATIC RELATIONS(True;True) //changes all relations of all tables to automatic
- 
- GET AUTOMATIC RELATIONS(one;many) //returns True, True
- GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,3
+ GET AUTOMATIC RELATIONS(one;many) //returns False, False
+ GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
+ 
+ SET FIELD RELATION([Employees]Company;2;0) //changes Many-to-One relation to manual
+ 
+ GET FIELD RELATION([Employees]Company;one;many) //returns 2,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 2, 2
+ 
+ SET FIELD RELATION([Employees]Company;1;0) //re-establishes the parameters set in Design environment for Many-to-One relation
+ 
+ GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
+ 
+ SET AUTOMATIC RELATIONS(True;True) //changes all relations of all tables to automatic
+ 
+ GET AUTOMATIC RELATIONS(one;many) //returns True, True
+ GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,3
 ```
 
 ## See also 

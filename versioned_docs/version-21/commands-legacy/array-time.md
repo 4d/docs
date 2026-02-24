@@ -49,7 +49,7 @@ When you apply [SELECTION TO ARRAY](selection-to-array.md) or [SELECTION RANGE T
 This example creates a process array containing 100 Time-type elements:
 
 ```4d
- ARRAY TIME(arrTimes;100)
+ ARRAY TIME(arrTimes;100)
 ```
 
 ## Example 2 
@@ -57,7 +57,7 @@ This example creates a process array containing 100 Time-type elements:
 This example creates a local array of 100 rows each containing 50 Time-type elements:
 
 ```4d
- ARRAY TIME($arrTimes;100;50)
+ ARRAY TIME($arrTimes;100;50)
 ```
 
 ## Example 3 
@@ -65,10 +65,10 @@ This example creates a local array of 100 rows each containing 50 Time-type elem
 Since time arrays accept numeric values, the following code is valid:
 
 ```4d
- ARRAY TIME($arrTimeValues;10)
- $CurTime:=Current time+1
- APPEND TO ARRAY($arrTimeValues;$CurTime)
- $Found:=Find in array($arrTimeValues;$CurTime)
+ ARRAY TIME($arrTimeValues;10)
+ $CurTime:=Current time+1
+ APPEND TO ARRAY($arrTimeValues;$CurTime)
+ $Found:=Find in array($arrTimeValues;$CurTime)
 ```
 
 ## See also 

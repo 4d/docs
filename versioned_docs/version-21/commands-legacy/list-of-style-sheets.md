@@ -48,13 +48,13 @@ In your application, the following style sheets are defined:
 If you execute the following code:
 
 ```4d
- LIST OF STYLE SHEETS($arrStyles)
-  // $arrStyles{1} contains "__automatic__"
-  // $arrStyles{2} contains "Buttons"
-  // $arrStyles{3} contains "default"
-  // $arrStyles{4} contains "Input_fields"
-  // $arrStyles{5} contains "Labels"
-  // $arrStyles{6} contains "Variables"
+ LIST OF STYLE SHEETS($arrStyles)
+  // $arrStyles{1} contains "__automatic__"
+  // $arrStyles{2} contains "Buttons"
+  // $arrStyles{3} contains "default"
+  // $arrStyles{4} contains "Input_fields"
+  // $arrStyles{5} contains "Labels"
+  // $arrStyles{6} contains "Variables"
 ```
 
 ## See also 

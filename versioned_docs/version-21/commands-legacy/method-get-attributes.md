@@ -47,26 +47,26 @@ If the command is executed from a component, by default it applies to the compon
 You want to get the attributes of the *sendMail* project method. You can write:
 
 ```4d
- var $att : Object
- METHOD GET ATTRIBUTES("sendMail";$att)
+ var $att : Object
+ METHOD GET ATTRIBUTES("sendMail";$att)
 ```
 
 After execution, $att contains, for example:
 
 ```json
 {
-    "invisible":false,
-    "preemptive":"capable",
-    "publishedWeb":false,
-    "publishedSoap":false,
-    "publishedWsdl":false,
-    "shared":false,
-    "publishedSql":false,
-    "executedOnServer":false,
-    "published4DMobile":{
-        "scope":"table",
-        "table":"Table_1"
-    }
+    "invisible":false,
+    "preemptive":"capable",
+    "publishedWeb":false,
+    "publishedSoap":false,
+    "publishedWsdl":false,
+    "shared":false,
+    "publishedSql":false,
+    "executedOnServer":false,
+    "published4DMobile":{
+        "scope":"table",
+        "table":"Table_1"
+    }
 }
 ```
 

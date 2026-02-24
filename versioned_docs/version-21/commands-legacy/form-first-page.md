@@ -34,7 +34,7 @@ displayed_sidebar: docs
 The following example is a one-line method called from a menu command. It displays the first form page:
 
 ```4d
- FORM FIRST PAGE
+ FORM FIRST PAGE
 ```
 
 ## See also 

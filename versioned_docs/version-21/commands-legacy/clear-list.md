@@ -45,10 +45,10 @@ To clear a sublist attached to an item (on any level) of another list currently 
 Within a clean-up routine that clears all objects and data that you no longer need (i.e., when a window is closed and a form unloaded), you may end up clearing a hierarchical list that may have already been cleared, depending on the user actions within the form. Use [Is a list](is-a-list.md) to clear the list only if necessary:
 
 ```4d
-  // Extract of clean-up routine
- If(Is a list(hlList))
-    CLEAR LIST(hlList;*)
- End if
+  // Extract of clean-up routine
+ If(Is a list(hlList))
+    CLEAR LIST(hlList;*)
+ End if
 ```
 
 ## Example 2 

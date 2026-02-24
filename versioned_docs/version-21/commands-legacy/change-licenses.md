@@ -42,8 +42,8 @@ For more information about this dialog box, refer to the *Installation and activ
 In a custom configuration or preferences dialog box, you include a button whose associated method is:
 
 ```4d
-  // Object method for bLicense button
- CHANGE LICENSES
+  // Object method for bLicense button
+ CHANGE LICENSES
 ```
 
 This way a user can activate licenses without having to modify the database.

@@ -55,7 +55,7 @@ The optional *newName* parameter, when it is passed, renames the document copied
 The following example duplicates a document in its own folder:
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2")
+ COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2")
 ```
 
 ## Example 2 
@@ -63,7 +63,7 @@ The following example duplicates a document in its own folder:
 The following example copies a document to the database folder (provided C:\\\\FOLDER is not the database folder):
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"DocName")
+ COPY DOCUMENT("C:\\FOLDER\\DocName";"DocName")
 ```
 
 ## Example 3 
@@ -71,7 +71,7 @@ The following example copies a document to the database folder (provided C:\\\\F
 The following example copies a document from one volume to another one:
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"F:\\Archives\\DocName.OLD")
+ COPY DOCUMENT("C:\\FOLDER\\DocName";"F:\\Archives\\DocName.OLD")
 ```
 
 ## Example 4 
@@ -79,7 +79,7 @@ The following example copies a document from one volume to another one:
 The following example duplicates a document in its own folder overriding an already existing copy:
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2";*)
+ COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2";*)
 ```
 
 ## Example 5 
@@ -87,7 +87,7 @@ The following example duplicates a document in its own folder overriding an alre
 Copying a file into a specific folder while keeping the same name:
 
 ```4d
- COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\")
+ COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\")
 ```
 
 ## Example 6 
@@ -95,7 +95,7 @@ Copying a file into a specific folder while keeping the same name:
 Copying a file into a specific folder while keeping the same name and overriding the existing document:
 
 ```4d
- COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\"; *)
+ COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\"; *)
 ```
 
 ## Example 7 
@@ -103,7 +103,7 @@ Copying a file into a specific folder while keeping the same name and overriding
 Copying a folder into another folder (both folders must already be present on the disk):
 
 ```4d
- COPY DOCUMENT("C:\\Projects\\";"C\\Archives\\2011\\")
+ COPY DOCUMENT("C:\\Projects\\";"C\\Archives\\2011\\")
 ```
 
 ## Example 8 
@@ -111,23 +111,23 @@ Copying a folder into another folder (both folders must already be present on th
 The following examples create different files and folders in the database folder (examples under Windows). In each case, the "folder2" folder must exist:
 
 ```4d
- COPY DOCUMENT("folder1\\name1";"folder2\\")
-  //creates the "folder2/name1" file
- 
- COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
-  //creates the "folder2/new" file
- 
- COPY DOCUMENT("folder1\\name1";"folder2\\name2")
-  //creates the "folder2/name2" file
- 
- COPY DOCUMENT("folder1\\name1";"folder2\\name2";"new")
-  //creates the "folder2/new" file (name2 is ignored)
- 
- COPY DOCUMENT("folder1\\" ; "folder2\\")
-  //creates the "folder2/folder1/" folder
- 
- COPY DOCUMENT("folder1\\" ; "folder2\\" ; "new")
-  //creates the "folder2/new/" folder
+ COPY DOCUMENT("folder1\\name1";"folder2\\")
+  //creates the "folder2/name1" file
+ 
+ COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
+  //creates the "folder2/new" file
+ 
+ COPY DOCUMENT("folder1\\name1";"folder2\\name2")
+  //creates the "folder2/name2" file
+ 
+ COPY DOCUMENT("folder1\\name1";"folder2\\name2";"new")
+  //creates the "folder2/new" file (name2 is ignored)
+ 
+ COPY DOCUMENT("folder1\\" ; "folder2\\")
+  //creates the "folder2/folder1/" folder
+ 
+ COPY DOCUMENT("folder1\\" ; "folder2\\" ; "new")
+  //creates the "folder2/new/" folder
 ```
 
 ## See also 

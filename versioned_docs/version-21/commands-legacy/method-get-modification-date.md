@@ -35,17 +35,17 @@ displayed_sidebar: docs
 You can use two types of syntaxes, based either on arrays or variables:  
 
 ```4d
- var tVpath : Text // variables
- var vDate : Date
- var vTime : Time
- METHOD GET MODIFICATION DATE(tVpath;vDate;vTime) // date and time of a single method
+ var tVpath : Text // variables
+ var vDate : Date
+ var vTime : Time
+ METHOD GET MODIFICATION DATE(tVpath;vDate;vTime) // date and time of a single method
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // arrays
- ARRAY DATE(arrDates;0)
- ARRAY LONGINT(arrTimes;0)
- METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes) // dates and times of several methods
+ ARRAY TEXT(arrPaths;0) // arrays
+ ARRAY DATE(arrDates;0)
+ ARRAY LONGINT(arrTimes;0)
+ METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes) // dates and times of several methods
 ```
 
 You cannot mix the two syntaxes. 
@@ -57,13 +57,13 @@ If the command is executed from a component, it applies by default to the compon
 You want to find out modification dates and times for several methods:
 
 ```4d
- ARRAY TEXT(arrPaths;0)
- APPEND TO ARRAY(arrPaths;"MyMethod1")
- APPEND TO ARRAY(arrPaths;"MyMethod2")
- ...
- ARRAY DATE(arrDates;0)
- ARRAY LONGINT(arrTimes;0)
- METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes)
+ ARRAY TEXT(arrPaths;0)
+ APPEND TO ARRAY(arrPaths;"MyMethod1")
+ APPEND TO ARRAY(arrPaths;"MyMethod2")
+ ...
+ ARRAY DATE(arrDates;0)
+ ARRAY LONGINT(arrTimes;0)
+ METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes)
 ```
 
 ## Example 2 
@@ -71,11 +71,11 @@ You want to find out modification dates and times for several methods:
 You want to get modification dates for methods in a module that are prefixed with "Web\_". You cannot use the "@" symbol in a path; however, you can write:
 
 ```4d
- ARRAY TEXT($_webMethod;0)
- METHOD GET NAMES($_webMethod;"Web_@")
- ARRAY DATE($_date;0)
- ARRAY LONGINT($_time;0)
- METHOD GET MODIFICATION DATE($_webMethod;$_date;$_time)
+ ARRAY TEXT($_webMethod;0)
+ METHOD GET NAMES($_webMethod;"Web_@")
+ ARRAY DATE($_date;0)
+ ARRAY LONGINT($_time;0)
+ METHOD GET MODIFICATION DATE($_webMethod;$_date;$_time)
 ```
 
   

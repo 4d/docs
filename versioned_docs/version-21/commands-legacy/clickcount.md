@@ -46,15 +46,15 @@ When both On Clicked and On Double Clicked form events are enabled, the followin
 The following code structure can be placed in a listbox header to handle single- and double-clicks:
 
 ```4d
- Case of
-    :(Form event code=On Header Click)
-       Case of
-          :(Clickcount=1)
-             ... //single-click action
-          :(Clickcount=2)
-             ... //double-click action
-       End case
- End case
+ Case of
+    :(Form event code=On Header Click)
+       Case of
+          :(Clickcount=1)
+             ... //single-click action
+          :(Clickcount=2)
+             ... //double-click action
+       End case
+ End case
 ```
 
 ## Example 2 
@@ -62,13 +62,13 @@ The following code structure can be placed in a listbox header to handle single-
 Labels are not enterable but they become so after a triple-click. If you want to allow users to edit labels, you can write the following in the object method:
 
 ```4d
- If(Form event code=On Clicked)
-    Case of
-       :(Clickcount=3)
-          OBJECT SET ENTERABLE(*;"Label";True)
-          EDIT ITEM(*;"Label")
-    End case
- End if
+ If(Form event code=On Clicked)
+    Case of
+       :(Clickcount=3)
+          OBJECT SET ENTERABLE(*;"Label";True)
+          EDIT ITEM(*;"Label")
+    End case
+ End if
 ```
 
 

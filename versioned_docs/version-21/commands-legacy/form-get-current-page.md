@@ -39,39 +39,39 @@ The *\** parameter is useful when the command is called in the context of a page
 In a form, when you select a menu item from the menu bar or when the form receives a call from another process, you can perform different actions depending on the form page currently displayed. In this example, you write:
 
 ```4d
-  // [myTable];"myForm" Form Method
- Case of
-    :(FORM Event.code=On Load)
-  // ...
-    :(FORM Event.code=On Unload)
-  // ...
-    :(FORM Event.code=On Menu Selected)
-       $vlMenuNumber:=Menu selected>>16
-       $vlItemNumber:=Menu selected & 0xFFFF
-       Case of
-          :($vlMenuNumber=...)
-             Case of
-                :($vlItemNumber=...)
-                :(FORM Get current page=1)
-  // Do appropriate action for page 1
-                :(FORM Get current page=2)
-  // Do appropriate action for page 2
-  // ...
-                :($vlItemNumber=...)
-  // ...
-             End case
-          :($vlMenuNumber=...)
-  // ...
-       End case
-    :(FORM Event.code=On Outside Call)
-       Case of
-          :(FORM Get current page=1)
-  // Do appropriate reply for page 1
-          :(FORM Get current page=2)
-  // Do appropriate reply for page 2
-       End case
-  // ...
- End case
+  // [myTable];"myForm" Form Method
+ Case of
+    :(FORM Event.code=On Load)
+  // ...
+    :(FORM Event.code=On Unload)
+  // ...
+    :(FORM Event.code=On Menu Selected)
+       $vlMenuNumber:=Menu selected>>16
+       $vlItemNumber:=Menu selected & 0xFFFF
+       Case of
+          :($vlMenuNumber=...)
+             Case of
+                :($vlItemNumber=...)
+                :(FORM Get current page=1)
+  // Do appropriate action for page 1
+                :(FORM Get current page=2)
+  // Do appropriate action for page 2
+  // ...
+                :($vlItemNumber=...)
+  // ...
+             End case
+          :($vlMenuNumber=...)
+  // ...
+       End case
+    :(FORM Event.code=On Outside Call)
+       Case of
+          :(FORM Get current page=1)
+  // Do appropriate reply for page 1
+          :(FORM Get current page=2)
+  // Do appropriate reply for page 2
+       End case
+  // ...
+ End case
 ```
 
 ## See also 

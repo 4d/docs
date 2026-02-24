@@ -43,11 +43,11 @@ The optional *\** parameter is useful in the case of an architecture using compo
 In one of your routines, you include debugging code useful only when you are running in interpreted mode, so surround this debugging code with a test that calls **Is compiled mode**:
 
 ```4d
-  // ...
- If(Not(Is compiled mode))
-  // Include debugging code here
- End if
-  // ...
+  // ...
+ If(Not(Is compiled mode))
+  // Include debugging code here
+ End if
+  // ...
 ```
 
 ## See also 

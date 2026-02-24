@@ -47,7 +47,7 @@ You can use LIST TO ARRAY to build an array based on the first level items of a 
 The following example copies the items of a list called Regions into an array called *atRegions*:
 
 ```4d
- LIST TO ARRAY("Regions";atRegions)
+ LIST TO ARRAY("Regions";atRegions)
 ```
 
 ## Example 2 
@@ -55,20 +55,20 @@ The following example copies the items of a list called Regions into an array ca
 Given a hierarchical list created as follows:
 
 ```4d
- myList2:=New list
- APPEND TO LIST(myList2;"Scotland";1)
- APPEND TO LIST(myList2;"England";2)
- APPEND TO LIST(myList2;"Wales";3)
- myList1:=New list
- APPEND TO LIST(myList1;"France";1)
- APPEND TO LIST(myList1;"Germany";2)
- APPEND TO LIST(myList1;"Spain";3)
- APPEND TO LIST(myList1;"Great Britain";4;myList2;True)
- APPEND TO LIST(myList1;"Portugal";5)
- APPEND TO LIST(myList1;"Belgium";6)
- APPEND TO LIST(myList1;"Italy";7)
- APPEND TO LIST(myList1;"Netherlands";8)
- APPEND TO LIST(myList1;"Ireland";9)
+ myList2:=New list
+ APPEND TO LIST(myList2;"Scotland";1)
+ APPEND TO LIST(myList2;"England";2)
+ APPEND TO LIST(myList2;"Wales";3)
+ myList1:=New list
+ APPEND TO LIST(myList1;"France";1)
+ APPEND TO LIST(myList1;"Germany";2)
+ APPEND TO LIST(myList1;"Spain";3)
+ APPEND TO LIST(myList1;"Great Britain";4;myList2;True)
+ APPEND TO LIST(myList1;"Portugal";5)
+ APPEND TO LIST(myList1;"Belgium";6)
+ APPEND TO LIST(myList1;"Italy";7)
+ APPEND TO LIST(myList1;"Netherlands";8)
+ APPEND TO LIST(myList1;"Ireland";9)
 ```
 
 This list can be represented as:
@@ -78,18 +78,18 @@ This list can be represented as:
 If you execute the following statement:
 
 ```4d
- LIST TO ARRAY(myList1;$MyArray)
+ LIST TO ARRAY(myList1;$MyArray)
 ```
 
 ...you get
 
 ```4d
- $MyArray{1}="France"
- $MyArray{2}="Germany"
- $MyArray{3}="Spain"
- $MyArray{4}="Great Britain"
- $MyArray{5}="Portugal"
- ...
+ $MyArray{1}="France"
+ $MyArray{2}="Germany"
+ $MyArray{3}="Spain"
+ $MyArray{4}="Great Britain"
+ $MyArray{5}="Portugal"
+ ...
 ```
 
 ## See also 

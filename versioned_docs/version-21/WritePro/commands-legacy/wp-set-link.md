@@ -54,10 +54,10 @@ In the *linkObj* parameter, pass an object that describes the hyperlink. It must
 You want to add a link to your website in the footer area of your document: 
 
 ```4d
- var $footer : Object
- $footer:=WP Get footer(WPArea;1)
- WP SET TEXT($footer;"Please visit our website";wk replace)
- WP SET LINK($footer;New object("url";"http://www.4d.com"))
+ var $footer : Object
+ $footer:=WP Get footer(WPArea;1)
+ WP SET TEXT($footer;"Please visit our website";wk replace)
+ WP SET LINK($footer;New object("url";"http://www.4d.com"))
 ```
 
 ## Example 2 
@@ -65,30 +65,30 @@ You want to add a link to your website in the footer area of your document:
 You want to create a table of contents with links using all of the bookmarks in your document:
 
 ```4d
- var $i;$n;$p;$memoStart : Integer
- var $range;$link;$toc;$tocRange;$positionInfo;$target : Object
- var $text : Text
- 
- ARRAY TEXT($_bookmarks;0)
- WP GET BOOKMARKS(WParea1;$_bookmarks) //find all the bookmarks
- 
- $n:=Size of array($_bookmarks)
- If($n>0)
-    $tocRange:=WP Text range(WParea1;wk start text;wk start text) //find the beginning of the text
-    WP INSERT BREAK($tocRange;wk page break;wk append;wk exclude from range) //add a page break before the text
- 
-    For($i;1;$n) // Insert the table of contents and links
-       $range:=WP Bookmark range(WParea1;$_bookmarks{$i})
-       $positionInfo:=WP Get position($range)
-       $memoStart:=$tocRange.end
-       WP SET TEXT($tocRange;Char(Tab)+$_bookmarks{$i}+Char(Tab)+String($positionInfo.page);wk append;wk include in range)
- 
-       $target:=WP Text range($tocRange;$memoStart+1;$memoStart+1+Length($_bookmarks{$i}))
-       $link:=New object("bookmark";$_bookmarks{$i})
-       WP SET LINK($target;$link)
-       WP INSERT BREAK($tocRange;wk line break;wk append;wk include in range)
-    End for
- End if
+ var $i;$n;$p;$memoStart : Integer
+ var $range;$link;$toc;$tocRange;$positionInfo;$target : Object
+ var $text : Text
+ 
+ ARRAY TEXT($_bookmarks;0)
+ WP GET BOOKMARKS(WParea1;$_bookmarks) //find all the bookmarks
+ 
+ $n:=Size of array($_bookmarks)
+ If($n>0)
+    $tocRange:=WP Text range(WParea1;wk start text;wk start text) //find the beginning of the text
+    WP INSERT BREAK($tocRange;wk page break;wk append;wk exclude from range) //add a page break before the text
+ 
+    For($i;1;$n) // Insert the table of contents and links
+       $range:=WP Bookmark range(WParea1;$_bookmarks{$i})
+       $positionInfo:=WP Get position($range)
+       $memoStart:=$tocRange.end
+       WP SET TEXT($tocRange;Char(Tab)+$_bookmarks{$i}+Char(Tab)+String($positionInfo.page);wk append;wk include in range)
+ 
+       $target:=WP Text range($tocRange;$memoStart+1;$memoStart+1+Length($_bookmarks{$i}))
+       $link:=New object("bookmark";$_bookmarks{$i})
+       WP SET LINK($target;$link)
+       WP INSERT BREAK($tocRange;wk line break;wk append;wk include in range)
+    End for
+ End if
 ```
 
 ## Example 3 
@@ -96,22 +96,22 @@ You want to create a table of contents with links using all of the bookmarks in 
 You want to set a link to a 4D method on each "4D" string in the document:
 
 ```4d
- var $text,$find : Text
- var $p : Integer
- var $range;$link : Object
- 
- $text:=WP Get text(wpArea;wk expressions as value) //retrieves all text in document
- 
- $find:="4D" //target for link
- 
- $p:=Position($find;$text) //loop through text to find all instances of the target
- If($p>0)
-    $range:=WP Text range(wpArea;$p;$p+Length($find)) //set the length of the target
-  //create the link object
-    $link:=New object("method";"myAlert";"parameter";"4D rocks!") //Don't forget to authorize with SET ALLOWED METHODS  
- 
-    WP SET LINK($range;$link)
- End if
+ var $text,$find : Text
+ var $p : Integer
+ var $range;$link : Object
+ 
+ $text:=WP Get text(wpArea;wk expressions as value) //retrieves all text in document
+ 
+ $find:="4D" //target for link
+ 
+ $p:=Position($find;$text) //loop through text to find all instances of the target
+ If($p>0)
+    $range:=WP Text range(wpArea;$p;$p+Length($find)) //set the length of the target
+  //create the link object
+    $link:=New object("method";"myAlert";"parameter";"4D rocks!") //Don't forget to authorize with SET ALLOWED METHODS  
+ 
+    WP SET LINK($range;$link)
+ End if
 ```
 
 ## See also 

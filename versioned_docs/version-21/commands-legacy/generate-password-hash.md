@@ -60,16 +60,16 @@ bcrypt is a password hashing function based on the Blowfish cipher. In addition 
 This example generates a password hash using bcrypt with a cost factor 4.
 
 ```4d
- var $password : Text
- var $hash : Text
- var $options : Object
- 
- $options:=New object("algorithm";"bcrypt";"cost";4)
- $password:=Request("Please enter your password")
- 
- $hash:=Generate password hash($password;$options)
- [Users]hash:=$hash
- SAVE RECORD([Users])
+ var $password : Text
+ var $hash : Text
+ var $options : Object
+ 
+ $options:=New object("algorithm";"bcrypt";"cost";4)
+ $password:=Request("Please enter your password")
+ 
+ $hash:=Generate password hash($password;$options)
+ [Users]hash:=$hash
+ SAVE RECORD([Users])
 ```
 
 **Reminder**: Multiple passes of the same password will result in different hashed strings. This is a standard behavior for algorithms such as bcrypt, since the best practice is to create a new, random salt for every hash. Refer to the [Verify password hash](verify-password-hash.md) description for an example of how to check the passwords.

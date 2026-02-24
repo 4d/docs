@@ -48,7 +48,7 @@ The optional *compression* parameter, if passed, can be used to specify the comp
 Conversion of the vpPhoto picture to the jpeg format: 
 
 ```4d
- CONVERT PICTURE(vpPhoto;".jpg")
+ CONVERT PICTURE(vpPhoto;".jpg")
 ```
 
 ## Example 2 
@@ -56,7 +56,7 @@ Conversion of the vpPhoto picture to the jpeg format:
 Conversion of a picture with 60% quality:
 
 ```4d
- CONVERT PICTURE(vPicture;".JPG";0.6)
+ CONVERT PICTURE(vPicture;".JPG";0.6)
 ```
 
 ## See also 

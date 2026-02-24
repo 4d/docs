@@ -46,41 +46,41 @@ If you pass the first optional *\** parameter, this indicates that *list* is an 
 Given the following hierarchical list: 
 
 ```4d
- <>HL:=New list
- $ID:=30
- APPEND TO LIST(<>HL;"Martin";$ID)
-  //5 parameters
- SET LIST ITEM PARAMETER(<>HL;$ID;"Firstname";"Phil")
- SET LIST ITEM PARAMETER(<>HL;$ID;"Birthday";"01/02/1978")
- SET LIST ITEM PARAMETER(<>HL;$ID;"Male";True) //Boolean
- SET LIST ITEM PARAMETER(<>HL;$ID;"Age";33) //number
- SET LIST ITEM PARAMETER(<>HL;$ID;"City";"Dallas")
+ <>HL:=New list
+ $ID:=30
+ APPEND TO LIST(<>HL;"Martin";$ID)
+  //5 parameters
+ SET LIST ITEM PARAMETER(<>HL;$ID;"Firstname";"Phil")
+ SET LIST ITEM PARAMETER(<>HL;$ID;"Birthday";"01/02/1978")
+ SET LIST ITEM PARAMETER(<>HL;$ID;"Male";True) //Boolean
+ SET LIST ITEM PARAMETER(<>HL;$ID;"Age";33) //number
+ SET LIST ITEM PARAMETER(<>HL;$ID;"City";"Dallas")
 ```
 
 For more simplicity, the list was associated with a list object having the same name ("<>HL").  
 When the item "Martin" is selected in the list, you can retrieve its parameters by executing the following code:
 
 ```4d
- ARRAY TEXT(arrParamNames;0)
- GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;arrParamNames)
-  // arrParamNames{1} contains "Firstname"
-  // arrParamNames{2} contains "Birthday"
-  // arrParamNames{3} contains "Male"
-  // arrParamNames{4} contains "Age"
-  // arrParamNames{5} contains "City"
+ ARRAY TEXT(arrParamNames;0)
+ GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;arrParamNames)
+  // arrParamNames{1} contains "Firstname"
+  // arrParamNames{2} contains "Birthday"
+  // arrParamNames{3} contains "Male"
+  // arrParamNames{4} contains "Age"
+  // arrParamNames{5} contains "City"
 ```
 
 If you want to get the parameter values as well, you write:
 
 ```4d
- ARRAY TEXT(arrParamNames;0)
- ARRAY TEXT(arrParamValues;0)
- GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;arrParamNames;arrParamValues)
-  // arrParamValues{1} contains "Phil"
-  // arrParamValues{2} contains "01/02/1978"
-  // arrParamValues{3} contains "1"
-  // arrParamValues{4} contains "33"
-  // arrParamValues{5} contains "Dallas"
+ ARRAY TEXT(arrParamNames;0)
+ ARRAY TEXT(arrParamValues;0)
+ GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;arrParamNames;arrParamValues)
+  // arrParamValues{1} contains "Phil"
+  // arrParamValues{2} contains "01/02/1978"
+  // arrParamValues{3} contains "1"
+  // arrParamValues{4} contains "33"
+  // arrParamValues{5} contains "Dallas"
 ```
 
 ## See also 

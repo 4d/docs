@@ -70,7 +70,7 @@ Here is how It works:
 The following example simply displays the connection dialog box:
 
 ```4d
- CHANGE CURRENT USER
+ CHANGE CURRENT USER
 ```
 
 **Note:** This code does nothing in a single-user project database. 

@@ -64,7 +64,7 @@ If the command detects a duplicated method name, the error -9802 is generated ("
 Retrieval of project methods found in the "web" folder:
 
 ```4d
- METHOD GET PATHS("web";Path project method;arrPaths)
+ METHOD GET PATHS("web";Path project method;arrPaths)
 ```
 
 ## Example 2 
@@ -72,7 +72,7 @@ Retrieval of project methods found in the "web" folder:
 Retrieval of database methods and triggers:
 
 ```4d
- METHOD GET PATHS(Path trigger+Path database method;arrPaths)
+ METHOD GET PATHS(Path trigger+Path database method;arrPaths)
 ```
 
 ## Example 3 
@@ -80,13 +80,13 @@ Retrieval of database methods and triggers:
 Retrieval of project methods that were modified since the last backup:
 
 ```4d
-  // we load the last saved value
- $stamp :=Max([Backups]cur_stamp)
- METHOD GET PATHS(Path project method;arrPaths;$stamp)
-  // we save the new value
- CREATE RECORD([Backups])
- [Backups]cur_stamp :=$stamp
- SAVE RECORD([Backups])
+  // we load the last saved value
+ $stamp :=Max([Backups]cur_stamp)
+ METHOD GET PATHS(Path project method;arrPaths;$stamp)
+  // we save the new value
+ CREATE RECORD([Backups])
+ [Backups]cur_stamp :=$stamp
+ SAVE RECORD([Backups])
 ```
 
 ## Example 4 

@@ -54,13 +54,13 @@ The value returned in *posLast* can be combined with the value returned in *posF
 You want to insert a value, if necessary, while keeping the array sorted:
 
 ```4d
- var $pos : Integer
- If(Find in sorted array($array ;$value ;>;$pos)
-    ALERT("Found at pos "+String($pos))
- Else
-    INSERT IN ARRAY($array ;$pos)
-    $array{$pos}:=$value
- End if
+ var $pos : Integer
+ If(Find in sorted array($array ;$value ;>;$pos)
+    ALERT("Found at pos "+String($pos))
+ Else
+    INSERT IN ARRAY($array ;$pos)
+    $array{$pos}:=$value
+ End if
 ```
 
 ## Example 2 
@@ -68,14 +68,14 @@ You want to insert a value, if necessary, while keeping the array sorted:
 You want to find the number of occurrences of strings starting with "test" and create a string that concatenates all these elements:
 
 ```4d
- var $posFirst ;$posLast : Integer
- var $output : Text
- If(Find in sorted array($array ;"test@";>;$posFirst ;$posLast))
-    $output:="Found "+String($posLast-$posFirst+1)+" results :\n"
- End if
- For($i ;$posFirst ;$posLast)
-    $output:=$output+$array{$i}+"\n"
- End for
+ var $posFirst ;$posLast : Integer
+ var $output : Text
+ If(Find in sorted array($array ;"test@";>;$posFirst ;$posLast))
+    $output:="Found "+String($posLast-$posFirst+1)+" results :\n"
+ End if
+ For($i ;$posFirst ;$posLast)
+    $output:=$output+$array{$i}+"\n"
+ End for
 ```
 
 ## See also 

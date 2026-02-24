@@ -24,16 +24,16 @@ displayed_sidebar: docs
 The following example builds an array, named asTables*,* with the names of tables defined in the database. This array can be used as a drop-down list (or tab control, scrollable area, and so on) to display the list of the tables, within a form:
 
 ```4d
- ARRAY TEXT(asTables;Last table number)
- If(Last table number>0) //If the database does contain tables
-    For($vlTables;Size of array(asTables);1;-1)
-       If(Is table number valid($vlTables))
-          asTables{$vlTables}:=Table name($vlTables)
-       Else
-          DELETE FROM ARRAY(asTables;$vlTables)
-       End if
-    End for
- End if
+ ARRAY TEXT(asTables;Last table number)
+ If(Last table number>0) //If the database does contain tables
+    For($vlTables;Size of array(asTables);1;-1)
+       If(Is table number valid($vlTables))
+          asTables{$vlTables}:=Table name($vlTables)
+       Else
+          DELETE FROM ARRAY(asTables;$vlTables)
+       End if
+    End for
+ End if
 ```
 
 ## See also 

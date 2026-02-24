@@ -59,9 +59,9 @@ Output forms are used by three groups of commands. One group displays a list of 
 The following example shows a typical use of **FORM SET OUTPUT**. Note that although the **FORM SET OUTPUT** command appears immediately before the output form is used, this is not required. In fact, the command may be executed in a completely different method, as long as it is executed prior to this method:
 
 ```4d
- FORM SET INPUT([Parts];"Parts In") //Select the input form
- FORM SET OUTPUT([Parts];"Parts List") //Select the output form
- MODIFY SELECTION([Parts]) //This command uses both forms
+ FORM SET INPUT([Parts];"Parts In") //Select the input form
+ FORM SET OUTPUT([Parts];"Parts List") //Select the output form
+ MODIFY SELECTION([Parts]) //This command uses both forms
 ```
 
 ## Example 2 
@@ -69,9 +69,9 @@ The following example shows a typical use of **FORM SET OUTPUT**. Note that alth
 The following example uses the path to a .json form to print the records in an employee list: 
 
 ```4d
- FORM SET OUTPUT([Personnel];"/RESOURCES/PersonnelPrintForm.json")
- ALL RECORDS([Personnel])
- PRINT SELECTION([Personnel])
+ FORM SET OUTPUT([Personnel];"/RESOURCES/PersonnelPrintForm.json")
+ ALL RECORDS([Personnel])
+ PRINT SELECTION([Personnel])
 ```
 
 ## See also 

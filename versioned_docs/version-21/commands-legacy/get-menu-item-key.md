@@ -44,17 +44,17 @@ If the menu item has no associated shortcut or if the *menuItem* parameter desig
 To obtain the shortcut associated with a menu item, it is useful to implement a programming structure of the following type:
 
 ```4d
- If(Get menu item key(mymenu;1)#0)
-    $modifiers:=Get menu item modifiers(mymenu;1)
-    Case of
-       :($modifiers=Option key mask)
-          ...
-       :($modifiers=Shift key mask)
-          ...
-       :($modifiers=Option key mask+Shift key mask)
-          ...
-    End case
- End if
+ If(Get menu item key(mymenu;1)#0)
+    $modifiers:=Get menu item modifiers(mymenu;1)
+    Case of
+       :($modifiers=Option key mask)
+          ...
+       :($modifiers=Shift key mask)
+          ...
+       :($modifiers=Option key mask+Shift key mask)
+          ...
+    End case
+ End if
 ```
 
 ## See also 

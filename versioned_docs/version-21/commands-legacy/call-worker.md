@@ -65,23 +65,23 @@ In a form, a button starts a computation: for example, statistics for the select
 The method of the button is:
 
 ```4d
-  //call the worker myWorker with the parameter
- var $vYear: Integer
- $vYear:=2015 // could have been selected by the user in the form
- CALL WORKER("myWorker";Formula(workerMethod);$vYear;Current form window)
+  //call the worker myWorker with the parameter
+ var $vYear: Integer
+ $vYear:=2015 // could have been selected by the user in the form
+ CALL WORKER("myWorker";Formula(workerMethod);$vYear;Current form window)
 ```
 
 The code of *workerMethod* is:
 
 ```4d
-  // this is the method of the worker
-  // it can be preemptive or cooperative
- #DECLARE($vYearInteger;$windowInteger) //year and window reference
- var $vStatResults : Object //to store statistical results
- ... //compute statistics
-  //once finished, calls the form back with calculated values
-  //$vStatResults can display results in the form
- CALL FORM($window;Formula(displayStats);$vStatResults)
+  // this is the method of the worker
+  // it can be preemptive or cooperative
+ #DECLARE($vYearInteger;$windowInteger) //year and window reference
+ var $vStatResults : Object //to store statistical results
+ ... //compute statistics
+  //once finished, calls the form back with calculated values
+  //$vStatResults can display results in the form
+ CALL FORM($window;Formula(displayStats);$vStatResults)
 ```
 
 ## See also 

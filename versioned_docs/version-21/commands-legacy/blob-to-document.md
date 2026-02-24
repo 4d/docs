@@ -35,14 +35,14 @@ displayed_sidebar: docs
 You write an Information System that enables you to quickly store and retrieve documents. In a data entry form, you create a button which allows you to save a document that will contain the data previously loaded into a BLOB field. The method for this button could be:
 
 ```4d
- $vhDocRef:=Create document("") // Save the document of your choice
- If(OK=1) // If a document has been created
-    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
-    BLOB TO DOCUMENT(Document;[YourTable]YourBLOBField) // Write the document contents
-    If(OK=0)
-  // Handle error
-    End if
- End if
+ $vhDocRef:=Create document("") // Save the document of your choice
+ If(OK=1) // If a document has been created
+    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
+    BLOB TO DOCUMENT(Document;[YourTable]YourBLOBField) // Write the document contents
+    If(OK=0)
+  // Handle error
+    End if
+ End if
 ```
 
 ## System variables and sets 

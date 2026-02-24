@@ -33,7 +33,7 @@ While applying to an existing array:
 This example creates a process array of 100 Date elements:
 
 ```4d
- ARRAY DATE(adValues;100)
+ ARRAY DATE(adValues;100)
 ```
 
 ## Example 2 
@@ -41,7 +41,7 @@ This example creates a process array of 100 Date elements:
 This example creates a local array of 100 rows of 50 Date elements:
 
 ```4d
- ARRAY DATE($adValues;100;50)
+ ARRAY DATE($adValues;100;50)
 ```
 
 ## Example 3 
@@ -49,10 +49,10 @@ This example creates a local array of 100 rows of 50 Date elements:
 This example creates an interprocess array of 50 Date elements, and sets each element to the current date plus a number of days equal to the element number:
 
 ```4d
- ARRAY DATE(◊adValues;50)
- For($vlElem;1;50)
-    ◊adValues{$vlElem}:=Current date+$vlElem
- End for
+ ARRAY DATE(◊adValues;50)
+ For($vlElem;1;50)
+    ◊adValues{$vlElem}:=Current date+$vlElem
+ End for
 ```
 
 

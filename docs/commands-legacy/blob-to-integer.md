@@ -54,7 +54,7 @@ After the call, the variable is incremented by the number of bytes read, Therefo
 The following example reads 20 Integer values from a BLOB, starting at the offset 0x200:
 
 ```4d
- $vlOffset:=0x200
+ $vlOffset:=0x200
  For($viLoop;0;19)
     $viValue:=BLOB to integer(vxSomeBlob;PC byte ordering;$vlOffset)
   // Do something with $viValue

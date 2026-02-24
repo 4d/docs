@@ -34,11 +34,11 @@ displayed_sidebar: docs
 You want to determine if the current operating system is Windows:
 
 ```4d
- If(Is Windows)
-    ALERT("It's Windows")
- Else
-    ALERT("It's not Windows")
- End if
+ If(Is Windows)
+    ALERT("It's Windows")
+ Else
+    ALERT("It's not Windows")
+ End if
 ```
 
 ## See also 

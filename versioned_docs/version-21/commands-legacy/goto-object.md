@@ -44,8 +44,8 @@ The **GOTO OBJECT** command can be used in the context of a subform. When it is 
 The **GOTO OBJECT** command can be used in both ways: 
 
 ```4d
- GOTO OBJECT([People]Name) // Field Reference
- GOTO OBJECT(*;"AgeArea") // Object Name
+ GOTO OBJECT([People]Name) // Field Reference
+ GOTO OBJECT(*;"AgeArea") // Object Name
 ```
 
 ## Example 2 
@@ -53,7 +53,7 @@ The **GOTO OBJECT** command can be used in both ways:
 You don't want any object of the form to have the focus: 
 
 ```4d
- GOTO OBJECT(*;"")
+ GOTO OBJECT(*;"")
 ```
 
 ## Example 3 

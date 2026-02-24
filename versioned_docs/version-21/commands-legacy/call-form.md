@@ -53,9 +53,9 @@ You can also pass parameters to the formula using one or more *param* parameters
 You can use the **CALL FORM** command to pass custom settings to a form, for example configuration values, without having to use process variables:
 
 ```4d
- $win:=Open form window("form")
- CALL FORM($win;Formula(configure);param1;param2)
- DIALOG("form")
+ $win:=Open form window("form")
+ CALL FORM($win;Formula(configure);param1;param2)
+ DIALOG("form")
 ```
 
 ## Example 2 
@@ -65,36 +65,36 @@ You want to open two different dialog windows from the same form, but with diffe
 In the main form, a button opens the two dialogs:
 
 ```4d
-  //Object method to create forms
-  //First window
- formRef1:=Open form window("FormMessage";Palette form window;On the left)
- SET WINDOW TITLE("MyForm1";formRef1)
- DIALOG("FormMessage";*)
- SHOW WINDOW(formRef1)
- 
-  //Second window
- formRef2:=Open form window("FormMessage";Palette form window;On the left+500)
- SET WINDOW TITLE("MyForm2";formRef2)
- DIALOG("FormMessage";*)
- SHOW WINDOW(formRef2)
- 
-  //Send colors
- CALL FORM(formRef1;"doSetColor";0x00E6F2FF)
- CALL FORM(formRef2;"doSetColor";0x00F2E6FF)
-  //Create messages
- CALL FORM(formRef1;"doAddMessage";Current process name;"Hello Form 1")
- CALL FORM(formRef2;"doAddMessage";Current process name;"Hello Form 2")
+  //Object method to create forms
+  //First window
+ formRef1:=Open form window("FormMessage";Palette form window;On the left)
+ SET WINDOW TITLE("MyForm1";formRef1)
+ DIALOG("FormMessage";*)
+ SHOW WINDOW(formRef1)
+ 
+  //Second window
+ formRef2:=Open form window("FormMessage";Palette form window;On the left+500)
+ SET WINDOW TITLE("MyForm2";formRef2)
+ DIALOG("FormMessage";*)
+ SHOW WINDOW(formRef2)
+ 
+  //Send colors
+ CALL FORM(formRef1;"doSetColor";0x00E6F2FF)
+ CALL FORM(formRef2;"doSetColor";0x00F2E6FF)
+  //Create messages
+ CALL FORM(formRef1;"doAddMessage";Current process name;"Hello Form 1")
+ CALL FORM(formRef2;"doAddMessage";Current process name;"Hello Form 2")
 ```
 
 The *doAddMessage* method only adds a row in the list box in the "FormMessage" form:
 
 ```4d
- #DECLARE ($caller : Text ; $message : Text) //Caller name
-  //Message to display
-  //Receive message from $message and log the message in the list box
- $p:=OBJECT Get pointer(Object named;"Column1")
- INSERT IN ARRAY($p->;1)
- $p->{1}:=$caller+" sends "+$message
+ #DECLARE ($caller : Text ; $message : Text) //Caller name
+  //Message to display
+  //Receive message from $message and log the message in the list box
+ $p:=OBJECT Get pointer(Object named;"Column1")
+ INSERT IN ARRAY($p->;1)
+ $p->{1}:=$caller+" sends "+$message
 ```
 
 At runtime, you get the following result:
@@ -104,8 +104,8 @@ At runtime, you get the following result:
 You can then add other messages by executing the **CALL FORM** command again:
 
 ```4d
- CALL FORM(formRef1;"doAddMessage";Current process name;"Hello 2 Form 1")
- CALL FORM(formRef2;"doAddMessage";Current process name;"Hello 2 Form 2")
+ CALL FORM(formRef1;"doAddMessage";Current process name;"Hello 2 Form 1")
+ CALL FORM(formRef2;"doAddMessage";Current process name;"Hello 2 Form 2")
 ```
 
 ![](../assets/en/commands/pict2896833.en.png)

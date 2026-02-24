@@ -85,20 +85,20 @@ Give the following XML structure:
 This example lets you quickly look for an XML element and display its value:
 
 ```4d
- vElemRef:=DOM Parse XML source("books.xml")
- vFound:=DOM Find XML element(vElemRef;"book[2]/title") //relative path from current node
- DOM GET XML ELEMENT VALUE(vFound;value)
- ALERT("The value of the element is: \""+value+"\"") //Learning XML
+ vElemRef:=DOM Parse XML source("books.xml")
+ vFound:=DOM Find XML element(vElemRef;"book[2]/title") //relative path from current node
+ DOM GET XML ELEMENT VALUE(vFound;value)
+ ALERT("The value of the element is: \""+value+"\"") //Learning XML
 ```
 
 The same search can also be done as follows:
 
 ```4d
- vElemRef:=DOM Parse XML source("books.xml")
- vFound:=DOM Find XML element(vElemRef;"/bookstore/book[2]") //absolute path from root
- vFound:=DOM Find XML element(vFound;"title")
- DOM GET XML ELEMENT VALUE(vFound;value)
- ALERT("The value of the element is: \""+value+"\"") //Learning XML
+ vElemRef:=DOM Parse XML source("books.xml")
+ vFound:=DOM Find XML element(vElemRef;"/bookstore/book[2]") //absolute path from root
+ vFound:=DOM Find XML element(vFound;"title")
+ DOM GET XML ELEMENT VALUE(vFound;value)
+ ALERT("The value of the element is: \""+value+"\"") //Learning XML
 ```
 
 ## Example 2 
@@ -119,9 +119,9 @@ Given the following XML structure:
 The following code can be used to retrieve the reference of each Elem2 element in the arrAfound array:
 
 ```4d
- vElemRef:=DOM Parse XML source("example.xml")
- ARRAY TEXT(arrAfound;0)
- vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
+ vElemRef:=DOM Parse XML source("example.xml")
+ ARRAY TEXT(arrAfound;0)
+ vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
 ```
 
 ## Example 3 
@@ -129,7 +129,7 @@ The following code can be used to retrieve the reference of each Elem2 element i
 You want to select all "rect" elements with a "class" attributes that contains the "bgcontainer" string:
 
 ```4d
- $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
+ $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
 ## System variables and sets 

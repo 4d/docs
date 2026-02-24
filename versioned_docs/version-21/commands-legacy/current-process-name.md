@@ -36,7 +36,7 @@ This command is particularly useful in the context of worker processes (see the 
 You want to call a worker and pass the calling process name as parameter:
 
 ```4d
- CALL WORKER(1;"myMessage";Current process name;"Start:"+String(vMax))
+ CALL WORKER(1;"myMessage";Current process name;"Start:"+String(vMax))
 ```
 
 ## See also 

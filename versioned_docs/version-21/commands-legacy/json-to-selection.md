@@ -49,32 +49,32 @@ If a record is locked by another process during the execution of the command, it
 Using the **JSON TO SELECTION** command to add records to the \[Company\] table: 
 
 ```4d
- var $Object1;$Object2;$Object3;$Object4 : Object
- var $ObjectString : Text
- ARRAY OBJECT($arrayObject;0)
- 
- OB SET($Object1;"ID";"200";"Company Name";"4D SAS";"City";"Clichy")
- APPEND TO ARRAY($arrayObject;$Object1)
- 
- OB SET($Object2;"ID";"201";"Company Name";"APPLE";"City";"Paris")
- APPEND TO ARRAY($arrayObject;$Object2)
- 
- OB SET($Object3;"ID";"202";"Company Name";"IBM";"City";"London")
- APPEND TO ARRAY($arrayObject;$Object3)
- 
- OB SET($Object4;"ID";"203";"Company Name";"MICROSOFT";"City";"New York")
- APPEND TO ARRAY($arrayObject;$Object4)
- 
- $ObjectString:=JSON Stringify array($arrayObject)
- 
-  // $ObjectString = "[{"ID":"200","City":"Clichy","Company Name":"4D
-  // SAS"},{"ID":"201","City":"Paris","Company Name":"APPLE"},{"ID":"202",
-  //"City":"London","Company Name":"IBM"},{"ID":"203","City":"New
-  //York","Company Name":"MICROSOFT"}]"
- 
- JSON TO SELECTION([Company];$ObjectString)
-  // You create 4 records in the [Company] table, filling the ID,
-  //Company name and city fields
+ var $Object1;$Object2;$Object3;$Object4 : Object
+ var $ObjectString : Text
+ ARRAY OBJECT($arrayObject;0)
+ 
+ OB SET($Object1;"ID";"200";"Company Name";"4D SAS";"City";"Clichy")
+ APPEND TO ARRAY($arrayObject;$Object1)
+ 
+ OB SET($Object2;"ID";"201";"Company Name";"APPLE";"City";"Paris")
+ APPEND TO ARRAY($arrayObject;$Object2)
+ 
+ OB SET($Object3;"ID";"202";"Company Name";"IBM";"City";"London")
+ APPEND TO ARRAY($arrayObject;$Object3)
+ 
+ OB SET($Object4;"ID";"203";"Company Name";"MICROSOFT";"City";"New York")
+ APPEND TO ARRAY($arrayObject;$Object4)
+ 
+ $ObjectString:=JSON Stringify array($arrayObject)
+ 
+  // $ObjectString = "[{"ID":"200","City":"Clichy","Company Name":"4D
+  // SAS"},{"ID":"201","City":"Paris","Company Name":"APPLE"},{"ID":"202",
+  //"City":"London","Company Name":"IBM"},{"ID":"203","City":"New
+  //York","Company Name":"MICROSOFT"}]"
+ 
+ JSON TO SELECTION([Company];$ObjectString)
+  // You create 4 records in the [Company] table, filling the ID,
+  //Company name and city fields
 ```
 
 ## See also 

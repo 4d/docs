@@ -63,16 +63,16 @@ The optional *formPageOption* parameter allows you to specify the form part(s) f
 You want to get information on all pages including objects from the inherited form (if any):
 
 ```4d
-  //open form
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray)
+  //open form
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray)
 ```
 
 Or:
 
 ```4d
-  //loaded form
- FORM LOAD([Table1];"MyForm")
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
+  //loaded form
+ FORM LOAD([Table1];"MyForm")
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
 ```
 
 ## Example 2 
@@ -80,9 +80,9 @@ Or:
 You want to get information on the current page only, with page 0 of the loaded form and inherited form objects (if any):
 
 ```4d
- FORM LOAD("MyForm")
- FORM GOTO PAGE(2)
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page+Form inherited)
+ FORM LOAD("MyForm")
+ FORM GOTO PAGE(2)
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page+Form inherited)
 ```
 
 ## Example 3 
@@ -90,8 +90,8 @@ You want to get information on the current page only, with page 0 of the loaded 
 You want to get information on all objects in the inherited form (if any). If there is no inherited form, arrays will be returned empty.
 
 ```4d
- FORM LOAD("MyForm")
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form inherited)
+ FORM LOAD("MyForm")
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form inherited)
 ```
 
 ## Example 4 
@@ -99,9 +99,9 @@ You want to get information on all objects in the inherited form (if any). If th
 You want to get information on page 4 objects, including page 0 objects, but without inherited form objects (if any):
 
 ```4d
- FORM LOAD([Table1];"MyForm")
- FORM GOTO PAGE(4)
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page)
+ FORM LOAD([Table1];"MyForm")
+ FORM GOTO PAGE(4)
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page)
 ```
 
 ## Example 5 
@@ -109,8 +109,8 @@ You want to get information on page 4 objects, including page 0 objects, but wit
 You want to get information on objects on all pages, but without inherited form objects (if any):
 
 ```4d
- FORM LOAD([Table1];"MyForm")
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages)
+ FORM LOAD([Table1];"MyForm")
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages)
 ```
 
 ## Example 6 
@@ -118,18 +118,18 @@ You want to get information on objects on all pages, but without inherited form 
 You want to load a form and get a list of all the objects of list boxes that it contains.
 
 ```4d
- FORM LOAD("MyForm")
- ARRAY TEXT(arrObjects;0)
- FORM GET OBJECTS(arrObjects)
- ARRAY LONGINT(ar_type;Size of array(arrObjects))
- For($i;1;Size of array(arrObjects))
-    ar_type{$i}:=OBJECT Get type(*;arrObjects{$i})
-    If(ar_type{$i}=Object type listbox)
-       ARRAY TEXT(arrLBObjects;0)
-       LISTBOX GET OBJECTS(*;arrObjects{$i};arrLBObjects)
-    End if
- End for
- FORM UNLOAD
+ FORM LOAD("MyForm")
+ ARRAY TEXT(arrObjects;0)
+ FORM GET OBJECTS(arrObjects)
+ ARRAY LONGINT(ar_type;Size of array(arrObjects))
+ For($i;1;Size of array(arrObjects))
+    ar_type{$i}:=OBJECT Get type(*;arrObjects{$i})
+    If(ar_type{$i}=Object type listbox)
+       ARRAY TEXT(arrLBObjects;0)
+       LISTBOX GET OBJECTS(*;arrObjects{$i};arrLBObjects)
+    End if
+ End for
+ FORM UNLOAD
 ```
 
 ## See also 

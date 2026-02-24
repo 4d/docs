@@ -33,7 +33,7 @@ While applying ARRAY TEXT to an existing array:
 This example creates a process array of 100 [Text](# "A character string that may contain from 0 to 2 GB of text") elements:
 
 ```4d
- ARRAY TEXT(atValues;100)
+ ARRAY TEXT(atValues;100)
 ```
 
 ## Example 2 
@@ -41,7 +41,7 @@ This example creates a process array of 100 [Text](# "A character string that ma
 This example creates a local array of 100 rows of 50 [Text](# "A character string that may contain from 0 to 2 GB of text") elements:
 
 ```4d
- ARRAY TEXT($atValues;100;50)
+ ARRAY TEXT($atValues;100;50)
 ```
 
 ## Example 3 
@@ -49,10 +49,10 @@ This example creates a local array of 100 rows of 50 [Text](# "A character strin
 This example creates an interprocess array of 50 [Text](# "A character string that may contain from 0 to 2 GB of text") elements and sets each element to the value “Element #” followed by its element number:
 
 ```4d
- ARRAY TEXT(◊atValues;50)
- For($vlElem;1;50)
-    ◊atValues{$vlElem}:="Element #"+String($vlElem)
- End for
+ ARRAY TEXT(◊atValues;50)
+ For($vlElem;1;50)
+    ◊atValues{$vlElem}:="Element #"+String($vlElem)
+ End for
 ```
 
 

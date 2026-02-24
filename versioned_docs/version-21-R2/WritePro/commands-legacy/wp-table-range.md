@@ -35,14 +35,14 @@ In the *targetObj* parameter, you can pass:
 You want to modify the look of the tables contained in the table range: 
 
 ```4d
- tableRange:=WP Table range(myDoc)
-  //table attributes
- WP SET ATTRIBUTES(tableRange;wk border style;wk solid;wk border color;"Blue";wk border width;"3px")
- WP SET ATTRIBUTES(tableRange;wk table align;wk center)
-  //text attributes   
- WP SET ATTRIBUTES(tableRange;wk font size;12)
- WP SET ATTRIBUTES(tableRange;wk text transform;wk capitalize)
- WP SET ATTRIBUTES(tableRange;wk font bold;wk true)
+ tableRange:=WP Table range(myDoc)
+  //table attributes
+ WP SET ATTRIBUTES(tableRange;wk border style;wk solid;wk border color;"Blue";wk border width;"3px")
+ WP SET ATTRIBUTES(tableRange;wk table align;wk center)
+  //text attributes   
+ WP SET ATTRIBUTES(tableRange;wk font size;12)
+ WP SET ATTRIBUTES(tableRange;wk text transform;wk capitalize)
+ WP SET ATTRIBUTES(tableRange;wk font bold;wk true)
 ```
 
 ## See also 

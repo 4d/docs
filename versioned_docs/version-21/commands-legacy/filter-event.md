@@ -29,10 +29,10 @@ This command removes the current event (i.e., click, keystroke) from the event q
 To do this, place the following lines in the output form method:
 
 ```4d
- If(Form event code=On Double Clicked)
-    FILTER EVENT
-    ... //Process the double-click
- End if
+ If(Form event code=On Double Clicked)
+    FILTER EVENT
+    ... //Process the double-click
+ End if
 ```
 
 ## Example 

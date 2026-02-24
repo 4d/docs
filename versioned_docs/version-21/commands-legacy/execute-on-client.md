@@ -47,7 +47,7 @@ You can simultaneously execute the same method on many or all of the registered 
 Let’s assume that you want to execute the “GenerateNums” method on the “Client1” client station:
 
 ```4d
- EXECUTE ON CLIENT("Client1";"GenerateNums";12;$a;"Text")
+ EXECUTE ON CLIENT("Client1";"GenerateNums";12;$a;"Text")
 ```
 
 ## Example 2 
@@ -55,7 +55,7 @@ Let’s assume that you want to execute the “GenerateNums” method on the “
 If you want all the clients to execute the “EmptyTemp” method:
 
 ```4d
- EXECUTE ON CLIENT("@";"EmptyTemp")
+ EXECUTE ON CLIENT("@";"EmptyTemp")
 ```
 
 ## Example 3 

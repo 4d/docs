@@ -5,7 +5,7 @@ slug: /commands/integer-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob {; *byteOrder* : Integer}{; offset : Variable} )<br/>**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob {; *byteOrder* : Integer}{; *} )<!-- END REF-->
+<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob {; *byteOrder* : Integer}{; offset : Variable} )<br/>**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob {; *byteOrder* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 <div class="no-index">
 
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | Blob | Blob | &#8594;  | BLOB to receive the Integer value |
 | byteOrder| Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset  | Variable | &#8596;  | Offset expressed in bytes within the BLOB<br/>New offset after writing if not *  |
-| * | Operator | &#8594; | * to append the value |
+| * | Operator | &#8594; | * to append the value |
 </div>
 <!-- END REF-->
 

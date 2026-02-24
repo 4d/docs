@@ -50,10 +50,10 @@ Using **IMPORT TEXT**, the default field delimiter is the tab character (code 9)
 The following example imports data from a text document. The method first sets the input form so that the data will be imported through the correct form, changes the 4D delimiter variables, then performs the import:
 
 ```4d
- FORM SET INPUT([People];"Import")
- FldDelimit:=27 // Set field delimiter to Escape character
- RecDelimit:=10 // Set record delimiter to Line Feed character
- IMPORT TEXT([People];"NewPeople.txt") // Import from “NewPeople.txt” document
+ FORM SET INPUT([People];"Import")
+ FldDelimit:=27 // Set field delimiter to Escape character
+ RecDelimit:=10 // Set record delimiter to Line Feed character
+ IMPORT TEXT([People];"NewPeople.txt") // Import from “NewPeople.txt” document
 ```
 
 ## System variables and sets 

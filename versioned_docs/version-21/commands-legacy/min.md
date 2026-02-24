@@ -48,7 +48,7 @@ If the command is correctly executed, the OK system variable is set to 1\. If it
 The following example is an object method for the variable *vMin* placed in the break 0 portion of the form. The variable is printed at the end of the report. The object method assigns the minimum value of the field to the variable, which is then printed in the last break of the report: 
 
 ```4d
- vMin:=Min([Employees]Salary)
+ vMin:=Min([Employees]Salary)
 ```
 
 **Note:** Make sure the "On printing break" form event is selected for the variable. 
@@ -56,12 +56,12 @@ The following example is an object method for the variable *vMin* placed in the 
 The following method is called to print the records in the selection and to activate break processing:
 
 ```4d
- ALL RECORDS([Employees])
- ORDER BY([Employees];[Employees]Company;>)
- BREAK LEVEL(1)
- ACCUMULATE([Employees]Salary)
- FORM SET OUTPUT([Employees];"PrintForm")
- PRINT SELECTION([Employees])
+ ALL RECORDS([Employees])
+ ORDER BY([Employees];[Employees]Company;>)
+ BREAK LEVEL(1)
+ ACCUMULATE([Employees]Salary)
+ FORM SET OUTPUT([Employees];"PrintForm")
+ PRINT SELECTION([Employees])
 ```
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
@@ -71,7 +71,7 @@ The following method is called to print the records in the selection and to acti
 The following example finds the lowest sale amount of an employee and displays the result in an alert box:
 
 ```4d
- ALERT("Minimum sale = "+String(Min([Employees]Sales)))
+ ALERT("Minimum sale = "+String(Min([Employees]Sales)))
 ```
 
 ## Example 3 
@@ -79,10 +79,10 @@ The following example finds the lowest sale amount of an employee and displays t
 This example gets the lowest value in the array:
 
 ```4d
- ARRAY REAL($ArrGrades;0)
- QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- vMin:=Min($ArrGrades)
+ ARRAY REAL($ArrGrades;0)
+ QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
+ SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
+ vMin:=Min($ArrGrades)
 ```
 
 ## Example 4 

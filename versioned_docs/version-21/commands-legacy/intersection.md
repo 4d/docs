@@ -41,10 +41,10 @@ The *resultSet* is created by **INTERSECTION**. The *resultSet* replaces any exi
 The following example finds the customers who are served by two sales representatives, Joe and Abby. Each sales representative has a set that represents his or her customers. The customers that are in both sets are represented by both Joe and Abby:
 
 ```4d
- INTERSECTION("Joe";"Abby";"Both") // Put customers in both sets in Both
- USE SET("Both") // Use the set
- CLEAR SET("Both") // Clear this set but save the others
- DISPLAY SELECTION([Customers]) // Display customers served by both
+ INTERSECTION("Joe";"Abby";"Both") // Put customers in both sets in Both
+ USE SET("Both") // Use the set
+ CLEAR SET("Both") // Clear this set but save the others
+ DISPLAY SELECTION([Customers]) // Display customers served by both
 ```
 
 ## See also 

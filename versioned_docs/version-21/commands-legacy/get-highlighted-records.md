@@ -42,9 +42,9 @@ The set designated by *setName* can be local/client, process or interprocess.
 This method indicates how many records are selected in the subform displaying the records of the \[CDs\] table:
 
 ```4d
- GET HIGHLIGHTED RECORDS([CDs];"$highlight")
- ALERT(String(Records in set("$highlight"))"+"selected records.")
- CLEAR SET("$highlight")
+ GET HIGHLIGHTED RECORDS([CDs];"$highlight")
+ ALERT(String(Records in set("$highlight"))"+"selected records.")
+ CLEAR SET("$highlight")
 ```
 
 ## System variables and sets 

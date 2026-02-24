@@ -64,7 +64,7 @@ This command cannot be executed in compiled mode. When it is called in this mode
 Selection of the "Shared by components and host database" property for the "Choose dialog" project method:
 
 ```4d
- METHOD SET ATTRIBUTE("Choose dialog";Attribute shared;True)
+ METHOD SET ATTRIBUTE("Choose dialog";Attribute shared;True)
 ```
 
 ## Example 2 
@@ -72,7 +72,7 @@ Selection of the "Shared by components and host database" property for the "Choo
 Setting several attribute/value pairs:
 
 ```4d
- METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
+ METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
 ```
 
 ## See also 

@@ -52,10 +52,10 @@ If startColumn plus ColumnCount or *startRow* plus rowCount exceeds the number o
 You want to designate a range of cells (that contain some already merged cells) and split it:
 
 ```4d
- WP TABLE SPLIT CELLS($table;3;2;1;1)
-  //or
- $cells:=WP Table get cells($table;3;2;1;1)
- WP TABLE SPLIT CELLS($cells)
+ WP TABLE SPLIT CELLS($table;3;2;1;1)
+  //or
+ $cells:=WP Table get cells($table;3;2;1;1)
+ WP TABLE SPLIT CELLS($cells)
 ```
 
 Result:

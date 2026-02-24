@@ -40,7 +40,7 @@ By default, returned information refers to the running database only. The option
 The **Cache info** command returns a single object that contains all the relevant information about the cache. The returned object has the following basic structure:
 
 ```json
-{    "maxMem": Maximum cache size (real),    "usedMem": Current cache size (real),    "objects": [...] Array of objects currently loaded in cache}
+{    "maxMem": Maximum cache size (real),    "usedMem": Current cache size (real),    "objects": [...] Array of objects currently loaded in cache}
 ```
 
 Elements of the *objects* array are root objects (tables, indexes, Blobs, etc.) which are currently loaded in the cache. Each element contains specific attributes that describe its current status. For more information about advanced interpretation of this data, please contact your local Technical Service department. 
@@ -50,16 +50,16 @@ Elements of the *objects* array are root objects (tables, indexes, Blobs, etc.) 
 You want to get cache information for the current database:
 
 ```4d
- var $cache : Object
- $cache:=Cache info
+ var $cache : Object
+ $cache:=Cache info
 ```
 
 You want to get cache information for the database and all opened components:
 
 ```4d
- var $dbFilter : Object
- OB SET($dbFilter;"dbFilter";"All")
- $cache:=Cache info($dbFilter)
+ var $dbFilter : Object
+ OB SET($dbFilter;"dbFilter";"All")
+ $cache:=Cache info($dbFilter)
 ```
 
 ## See also 

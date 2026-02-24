@@ -28,15 +28,15 @@ Fields are numbered in the order in which they are created. If no field has been
 The following project method builds the array *asFields*, consisting of the field names, for the table whose pointer is received as first parameter:
 
 ```4d
- $vlTable:=Table($1)
- ARRAY STRING(31;asFields;Last field number($vlTable))
- For($vlField;Size of array(asFields);1;-1)
-    If(Is field number valid($vlTable;$vlField))
-       asFields{$vlField}:=Field name($vlTable;$vlField)
-    Else
-       DELETE FROM ARRAY(asFields;$vlField)
-    End if
- End for
+ $vlTable:=Table($1)
+ ARRAY STRING(31;asFields;Last field number($vlTable))
+ For($vlField;Size of array(asFields);1;-1)
+    If(Is field number valid($vlTable;$vlField))
+       asFields{$vlField}:=Field name($vlTable;$vlField)
+    Else
+       DELETE FROM ARRAY(asFields;$vlField)
+    End if
+ End for
 ```
 
 ## See also 

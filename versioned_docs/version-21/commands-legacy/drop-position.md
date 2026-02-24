@@ -54,54 +54,54 @@ In the following example, a list of amounts paid must be broken down per month a
 The right (source) list box object method contains the following code:
 
 ```4d
- If(Form event code=On Begin Drag Over) //event must be selected for the list box
-    var $tomove : Blob
-    var $val : Text
-    LISTBOX GET CELL POSITION(*;"LBPaid";$col;$row)
-    $val:=PaidCol{$row}
-    VARIABLE TO BLOB($val;$tomove)
-    APPEND DATA TO PASTEBOARD("mydrag";$tomove) //use a custom key
- End if
+ If(Form event code=On Begin Drag Over) //event must be selected for the list box
+    var $tomove : Blob
+    var $val : Text
+    LISTBOX GET CELL POSITION(*;"LBPaid";$col;$row)
+    $val:=PaidCol{$row}
+    VARIABLE TO BLOB($val;$tomove)
+    APPEND DATA TO PASTEBOARD("mydrag";$tomove) //use a custom key
+ End if
 ```
 
 The left (destination) list box object method contains the following code:
 
 ```4d
- Case of
- 
-    :(Form event code=On Drag Over) //event must be selected for the list box
-       var $toGet : Blob
-       var $rownum : Integer
-       $rownum:=Drop position($colnum)
-       GET PASTEBOARD DATA("mydrag";$toGet) //get data
-       If(Pasteboard data size("mydrag")>0)&($colnum#1)) //If data are in the pasteboard
-          $0:=0 //we would accept the drop
-       Else
-          $0:=-1 //The drop is refused
-       End if
- 
-    :(Form event code=On Drop) //event must be selected for the list box
-       var $toGet : Blob
-       var $rownum;$val : Integer
-       $rownum:=Drop position($colnum)
-       GET PASTEBOARD DATA("mydrag";$toGet)
-       BLOB TO VARIABLE($toGet;$val) //get the value
-       If(Pasteboard data size("mydrag")>0))
-          If($colnum=1)
-             BEEP
-          Else
-             Case of //Adding of dropped values
-                :($colnum=2)
-                   John{$rownum}:=John{$rownum}+$val
-                :($colnum=3)
-                   Mark{$rownum}:=Mark{$rownum}+$val
-                :($colnum=4)
-                   Peter{$rownum}:=Peter{$rownum}+$val
-             End case
-             DELETE FROM ARRAY(PaidCol;Find in array(PaidCol;$val)) //Update source listbox
-          End if
-       End if
- End case
+ Case of
+ 
+    :(Form event code=On Drag Over) //event must be selected for the list box
+       var $toGet : Blob
+       var $rownum : Integer
+       $rownum:=Drop position($colnum)
+       GET PASTEBOARD DATA("mydrag";$toGet) //get data
+       If(Pasteboard data size("mydrag")>0)&($colnum#1)) //If data are in the pasteboard
+          $0:=0 //we would accept the drop
+       Else
+          $0:=-1 //The drop is refused
+       End if
+ 
+    :(Form event code=On Drop) //event must be selected for the list box
+       var $toGet : Blob
+       var $rownum;$val : Integer
+       $rownum:=Drop position($colnum)
+       GET PASTEBOARD DATA("mydrag";$toGet)
+       BLOB TO VARIABLE($toGet;$val) //get the value
+       If(Pasteboard data size("mydrag")>0))
+          If($colnum=1)
+             BEEP
+          Else
+             Case of //Adding of dropped values
+                :($colnum=2)
+                   John{$rownum}:=John{$rownum}+$val
+                :($colnum=3)
+                   Mark{$rownum}:=Mark{$rownum}+$val
+                :($colnum=4)
+                   Peter{$rownum}:=Peter{$rownum}+$val
+             End case
+             DELETE FROM ARRAY(PaidCol;Find in array(PaidCol;$val)) //Update source listbox
+          End if
+       End if
+ End case
 ```
 
 ## See also 

@@ -37,11 +37,11 @@ displayed_sidebar: docs
 The following button’s object method assigns the picture (jpeg or gif format) present in the pasteboard (if any) to the field \[Employees\]Photo:
 
 ```4d
- If((Pasteboard data size("com.4d.private.picture.jpeg")>0)|(Pasteboard data size("com.4d.private.picture.gif")>0))
-    GET PICTURE FROM PASTEBOARD([Employees]Photo)
- Else
-    ALERT("The pasteboard does not contain any pictures.")
- End if
+ If((Pasteboard data size("com.4d.private.picture.jpeg")>0)|(Pasteboard data size("com.4d.private.picture.gif")>0))
+    GET PICTURE FROM PASTEBOARD([Employees]Photo)
+ Else
+    ALERT("The pasteboard does not contain any pictures.")
+ End if
 ```
 
 ## System variables and sets 

@@ -24,7 +24,7 @@ displayed_sidebar: docs
 The following example makes the last record of the \[People\] table the current record:
 
 ```4d
- LAST RECORD([People])
+ LAST RECORD([People])
 ```
 
 ## See also 

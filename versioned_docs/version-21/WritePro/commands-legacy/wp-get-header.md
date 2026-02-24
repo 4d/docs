@@ -40,16 +40,16 @@ If the *subSectionType* is not specified, the main section header will be return
 You want to copy the header of the first page of a 4D Write Pro document to the headers of all pages of another 4D Write Pro document:
 
 ```4d
- var $headerSource;$rangeSource;$tempoc;$headerTarget;$rangeTarget : Object
- 
- $headerSource:=WP Get header([TEMPLATES]WPtemplate;1;wk first page) //get the first page header of section 1
- $rangeSource:=WP Text range($headerSource;wk start text;wk end text)
- $tempoc:=WP New($rangeSource)
- 
- $headerTarget:=WP Get header([Docs]MyWPDoc;1) //all pages of section 1
- $rangeTarget:=WP Text range($headerTarget;wk start text;wk end text)
- 
- WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
+ var $headerSource;$rangeSource;$tempoc;$headerTarget;$rangeTarget : Object
+ 
+ $headerSource:=WP Get header([TEMPLATES]WPtemplate;1;wk first page) //get the first page header of section 1
+ $rangeSource:=WP Text range($headerSource;wk start text;wk end text)
+ $tempoc:=WP New($rangeSource)
+ 
+ $headerTarget:=WP Get header([Docs]MyWPDoc;1) //all pages of section 1
+ $rangeTarget:=WP Text range($headerTarget;wk start text;wk end text)
+ 
+ WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
 ## See also 

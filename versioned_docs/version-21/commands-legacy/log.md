@@ -27,7 +27,7 @@ displayed_sidebar: docs
 The following line displays 1:
 
 ```4d
- ALERT(String(Log(Exp(1)))
+ ALERT(String(Log(Exp(1)))
 ```
 
 ## See also 

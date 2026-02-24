@@ -39,13 +39,13 @@ The optional *childElemName* and *childElemValue* parameters, when passed, recei
 Recovery of the reference of the last XML element of the parent root. The XML structure (C:\\\\import.xml) is loaded into a BLOB beforehand: 
 
 ```4d
- var myBlobVar : Blob
- var $ref_XML_Parent;$ref_XML_Child : Text
- var $childName;$childValue : Text
- 
- DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
- $ref_XML_Parent:=DOM Parse XML variable(myBlobVar)
- $ref_XML_Child:=DOM Get last child XML element($ref_XML_Parent;$childName;$childValue)
+ var myBlobVar : Blob
+ var $ref_XML_Parent;$ref_XML_Child : Text
+ var $childName;$childValue : Text
+ 
+ DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
+ $ref_XML_Parent:=DOM Parse XML variable(myBlobVar)
+ $ref_XML_Child:=DOM Get last child XML element($ref_XML_Parent;$childName;$childValue)
 ```
 
 ## System variables and sets 

@@ -59,23 +59,23 @@ When used in a heterogeneous environment, in order to restore the maximum settin
 You want to apply print settings previously saved to disk to the current 4D printing context: 
 
 ```4d
- var curSettings : Blob
- DOCUMENT TO BLOB(Get 4D folder(Active 4D Folder)+"current4Dsettings.blob";curSettings)
-  //current4Dsettings has been created by Print settings to BLOB
- $err:=BLOB to print settings(curSettings;0)
- Case of
-    :($err=1)
-  //everything is OK
-    :($err=2)
-       CONFIRM("Printer has changed!\n\nCheck the print settings?")
-       If(OK=1)
-          PRINT SETTINGS
-       End if
-    :($err=0)
-       ALERT("There is no current printer.")
-    :($err=-1)
-       ALERT("Invalid settings file.")
- End case
+ var curSettings : Blob
+ DOCUMENT TO BLOB(Get 4D folder(Active 4D Folder)+"current4Dsettings.blob";curSettings)
+  //current4Dsettings has been created by Print settings to BLOB
+ $err:=BLOB to print settings(curSettings;0)
+ Case of
+    :($err=1)
+  //everything is OK
+    :($err=2)
+       CONFIRM("Printer has changed!\n\nCheck the print settings?")
+       If(OK=1)
+          PRINT SETTINGS
+       End if
+    :($err=0)
+       ALERT("There is no current printer.")
+    :($err=-1)
+       ALERT("Invalid settings file.")
+ End case
 ```
 
 ## See also 

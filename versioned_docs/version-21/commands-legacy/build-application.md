@@ -46,10 +46,10 @@ If you pass the access path and name of an XML file for a valid application proj
 This example builds two applications in a single method:
 
 ```4d
- BUILD APPLICATION("c:\\folder\\buildApp\\myclientApp.xml")
- If(OK=1)
-    BUILD APPLICATION(File(Build application settings file).platformPath) //default settings
- End if
+ BUILD APPLICATION("c:\\folder\\buildApp\\myclientApp.xml")
+ If(OK=1)
+    BUILD APPLICATION(File(Build application settings file).platformPath) //default settings
+ End if
 ```
 
 ## System Variables or Sets 

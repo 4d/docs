@@ -49,13 +49,13 @@ By default, if *recompute* is omitted, expressions are recomputed.
 To freeze the formulas in a document:
 
 ```4d
- WP FREEZE FORMULAS(WriteProArea)
+ WP FREEZE FORMULAS(WriteProArea)
 ```
 
 To freeze all formulas in the first section of a document without recomputing:
 
 ```4d
- WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expressions)
+ WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expressions)
 ```
 
 ## See also 

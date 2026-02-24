@@ -57,7 +57,7 @@ If *frameSelector* \= wk text box, you must pass the *textBoxID* parameter with 
 You want to set the cursor to the left footer of the current section:
 
 ```4d
- WP SET FRAME(*;"WPArea";wk current section left footer)
+ WP SET FRAME(*;"WPArea";wk current section left footer)
 ```
 
 ## See also 

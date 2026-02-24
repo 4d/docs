@@ -40,7 +40,7 @@ Pass a UTF-16 value (included between 1 and 65535) in *charCode*.
 The following example uses **Char** to insert a carriage return within the text of an alert message:
 
 ```4d
- ALERT("Employees: "+String(Records in table([Employees]))+Char(Carriage return)+"Press OK to continue.")
+ ALERT("Employees: "+String(Records in table([Employees]))+Char(Carriage return)+"Press OK to continue.")
 ```
 
 ## See also 

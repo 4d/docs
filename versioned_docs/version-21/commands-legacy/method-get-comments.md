@@ -47,15 +47,15 @@ This documentation can be generated for methods ot type triggers, project method
 You can use two types of syntaxes, based either on text arrays, or text variables:  
 
 ```4d
- var tVpath : Text // text variables
- var tVcomments : Text
- METHOD GET COMMENTS(tVpath;tVcomments) // documentation of a single method
+ var tVpath : Text // text variables
+ var tVcomments : Text
+ METHOD GET COMMENTS(tVpath;tVcomments) // documentation of a single method
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // text arrays
- ARRAY TEXT(arrComments;0)
- METHOD GET COMMENTS(arrPaths;arrComments) // documentation of several methods
+ ARRAY TEXT(arrPaths;0) // text arrays
+ ARRAY TEXT(arrComments;0)
+ METHOD GET COMMENTS(arrPaths;arrComments) // documentation of several methods
 ```
 
 You cannot mix the two syntaxes.

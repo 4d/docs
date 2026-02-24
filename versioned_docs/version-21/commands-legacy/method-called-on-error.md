@@ -46,12 +46,12 @@ If no method has been installed for the *scope*, an empty string ("") is returne
 This command is particularly useful in the context of components because it enables you to temporarily change and then restore the error-catching methods:
 
 ```4d
- $methCurrent:=Method called on error
- ON ERR CALL("NewMethod")
-  // If the document cannot be opened, an error is generated
- $ref:=Open document("MyDocument")
-  // Reinstallation of previous method
- ON ERR CALL($methCurrent)
+ $methCurrent:=Method called on error
+ ON ERR CALL("NewMethod")
+  // If the document cannot be opened, an error is generated
+ $ref:=Open document("MyDocument")
+  // Reinstallation of previous method
+ ON ERR CALL($methCurrent)
 ```
 
 ## See also 

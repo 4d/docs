@@ -58,13 +58,13 @@ Given the following list box:
 ![](../assets/en/commands/pict1205393.fr.png)
 
 ```4d
- var $vLColor;$vLColor2;$vLColor3 : Integer
- $vLColor:=LISTBOX Get row color as number(*;"Col5";3)
- $vLColor2:=LISTBOX Get row color as number(*;"List Box";3)
- $vLColor3:=LISTBOX Get row color as number(*;"List Box";3;lk background color)
-  // $vLColor contains 0xFFFF00 (yellow)
-  // $vLColor2 contains 0x00FF (blue)
-  // $vLColor3 contains 0x00FF0000 (red)
+ var $vLColor;$vLColor2;$vLColor3 : Integer
+ $vLColor:=LISTBOX Get row color as number(*;"Col5";3)
+ $vLColor2:=LISTBOX Get row color as number(*;"List Box";3)
+ $vLColor3:=LISTBOX Get row color as number(*;"List Box";3;lk background color)
+  // $vLColor contains 0xFFFF00 (yellow)
+  // $vLColor2 contains 0x00FF (blue)
+  // $vLColor3 contains 0x00FF0000 (red)
 ```
 
 ## See also 

@@ -53,14 +53,14 @@ If the action status cannot be determined (for example if it is not affected to 
 You want to know if the copy action is available (i.e. if some data is selected):
 
 ```4d
- var $actionInfo : Object
- var $isEnabled : Boolean
- $actionInfo:=Action info(ak copy)
- If(Not(Undefined($actionInfo.enabled))) //action is defined in the process
-    If(OB Get($actionInfo;"enabled"))
-       ... //the copy action is available
-    End if
- End if
+ var $actionInfo : Object
+ var $isEnabled : Boolean
+ $actionInfo:=Action info(ak copy)
+ If(Not(Undefined($actionInfo.enabled))) //action is defined in the process
+    If(OB Get($actionInfo;"enabled"))
+       ... //the copy action is available
+    End if
+ End if
 ```
 
 ## See also 

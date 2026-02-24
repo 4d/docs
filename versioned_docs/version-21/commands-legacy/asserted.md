@@ -40,12 +40,12 @@ displayed_sidebar: docs
 Insertion of an assertion in the evaluation of an expression:
 
 ```4d
- READ WRITE([Table 1])
- LOAD RECORD([Table 1])
- If(Asserted(Not(Locked([Table 1]))))
-  // This code triggers the error -10518 if the record is locked
-    ...
- End if
+ READ WRITE([Table 1])
+ LOAD RECORD([Table 1])
+ If(Asserted(Not(Locked([Table 1]))))
+  // This code triggers the error -10518 if the record is locked
+    ...
+ End if
 ```
 
 ## See also 

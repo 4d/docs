@@ -71,7 +71,7 @@ The command returns the XML reference of the element created as a result.
 We want to create the following element: 
 
 ```xml
-     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <RootElement>
    <Elem1>
       <Elem2>
@@ -79,16 +79,16 @@ We want to create the following element:
          <Elem3> </Elem3>
       </Elem2>
    </Elem1>
-</RootElement>                                 
+</RootElement>                                 
 ```
 
 To do so, simply write:
 
 ```4d
- var vRootRef;vElemRef : Text
- vRootRef:=DOM Create XML Ref("RootElement")
- vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
- vElemRef:=DOM Create XML element(vRootRef;vxPath)
+ var vRootRef;vElemRef : Text
+ vRootRef:=DOM Create XML Ref("RootElement")
+ vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
+ vElemRef:=DOM Create XML element(vRootRef;vxPath)
 ```
 
 ## Example 2 
@@ -96,7 +96,7 @@ To do so, simply write:
 We want to create the following element (containing attributes): 
 
 ```xml
-       <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+       <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <RootElement>
    <Elem1>
       <Elem2>
@@ -104,25 +104,25 @@ We want to create the following element (containing attributes):
          <Elem3 Font=Verdana Size=8> </Elem3>
       </Elem2>
    </Elem1>
-</RootElement>                               
+</RootElement>                               
 ```
 
 To do so, simply write:
 
 ```4d
- var vRootRef;vElemRef : Text
- var $aAttrName1;$aAttrName2;$aAttrVal1;$aAttrVal2;$aAttrVal3 : Text
+ var vRootRef;vElemRef : Text
+ var $aAttrName1;$aAttrName2;$aAttrVal1;$aAttrVal2;$aAttrVal3 : Text
 
 $aAttrName1:="Font"
- $aAttrName2:="Size"
- $aAttrVal1:="Verdana"
- $aAttrVal2:="10"
- $aAttrVal3:="8"
- 
- vRootRef:=DOM Create XML Ref("RootElement")
- vxPath:="/RootElement/Elem1/Elem2/Elem3"
- vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal2)
- vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal3)
+ $aAttrName2:="Size"
+ $aAttrVal1:="Verdana"
+ $aAttrVal2:="10"
+ $aAttrVal3:="8"
+ 
+ vRootRef:=DOM Create XML Ref("RootElement")
+ vxPath:="/RootElement/Elem1/Elem2/Elem3"
+ vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal2)
+ vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal3)
 
 
 ```
@@ -130,14 +130,14 @@ $aAttrName1:="Font"
 If you want to insert an element afterwards, you can write:
 
 ```4d
- vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
- vElemRef:=DOM Create XML element(vRootRef;vxPath;"Font";"Arial")
+ vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
+ vElemRef:=DOM Create XML element(vRootRef;vxPath;"Font";"Arial")
 ```
 
 You have then:
 
 ```xml
-     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <RootElement>
    <Elem1>
       <Elem2>
@@ -147,7 +147,7 @@ You have then:
       </Elem2>
    </Elem1>
 </RootElement>
-                                           
+                                           
 ```
 
 ## Example 3 
@@ -157,21 +157,21 @@ We want to create and export the following structure:
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Root>
-   <Elem1>Hello</Elem1>
+   <Elem1>Hello</Elem1>
 </Root>
 ```
 
 We want to use the syntax based on a simple item name. To do this, simply write:
 
 ```4d
- var $root : Text
- var $ref1 : Text
- 
- $root:=DOM Create XML Ref("Root")
- $ref1:=DOM Create XML element($root;"Elem1")
- DOM SET XML ELEMENT VALUE($ref1;"Hello")
- DOM EXPORT TO FILE($root;"mydoc.xml")
- DOM CLOSE XML($root)
+ var $root : Text
+ var $ref1 : Text
+ 
+ $root:=DOM Create XML Ref("Root")
+ $ref1:=DOM Create XML element($root;"Elem1")
+ DOM SET XML ELEMENT VALUE($ref1;"Hello")
+ DOM EXPORT TO FILE($root;"mydoc.xml")
+ DOM CLOSE XML($root)
 ```
 
 ## System variables and sets 

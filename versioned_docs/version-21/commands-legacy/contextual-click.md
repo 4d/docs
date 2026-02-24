@@ -39,13 +39,13 @@ This command should be used only in the context of the On Clicked form event. It
 This method, combined with a scrollable area, enables you to change the value of an array element using a context menu: 
 
 ```4d
- If(Contextual click)
-    If(Pop up menu("True;False")=1)
-       myArray{myArray}:="True"
-    Else
-       myArray{myArray}:="False"
-    End if
- End if
+ If(Contextual click)
+    If(Pop up menu("True;False")=1)
+       myArray{myArray}:="True"
+    Else
+       myArray{myArray}:="False"
+    End if
+ End if
 ```
 
 ## See also 

@@ -49,8 +49,8 @@ You can declare one or more additional namespaces in the generated XML tree usin
 Creating a single XML tree: 
 
 ```4d
- var vElemRef : Text
- vElemRef:=DOM Create XML Ref("MyRoot")
+ var vElemRef : Text
+ vElemRef:=DOM Create XML Ref("MyRoot")
 ```
 
 This code produces the following result:
@@ -65,10 +65,10 @@ This code produces the following result:
 Creating an XML tree with a single namespace:   
 
 ```4d
- var vElemRef : Text
- $Root:="MyNameSpace:MyRoot"
- $Namespace:="http://www.4D.com/tech/namespace"
- vElemRef:=DOM Create XML Ref($Root;$Namespace)
+ var vElemRef : Text
+ $Root:="MyNameSpace:MyRoot"
+ $Namespace:="http://www.4D.com/tech/namespace"
+ vElemRef:=DOM Create XML Ref($Root;$Namespace)
 ```
 
 This code produces the following result:
@@ -83,15 +83,15 @@ This code produces the following result:
 Creating an XML tree with several namespaces: 
 
 ```4d
- var vElemRef : Text
- var $aNSName1;$aNSName2;$aNSValue1;$aNSValue2 : Text
- $Root:="MyNameSpace:MyRoot"
- $Namespace:="http://www.4D.com/tech/namespace"
- $aNSName1:="NSName1"
- $aNSName2:="NSName2"
- $aNSValue1:="http://www.4D.com/Prod/namespace"
- $aNSValue2:="http://www.4D.com/Mkt/namespace"
- vElemRef:=DOM Create XML Ref($Root;$Namespace;$aNSName1;$aNSValue1;$aNSName2;$aNSValue2)
+ var vElemRef : Text
+ var $aNSName1;$aNSName2;$aNSValue1;$aNSValue2 : Text
+ $Root:="MyNameSpace:MyRoot"
+ $Namespace:="http://www.4D.com/tech/namespace"
+ $aNSName1:="NSName1"
+ $aNSName2:="NSName2"
+ $aNSValue1:="http://www.4D.com/Prod/namespace"
+ $aNSValue2:="http://www.4D.com/Mkt/namespace"
+ vElemRef:=DOM Create XML Ref($Root;$Namespace;$aNSName1;$aNSValue1;$aNSName2;$aNSValue2)
 ```
 
 This code produces the following result:

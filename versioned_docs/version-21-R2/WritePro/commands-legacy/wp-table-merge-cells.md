@@ -52,10 +52,10 @@ If startColumn plus ColumnCount or *startRow* plus rowCount exceeds the number o
 You want to designate a range of cells and merge it together:
 
 ```4d
- WP TABLE MERGE CELLS($table;3;2;2;4)
-  //or
- $cells:=WP Table get cells($table;3;2;2;4)
- WP TABLE MERGE CELLS($cells)
+ WP TABLE MERGE CELLS($table;3;2;2;4)
+  //or
+ $cells:=WP Table get cells($table;3;2;2;4)
+ WP TABLE MERGE CELLS($cells)
 ```
 
 Result:

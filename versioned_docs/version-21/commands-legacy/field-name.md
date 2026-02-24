@@ -27,7 +27,7 @@ displayed_sidebar: docs
 This example sets the second element of the array FieldArray{1} to the name of the second field in the first table. FieldArray is a two-dimensional array:
 
 ```4d
- FieldArray{1}{2}:=Field name(1;2)
+ FieldArray{1}{2}:=Field name(1;2)
 ```
 
 ## Example 2 
@@ -35,7 +35,7 @@ This example sets the second element of the array FieldArray{1} to the name of t
 This example sets the second element of the array FieldArray{1} to the name of the field *\[MyTable\]MyField*. FieldArray is a two-dimensional array:
 
 ```4d
- FieldArray{1}{2}:=Field name(->[MyTable]MyField)
+ FieldArray{1}{2}:=Field name(->[MyTable]MyField)
 ```
 
 ## Example 3 
@@ -43,7 +43,7 @@ This example sets the second element of the array FieldArray{1} to the name of t
 This example displays an alert. This method passes a pointer to a field: 
 
 ```4d
- ALERT("The ID number for the field "+Field name($1)+" in the table "+Table name(Table($1))+" has to be longer than five characters.")
+ ALERT("The ID number for the field "+Field name($1)+" in the table "+Table name(Table($1))+" has to be longer than five characters.")
 ```
 
 ## See also 

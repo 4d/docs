@@ -26,7 +26,7 @@ This command is most often used after the [USE SET](use-set.md) command to begin
 The following example makes the first record of the \[Customers\] table the first record:
 
 ```4d
- FIRST RECORD([Customers])
+ FIRST RECORD([Customers])
 ```
 
 ## See also 

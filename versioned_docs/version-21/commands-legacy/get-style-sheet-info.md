@@ -68,9 +68,9 @@ In **project architecture**, only the three automatic style sheets are supported
 You want to find out the current configuration of the "Automatic" style sheet:
 
 ```4d
- var $size;$style : Integer
- var $font : Text
- GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
+ var $size;$style : Integer
+ var $font : Text
+ GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
 ```
 
 ## See also 

@@ -84,20 +84,20 @@ An empty range is returned if no results are found.
 ## Example 
 
 ```4d
- var $userSel ;$target ;$alphaRanges ;$nextRange : object
- var $options : Integer
- 
-  // define search options
- $options:=wk case insensitive+wk diacritic insensitive
- 
-  // get current user position
- $userSel:=WP Selection range(*;"WParea")
- 
-  // define target
- $target:=WP Get body(WParea) // search only inside the body
- 
-  // launch SEARCH of NEXT occurence of the "alpha" string (based on current selection)
- $nextRange:=WP Find next($target;$userSel;"alpha";$options)
+ var $userSel ;$target ;$alphaRanges ;$nextRange : object
+ var $options : Integer
+ 
+  // define search options
+ $options:=wk case insensitive+wk diacritic insensitive
+ 
+  // get current user position
+ $userSel:=WP Selection range(*;"WParea")
+ 
+  // define target
+ $target:=WP Get body(WParea) // search only inside the body
+ 
+  // launch SEARCH of NEXT occurence of the "alpha" string (based on current selection)
+ $nextRange:=WP Find next($target;$userSel;"alpha";$options)
 ```
 
 ## See also 

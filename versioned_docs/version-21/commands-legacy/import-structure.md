@@ -52,8 +52,8 @@ Since this command modifies the database structure, it cannot be used in the con
 You want to import a saved structure definition into the current database:
 
 ```4d
- $struc:=Document to text("c:\\4DStructures\\Employee.xml")
- IMPORT STRUCTURE($struc)
+ $struc:=Document to text("c:\\4DStructures\\Employee.xml")
+ IMPORT STRUCTURE($struc)
 ```
 
 ## See also 

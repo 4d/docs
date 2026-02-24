@@ -50,19 +50,19 @@ Pass an empty string in *object* to deselect all objects in the open *form*.
 To open the *Contacts* table *Address* form:
 
 ```4d
- FORM EDIT([Contacts];"Address")
+ FORM EDIT([Contacts];"Address")
 ```
 
 To open the *ContactList* project form:
 
 ```4d
- FORM EDIT("ContactList")
+ FORM EDIT("ContactList")
 ```
 
 To open the *ContactPage* project form with "name-input" object selected:
 
 ```4d
- FORM EDIT("ContactList"; "name-input")
+ FORM EDIT("ContactList"; "name-input")
 ```
 
 

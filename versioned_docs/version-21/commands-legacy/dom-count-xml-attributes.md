@@ -38,20 +38,20 @@ Before retrieving the values of elements in an array, you want to know the numbe
 ![](../assets/en/commands/pict39728.en.png)
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- var myResult : Text
- var $numAttributes : Integer
- 
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
- 
- $numAttributes:=DOM Count XML attributes($xml_Child_Ref)
- ARRAY TEXT(tAttrib;$numAttributes)
- ARRAY TEXT(tValAttrib;$numAttributes)
- For($i;1;$numAttributes)
-    DOM GET XML ATTRIBUTE BY INDEX($xml_Child_Ref;$i;tAttrib{$i};tValAttrib{$i})
- End for
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ var myResult : Text
+ var $numAttributes : Integer
+ 
+ $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
+ $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
+ 
+ $numAttributes:=DOM Count XML attributes($xml_Child_Ref)
+ ARRAY TEXT(tAttrib;$numAttributes)
+ ARRAY TEXT(tValAttrib;$numAttributes)
+ For($i;1;$numAttributes)
+    DOM GET XML ATTRIBUTE BY INDEX($xml_Child_Ref;$i;tAttrib{$i};tValAttrib{$i})
+ End for
 ```
 
 In the above example, $numAttributes equals 3, tAttrib{1} contains “Font”, tAttrib{2} contains “N”, tAttrib{3} contains “size” and tValAttrib contains “Verdana”, “1” and “10”.

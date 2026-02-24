@@ -34,11 +34,11 @@ displayed_sidebar: docs
 You want to determine if the current operating system is macOS:
 
 ```4d
- If(Is macOS)
-    ALERT("It's macOS")
- Else
-    ALERT("It's not macOS")
- End if
+ If(Is macOS)
+    ALERT("It's macOS")
+ Else
+    ALERT("It's not macOS")
+ End if
 ```
 
 ## See also 

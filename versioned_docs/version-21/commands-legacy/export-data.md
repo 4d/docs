@@ -56,38 +56,38 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
 * This method makes a loop on all the database tables and calls the ExportBinary method:
 
 ```4d
- var $ExportPath : Text
- var $i : Integer
- $ExportPath:=Select folder("Please select the export folder:")
- If(Ok=1)
-    For($i;1;Last table number
-       If(Is table number valid($i))
-          ExportBinary(Table($i);$ExportPath+Table name($i);True)
-       End if
-    End for
- End if
+ var $ExportPath : Text
+ var $i : Integer
+ $ExportPath:=Select folder("Please select the export folder:")
+ If(Ok=1)
+    For($i;1;Last table number
+       If(Is table number valid($i))
+          ExportBinary(Table($i);$ExportPath+Table name($i);True)
+       End if
+    End for
+ End if
 ```
 
 * Here is the code for the ExportBinary method:
 
 ```4d
 #DECLARE ($tablePtr : Pointer ; $path : Text ; $all : Boolean)
- var $i : Integer
- var $ref : Text
- $ref:=DOM Create XML Ref("settings-import-export")
-  // Export the table "$tablePtr" in '4D' binary format, all the records or only the current selection
- DOM SET XML ATTRIBUTE($ref;"table_no";Table($tablePtr);"format";"4D";"all_records";$all)
-  // Definition of fields to export
- For($i;1;Last field number($tablePtr))
-    If(Is field number valid($tablePtr;$i))
-       $elt:=DOM Create XML element($ref;"field";"table_no";Table($tablePtr);"field_no";$i)
-    End if
- End for
- EXPORT DATA($path;$ref)
- If(Ok=0)
-    ALERT("Error during export of table "+Table name($tablePtr))
- End if
- DOM CLOSE XML($ref)
+ var $i : Integer
+ var $ref : Text
+ $ref:=DOM Create XML Ref("settings-import-export")
+  // Export the table "$tablePtr" in '4D' binary format, all the records or only the current selection
+ DOM SET XML ATTRIBUTE($ref;"table_no";Table($tablePtr);"format";"4D";"all_records";$all)
+  // Definition of fields to export
+ For($i;1;Last field number($tablePtr))
+    If(Is field number valid($tablePtr;$i))
+       $elt:=DOM Create XML element($ref;"field";"table_no";Table($tablePtr);"field_no";$i)
+    End if
+ End for
+ EXPORT DATA($path;$ref)
+ If(Ok=0)
+    ALERT("Error during export of table "+Table name($tablePtr))
+ End if
+ DOM CLOSE XML($ref)
 ```
 
 ## Example 2 
@@ -95,8 +95,8 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
 This example creates an empty project and stores the parameters set by the user in the export dialog box there: 
 
 ```4d
- var $exportParams : Text
- EXPORT DATA("DocExport.txt";$exportParams;*) //Display of the export dialog box
+ var $exportParams : Text
+ EXPORT DATA("DocExport.txt";$exportParams;*) //Display of the export dialog box
 ```
 
 ## System variables and sets 

@@ -29,13 +29,13 @@ If *textBox* does not exist, the command does nothing.
 You want to delete a text box using its ID:
 
 ```4d
- var $myTextBox : Object
- 
-  // Get the text box
- $myTextBox:=WP Get element by ID(myDoc;"AddressBox")
- 
-  // Delete the text box
- WP DELETE TEXT BOX($myTextBox)
+ var $myTextBox : Object
+ 
+  // Get the text box
+ $myTextBox:=WP Get element by ID(myDoc;"AddressBox")
+ 
+  // Delete the text box
+ WP DELETE TEXT BOX($myTextBox)
 ```
 
 ## See also 

@@ -41,13 +41,13 @@ If *targetObj* is displayed in a 4D Write Pro form area, make sure that viewing 
 You want to know the total number of 4D Write Pro document pages stored in the "Manual" field within the current selection of items. You can write:
 
 ```4d
- var $pageCount : Integer
- var $totalCount : Integer
- FIRST RECORD([Items])
- While(Not(End selection([Items]))
-    $pageCount:=WP Get page count([Items]Manual)
-    $totalCount:=$totalCount+$pageCount
-    NEXT RECORD([Items])
- End while
- ALERT("Total number of manual pages: "+String($totalCount))
+ var $pageCount : Integer
+ var $totalCount : Integer
+ FIRST RECORD([Items])
+ While(Not(End selection([Items]))
+    $pageCount:=WP Get page count([Items]Manual)
+    $totalCount:=$totalCount+$pageCount
+    NEXT RECORD([Items])
+ End while
+ ALERT("Total number of manual pages: "+String($totalCount))
 ```

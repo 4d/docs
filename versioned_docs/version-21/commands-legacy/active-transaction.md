@@ -38,15 +38,15 @@ For more information, please refer to the [Suspending transactions](../Develop-l
 You want to know the current transaction status:
 
 ```4d
- If(In transaction)
-    If(Not(Active transaction))
-       ALERT("The current transaction is suspended")
-    Else
-       ALERT("The current transaction is active")
-    End if
- Else
-    ALERT("We are not in transaction")
- End if
+ If(In transaction)
+    If(Not(Active transaction))
+       ALERT("The current transaction is suspended")
+    Else
+       ALERT("The current transaction is active")
+    End if
+ Else
+    ALERT("We are not in transaction")
+ End if
 ```
 
 ## See also 

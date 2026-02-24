@@ -38,15 +38,15 @@ The following form, shown here in the Form editor, contains a colored frame, abo
 Each button has the following method:
 
 ```4d
- DRAG WINDOW //Start dragging window when clicked
+ DRAG WINDOW //Start dragging window when clicked
 ```
 
 After executing the following project method:
 
 ```4d
- $winRef:=Open form window("custom_drag";Modal form dialog box)
- DIALOG("custom_drag")
- CLOSE WINDOW
+ $winRef:=Open form window("custom_drag";Modal form dialog box)
+ DIALOG("custom_drag")
+ CLOSE WINDOW
 ```
 
 You obtain a window similar to this:

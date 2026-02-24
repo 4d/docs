@@ -43,16 +43,16 @@ In the *targetObj* parameter, you can pass:
 You want to change the color of all url link labels in a 4D Write Pro document:
 
 ```4d
- var $links : Collection
- var $link : Object
- 
- $links:=WP Get links(myDoc)
- 
- For each($link;$links)
-    If($link.url#Null) //it's a url link
-       WP SET ATTRIBUTES($link.range;wk text color;"red")
-    End if
- End for each
+ var $links : Collection
+ var $link : Object
+ 
+ $links:=WP Get links(myDoc)
+ 
+ For each($link;$links)
+    If($link.url#Null) //it's a url link
+       WP SET ATTRIBUTES($link.range;wk text color;"red")
+    End if
+ End for each
 ```
 
 ## See also 

@@ -45,42 +45,42 @@ In the following structure, we would like to invert the first and second book:
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <BookCatalog>
-  <Book>
-          <Title>Open Source Web Services</Title>
-          <Author>Collective</Author>
-          <Date>2003</Date>
-          <ISBN>2-7440-1507-5</ISBN>
-          <Publisher>Wrox</Publisher>
-    </Book>
+  <Book>
+          <Title>Open Source Web Services</Title>
+          <Author>Collective</Author>
+          <Date>2003</Date>
+          <ISBN>2-7440-1507-5</ISBN>
+          <Publisher>Wrox</Publisher>
+    </Book>
 <Book>
-          <Title>Building XML Web services</Title>
-          <Author>Scott Short</Author>
-          <Date>2002</Date>
-          <ISBN>2-10-006476-2</ISBN>
-          <Publisher>Microsoft Press</Publisher>
-    </Book>
+          <Title>Building XML Web services</Title>
+          <Author>Scott Short</Author>
+          <Date>2002</Date>
+          <ISBN>2-10-006476-2</ISBN>
+          <Publisher>Microsoft Press</Publisher>
+    </Book>
 </BookCatalog> 
 ```
 
 To do this, simply execute the following code:
 
 ```4d
- var $rootRef : Text
- $rootRef:=DOM Parse XML source("") //selection of XML document
- If(OK=1)
-    var $newStruct : Text
-    $newStruct:=DOM Create XML Ref("BookCatalog")
- 
-    $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[1]")
-    $newElementRef:=DOM Append XML element($newStruct;$bookRef)
- 
-    $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[2]")
-    var $newElementRef : Text
-    $newElementRef:=DOM Insert XML element($newStruct;$bookRef;1)
- 
-    DOM CLOSE XML($newStruct)
-    DOM CLOSE XML($rootRef)
- End if
+ var $rootRef : Text
+ $rootRef:=DOM Parse XML source("") //selection of XML document
+ If(OK=1)
+    var $newStruct : Text
+    $newStruct:=DOM Create XML Ref("BookCatalog")
+ 
+    $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[1]")
+    $newElementRef:=DOM Append XML element($newStruct;$bookRef)
+ 
+    $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[2]")
+    var $newElementRef : Text
+    $newElementRef:=DOM Insert XML element($newStruct;$bookRef;1)
+ 
+    DOM CLOSE XML($newStruct)
+    DOM CLOSE XML($rootRef)
+ End if
 ```
 
 ## See also 

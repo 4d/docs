@@ -27,16 +27,16 @@ If a footer element is already defined for the section or subsection, an *undefi
 You want to create a footer for the left pages of a section:
 
 ```4d
- var $section ;$subsection ;$footer : Object
-  //Retrieve the first section
- $section:=WP Get section(wpDoc;1)
-  //Retrieve the reference on the left subsection of the first section
- $subsection:=WP Get subsection($section;wk left page)
- 
-  //If the subsection exists, set the footer
- If($subsection#Null)
-    $footer:=WP New footer($subsection)
- End if
+ var $section ;$subsection ;$footer : Object
+  //Retrieve the first section
+ $section:=WP Get section(wpDoc;1)
+  //Retrieve the reference on the left subsection of the first section
+ $subsection:=WP Get subsection($section;wk left page)
+ 
+  //If the subsection exists, set the footer
+ If($subsection#Null)
+    $footer:=WP New footer($subsection)
+ End if
 ```
 
 ## See also 

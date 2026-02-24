@@ -32,9 +32,9 @@ The *source* and *destination* arrays can be local, process, or interprocess arr
 The following example fills the array named C. It then creates a new array, named D, of the same size as C and with the same contents:
 
 ```4d
- ALL RECORDS([People]) // Select all records in People
- SELECTION TO ARRAY([People]Company;C) // Move company field data into array C
- COPY ARRAY(C;D) // Copy the array C to the array D
+ ALL RECORDS([People]) // Select all records in People
+ SELECTION TO ARRAY([People]Company;C) // Move company field data into array C
+ COPY ARRAY(C;D) // Copy the array C to the array D
 ```
 
 
