@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Summary-->La commande **WP Text range** retourne une nouvelle plage contenant les caractères situés entre *débutPlage* et *finPlage* dans l'objet *objCible*.<!-- END REF-->
 
-Un **objet plage 4D Write Pro** peut être utilisé pour manipuler des attributs sur une partie du document (notamment à l'aide des commandes [WP GET ATTRIBUTES](./commands/wp-get-attributes) et [WP SET ATTRIBUTES](./commands/wp-set-attributes)). Pour plus d'informations, veuillez vous reporter au paragraphe *Gestion des plages*.
+Un **objet plage 4D Write Pro** peut être utilisé pour manipuler des attributs sur une partie du document (notamment à l'aide des commandes [WP GET ATTRIBUTES](../commands/wp-get-attributes) et [WP SET ATTRIBUTES](../commands/wp-set-attributes)). Pour plus d'informations, veuillez vous reporter au paragraphe *Gestion des plages*.
 
 Dans *objCible*, vous pouvez passer :
 

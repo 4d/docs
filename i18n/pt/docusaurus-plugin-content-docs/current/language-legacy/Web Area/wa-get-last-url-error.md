@@ -45,7 +45,7 @@ Esta informação se retorna em três variáveis:
 
 ## Ver também 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## Propriedades
 

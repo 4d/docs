@@ -100,7 +100,7 @@ displayed_sidebar: docs
 
 ## 例題 4
 
-この例題は[DISPLAY SELECTION](./commands/display-selection) または [MODIFY SELECTION](./commands/modify-selection) で表示されるフォームで発生するイベントを処理するメソッドのテンプレートです。  説明的にするため、フォームウィンドウのタイトルバーにイベントの説明が表示されます:
+この例題は[DISPLAY SELECTION](../commands/display-selection) または [MODIFY SELECTION](../commands/modify-selection) で表示されるフォームで発生するイベントを処理するメソッドのテンプレートです。  説明的にするため、フォームウィンドウのタイトルバーにイベントの説明が表示されます:
 
 ```4d
   // フォームメソッド
@@ -139,7 +139,7 @@ displayed_sidebar: docs
 
 ## 例題 5
 
-[`On Before Keystroke`](../Events/onBeforeKeystroke.md) と [`On After Keystroke`](../Events/onAfterKeystroke.md) イベントを処理する方法は [Get edited text](./commands/get-edited-text)、[Keystroke](./commands/keystroke)、そして[FILTER KEYSTROKE](./commands/filter-keystroke) コマンドの説明を参照してください。
+[`On Before Keystroke`](../Events/onBeforeKeystroke.md) と [`On After Keystroke`](../Events/onAfterKeystroke.md) イベントを処理する方法は [Get edited text](../commands/get-edited-text)、[Keystroke](../commands/keystroke)、そして[FILTER KEYSTROKE](../commands/filter-keystroke) コマンドの説明を参照してください。
 
 ## 例題 6
 
@@ -340,14 +340,14 @@ displayed_sidebar: docs
 ## 参照
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](./commands/call-subform-container)\
-[Current form table](./commands/current-form-table)\
-[FILTER KEYSTROKE](./commands/filter-keystroke)\
+[CALL SUBFORM CONTAINER](../commands/call-subform-container)\
+[Current form table](../commands/current-form-table)\
+[FILTER KEYSTROKE](../commands/filter-keystroke)\
 [FORM Event](form-event.md)\
-[Get edited text](./commands/get-edited-text)\
-[Keystroke](./commands/keystroke)\
-[POST OUTSIDE CALL](./commands/post-outside-call)\
-[SET TIMER](./commands/set-timer)
+[Get edited text](../commands/get-edited-text)\
+[Keystroke](../commands/keystroke)\
+[POST OUTSIDE CALL](../commands/post-outside-call)\
+[SET TIMER](../commands/set-timer)
 
 ## プロパティ
 

@@ -41,7 +41,7 @@ Pass the Boolean values in *horizontal* and *vertical* that indicate if the corr
 ## See also 
 
 [LISTBOX GET GRID](listbox-get-grid.md)  
-[LISTBOX Get property](./commands/listbox-get-property)  
+[LISTBOX Get property](../commands/listbox-get-property)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
 ## Properties

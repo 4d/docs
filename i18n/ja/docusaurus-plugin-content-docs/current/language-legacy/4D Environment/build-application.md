@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Compile project](./commands/compile-project)  
+[Compile project](../commands/compile-project)  
 
 ## プロパティ
 

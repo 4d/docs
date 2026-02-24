@@ -56,7 +56,7 @@ El parámetro *separator* designa un separador decimal personalizado para evalua
 
 :::note
 
-El comando [`GET SYSTEM FORMAT`](./commands/get-system-format) puede utilizarse para averiguar el separador decimal actual, así como otros parámetros del sistema regional.
+El comando [`GET SYSTEM FORMAT`](../commands/get-system-format) puede utilizarse para averiguar el separador decimal actual, así como otros parámetros del sistema regional.
 
 :::
 
@@ -142,8 +142,8 @@ $result:=Num("123.20"; 10) // 123 (explicitly specify base 10)
 
 ## Ver también
 
-[Bool](./commands/bool)  
-[GET SYSTEM FORMAT](./commands/get-system-format)  
+[Bool](../commands/bool)  
+[GET SYSTEM FORMAT](../commands/get-system-format)  
 [String](./string.md)
 
 ## Propiedades

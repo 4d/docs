@@ -39,7 +39,7 @@ Para obtener información detallada sobre el objeto de datos del formulario, con
 
 ### Impresión de datos
 
-Para poder ejecutar este comando, debe abrirse previamente un trabajo de impresión utilizando el comando [OPEN PRINTING JOB](./commands/open-printing-job). El comando [OPEN PRINTING JOB](./commands/open-printing-job) hace una llamada implícita al comando [FORM UNLOAD](./commands/form-unload), por lo que en este contexto es necesario ejecutar **FORM LOAD**. Una vez cargado, este *form* se convierte en el formulario de impresión actual. Todos los comandos de gestión de objetos, y en particular el comando [Print object](./commands/print-object), funcionan con este formulario.
+Para poder ejecutar este comando, debe abrirse previamente un trabajo de impresión utilizando el comando [OPEN PRINTING JOB](../commands/open-printing-job). El comando [OPEN PRINTING JOB](../commands/open-printing-job) hace una llamada implícita al comando [FORM UNLOAD](../commands/form-unload), por lo que en este contexto es necesario ejecutar **FORM LOAD**. Una vez cargado, este *form* se convierte en el formulario de impresión actual. Todos los comandos de gestión de objetos, y en particular el comando [Print object](../commands/print-object), funcionan con este formulario.
 
 Si ya se ha cargado previamente un formulario de impresión (mediante una llamada previa al comando **FORM LOAD**), éste se cierra y se sustituye por *form*. Puede abrir y cerrar varios formularios proyecto en la misma sesión de impresión. El cambio del formulario de impresión mediante el comando **FORM LOAD** no genera saltos de página. Corresponde al desarrollador gestionar los saltos de página.
 
@@ -47,17 +47,17 @@ Solo se ejecuta el [evento formulario `On Load`](../Events/onLoad.md) durante la
 
 Para preservar la coherencia gráfica de los formularios, se recomienda aplicar la propiedad de apariencia "Impresión" independientemente de la plataforma.
 
-El formulario de impresión actual se cierra automáticamente cuando el comando [CLOSE PRINTING JOB](./commands/close-printing-job) es llamado.
+El formulario de impresión actual se cierra automáticamente cuando el comando [CLOSE PRINTING JOB](../commands/close-printing-job) es llamado.
 
 ### Análisis del contenido del formulario
 
 Esto consiste en cargar un formulario fuera de pantalla con fines de análisis. Para ello, basta con llamar a **FORM LOAD** fuera del contexto de un trabajo de impresión. En este caso, los eventos de formulario no se ejecutan.
 
-**FORM LOAD** puede utilizarse con los comandos [FORM GET OBJECTS](./commands/form-get-objects) y [OBJECT Get type](./commands/object-get-type) para realizar cualquier tipo de procesamiento sobre el contenido del formulario. A continuación, debe llamar al comando [FORM UNLOAD](./commands/form-unload) para liberar el formulario de la memoria.
+**FORM LOAD** puede utilizarse con los comandos [FORM GET OBJECTS](../commands/form-get-objects) y [OBJECT Get type](../commands/object-get-type) para realizar cualquier tipo de procesamiento sobre el contenido del formulario. A continuación, debe llamar al comando [FORM UNLOAD](../commands/form-unload) para liberar el formulario de la memoria.
 
-Tenga en cuenta que en todos los casos, el formulario en pantalla permanece cargado (no le afecta el comando **FORM LOAD**) por lo que no es necesario volver a cargarlo después de llamar a [FORM UNLOAD](./commands/form-unload).
+Tenga en cuenta que en todos los casos, el formulario en pantalla permanece cargado (no le afecta el comando **FORM LOAD**) por lo que no es necesario volver a cargarlo después de llamar a [FORM UNLOAD](../commands/form-unload).
 
-**Recordatorio:** en el contexto fuera de pantalla, no olvide llamar a [FORM UNLOAD](./commands/form-unload) para evitar cualquier riesgo de saturación de memoria.
+**Recordatorio:** en el contexto fuera de pantalla, no olvide llamar a [FORM UNLOAD](../commands/form-unload) para evitar cualquier riesgo de saturación de memoria.
 
 ## Ejemplo 1
 
@@ -157,11 +157,11 @@ Desea imprimir un formulario que contiene un list box. Durante el evento *on loa
 
 ## Ver también
 
-[Current form name](./commands/current-form-name)\
-[FORM UNLOAD](./commands/form-unload)\
-[LISTBOX GET OBJECTS](./commands/listbox-get-objects)\
-[OBJECT Get type](./commands/object-get-type)\
-[Print object](./commands/print-object)
+[Current form name](../commands/current-form-name)\
+[FORM UNLOAD](../commands/form-unload)\
+[LISTBOX GET OBJECTS](../commands/listbox-get-objects)\
+[OBJECT Get type](../commands/object-get-type)\
+[Print object](../commands/print-object)
 
 ## Propiedades
 

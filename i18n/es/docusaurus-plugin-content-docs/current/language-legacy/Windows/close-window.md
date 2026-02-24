@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW cierra la ventana activa abierta por el comando [Open window](./commands/open-window.md "Open window") u [Open form window](./commands/open-form-window.md "Open form window") en el proceso actual.<!-- END REF--> CLOSE WINDOW no hace nada si no hay una ventana personalizada abierta; no cierra las ventanas sistema. CLOSE WINDOW tampoco tiene efecto si se llama mientras que un formulario esté activo en la ventana. Debe llamar CLOSE WINDOW cuando haya terminado de utilizar una ventana abierta por [Open window](./commands/open-window.md "Open window") u Open form window. 
+<!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW cierra la ventana activa abierta por el comando [Open window](../commands/open-window.md "Open window") u [Open form window](../commands/open-form-window.md "Open form window") en el proceso actual.<!-- END REF--> CLOSE WINDOW no hace nada si no hay una ventana personalizada abierta; no cierra las ventanas sistema. CLOSE WINDOW tampoco tiene efecto si se llama mientras que un formulario esté activo en la ventana. Debe llamar CLOSE WINDOW cuando haya terminado de utilizar una ventana abierta por [Open window](../commands/open-window.md "Open window") u Open form window. 
 
-Es inútil pasar un número a CLOSE WINDOW cuando lo utiliza para cerrar las ventanas abiertas por [Open window](./commands/open-window.md "Open window") u Open form window, ya que CLOSE WINDOW siempre cerrará la última ventana creada por uno de estos comandos*.* Si pasa un número de referencia de ventana externa en el parámetro *extWindowRef*, CLOSE WINDOW cierra la ventana externa especificada. Para mayor información sobre ventanas externas, consulte la función *Open external window*.
+Es inútil pasar un número a CLOSE WINDOW cuando lo utiliza para cerrar las ventanas abiertas por [Open window](../commands/open-window.md "Open window") u Open form window, ya que CLOSE WINDOW siempre cerrará la última ventana creada por uno de estos comandos*.* Si pasa un número de referencia de ventana externa en el parámetro *extWindowRef*, CLOSE WINDOW cierra la ventana externa especificada. Para mayor información sobre ventanas externas, consulte la función *Open external window*.
 
 ## Ejemplo 
 
@@ -36,8 +36,8 @@ El siguiente ejemplo abre una ventana formulario y crea nuevos registros con el 
 
 ## Ver también 
 
-[Open form window](./commands/open-form-window)  
-[Open window](./commands/open-window)  
+[Open form window](../commands/open-form-window)  
+[Open window](../commands/open-window)  
 
 ## Propiedades
 

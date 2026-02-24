@@ -64,7 +64,7 @@ Se o comando falhar, é gerado um erro que pode ser interceptado com a ajuda do 
 
 ## Ver também 
 
-[Compile project ](./commands/compile-project)  
+[Compile project ](../commands/compile-project)  
 
 ## Propriedades
 

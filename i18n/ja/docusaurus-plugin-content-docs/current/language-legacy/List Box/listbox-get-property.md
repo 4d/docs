@@ -99,9 +99,9 @@ displayed_sidebar: docs
 
 ## 参照
 
-[LISTBOX SET GRID](./commands/listbox-set-grid)  
+[LISTBOX SET GRID](../commands/listbox-set-grid)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
-[OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
+[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 ## プロパティ
 

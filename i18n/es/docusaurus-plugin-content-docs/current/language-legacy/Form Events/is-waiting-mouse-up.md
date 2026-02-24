@@ -72,7 +72,7 @@ End case
 
 ## Ver también 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## Propiedades
 

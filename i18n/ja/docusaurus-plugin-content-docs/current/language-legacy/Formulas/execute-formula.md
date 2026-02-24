@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Command name](./commands/command-name)  
+[Command name](../commands/command-name)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 

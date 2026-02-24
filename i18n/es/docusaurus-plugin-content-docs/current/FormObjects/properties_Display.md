@@ -280,7 +280,7 @@ La siguiente tabla muestra cómo afectan los distintos formatos a la visualizaci
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](../commands/string)
 
 ---
 

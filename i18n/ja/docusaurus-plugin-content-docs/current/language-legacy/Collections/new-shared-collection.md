@@ -70,7 +70,7 @@ displayed_sidebar: docs
 ## 参照
 
 [New collection](new-collection.md)\
-[New shared object](./commands/new-shared-object)\
+[New shared object](../commands/new-shared-object)\
 *共有オブジェクトと共有コレクション*
 
 ## プロパティ

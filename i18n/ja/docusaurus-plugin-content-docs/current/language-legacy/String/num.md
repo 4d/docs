@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 :::note
 
-[`GET SYSTEM FORMAT`](./commands/get-system-format) コマンドを使用して、カレント小数区切りおよびその他の特定のシステム引数を調べることができます。
+[`GET SYSTEM FORMAT`](../commands/get-system-format) コマンドを使用して、カレント小数区切りおよびその他の特定のシステム引数を調べることができます。
 
 :::
 
@@ -141,8 +141,8 @@ $result:=Num("123.20"; 10) // 123 (明示的に10進数を指定)
 
 ## 参照
 
-[Bool](./commands/bool)  
-[GET SYSTEM FORMAT](./commands/get-system-format)  
+[Bool](../commands/bool)  
+[GET SYSTEM FORMAT](../commands/get-system-format)  
 [String](./string.md)
 
 ## プロパティ

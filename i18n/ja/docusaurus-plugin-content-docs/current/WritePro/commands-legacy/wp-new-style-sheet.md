@@ -37,7 +37,7 @@ displayed_sidebar: docs
 * "section" から名前を始めることはできません。これは予約されています
 * "\_"(アンダーバー) はスペースで置き換えられ、それに続くスペースは削除されます。
 
-[WP SET ATTRIBUTES](./commands/wp-set-attributes) コマンド、またはオブジェクト記法(*4D Write Pro属性*参照)を使用して、スタイルシートの属性を指定することもできます。利用可能な属性については、*Style sheet attributes* の章を参照してください。
+[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンド、またはオブジェクト記法(*4D Write Pro属性*参照)を使用して、スタイルシートの属性を指定することもできます。利用可能な属性については、*Style sheet attributes* の章を参照してください。
 
 **注**: 
 

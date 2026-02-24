@@ -69,7 +69,7 @@ O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mo
 
 ## Ver também 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## Propriedades
 

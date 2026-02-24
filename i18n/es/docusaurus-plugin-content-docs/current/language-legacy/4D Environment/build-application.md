@@ -62,7 +62,7 @@ Si el comando falla, se genera un error que puede interceptar con la ayuda del c
 
 ## Ver también 
 
-[Compile project ](./commands/compile-project)  
+[Compile project ](../commands/compile-project)  
 
 ## Propiedades
 

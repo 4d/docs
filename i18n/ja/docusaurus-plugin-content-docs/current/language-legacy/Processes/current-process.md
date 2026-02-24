@@ -25,8 +25,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Process number](./commands/process-number)  
-[Process info](./commands/process-info)  
+[Process number](../commands/process-number)  
+[Process info](../commands/process-info)  
 [Process state](process-state.md)  
 
 ## プロパティ

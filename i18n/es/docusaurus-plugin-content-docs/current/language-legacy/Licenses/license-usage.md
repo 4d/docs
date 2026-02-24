@@ -43,7 +43,7 @@ Dependiendo del tipo de sesión (cliente 4D o REST, por ejemplo), el contenido d
 
 ## objeto de sesión para sesiones de clientes 4D 
 
-Dentro de la colección devuelta para las sesiones 4D, cada elemento contiene un objeto de sesión idéntico al devuelto por el comando [Process activity](./commands/process-activity):
+Dentro de la colección devuelta para las sesiones 4D, cada elemento contiene un objeto de sesión idéntico al devuelto por el comando [Process activity](../commands/process-activity):
 
 | **Nombre de la propiedad** | **Tipo**       | **Descripción**                                                              |
 | -------------------------- | -------------- | ---------------------------------------------------------------------------- |

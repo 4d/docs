@@ -61,7 +61,7 @@ The following code can be used to manage a mouse tracking feature in a picture o
 
 ## See also 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## Properties
 

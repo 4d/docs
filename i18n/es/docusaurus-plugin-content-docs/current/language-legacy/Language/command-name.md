@@ -130,7 +130,7 @@ Until(OK=0) //fin de los comandos existentes
 
 ## Ver también
 
-[EXECUTE FORMULA](./commands/execute-formula)  
+[EXECUTE FORMULA](../commands/execute-formula)  
 [Preemptive Processes](../Develop/preemptive.md)
 
 ## Propiedades

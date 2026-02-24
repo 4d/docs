@@ -130,7 +130,7 @@ Until(OK=0) // 既存のコマンドの終了
 
 ## 参照
 
-[EXECUTE FORMULA](./commands/execute-formula)  
+[EXECUTE FORMULA](../commands/execute-formula)  
 [プリエンプティブプロセス](../Develop/preemptive.md)
 
 ## プロパティ

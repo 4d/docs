@@ -99,9 +99,9 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 
 ## Ver también
 
-[LISTBOX SET GRID](./commands/listbox-set-grid)  
+[LISTBOX SET GRID](../commands/listbox-set-grid)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
-[OBJECT SET SCROLLBAR](./commands/object-set-scrollbar)
+[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 ## Propiedades
 

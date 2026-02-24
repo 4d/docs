@@ -105,7 +105,7 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 
 ## Ver também 
 
-[FORM LOAD](./commands/form-load)  
+[FORM LOAD](../commands/form-load)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
 
 ## Propriedades

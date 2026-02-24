@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
-このコマンドは、フォームを基にした、カスタマイズされた高度なユーザーインターフェースで動作するように設計されています。 これを使用してデータベースや他の場所からの情報を表示したり、あるいはデータ入力機能を提供することができます。 [ADD RECORD](./commands/add-record) や [MODIFY RECORD](./commands/modify-record) とは異なり、**DIALOG** コマンドは、フォームとそのコンテンツ、内容、評価ボタンなどに対して、完全にコントロールすることができます。
+このコマンドは、フォームを基にした、カスタマイズされた高度なユーザーインターフェースで動作するように設計されています。 これを使用してデータベースや他の場所からの情報を表示したり、あるいはデータ入力機能を提供することができます。 [ADD RECORD](../commands/add-record) や [MODIFY RECORD](../commands/modify-record) とは異なり、**DIALOG** コマンドは、フォームとそのコンテンツ、内容、評価ボタンなどに対して、完全にコントロールすることができます。
 
 このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](open-form-window.md) コマンドと一緒に呼び出されます:
 
 ![](../assets/en/commands/pict3541609.en.png)
 
-表示や取得しなければならない情報が複雑で、[ALERT](./commands/alert)、 [CONFIRM](./commands/confirm) または [Request](./commands/request) などのコマンドで処理しきれない場合、**DIALOG** を代わりに使用して置き換えることができます。
+表示や取得しなければならない情報が複雑で、[ALERT](../commands/alert)、 [CONFIRM](../commands/confirm) または [Request](../commands/request) などのコマンドで処理しきれない場合、**DIALOG** を代わりに使用して置き換えることができます。
 
 *form* 引数には、以下のいづれかを渡すことができます:
 
@@ -56,19 +56,19 @@ displayed_sidebar: docs
 
 :::
 
-ダイアログは(ak accept 標準アクション、Enter キー、または[ACCEPT](./commands/accept) コマンドによってトリガーされた)"accept" アクション、または(ak cancel 標準アクション、Escape キー、または[CANCEL](./commands/cancel) コマンドによってトリガーされた)"cancel" アクションによって閉じられます。 accept アクションはOK システム変数を1に設定する一方、cancel アクションはOK を0に設定します。
+ダイアログは(ak accept 標準アクション、Enter キー、または[ACCEPT](../commands/accept) コマンドによってトリガーされた)"accept" アクション、または(ak cancel 標準アクション、Escape キー、または[CANCEL](../commands/cancel) コマンドによってトリガーされた)"cancel" アクションによって閉じられます。 accept アクションはOK システム変数を1に設定する一方、cancel アクションはOK を0に設定します。
 
 ただし、評価することは保存と同等ではないという点に注意して下さい。
-ダイアログにフィールドが含まれる場合、変更されたデータを保存するためには[SAVE RECORD](./commands/save-record) コマンドを明示的に呼び出さなければいけません。
+ダイアログにフィールドが含まれる場合、変更されたデータを保存するためには[SAVE RECORD](../commands/save-record) コマンドを明示的に呼び出さなければいけません。
 
 オプションの\*\*\* 引数を渡すと、フォームはカレントプロセスで最後に開かれたウィンドウにロードされ、フォームをスクリーン上でアクティブにしたままこのコマンドは実行を終了します。  
-このフォームはユーザーアクションに対し通常通り反応し、標準アクションまたはフォームに関連する4Dコード (オブジェクトメソッドやフォームメソッド) が [CANCEL](./commands/cancel) や [ACCEPT](./commands/accept) コマンドを呼び出すと閉じられます。 カレントプロセスが終了すると、この方法で作成されたフォームは、[CANCEL](./commands/cancel) コマンドが呼ばれたかのように自動で閉じられます。 この開き方では別にプロセスを開始する必要がないため、ドキュメントと一緒にフローティングパレットを表示するなどの場合に便利です。
+このフォームはユーザーアクションに対し通常通り反応し、標準アクションまたはフォームに関連する4Dコード (オブジェクトメソッドやフォームメソッド) が [CANCEL](../commands/cancel) や [ACCEPT](../commands/accept) コマンドを呼び出すと閉じられます。 カレントプロセスが終了すると、この方法で作成されたフォームは、[CANCEL](../commands/cancel) コマンドが呼ばれたかのように自動で閉じられます。 この開き方では別にプロセスを開始する必要がないため、ドキュメントと一緒にフローティングパレットを表示するなどの場合に便利です。
 
 **注:**
 
-- **DIALOG**(form;\*) シンタックスと[CALL FORM](./commands/call-form) コマンドを組み合わせることによってフォーム間で通信をすることができます。
+- **DIALOG**(form;\*) シンタックスと[CALL FORM](../commands/call-form) コマンドを組み合わせることによってフォーム間で通信をすることができます。
 - **DIALOG**(form;\*) ステートメントの前に、あらかじめウィンドウが作成されている必要があります。 プロセスのカレントダイアログウィンドウや、各プロセスにデフォルトで作成されるウィンドウは使用できません。 でなければ、エラー -9909 が生成されます。 プロセスのカレントダイアログウィンドウや、各プロセスにデフォルトで作成されるウィンドウは使用できません。 でなければ、エラー -9909 が生成されます。
-- オプションの *\** 引数を使用する場合、標準アクションまたは[CANCEL](./commands/cancel) コマンドや[ACCEPT](./commands/accept) コマンドを呼び出すと、ウィンドウは自動的に閉じられます。 ウィンドウ自身の終了を管理する必要はありません。
+- オプションの *\** 引数を使用する場合、標準アクションまたは[CANCEL](../commands/cancel) コマンドや[ACCEPT](../commands/accept) コマンドを呼び出すと、ウィンドウは自動的に閉じられます。 ウィンドウ自身の終了を管理する必要はありません。
 
 ## 例題 1
 
@@ -167,10 +167,10 @@ displayed_sidebar: docs
 
 ## 参照
 
-[ACCEPT](./commands/accept)\
-[ADD RECORD](./commands/add-record)\
-[CALL FORM](./commands/call-form)\
-[CANCEL](./commands/cancel)\
+[ACCEPT](../commands/accept)\
+[ADD RECORD](../commands/add-record)\
+[CALL FORM](../commands/call-form)\
+[CANCEL](../commands/cancel)\
 [Form](form.md)\
 [Open window](open-window.md)
 

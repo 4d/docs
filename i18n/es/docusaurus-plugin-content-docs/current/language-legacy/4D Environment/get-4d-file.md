@@ -82,7 +82,7 @@ Usted quiere obtener la ruta del último archivo de backup:
 
 ## Ver también 
 
-[File](./commands/file)    
+[File](../commands/file)    
 
 ## Propiedades
 

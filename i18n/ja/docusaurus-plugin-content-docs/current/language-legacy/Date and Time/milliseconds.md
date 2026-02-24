@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
-[Timestamp](./commands/timestamp)  
+[Timestamp](../commands/timestamp)  
 
 ## プロパティ
 

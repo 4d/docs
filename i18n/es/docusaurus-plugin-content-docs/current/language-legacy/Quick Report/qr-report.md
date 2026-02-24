@@ -143,7 +143,7 @@ El método myCallbackMeth convierte el informe cuando se genera:
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-[SET ALLOWED METHODS](./commands/set-allowed-methods)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods)  
 
 ## Propiedades
 

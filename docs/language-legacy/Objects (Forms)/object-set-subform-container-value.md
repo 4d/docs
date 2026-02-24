@@ -41,7 +41,7 @@ A detailed example is available in the [OBJECT Get subform container value](obje
 
 ## See also 
 
-[Form](./commands/form)  
+[Form](../commands/form)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
 
 ## Properties

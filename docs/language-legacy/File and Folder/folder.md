@@ -77,8 +77,8 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)  
-[Object to path](./commands/object-to-path)  
-[Path to object](./commands/path-to-object)  
+[Object to path](../commands/object-to-path)  
+[Path to object](../commands/path-to-object)  
 
 
 ## Properties

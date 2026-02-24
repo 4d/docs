@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Summary-->O comando **WP Text range** devolve um novo objeto de faixa de texto (objFaixa) que contem a seleção entre *faixaInicio* e *faixaFim* na área *wpArea* 4D Write Pro.<!-- END REF-->
 
-Um **4D Write Pro objeto de faixa de texto** pode ser usado para manejar atributos numa seleção de texto (com os comandos [WP GET ATTRIBUTES](./commands/wp-get-attributes) e [WP SET ATTRIBUTES](./commands/wp-set-attributes)). Para saber mais consulte o parágrafo *Comandos de seleção de faixa*.
+Um **4D Write Pro objeto de faixa de texto** pode ser usado para manejar atributos numa seleção de texto (com os comandos [WP GET ATTRIBUTES](../commands/wp-get-attributes) e [WP SET ATTRIBUTES](../commands/wp-set-attributes)). Para saber mais consulte o parágrafo *Comandos de seleção de faixa*.
 
 Pode passar em *alvoObj*:
 

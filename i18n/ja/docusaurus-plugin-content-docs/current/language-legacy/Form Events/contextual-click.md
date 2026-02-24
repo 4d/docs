@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 [Right click](right-click.md)  
 
 ## プロパティ

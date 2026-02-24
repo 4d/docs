@@ -55,9 +55,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Date](./commands/date)  
-[Num](./commands/num)  
-[String](./commands/string)  
+[Date](../commands/date)  
+[Num](../commands/num)  
+[String](../commands/string)  
 [Time](time.md)  
 
 ## プロパティ

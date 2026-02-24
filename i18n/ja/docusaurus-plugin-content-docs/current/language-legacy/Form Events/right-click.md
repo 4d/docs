@@ -34,7 +34,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Contextual click](contextual-click.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## プロパティ
 

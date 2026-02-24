@@ -104,7 +104,7 @@ O parâmetro opcional *mensagemE* *rro* receberá uma mensagem de erro se houver
 
 ## Ver também 
 
-[Formula from string](./commands/formula-from-string)  
+[Formula from string](../commands/formula-from-string)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Usar tokens em fórmulas*  

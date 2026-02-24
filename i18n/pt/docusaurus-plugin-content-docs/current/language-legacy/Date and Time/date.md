@@ -106,8 +106,8 @@ Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção a
 
 ## Ver também 
 
-[Bool](./commands/bool)  
-[String](./commands/string)  
+[Bool](../commands/bool)  
+[String](../commands/string)  
 
 ## Propriedades
 

@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  

@@ -1137,7 +1137,7 @@ En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
 ## Ver también 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](./commands/application-info)  
+[Application info](../commands/application-info)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 

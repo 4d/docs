@@ -66,7 +66,7 @@ The following schemes are available:
 
 The main application scheme will be applied to forms by default. However, it can be overriden:
 
--   by the [SET APPLICATION COLOR SCHEME](./commands/set-application-color-scheme) command at the working session level;
+-   by the [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) command at the working session level;
 -   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
 
 

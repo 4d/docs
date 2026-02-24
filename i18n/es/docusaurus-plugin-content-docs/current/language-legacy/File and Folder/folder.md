@@ -74,8 +74,8 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)  
-[Object to path](./commands/object-to-path)  
-[Path to object](./commands/path-to-object)
+[Object to path](../commands/object-to-path)  
+[Path to object](../commands/path-to-object)
 
 ## Propiedades
 

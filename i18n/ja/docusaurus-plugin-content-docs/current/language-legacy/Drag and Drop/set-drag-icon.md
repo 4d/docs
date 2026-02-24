@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DRAG ICON.Summary-->**SET DRAG ICON**コマンドは、指定したアイコンを、ドラッグ＆ドロップ中のカーソルと関連付けます。<!-- END REF-->
 
-このコマンドはOn Begin Drag Over のフォームイベント中（ドラッグ中）しか呼び出すことができません([Form event code](./commands/form-event-code) コマンドを参照のこと)
+このコマンドはOn Begin Drag Over のフォームイベント中（ドラッグ中）しか呼び出すことができません([Form event code](../commands/form-event-code) コマンドを参照のこと)
 
 *icon* 引数にはドラッグ中に表示させたいピクチャを渡します。サイズは最大で 256x256 ピクセルです。 縦か横のどちらかの大きさが256ピクセルを超えていた場合、画像は自動的にリサイズされます。
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## プロパティ
 

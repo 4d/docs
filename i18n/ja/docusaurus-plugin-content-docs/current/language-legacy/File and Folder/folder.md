@@ -74,8 +74,8 @@ displayed_sidebar: docs
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)  
-[Object to path](./commands/object-to-path)  
-[Path to object](./commands/path-to-object)
+[Object to path](../commands/object-to-path)  
+[Path to object](../commands/path-to-object)
 
 ## プロパティ
 

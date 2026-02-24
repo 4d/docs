@@ -104,7 +104,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM LOAD](./commands/form-load)  
+[FORM LOAD](../commands/form-load)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
 
 ## プロパティ

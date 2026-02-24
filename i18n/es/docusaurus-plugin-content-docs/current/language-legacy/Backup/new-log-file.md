@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-**Nota preliminar:** este comando sólo funciona con 4D Server. Sólo puede ejecutarse mediante el comando [Execute on server](./commands/execute-on-server) o en un procedimiento almacenado.
+**Nota preliminar:** este comando sólo funciona con 4D Server. Sólo puede ejecutarse mediante el comando [Execute on server](../commands/execute-on-server) o en un procedimiento almacenado.
 
 <!--REF #_command_.New log file.Summary-->El comando **New log file** cierra el archivo de registro actual, le cambia el nombre y crea uno nuevo con el mismo nombre en la misma ubicación que el anterior<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
 
@@ -37,7 +37,7 @@ Un archivo de registro siempre debe estar relacionado con un archivo de datos. S
 
 ## Gestión de errores
 
-En caso de error, el comando genera un código que puede ser interceptado con el comando [ON ERR CALL](./commands/on-err-call).
+En caso de error, el comando genera un código que puede ser interceptado con el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también
 

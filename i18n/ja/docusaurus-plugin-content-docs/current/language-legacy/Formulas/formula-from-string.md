@@ -65,7 +65,7 @@ displayed_sidebar: docs
 ## 参照
 
 [Formula](formula.md)\
-[Parse formula](./commands/parse-formula)
+[Parse formula](../commands/parse-formula)
 
 ## プロパティ
 

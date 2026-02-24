@@ -280,7 +280,7 @@ A tabela a seguir mostra como os diferentes formatos afetam a exibição dos nú
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](../commands/string)
 
 ---
 

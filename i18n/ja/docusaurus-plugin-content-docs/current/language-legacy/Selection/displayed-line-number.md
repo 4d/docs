@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 [Selected record number](selected-record-number.md)  
 
 ## プロパティ

@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** imprime el registro actual de *tabla*, sin modificar la selección actual.<!-- END REF--> El formulario de salida actual se utiliza para la impresión. Si no hay registro actual para *tabla*, **PRINT RECORD** no hace nada.
 
-Puede imprimir subformularios y objetos externos con el comando **PRINT RECORD**. Esto no es posible con [Print form](./commands/print-form).
+Puede imprimir subformularios y objetos externos con el comando **PRINT RECORD**. Esto no es posible con [Print form](../commands/print-form).
 
 **Nota:** si hay modificaciones en el registro que no han sido guardadas, este comando imprime los valores de los campos modificados, no los valores en disco.
 
@@ -74,7 +74,7 @@ El siguiente ejemplo imprime el mismo registro actual en dos formularios diferen
 
 ## Ver también 
 
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form)  
 
 ## Propiedades
 

@@ -55,7 +55,7 @@ Pase en los parámetros *horizontal* y *vertical* los valores indicando si las b
 
 ## Ver también 
 
-[LISTBOX Get property](./commands/listbox-get-property)  
+[LISTBOX Get property](../commands/listbox-get-property)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  

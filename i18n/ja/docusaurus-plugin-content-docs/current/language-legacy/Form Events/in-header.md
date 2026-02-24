@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **In header** 実行サイクルを生成させるには、デザインモードでそのフォームやオブジェクトで On Headerイベントプロパティを必ず選択してください。
 
-**注:** このコマンドは、[Form event code](./commands/form-event-code) コマンドを使用して、On Header イベントを返すかどうかをテストするのと同じです。
+**注:** このコマンドは、[Form event code](../commands/form-event-code) コマンドを使用して、On Header イベントを返すかどうかをテストするのと同じです。
 
 ## 参照 
 

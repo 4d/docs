@@ -74,7 +74,7 @@ The following code will create a dialog accepting a formula in text format:
 ## See also 
 
 [Formula](formula.md)  
-[Parse formula](./commands/parse-formula)  
+[Parse formula](../commands/parse-formula)  
 
 
 

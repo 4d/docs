@@ -10,9 +10,9 @@ slug: /WritePro/pictures
 
 Adding pictures to a 4D Write Pro document can be accomplished in multiple ways and depend on your needs:
 
-* to add a **background picture**, use the wk background image or wk background image url attribute with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command
-* to add an **inline picture**, *i.e.* inserted in the text flow just like a character, use the [WP INSERT PICTURE](./commands/wp-insert-picture) or the [ST INSERT EXPRESSION](../../commands/st-insert-expression) command
-* to add an **anchored picture** in the page (behind or in front of the text), use the [WP Add picture](./commands/wp-add-picture) command.
+* to add a **background picture**, use the wk background image or wk background image url attribute with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command
+* to add an **inline picture**, *i.e.* inserted in the text flow just like a character, use the [WP INSERT PICTURE](../commands/wp-insert-picture) or the [ST INSERT EXPRESSION](../../commands/st-insert-expression) command
+* to add an **anchored picture** in the page (behind or in front of the text), use the [WP Add picture](../commands/wp-add-picture) command.
 
 The way you add a picture determines the layer it is positioned in, as illustrated in the diagram below: 
 
@@ -44,7 +44,7 @@ Background picture display can also be set either programmatically or via the co
 
 ## Positioning and displaying of anchored pictures 
 
-Anchored pictures are added with an absolute position, in front of/behind text, as well as anchored to the page or specific parts of a document (*i.e.*, header, footer, sections). Setting an absolute position for a picture is accomplished with the [WP Add picture](./commands/wp-add-picture) and [WP SET ATTRIBUTES](./commands/wp-set-attributes) commands.
+Anchored pictures are added with an absolute position, in front of/behind text, as well as anchored to the page or specific parts of a document (*i.e.*, header, footer, sections). Setting an absolute position for a picture is accomplished with the [WP Add picture](../commands/wp-add-picture) and [WP SET ATTRIBUTES](../commands/wp-set-attributes) commands.
 
 Anchored picture positions can be modified with the following specific attributes and/or standard actions:  
 
@@ -86,13 +86,13 @@ You can see an expression's reference in the picture tip(\*):
 
 (\*)As there is no text associated with an anchored image, its expression reference cannot be displayed.
 
-All image attributes can be applied to picture expressions (wk image and wk image url attributes can only be read). Note however, that since pictures have specific attributes, 4D Write Pro must evaluate the expression at least once to detect that its result is a picture and handle it as a picture expression. It means that when a picture expression is inserted with [WP INSERT FORMULA](./commands/wp-insert-formula), [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) must be called before setting any picture attributes. 
+All image attributes can be applied to picture expressions (wk image and wk image url attributes can only be read). Note however, that since pictures have specific attributes, 4D Write Pro must evaluate the expression at least once to detect that its result is a picture and handle it as a picture expression. It means that when a picture expression is inserted with [WP INSERT FORMULA](../commands/wp-insert-formula), [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) must be called before setting any picture attributes. 
 
-**Note**: As with other expressions, picture expressions are also impacted by the [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) and [WP FREEZE FORMULAS](./commands/wp-freeze-formulas) commands.
+**Note**: As with other expressions, picture expressions are also impacted by the [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) and [WP FREEZE FORMULAS](../commands/wp-freeze-formulas) commands.
 
 ### Anchored pictures 
 
-Anchored picture expressions are added with the [WP Add picture](./commands/wp-add-picture) command (without the second parameter), followed by a call to the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the wk image formula selector.
+Anchored picture expressions are added with the [WP Add picture](../commands/wp-add-picture) command (without the second parameter), followed by a call to the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command with the wk image formula selector.
 
 Example:
 
@@ -101,15 +101,15 @@ Example:
  WP SET ATTRIBUTES(obImage;wk image formula;Formula(m_buildPict))
 ```
 
-You can also insert picture expressions using [WP SET ATTRIBUTES](./commands/wp-set-attributes) and wk image formula on existing anchored pictures.
+You can also insert picture expressions using [WP SET ATTRIBUTES](../commands/wp-set-attributes) and wk image formula on existing anchored pictures.
 
 **Compatibility Note:** wk image expression can still be used to define picture expressions through text. However, it is recommended to use wk image formula and objects. 
 
-Calling the [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) command with wk image formula is similar to calling [WP FREEZE FORMULAS](./commands/wp-freeze-formulas) (on the entire document) in that the expression is cleared from the image attribute. However [WP FREEZE FORMULAS](./commands/wp-freeze-formulas) computes the expression before clearing, whereas [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) does not. If an expression has never been computed, the default black frame image will be displayed.
+Calling the [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) command with wk image formula is similar to calling [WP FREEZE FORMULAS](../commands/wp-freeze-formulas) (on the entire document) in that the expression is cleared from the image attribute. However [WP FREEZE FORMULAS](../commands/wp-freeze-formulas) computes the expression before clearing, whereas [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) does not. If an expression has never been computed, the default black frame image will be displayed.
 
 ### Inline pictures 
 
-Inline picture expressions are added with the [WP INSERT FORMULA](./commands/wp-insert-formula) command.
+Inline picture expressions are added with the [WP INSERT FORMULA](../commands/wp-insert-formula) command.
 
 Examples:
 
@@ -133,16 +133,16 @@ If an image is empty (e.g. it could not be loaded, or it results from an express
 You can remove these black rectangles from the current view using:
 
 * the "Show empty or unsupported images" option of the Property list (see *Configuring View properties*), or
-* the [WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) command with the wk visible empty images selector, or
+* the [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) command with the wk visible empty images selector, or
 * the *visibleEmptyImage* standard action (see *Using 4D Write Pro standard actions*).
 
-You can also use the wk visible empty images selector with the [WP EXPORT DOCUMENT](./commands/wp-export-document) and [WP EXPORT VARIABLE](./commands/wp-export-variable) commands to remove the black rectangles from exported contents.
+You can also use the wk visible empty images selector with the [WP EXPORT DOCUMENT](../commands/wp-export-document) and [WP EXPORT VARIABLE](../commands/wp-export-variable) commands to remove the black rectangles from exported contents.
 
 Note that when this option is set, missing image elements will not be displayed at all even if they have borders, width, height, or background; this may impact the page layout for inline images.
 
 ## Picture properties 
 
-All pictures have properties (attributes) such as height, width, borders, display mode, etc., that can be get or set via the 4D Write Pro language ([WP GET ATTRIBUTES](./commands/wp-get-attributes) and [WP SET ATTRIBUTES](./commands/wp-set-attributes)) or standard actions.
+All pictures have properties (attributes) such as height, width, borders, display mode, etc., that can be get or set via the 4D Write Pro language ([WP GET ATTRIBUTES](../commands/wp-get-attributes) and [WP SET ATTRIBUTES](../commands/wp-set-attributes)) or standard actions.
 
 * The full list of properties available for pictures is provided on the [4D Write Pro Attributes](../4d-write-pro-attributes) page.
 * The *Image* section contains attributes that are specific to pictures only.
@@ -179,15 +179,15 @@ When you get a picture using one of these attributes, you receive a text. If the
 
 The following commands can be used to return pictures:
 
-* [WP Picture range](./commands/wp-picture-range) \- applies only for inline images
-* [WP Selection range](./commands/wp-selection-range) \- applies only for user-selected images
+* [WP Picture range](../commands/wp-picture-range) \- applies only for inline images
+* [WP Selection range](../commands/wp-selection-range) \- applies only for user-selected images
 
 ## Deleting pictures 
 
 You can remove inline and anchored pictures with: 
 
 * *Mouse/keyboard actions*
-* the [WP DELETE PICTURE](./commands/wp-delete-picture) command
+* the [WP DELETE PICTURE](../commands/wp-delete-picture) command
 
 ## Mouse/keyboard actions 
 

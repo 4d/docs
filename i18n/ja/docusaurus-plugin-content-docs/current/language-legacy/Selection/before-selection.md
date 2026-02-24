@@ -61,7 +61,7 @@ displayed_sidebar: docs
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 

@@ -66,7 +66,7 @@ Los comandos [DISPLAY SELECTION](display-selection.md) y [MODIFY SELECTION](modi
 
 Los comandos de importación [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) e [IMPORT DIF](import-dif.md) utilizan el formulario de entrada actual para importar registros.
 
-El parámetro opcional *\** se utiliza en conjunto con las propiedades del formulario que definió en la ventana de propiedades del formulario del entorno Diseño y el comando [Open window](./commands/open-window). El especificar el parámetro \* le indica a 4D que utilice las propiedades del formulario para redimensionar automáticamente la ventana para el siguiente uso del formulario (como un formulario de entrada o como una caja de diálogo). Ver mayor información en [Open window](./commands/open-window).
+El parámetro opcional *\** se utiliza en conjunto con las propiedades del formulario que definió en la ventana de propiedades del formulario del entorno Diseño y el comando [Open window](../commands/open-window). El especificar el parámetro \* le indica a 4D que utilice las propiedades del formulario para redimensionar automáticamente la ventana para el siguiente uso del formulario (como un formulario de entrada o como una caja de diálogo). Ver mayor información en [Open window](../commands/open-window).
 
 **Nota:** bien sea que pase el parámetro opcional *\** o no, FORM SET INPUT cambia el formulario de entrada para la tabla.
 
@@ -119,7 +119,7 @@ que devuelve:
 [IMPORT TEXT](import-text.md)  
 [MODIFY RECORD](modify-record.md)  
 [MODIFY SELECTION](modify-selection.md)  
-[Open window](./commands/open-window)  
+[Open window](../commands/open-window)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
 ## Propiedades

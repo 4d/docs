@@ -177,7 +177,7 @@ $val:=$o.f() //8
 
 ## 参照
 
-[Self](./commands/self)\
+[Self](../commands/self)\
 [Super](super.md)
 
 ## プロパティ

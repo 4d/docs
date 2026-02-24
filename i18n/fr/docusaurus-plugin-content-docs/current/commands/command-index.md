@@ -11,7 +11,7 @@ title: Commandes par nom
 
 <a id="A"><b>A</b></a>
 
-[`ABORT`](./commands/abort)<br/>
+[`ABORT`](../commands/abort)<br/>
 [`ABORT PROCESS BY ID`](commands/abort-process-by-id)<br/>
 [`Abs`](../commands/abs)<br/>
 [`ACCEPT`](../language-legacy/accept.md)<br/>

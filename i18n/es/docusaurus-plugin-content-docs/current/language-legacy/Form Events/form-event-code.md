@@ -100,7 +100,7 @@ Este ejemplo es un método formulario genérico. Muestra cada uno de los posible
 
 ## Ejemplo 4
 
-Este ejemplo muestra la plantilla de un método de formulario que maneja los eventos que pueden ocurrir para un formulario mostrado usando los comandos [DISPLAY SELECTION](./commands/display-selection) o [MODIFY SELECTION](./commands/modify-selection). Con fines didácticos, muestra la naturaleza del evento en la barra de título de la ventana del formulario.
+Este ejemplo muestra la plantilla de un método de formulario que maneja los eventos que pueden ocurrir para un formulario mostrado usando los comandos [DISPLAY SELECTION](../commands/display-selection) o [MODIFY SELECTION](../commands/modify-selection). Con fines didácticos, muestra la naturaleza del evento en la barra de título de la ventana del formulario.
 
 ```4d
 //Un método formulario
@@ -139,7 +139,7 @@ Este ejemplo muestra la plantilla de un método de formulario que maneja los eve
 
 ## Ejemplo 5
 
-Para ejemplos sobre cómo manejar los eventos [`On Before Keystroke`](../Events/onBeforeKeystroke.md) y [`On After Keystroke`](../Events/onAfterKeystroke.md), vea los ejemplos de los comandos [Get edited text](./commands/get-edited-text), [Keystroke](./commands/keystroke) y [FILTER KEYSTROKE](./commands/filter-keystroke).
+Para ejemplos sobre cómo manejar los eventos [`On Before Keystroke`](../Events/onBeforeKeystroke.md) y [`On After Keystroke`](../Events/onAfterKeystroke.md), vea los ejemplos de los comandos [Get edited text](../commands/get-edited-text), [Keystroke](../commands/keystroke) y [FILTER KEYSTROKE](../commands/filter-keystroke).
 
 ## Ejemplo 6
 
@@ -340,14 +340,14 @@ Como resultado, el rectángulo rojo sigue el desplazamiento del list box:
 ## Ver también
 
 [Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](./commands/call-subform-container)\
-[Current form table](./commands/current-form-table)\
-[FILTER KEYSTROKE](./commands/filter-keystroke)\
+[CALL SUBFORM CONTAINER](../commands/call-subform-container)\
+[Current form table](../commands/current-form-table)\
+[FILTER KEYSTROKE](../commands/filter-keystroke)\
 [FORM Event](form-event.md)\
-[Get edited text](./commands/get-edited-text)\
-[Keystroke](./commands/keystroke)\
-[POST OUTSIDE CALL](./commands/post-outside-call)\
-[SET TIMER](./commands/set-timer)
+[Get edited text](../commands/get-edited-text)\
+[Keystroke](../commands/keystroke)\
+[POST OUTSIDE CALL](../commands/post-outside-call)\
+[SET TIMER](../commands/set-timer)
 
 ## Propiedades
 

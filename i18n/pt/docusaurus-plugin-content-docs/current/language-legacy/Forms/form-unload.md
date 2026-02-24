@@ -26,13 +26,13 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.FORM UNLOAD.Summary-->O comando **FORM UNLOAD** libera da memória o formulário atual designado utilizando o comando [FORM LOAD](./commands/form-load).<!-- END REF-->
+<!--REF #_command_.FORM UNLOAD.Summary-->O comando **FORM UNLOAD** libera da memória o formulário atual designado utilizando o comando [FORM LOAD](../commands/form-load).<!-- END REF-->
 
-Chamar este comando é necessário quando se utiliza o comando [FORM LOAD](./commands/form-load) fora do contexto de impressão (no caso da impressão, o formulário atual é novamente fechado de forma automática quando o comando for chamado [CLOSE PRINTING JOB](close-printing-job.md)).
+Chamar este comando é necessário quando se utiliza o comando [FORM LOAD](../commands/form-load) fora do contexto de impressão (no caso da impressão, o formulário atual é novamente fechado de forma automática quando o comando for chamado [CLOSE PRINTING JOB](close-printing-job.md)).
 
 ## Ver também 
 
-[FORM LOAD](./commands/form-load)  
+[FORM LOAD](../commands/form-load)  
 
 ## Propriedades
 

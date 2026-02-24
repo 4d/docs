@@ -102,7 +102,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Formula from string](./commands/formula-from-string)  
+[Formula from string](../commands/formula-from-string)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *フォーミュラ内でのトークンの使用*  

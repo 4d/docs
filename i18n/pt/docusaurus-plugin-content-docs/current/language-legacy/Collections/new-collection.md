@@ -83,7 +83,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 ## Veja também
 
 [New shared collection](new-shared-collection.md)\
-[Type](./commands/type)
+[Type](../commands/type)
 
 ## Propriedades
 

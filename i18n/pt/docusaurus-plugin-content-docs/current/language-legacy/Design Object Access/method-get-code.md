@@ -71,7 +71,7 @@ Podem ser definidos atributos adicionais. Para saber mais, consulte o comando [M
 O parâmetro *opção* lhe permite seleccionar o modo de exportação do código com respeito aos elementos da linguagem tokenizados dos métodos: 
 
 * Se passar 0 ou omitir o parâmetro *opção*, o código do método se exporta sem tokens, ou seja, da mesma forma que se mostra no editor de métodos.
-* Se passar 1 ou a constante Code with tokens, o código do método se exporta com tokens, ou seja, os elementos tokenizados são seguidos por sua referência interna no conteúdo do *código* exportado. Por exemplo, a expressão"[String](./commands/string)(a)" se exporta "[String](./commands/string):C10(a)", donde "C10" é a referência interna do comando [String](./commands/string).
+* Se passar 1 ou a constante Code with tokens, o código do método se exporta com tokens, ou seja, os elementos tokenizados são seguidos por sua referência interna no conteúdo do *código* exportado. Por exemplo, a expressão"[String](../commands/string)(a)" se exporta "[String](../commands/string):C10(a)", donde "C10" é a referência interna do comando [String](../commands/string).
 
 Os elementos tokenizados da linguagem incluem:
 

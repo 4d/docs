@@ -77,7 +77,7 @@ El formato se especifica del mismo modo que se haría para una [entrada numéric
 | String(1/0)                                                      | "INF"                             | Número infinito positivo                           |
 | String(-1/0)                                                     | "-INF"                            | Número infinito negativo                           |
 
-(\*) El algoritmo para convertir valores reales en texto se basa en 13 dígitos significativos, ver [`SET REAL COMPARISON LEVEL`](./commands/set-real-comparison-level).
+(\*) El algoritmo para convertir valores reales en texto se basa en 13 dígitos significativos, ver [`SET REAL COMPARISON LEVEL`](../commands/set-real-comparison-level).
 
 #### String(number;base)
 
@@ -255,11 +255,11 @@ Si *expression* se evalúa como Null, el comando devuelve la cadena "null". Esto
 
 ## Ver también
 
-[Bool](./commands/bool)  
-[Date](./commands/date)  
+[Bool](../commands/bool)  
+[Date](../commands/date)  
 [Num](num.md)  
-[Time string](./commands/time-string)  
-[Timestamp](./commands/timestamp)
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)
 
 ## Propiedades
 

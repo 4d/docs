@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Keystroke.Summary-->Keystroke はユーザがフィールドや入力可能エリアに入力した文字を返します。<!-- END REF-->
 
-通常、KeystrokeはOn Before Keystrokeフォームイベントを処理するフォーム/オブジェクトメソッドで使用します。キーストロークイベントを検知するには、[Form event](./commands/form-event.md "Form event")コマンドを使用します。 
+通常、KeystrokeはOn Before Keystrokeフォームイベントを処理するフォーム/オブジェクトメソッドで使用します。キーストロークイベントを検知するには、[Form event](../commands/form-event.md "Form event")コマンドを使用します。 
 
 ユーザが実際に入力した文字を置き換えるには、[FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROKE")コマンドを使用します。
 
@@ -178,7 +178,7 @@ $curValue->:=$vtNewValue
 ## 参照 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 [Get edited text](get-edited-text.md)  
 
 ## プロパティ

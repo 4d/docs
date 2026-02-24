@@ -27,7 +27,7 @@ Formulas are not evaluated when a document is loaded (using [**WP New**](command
 
 Formulas become static values if you call the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (except for page number and page count, see below).
 
-**Compatibility Note**: *Handling expressions using the [**ST INSERT EXPRESSION**](./commands/st-insert-expression), [**ST Get expression**](./commands/st-get-expression), [**ST COMPUTE EXPRESSIONS**](./commands/st-compute-expressions), and [**ST FREEZE EXPRESSIONS**](./commands/st-freeze-expressions) commands is deprecated, however, it is still supported in 4D Write Pro for compatibility*.
+**Compatibility Note**: *Handling expressions using the [**ST INSERT EXPRESSION**](../commands/st-insert-expression), [**ST Get expression**](../commands/st-get-expression), [**ST COMPUTE EXPRESSIONS**](../commands/st-compute-expressions), and [**ST FREEZE EXPRESSIONS**](../commands/st-freeze-expressions) commands is deprecated, however, it is still supported in 4D Write Pro for compatibility*.
 
 :::note
 
@@ -52,24 +52,24 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
 
 ## Formula context object
 
-You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through [**This**](./commands/this):
+You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through [**This**](../commands/this):
 
 | Properties         | Type    | Description|                                                                                                                                                     
 |--------------------|---------|--------------------|
-|[This](./commands/this).title|Text|Title defined in wk title attribute|                                                                                                                            
-|[This](./commands/this).author|Text|Author defined in wk author attribute|                                                                                                                           
-|[This](./commands/this).subject|Text|Subject defined in wk subject attribute|                                                                                                                          
-|[This](./commands/this).company|Text|Company defined in wk company attribute|                                                                                                                          
-|[This](./commands/this).notes|Text|Notes defined in wk notes attribute|                                                                                                                              
-|[This](./commands/this).dateCreation|Date|Date creation defined in wk date creation attribute|                                                                                                               
-|[This](./commands/this).dateModified|Date|Date modified defined in wk date modified attribute|                                                                                                               
-|[This](./commands/this).pageNumber (\*)|Number|Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.|
-|[This](./commands/this).pageCount (\*)|Number|Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.|
-|[This](./commands/this).document|Object|4D Write Pro document|                                                                                                                                             
-|[This](./commands/this).data|Object|Data context of the 4D Write Pro document set by [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)|
-|[This](./commands/this).sectionIndex|Number|The Index of the section in the 4D Write Pro document starting from 1|                                                                                             
-|[This](./commands/this).pageIndex|Number|The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)|
-|[This](./commands/this).sectionName|String|The name that the user gives to the section|                                                                                                                       
+|[This](../commands/this).title|Text|Title defined in wk title attribute|                                                                                                                            
+|[This](../commands/this).author|Text|Author defined in wk author attribute|                                                                                                                           
+|[This](../commands/this).subject|Text|Subject defined in wk subject attribute|                                                                                                                          
+|[This](../commands/this).company|Text|Company defined in wk company attribute|                                                                                                                          
+|[This](../commands/this).notes|Text|Notes defined in wk notes attribute|                                                                                                                              
+|[This](../commands/this).dateCreation|Date|Date creation defined in wk date creation attribute|                                                                                                               
+|[This](../commands/this).dateModified|Date|Date modified defined in wk date modified attribute|                                                                                                               
+|[This](../commands/this).pageNumber (\*)|Number|Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.|
+|[This](../commands/this).pageCount (\*)|Number|Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.|
+|[This](../commands/this).document|Object|4D Write Pro document|                                                                                                                                             
+|[This](../commands/this).data|Object|Data context of the 4D Write Pro document set by [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)|
+|[This](../commands/this).sectionIndex|Number|The Index of the section in the 4D Write Pro document starting from 1|                                                                                             
+|[This](../commands/this).pageIndex|Number|The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)|
+|[This](../commands/this).sectionName|String|The name that the user gives to the section|                                                                                                                       
 
 :::note
 
@@ -97,22 +97,22 @@ When used in a formula within the table, the **This** keyword gives access to di
 
 | **Context**     | **Expression**   | **Type** | **Returns**               | 
 |---------------- | ---------------- | -------- | ------------------------- |  
-|Anywhere         | [This](./commands/this).table       | Object   | Current table             |               
-|                 | [This](./commands/this).row         | Object   | Current table row element |
-|                 | [This](./commands/this).rowIndex    | Number   | Index of the current row, starting from 1  |
-|When a datasource has been defined for the table | [This](./commands/this).table.dataSource | Object (formula) | Datasource as a formula |
-|                 | [This](./commands/this).tableData   | Collection or Entity selection (usually) | Evaluated table.dataSource |  
-|In each data row when a table datasource returns a collection or an entity selection | [This](./commands/this).item.xxx | Any | Mapped to each item of the table datasource collection or entity selection, for example **This.item.firstName** if the associated entity has the *firstName* attribute   |
-|                 | [This](./commands/this).itemIndex   | Number   | Index of the current item in the collection or entity selection, starting from 0 |  
-| In any row (except header rows) when a table datasource returns a collection or an entity selection | [This](./commands/this).previousItems  | Collection or Entity selection | Items displayed on the pages before the bottom carry over row (if any) or before the row of the expression, including the page where is displayed the row containing the expression. <br/>This expression returns the same type of value as the **This.tableData** expression.  |
-| In a break row  | [This](./commands/this).breakItems  | Collection or Entity selection  | Items of the collection or entity selection displayed in the rows between:<br/><ul><li>the current break row and the previous break row of the same level (or the start of the table) if the break row(s) are displayed after the data row.</li><li>the current break and the next break row of the same level (or the end of the table) if the break row(s) are displayed before the data row.</li></ul>|  
+|Anywhere         | [This](../commands/this).table       | Object   | Current table             |               
+|                 | [This](../commands/this).row         | Object   | Current table row element |
+|                 | [This](../commands/this).rowIndex    | Number   | Index of the current row, starting from 1  |
+|When a datasource has been defined for the table | [This](../commands/this).table.dataSource | Object (formula) | Datasource as a formula |
+|                 | [This](../commands/this).tableData   | Collection or Entity selection (usually) | Evaluated table.dataSource |  
+|In each data row when a table datasource returns a collection or an entity selection | [This](../commands/this).item.xxx | Any | Mapped to each item of the table datasource collection or entity selection, for example **This.item.firstName** if the associated entity has the *firstName* attribute   |
+|                 | [This](../commands/this).itemIndex   | Number   | Index of the current item in the collection or entity selection, starting from 0 |  
+| In any row (except header rows) when a table datasource returns a collection or an entity selection | [This](../commands/this).previousItems  | Collection or Entity selection | Items displayed on the pages before the bottom carry over row (if any) or before the row of the expression, including the page where is displayed the row containing the expression. <br/>This expression returns the same type of value as the **This.tableData** expression.  |
+| In a break row  | [This](../commands/this).breakItems  | Collection or Entity selection  | Items of the collection or entity selection displayed in the rows between:<br/><ul><li>the current break row and the previous break row of the same level (or the start of the table) if the break row(s) are displayed after the data row.</li><li>the current break and the next break row of the same level (or the end of the table) if the break row(s) are displayed before the data row.</li></ul>|  
 
 
 In any other contexts, these expressions will return *undefined*.
 
 :::note
 
-For more information about formula insertion, see [WP INSERT FORMULA](./commands/wp-insert-formula).
+For more information about formula insertion, see [WP INSERT FORMULA](../commands/wp-insert-formula).
 
 :::
 
@@ -120,11 +120,11 @@ For more information about formula insertion, see [WP INSERT FORMULA](./commands
 
 **Date**
 
-When the [**Current date**](./commands/current-date) command, a date variable, or a method returning a date is inserted in a formula, it will automatically be transformed into text using the system date short format.
+When the [**Current date**](../commands/current-date) command, a date variable, or a method returning a date is inserted in a formula, it will automatically be transformed into text using the system date short format.
 
 **Time**
 
-When the [**Current time**](./commands/current-time) command, a time variable, or a method returning a time is inserted in a formula, it must be enclosed within a [**String**](./commands/string) command because time type is not supported in JSON. Consider the following examples of formulas:
+When the [**Current time**](../commands/current-time) command, a time variable, or a method returning a time is inserted in a formula, it must be enclosed within a [**String**](../commands/string) command because time type is not supported in JSON. Consider the following examples of formulas:
 
 
 ```4d
@@ -142,7 +142,7 @@ When the [**Current time**](./commands/current-time) command, a time variable, o
 
 ## Support of virtual structure
 
-Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](./commands/set-field-titles)(...;\*) and [**SET TABLE TITLES**](./commands/set-table-titles)(...;\*) commands.
+Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands/set-field-titles)(...;\*) and [**SET TABLE TITLES**](../commands/set-table-titles)(...;\*) commands.
 
 When a virtual structure is defined:
 

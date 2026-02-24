@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Last errors](./commands/last-errors)   
+[Last errors](../commands/last-errors)   
 [ON ERR CALL](on-err-call.md)  
 
 ## プロパティ

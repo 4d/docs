@@ -22,7 +22,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### Commands
 
-[`OBJECT Get auto spellcheck`](./commands/object-get-auto-spellcheck) - [`OBJECT SET AUTO SPELLCHECK`](./commands/object-set-auto-spellcheck) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+[`OBJECT Get auto spellcheck`](../commands/object-get-auto-spellcheck) - [`OBJECT SET AUTO SPELLCHECK`](../commands/object-set-auto-spellcheck) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -39,7 +39,7 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 - commands for supported style modifications: font, size, style, color and background color.
 When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
-For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](./commands/wa-set-preference) command.
+For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands/wa-set-preference) command.
 
 #### JSON Grammar
 
@@ -53,7 +53,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### Commands
 
-[`OBJECT Get context menu`](./commands/object-get-context-menu) - [`OBJECT SET CONTEXT MENU`](./commands/object-set-context-menu) - [`WA GET PREFERENCE`](./commands/wa-get-preference) - [`WA SET PREFERENCE`](./commands/wa-set-preference)
+[`OBJECT Get context menu`](../commands/object-get-context-menu) - [`OBJECT SET CONTEXT MENU`](../commands/object-set-context-menu) - [`WA GET PREFERENCE`](../commands/wa-get-preference) - [`WA SET PREFERENCE`](../commands/wa-set-preference)
 
 ---
 
@@ -78,12 +78,12 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Commands
 
-[`OBJECT Get enterable`](./commands/object-get-enterable) - [`OBJECT SET ENTERABLE`](./commands/object-set-enterable)
+[`OBJECT Get enterable`](../commands/object-get-enterable) - [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)
 
 
 #### See also
 
-[`FORM GET ENTRY ORDER`](./commands/form-get-entry-order) - [`FORM SET ENTRY ORDER`](./commands/form-set-entry-order)
+[`FORM GET ENTRY ORDER`](../commands/form-get-entry-order) - [`FORM SET ENTRY ORDER`](../commands/form-set-entry-order)
 
 ---
 
@@ -144,7 +144,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Commands
 
-[`OBJECT Get filter`](./commands/object-get-filter) - [`OBJECT SET FILTER`](./commands/object-set-filter)
+[`OBJECT Get filter`](../commands/object-get-filter) - [`OBJECT SET FILTER`](../commands/object-set-filter)
 
 
 ## Focusable
@@ -172,7 +172,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### Commands
 
-[`OBJECT Get enterable`](./commands/object-get-enterable) - [`OBJECT SET ENTERABLE`](./commands/object-set-enterable)
+[`OBJECT Get enterable`](../commands/object-get-enterable) - [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)
 
 
 ---
@@ -197,7 +197,7 @@ By default, the object uses the current keyboard layout.
 
 #### Commands
 
-[`OBJECT Get keyboard layout`](./commands/object-get-keyboard-layout) - [`OBJECT SET KEYBOARD LAYOUT`](./commands/object-set-keyboard-layout)
+[`OBJECT Get keyboard layout`](../commands/object-get-keyboard-layout) - [`OBJECT SET KEYBOARD LAYOUT`](../commands/object-set-keyboard-layout)
 
 
 
@@ -236,7 +236,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### Commands
 
-[`OBJECT Get multiline`](./commands/object-get-multiline) - [`OBJECT SET MULTILINE`](./commands/object-set-multiline)
+[`OBJECT Get multiline`](../commands/object-get-multiline) - [`OBJECT SET MULTILINE`](../commands/object-set-multiline)
 
 ---
 
@@ -261,7 +261,7 @@ You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, fo
 
 You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
 
->You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](./commands/object-set-placeholder) and [`OBJECT Get placeholder`](./commands/object-get-placeholder) commands.
+>You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) and [`OBJECT Get placeholder`](../commands/object-get-placeholder) commands.
 
 #### JSON Grammar
 
@@ -279,7 +279,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Commands
 
-[`OBJECT Get placeholder`](./commands/object-get-placeholder) - [`OBJECT SET PLACEHOLDER`](./commands/object-set-placeholder)
+[`OBJECT Get placeholder`](../commands/object-get-placeholder) - [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder)
 
 ---
 
@@ -329,7 +329,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### Commands
 
-[`OBJECT GET SHORTCUT`](./commands/object-get-shortcut) - [`OBJECT SET SHORTCUT`](./commands/object-set-shortcut)
+[`OBJECT GET SHORTCUT`](../commands/object-get-shortcut) - [`OBJECT SET SHORTCUT`](../commands/object-set-shortcut)
 
 ---
 
@@ -354,6 +354,6 @@ When this option is not enabled, users must first select the cell row and then c
 
 #### Commands
 
-[LISTBOX Get property](./commands/listbox-get-property) - [LISTBOX SET PROPERTY](./commands/listbox-set-property)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 

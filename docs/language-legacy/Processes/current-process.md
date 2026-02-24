@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 ## Example 
 
-See the examples for [DELAY PROCESS](delay-process.md) and [Process info](./commands/process-info).
+See the examples for [DELAY PROCESS](delay-process.md) and [Process info](../commands/process-info).
 
 ## See also 
 
-[Process number](./commands/process-number)  
-[Process info](./commands/process-info)  
+[Process number](../commands/process-number)  
+[Process info](../commands/process-info)  
 [Process state](process-state.md)  
 
 ## Properties

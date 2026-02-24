@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 In *vJson*, pass a JSON object containing the JSON contents to be validated.
 
-**Note:** Validating a JSON string consists of checking that it follows the rules defined in a JSON schema. Esto es diferente de la comprobación de que el JSON está bien formado, que se realiza mediante el comando [JSON Parse](./commands/json-parse).
+**Note:** Validating a JSON string consists of checking that it follows the rules defined in a JSON schema. Esto es diferente de la comprobación de que el JSON está bien formado, que se realiza mediante el comando [JSON Parse](../commands/json-parse).
 
 In *vSchema*, pass the JSON schema to use for the validation. For more information on how to create a JSON schema, you may consult the [json-schema.org](http://json-schema.org/) web site.
 
@@ -73,7 +73,7 @@ If you declare another schema version using the *$schema* key, an error is retur
 
 ### Validation result
 
-If the JSON schema is not valid, 4D returns a [Null](./commands/null) object and throws an error that can be caught by an [on error call method](../Concepts/error-handling.md#installing-an-error-handling-method).
+If the JSON schema is not valid, 4D returns a [Null](../commands/null) object and throws an error that can be caught by an [on error call method](../Concepts/error-handling.md#installing-an-error-handling-method).
 
 The **JSON Validate** returns an object that provides the status of the validation. Este objeto puede contener las siguientes propiedades:
 
@@ -88,9 +88,9 @@ Cada objeto de error de la colección *errors* contiene las siguientes propiedad
 | ----------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *code*                  | Number   | Código de error                                                                                                                                                                                                                                    |
 | *jsonPath*              | Text     | JSON path that cannot be validated in *vJson*                                                                                                                                                                                                      |
-| *line*                  | Number   | Line number of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](./commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
+| *line*                  | Number   | Line number of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](../commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
 | *message*               | Text     | Mensaje de error                                                                                                                                                                                                                                   |
-| *offset*                | Number   | Line offset of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](./commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
+| *offset*                | Number   | Line offset of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](../commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
 | *schemaPaths*           | Text     | JSON path in the schema that causes the validation error                                                                                                                                                                                           |
 
 ### Error list
@@ -165,7 +165,7 @@ You want to validate a JSON object with a schema and get the list of validation 
 
 ## Ver también
 
-[JSON Parse](./commands/json-parse)
+[JSON Parse](../commands/json-parse)
 
 ## Propiedades
 

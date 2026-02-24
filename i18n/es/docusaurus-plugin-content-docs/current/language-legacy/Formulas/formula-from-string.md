@@ -65,7 +65,7 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 ## Ver también
 
 [Formula](formula.md)\
-[Parse formula](./commands/parse-formula)
+[Parse formula](../commands/parse-formula)
 
 ## Propiedades
 

@@ -42,7 +42,7 @@ Se o banco de dados funciona com um arquivo de histórico, a variável de sistem
 
 ## Ver também 
 
-[SELECT LOG FILE](./commands/select-log-file)  
+[SELECT LOG FILE](../commands/select-log-file)  
 
 ## Propriedades
 

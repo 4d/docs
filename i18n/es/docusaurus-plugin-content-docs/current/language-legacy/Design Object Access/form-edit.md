@@ -63,7 +63,7 @@ Para abrir el formulario de proyecto *ContactPage* con el objeto "name-input" se
 
 ## Ver también
 
-[Design Object Access Commands](./commands/theme/Design_Object_Access)
+[Design Object Access Commands](../commands/theme/Design_Object_Access)
 
 ## Propiedades
 

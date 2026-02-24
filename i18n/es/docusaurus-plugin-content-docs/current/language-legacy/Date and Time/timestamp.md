@@ -52,7 +52,7 @@ Resultado:
 #### Ver también 
 
 [Milliseconds](milliseconds.md)  
-[String](./commands/string)  
+[String](../commands/string)  
 [Time](time.md)  
 
 #### Propiedades

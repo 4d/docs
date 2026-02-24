@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**前提となる注意:** このコマンドは4D Server でのみ動作します。 [Execute on server](./commands/execute-on-server) コマンド経由か、あるいはストアドプロシージャ内でのみ実行することができます。
+**前提となる注意:** このコマンドは4D Server でのみ動作します。 [Execute on server](../commands/execute-on-server) コマンド経由か、あるいはストアドプロシージャ内でのみ実行することができます。
 
 <!--REF #_command_.New log file.Summary-->**New log file** コマンドはカレントのログファイルを閉じてその名前を変更した後、元のものと同じ名前で新しいログファイルを作成し同じ元のものと同じ場所に保存します<!-- END REF-->。 このコマンドは論理ミラーを使用したバックアップシステムをセットアップする際に使用されるよう設計されています(詳細は[4D Server Reference Manual](https://doc/4d.com) 内の*論理ミラーの設定* の章を参照して下さい)。 
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 ## エラー管理
 
-エラーが発生した場合、このコマンドは [ON ERR CALL](./commands/on-err-call) コマンドで割り込み可能なコードを生成します。
+エラーが発生した場合、このコマンドは [ON ERR CALL](../commands/on-err-call) コマンドで割り込み可能なコードを生成します。
 
 ## 参照
 

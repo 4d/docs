@@ -82,4 +82,4 @@ Vous souhaitez remplacer tous les sauts de ligne par des sauts de paragraphe dan
 ## Voir aussi 
 
 [WP Get elements](wp-get-elements.md)  
-[WP INSERT BREAK](./commands/wp-insert-break)  
+[WP INSERT BREAK](../commands/wp-insert-break)  

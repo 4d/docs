@@ -48,7 +48,7 @@ By default, the added picture is:
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
 
 
-**Note:** The [WP Selection range](./commands/wp-selection-range) command returns a *picture reference* object if an anchored picture is selected and a *range object* if an inline picture is selected. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Note:** The [WP Selection range](../commands/wp-selection-range) command returns a *picture reference* object if an anchored picture is selected and a *range object* if an inline picture is selected. You can determine if a selected object is a picture object by checking the `wk type` attribute:
 - **Value = 2**: The selected object is a picture object.
 - **Value = 0**: The selected object is a range object.
 
@@ -101,5 +101,5 @@ You want to use a field expression to add an anchored image to a document displa
 
 ## See also 
 
-[WP DELETE PICTURE](./commands/wp-delete-picture)</br>
-[WP Picture range](./commands/wp-picture-range)
+[WP DELETE PICTURE](../commands/wp-delete-picture)</br>
+[WP Picture range](../commands/wp-picture-range)

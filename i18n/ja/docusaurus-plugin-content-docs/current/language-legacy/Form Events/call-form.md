@@ -114,7 +114,7 @@ displayed_sidebar: docs
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog)  
 
 ## プロパティ
 

@@ -176,7 +176,7 @@ Una vez ejecutado el formulario, el list box se llena automáticamente con la se
 
 ## Ver también
 
-[Self](./commands/self)\
+[Self](../commands/self)\
 [Super](super.md)
 
 ## Propiedades

@@ -111,4 +111,4 @@ displayed_sidebar: docs
 [`Process info`](process-info.md)
 [`Session info`](session-info.md)
 [Session storage](session-storage.md)  
-[WEB Get server info](./commands/web-get-server-info)
+[WEB Get server info](../commands/web-get-server-info)

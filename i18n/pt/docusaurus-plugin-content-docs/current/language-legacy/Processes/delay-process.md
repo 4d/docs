@@ -45,7 +45,7 @@ Ver os exemplos em *Record Locking*.
 
 ## Exemplo 2 
 
-Ver o exemplo do comando [Process number](./commands/process-number).
+Ver o exemplo do comando [Process number](../commands/process-number).
 
 ## Ver também 
 

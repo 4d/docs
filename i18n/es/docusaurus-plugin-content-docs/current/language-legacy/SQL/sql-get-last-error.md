@@ -44,7 +44,7 @@ Los dos últimos parámetros sólo se llenan cuando el error viene de la fuente 
 
 ## Ver también 
 
-[Last errors](./commands/last-errors)   
+[Last errors](../commands/last-errors)   
 [ON ERR CALL](on-err-call.md)  
 
 ## Propiedades

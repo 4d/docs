@@ -44,7 +44,7 @@ En el objeto *opciones*, pase las propiedades que se utilizarán al generar el h
 
 ### Gestión de errores 
 
-Se pueden devolver los siguientes errores. Puede revisar un error con los comandos [Last errors](./commands/last-errors)  y [ON ERR CALL](on-err-call.md).  
+Se pueden devolver los siguientes errores. Puede revisar un error con los comandos [Last errors](../commands/last-errors)  y [ON ERR CALL](on-err-call.md).  
 
 | **Número** | **Mensaje**                                                                         |
 | ---------- | ----------------------------------------------------------------------------------- |

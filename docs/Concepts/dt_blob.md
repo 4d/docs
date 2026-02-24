@@ -34,8 +34,8 @@ You cannot use operators on blobs.
 
 ## Checking if a variable holds a scalar blob or a `4D.Blob`
 
-Use the [Value type](./commands/value-type) command to determine if a value is of type Blob or Object.
-To check that an object is a blob object (`4D.Blob`), use [OB instance of](./commands/ob-instance-of):
+Use the [Value type](../commands/value-type) command to determine if a value is of type Blob or Object.
+To check that an object is a blob object (`4D.Blob`), use [OB instance of](../commands/ob-instance-of):
 
 ```4d
 var $myBlob: Blob
@@ -62,17 +62,17 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
 
-- [DELETE FROM BLOB](./commands/delete-from-blob)
-- [INSERT IN BLOB](./commands/insert-in-blob)
-- [INTEGER TO BLOB](./commands/integer-to-blob)
-- [LONGINT TO BLOB](./commands/longint-to-blob)
-- [REAL TO BLOB](./commands/real-to-blob)
-- [SET BLOB SIZE](./commands/set-blob-size)
-- [TEXT TO BLOB](./commands/text-to-blob)
-- [VARIABLE TO BLOB](./commands/variable-to-blob)
-- [LIST TO BLOB](./commands/list-to-blob)
-- [SOAP DECLARATION](./commands/soap-declaration)
-- [WEB SERVICE SET PARAMETER](./commands/web-service-set-parameter)
+- [DELETE FROM BLOB](../commands/delete-from-blob)
+- [INSERT IN BLOB](../commands/insert-in-blob)
+- [INTEGER TO BLOB](../commands/integer-to-blob)
+- [LONGINT TO BLOB](../commands/longint-to-blob)
+- [REAL TO BLOB](../commands/real-to-blob)
+- [SET BLOB SIZE](../commands/set-blob-size)
+- [TEXT TO BLOB](../commands/text-to-blob)
+- [VARIABLE TO BLOB](../commands/variable-to-blob)
+- [LIST TO BLOB](../commands/list-to-blob)
+- [SOAP DECLARATION](../commands/soap-declaration)
+- [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)
 
 ### Passing blobs and blob objects to methods
 

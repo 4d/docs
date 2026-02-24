@@ -83,7 +83,7 @@ displayed_sidebar: docs
 ## 参照
 
 [New shared collection](new-shared-collection.md)\
-[Type](./commands/type)
+[Type](../commands/type)
 
 ## プロパティ
 

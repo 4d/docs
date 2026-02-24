@@ -49,7 +49,7 @@ Es recomendable llamar este comando dentro del marco del evento de formulario On
 
 ## Ver también 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## Propiedades
 

@@ -60,7 +60,7 @@ Este formulário é utilizado durante a impressão de um relatório. Define uma 
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 

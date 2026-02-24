@@ -114,7 +114,7 @@ Luego puede añadir otros mensajes ejecutando el comando **CALL FORM** nuevament
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog)  
 
 ## Propiedades
 

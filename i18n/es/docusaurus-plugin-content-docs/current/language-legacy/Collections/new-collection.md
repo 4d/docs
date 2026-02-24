@@ -83,7 +83,7 @@ Se crea una nueva colección y se añade un nuevo elemento:
 ## Ver también
 
 [New shared collection](new-shared-collection.md)\
-[Type](./commands/type)
+[Type](../commands/type)
 
 ## Propiedades
 

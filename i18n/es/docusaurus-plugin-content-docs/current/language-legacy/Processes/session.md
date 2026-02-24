@@ -70,7 +70,7 @@ Para más información sobre las sesiones usuario remoto, por favor consulte el 
 
 Todos los procesos de procedimientos almacenados comparten la misma sesión virtual de usuario. El objeto `Session` de los procedimientos almacenados está disponible desde:
 
-- métodos llamados con el comando [`Execute on server`](./commands/execute-on-server),
+- métodos llamados con el comando [`Execute on server`](../commands/execute-on-server),
 - Los métodos base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown` y `On System event`
 
 Para obtener más información sobre la sesión de usuario virtual de procedimientos almacenados, consulte el párrafo [**Sesiones de procedimientos almacenados**](../Desktop/sessions.md#stored-procedure-sessions).

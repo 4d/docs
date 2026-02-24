@@ -26,7 +26,7 @@ In addition, you have access to the specific properties for headers. Specificall
 
 At runtime, events that occur in a header are generated in the list box column object method.
 
-When the [`OBJECT SET VISIBLE`](./commands/object-set-visible) command is used with a header, it is applied to all headers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"header3";False)` will hide all headers in the list box object to which *header3* belongs and not simply this header.
+When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used with a header, it is applied to all headers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"header3";False)` will hide all headers in the list box object to which *header3* belongs and not simply this header.
 
 ### Header Specific Properties
 
@@ -47,7 +47,7 @@ For each List box column footer, you can set standard text properties: in this c
 
 At runtime, events that occur in a footer are generated in the list box column object method.
 
-When the [`OBJECT SET VISIBLE`](./commands/object-set-visible) command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"footer3";False)` will hide all footers in the list box object to which *footer3* belongs and not simply this footer.
+When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"footer3";False)` will hide all footers in the list box object to which *footer3* belongs and not simply this footer.
 
 ### Footer Specific Properties
 

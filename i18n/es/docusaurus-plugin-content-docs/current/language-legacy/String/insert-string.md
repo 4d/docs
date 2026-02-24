@@ -26,7 +26,7 @@ Si *ainsertar* es una cadena vacía (""), Insert string devuelve *fuente* sin ca
 
 Si *posicion* es mayor a la longitud de *fuente*, *ainsertar* se añade al final de *fuente*. Si *posicion* es inferior a uno (1), *ainsertar* se inserta antes de *fuente*.
 
-Insert string es diferente de [Change string](./commands/change-string.md "Change string") en que esta función inserta caracteres en lugar de reemplazarlos.
+Insert string es diferente de [Change string](../commands/change-string.md "Change string") en que esta función inserta caracteres en lugar de reemplazarlos.
 
 ## Ejemplo 
 
@@ -40,9 +40,9 @@ El siguiente ejemplo ilustra el uso de Insert string. Los resultados se asignan 
 
 ## Ver también 
 
-[Change string](./commands/change-string)  
-[Delete string](./commands/delete-string)  
-[Replace string](./commands/replace-string)  
+[Change string](../commands/change-string)  
+[Delete string](../commands/delete-string)  
+[Replace string](../commands/replace-string)  
 
 ## Propiedades
 

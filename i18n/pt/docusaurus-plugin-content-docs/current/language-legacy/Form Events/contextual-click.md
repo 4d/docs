@@ -50,7 +50,7 @@ Este método, combinado com uma área de rolagem, lhe permite modificar o valor 
 
 ## Ver também 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 [Right click](right-click.md)  
 
 ## Propriedades

@@ -105,8 +105,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Bool](./commands/bool)  
-[String](./commands/string)  
+[Bool](../commands/bool)  
+[String](../commands/string)  
 
 ## プロパティ
 

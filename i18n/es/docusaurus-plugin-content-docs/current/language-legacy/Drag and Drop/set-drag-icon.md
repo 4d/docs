@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DRAG ICON.Summary-->El comando **SET DRAG ICON** asocia la imagen de icono al cursor durante las operaciones de arrastrar y soltar que se manejan por programación.<!-- END REF-->
 
-Este comando sólo se puede llamar en el contexto del evento formulario On Begin Drag Over (ver el comando [Form event code](./commands/form-event-code)).  
+Este comando sólo se puede llamar en el contexto del evento formulario On Begin Drag Over (ver el comando [Form event code](../commands/form-event-code)).  
   
 En el parámetro *icono*, pase la imagen que desea utilizar. Su tamaño máximo es de 256x256 píxeles. Si una de sus dimensiones excede los 256 píxeles, se redimensiona automáticamente.  
   
@@ -68,7 +68,7 @@ Note que puede modificar la posición del cursor con respecto a la imagen:
 
 ## Ver también 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 
 ## Propiedades
 

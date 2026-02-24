@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 - フォーミュラーエディター - 許可されたメソッドはデフォルトコマンドの一覧の最後に表示され、フォーミュラー内で使用することができます(*フォーミュラエディター* の章を参照してください)。
 - ラベルエディター - 許可されたメソッドがコンポーネントとも共有されていた場合、メソッドは**許可**メニュー内に表示されます(*ラベルエディターの詳細* の章を参照してください)。
-- [ST INSERT EXPRESSION](./commands/st-insert-expression) コマンドを通してスタイル付きテキストエリアまたは4D Write Pro ドキュメントに挿入されたフォーミュラ - 許可されていないメソッドは自動的に排除されます。
+- [ST INSERT EXPRESSION](../commands/st-insert-expression) コマンドを通してスタイル付きテキストエリアまたは4D Write Pro ドキュメントに挿入されたフォーミュラ - 許可されていないメソッドは自動的に排除されます。
 - 4D View Pro ドキュメント - デフォルトで、 [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) コマンドがセッション中に一度も実行されていない場合、4D View Pro フォーミュラーは **SET ALLOWED METHODS** で許可されたメソッドは使用できます。 ですが、[`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) コマンドの使用が推奨されます。 [許可されたメソッドの宣言](../ViewPro/formulas.md#許可されたメソッドの宣言) を参照してください。
 
 デフォルトでは、**SET ALLOWED METHODS** コマンドを使用しない場合、入力可能なメソッドはありません (許可されていないメソッドを式の中で使用するとエラーが発生します)。
@@ -55,8 +55,8 @@ displayed_sidebar: docs
 
 ## 参照
 
-[EDIT FORMULA](./commands/edit-formula)\
-[GET ALLOWED METHODS](./commands/get-allowed-methods)
+[EDIT FORMULA](../commands/edit-formula)\
+[GET ALLOWED METHODS](../commands/get-allowed-methods)
 
 ## プロパティ
 

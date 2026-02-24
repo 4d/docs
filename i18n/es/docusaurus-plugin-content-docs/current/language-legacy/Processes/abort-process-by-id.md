@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ABORT PROCESS BY ID.Summary-->El comando **ABORT PROCESS BY ID** detiene un proceso específico en el servidor 4D.<!-- END REF-->
 
-En el parámetro *IDunico*, pase el ID único del proceso que se ejecuta en el servidor que desea detener. Puede recuperar el ID del proceso con los comandos [Process activity](./commands/process-activity) o los comandos [Process info](./commands/process-info).
+En el parámetro *IDunico*, pase el ID único del proceso que se ejecuta en el servidor que desea detener. Puede recuperar el ID del proceso con los comandos [Process activity](../commands/process-activity) o los comandos [Process info](../commands/process-info).
 
 **Notas**:
 

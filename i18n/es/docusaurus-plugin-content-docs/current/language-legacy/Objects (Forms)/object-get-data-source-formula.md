@@ -40,9 +40,9 @@ $formula:=OBJECT Get data source formula(*; "myInput")
 ## Ver también
 
 [OBJECT SET DATA SOURCE FORMULA](object-set-data-source-formula.md)<br/>
-[LISTBOX GET COLUMN FORMULA](./commands/listbox-get-column-formula)<br/>
-[OBJECT SET DATA SOURCE](./commands/object-set-data-source)<br/>
-[OBJECT GET VALUE](./commands/object-get-value)
+[LISTBOX GET COLUMN FORMULA](../commands/listbox-get-column-formula)<br/>
+[OBJECT SET DATA SOURCE](../commands/object-set-data-source)<br/>
+[OBJECT GET VALUE](../commands/object-get-value)
 
 ## Propiedades
 

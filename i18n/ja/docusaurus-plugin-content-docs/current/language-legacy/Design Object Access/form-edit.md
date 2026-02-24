@@ -63,7 +63,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[デザインオブジェクトアクセスコマンド](./commands/theme/Design_Object_Access)
+[デザインオブジェクトアクセスコマンド](../commands/theme/Design_Object_Access)
 
 ## プロパティ
 

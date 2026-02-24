@@ -50,7 +50,7 @@ Ver o exemplo de [On Exit Database Method](metodo-banco-de-dados-on-exit.md "On 
 
 ## Ver também 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 

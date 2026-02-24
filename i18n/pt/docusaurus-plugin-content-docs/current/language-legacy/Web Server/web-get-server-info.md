@@ -99,8 +99,8 @@ Depois de executar o código abaixo:
 
 ## Ver também 
 
-[License info](./commands/license-info)  
-[Process activity](./commands/process-activity)  
+[License info](../commands/license-info)  
+[Process activity](../commands/process-activity)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
 ## Propriedades

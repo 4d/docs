@@ -357,12 +357,12 @@ Los atributos de tamaño de papel se utilizan para especificar las dimensiones o
 |           | ancho  | entero largo | Ancho del papel, en centésimas de pulgada.                                                                                                                                              |
 |           | kind   | text         | Nombre del tamaño de papel estándar (por ejemplo, A2, A4, oficio, etc.) devuelto por `Get Print Option`. Valor por defecto: "letter" |
 
-- Si el tamaño del papel se especifica utilizando las propiedades `height` y `width`, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve un tamaño de papel con `custom` como valor para `kind`.
+- Si el tamaño del papel se especifica utilizando las propiedades `height` y `width`, [`VP Get print info`](../commands/vp-get-print-info.md) devuelve un tamaño de papel con `custom` como valor para `kind`.
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
   - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
   - uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
-    En ese caso, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve el formato correspondiente con la altura y el ancho.
+    En ese caso, [`VP Get print info`](../commands/vp-get-print-info.md) devuelve el formato correspondiente con la altura y el ancho.
 
 ### Escala
 
